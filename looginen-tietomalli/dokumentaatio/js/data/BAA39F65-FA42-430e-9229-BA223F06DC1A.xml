@@ -1,0 +1,3 @@
+tocTab[tocTab.length] = new Array("0.1.1", "1", "Kulttuurihistoriallinen merkittävyys", "EARoot/EA1/EA1/EA11.html", "4.png", "", "", "{1F91B3F9-9580-4a5d-9E97-1F029290B685}", "Package");
+tocTab[tocTab.length] = new Array("0.1.2", "1", "Maankäyttöalue", "EARoot/EA1/EA2/EA20.html", "4.png", "", "", "{43A7EF8F-B5C6-4d9a-917E-5A41227F2966}", "Package");
+tocTab[tocTab.length] = new Array("0.1.3", "1", "Rakentamisen määrä", "EARoot/EA1/EA3/EA34.html", "4.png", "", "", "{F655859D-9C59-4c8f-917E-6A21751B5827}", "Package");
