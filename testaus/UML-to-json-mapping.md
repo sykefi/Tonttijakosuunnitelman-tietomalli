@@ -16,7 +16,7 @@ viimeisinMuutos | TM_Instant [0..1]     | latestChange            | properties.l
 asiakirjanTunnus | URI [0..*]           | documentIdentifier      | properties.documentId            | array of string (uri)
 nimi             | LanguageString [0..*]| name                    | properties.name                  | object (LanguageString)
 laji             | AsiakirjanLaji       | type                    | properties.type                  | object (CodelistValue), http://uri.suomi.fi/codelist/rytj/LiitteenLaji
-lisatietolinkki  | URL [0..1]           | additionalInformationLink | properties.additionalInformationLink | string (uri)
+lisatietolinkki  | URL [0..1]           | additionalInformationLink | properties.externalInformationLink | string (uri)
 metadatakuvaus   | URL [0..1]           | metadata                | properties.metadata              | string (uri)
 
 
@@ -66,7 +66,7 @@ viimeisinMuutos | TM_Instant [0..1]     | latestChange            | properties.l
 aineistoTunnus   | URI [0..1]           | datasetIdentifier       | properties.datasetId             | string (uri)
 nimi             | LanguageString [0..*]| name                    | properties.name                  | object (LanguageString)
 laji             | LahtietoaineistonLaji| type                    | properties.type                  | object (CodelistValue), http://uri.suomi.fi/codelist/rytj/LahtotietoaineistonLaji
-lisatietolinkki  | URL [0..1]           | additionalInformationLink | properties.additionalInformationLink | string (uri)
+lisatietolinkki  | URL [0..1]           | additionalInformationLink | properties.externalInformationLink | string (uri)
 metadatakuvaus   | URL [0..1]           | metadata                | properties.metadata              | string (uri)
 
 ### Esimerkki
@@ -279,7 +279,7 @@ laji            | Kaavalaji             | type                    | properties.t
 kaavatunnus     | URI                   | spatialPlanIdentifier   | properties.spatialPlanId | string (uri)
 elinkaaritila   | KaavanElinkaaritila   | lifecycleStatus         | properties.lifecycleStatus | object (CodelistValue), http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila
 kumoamistieto   | KaavanKumoamistieto [0..*] | cancellation       | properties.cancellations | object (CancellationInfo)
-maanalaisuus    | MaanalaisuudenLaji [0..1] | undergroundness     | properties.undergroundness | object (CodelistValue), http://uri.suomi.fi/codelist/rytj/MaanalaisuudenLaji
+maanalaisuus    | MaanalaisuudenLaji [0..1] | groundRelativePosition     | properties.groundRelativePosition | object (CodelistValue), http://uri.suomi.fi/codelist/rytj/MaanalaisuudenLaji
 virelletuloaika | TM_Instant [0..1]     | initiationTime          | properties.initiationTime | string (date)
 hyvaksymisaika  | TM_Instant [0..1]     | approvalTime            | properties.approvalTime | string (date)
 digitaalinenAlkupera | DigitaalinenAlkupera [0..1] | digitalOrigin | properties.digitalOrigin | object (CodelistValue), http://uri.suomi.fi/codelist/rytj/kaavandigitointilahde
@@ -374,7 +374,7 @@ yleismaarays  | Kaavamaarays [0..*]     | generalRegulation       | properties.g
                      "fin": "Kaupunki X"
                 }
             },
-            "undergroundness": {
+            "groundRelativePosition": {
                 "code": "http://uri.suomi.fi/codelist/rytj/MaanalaisuudenLaji/code/02",
                 "title": {
                     "fin": "Maanpäällinen"
@@ -551,7 +551,7 @@ elinkaaritila   | KaavanElinkaaritila   | lifecycleStatus         | properties.l
 sijainninSitovuus | Sitovuuslaji [0..1] | bindingnessOfLocation   | properties.bindingnessOfLocation | object (CodelistValue), http://uri.suomi.fi/codelist/rytj/Sitovuuslaji
 voimassaoloaika | TM_Period [0..1]      | validity                | properties.validFrom, properties.validTo | string (date-time)
 liittyvanLahtotietokohteenTunnnus | URI [0..*] | relatedInputDatasetObjectId | properties.relatedInputDatasetObjectIds | array of string (uri)
-maanalaisuus    | MaanalaisuudenLaji [0..1] | undergroundness     | properties.undergroundness | object (CodelistValue), http://uri.suomi.fi/codelist/rytj/MaanalaisuudenLaji
+maanalaisuus    | MaanalaisuudenLaji [0..1] | groundRelativePosition     | properties.groundRelativePosition | object (CodelistValue), http://uri.suomi.fi/codelist/rytj/MaanalaisuudenLaji
 
 ### Assosiaatiot
 
@@ -612,7 +612,7 @@ maarays       | Kaavamaarays [0..*]     | regulation              | properties.r
                     "fin": "Sitova"
                 }
             },
-            "undergroundness": {
+            "groundRelativePosition": {
                 "code": "http://uri.suomi.fi/codelist/rytj/MaanalaisuudenLaji/code/02",
                 "title": {
                     "fin": "Maanpäällinen"
@@ -652,6 +652,7 @@ laji          | AbstraktiKaavamaaraysLaji | type                  | properties.t
 elinkaaritila   | KaavanElinkaaritila   | lifecycleStatus         | properties.lifecycleStatus | object (CodelistValue), http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila
 teema         | AbstraktiKaavoitusteema [0..*] | theme            | properties.themes     | array of object (CodelistValue), http://uri.suomi.fi/codelist/rytj/Kaavoitusteema-AK, http://uri.suomi.fi/codelist/rytj/Kaavoitusteema
 lisatieto     | Lisatieto [0..*]        | additionalInformation   | properties.additionalInfo | array of object (AdditionalInformation)
+lisatietolinkki  | URL [0..1]           | additionalInformationLink | properties.externalInformationLink | string (uri)
 voimassaoloaika | TM_Period [0..1]      | validity                | properties.validFrom, properties.validTo | string (date-time)
 
 ### Assosiaatiot
@@ -800,13 +801,15 @@ arvo          | AbstraktiArvo [0..*]    | value                   | values      
 
 Nimi          | UML tyyppi              | English name            | JSON property name    | JSON type   | huomioita
 --------------|-------------------------|-------------------------|-----------------------|-------------|--------------
-ajanhetki     | TM_Instant              | timeInstant             | time                  | string (date-time)
+[luokan nimi] |                         |                         | valueType="TimeInstantValue" | string | 
+ajanhetki     | TM_Instant              | timeInstant             | value                  | string (date-time)
 
 ### Esimerkki
 
 ```json
     {
-        "time": "2020-11-06T10:00:05Z"
+        "valueType": "TimeInstantValue",
+        "value": "2020-11-06T10:00:05Z"
     }
 ```
 
@@ -815,20 +818,23 @@ ajanhetki     | TM_Instant              | timeInstant             | time        
 
 Nimi          | UML tyyppi              | English name            | JSON property name    | JSON type   | huomioita
 --------------|-------------------------|-------------------------|-----------------------|-------------|--------------
-aikavali      | TM_Period               | timePeriod              | start_time, end_time  | string (date-time) | jompi kumpi voi puuttua
+[luokan nimi] |                         |                         | valueType="TimePeriodValue" | string | 
+aikavali      | TM_Period               | timePeriod              | startValue, endValue  | string (date-time) | jompi kumpi voi puuttua
 
 ### Esimerkki
 
 ```json
     {
-        "start_time": "2020-11-06T00:00:00Z",
-        "end_time": "2020-12-06T00:00:00Z"
+        "valueType": "TimePeriodValue",
+        "startValue": "2020-11-06T00:00:00Z",
+        "endValue": "2020-12-06T00:00:00Z"
     }
 ```
 
 ```json
     {
-        "start_time": "2020-11-06T00:00:00Z"
+        "valueType": "TimePeriodValue",
+        "startValue": "2020-11-06T00:00:00Z"
     }
 ```
 
@@ -837,12 +843,14 @@ aikavali      | TM_Period               | timePeriod              | start_time, 
 
 Nimi          | UML tyyppi              | English name            | JSON property name    | JSON type   | huomioita
 --------------|-------------------------|-------------------------|-----------------------|-------------|--------------
+[luokan nimi] |                         |                         | valueType="GeometryValue" | string | 
 geometria     | Geometry                | geometry                | geometry              | object (GeoJSON Geometry) |
 
 ### Esimerkki
 
 ```json
     {
+        "valueType": "GeometryValue",
         "geometry": {
             "type" : "LineString",
             "coordinates" : [ ]
@@ -855,6 +863,7 @@ geometria     | Geometry                | geometry                | geometry    
 
 Nimi          | UML tyyppi              | English name            | JSON property name    | JSON type   | huomioita
 --------------|-------------------------|-------------------------|-----------------------|-------------|--------------
+[luokan nimi] |                         |                         | valueType="CodeValue" | string | 
 koodi         | URI                     | code                    | code                  | string (uri) |
 koodistonTunnnus | URI [0..1]           | codeListIdentifier      | codeList              | string (uri) |
 otsikko       | LanguageString [0..*]   | title                   | title                 | object (LanguageString) |
@@ -863,6 +872,7 @@ otsikko       | LanguageString [0..*]   | title                   | title       
 
 ```json
     {
+        "valueType": "CodeValue",
         "code": "http://uri.suomi.fi/codelist/rytj/Sitovuuslaji/code/01",
         "codeList": "http://uri.suomi.fi/codelist/rytj/Sitovuuslaji",
         "title": {
@@ -877,14 +887,16 @@ otsikko       | LanguageString [0..*]   | title                   | title       
 
 Nimi          | UML tyyppi              | English name            | JSON property name    | JSON type   | huomioita
 --------------|-------------------------|-------------------------|-----------------------|-------------|--------------
-numeroarvo    | double                  | number                  | number                | number      |
+[luokan nimi] |                         |                         | valueType="NumericValue" | string |
+numeroarvo    | double                  | numericValue                  | value                | number      |
 mittayksikko  | CharacterString [0..1]  | unitOfMeasure      | unitOfMeasure     | string      |
 
 ### Esimerkki
 
 ```json
 {
-    "number": 20,
+    "valueType": "NumericValue",
+    "value": 20,
     "unitOfMeasure": "dB"
 }
 ```
@@ -894,6 +906,7 @@ mittayksikko  | CharacterString [0..1]  | unitOfMeasure      | unitOfMeasure    
 
 Nimi          | UML tyyppi              | English name            | JSON property name    | JSON type   | huomioita
 --------------|-------------------------|-------------------------|-----------------------|-------------|--------------
+[luokan nimi] |                         |                         | valueType="NumericRange" | string |
 nimimiarvo    | double [0..1]           | minimumValue            | minValue              | number      |
 maksimiarvo   | double [0..1]           | maximumValue            | maxValue              | number      |
 mittayksikko  | CharacterString [0..1]  | unitOfMeasure      | unitOfMeasure     | string      |
@@ -902,6 +915,7 @@ mittayksikko  | CharacterString [0..1]  | unitOfMeasure      | unitOfMeasure    
 
 ```json
 {
+    "valueType": "NumericRange",
     "minValue": 1000,
     "maxValue": 2500,
     "unitOfMeasure": "m2"
@@ -914,7 +928,8 @@ mittayksikko  | CharacterString [0..1]  | unitOfMeasure      | unitOfMeasure    
 
 Nimi          | UML tyyppi              | English name            | JSON property name    | JSON type   | huomioita
 --------------|-------------------------|-------------------------|-----------------------|-------------|--------------
-numeroarvo    | double                  | number                  | number                | number      |
+[luokan nimi] |                         |                         | valueType="HeightPosition" | string |
+numeroarvo    | double                  | numericValue            | value                | number      |
 mittayksikko  | CharacterString [0..1]  | unitOfMeasure       | unitOfMeasure    | string      |
 referenssipiste | GM_Point [0..1]       | referencePoint          | referencePoint        | object (CoordinateReferencePoint) |
 
@@ -922,7 +937,8 @@ referenssipiste | GM_Point [0..1]       | referencePoint          | referencePoi
 
 ```json
 {
-    "number": 10.2,
+    "valueType": "HeightPosition",
+    "value": 10.2,
     "unitOfMeasure": "m",
     "referencePoint": {
         "crs": {
@@ -942,6 +958,7 @@ referenssipiste | GM_Point [0..1]       | referencePoint          | referencePoi
 
 Nimi          | UML tyyppi              | English name            | JSON property name    | JSON type   | huomioita
 --------------|-------------------------|-------------------------|-----------------------|-------------|--------------
+[luokan nimi] |                         |                         | valueType="HeightRange" | string |
 nimimiarvo    | double [0..1]           | minimumValue            | minValue              | number      |
 maksimiarvo   | double [0..1]           | maximumValue            | maxValue              | number      |
 mittayksikko  | CharacterString [0..1]  | unitOfMeasure       | unitOfMeasure   | string      |
@@ -951,6 +968,7 @@ referenssipiste | GM_Point [0..1]       | referencePoint          | referencePoi
 
 ```json
 {
+    "valueType": "HeightRange",
     "minValue": 10.0,
     "maxValue": 15.0,
     "unitOfMeasure": "m",
@@ -972,14 +990,16 @@ referenssipiste | GM_Point [0..1]       | referencePoint          | referencePoi
 
 Nimi          | UML tyyppi              | English name            | JSON property name    | JSON type   | huomioita
 --------------|-------------------------|-------------------------|-----------------------|-------------|--------------
-teksti        | LanguageString [1..*]   | text                    | text                  | object (LanguageString)  |
+[luokan nimi] |                         |                         | valueType="TextValue" | string |
+teksti        | LanguageString [1..*]   | text                    | value                  | object (LanguageString)  |
 syntaksi      | CharacterString [0..1]  | syntax                  | syntax                | string      |
 
 ### Esimerkki
 
 ```json
 {
-    "text": {
+    "valueType": "TextValue",
+    "value": {
         "fin": "Aluetta kehitetään asumisen sekä sitä palvelevien toimintojen ja lähipalvelujen sekä ympäristöhäiriötä aiheuttamattomien elinkeinotoimintojen alueena."
     },
     "syntax": "naturalLanguage"
@@ -992,6 +1012,7 @@ syntaksi      | CharacterString [0..1]  | syntax                  | syntax      
 
 Nimi          | UML tyyppi              | English name            | JSON property name    | JSON type   | huomioita
 --------------|-------------------------|-------------------------|-----------------------|-------------|--------------
+[luokan nimi] |                         |                         | valueType="IdentifierValue" | string |
 tunnus        | URI                     | identifier              | identifier            | string (uri)|
 rekisterinTunnus | URI  [0..1]          | registerIdentifier      | registerId            | string (uri)|
 rekisterinNimi | LanguageString [0..*]  | registerName            | registerName          | object (LanguageString)
@@ -1000,6 +1021,7 @@ rekisterinNimi | LanguageString [0..*]  | registerName            | registerName
 
 ```json
 {
+    "valueType": "IdentifierValue",
     "identifier": "86-413-1-124",
     "registerId": "http://maanmittauslaitos.fi/kiinteistorekisteri",
     "registerName": {
