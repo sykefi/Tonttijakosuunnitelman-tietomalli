@@ -1,6 +1,6 @@
 # Kohdetyypit (FeatureType)
 
-Kohdetyypit kuvataan GeoJSON Feature -objekteiksi, joilla on yksi ulkojäsen (foreign member) "featureType", jonka arvona on kohdetyypin englanninkielinen nimi. GeoJSON-objektin ominaisuuden "properties" alle tulevat kaikki muut kohteen ominaisuudet. Paikkatietokohteiden ensisijainen geometriatieto ilmaistaa GeoJSON-objektin "geometry"-omainaisuutena, ja sen koordinaatisto "crs"-ominaisuutena (ks. NamedCooodinateReferenceSystem). Kohteilla, jolla ei ole geometriatietoa "geometry"-ominaisuuden arvoksi tulee yhteentoivmivuussyistä aina tyhjä Polygon ja "crs" ominaisuutta ei anneta.
+Kohdetyypit kuvataan GeoJSON Feature -objekteiksi, joilla on yksi ulkojäsen (foreign member) "featureType", jonka arvona on kohdetyypin englanninkielinen nimi. GeoJSON-objektin ominaisuuden "properties" alle tulevat kaikki muut kohteen ominaisuudet. Paikkatietokohteiden ensisijainen geometriatieto ilmaistaa GeoJSON-objektin "geometry"-omainaisuutena, ja sen koordinaatisto "crs"-ominaisuutena (ks. NamedCooodinateReferenceSystem). Kohteilla, jolla ei ole geometriatietoa "geometry"-ominaisuuden arvoksi tulee yhteentoimivuussyistä aina koordinaateiltaan tyhjä Polygon ja "crs" ominaisuutta ei anneta.
 
 ## Asiakirja (Document)
 
@@ -46,7 +46,7 @@ metadatakuvaus   | URL [0..1]           | metadata                | properties.m
                     "fin": "Kaavakartta"
                 }
             },
-            "additionalInformationLink": "https://kartta.ouka.fi/viralliset_asemakaavat/ak1643.pdf",
+            "externalInformationLink": "https://kartta.ouka.fi/viralliset_asemakaavat/ak1643.pdf",
             "metadata": ""
         }  
     }
@@ -95,7 +95,7 @@ metadatakuvaus   | URL [0..1]           | metadata                | properties.m
                     "fin": "Pohjakartta"
                 }
             },
-            "additionalInformationLink": "",
+            "externalInformationLink": "",
             "metadata": ""
         }  
     }
