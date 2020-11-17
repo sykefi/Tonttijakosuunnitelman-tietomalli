@@ -1,0 +1,9 @@
+theme: jekyll-theme-slate
+#url: "https://challenge.inspire-helsinki-2019.fi" # the base hostname & protocol for your site
+#ome: "https://inspire-helsinki-2019.fi"
+plugins:
+  - jekyll-sitemap
+repository: YM-rakennettu-ymparisto/AK-YK-tietomallit
+gems:
+- jekyll-sitemap
+
