@@ -92,7 +92,7 @@ h4 {
     border-bottom: 0px;
    .inner {
      max-width: 52em;
-     background-color: #ffffff91;
+     background-color:  #ffffffe0;
      padding-left: 1em;
      padding-right: 1em; 
    }
@@ -757,11 +757,13 @@ ol#markdown-toc > li:before {
       display:block;
     }
   }
+  
   #header_wrap {
     display: block;
   }
+
   #main_content {
-    padding-top: 40px;
+    padding-top: 20px;
   }
 
   .sidebar-offcanvas {
