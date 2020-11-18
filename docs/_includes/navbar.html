@@ -12,21 +12,21 @@
       {% else %}
       <li class="nav-item">
       {% endif %}
-        <a class="nav-link " href="/1.0/kasitemalli/index.html">Käsitemalli</a>
+        <a class="nav-link " href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/kasitemalli/index.html">Käsitemalli</a>
       </li>
       {% if page.page == 'dokumentaatio' or page.page == 'uml' or page.page == 'koodistot' or page.page == 'elinkaarisaannot' or page.page == 'laatusaannot' or page.page == 'inspire' %}
       <li class="nav-item active dropdown">
       {% else %}
       <li class="nav-item dropdown">
       {% endif %}
-        <a class="nav-link dropdown-toggle" href="/1.0/looginenmalli/dokumentaatio/index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Looginen tietomalli</a>
+        <a class="nav-link dropdown-toggle" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/looginenmalli/dokumentaatio/index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Looginen tietomalli</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/1.0/looginenmalli/dokumentaatio/index.html">Dokumentaatio</a>
-          <a class="dropdown-item" href="/1.0/looginenmalli/uml/index.html">UML-kaaviot</a>
-          <a class="dropdown-item" href="/1.0/looginenmalli/koodistot.html">Koodistot</a>
-          <a class="dropdown-item" href="/1.0/looginenmalli/elinkaarisaannot.html">Elinkaarisäännöt</a>
-          <a class="dropdown-item" href="/1.0/looginenmalli/laatusaannot.html">Laatusäännöt</a>
-          <a class="dropdown-item" href="/1.0/looginenmalli/inspire.html">Inspire-yhteensopivuus</a>
+          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/looginenmalli/dokumentaatio/index.html">Dokumentaatio</a>
+          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/looginenmalli/uml/index.html">UML-kaaviot</a>
+          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/looginenmalli/koodistot.html">Koodistot</a>
+          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/looginenmalli/elinkaarisaannot.html">Elinkaarisäännöt</a>
+          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/looginenmalli/laatusaannot.html">Laatusäännöt</a>
+          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/looginenmalli/inspire.html">Inspire-yhteensopivuus</a>
         </div>
       </li>
       {% if page.page == 'sov-asemakaava' or page.page == 'sov-yleiskaava' %}
@@ -34,10 +34,10 @@
       {% else %}
       <li class="nav-item dropdown">
       {% endif %}
-        <a class="nav-link dropdown-toggle" href="/1.0/soveltamisohjeet/asemakaava/index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Soveltamisohjeet</a>
+        <a class="nav-link dropdown-toggle" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/soveltamisohjeet/asemakaava/index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Soveltamisohjeet</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/1.0/soveltamisohjeet/asemakaava/index.html">Asemakaava</a>
-          <a class="dropdown-item" href="/1.0/soveltamisohjeet/yleiskaava/index.html">Yleiskaava</a>
+          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/soveltamisohjeet/asemakaava/index.html">Asemakaava</a>
+          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/soveltamisohjeet/yleiskaava/index.html">Yleiskaava</a>
         </div>
       </li>
       {% if page.page == 'kaava-json' or page.page == 'demo' or page.page == 'aineistot' %}
@@ -45,11 +45,11 @@
       {% else %}
       <li class="nav-item dropdown">
       {% endif %}
-        <a class="nav-link dropdown-toggle" href="/1.0/fyysiset-mallit/json/index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fyysiset mallit</a>
+        <a class="nav-link dropdown-toggle" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/fyysiset-mallit/json/index.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Fyysiset mallit</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/1.0/fyysiset-mallit/json/index.html">Kaava-JSON</a>
-          <a class="dropdown-item" href="/1.0/fyysiset-mallit/demo/index.html">Demopalvelu</a>
-          <a class="dropdown-item" href="/1.0/fyysiset-mallit/aineistot/index.html">Testiaineistoja</a>
+          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/fyysiset-mallit/json/index.html">Kaava-JSON</a>
+          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/fyysiset-mallit/demo/index.html">Demopalvelu</a>
+          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/fyysiset-mallit/aineistot/index.html">Testiaineistoja</a>
         </div>
       </li>
       {% if page.page == 'projekti' or page.page == 'sparrausryhma' or page.page == 'loppuraportti' %}
