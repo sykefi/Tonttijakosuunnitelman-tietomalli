@@ -23,7 +23,7 @@
 
 @font-face {
   font-family: 'Gelion-Bold';
-  src: url(/assets/fonts/gelion-bold.woff2);
+  src: url(../fonts/gelion-bold.woff2);
 }
 
 body {
@@ -86,7 +86,7 @@ h4 {
  }
 
  #main_content_wrap {
-    background-image: url(/assets/img/ym_background_4.svg);
+    background-image: url(../img/ym_background_4.svg);
     background-size: 100% auto;
     border-top: 0px;
     border-bottom: 0px;
@@ -140,8 +140,9 @@ h4 {
    .inner {
      max-width: 58em;
      font-size: smaller;
-     background-image: url(/assets/img/ym_logo_footer.svg);
+     background-image: url(../img/ym_logo_footer.svg);
      background-repeat: no-repeat;
+     min-height: 6em;
 
      p {
        color: #797979;
@@ -689,7 +690,7 @@ h4 {
   }
 
   #header_wrap {
-    background-image: url('/assets/img/VN-navigaatio-taustakuvio2.svg');
+    background-image: url(../img/VN-navigaatio-taustakuvio2.svg);
     background-color:#274085;
     background-size: 100% auto;
     position:relative;
