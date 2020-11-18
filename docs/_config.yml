@@ -1,6 +1,6 @@
 theme: jekyll-theme-slate
-url: "https://ym-rakennettu-ymparisto.github.io/AK-YK-tietomallit/" # the base hostname & protocol for your site
-home: "https://ym-rakennettu-ymparisto.github.io/AK-YK-tietomallit/"
+url: "https://ym-rakennettu-ymparisto.github.io/AK-YK-tietomallit" # the base hostname & protocol for your site
+home: "https://ym-rakennettu-ymparisto.github.io/AK-YK-tietomallit"
 plugins:
   - jekyll-sitemap
 repository: YM-rakennettu-ymparisto/AK-YK-tietomallit
