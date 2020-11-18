@@ -4,7 +4,8 @@ home: "https://ym-rakennettu-ymparisto.github.io/AK-YK-tietomallit"
 plugins:
   - jekyll-sitemap
 repository: YM-rakennettu-ymparisto/AK-YK-tietomallit
-gems:
+plugins:
 - jekyll-sitemap
+- kramdown
 
 
