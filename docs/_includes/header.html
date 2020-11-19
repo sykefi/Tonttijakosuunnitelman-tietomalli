@@ -24,7 +24,7 @@
   <script>
     function setModifiedDate() {
       if ("{{ site.github.repository_name }}" !== "" && document.getElementById('last-modified')) {
-        fetch("https://api.github.com/repos/{{ site.github.owner_name }}/{{ site.github.repository_name }}/commits?path={{ page.path }}")
+        fetch("https://api.github.com/repos/{{ site.github.owner_name }}/{{ site.github.repository_name }}/commits?path=docs/{{ page.path }}")
           .then((response) => {
             return response.json();
           })
