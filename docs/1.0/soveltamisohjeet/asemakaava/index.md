@@ -16,7 +16,7 @@ status: "Keskeneräinen"
 
 ### Vuorovaikutustapahtuman laji
 
-{% include callout.html content="**Vaatimus**<br/>Luokan ```AbstraktiVuorovaikutustapahtumanLaji``` sijaan tulee käyttää tarkentavaa luokkaa ```KaavanVuorovaikutustapahtumanLaji```." type="primary" %}
+Luokan ```AbstraktiVuorovaikutustapahtumanLaji``` sijaan tulee käyttää tarkentavaa luokkaa ```KaavanVuorovaikutustapahtumanLaji```.
 
 {% include codelistref.html id="VuorovaikutustapahtumanLaji" name="Vuorovaikutustapahtuman laji (asema- ja yleiskaava)" %}
 
@@ -24,7 +24,7 @@ status: "Keskeneräinen"
 
 ### Käsittelytapahtuman laji
 
-{% include callout.html content="**Vaatimus**<br/>Luokan ```AbstraktiKasittelytapahtumanLaji``` sijaan tulee käyttää tarkentavaa luokkaa ```KaavanKasittelytapahtumanLaji```." type="primary" %}
+Luokan ```AbstraktiKasittelytapahtumanLaji``` sijaan tulee käyttää tarkentavaa luokkaa ```KaavanKasittelytapahtumanLaji```.
 
 {% include codelistref.html id="KasittelytapahtumanLaji-AK" name="Käsittelytapahtuman laji (asema- ja yleiskaava)" %}
 
@@ -36,14 +36,13 @@ Kaavamääräyskohdelaji-koodisto on varattu tulevaisuuden käyttöön. Tämä t
 
 ### Kaavoitusteema
 
-{% include callout.html content="**Vaatimus**<br/>Luokan ```AbstraktiKaavoitusteema``` sijaan tulee käyttää tarkentavaa luokkaa ```KaavoitusteemaAsemakaava```." type="primary" %}
+Luokan ```AbstraktiKaavoitusteema``` sijaan tulee käyttää tarkentavaa luokkaa ```KaavoitusteemaAsemakaava```.
 
 {% include codelistref.html id="Kaavoitusteema-AK" name="Kaavoitusteema (asemakaava)" %}
 
-
 ### Kaavamääräyslaji
 
-{% include callout.html content="**Vaatimus**<br/>Luokan ```AbstraktiKaavamaaraysLaji``` sijaan tulee käyttää tarkentavaa luokkaa ```KaavamaaraysLajiAsemakaava```." type="primary" %}
+Luokan ```AbstraktiKaavamaaraysLaji``` sijaan tulee käyttää tarkentavaa luokkaa ```KaavamaaraysLajiAsemakaava```.
 
 {% include codelistref.html id="Kaavamaaraykset" name="Kaavamääräyslaji (asemakaava)" %}
 
@@ -51,17 +50,44 @@ Kaavamääräyskohdelaji-koodisto on varattu tulevaisuuden käyttöön. Tämä t
 
 ### Kaavamääräyksen lisätiedon laji
 
-{% include callout.html content="**Vaatimus**<br/>Luokan ```AbstraktiLisatiedonLaji``` sijaan tulee käyttää tarkentavaa luokkaa ```LisatiedonLajiAsemakaava```." type="primary" %}
+Luokan ```AbstraktiLisatiedonLaji``` sijaan tulee käyttää tarkentavaa luokkaa ```LisatiedonLajiAsemakaava```."
 
 {% include codelistref.html id="Lisatiedonlaji" name="Kaavamääräyksen lisätiedon laji (asema- ja yleiskaava)" %}
 
 {% include bug.html content="UML-mallissa eri koodistot YK ja AK. Tarvitaanko kaksi koodistoa vai voiko olla sama?" %}
 
-## Kaavamääräysten mallintamisen hyviä käytäntöjä
+
+## Kaavamääräyslajien arvot ja lisätiedot
+
+### Käyttötarkoitus
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/00>
+
+Ryhmittelyotsikko, vain alemman tason koodeja käytetään.
+
+#### Alueen käyttötarkoitus
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/0001>
+
+Mahdolliset ```arvo```-attribuutin arvot:
+* Yksi tai useampi [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa koodistoon [Käyttötarkoituslaji](http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak)
+* Enintään yksi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo), joka täydentää annettujen käyttötarkoituslajien avulla muodostettua kaavamääräystietoa.
+
+Ei mahdollisia ```lisatieto```-attribuutin arvoja.
+
+{% include bug.html content="Käyttötarkoituslaji-koodiston tunnus päätty '-ak', vaikka se on sama sekä asema- että yleiskaavoille" %}
+
+#### Yksityskohtainen käyttötarkoitus
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/0002>
+
+Mahdolliset ```arvo```-attribuutin arvot:
+* Yksi tai useampi [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa koodistoon [Tarkentava käyttötarkoituslaji](http://uri.suomi.fi/codelist/rytj/TarkentavaKayttotarkoitusLaji)
+* Enintään yksi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo), joka täydentää annettujen käyttötarkoituslajien avulla muodostettua kaavamääräystietoa.
+
+Ei mahdollisia ```lisatieto```-attribuutin arvoja.
+
+
+## Kaavamääräysten mallintamisen esimerkkejä
 
 ### Alueen käyttötarkoitukset
-
-#### Alueen käyttötarkoitusten tavoiteltu jakautuminen
 
 ### Sallittu rakentamismäärä (rakennusoikeus)
 
