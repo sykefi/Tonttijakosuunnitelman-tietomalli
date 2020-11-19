@@ -32,7 +32,7 @@
             var committer = commits[0]['commit']['committer']['name'];
             var modified = commits[0]['commit']['committer']['date'];
             if (modified) {
-              document.getElementById('last-modified').textContent = "Muokattu " + new Date(modified).toLocaleDateString() + "(" + committer + ")";
+              document.getElementById('last-modified').textContent = committer + " muokannut " + new Date(modified).toLocaleDateString();
             }
           });
       }
