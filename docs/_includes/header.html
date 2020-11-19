@@ -20,6 +20,21 @@
   gtag('config', '{{ site.google_analytics }}');
   </script>
   {% endif %}
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=String.prototype.padStart%2Cfetch" crossorigin="anonymous"></script>
+  <script>
+    function setModifiedDate() {
+      if ("{{ site.github.repository_name }}" !== "" && document.getElementById('last-modified')) {
+        fetch("https://api.github.com/repos/{{ site.github.owner_name }}/{{ site.github.repository_name }}/commits?path={{ page.path }}")
+          .then((response) => {
+            return response.json();
+          })
+          .then((commits) => {
+            var modified = commits[0]['commit']['committer']['date'].slice(0,10);
+            document.getElementById('last-modified').textContent = "Viimeksi muokattu: " + modified;
+          });
+      }
+    }
+  </script>
   </head>
   <body>
 

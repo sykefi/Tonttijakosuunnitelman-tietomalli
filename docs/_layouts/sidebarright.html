@@ -5,6 +5,12 @@
       <div class="inner">
         <div class="row row-offcanvas row-offcanvas-right">
           <section id="main_content" class="col-12 col-md-9">
+              <p class="pagemeta">
+                {% if page.modelversion %}
+                <span class="badge badge-pill badge-info">Versio {{ page.modelversion }}</span>
+                {% endif %}
+                <span id="last-modified"></span>
+              </p>
               {{ content }}
           </section>
           {% if page.sidebar %}

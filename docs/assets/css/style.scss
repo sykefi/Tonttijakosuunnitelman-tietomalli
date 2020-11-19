@@ -103,12 +103,14 @@ h4 {
        padding: 0px;
      }
    }
-
-
    &.sidebar-container {
      .inner {
        max-width: 64em;
      }
+   }
+
+   .pagemeta {
+     text-align:right;
    }
 }
 
