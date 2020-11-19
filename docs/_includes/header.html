@@ -30,7 +30,10 @@
           })
           .then((commits) => {
             var modified = commits[0]['commit']['committer']['date'].slice(0,10);
-            document.getElementById('last-modified').textContent = "Viimeksi muokattu: " + modified;
+            if (modified) {
+              document.getElementById('last-modified').textContent = "Viimeksi muokattu: " + new Date(modified).toLocaleDateString();
+            }
+            
           });
       }
     }
