@@ -57,7 +57,7 @@ Kaavamääräyskohdelaji-koodisto on varattu tulevaisuuden käyttöön. Tämä t
 
 {% include bug.html content="UML-mallissa eri koodistot YK ja AK. Tarvitaanko kaksi koodistoa vai voiko olla sama?" %}
 
-## Kaavamääräysten esittämisen hyviä käytäntöjä
+## Kaavamääräysten mallintamisen hyviä käytäntöjä
 
 ### Alueen käyttötarkoitukset
 
