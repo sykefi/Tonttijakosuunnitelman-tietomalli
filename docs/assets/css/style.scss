@@ -599,7 +599,8 @@ ol#markdown-toc > li:before {
     background-color: #FAFAFA;
     border: 1px solid #EEEEEE;
     color: #1A1A1A;
-    height: expression(this.scrollHeight > 200 ? "200px" : "auto");
+    /* height: expression(this.scrollHeight > 200 ? "200px" : "auto");*/
+    height: 200px;
     max-height: 200px;
     overflow: auto;
     margin: 5px;
@@ -757,7 +758,7 @@ ol#markdown-toc > li:before {
       display:block;
     }
   }
-  
+
   #header_wrap {
     display: block;
   }
