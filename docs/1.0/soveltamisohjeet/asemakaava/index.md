@@ -76,7 +76,7 @@ Mahdolliset ```arvo```-attribuutin arvot:
 * Enintään yksi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo), joka täydentää annettujen käyttötarkoituslajien avulla muodostettua kaavamääräystietoa.
 
 Mahdolliset ```lisatieto```-attribuutin arvot:
-* Nolla tai enemmän [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Poisluettava käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/005), jolla on yksi tai useampi arvo [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa joko koodistoon [Käyttötarkoituslaji](http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak) tai koodistoon [Tarkentava käyttötarkoituslaji](http://uri.suomi.fi/codelist/rytj/TarkentavaKayttotarkoitusLaji).
+* Nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Poisluettava käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/005), jolla on yksi tai useampi arvo [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa joko koodistoon [Käyttötarkoituslaji](http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak) tai koodistoon [Tarkentava käyttötarkoituslaji](http://uri.suomi.fi/codelist/rytj/TarkentavaKayttotarkoitusLaji).
 
 Poisluettavat käyttötarkoituslajit tulee valita siten, että ne kohdistuvat ```arvo```-attribuuttien avulla valittuun yleispiirteisempään joukkoon käyttötarkoituksia poislukien niistä osan. Esim. [Työ ja tuotanto](http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/6) poislukien [Alue, jolle saa sijoittaa merkittävän, vaarallisia kemikaaleja valmistavan tai varastoivan laitoksen](http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/631).
 
@@ -90,7 +90,7 @@ Mahdolliset ```arvo```-attribuutin arvot:
 * Enintään yksi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo), joka täydentää annettujen käyttötarkoituslajien avulla muodostettua kaavamääräystietoa.
 
 Mahdolliset ```lisatieto```-attribuutin arvot:
-* Nolla tai enemmän [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Poisluettava käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/005), jolla on yksi tai useampi arvo [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa koodistoon [Tarkentava käyttötarkoituslaji](http://uri.suomi.fi/codelist/rytj/TarkentavaKayttotarkoitusLaji).
+* Nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Poisluettava käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/005), jolla on yksi tai useampi arvo [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa koodistoon [Tarkentava käyttötarkoituslaji](http://uri.suomi.fi/codelist/rytj/TarkentavaKayttotarkoitusLaji).
 
 Poisluettavat käyttötarkoituslajit tulee valita siten, että ne kohdistuvat ```arvo```-attribuuttien avulla valittuun yleispiirteisempään joukkoon käyttötarkoituksia poislukien niistä osan.
 
@@ -107,7 +107,7 @@ Mahdolliset ```arvo```-attribuutin arvot:
 * Enintään yksi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo), joka täydentää kaavamääräystietoa.
 
 Mahdolliset ```lisatieto```-attribuutin arvot:
-* Nolla tai enemmän [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Käyttötarkoituksen osuus kerrosalasta](http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/001), jolla on kaksi arvoa:
+* Nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Käyttötarkoituksen osuus kerrosalasta](http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/001), jolla on kaksi arvoa:
    *  Yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo sallitun tiettyyn käyttötarkoitukseen kohdistettavan määrän koko sallitusta kerrosalasta joko kerrosneliömetreinä (```k-m2```) tai prosentteina (```%```).
    * Yksi [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa joko koodistoon [Käyttötarkoituslaji](http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak) tai koodistoon [Tarkentava käyttötarkoituslaji](http://uri.suomi.fi/codelist/rytj/TarkentavaKayttotarkoitusLaji).
 
@@ -179,7 +179,7 @@ Ei mahdollisia ```lisatieto```-attribuutin arvoja.
 
 Mahdolliset ```arvo```-attribuutin arvot:
 * Yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), joka kertoo rakennusten vähimmäisetäisyyden naapuritontin rajasta sen kaavamääräyskohteen alueella, johon kaavamääräys on liitetty. Yksikkönä metri (```m```).
-* Nolla tai enemmän [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), jonka tyyppinä murtoviiva, rajoittaa määräyksen koskemaan vain niitä naapurintonttien rajan osia, joiden kanssa viiva-arvot ovat päällekkäin.
+* Nolla tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), jonka tyyppinä murtoviiva, rajoittaa määräyksen koskemaan vain niitä naapurintonttien rajan osia, joiden kanssa viiva-arvot ovat päällekkäin.
 
 Ei mahdollisia ```lisatieto```-attribuutin arvoja.
 
@@ -194,7 +194,7 @@ Ei mahdollisia ```arvo```- tai ```lisatieto``` attribuuttien arvoja.
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/026>
 
 Mahdolliset ```arvo```-attribuutin arvot:
-* Yksi tai enemmän [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), jonka tyyppinä murtoviiva, kohdistaa kaavamääräyksen niihin kaavamääräyskohteen geometrian ulkorajan osiin, joiden kanssa viiva-arvot ovat päällekkäin.
+* Yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), jonka tyyppinä murtoviiva, kohdistaa kaavamääräyksen niihin kaavamääräyskohteen geometrian ulkorajan osiin, joiden kanssa viiva-arvot ovat päällekkäin.
 
 Ei mahdollisia ```lisatieto```-attribuutin arvoja.
 
