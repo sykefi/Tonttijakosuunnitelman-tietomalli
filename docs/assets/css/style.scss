@@ -66,6 +66,10 @@ h4 {
   position: static;
 }
 
+.sticky-top {
+  top: -1px; /* fix for the occational 1px gap at the top of the sticky nav bar */
+} 
+
  #header_wrap {
      display: none;
  }
