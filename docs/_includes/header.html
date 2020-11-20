@@ -31,7 +31,7 @@
           })
           .then((commits) => {
             var commit = commits[0]['commit'];
-            if (modified) {
+            if (commit) {
               $("#last-modified").append("<a href=\"" + commit.url +"\" title=\"" 
               + commit.committer.name 
               + ":" + commit.message 
