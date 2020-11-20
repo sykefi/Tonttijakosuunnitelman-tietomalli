@@ -303,14 +303,16 @@ ol#markdown-toc > li:before {
 
  #footer_wrap {
    background: #253746;
-   padding: 20px;
+   padding-bottom: 7em;
+   padding-left: 20px;
+   padding-top: 30px;
 
    .inner {
      max-width: 58em;
      font-size: smaller;
      background-image: url(../img/ym_logo_footer.svg);
      background-repeat: no-repeat;
-     min-height: 6em;
+     min-height: 5.5em;
 
      p {
        color: #797979;
