@@ -33,11 +33,10 @@
             var commit = commits[0]['commit'];
             var url = commits[0]['html_url'];
             if (commit) {
-              $("#last-modified").append("<a href=\"" + url +"\" title=\"" 
+              $("#last-modified").append("<span>Viimeksi muutettu <a href=\"" + url +"\" title=\"" 
               + commit.committer.name 
               + ":" + commit.message 
-              + "\">Viimeksi muutettu " 
-              + new Date(commit.committer.date).toLocaleString() 
+              + "\">" + new Date(commit.committer.date).toLocaleString() 
               + "</a>");
             }
           });
