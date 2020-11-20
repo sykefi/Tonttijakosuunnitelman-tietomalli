@@ -30,10 +30,14 @@
             return response.json();
           })
           .then((commits) => {
-            var committer = commits[0]['commit']['committer']['name'];
-            var modified = commits[0]['commit']['committer']['date'];
+            var commit = commits[0]['commit'];
             if (modified) {
-              document.getElementById('last-modified').textContent = committer + " muokannut " + new Date(modified).toLocaleDateString();
+              $("#last-modified").append("<a href=\"" + commit.url +"\" title=\"" 
+              + commit.committer.name 
+              + ":" + commit.message 
+              + "\">Viimeksi muutettu " 
+              + new Date(commit.committer.date).toLocaleTimeString() 
+              + "</a>");
             }
           });
       }
