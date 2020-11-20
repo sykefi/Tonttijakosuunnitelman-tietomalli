@@ -66,9 +66,12 @@ h4 {
   position: static;
 }
 
- #header_wrap {
-     display: none;
- }
+#header_wrap {
+  background-image: url(../img/VN-navigaatio-taustakuvio2.svg);
+  background-color:#274085;
+  background-size: 100% auto;
+  position:relative;
+}
 
  #header_wrap {
    .thinner {
@@ -85,20 +88,37 @@ h4 {
      }
    }
    .print-title-block {
-     display: none;
+     padding-bottom: 1em;
+     a {
+      text-decoration: none;
+     }
+     .title {
+      margin-left: 1rem;
+      font-size: 130%;
+      color: white;
+     }
+     p {
+      margin-left: 1rem;
+      margin-bottom: 0px;
+      font-size: smaller;
+      color: rgb(190, 190, 190);
+
+      a {
+        color:rgb(190, 190, 190);
+      }
+     }
    }
  }
 
  #main_content_wrap {
-    background-image: url(../img/ym_background_4.svg);
-    background-size: 100% auto;
     border-top: 0px;
     border-bottom: 0px;
    .inner {
-     max-width: 52em;
+     max-width: 68em;
      background-color:  #ffffffe0;
      padding-left: 1em;
-     padding-right: 1em; 
+     padding-right: 1em;
+
    }
 
    &.ea {
@@ -824,47 +844,3 @@ ol#markdown-toc > li:before {
   }
  }
 
-@media screen and (min-width: 500px) {
-  .navbar-brand {
-    &.short {
-      display:block;
-    }
-    &.long {
-      display:none;
-    }
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .navbar-brand {
-    &.short {
-      display:none;
-    }
-    &.long {
-      display:block;
-    }
-  }
-
-  #header_wrap {
-    display: block;
-  }
-
-  #main_content {
-    padding-top: 20px;
-  }
-
-  .sidebar-offcanvas {
-    padding-top:40px;
-  }
-
-  #header_wrap {
-    background-image: url(../img/VN-navigaatio-taustakuvio2.svg);
-    background-color:#274085;
-    background-size: 100% auto;
-    position:relative;
-
-    .inner {
-      padding: 10px 10px 10px 10px;
-    }
-  }
-}
