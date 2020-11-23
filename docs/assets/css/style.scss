@@ -93,6 +93,10 @@ h4 {
    }
  }
 
+ .page-kaava-json #main_content_wrap > .inner {
+    max-width: 100%;
+ }
+
  #main_content_wrap {
     background-image: url(../img/ym_background_4.svg);
     background-size: 100% auto;
