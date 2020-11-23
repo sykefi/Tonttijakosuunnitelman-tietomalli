@@ -4,8 +4,9 @@ title: "Kaavatietomalli - looginen tietomalli - dokumentaatio"
 description: ""
 page: "dokumentaatio"
 modelversion: "1.0"
+status: "Keskeneräinen"
 ---
-# Looginen tietomalli - dokumentaatio
+# Looginen Kaavatietomalli
 {:.no_toc}
 
 1. 

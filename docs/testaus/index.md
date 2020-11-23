@@ -1,9 +1,10 @@
 ---
 layout: "default"
-title: "Asema- ja yleiskaavan tietomallit - testaus"
+title: "Kaavatietomalli - testaus"
 description: ""
 page: "testaus"
+status: "Keskeneräinen"
 ---
-# Asema- ja yleiskaavan tietomallit - testaus
+# Kaavatietomallin testaus
 
 Kesken
