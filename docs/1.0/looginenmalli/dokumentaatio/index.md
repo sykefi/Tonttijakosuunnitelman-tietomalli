@@ -116,13 +116,6 @@ Sanasto:
 
 Laajennettavuus:
 
-#### Paatoslaji
-Stereotyyppi: CodeList (koodisto)
-
-Sanasto:
-
-Laajennettavuus:
-
 #### AsiakirjanLaji
 Stereotyyppi: CodeList (koodisto)
 
