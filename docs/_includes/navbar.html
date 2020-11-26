@@ -14,7 +14,7 @@
       {% endif %}
         <a class="nav-link " href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/kasitemalli/">Käsitemalli</a>
       </li>
-      {% if page.page == 'dokumentaatio' or page.page == 'uml' or page.page == 'koodistot' or page.page == 'elinkaarisaannot' or page.page == 'laatusaannot' or page.page == 'inspire' %}
+      {% if page.page == 'dokumentaatio' or page.page == 'uml' or page.page == 'elinkaarisaannot' or page.page == 'laatusaannot' or page.page == 'inspire' %}
       <li class="nav-item active dropdown">
       {% else %}
       <li class="nav-item dropdown">
@@ -23,7 +23,6 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/looginenmalli/dokumentaatio/">Dokumentaatio</a>
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/looginenmalli/uml/">UML-kaaviot</a>
-          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/looginenmalli/koodistot.html">Koodistot</a>
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/looginenmalli/elinkaarisaannot.html">Elinkaarisäännöt</a>
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/looginenmalli/laatusaannot.html">Laatusäännöt</a>
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/looginenmalli/inspire.html">Inspire-yhteensopivuus</a>
