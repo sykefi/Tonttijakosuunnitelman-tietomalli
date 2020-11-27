@@ -167,6 +167,14 @@ h4 {
   li ol > li:before {
     content: counters(item, ".") " ";
   }
+
+  li ol > li:before {
+    min-width: 2em;
+  }
+  
+  li ol > li > ol > li:before {
+    min-width: 3.5em;
+  }
 }
 
 ol#markdown-toc:before {
