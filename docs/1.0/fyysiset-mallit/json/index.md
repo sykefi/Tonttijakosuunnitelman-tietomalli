@@ -805,7 +805,7 @@ perustelevaAsiakirja | Dokumentti [0..*] | properties.justifyingDocuments | arra
 
 ## Tietotyypit (DataType)
 
-Tietotyypit eivät kuvaudu omiksi GeoJSON-kohteikseen, vaan kohdetyyppien tai toisten ttietotyyppien rakenteisiksi ominaisuuksiksi. Tietotyypin instanssilla ei ole tunnusta, eikä se voi esiintyä irrallaan sen sisältävästä kohteesta.
+Tietotyypit eivät kuvaudu omiksi GeoJSON-kohteikseen, vaan kohdetyyppien tai toisten tietotyyppien rakenteisiksi ominaisuuksiksi. Tietotyypin instanssilla ei ole tunnusta, eikä se voi esiintyä irrallaan sen sisältävästä kohteesta.
 
 ### CancellationInfo (KaavanKumoamistieto)
 
