@@ -14,7 +14,7 @@ status: "Keskeneräinen"
 
 ## Soveltamisala
 
-Tämä ohje koskee kaavatietomallin soveltamista sellaisiin [Kaava](../../looginenmalli/dokumentaatio/#kaava)-luokan instansseihin, joiden ```laji```-attribuutin arvo on jokin [Kaavalajit]()-koodiston koodin [Asemakaava](http://uri.suomi.fi/codelist/rytj/Kaavalajit/code/30) alakoodeista, sekä näihin kaavoihin liittettäviin muihin kaavatietomallin määrittelemiin tietoihin.
+Tämä ohje koskee kaavatietomallin soveltamista sellaisiin [Kaava](../../looginenmalli/dokumentaatio/#kaava)-luokan instansseihin, joiden ```laji```-attribuutin arvo on jokin [Kaavalajit]()-koodiston koodin [Asemakaava](http://uri.suomi.fi/codelist/rytj/Kaavalajit/code/3) alakoodeista, sekä näihin kaavoihin liittettäviin muihin kaavatietomallin määrittelemiin tietoihin.
 
 ## Koodistot
 
