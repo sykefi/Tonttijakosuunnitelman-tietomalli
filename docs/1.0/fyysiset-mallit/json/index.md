@@ -55,6 +55,8 @@ digitaalinenAlkupera | DigitaalinenAlkupera [0..1] | properties.digitalOrigin | 
 
 Nimi          | UML tyyppi              | JSON property name    | JSON type
 --------------|-------------------------|-----------------------|------------
+korvaaObjektin | AbstraktiVersioituObjekti[0..*] | properties.replacesObjects | array of object (FeatureLink)
+korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObjects | array of object (FeatureLink)
 vastuullinenOrganisaatio | Organisaatio[0..1] | properties.responsibleOrganisation | object (FeatureLink)
 koskeeHallinnollistaAluetta | HallinnollinenAlue [0..*] | properties.administrativeAreas | array of object (FeatureLink)
 asianLiite    | Dokumentti [0..*]       | properties.attachments | array of object (FeatureLink)
@@ -223,6 +225,14 @@ laji             | AsiakirjanLaji       | properties.type                  | obj
 lisatietolinkki  | URL [0..1]           | properties.externalInformationLink | string (uri)
 metadatakuvaus   | URL [0..1]           | properties.metadata              | string (uri)
 
+*Assosiaatiot**
+
+Nimi          | UML tyyppi              | JSON property name    | JSON type
+--------------|-------------------------|-----------------------|------------
+korvaaObjektin | AbstraktiVersioituObjekti[0..*] | properties.replacesObjects | array of object (FeatureLink)
+korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObjects | array of object (FeatureLink)
+liittyvaAsiakirja | Document[0..*]      | properties.relatedDocuments | array of object (FeatureLink)
+
 **Esimerkki**
 
 ```json
@@ -278,6 +288,13 @@ nimi             | LanguageString [0..*]| properties.name                  | obj
 laji             | LahtietoaineistonLaji | properties.type                  | object (CodelistValue), http://uri.suomi.fi/codelist/rytj/LahtotietoaineistonLaji
 lisatietolinkki  | URL [0..1]           | properties.externalInformationLink | string (uri)
 metadatakuvaus   | URL [0..1]           | properties.metadata              | string (uri)
+
+**Assosiaatiot**
+
+Nimi          | UML tyyppi              | JSON property name    | JSON type
+--------------|-------------------------|-----------------------|------------
+korvaaObjektin | AbstraktiVersioituObjekti[0..*] | properties.replacesObjects | array of object (FeatureLink)
+korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObjects | array of object (FeatureLink)
 
 **Esimerkki**
 
@@ -339,6 +356,8 @@ lisatietolinkki | URL [0..1]            | properties.additionalInformationLink |
 
 Nimi          | UML tyyppi              | JSON property name    | JSON type
 --------------|-------------------------|-----------------------|------------
+korvaaObjektin | AbstraktiVersioituObjekti[0..*] | properties.replacesObjects | array of object (FeatureLink)
+korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObjects | array of object (FeatureLink)
 liittyvaAsia   | AbstraktiMaankayttoasia| properties.relatedMatter    | object (FeatureLink)
 liittyvaDokumentti | Dokumentti [0..*]  | properties.relatedDocuments    | array of object (FeatureLink)
 kasittelija   | Organisaatio [0..1]     | properties.handler    | object (FeatureLink)
@@ -428,6 +447,8 @@ lisatietolinkki | URL [0..1]            | properties.additionInformationLink | s
 
 Nimi          | UML tyyppi              | JSON property name    | JSON type
 --------------|-------------------------|-----------------------|------------
+korvaaObjektin | AbstraktiVersioituObjekti[0..*] | properties.replacesObjects | array of object (FeatureLink)
+korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObjects | array of object (FeatureLink)
 liittyvaAsia   | AbstraktiMaankayttoasia | properties.relatedMatter    | object (FeatureLink)
 liittyvaDokumentti | Dokumentti [0..*]  | properties.relatedDocuments    | array of object (FeatureLink)
 
@@ -511,6 +532,8 @@ tallennusAika | TM_Instant [0..1]       | properties.storageTime | string (date-
 
 Nimi          | UML tyyppi              | JSON property name    | JSON type
 --------------|-------------------------|-----------------------|------------
+korvaaObjektin | AbstraktiVersioituObjekti[0..*] | properties.replacesObjects | array of object (FeatureLink)
+korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObjects | array of object (FeatureLink)
 asiakirja     | Asiakirja [0..1]        | properties.document   | object (FeatureLink)
 
 **Esimerkki**
@@ -566,6 +589,13 @@ viimeisinMuutos | TM_Instant [0..1]     | properties.latestChange | string (date
 tallennusAika | TM_Instant [0..1]       | properties.storageTime | string (date-time)
 nimi          | CharacterString         | properties.personName | string
 nimike        | LanguageString [0..*]   | properties.professionTitle | object (LanguageString)
+
+**Assosiaatiot**
+
+Nimi          | UML tyyppi              | JSON property name    | JSON type
+--------------|-------------------------|-----------------------|------------
+korvaaObjektin | AbstraktiVersioituObjekti[0..*] | properties.replacesObjects | array of object (FeatureLink)
+korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObjects | array of object (FeatureLink)
 
 **Esimerkki**
 
@@ -623,6 +653,8 @@ maanalaisuus    | MaanalaisuudenLaji [0..1] | properties.groundRelativePosition 
 
 Nimi          | UML tyyppi              | JSON property name    | JSON type
 --------------|-------------------------|-----------------------|------------
+korvaaObjektin | AbstraktiVersioituObjekti[0..*] | properties.replacesObjects | array of object (FeatureLink)
+korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObjects | array of object (FeatureLink)
 kaava         | Kaava                   | properties.spatialPlan | object (FeatureLink)
 liittyvaKohde | AbstraktiKaavakohde [0..*] | properties.relatedPlanObjects | array of object (FeatureLink)
 maarays       | Kaavamaarays [0..*]     | properties.regulations | array of object (FeatureLink)
@@ -729,6 +761,8 @@ voimassaoloaika | TM_Period [0..1]      | properties.validFrom, properties.valid
 
 Nimi          | UML tyyppi              | JSON property name    | JSON type
 --------------|-------------------------|-----------------------|------------
+korvaaObjektin | AbstraktiVersioituObjekti[0..*] | properties.replacesObjects | array of object (FeatureLink)
+korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObjects | array of object (FeatureLink)
 kaava         | Kaava                   | properties.spatialPlan | object (FeatureLink)
 kohdistus     | AbstraktiKaavakohde [0..1] | properties.target  | object (FeatureLink)
 perustelevaAsiakirja | Dokumentti [0..*] | properties.justifyingDocuments | array of object (FeatureLink)
