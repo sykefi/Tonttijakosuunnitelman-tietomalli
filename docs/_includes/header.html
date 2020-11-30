@@ -34,7 +34,7 @@
             var url = commits[0]['html_url'];
             if (commit) {
               $("#last-modified").append("<span>Viimeksi muutettu <a href=\"" + url +"\" title=\"" 
-              + commit.committer.name 
+              + commit.author.name 
               + ": " + commit.message 
               + "\">" + new Date(commit.committer.date).toLocaleString() 
               + "</a>");
