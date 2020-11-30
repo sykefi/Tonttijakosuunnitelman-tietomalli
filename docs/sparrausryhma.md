@@ -5,6 +5,6 @@ description: ""
 page: "projekti"
 status: "Keskeneräinen"
 ---
-# AK-YK -sparrausryhmä
+# AK-YK-sparrausryhmä
 
-Kesken
+Sidosryhmäyhteistyötä varten projektille koottiin Sparrausryhmä, joka koostui kaavoituksen asiantuntijoista sekä kaavatiedon hyödyntäjistä.
