@@ -11,7 +11,9 @@ Sidosryhmäyhteistyötä varten projektille koottiin Sparrausryhmä, joka koostu
 
 Ryhmässä oli vahva edustus kuntien yleis- ja asemakaavoituksesta. Lisäksi mukana oli mm. maakuntakaavoituksen, rakennusvalvonnan, kiinteistö- ja mittauspuolen, paikkatiedon ja osallistumisen asiantuntijoita. 
 
-Sparrausryhmä kokoontui projektin aikana yhteensä 12 kertaa. Kokoontumiset rytmitettiin projektin etenemisvaiheiden mukaan sparrausjaksoiksi, jotka olivat:
+Sparrausryhmä kokoontui projektin aikana yhteensä 12 kertaa. Näihin etätilaisuuksiin osallistui keskimäärin noin 30 sparrausryhmäläistä. Osa tutustui sparrausmateriaaleihin ja tilaisuuden esitysten tallenteisiin jälkikäteen Teams-työtilan kautta. 
+
+Kokoontumiset rytmitettiin projektin etenemisvaiheiden mukaan sparrausjaksoiksi, jotka olivat:
 <ul>
   <li>Aloitustilaisuus 18.6.2020</li>
   <li>1. jakso: Käsitemalli ja tietovirrat (4. - 5.8.2020)</li>
