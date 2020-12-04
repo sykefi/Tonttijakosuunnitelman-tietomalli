@@ -156,7 +156,12 @@ Kuvaa käsitteen []()
 
 Englanninkielinen nimi: SpatialPlanCommentary
 
-### Suunnittelija
+### OsallistumisJaArviontisuunnitelma
+Kuvaa käsitteen []()
+
+Englanninkielinen nimi: ParticipationAndEvalutionPlan
+
+### KaavanLaatija
 Kuvaa käsitteen []()
 
 Englanninkielinen nimi: Planner
@@ -178,6 +183,11 @@ Englanninkielinen nimi: PlanRegulationObject
 Kuvaa käsitteen []()
 
 Englanninkielinen nimi: PlanRegulation
+
+### Kaavasuositus
+Kuvaa käsitteen []()
+
+Englanninkielinen nimi: PlanGuidance
 
 ### Lisatieto
 Kuvaa käsitteen []()

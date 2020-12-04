@@ -151,10 +151,7 @@ yleismaarays  | Kaavamaarays [0..*]     | properties.generalRegulations | array 
                 {
                     "linkedFeatureType": "Planner",
                     "linkedFeatureId": "391debf8-3d07-4a31-9854-17b90c86abb5.64",
-                    "href": "https://rytj.fi/api/kaava/Planner/391debf8-3d07-4a31-9854-17b90c86abb5.64",
-                    "role": {
-                        "fin": "Vastuullinen kaavanlaatija"
-                    }
+                    "href": "https://rytj.fi/api/kaava/Planner/391debf8-3d07-4a31-9854-17b90c86abb5.64"
                 }
             ],
             "planCommentary": {
@@ -549,12 +546,6 @@ asiakirja     | Asiakirja [0..1]        | properties.document   | object (Featur
             "type" : "Polygon",
             "coordinates" : [ ]
         },
-        "crs" : {
-            "type" : "name",
-            "properties" : {
-                "name" : "http://www.opengis.net/def/crs/EPSG/0/3067"
-            }
-        },
         "featureType": "SpatialPlanCommentary",
         "properties": {
             "identityId": "52b9cb68-7e00-4e09-976e-5be94730fb81",
@@ -573,9 +564,63 @@ asiakirja     | Asiakirja [0..1]        | properties.document   | object (Featur
 ```
 
 
-### Planner (Suunnittelija)
+###  ParticipationAndEvaluationPlan (OsallistumisJaArviointisuunnitelma)
 
-Toteuttaa loogisen tietomallin luokan [Suunnittelija](../../looginenmalli/dokumentaatio/#suunnittelija)
+Toteuttaa loogisen tietomallin luokan [Kaavaselostus](../../looginenmalli/dokumentaatio/#osallistumisjaarviointisuunnitelma)
+
+**Attribuutit**
+
+Nimi          | UML tyyppi              | JSON property name    | JSON type   |
+--------------|-------------------------|-----------------------|-------------|
+[GeoJSON-tyyppi] |                      | type = "Feature"      | string
+[luokan nimi] |                         | featureType = "ParticipationAndEvaluationPlan" | string
+identiteettiTunnus | CharacterString [0..1] | properties.identityId   | string
+nimiavaruus   | URI [0..1]              | properties.namespace  | string (uri) 
+viittausTunnus | URI [0..1]           | properties.referenceId  | string (uri)
+paikallinenTunnus | CharacterString [0..1]  | id                | string
+tuottajakohtainenTunnus | CharacterString [0..1]  | properties.producerSpecificId              | string
+viimeisinMuutos | TM_Instant [0..1]     | properties.latestChange | string (date-time)
+tallennusAika | TM_Instant [0..1]       | properties.storageTime | string (date-time)
+
+
+**Assosiaatiot**
+
+Nimi          | UML tyyppi              | JSON property name    | JSON type
+--------------|-------------------------|-----------------------|------------
+korvaaObjektin | AbstraktiVersioituObjekti[0..*] | properties.replacesObjects | array of object (FeatureLink)
+korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObjects | array of object (FeatureLink)
+asiakirja     | Asiakirja [0..1]        | properties.document   | object (FeatureLink)
+
+**Esimerkki**
+
+```json
+{
+        "id" : "52b9cb68-7e00-4e09-976e-5be94730fb81.5",
+        "type" : "Feature",
+        "geometry" : {
+            "type" : "Polygon",
+            "coordinates" : [ ]
+        },
+        "featureType": "ParticipationAndEvaluationPlan",
+        "properties": {
+            "identityId": "52b9cb68-7e00-4e09-976e-5be94730fb81",
+            "namespace": "http://uri.suomi.fi/object/rytj/kaava",
+            "referenceId": "http://uri.suomi.fi/object/rytj/kaava/SpatialPlanCommentary/52b9cb68-7e00-4e09-976e-5be94730fb81.5",
+            "producerSpecificId": "somelocalstuff-id9983890",
+            "latestChange": "2020-01-01T13:00:00Z",
+            "storageTime": "2020-01-01T13:00:00Z",
+            "document": {
+                "linkedFeatureType": "Document",
+                "linkedFeatureId": "640bff6b-c16a-4947-af8d-d86f89106be1.1",
+                "href": "https://rytj.fi/api/kaava/Document/640bff6b-c16a-4947-af8d-d86f89106be1.1"
+            }
+        }
+    }
+```
+
+### Planner (KaavanLaatija)
+
+Toteuttaa loogisen tietomallin luokan [KaavanLaatija](../../looginenmalli/dokumentaatio/#kaavanlaatija)
 
 **Attribuutit**
 
@@ -592,6 +637,7 @@ viimeisinMuutos | TM_Instant [0..1]     | properties.latestChange | string (date
 tallennusAika | TM_Instant [0..1]       | properties.storageTime | string (date-time)
 nimi          | CharacterString         | properties.personName | string
 nimike        | LanguageString [0..*]   | properties.professionTitle | object (LanguageString)
+rooli         | LanguageString [0..*]   | properties.role       | object (LanguageString)
 
 **Assosiaatiot**
 
@@ -621,6 +667,9 @@ korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObje
             "personName": "John Doe",
             "professionalTitle": {
                 "fin": "Kaupunginarkkitehti"
+            },
+            "role": {
+                 "fin": "Vastuullinen laatija"
             }
         }
     }
@@ -839,6 +888,86 @@ perustelevaAsiakirja | Dokumentti [0..*] | properties.justifyingDocuments | arra
     }
 ```
 
+### PlanGuidance (Kaavasuositus)
+
+Toteuttaa loogisen tietomallin luokan [Kaavasuositus](../../looginenmalli/dokumentaatio/#kaavasuositus)
+
+**Attribuutit**
+
+Nimi          | UML tyyppi              | JSON property name    | JSON type   |
+--------------|-------------------------|-----------------------|-------------|
+[GeoJSON-tyyppi] |                      | type = "Feature"      | string
+[luokan nimi] |                         | featureType = "PlanGuidance" | string
+identiteettiTunnus | CharacterString [0..1] | properties.identityId   | string
+nimiavaruus   | URI [0..1]              | properties.namespace  | string (uri) 
+viittausTunnus | URI [0..1]           | properties.referenceId  | string (uri)
+paikallinenTunnus | CharacterString [0..1]  | id                | string
+tuottajakohtainenTunnus | CharacterString [0..1]  | properties.producerSpecificId              | string
+viimeisinMuutos | TM_Instant [0..1]     | properties.latestChange | string (date-time)
+tallennusAika | TM_Instant [0..1]       | properties.storageTime | string (date-time)
+nimi          | LanguageString [0..*]   | properties.name       | object (LanguageString)
+arvo          | AbstraktiArvo [0..*]    | properties.values      | array of object (TextValue)
+elinkaaritila   | KaavanElinkaaritila   | properties.lifecycleStatus | object (CodelistValue), http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila
+teema         | AbstraktiKaavoitusteema [0..*] | properties.themes     | array of object (CodelistValue), http://uri.suomi.fi/codelist/rytj/Kaavoitusteema-AK, http://uri.suomi.fi/codelist/rytj/Kaavoitusteema
+lisatietolinkki  | URL [0..1]           | properties.externalInformationLink | string (uri)
+voimassaoloaika | TM_Period [0..1]      | properties.validFrom, properties.validTo | string (date-time)
+
+**Assosiaatiot**
+
+Nimi          | UML tyyppi              | JSON property name    | JSON type
+--------------|-------------------------|-----------------------|------------
+korvaaObjektin | AbstraktiVersioituObjekti[0..*] | properties.replacesObjects | array of object (FeatureLink)
+korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObjects | array of object (FeatureLink)
+kaava         | Kaava                   | properties.spatialPlan | object (FeatureLink)
+kohdistus     | AbstraktiKaavakohde [0..1] | properties.target  | object (FeatureLink)
+perustelevaAsiakirja | Dokumentti [0..*] | properties.justifyingDocuments | array of object (FeatureLink)
+
+**Esimerkki**
+
+```json
+    {
+        "id" : "ff451636-8747-4148-b290-b5d96b21b2c3.3",
+        "type" : "Feature",
+        "geometry" : {
+            "type" : "Polygon",
+            "coordinates" : [ ]
+        },
+        "featureType": "PlanGuidance",
+        "properties": {
+            "identityId": "ff451636-8747-4148-b290-b5d96b21b2c3",
+            "namespace": "http://uri.suomi.fi/object/rytj/kaava",
+            "referenceId": "http://uri.suomi.fi/object/rytj/kaava/PlanGuidance/ff451636-8747-4148-b290-b5d96b21b2c3.3",
+            "latestChange": "2020-01-01T13:00:00Z",
+            "storageTime": "2020-01-01T13:00:00Z",
+            "producerSpecificId": "idfr0083450",
+            "spatialPlan": {
+                    "linkedFeatureType": "SpatialPlan",
+                    "linkedFeatureId": "9c97e469-083d-4284-90a9-3dbebdfe5622.23",
+                    "href": "https://rytj.fi/api/kaava/SpatialPlan/9c97e469-083d-4284-90a9-3dbebdfe5622.23"
+            },
+            "target": {
+                    "linkedFeatureType": "PlanRegulationObject",
+                    "linkedFeatureId": "6d32ca64-9a8d-44bb-9702-e46c228add64.76",
+                    "href": "https://rytj.fi/api/kaava/PlanRegulationObject/6d32ca64-9a8d-44bb-9702-e46c228add64.76"
+            },
+            "values": [
+                {
+                    "valueType": "TextValue",
+                    "value": {
+                        "fin": "Peltojen avoimina säilyttämisen tukeminen ja mahdolliset ympäristönhoitotoimenpiteet ovat perusteltuja"
+                    }
+                }
+            ],
+            "lifecycleStatus": {
+                "code": "http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/06",
+                "title": {
+                    "fin": "Hyväksytty kaava"
+                }
+            },
+            "validFrom": "2020-05-01T00:00:00Z"
+        }
+    }
+```
 
 ## Tietotyypit (DataType)
 
