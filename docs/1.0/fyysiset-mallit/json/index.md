@@ -566,7 +566,7 @@ asiakirja     | Asiakirja [0..1]        | properties.document   | object (Featur
 
 ###  ParticipationAndEvaluationPlan (OsallistumisJaArviointisuunnitelma)
 
-Toteuttaa loogisen tietomallin luokan [Kaavaselostus](../../looginenmalli/dokumentaatio/#osallistumisjaarviointisuunnitelma)
+Toteuttaa loogisen tietomallin luokan [OsallistumisJaArviointisuunnitelma](../../looginenmalli/dokumentaatio/#osallistumisjaarviointisuunnitelma)
 
 **Attribuutit**
 
