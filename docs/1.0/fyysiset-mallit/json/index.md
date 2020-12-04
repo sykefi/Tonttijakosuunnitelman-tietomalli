@@ -13,8 +13,11 @@ status: "Keskeneräinen"
 {:toc}
 
 ## Mallinnusperiaatteet
+Kaava-JSON on [loogisen tason Kaavatietomallin](../../looginenmalli/dokumentaatio/) toteuttava [GeoJSON](https://tools.ietf.org/html/rfc7946)-formaattiin perustuva fyysinen tietomalli.
 
 Kohdetyypit kuvataan GeoJSON Feature -objekteiksi, joilla on yksi ulkojäsen (foreign member) "featureType", jonka arvona on kohdetyypin englanninkielinen nimi. GeoJSON-objektin ominaisuuden "properties" alle tulevat kaikki muut kohteen ominaisuudet. Paikkatietokohteiden ensisijainen geometriatieto ilmaistaa GeoJSON-objektin "geometry"-omainaisuutena, ja sen koordinaatisto "crs"-ominaisuutena (ks. NamedCooodinateReferenceSystem). Kohteilla, jolla ei ole geometriatietoa "geometry"-ominaisuuden arvoksi tulee yhteentoimivuussyistä aina koordinaateiltaan tyhjä Polygon ja "crs" ominaisuutta ei anneta.
+
+{% include question.html content="Ulkojäsenet eivät välity sovelluskerrokselle kaikissa GeoJSON-asiakaskirjastoissa, tulisiko ```featureType```-ominaisuus siirtää ```properties```:m alle?" %}
 
 ## Kohdetyypit (FeatureType)
 
