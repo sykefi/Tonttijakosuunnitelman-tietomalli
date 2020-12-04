@@ -156,7 +156,7 @@ Kuvaa käsitteen []()
 
 Englanninkielinen nimi: SpatialPlanCommentary
 
-### OsallistumisJaArviontisuunnitelma
+### OsallistumisJaArviointisuunnitelma
 Kuvaa käsitteen []()
 
 Englanninkielinen nimi: ParticipationAndEvalutionPlan
