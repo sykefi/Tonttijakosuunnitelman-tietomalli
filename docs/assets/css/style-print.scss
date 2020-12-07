@@ -62,6 +62,19 @@ h4 {
   background: none;
 }
 
+img {
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -o-box-shadow: none;
+  -ms-box-shadow: none;
+  max-width: 100%;
+}
+
+b {
+  font-weight: bold;
+}
+
 .inner {
   position: static;
 }
@@ -250,11 +263,48 @@ ol#markdown-toc > li:before {
     float:right;
     color: #1a4990;
     margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    top: -0.8em;
   }
 
   p {
     margin-top: 0px;
     margin-bottom: 0px; 
+  }
+}
+
+.definitionref {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #6285e7;
+
+  h1 {
+    font-size: 100%;
+    float:right;
+    color: #1a4990;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    top: -0.8em;
+  }
+
+  p {
+    margin-top: 0px;
+    margin-bottom: 0px; 
+  }
+
+  dl dd {
+    margin-bottom: 0.5em;
+  }
+
+  .definition-text {
+    margin-top: 0.5em;
+    font-weight: bolder;
+  }
+
+  .definition-concept {
+    font-size: larger;
   }
 }
 
