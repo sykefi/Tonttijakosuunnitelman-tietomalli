@@ -28,6 +28,6 @@ Kyselyyn vastasi yhteensä 78 vastaajaa, jotka edustivat melko monipuolisesti er
 
 Kyselystä saatu palaute jakautui toisaalta koodistojen sisältöön sekä yleisluontoiseen palautteeseen liittyen laajasti tietomallipohjaisen kaavoituksen haasteisiin. Palautetta on hyödynnetty tämän projektin puitteissa mm. koodistojen kehittämiseen ja tietomallien jatkokehitysehdotusten laatimiseen. Myös loogiseen tietomalliin on tehty joitakin muutoksia. Lisäksi kertynyt aineisto antaa hyvän lähtökohdan myöhemmin toteutettavaan sanastotyöhön.
 
-- Toisen kyselyn yhteenvetoraportti
+- <a href="https://github.com/YM-rakennettu-ymparisto/AK-YK-tietomallit/blob/master/docs/assets/YKAK-otakantaa2-yhteenveto.pdf">Toisen kyselyn yhteenvetoraportti</a>
 
 
