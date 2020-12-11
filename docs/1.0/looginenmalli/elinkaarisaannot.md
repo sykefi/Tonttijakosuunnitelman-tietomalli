@@ -35,7 +35,6 @@ Kaavatietomallin tietokohteissa identiteettitunnus kuvataan attribuutilla ```ide
 * Molemmat objektit kuvaavat saman kaavan tai sen sisältämän, nimettävissä olevan tietokohteen kehityskaaren eri tiloja.
 * Molemmat objektit liittyvät samaan kaavaan.
 * Molemmat objektit ovat saman loogisen tietomallin luokan edustajia.
-
 {% include clause_end.html %}
 
 Yksittäisen kaavan tietokohteen koko ko. tietojärjestelmään tallennettu kehityshistoria saadaan noutamalla kaikki ko. tyyppisen tietokohteen objektit, joilla on sama ```identiteettiTunnus```-attribuutin arvo.
@@ -67,7 +66,7 @@ Kaavatietomallin tietokohteissa paikallinen tunnus kuvataan attribuutilla ```pai
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-paikallinentunnus-gen" %}
-Tietokohteiden paikallinen tunnus muuttuu sen jokaisen version tallennuksen yhteydessä. Kaavatietovarasto vastaa paikallisten tunnusten luomisesta ja tallennustapahtuman yhteydessä. Tuottavan tietojärjestelmän mahdollisesti asettamat arvot korvataan.
+Tietokohteiden paikallinen tunnus muuttuu sen jokaisen version tallennuksen yhteydessä. Kaavatietovarasto vastaa paikallisten tunnusten luomisesta tallennustapahtuman yhteydessä. Tuottavan tietojärjestelmän mahdollisesti asettamat arvot korvataan.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-paikallinentunnus-form" %}
