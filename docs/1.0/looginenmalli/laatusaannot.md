@@ -13,11 +13,16 @@ status: "Keskeneräinen"
 {:toc}
 
 ## Johdanto
+
 ## Yhteiset laatusäännöt
 
 ### UML-mallin mukaisuus
 
+Kaavatietomallin loogisen tietomallin toteutusten tulee noudattaa tietomallin [UML-kielisen luokkakaavion](./uml/) määrityksiä luokkien attribuuttien ja assosiaatioiden kardinaliteetin ja tyypin suhteen. Fyysisen tietomallin kuvauksessa tulee määritellä minkälaista rakennetta ja tietotyyppiä kukin loogisen tietomallin luokka ja attribuutin tyyppi vastaa fyysisessä mallissa. Attribuutit ja assosiaatiot, joiden kardinaliteetti on loogisessa tietomallissa ```0..1``` tai ```0..*``` voivat puuttua fyysisen tietomallin mukaisista objekteista.
+
 ### Soveltamisohjeiden mukaisuus
+
+Kaavatietomallin mukaisten aineistojen tulee noudattaa niiden kaavalajikohtaisten soveltamisohjeiden ([Asemakaava](../soveltamisohjeet/asemakaava/), [Yleiskaava](../soveltamisohjeet/yleiskaava/)) vaatimuksia, ja niiden on suositeltavaa noudattaa soveltamisohjeiden suosituksia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisohjeiden muusta sisällöstä.
 
 ### Elinkaarisääntöjen mukaisuus
 
@@ -25,7 +30,7 @@ status: "Keskeneräinen"
 
 ### Merkkijonojen käyttö
 #### Merkistöt
-#### Kielikoodit
+#### Monikielinen sisältö ja kielikoodit
 #### Enimmäispituudet
 
 ### Geometriat
@@ -33,6 +38,8 @@ status: "Keskeneräinen"
 #### Sallitut geometriatyypit
 
 #### Geometrinen ja topologinen eheys
+
+#### Kohteiden geometrioiden päällekkäisyys
 
 #### Sallitut koordinaatistot ja koordinaattijärjestys
 
