@@ -19,6 +19,31 @@
     background-repeat: no-repeat;
 }
 
+#footer_wrap {
+  background: #253746;
+  padding-bottom: 7em;
+  padding-left: 20px;
+  padding-top: 30px;
+
+  .inner {
+    max-width: 58em;
+    font-size: smaller;
+    background-image: url(../img/ym_logo_footer.svg);
+    background-repeat: no-repeat;
+    min-height: 5.5em;
+
+    p {
+      color: #797979;
+      text-align: right;
+    }
+
+    a {
+     color: rgb(255, 255, 255);
+     text-decoration: none;
+    }
+  }
+}
+
 #markdown-toc {
   ol > li:before {
     min-width: 1em;    

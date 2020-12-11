@@ -1,6 +1,5 @@
 ---
 ---
-
 @import "{{ site.theme }}";
 @import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
 @mixin imgRetina($image, $extension, $width, $position: center, $repeat: no-repeat) {
@@ -114,8 +113,9 @@ b {
    .inner {
      max-width: 58em;
      background-color:  #ffffffe0;
-     padding-left: 1em;
-     padding-right: 1em; 
+     padding-left: 2em;
+     padding-right: 3em;
+     text-align: justify;
    }
 
    &.ea {
@@ -216,6 +216,10 @@ ol#markdown-toc > li:before {
     counter-reset: h3counter;
   }
 
+  code {
+    background-color: transparent;
+  }
+
   h2:before {
       content: counter(h2counter) ".\0000a0\0000a0";
       counter-increment: h2counter;
@@ -237,9 +241,19 @@ ol#markdown-toc > li:before {
   }
 
   .clause {
+    border-left-width: 5px;
+    border-left-style: solid;
+    padding-left: 2em;
+    padding-bottom: 1px;
+    margin-left: 1em;
+    margin-bottom: 1em;
+
     .kind {
+      position: relative;
+      left: -1em;  
       font-weight: bold;
       color: #061c8a;
+      font-size: 0.95rem;
     }
 
     &.req {
@@ -247,10 +261,19 @@ ol#markdown-toc > li:before {
     }
 
     &.rec {
-      border-left-color: #dbdbdb;
+      border-left-color: #8fbd73;
     }
     h5.id {
       display: inline-block;
+      margin-left: 0.3em;
+      font-family: monospace !important;
+      font-weight: 400 !important;
+      font-size: 0.95rem;
+      margin-top: 0.5ex;
+    }
+
+    p {
+        margin-top: 0px;
     }
   }
 
@@ -378,31 +401,7 @@ ol#markdown-toc > li:before {
       min-height: 6em;
     }
   }
-  
-  #footer_wrap {
-    background: #253746;
-    padding-bottom: 7em;
-    padding-left: 20px;
-    padding-top: 30px;
-  
-    .inner {
-      max-width: 58em;
-      font-size: smaller;
-      background-image: url(../img/ym_logo_footer.svg);
-      background-repeat: no-repeat;
-      min-height: 5.5em;
-  
-      p {
-        color: #797979;
-        text-align: right;
-      }
-  
-      a {
-       color: rgb(255, 255, 255);
-       text-decoration: none;
-      }
-    }
-  }
+
    .navbar-brand {
       display: none;
     }
