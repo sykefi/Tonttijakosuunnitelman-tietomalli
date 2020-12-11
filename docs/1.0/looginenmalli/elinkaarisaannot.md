@@ -21,133 +21,286 @@ Kaavan (tietojärjestelmän objektin, paikkatietokohde) elinkaari, JHS-viittaus
 ### UUID-tunnukset
 
 ## Kaavatietomallin kohteiden elinkaaren hallinnan periaatteet
-Kaavatietomallin mukaisten aineistojen tallentamisessa erotetaan toisistaan tietojen tuottaminen ja muokkaus sisäisesti niiden tuottamiseen ja muokkaamiseen käytettävissä tietojärjestelmissä ja niiden hallinta yhteisessä versiohallitussa tietovarastossa, kuten RYTJ.
+Kaavatietomallin mukaisten aineistojen tallentamisessa erotetaan toisistaan tietojen tuottaminen ja muokkaus sisäisesti niiden tuottamiseen ja muokkaamiseen käytettävissä tietojärjestelmissä ja niiden hallinta yhteisessä versiohallitussa kaavatietovarastossa.
 
 Kaavatietomallissa ei ole mielekästä asettaa vaatimuksia kaavatietoa tuottavien tietojärjestelmien tunnusten ja versioden hallintaan, vaan tietomallissa tulee varautua siihen, että yhteiseen tietovarastoon tallennettavia tietoja on muokattu ja tallennettu sisäisesti tuntematon määrä kertoja ennen ensimmäistä viemistä yhteiseen tietovarastoon, ja samoin tuntematon määrä kertoja kunkin yhteiseen varastoon vietävän version välillä. Näin ollen on mahdollista, että kaavasta voi olla joissain tietojärjestelmissä tallennettuna paikallisia versiota, joita ei ole koskaan viety yhteiseen kaavatietovarastoon.
 
 ## Tunnukset ja niiden hallinta
 
-### Identiteettitunnus (identityId)
+### Identiteettitunnus
 Identiteettitunnus yhdistää saman tunnistettavan kaavan tietokohteen kehitysversiot toisiinsa.
 
-Kahdella kaavatietomallin versiotavalla objektilla voi olla sama identiteettitunnus ainoastaan, mikäli kaikki seuraavista ehdoista ovat tosia:
-
+{% include clause_start.html type="req" id="elinkaari/vaat-identiteettitunnus-maar" %}
+Kaavatietomallin tietokohteissa identiteettitunnus kuvataan attribuutilla ```identiteettiTunnus```. Kahdella kaavatietomallin versioitavalla objektilla voi olla sama ```identiteettiTunnus```-attribuutin arvo ainoastaan, mikäli kaikki seuraavista ehdoista ovat tosia:
 * Molemmat objektit kuvaavat saman kaavan tai sen sisältämän, nimettävissä olevan tietokohteen kehityskaaren eri tiloja.
 * Molemmat objektit liittyvät samaan kaavaan.
 * Molemmat objektit ovat saman loogisen tietomallin luokan edustajia.
 
-Yksittäisen kaavan tietokohteen koko ko. tietojärjestelmään tallennettu kehityshistoria saadaan noutamalla kaikki ko. tyyppisen tietokohteen objektit, joilla on sama identiteettitunnus.
+{% include clause_end.html %}
+
+Yksittäisen kaavan tietokohteen koko ko. tietojärjestelmään tallennettu kehityshistoria saadaan noutamalla kaikki ko. tyyppisen tietokohteen objektit, joilla on sama ```identiteettiTunnus```-attribuutin arvo.
 
 Yhteinen kaavatietovarasto on vastuussa uusien identiteettitunnusten luomisesta tarvittaessa tallennustapahtumien yhteydessä, ja niiden välittämisestä tiedoksi tallentavalle tietojärjestelmälle. Tallentavan tietojärjestelmän tulee tallentaa itselleen kopiot tietovaraston tallennustapahtuman yhteydessä palautamistä kaavan ja sen tietokohteiden identiteettitunnuksista, sillä ne tulee sisällyttää ko. tietokohteiden seuraavien versioden tallennettavaksi lähetettäviin objekteihin.
 
-Mikäli tallennettavalle tietokohteelle ei ole annettu identiteettitunnusta, tai tietovarasto ei sisällä saman luokan tietokohdetta, jolla on ko. identiteettitunnus, luodaan ko. kohteelle uusi identiteettitunnus, ja sitä pidetään uutena tietokohteena. Mikäli tietovarasto sisältää saman luokan tietokohteen, jolla on ko. identiteettitunnus, talletaan se sellaisenaan objektin mukana, ja sitä pidetään saman kohteen uutena versiona.
+{% include clause_start.html type="req" id="elinkaari/vaat-identiteettitunnus-gen" %}
+* Mikäli tallennettavalle tietokohteelle ei ole annettu ```identiteettitunnus```-attribuuttia, tai tietovarasto ei sisällä sellaista saman luokan tietokohdetta, jolla sama ```identiteettiTunnus```-attribuutin arvo, kaavatietovarasto luo ko. objektille uuden identiteettitunnuksen, joka korvaa tuottavan tietojärjestelmän objektille mahdollisesti antaman ```identiteettiTunnus```-attribuutin arvon. Tällöin objektia pidetään uuden tietokohteen ensimmäisenä versiona.
+* Mikäli tietovarasto sisältää saman luokan tietokohteen, jolla on sama ```identiteettiTunnus```-attribuutin arvo kuin tallennetavalla objektilla, objekti tallennetaan kaavatietovarastoon ko. tietokohteen uutena versiona. Tällöin tallennettavan objektin ```identiteettiTunnus```-attribuutin arvo ei muutu.
+{% include clause_end.html %}
 
-Identiteettitunnus on UUID-muotoinen. 
+{% include clause_start.html type="req" id="elinkaari/vaat-kaavan-identiteettitunnus" %}
+[Kaava](../../looginenmalli/dokumentaatio/#kaava)-luokan tietokohteen tallennuksen yhteydessä kaavatietovarasto tarkistaa, että sen attribuutti [kaavaTunnus](#kaavatunnus) on annettu ja validi.
+* Mikäli kohde katsotaan sen ```identiteettiTunnus```-attribuutin arvon perusteella uudeksi tietokohteeksi, sama ```kaavaTunnnus```-attribuutti ei saa olla käytössä kaavatietovaraston muilla [Kaava](dokumentaatio/#kaava)-luokan objekteilla.
+* Mikäli kohde katsotaan sen ```identiteettiTunnus```-attribuutin arvon perusteella aiemmin tallennetun tietokohteen uudeksi versioksi, aiemmin tallennetun version ```kaavaTunnnus```-attribuutin tulee olla sama kuin tallennettavassa objektissa.
+{% include clause_end.html %}
+
+{% include clause_start.html type="rec" id="elinkaari/suos-identiteettitunnus-form" %}
+Identiteettitunnuksen suositeltu muoto on UUID.
+{% include clause_end.html %}
 
 Esimerkki: ```640bff6b-c16a-4947-af8d-d86f89106be1```
 
-### Paikallinen tunnus / kohdetunnus (localId / feature-id)
-Paikallinen tunnus yksilöi kaavan tietokohteen yhden, keskitettyyn kaavatietovaraston tallentun kehitysversion kaavatietovaraston sisällä. 
+### Paikallinen tunnus
+Paikallinen tunnus yksilöi tietokohteen yhden version kaavatietovaraston sisällä. 
 
-Yhteinen kaavatietovarasto on vastuussa uusien paikallisten tunnusten luomisesta kullekin tallennettavalle tietokohteelle jokaisen tallennustapahtumien yhteydessä, ja niiden välittämisestä tiedoksi tallentavalle tietojärjestelmälle. Tallentavan tietojärjestelmän ei tarvitse tallentaa luotuja paikallisia tunnuksia itselleen seuraavia tallennuksia varten, sillä tietokohteiden mahdolliset paikallinen tunnus -kenttien arvot korvataan aina uusilla tietokohteiden tallennuksen yhteydessä.
+{% include clause_start.html type="req" id="elinkaari/vaat-paikallinentunnus-maar" %}
+Kaavatietomallin tietokohteissa paikallinen tunnus kuvataan attribuutilla ```paikallinenTunnus```. Kaikilla saman kaavatietovaraston objekteilla (ml. saman tietokohteen eri versiot) tulee olla eri ```paikallinenTunnus```-attribuutin arvo.
+{% include clause_end.html %}
 
+{% include clause_start.html type="req" id="elinkaari/vaat-paikallinentunnus-gen" %}
+Tietokohteiden paikallinen tunnus muuttuu sen jokaisen version tallennuksen yhteydessä. Kaavatietovarasto vastaa uusien paikallisten tunnusten luomisesta tallennustapahtuman yhteydessä.
+{% include clause_end.html %}
+
+Tallentavan tietojärjestelmän ei tarvitse tallentaa luotuja paikallisia tunnuksia itselleen seuraavia tallennuksia varten, sillä tietokohteiden mahdolliset paikallinen tunnus -kenttien arvot korvataan aina uusilla tietokohteiden tallennuksen yhteydessä.
+
+{% include clause_start.html type="req" id="elinkaari/vaat-paikallinentunnus-form" %}
+Paikallinen tunnus koostuu identiteettitunnuksesta ja siihen erotinmerkillä liitetystä versiokohtaisesta, esimerkiksi tarkkaan tallennusajanhetkeen perustuvasta merkkijonosta.
+{% include clause_end.html %}
+
+{% include clause_start.html type="rec" id="elinkaari/suos-paikallinentunnus-merk" %}
 Paikallisen tunnuksen muodostamisessa tulee välttää merkkejä, jotka joudutaan URL-koodaamaan rajapintapalvelujen kutsuissa. Paikkatietokohteen paikallista tunnusta käytetään fyysisten tietomallien pääavaimena, esim. GeoJSON Feature ```id```-omaisuuden ja GML:n ```gml:id```-attribuutin arvona, ja siten esimerkiksi OGC Web Feature Service (WFS) - ja OGC API - Features -rajapintapalvelujen paikkatietokohteen yksilöivissä kyselyissä.
+{% include clause_end.html %}
 
-Paikallinen tunnus koostuu UUID-muotoisesta identiteettitunnuksesta ja siihen erotinmerkillä liitetystä versiokohtaisesta, esimerkiksi tarkkaan tallennusajanhetkeen perustuvasta osasta. Tallennusajanhetkeen päättyvää paikallista tunnusta voidaan käyttää ilman sekaannusmahdollisuuksia samalla logiikalla myös paikallisissa versionneissa, eli sellaisissa kaavan versioiden tallennuksissa, joita ei viedä lainkaan yhteiseen tietovarastoon.
+Tallennusajanhetkeen päättyvää paikallista tunnusta voidaan käyttää ilman sekaannusmahdollisuuksia samalla logiikalla myös paikallisissa versionneissa, eli sellaisissa kaavan versioiden tallennuksissa, joita ei viedä lainkaan kaavatietovarastoon.
 
 Esimerkki: ```640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e```
 
 {% include note.html content="Käyttämällä paikallisena tunnuksena pelkkää identiteettitunnuksesta riippumatonta UUID-tunnusta päästäisiin lyhyempiin tunnuksiin, mutta menetetään yhteys identiteettitunnusten ja paikallisten tunnusten välillä, mikä saattaa hankaloittaa erilaisten vikatilanteiden selvitystä ja toimintavarmuuden testaamista, kun pelkkien tunnusten perusteella ei voida päätellä ovatko kaksi objektia saman tietokohteen eri versioita." %}
 
-### Nimiavaruus (namespace)
+### Nimiavaruus
+{% include clause_start.html type="req" id="elinkaari/vaat-nimiavaruus-maar" %}
+Nimiavaruus määrää kaavatietomallin kaikkien tietokohteiden viittaustunnusten alkuosan yhden kaavatietovaraston sisällä. Kaavatietomallin tietokohteissa paikallinen tunnus kuvataan attribuutilla ```nimiavaruus```.
+{% include clause_end.html %}
 
-Nimiavaruus määrää kaavatietomallin kaikkien tietokohteiden HTTP URI -muotoisten viittaustunnusten alkuosan yhden tietovaraston (esim.RYTJ) sisällä. Nimiavaruus on syytä valita huolella siten, että se olisi mahdollisimman pysyvä, eikä sitä tarvitsisi tulevaisuudessa muuttaa esimerkiksi valtionhallinnon virastojen tai ministeriröiden mahdollisten uudelleenorganisointien ja -nimeämisten johdosta. Valittu URL-osoite tulee myös voida aina tarvittaessa ohjata kulloinkin käytössä olevaan rajapintapalveluun (HTTP redirect). 
+{% include clause_start.html type="req" id="elinkaari/vaat-nimiavaruus-form" %}
+Nimiavaruus on HTTP URI -muotoinen.
+{% include clause_end.html %}
 
+Nimiavaruus on syytä valita huolella siten, että se olisi mahdollisimman pysyvä, eikä sitä tarvitsisi tulevaisuudessa muuttaa esimerkiksi valtionhallinnon virastojen tai ministeriröiden mahdollisten uudelleenorganisointien ja -nimeämisten johdosta. Valittu URL-osoite tulee myös voida aina tarvittaessa ohjata kulloinkin käytössä olevaan rajapintapalveluun (HTTP redirect). 
+
+{% include clause_start.html type="req" id="elinkaari/vaat-nimiavaruus-gen" %}
+Kaavatietovarasto vastaa ```nimiavaruus```-attribuuttien asetamisesta tallennustapahtuman yhteydessä. Tuottavan tietojärjestelmän mahdollisesti antamat arvot korvataan.
+{% include clause_end.html %}
 
 Esimerkki: ```http://uri.suomi.fi/object/rytj/kaava```
 
-### Viittaustunnus (referenceId)
-Viittaustunnus yksilöi kaavan tietokohteen yhden, keskitettyyn kaavatietovaraston tallentun kehitysversion globaalisti.
+### Viittaustunnus
+{% include clause_start.html type="req" id="elinkaari/vaat-viittaustunnus-maar" %}
+Viittaustunnus yksilöi kaavan tietokohteen yhden, keskitettyyn kaavatietovaraston tallentun kehitysversion globaalisti. Kaavatietomallin tietokohteissa paikallinen tunnus kuvataan attribuutilla ```viittausTunnus```.
+{% include clause_end.html %}
 
-Yhteinen kaavatietovarasto on vastuussa uusien viittaustunnusten luomisesta kullekin tallennettavalle tietokohteelle jokaisen tallennustapahtumien yhteydessä, ja niiden välittämisestä tiedoksi tallentavalle tietojärjestelmälle. Tallentavan tietojärjestelmän ei tarvitse tallentaa luotuja viittaustunnuksia itselleen seuraavia tallennuksia varten, sillä tietokohteiden mahdolliset viittaustunnus-kenttien arvot korvataan aina uusilla tietokohteiden tallennuksen yhteydessä.
+{% include clause_start.html type="req" id="elinkaari/vaat-viittaustunnus-form" %}
+Viittaustunnus on HTTP URI -muotoinen ja se muodostuu nimiavaruudesta, tietokohteen luokan nimestä ja paikallisesta tunnuksesta yhdessä kauttaviivoilla (```/```) erotettuina.
+{% include clause_end.html %}
 
-Viittaustunnus on HTTP URI -muotoinen, ja sen on suositeltavaa ohjautua aina ko. tietokohteen version tietosisältöön kulloinkin toiminnassa olevassa rajapintapalvelussa. Viittaustunnus muodostuu nimiavaruudesta, tietokohteen luokan nimestä ja paikallisesta tunnuksesta yhdessä.
+{% include clause_start.html type="req" id="elinkaari/vaat-nimiavaruus-gen" %}
+Kaavatietovarasto vastaa ```viittausTunnus```-attribuuttien asetamisesta tallennustapahtuman yhteydessä. Tuottavan tietojärjestelmän mahdollisesti antamat arvot korvataan.
+{% include clause_end.html %}
+
+Tallentavan tietojärjestelmän ei siis tarvitse tallentaa luotuja viittaustunnuksia itselleen seuraavia tallennuksia varten.
+
+{% include clause_start.html type="rec" id="elinkaari/suos-viittaustunnus-ohj" %}
+Viittaustunnuksen on suositeltavaa ohjautua aina ko. tietokohteen version tietosisältöön kulloinkin toiminnassa olevassa kaavatietovaraston latauspalvelussa.
+{% include clause_end.html %}
 
 Esimerkki: ```http://uri.suomi.fi/object/rytj/kaava/SpatialPlan/640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e```
 
-### Tuottajakohtainen tunnus (producerSpecificId)
-Kaavatietoa tuottavat järjestelmät voivat niin halutessaan käyttää tuottajakohtaista tunnusta niiden omien tietojärjestelmäspesifisten tunnusten tallentamiseen yhteiseen kaavatietovarastoon. Näitä tunnuksia ei koskaan muuteta tallennettaessa yhteiseen tietovarastoon, ja ne palautetaan sellaisenaan tietovarastosta haettaessa mikäli ne on annettu tallennettavien tietokohteiden osana. Tietojärjestelmät voivat käyttää tuottajakohtaisia tunnuksia kohdistamaan yhteiseen tietovarastoon ja paikallisiin tietojärjestelmiin tallennettuja tietokohteita toisiinsa esimerkiksi päivitettäessä niiden tallennuksen yhteydessä syntyneitä tunnuksia, vertailtaessa tietovarastoon tallennettuja kohteita ja paikallisia kohteita toisiinsa sekä esitettäessä validointipalvelun tuloksia suunnitteluohjelmiston käyttäjälle.
+### Tuottajakohtainen tunnus
+
+{% include clause_start.html type="req" id="elinkaari/vaat-tuottajakohtainen-tunnus-maar" %}
+Kaavatietoa tuottavat järjestelmät voivat niin halutessaan käyttää tuottajakohtaista tunnusta niiden omien tietojärjestelmäspesifisten tunnusten tallentamiseen kaavatietovarastoon. Kaavatietomallin tietokohteissa tuottajakohtainen tunnus kuvataan attribuutilla ```tuottajakohtainenTunnus```.
+{% include clause_end.html %}
+
+Tuottajakohtaisia tunnuksia ei koskaan muuteta tallennettaessa kaavatietovarastoon, ja ne palautetaan sellaisenaan latattaessa kohteita tietovarastosta. Tietojärjestelmät voivat käyttää tuottajakohtaisia tunnuksia kohdistamaan kaavatietovarastoon ja paikallisiin tietojärjestelmiin tallennettuja tietokohteita toisiinsa esimerkiksi päivitettäessä niiden tallennuksen yhteydessä syntyneitä tunnuksia, vertailtaessa kaavatietovarastoon tallennettuja kohteita ja paikallisia kohteita toisiinsa, sekä esitettäessä validointipalvelun tuloksia suunnitteluohjelmiston käyttäjälle.
 
 Tuottajakohtaisilta tunnuksilta ei vaadita yksilöivyyttä tai mitään tiettyä yhtenäistä muotoa.
 
 Esimerkki: ```k-123445```
 
-### Kaavatunnus (planId)
-Kaavatunnus on kaavalle ennakkon haettava kansallisesti yksilöivä tunnus, joka tulee aina antaa tallettavan Kaava-luokan objektin osana, myös kaavan ensimmäisen tallennuksen yhteydessä. Käytännössä myönnetyt kaavatunnukset kannattaa tallentaa valmiiksi yhteiseen kaavatietovarastoon, jotta voidaan tarkistaa onko tallennettavaksi tarkoitettu kaavatunnus myönnetty organisaatiolle, jonka kaavaa ollaan tallentamassa. Kuntakoodin tai muun hallinnollisen alueen tunnuksen käyttö osana kaavatunnusta ei kuitenkaan ole suositeltavaa, sillä hallinnolliset alueet muuttuvat ajan kuluessa. Kun sidos tunnuksen ja hallinnollisen alueen välillä ei näy tunnuksessa, voidaan kaavan hallinnollista aluetta muuttaa joustavammin kaavan elinkaaren aikana.
+### Kaavatunnus
+{% include clause_start.html type="req" id="elinkaari/vaat-kaavatunnus-maar" %}
+Kaavatunnus on kaavalle ennakolta haettava, kaavan kansallisesti yksilöivä tunnus. Kaatatietomallissa kaavatunnus kuvataan [Kaava](dokumentaatio/#kaava)-luokan attribuutilla ```kaavaTunnus```.
+{% include clause_end.html %}
 
-Kaavatunnus ei koskaan muutu saman kaavan eri elinkaaren aikaisten versioiden tallennuksen yhteydessä.
+{% include clause_start.html type="req" id="elinkaari/vaat-kaavatunnus-gen" %}
+Tuottava tietojärjestelmän vastaa kaavatunnuksen asettamisesta [Kaava](dokumentaatio/#kaava)-luokan attribuutiksi. Se tulee olla asetettuna myös kaavan ensimmäisen kaavatietovarastoon tallennuksen yhteydessä.
+{% include clause_end.html %}
 
-Esimerkki: ```e822a3b0-2020```
+{% include clause_start.html type="req" id="elinkaari/vaat-kaavatunnus-yks" %}
+Kaavatunnus on Kaava-luokan objekteille globaalisti yksilöivä, eikä muutu saman kaavan eri elinkaaren aikaisten versioiden tallennuksen yhteydessä.
+{% include clause_end.html %}
+
+ Käytännössä myönnetyt kaavatunnukset kannattaa tallentaa valmiiksi kaavatietovarastoon, jotta voidaan tarkistaa onko tallennettavaksi tarkoitettu kaavatunnus myönnetty organisaatiolle, jonka kaavaa ollaan tallentamassa. Kuntakoodin tai muun hallinnollisen alueen tunnuksen käyttö osana kaavatunnusta ei ole suositeltavaa, sillä hallinnolliset alueet muuttuvat ajan kuluessa. Kun sidos tunnuksen ja hallinnollisen alueen välillä ei näy tunnuksessa, voidaan kaavan hallinnollista aluetta muuttaa joustavammin kaavan elinkaaren aikana.
+
+{% include clause_start.html type="rec" id="elinkaari/suos-kaavatunnus-form" %}
+Kaavatunnuksen suositeltu muoto on UUID.
+{% include clause_end.html %}
+
+Esimerkki: ```df5b2d6f-d6d6-4695-938c-dd7c4c784c28```
+
+### Pysyvien tunnusten palauttaminen tuottavalle järjestelmälle
+
+Versionhallinnan näkökulmasta on tärkeää, että kaavan tuottava tietojärjestelmä käyttää saman kaavan seuraavan version tallentamisessa kaavan ensimmäisen version tallennuksen yhteydessä luotua identiteettitunnusta. Vastaavasti kaikkien kaavan tietokohteiden osalta käytetään niiden ensimmäisen tallennuksen yhteydessä luotuja identiteettitunnuksia, mikäli objektin katsotaan kuvaavan ko. tietokohteen uutta versiota.
+
+{% include clause_start.html type="req" id="elinkaari/vaat-tunnusten-palautus" %}
+Tietovaraston tallennusrajapinta palauttaa tallennetun kaavan tiedot tuottavalle tietojärjestelmälle tallennusoperaation yhteydessä siten, että ne sisältävät yllä mainittujen tunnustenhallintasääntöjen mukaisesti mahdollisesti generoidut tai muokatut identiteettitunnukset, paikalliset tunnukset, nimiavaruudet ja viittaustunnukset kaikille tallennetuille tietokohteille.
+{% include clause_end.html %}
 
 ## Muutokset ja tietojen versionti
-Kukin kaavan tai sen osien tallennusoperaatio yhteiseen tietovarastoon muodostaa aina pysyvästi tallennettavan uuden version tallennettavista tiedoista, jota ei voi myöhemmin muokata. Näin taataan ulkoisten viittausten eheys, sillä kaavan kaikkien kohteiden paikalliset ja viittaustunnukset viittaavat aina vain tiettyn muuttumattomaan versioon viittatusta kohteesta. Suositeltavaa on, että kaikki tallennusversiot myös pidetään tallessa, jotta mahdolliset keskenäiset ja ulkopuolelta tulevat linkit eivät mene rikki, vaikka esim. tiettyä kaavan luonnosversiota korjattaisiin.
+{% include clause_start.html type="req" id="elinkaari/vaat-pysyva-sisalto" %}
+Kukin kaavan tai sen osien tallennusoperaatio yhteiseen tietovarastoon muodostaa aina uuden version tallennettavista tietokohteista.
+Tallennetun tietokohteen version sisältö ei voi muttua tallennuksen jälkeen, poislukien sen voimassaolon päättymiseen ja elinkaaritilaan liittyvät attribuutit.
+{% include clause_end.html %}
+
+Näin taataan ulkoisten viittausten eheys, sillä kaavan kaikkien kohteiden paikalliset ja viittaustunnukset viittaavat aina vain tiettyn, sisällöllisesti muuttumattomaan versioon viittatusta kohteesta. Suositeltavaa on, että kaikki tallennusversiot myös pidetään pysyvästi tallessa, jotta mahdolliset keskenäiset ja ulkopuolelta tulevat linkit eivät mene rikki muutosten yhteydessä.
 
 ### Muutosten leviäminen viittausten kautta
-Yhteisen tietovaraston hallintajärjestelmässä voidaan niin haluttaessa tarkistaa onko jokin kaava tai sen osa todellisuudessa muuttunut vai täysin identtinen sen edellisen version kanssa, ja olla tallentamatta uusia kopioita identtisistä saman tietokohteen versioista. Esimerkiksi tallennettaessa korjattu kaavaehdotus, jossa on muutettu ainoastaan yhden kaavamääräyskohteen yhtä kaavamääräystä, voitaisiin kaikkien kaavamääräyskohteiden ja niiden kaavamääräysten uudelleentallentamisen sijaan analysoida mitkä tietokohteet ovat todellisuudessa erilaisia tai uusia verrattuina edelliseen version ja tallentaa vain ne uusilla paikallisilla tunnuksilla ja viittaustunnuksilla. Niin oman tietosisällön kuin linkitystenkin suhteen identtiset tietokohteet voidaan yksinkertaisesti jättää tallentamatta, koska niitä vastaavat kohteen samoilla linkeillä ja tunnuksilla löytyvät jo tietovarastosta. Tästä on muutostenhallinnan suhteen sellaiset edut, että kunkin tietokohteen muutoshistoriaan ei kerry muutoksia, jossa sen tila ei todellisuudessa ole lainkaan muuttunut, ja toisaalta tallennustilaa voidaan jonkin verran säästää välttämällä duplikaattitietojen tallentaminen. 
+Kaavatietomallin tietokohteiden keskinäiset viittaukset kohdistuvat aina viitattavien tietokohteiden tiettyyn versioon, ja toisaalta kaikki kohteiden sisällölliset muutokset johtavat uusien versioiden tallentamiseen. Siten kohteiden välisten linkkien kohdetietoa täytyy muuttaa mikäli halutaan viitata jollain tapaa muuttuneeseen kohteeseen. Tämä päivitystarve johtaa edelleen myös viittaavan tietokohteen uuden version luomiseen, vaikka ainoa muuttunut tieto olisi linkki uuteen versioon viitatusta tietokohteesta. Molempiin suuntiin tietokohteiden välillä tehty linkitys saattaa siten johtaa hyvin laajalle leviävään muutosketjuun. Muutosten leviämistä voidaan rajoittaa  kaikkiin kaavan tietokohteisiin voidaan välttää tekemällä linkitys tietokohteiden välillä vain yhteen suuntaan, esimerkiksi vain joko kaavasta kaavamääräyskohteisiin ja kaavamääräyskohteista kaavamääräyksiin (ylhäältä alas), tai toisinpäin (alhaalta ylös). 
 
-Kuvatun kaltainen todellisuudessa muuttumattomien tietokohteiden tallentamisen välttäminen asettaa tietomallille ja sen keskinäisille linkityksille erityisvaatimuksen, että muutosten tahaton vyöryminen kohteesta toiseen pelkästään keskinäisten linkitysten päivittymisen kautta tulee minimoida. Koska tietokohteiden keskinäiset linkkaukset perustuvat viitattavien kohteiden versiokohtaisiin tunnuksiin, täytyy linkkejä muuttaa mikäli halutaan viitata muuttuneeseen kohteeseen. Koska tallennettuja tietoja ei voi muokata, johtaa tämä päivitystarve tietokohteen uuden version tallentamiseen, vaikka ainoa muuttunut tieto olisi linkki uuteen versioon viitatusta tietokohteesta. Molempiin suuntiin tietokohteiden välillä tehty linkitys saattaa siten johtaa tarpeettoman laajalle leviävään muutosketjuun. Muutosten leviämistä voidaan rajoittaa  kaikkiin kaavan tietokohteisiin voidaan välttää tekemällä linkitys tietokohteiden välillä vain yhteen suuntaan, esimerkiksi vain joko kaavasta kaavamääräyskohteisiin ja kaavamääräyskohteista kaavamääräyksiin (ylhäältä alas), tai toisinpäin (alhaalta ylös). 
+Kaavatietomallissa kukin kaavamääräyskohde on linkitetty kahdensuuntaisesti kaavaan ja kukin kaavamääräys kahdensuuntaisesti joko pelkästään suoraan kaavaan (yleismääräys) tai myös tiettyyn kaavamääräyskohteeseen. Tällöin yhden kaavamääräyksen muuttaminen johtaa uuden version luomiseen muutettavan kaavämääräyksen lisäksi myös siihen linkitetystä kaavamääräyskohteesta, ja edelleen sen sisältämästä kaava-objektista, mikä puolestaan johtaa lopulta uusien versioiden luomiseen kaikista ko. kaavan muistakin kaavamääräyskohteista ja kaavamääräyksistä.
 
-Kaavatietomallissa kukin kaavamääräyskohde on linkitetty kahdensuuntaisesti kaavaan ja kukin kaavamääräys kahdensuuntaisesti joko suoraan kaavaan (yleismääräys) tai tiettyyn kaavamääräyskohteeseen. Tällöin yhden kaavamääräyksen muuttaminen johtaa uuden uuden version luomiseen muutettavan kaavämääräyksen lisäksi myös siihen linkitetystä kaavamääräyskohteesta, ja edelleen kaava-objektista, mikä puolestaan johtaa lopulta uusien versioiden luomiseen kaikista ko. kaavan muistakin kaavamääräyskohteista ja kaavamääräyksistä. Suorat linkit sekä kaavamääräyskohteista että kaavamääräyksistä kaavaluokan objekteihin mahdollistavat tehokkaat ja yksikertaiset hakuoperaatiot tiettyyn kaavan versioon liittyvien kaavamääräysten palauttamiseksi. Kaavaluokan viittaukset alaspäin sen sisältämiin kaavamääräyskohteisiin ja yleismääräyksen luoteisiin kaavamääräyksiin toisaalta tekevät navigoinnin helpoksi kaavan suunnasta ja toisaalta mahdollistavat kaavaan liittyvien kaavamääräyskohteiden ja kaavamääräysten poistamisen kaavan kehitysversioden välillä vain jättämällä ne pois seuraavasta tallennusversiosta: Ilman linkkejä kaavasta kaavamääräyksiin kaava-objekti voisi säilyä tallennuksessa muuttumattomana, vaikka tallennuksesta puuttuusikin yksi tai useampi aiemman version kaavamääräyskohde, ja koska kaava-objektista ei tällöin luotaisi uutta versiota, viittaisivat uudesta versiosta pois jätetyt kaavamääräyskohteet edelleen uusimpaan (muuttumattomaan) kaavan versioon yhdessä muutettujen ja uusien kaavamääräyskohteiden kanssa. Vastaavasti [Kaavaselostus](../../looginenmalli/dokumentaatio/#kaavaselostus)- ja [Kaava](../../looginenmalli/dokumentaatio/#kaava)-luokkien välinen assosiaatio on kaksisuuntainen, jolloin kumman tahansa muutos vaatii uudet versiot molemmista.
+Minkä tahansa kaavanmääräyksen muuttaminen johtaa siis kaikkien muidenkin ko. kaavan kaavamääräyskohteiden ja kaavamääräysten uusiin versiohin. Suorat linkit sekä kaavamääräyskohteista että kaavamääräyksistä kaavaluokan objekteihin mahdollistavat tehokkaat ja yksikertaiset hakuoperaatiot tiettyyn kaavan versioon liittyvien kaavamääräysten palauttamiseksi. Kaavaluokan viittaukset alaspäin sen sisältämiin kaavamääräyskohteisiin ja yleismääräyksen luoteisiin kaavamääräyksiin toisaalta tekevät navigoinnin helpoksi kaavan suunnasta ja toisaalta mahdollistavat kaavaan liittyvien kaavamääräyskohteiden ja kaavamääräysten poistamisen kaavan kehitysversioden välillä vain jättämällä ne pois seuraavasta tallennusversiosta: Ilman linkkejä kaavasta kaavamääräyksiin kaava-objekti voisi säilyä tallennuksessa muuttumattomana, vaikka tallennuksesta puuttuusikin yksi tai useampi aiemman version kaavamääräyskohde. Koska kaava-objektista ei tällöin luotaisi uutta versiota, viittaisivat uudesta versiosta pois jätetyt kaavamääräyskohteet edelleen uusimpaan (muuttumattomaan) kaavan versioon yhdessä muutettujen ja uusien kaavamääräyskohteiden kanssa. Vastaavasti [Kaavaselostus](dokumentaatio/#kaavaselostus)- ja [Kaava](dokumentaatio/#kaava)-luokkien välinen assosiaatio on kaksisuuntainen, jolloin kumman tahansa muutos luo automaattisesti uudet versiot molemmista.
 
-Kaavaprosessin historian kuvaavat [AbstraktiTapahtuma](../../looginenmalli/dokumentaatio/#abstraktitapahtuma)-luokasta perityt käsittely- ja vuorovaikutustapahtumat puolestaan on linkitetty vain [AbstraktiMaankayttoasia](../../looginenmalli/dokumentaatio/#abstraktimaankayttoasia)-luokkaan päin, jolloin niihin tehtävät muutokset eivät vaadi kaavaluokan objektin uuden version luomista. Samoin [Suunnittelija](../../looginenmalli/dokumentaatio/#suunnittelija)-luokan avulla kuvattu kaavan laatija viittaa vain yhdensuuntaisesti [Kaava](../../looginenmalli/dokumentaatio/#kaava)-luokkaan päin, koska laatijan tietojen päivittämisen ei katsota vaativan uuden version luomista kaava-objektista.
+Kaavaprosessin historian kuvaavat [AbstraktiTapahtuma](dokumentaatio/#abstraktitapahtuma)-luokasta perityt käsittely- ja vuorovaikutustapahtumat puolestaan on linkitetty vain [AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokkaan päin, jolloin niihin tehtävät muutokset eivät vaadi uuden version luomista Kaava-luokan tietokohteesta.
 
 ### Yksittäisen kaavan elinkaaren vaiheisiin liittyvät muutokset
-Kaavatietomalli mahdollistaa tunnistettavien kaavan tietokohteiden eri kehitysversioiden erottamisen toisistaan. Kullakin tietomallin kohteella on sekä sen tosimaailman identiteettiin liittyvä ns. identiteettitunnus että yksittäisen tallennusversion tunnus (paikallinen tunnus). Tallennettaessa uutta versiota samasta kaavasta tai sen sisältämästä tietokohteesta, sen identiteettitunnus pysyy ennallaan, mutta sen paikallinen tunnus ja paikallinen tunnus muuttuvat. Kaava katsotaan samaksi, kun sen liittyy samaan kaavoitusprosessiin, ja siitä käytetään samaa, ennen kaavan virelletuloa haettavaa kaavatunnusta. Muiden kaavatietomallin versioitavien objektien suhteen samuuden määritteleminen on tietoja tuottavien järjestelmien vastuulla: mikäli objektilla on tallennettavaksi lähetettäessä saman identititeettitunnus kuin aiemmin tallennetulla, samantyyppisellä tietokohteella, katsotaan uusi objekti on saman tietokohteen uudeksi versioksi.
+Kaavatietomalli mahdollistaa tunnistettavien kaavan tietokohteiden eri kehitysversioiden erottamisen toisistaan. Kullakin tietomallin kohteella on sekä sen tosimaailman identiteettiin liittyvä ns. identiteettitunnus että yksittäisen tallennusversion tunnus (paikallinen tunnus). Tallennettaessa uutta versiota samasta kaavasta tai sen sisältämästä tietokohteesta, sen identiteettitunnus pysyy ennallaan, mutta sen paikallinen tunnus muuttuu. Tallennettaessa Kaava-luokan objektia se katsotaan saman tietokohteen uudeksi versioksi, mikäli sen kaavatunnus on sama. Muiden kaavatietomallin versioitavien objektien suhteen samuuden määritteleminen on tietoja tuottavien järjestelmien vastuulla: mikäli objektilla on tallennettavaksi lähetettäessä saman ```identititeettiTunnus```-attribuutin arvo kuin aiemmin tallennetulla, samantyyppisellä tietokohteella, katsotaan uusi objekti on saman tietokohteen uudeksi versioksi.
 
-Kun kaavan tietokohteesta tallennetaan uusi versio, tulee kumottavan tietokohteen ```korvattuObjektilla```-assosiaatio asettaa viittaamaan tietokohteen uuteen versioon. Uuden tietokohteen ```korvaaObjektin```-assosiaatio puolestaan asetetaan viittaamaan tietokohteen edelliseen, nyt korvattavaan versioon. Molempien kohteiden ```tallennusAika```-attribuutin arvoksi asetetaan ajanhetki, jolloin tallennus tai muutos tietovarastoon on tehty. Attribuutin ```viimeisinMuutos``` arvo kuvaa ajanhetkeä, jolloin ko. tietokohteeseen on tehty sisällöllinen muutos tiedontuottajan tietojärjestelmässä. Tiedontuottajan järjestelmän osalta ei vaadita tiukkaa versiontipolitiikkaa, eli ```paikallinenTunnus```-attribuutin päivittämistä jokaisen tietokohteen muutoksen johdosta, ```viimeisinMuutos```-attribuutin päivittämien riittää kuvaamaan tiedon todellisen muuttumisajankohdan.
+{% include clause_start.html type="req" id="elinkaari/vaat-version-korvaus" %}
+Kun kaavan tietokohteesta tallennetaan uusi versio, tulee tietokohteen edellisen version ```korvattuObjektilla```-assosiaatio asettaa viittaamaan tietokohteen uuteen versioon *luomatta tietokohteesta uutta versiota*. Uuden tietokohteen version ```korvaaObjektin```-assosiaatio puolestaan asetetaan viittaamaan tietokohteen edelliseen, korvattavaan versioon. Molempien kohteiden ```tallennusAika```-attribuutin arvoksi asetetaan ajanhetki, jolloin tallennus ja muutos kaavatietovarastoon on tehty.
+{% include clause_end.html %}
+
+Yksittäisen tietokohteen yksityiskohtainen muutoshistoria kaavatietovarastossa saadaan seuraavalla sen ```korvattuObjektilla```- ja ```korvaaObjektin```-assosiaatioita. Ainoa muutos, joka ei näy tietokohteen omana versionaan, on kohteen kumoaminen, jolloin sen viimeisimmän version tietoja päivitetään sen elinkaaritilan, voimassaolon ja tallennusajan osalta.
+
+{% include question.html content="Pitääkö [AbstraktiVersioituObjekti](dokumentaatio/#abstraktiversioituobjekti)-luokalle lisätä attribuutti ```ensimmainenTallennusAika```, joka kertoo ko. version alkuperäisen tallennusajan? Kumoamisen yhteydessä ```tallennusAika```-attribuutin arvoa muutetaan, jolloin hukkuu tieto ko. version alkuperäisestä tallennusajankohdasta." %}
+
+Attribuutin ```viimeisinMuutos``` arvo kuvaa ajanhetkeä, jolloin ko. tietokohteeseen on tehty sisällöllinen muutos tiedontuottajan tietojärjestelmässä. Tiedontuottajan järjestelmän osalta ei vaadita tiukkaa versiontipolitiikkaa, eli ```paikallinenTunnus```-attribuutin päivittämistä jokaisen tietokohteen muutoksen johdosta. ```viimeisinMuutos```-attribuutin päivittämien riittää kuvaamaan tiedon todellisen muuttumisajankohdan.
+
+### Kaavan ja sen tietokohteiden voimaantulo
+Kaavan ```voimassaoloAika``` -attribuutin alkuaika on ajanhetki, jolloin kaava sen valitusajan umpeuduttua ja mahdollisten valitusten ja oikaisukehotusten käsittelyn jälkeen kuulutetaan voimaantulleeksi.
+
+{% include clause_start.html type="req" id="elinkaari/vaat-kaavan-voimaantulo" %}
+Voimaantulemisen kuuluttamisen yhteydessä kaavasta tallennetaan kaavatietovarastoon uusi versio, jossa sen 
+* [Kaava](dokumentaatio/#kaava)-luokan objektin ```elinkaaritila```-attribuutin arvoksi on asetettu [Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11),
+* [Kaava](dokumentaatio/#kaava)-luokan objektin ```voimassaoloAika```-attribuutin alkuajaksi on asetettu kuulutuksen ajanhetki ja loppuaikaa ei ole annettu, ja
+* Kunkin kaavan [Kaavamaarays](dokumentaatio/#kaavamaarays)- ja [Kaavasuositus](dokumentaatio/#kaavasuositus)-luokan objektin ```elinkaaritila```-attribuuttien arvoksi [Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11) ja ```voimassaoloAika```-attribuutin alkuajaksi kuulutuksen ajanhetki ilman loppuaikaa.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="elinkaari/vaat-voimassaoloaika" %}
+Kaava ja sen kaavamääräykset ja -suositukset ovat voimassa niiden ```voimassaoloAika```-attribuuttien määräämillä aikaväleillä. Mikäli ```voimassaoloAika```-attribuutin loppuaika puuttuu, on tietokohde voimassa toistaiseksi.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="elinkaari/vaat-elinkaaritila-voimassaoloaika" %}
+ Kaava ja sen kaavamääräykset ja -suositukset voivat olla elinkaaritilassa [Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11) ainoastaan, mikäli niiden ```voimassaoloAika``` on annettu ja sisältää vain alkuajan ilman loppuaikaa. Kaavan ja sen kaavamääräysten ja -suositusten ```voimassaoloAika``` voi olla annettu vain mikäli ne ovat joko elinkaaritilassa [Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11) tai [Kumottu](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/12). Kaavan ja sen kaavamääräysten ja -suositusten ```voimassaoloAika``` sisältää sekä alku- että loppuajan vain, kun ne ovat elinkaaritilassa [Kumottu](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/12).
+ {% include clause_end.html %}
+
+
+### Kaavan määrääminen voimaan osittain
+
+[Maankäyttö- ja rakennuslain pykälässä 201](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132#L26P201) (säädös 132/1999) säädetään mahdollisuudesta määrätä kaava osittain voimaan:
+> Kunnanhallitus voi valitusajan kuluttua määrätä yleis- ja asemakaavan tulemaan voimaan ennen kuin se on saanut lainvoiman kaava-alueen siltä osalta, johon valitusten tai oikaisukehotuksen ei voida katsoa kohdistuvan.
+
+{% include clause_start.html type="req" id="elinkaari/vaat-osittainen-voimaantulo" %}
+Tallennettaessa osittain voimaan määrättävä kaava, tulee tuottavassa tietojärjestelmässä asettaa [Kaava](dokumentaatio/#kaava)-luokan objektin ja sen sisältämien tietokohteiden attribuuttien arvot seuraavasti:
+* [Kaava](dokumentaatio/#kaava)-luokan objektin ```elinkaaritila```-attribuutin arvoksi asetetaan [Osittain voimassa](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/10).
+* [Kaava](dokumentaatio/#kaava)-luokan objektin ```voimassaoloAika```-attribuutin alkuajaksi asetaan voimaantulevaksi määräämisen ajanhetki, ja loppuaikaa ei anneta.
+* Kunkin kaavan [Kaavamaarays](dokumentaatio/#kaavamaarays)- ja [Kaavasuositus](dokumentaatio/#kaavasuositus)-luokan objektin ```elinkaaritila```-attribuuttien arvoksi asetaan joko [Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11) tai [Kumottu](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/12) riippuen siitä katsotaanko valitusten tai oikaisukehotusten kohdistuvan ko. kaavamääräykseen tai kaavasuositukseen vai ei.
+*  ```elinkaaritila```-attribuutin arvon [Kumottu](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/12) saavien [Kaavamaarays](dokumentaatio/#kaavamaarays)- ja [Kaavasuositus](dokumentaatio/#kaavasuositus)-luokan objektien ```voimassaoloAika```-attribuuteille ei anneta lainkaan arvoa.
+```elinkaaritila```-attribuutin arvon [Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11) saavien [Kaavamaarays](dokumentaatio/#kaavamaarays)- ja [Kaavasuositus](dokumentaatio/#kaavasuositus)-luokan objektien ```voimassaoloAika```-attribuuteille annetaan alkuajaksi asetaan voimaantulevaksi määräämisen ajanhetki, ja loppuaikaa ei anneta.
+{% include clause_end.html %}
+
+Kaavamääräysten kumoaminen kaavan osittaisen voimaan määräyksen yhteydessä saattaa johtaa tilanteeseen, jossa kaavassa ei enää kohdistu mitään kumoamattomia määräyksiä tietyn [KaavamaaraysKohde](dokumentaatio/#kaavamaarayskohde)-luokan objektin alueelle. Tästä ei kuitenkaan automaattisesti aiheudu "reikää" kaava-alueeseen, sillä kaavan yleismääräykset voidaan edelleen haluta saattaa voimaan myös ko. kaavamääräyskohteen alueella.
+
+{% include clause_start.html type="req" id="elinkaari/vaat-osittainen-voimaantulo-aluerajaus" %}
+[Kaava](dokumentaatio/#kaava)-luokan tietokohteen uuden version ```aluerajaus```-attribuuttin arvo päivitetään poistamalla siitä vain kumottavia kaavamääräyksiä sisältävien kaavamääräyskohteen geometriat ainoastaan siinä tapauksessa, että että osa kaavan alkuperäisestä alueesta halutaan jättää kokonaan kaavan vaikutusalueen ulkopuolelle. Tällöin ulkopuolelle jätettävälle alueelle ei saa olla kohdistua kumoamattomia kaavamääräyksiä.
+{% include clause_end.html %}
+
+On mahdollista, että voimassaolevaan kaavaan saattaa kuulua sellaisia kaavamääräyskohteita, jotka sijaitsevat kaavan aluerajauksen ulkopuolella. Nämä kaavamääräyskohteet voivat kuitenkin sisältävää vain kumottuja kaavamääräyksiä.
 
 ### Kaavamuutokset ja vaihekaavat
-Hyväksyttyjen kaavojen sisältämiä kaavamääräyksiä voidaan kumota tai korvata laatimalla kaavamuutos tai vaihekaava. Kaavatietomallissa sekä kaavamuutos että vaihekaava toteutetaan [Kaava](../../looginenmalli/dokumentaatio/#kaava)-luokan avulla samoin kuin ensimmäinenkin tietylle alueelle laadittava kaava. Vaihekaavat erotetaan ensimmäisistä kaavoista ja kaavamuutoksista Kaava-luokan attribuutin ```laji``` (arvona koodisto [Kaavalaji](http://uri.suomi.fi/codelist/rytj/Kaavalajit)) avulla. Vaihekaavat sisältävät tyypillisesti vain vähäisiä ja rajattuja muutoksia kaavoihin, joita niillä muutetaan. Muutettavien kaavojen kaavamääräykset säilyvät vaihekaavan alueella tyypillisesti pääosin ennallaan, ja niitä kumotaan ja korvataan vaihekaavassa vain tarpeellilta osin. Kaavamuutos puolestaan kumoaa voimaan tullessaan tyypillisesti yhden tai useamman aiemmin hyväksytyn kaavan kaikki kaavamääräykset ````aluerajaus```-attribuuttinsa määrittämällä alueella. 
+Hyväksyttyjen kaavojen sisältämiä kaavamääräyksiä voidaan kumota tai korvata laatimalla kaavamuutos tai vaihekaava. Kaavatietomallissa sekä kaavamuutos että vaihekaava toteutetaan [Kaava](dokumentaatio/#kaava)-luokan avulla samoin kuin ensimmäinenkin tietylle alueelle laadittava kaava. Vaihekaavat erotetaan ensimmäisistä kaavoista ja kaavamuutoksista Kaava-luokan attribuutin ```laji``` (arvona koodisto [Kaavalaji](http://uri.suomi.fi/codelist/rytj/Kaavalajit)) avulla. Vaihekaavat sisältävät tyypillisesti vain vähäisiä ja rajattuja muutoksia kaavoihin, joita niillä muutetaan. Muutettavien kaavojen kaavamääräykset säilyvät vaihekaavan alueella tyypillisesti pääosin ennallaan, ja niitä kumotaan ja korvataan vaihekaavassa vain tarpeellilta osin. Kaavamuutos puolestaan kumoaa voimaan tullessaan tyypillisesti yhden tai useamman aiemmin hyväksytyn kaavan kaikki kaavamääräykset ```aluerajaus```-attribuuttinsa määrittämällä alueella. 
 
-Sekä kaavamuutosten että vaihekaavojen tapauksessa kaavalla kaikki kumottavat, aiemmin hyväksytyt kaavamääräykset tulee kuvata [KaavanKumoamistieto](../../looginenmalli/dokumentaatio/#kaavankumoamistieto)-luokan instanssienn avulla. Kutakin kumottavia kaavamääräyksiä sisältävää kaavaa kohti tulee antaa yksi ```KaavanKumoamistieto```, jonka ```kumottavanKaavanTunnus```-attribuutti sisältää kumottavan kaavan pysyvän kaavatunnuksen (viittaus [Kaava](../../looginenmalli/dokumentaatio/#kaava)-luokan ```kaavatunnus```-attribuutin avulla). Kumottavat kaavamääräykset kuvataan ```kumoattavanMaarayksenTunnus```-attribuutin arvojen avulla, mikäli yksittäisillä kaavamääräyksillä on yksilöivät ja yksiselitteiset, viittauskelpoiset tunnukset. Mikäli kumottavia kaavamääräyksiä ei voida yksiselitteisesti yksilöidä niiden tunnusten avulla, kuvataan kaavan kumottavat alueet ```kumottavaKaavanAlue```-attribuutin määrittämän aluerajauksen avulla. Kaavasta kumotaan kaikki kaavamäärykset, jotka on kohdistettu kokonaan rajatun alueen sisälle. Mikäli kaavamuutoksella tai vaihekaavalla halutaan kumota kokonainen hyväksytty kaava kaikkine kaavamääräyksineen, käytetään ```kumoaaKaavanKokonaan```-attribuutin arvoa ```true```. Tällöin kumottavia kaavamääräyksiä ei tarvitse yksilöidä muiden attribuuttien avulla.
+{% include clause_start.html type="req" id="elinkaari/vaat-kumoamistieto-per-kaava" %}
+Sekä kaavamuutosten että vaihekaavojen tapauksessa kaavalla kaikki kumottavat, aiemmin hyväksyttyjen kaaavojen kaavamääräykset tulee yksilöidä kumoavassa kaavassa. Kutakin kaavaa kohti tulee antaa yksi [Kaava](dokumentaatio/#kaava)-luokan attribuutin ```kumoamistieto``` arvo tyyppiä [KaavanKumoamistieto](dokumentaatio/#kaavankumoamistieto), jonka ```kumottavanKaavanTunnus```-attribuutin arvo on kumottavan kaavan [viittaustunnus](#viittaustunnus)).
+{% include clause_end.html %}
 
-Kaavatietomalli ei sisällä omaa tietorakennettaan ajantasaiselle kaava-aineistolle, joka sisältää annetun alueella tietyllä ajanhetkellä voimassaolevat kaavamääräykset (ns. ajantasakaava), huomioiden kavamuutosten ja vaihekaavojen vaikutukset silät osin kun ne ovat ko. ajanhetkellä voimassa. Tällainen toiminnallisuus on kuitenkin aivan ilmeisesti yhteisen kaavatietovaraston palveluna erittäin hyödyllinen. Kaavan kumoamistietojen ja kumoavan kaavan voimassaolotietojen avulla tällainen ajantasainen "kaavamatto" voidaan laskea mille tahansa ajanhetkelle, olettaen, että kaikki kyseisen alueen kaavat on viety tietovarastoon kaavatietomallin mukaisessa muodossa.
+{% include clause_start.html type="req" id="elinkaari/vaat-kumottava-maarayksen-tunnus" %}
+Kumottavat kaavamääräykset kuvataan ensisijaisesti ```kumoattavanMaarayksenTunnus```-attribuutin arvojen avulla. Attribuutin arvo on kumottavan [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan tietokohteen [viittaustunnus](#viittaustunnus).
+{% include clause_end.html %}
+
+ Mikäli kumottavalle kaavamääräykselle ei kumottavassa kaavavassa ole määritelty yksilöivää ja yksiselitteistä tunnusta, ei kumoamista voi kohdistaa siihen ```kumoattavanMaarayksenTunnus```-attribuutin avulla. Näin voi olla esimerkiksi kun kumottava kaava tai sen yksittäiset kaavamääräykset eivät ole saatavissa Kaavatietomallin mukaisessa muodossa. Tässä tapauksessa kaavan kumottavat alueet kuvataan ```kumottavaKaavanAlue```-attribuutin määrittämän aluerajauksen avulla.
+ 
+{% include clause_start.html type="req" id="elinkaari/vaat-kumottava-kaavan-alue" %}
+Kumottavasta kaavasta kumotaan kaikki kaavamäärykset, jotka on kohdistettu kokonaan ```kumottavaKaavanAlue```-attribuutin määrittämän alueen sisälle. ```kumottavaKaavanAlue```-attribuutin avulla ei voi kumota kaavan yleismääräyksiä.
+ {% include clause_end.html %}
+ 
+{% include clause_start.html type="req" id="elinkaari/vaat-kumoaa-kaavan-kokonaan" %}
+ Mikäli kaavamuutoksella tai vaihekaavalla halutaan kumota kokonainen hyväksytty kaava kaikkine kaavamääräyksineen, käytetään ```kumoaaKaavanKokonaan```-attribuutin arvoa ```true```. Tällöin attribuutteja ```kumoattavanMaarayksenTunnus``` ja ```kumottavaKaavanAlue``` ei käytetä.
+ {% include clause_end.html %}
+
+{% include clause_start.html type="req" id="elinkaari/vaat-kaavamuutoksen-voimaantulo" %}
+ Kun kaavamuutoksesta tai vaihekaavasta tallennetaan versio, jonka ```elinkaaritila```-attribuutin arvo on [Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11), kaavatietovarasto päivittää niiden siinä kumottaviksi asetettujan kaavamääräysten, joiden ```elinkaaritila```-attribuutin arvo on [Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11), attribuutteja seuraavasti *luomatta niistä uusia versioita*:
+ * ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin kaavamuutoksen tai vaihekaavan ```voimassaoloAika```-attribuutin alkamisaika.
+ * ```elinkaaritila```-attribuutin arvoksi asetetaan [Kumottu](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/12).
+ * ```tallennusAika```-attribuutin arvoksi asetetaan ajanhetki, jolloin kaavamuutos tai vaihekaava tallennettiin kaavatietovarastoon elinkaaritilassa [Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11).
+ {% include clause_end.html %}
+
+ Kaavatietomalli ei sisällä omaa tietorakennettaan ajantasaiselle kaava-aineistolle, joka sisältää annetun alueella tietyllä ajanhetkellä voimassaolevat kaavamääräykset (ns. ajantasakaava), huomioiden kaavamuutosten ja vaihekaavojen vaikutukset niiltä osin kun ne ovat ko. ajanhetkellä voimassa. Tällainen toiminnallisuus on kuitenkin aivan ilmeisesti yhteisen kaavatietovaraston palveluna erittäin hyödyllinen. Kaavamääräysten ```voimassaoloAika```-attribuutin arvojen avulla tällainen ajantasainen "kaavamatto" voidaan laskea mille tahansa ajanhetkelle, olettaen, että kaikki kyseisen alueen kaavat on viety tietovarastoon kaavatietomallin mukaisessa muodossa.
+ 
+ On huomattava, että pelkän ```elinkaaritila```-attribuutin avulla ei voida tietää, onko kaavamääräys tietyllä tarkasteluajanhetkellä lainvoimainen vai ei: Mikäli ajanhetkellä ```x``` voimaan tullut kaavamääräys on kumottu kaavamuutoksella, joka on tullut lainvoimaiseksi ajanhetkellä ```y```, on kaavamääräyksen ```elinkaaritila```-attribuutin arvo muutettu arvoon [Kumottu](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/12). Kyseinen kaavamääräys on tällöin kuitenkin edelleen lainvoimainen millä tahansa ajanhetkellä ```t, x <= t < y```.
+
+Kunkin voimassaolevan kaavamääräyksen osalta voidaan tarkastella onko se asetettu kumottavaksi vireillä olevassa, vielä ei-lainvoimaisessa kaavamuutoksessa ja vaihekaavassa hakemalla siihen sen sisältävään kaavan kohdistuvat kaavamuutokset ja vaihekaavat, ja vertaamalla niiden ```kumoamistieto```-attribuuttien arvoja kaavamäääräyksen tietoihin.
 
 {% include question.html content="Pitääkö kaavamääräyskohteessa olla tieto siitä, onko kyseessä alue, jolla kyseinen kaava on ensimmäinen (koodisto 'Aiempi kaavoitustilanne', arvot esim. 'Alueella on voimassaoleva saman tasoinen kaava', 'Alueella ei ole voimassaolevaaa saman tasoista kaavaa')?" %}
 
 {% include question.html content="Pitääkö myös kaavasuosituksia voida kumota kaavamuutoksilla ja vaihekaavoilla?" %}
 
-{% include question.html content="Pitäisikö yleismääräyksiä voida kumota myös sisällyttämällä koko kumottavan yleismääräystekstin? Ei-tietomallipohjaisissa kaavoissa kumottavien yleismääräysten yksilöiminen voi muutoin olla mahdotunta." %}
+{% include question.html content="Pitäisikö yleismääräyksiä voida kumota myös sisällyttämällä koko kumottavan yleismääräystekstin? Ei-tietomallipohjaisissa kaavoissa kumottavien yleismääräysten yksilöiminen voi muutoin olla mahdotonta." %}
 
 {% include bug.html content="KaavanKumoamistieto-luokassa on attribuutti kumottavanKohteenTunnus, mutta Kaavamääräyskohde-luokalla ei enää ole elinkaaritilaa, eli sitä ei voi kumota" %}
 
-## Kaavatietomallin sisäisten viittausten ylläpito
-
-
 ## Kaavan elinkaaren vaiheet ja elinkaaritila-attribuutin käyttö
-Kaavan ja sen sisältämien kaavamääräysten elinkaareen liittyvää tilaa hallitaan ko. tietokohteiden ```elinkaaritila```-attribuutin ja sen mahdollisen arvon kuvaavan [Elinkaaren tila](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila)-koodiston avulla. [Kaava](../../looginenmalli/dokumentaatio/#kaava)- ja [Kaavamaarays](../../looginenmalli/dokumentaatio/#kaavamaarays)-luokkien ```elinkaaritila```-attribuutit ovat pakollisia. Tavallisesti kaavan sisältämien kaavamääräysten elinkaaritilan arvo on sama kuin koko kaavalla, mutta osittaisen voimaan määräämisen tapauksessa ne eroavat toisistaan (ks. [Kaavan osittainen määrääminen voimaan](#kaavan-osittainen-m%C3%A4%C3%A4r%C3%A4%C3%A4minen-voimaan)).
+Kaavan ja sen sisältämien kaavamääräysten elinkaareen liittyvää tilaa hallitaan ko. tietokohteiden ```elinkaaritila```-attribuutin ja sen mahdolliset arvot kuvaavan [Elinkaaren tila](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila)-koodiston avulla. [Kaava](dokumentaatio/#kaava)-, [Kaavamaarays](dokumentaatio/#kaavamaarays)-, ja [Kaavasuositus](dokumentaatio/#kaavasuositus)-luokkien ```elinkaaritila```-attribuutit ovat pakollisia. Tavallisesti kaavan sisältämien kaavamääräysten elinkaaritilan arvo on sama kuin koko kaavalla, mutta ne voivat erotat toisistaan kahdessa tapauksessa:
+* Kaavan osittaisen voimaan määräämisen tapauksessa osa kaavamääräyksistä ja -suosituksista voidaan kumota (ks. [Kaavan osittainen määrääminen voimaan](#elinkaari-vaat-osittainen-voimaantulo))
+* Kaavamuutoksen tai vaihekaavan voimaantulo aiheuttaa siinä kumottaviksi yksilöityjen kaavamääräysten kumoamisen (ks. [Kaavamuutokset ja vaihekaavat](#elinkaari-vaat-kaavamuutoksen-voimaantulo))
 
-## Kaavan ja sen kaavamääräysten komoutuminen
+
+## Kaavan tietokohteisiin viittaaminen ja viitteiden ylläpito
+### Kaavan tietokohteiden sisäiset viittaukset
+### Kaavan tietokohteisiin viittaaminen toisista kaavoista ja ulkopuolelta
 
 ## Esimerkkejä elinkaaritapahtumista
 
-### Kaavan luominen ja muokkaus ennen ensimmäistä RYTJ-tallennusta
+### Kaavan luominen ja muokkaus ennen ensimmäistä tallennusta kaavatietovarastoon
 
-### Kaavan ensimmäinen RYTJ-tallennus
+### Kaavan ensimmäinen tallennus kaavatietovarastoon
 
-### Kaavan muokatun version RYTJ-tallennus
+### Kaavan muokatun version tallennus kaavatietovarastoon
 
 ### Käsittely- tai vuorovaikutustapahtuman lisääminen
 
 ### Kaavan hyväksyminen
 
 ### Kaavan voimaantulosta kuuluttaminen
-
-### Kaavan osittainen määrääminen voimaan
-
-> Kunnanhallitus voi valitusajan kuluttua määrätä yleis- ja asemakaavan tulemaan voimaan ennen kuin se on saanut lainvoiman kaava-alueen siltä osalta, johon valitusten tai oikaisukehotuksen ei voida katsoa kohdistuvan ([Maankäyttö- ja rakennuslaki 201 §](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132#L26P201))
-
-Määrättäessä kaava osittain voimaan, tulee [Kaava](../../looginenmalli/dokumentaatio/#kaava)-luokan ```elinkaaritila```-attribuutin arvoksi asettaa [Osittain voimassa](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/10), ja kullekin kaavamääräykselle erikseen niiden ```elinkaaritila```-attribuuttien arvoksi joko [Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11) tai [Kumottu](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/12) riippuen siitä katsotaanko valitusten tai oikaisukehotusten kohdistuvan ko. kaavamääräykseen vai ei. Mikäli kaavamääräysten kumoaminen johtaa tilanteeseen, jossa kaavassa ei enää kohdistu mitään määräyksiä niiden kaavamääräyskohteiden alueille, joihin kumoamiset liittyvät, tulee harkita myös kaavan ```aluerajaus``` attribuutin päivittämistä vastaamaan kaavan todellista voimassaolevaa vaikutusaluetta. Siten on mahdollista, että voimassaolevaan kaavaan saattaa kuulua sellaisia kaavamääräyskohteita, jotka sijaitsevat kaavan lopullisen aluerajauksen ulkopuolella. Nämä voivat kuitenkin sisältävää ainoastaan kumottuja kaavamääräyksiä.
 
 ### Kaavan, sen yksittäisten kaavamääräyskohteiden tai kaavamääräysten kumoaminen
 
