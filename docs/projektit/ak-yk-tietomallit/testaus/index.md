@@ -58,8 +58,6 @@ Lopputuloksena jokaisesta kaavasta ja kaavan versiosta tuotettiin oma hakemisto.
 
 Tässä vaiheessa kohteilla ei ollut vielä omia tunnisteita ja linkitys kohteiden välillä perustui siihen miten geometriaan (ulkoraja tai kaavakohde) liittyvät määräykset olivat samassa tiedostossa keskenään. Lopullisen tallennuspalveluun lähetettävä tietomallin mukainen FeatureCollection-tiedosto tuotettiin python-skripti, joka loi kaikille kohteille localId:n ja tuotti linkitykset kohteiden välille. Lopputuloksena siis yksi GeoJSON-tiedosto kokonaiselle kaavalle.
 
-TODO: linkkejä muodostettuihin tiedostoihin? todellisiin viimeisten muutosten mukaisiin
-
 ## Testaukseen tuotettu tietonhallintajärjestelmä
 
 Testausta varten toteutettiin tiedonhallintajärjestelmä. Järjestelmä asennettiin Spatineon pilvipalveluympäristöön testausta varten. Järjestelmä koostui kolmesta pääosasta:
@@ -105,7 +103,7 @@ Rajapinnasta yhden kokonaisen kaavan tietojen haku toimii kolmivaiheisesti:
 
 Testauksessa käytetyn kaltaisen rajapinnan kohdalla kokonaisen kaavan haku vaatii siis useita, jopa satoja hakuja. Hakujen tekeminen on kuitenkin helppoa, koska rajapinnan palauttamissa kohteissa on valmiit linkit rajapintaan, joiden avulla viitatut kohteet on erittäin helppo hakea.
 
-Rajapinta löytyy osoitteesta: https://ym-yk-ak.spatineo-devops.com/api
+[Rajapinta on saatavilla täältä](https://ym-yk-ak.spatineo-devops.com/api)
 
 On huomattavaa, että OGC API - Features -palvelun OpenAPI-kuvaus on puutteellinen kohteiden tietomallin suhteen.
 
@@ -125,7 +123,7 @@ Kompromissi OGC API - Featuresin peraatteen ja helpon kokonaisen kaavatideon nou
 
 Kaavatiedon esittämiseksi rakennettiin selainsovellus. Sovellus rakennettiin Reactilla ja OpenLayersillä ja taustakarttana on OpenStreetMap. Sovellus on tarkoitettu tietokoneen näytöllä käytettäväksi, mutta toimii välttävästi myös mobiiliselaimella.
 
-Sovellus löytyy osoitteesta: https://ym-yk-ak.spatineo-devops.com/
+[Sovellus on saatavilla täältä](https://ym-yk-ak.spatineo-devops.com/)
 
 Sovelluksessa käyttäjä valitsee ensin yhden viidestä saatavilla olevasta kaavasta. Kaavan valinnan jälkeen käyttäjän tulee valita kaavan versio. Kun tämä on valittu, lataa sovellus kaavan tiedot rajapintapalvelusta ja esittää kaavan kartalla. On tärkeä huomata, että testauksessa keskityttiin koneluettavan kaavan tuottamiseen ja hyödyntämiseen, mutta ei visualisointiin.
 
@@ -155,7 +153,7 @@ Rajapintapalvelun kohdalla HTTP-muotoiset osoitteet aiheuttavat tarpeetonta hank
 
 ## Liikenne-aihepiirin käyttötarkoitukset
 
-Testauksessa kävi ilmi, että liikenne-aihepiirin kaavamääräyksien ja käyttötarkoitusten kohdalla on epäselviää, mikä tieto on kaavamääräyslaji ja mikä käyttötarkoituslaji [65](https://github.com/YM-rakennettu-ymparisto/AK-YK-tietomallit/issues/65).
+Testauksessa kävi ilmi, että liikenne-aihepiirin kaavamääräyksien ja käyttötarkoitusten kohdalla on epäselviää, mikä tieto on kaavamääräyslaji ja mikä käyttötarkoituslaji. [Issue 65](https://github.com/YM-rakennettu-ymparisto/AK-YK-tietomallit/issues/65)
 
 # Yhteenveto
 
