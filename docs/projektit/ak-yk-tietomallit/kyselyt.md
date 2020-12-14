@@ -18,7 +18,7 @@ Kyselyn tulokset antoivat runsaasti eväitä käsitemallin sekä termien kehitt�
 
 Tässä kyselyssä vastaajat ottivat myös suoraan kantaa siihen, mitä hyötyjä ja haittoja yleis- ja asemakaavan yhteinen käsitemalli voi tuottaa. Yhteisen käsitemallin hyötyinä nähtiin mm. asema- ja yleiskaavoituksen välisen yhteistyön paraneminen yhteisen termistön ja käytäntöjen kautta. Esitetyt haasteet liittyivät erityisesti huoleen siitä, miten asema- ja yleiskaavoituksen erilaiset ohjaustarpeet voidaan huomioida, jos käsitemalli on yhteinen. Tietomallin jatkokehityksessä onkin kiinnitetty erityistä huomiota tähän laatimalla asema- ja yleiskaavoille tarvittavilta osin erilliset koodistot (esim. kaavamääräyskoodistot).
 
-- <a href="https://github.com/YM-rakennettu-ymparisto/AK-YK-tietomallit/blob/master/docs/assets/YKAK-otakantaa1-yhteenveto.pdf">Ensimmäisen kyselyn yhteenvetoraportti</a>
+- <a href="YKAK-otakantaa1-yhteenveto.pdf">Ensimmäisen kyselyn yhteenvetoraportti</a>
 
 ## Toinen kysely: Tietomalli ja koodistot
 
@@ -28,6 +28,6 @@ Kyselyyn vastasi yhteensä 78 vastaajaa, jotka edustivat melko monipuolisesti er
 
 Kyselystä saatu palaute jakautui toisaalta koodistojen sisältöön sekä yleisluontoiseen palautteeseen liittyen laajasti tietomallipohjaisen kaavoituksen haasteisiin. Palautetta on hyödynnetty tämän projektin puitteissa mm. koodistojen kehittämiseen ja tietomallien jatkokehitysehdotusten laatimiseen. Myös loogiseen tietomalliin on tehty joitakin muutoksia. Lisäksi kertynyt aineisto antaa hyvän lähtökohdan myöhemmin toteutettavaan sanastotyöhön.
 
-- <a href="https://github.com/YM-rakennettu-ymparisto/AK-YK-tietomallit/blob/master/docs/assets/YKAK-otakantaa2-yhteenveto.pdf">Toisen kyselyn yhteenvetoraportti</a>
+- <a href="YKAK-otakantaa2-yhteenveto.pdf">Toisen kyselyn yhteenvetoraportti</a>
 
 
