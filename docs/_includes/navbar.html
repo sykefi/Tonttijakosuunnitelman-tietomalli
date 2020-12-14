@@ -51,17 +51,19 @@
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/fyysiset-mallit/aineistot/">Testiaineistoja</a>
         </div>
       </li>
-      {% if page.page == 'projekti' or page.page == 'sparrausryhma' or page.page == 'testaus' %}
+      {% if page.page == 'ak-yk-projekti' or page.page == 'ak-yk-sparrausryhma' or page.page == 'ak-yk-testaus' or page.page == 'ak-yk-jatkokehitys'%}
       <li class="nav-item active dropdown">
       {% else %}
       <li class="nav-item dropdown">
       {% endif %}
-        <a class="nav-link dropdown-toggle" href="{{ site.url }}/projekti.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tietoja</a>
+        <a class="nav-link dropdown-toggle" href="{{ site.url }}/projektit/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projektit</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{ site.url }}/projekti.html">AK-YK -tietomallit</a>
-          <a class="dropdown-item" href="{{ site.url }}/sparrausryhma.html">Sparrausryhmä</a>
-          <a class="dropdown-item" href="{{ site.url }}/kyselyt.html">Ota kantaa -kyselyt</a>
-          <a class="dropdown-item" href="{{ site.url }}/testaus/">Tietomallin testaus</a>
+          <a class="dropdown-item" href="{{ site.url }}/projektit/ak-yk-tietomallit/">AK-YK -tietomallit</a>
+          <a class="dropdown-item sublevel" href="{{ site.url }}/projektit/ak-yk-tietomallit/sparrausryhma.html">Sparrausryhmä</a>
+          <a class="dropdown-item sublevel" href="{{ site.url }}/projektit/ak-yk-tietomallit/kyselyt.html">Ota kantaa -kyselyt</a>
+          <a class="dropdown-item sublevel" href="{{ site.url }}/projektit/ak-yk-tietomallit/testaus/">Tietomallin testaus</a>
+          <a class="dropdown-item sublevel" href="{{ site.url }}/projektit/ak-yk-tietomallit/jatkokehitys.html">Jatkokehitys</a>
+          <div class="dropdown-divider"></div>
         </div>
       </li>
     </ul>

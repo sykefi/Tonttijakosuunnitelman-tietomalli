@@ -2,7 +2,7 @@
 layout: "default"
 title: "Ota kantaa -kyselyt"
 description: ""
-page: "projekti"
+page: "ak-yk-kyselyt"
 status: "Keskeneräinen"
 ---
 # Ota kantaa -kyselyt, syksy 2020

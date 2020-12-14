@@ -2,7 +2,7 @@
 layout: "default"
 title: "Asema- ja yleiskaavan tietomallit  -projekti"
 description: ""
-page: "projekti"
+page: "ak-yk-projekti"
 status: "Keskeneräinen"
 ---
 # Asema- ja yleiskaavan tietomallit  -projekti

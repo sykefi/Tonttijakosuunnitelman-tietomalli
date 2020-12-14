@@ -19,6 +19,12 @@
     background-repeat: no-repeat;
 }
 
+.dropdown-item {
+  &.sublevel {
+      margin-left: 1em;
+  }
+ }
+
 #footer_wrap {
   background: #253746;
   padding-bottom: 7em;
