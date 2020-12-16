@@ -18,7 +18,18 @@ Kaavan (tietojärjestelmän objektin, paikkatietokohde) elinkaari, JHS-viittaus
 
 ### HTTP URI -tunnukset
 
+HTTP URI -muotoiset tunnukset ovat [RFC 3986 -standardiin]() perustuvia HTTP(S) -protokollan mukaisia URI-osoitteita (Uniform Resource Identifier), joiden globaali yksilöivyys varmistetaan Internetin DNS-nimipalveluun rekisteröityjen domain-nimien avulla. Kullakin DNS-palveluun rekisteröidyllä domain-nimellä (esim. ```uri.suomi.fi```) on yksiselitteinen omistaja, joka on suoraan tai välillisesti vastuussa ko. domain-nimen alla julkaistavasta sisällöstä. Nimen omistaja on myös ainoa taho, joka voi päättää ko. domain-nimeä käyttävien osoitteiden ohjautumisesta haluttuihin resursseihin, mikä tekee siitä luontevan perustan yksilöivien tunnusten nimiavaruuksille (esim. <http://uri.suomi.fi/object/rytj/kaava>). HTTP URI -muotoisen tunnuksen yksilöivyys perustuu siis domain-nimien ja siten niihin perustuvien nimiavaruuksien keskitettyyn hallintaprosessiin.
+
+URI-tunnuksen ei tarvitse viitata konkreettiseen sijaintiin internetissä, vaan se voi olla abstraktimpi tunnus. [JHS 193 Paikkatiedon yksilöivät tunnukset](http://www.jhs-suositukset.fi/suomi/jhs193) määrittelee paikkatiedon yksilöiville tunnuksille muodon <http://paikkatiedot.fi/{tunnustyyppi}/{aineistotunnus}/{paikallinen tunnus}>, jossa paikkatietokohteiden ```tunnustyyppi``` on ```so```. Kaavatietomallissa on esimerkkinä käytetty tunnusmuotoa 
+<http://uri.suomi.fi/object/rytj/{aineistotyyppi}/{TietotyypinNimi}/{paikallinenTunnus}>. HTTP URI -muotoisen tunnuksen etuna on luettavuus sekä DNS- ja HTTP-protokollien tarjoama kyky ratkaista (resolve) tunnus ja ohjata kysyjä sitä kuvaavaan Internet-resurssiin ilman tarvetta erityiselle keskitetylle tunnusrekisterille ja siihen perustuvalle ratkaisupalvelulle.
+
+Kaavatietomallissa HTTP URI -muotoa käytetään [viittaustunnus](#viittaustunnus)-attribuutissa, jonka avulla viitataan tiettyyn versioon tietokohteesta kaavan ulkopuolelta.
+
 ### UUID-tunnukset
+UUID (Universally Unique Identifier) on OSF:n (Open Software Foundation) määrittelemä standardoitu tunnusmuoto, jonka avulla voidaan luoda vakiokokoisia, hyvin suurella todennäköisyydellä yksilöiviä tunnuksia ilman keskitettyä hallintajärjestelmää. UUID-tunnukset voivat perustua satunnaislukuihin, aikaleimoihin, tietokoneiden verkkokorttien MAC-osoitteisiin tai merkkijonomuotoisiin nimiavaruuksiin eri yhdistelmissä. UUID-tunnukset erityisen hyvin tietojärjestelmissä, joissa uusia globaalisti pysyviä ja yksilöiviä tunnuksia on tarpeen luoda hajautetusti ilman keskitettyä tunnusrekisteriä.
+
+Kaavatietomallissa UUID-muotoisia tunnuksia suositellaan käytettäväksi [identiteettitunnus](#identiteettitunnus)-, [kaavatunnus](#kaavatunnus- ja [tuottajakohtainen tunnus](#tuottajakohtainen-tunnus)-attribuuttien arvoina. 
+
 
 ## Kaavatietomallin kohteiden elinkaaren hallinnan periaatteet
 Kaavatietomallin mukaisten aineistojen tallentamisessa erotetaan toisistaan tietojen tuottaminen ja muokkaus sisäisesti niiden tuottamiseen ja muokkaamiseen käytettävissä tietojärjestelmissä ja niiden hallinta yhteisessä versiohallitussa kaavatietovarastossa.
@@ -133,7 +144,11 @@ Kaavatietovarasto ei koskaan muuta tuottavan tietojärjestelmän mahdollisesti a
 
 Tietojärjestelmät voivat käyttää tuottajakohtaisia tunnuksia kohdistamaan kaavatietovarastoon ja paikallisiin tietojärjestelmiin tallennettuja tietokohteita toisiinsa esimerkiksi päivitettäessä niiden tallennuksen yhteydessä syntyneitä tunnuksia, vertailtaessa kaavatietovarastoon tallennettuja kohteita ja paikallisia kohteita toisiinsa, sekä esitettäessä validointipalvelun tuloksia suunnitteluohjelmiston käyttäjälle.
 
-Tuottajakohtaisilta tunnuksilta ei vaadita yksilöivyyttä tai mitään tiettyä yhtenäistä muotoa.
+Tuottajakohtaisilta tunnuksilta ei vaadita yksilöivyyttä tai mitään tiettyä yhtenäistä muotoa, mutta UUID-muodon käyttäminen tarjoaa hyvin määritellyn ja standardoidun tavan luoda tuottajakohtaisista tunnuksista yksilöiviä eri tietojärjestelmien kesken. Tästä saattaa olla etua haluttaessa tehdä tuotettavista kaavatiedoista mahdollisimman järjestelmäriippumattomia ja esimerkiksi taata tuottajakohtaisten tunnusten yksilöivyys yli mahdollisten kaavatietoa tuottavien tietojärjestelmien vaihdosten ja päivitysten. 
+
+{% include clause_start.html type="rec" id="elinkaari/suos-tuottajakohtainen-tunnus-form" %}
+Tuottajakohtaisen tunnuksen suositeltu muoto on UUID.
+{% include clause_end.html %}
 
 Esimerkki: ```k-123445```
 
@@ -280,9 +295,42 @@ Kunkin voimassaolevan kaavamääräyksen osalta voidaan tarkastella onko se aset
 {% include bug.html content="KaavanKumoamistieto-luokassa on attribuutti kumottavanKohteenTunnus, mutta Kaavamääräyskohde-luokalla ei enää ole elinkaaritilaa, eli sitä ei voi kumota" %}
 
 ## Kaavan elinkaaren vaiheet ja elinkaaritila-attribuutin käyttö
-Kaavan ja sen sisältämien kaavamääräysten elinkaareen liittyvää tilaa hallitaan ko. tietokohteiden ```elinkaaritila```-attribuutin ja sen mahdolliset arvot kuvaavan [Elinkaaren tila](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila)-koodiston avulla. [Kaava](dokumentaatio/#kaava)-, [Kaavamaarays](dokumentaatio/#kaavamaarays)-, ja [Kaavasuositus](dokumentaatio/#kaavasuositus)-luokkien ```elinkaaritila```-attribuutit ovat pakollisia. Tavallisesti kaavan sisältämien kaavamääräysten elinkaaritilan arvo on sama kuin koko kaavalla, mutta ne voivat erota toisistaan kahdessa tapauksessa:
+Kaavan ja sen sisältämien kaavamääräysten elinkaareen liittyvää tilaa hallitaan ko. tietokohteiden ```elinkaaritila```-attribuutin ja sen mahdolliset arvot kuvaavan [Elinkaaren tila](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila)-koodiston avulla. [Kaava](dokumentaatio/#kaava)-, [Kaavamaarays](dokumentaatio/#kaavamaarays)-, ja [Kaavasuositus](dokumentaatio/#kaavasuositus)-luokkien ```elinkaaritila```-attribuutit ovat pakollisia. 
+
+[Elinkaaren tila](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila)-koodisto kuvaa 13 mahdollista tilaa, joissa kaava voi olla sen elinkaaren eri vaiheissa:
+* [01 - Kaavoitusaloite](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/01) 
+* [02 - Vireilletullut](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/02)
+* [03 - Kaavaluonnos](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/03)
+* [04 - Kaavaehdotus](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/04)
+* [05 - Tarkistettu kaavaehdotus](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/05)
+* [06 - Hyväksytty kaava](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/06)
+* [07 - Oikaisukehotuksen alainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/07)
+* [08 - Valituksen alainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/08)
+* [10 - Osittain voimassa](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/10)
+* [11 - Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11)
+* [12 - Kumottu](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/12)
+* [13 - Kumoutunut](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/13)
+* [14 - Rauennut](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/14)
+
+Kaavojen, joiden elinkaaritila on 01 - 08, kaavan laadinta- ja päätösprosessi on kesken, eli niiden kaavamääräykset eivät (vielä) ole lainvoimaisia. Kaavat, jotka ovat elinkaaritilassa 10 tai 11 sisältävät nykyajanhetkellä rajaamallaan alueella voimassa olevia kaavamääräyksiä. Koodit 12-14 kuvaavat kaavan tiloja, joissa olevan kaavan elinkaari on päättynyt.
+
+### Sallitut kaavan elinkaaren tilan muutokset
+Kaavan elinkaaritila voi kaavan laadinta-, päätös-, valitus-, voimassaolo- ja kumoutumisvaiheidensa aikana muuttua vain seuraavilla tavoilla:
+
+{% include clause_start.html type="req" id="elinkaari/vaat-elinkaaritilan-muutokset" %}
+* Ensimmäinen tallennus kaavatietovarastoon
+   * Mikäli kaava laaditaan suoraan tietomallimuotoon (Kaavan ```digitaalinenAlkuperä```-attribuutin arvo [01 - Tietomallin mukaan laadittu
+](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/01)), ja laki ja asetukset edellyttävät sen viemistä kaavatietovarastoon lainvoiman saamiseksi: mahdolliset tilat 01, 02, 03, 04, 05 tai 06.
+   * Mikäli kaava tuodaan kaavatietovarastoon aiemmin laaditun kaavan digitoituna versiona: ei rajoituksia.
+* 
+{% include clause_end.html %}
+
+
+### Kaavamääräysten ja -suositusten elinkaaren tila
+Tavallisesti kaavan sisältämien kaavamääräysten elinkaaritilan arvo on sama kuin koko kaavalla, mutta ne voivat erota toisistaan kahdessa tapauksessa:
 * Kaavan osittaisen voimaan määräämisen tapauksessa osa kaavamääräyksistä ja -suosituksista voidaan kumota (ks. [Kaavan osittainen määrääminen voimaan](#elinkaari-vaat-osittainen-voimaantulo))
 * Kaavamuutoksen tai vaihekaavan voimaantulo aiheuttaa siinä kumottaviksi yksilöityjen kaavamääräysten kumoamisen (ks. [Kaavamuutokset ja vaihekaavat](#elinkaari-vaat-kaavamuutoksen-voimaantulo))
+
 
 
 ## Kaavan tietokohteisiin viittaaminen ja viitteiden ylläpito
