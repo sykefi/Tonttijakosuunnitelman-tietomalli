@@ -119,6 +119,7 @@ b {
    }
 
    &.ea {
+    white-space: nowrap;
      .inner {
        max-width: none;
        padding: 0px;
@@ -423,6 +424,7 @@ ol#markdown-toc > li:before {
    }
   
    .ea {
+
     A:link, A:hover {
       color: #CC6633;
       text-decoration: underline
