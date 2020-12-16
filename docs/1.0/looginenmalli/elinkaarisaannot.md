@@ -28,7 +28,7 @@ Kaavatietomallissa HTTP URI -muotoa käytetään [viittaustunnus](#viittaustunnu
 ### UUID-tunnukset
 UUID (Universally Unique Identifier) on OSF:n (Open Software Foundation) määrittelemä standardoitu tunnusmuoto, jonka avulla voidaan luoda vakiokokoisia, hyvin suurella todennäköisyydellä yksilöiviä tunnuksia ilman keskitettyä hallintajärjestelmää. UUID-tunnukset voivat perustua satunnaislukuihin, aikaleimoihin, tietokoneiden verkkokorttien MAC-osoitteisiin tai merkkijonomuotoisiin nimiavaruuksiin eri yhdistelmissä. UUID-tunnukset erityisen hyvin tietojärjestelmissä, joissa uusia globaalisti pysyviä ja yksilöiviä tunnuksia on tarpeen luoda hajautetusti ilman keskitettyä tunnusrekisteriä.
 
-Kaavatietomallissa UUID-muotoisia tunnuksia suositellaan käytettäväksi [identiteettitunnus](#identiteettitunnus)-, [kaavatunnus](#kaavatunnus- ja [tuottajakohtainen tunnus](#tuottajakohtainen-tunnus)-attribuuttien arvoina. 
+Kaavatietomallissa UUID-muotoisia tunnuksia suositellaan käytettäväksi [identiteettitunnus](#identiteettitunnus)-, [kaavatunnus](#kaavatunnus)- ja [tuottajakohtainen tunnus](#tuottajakohtainen-tunnus)-attribuuttien arvoina.
 
 
 ## Kaavatietomallin kohteiden elinkaaren hallinnan periaatteet
@@ -183,20 +183,23 @@ Tietovaraston tallennusrajapinta palauttaa tallennetun kaavan tiedot tuottavalle
 
 ## Muutokset ja tietojen versionti
 {% include clause_start.html type="req" id="elinkaari/vaat-pysyva-sisalto" %}
-Kukin kaavan tai sen osien tallennusoperaatio yhteiseen tietovarastoon muodostaa aina uuden version tallennettavista tietokohteista.
-Tallennetun tietokohteen version sisältö ei voi muttua tallennuksen jälkeen, poislukien sen voimassaolon päättymiseen, edellisen ja seuraavan version linkittämiseen ja elinkaaritilaan liittyvät attribuutit.
+Kukin kaavan tai sen osien tallennusoperaatio yhteiseen tietovarastoon muodostaa aina uuden version tallennettavista tietokohteista. Tallennetun tietokohteen version sisältö ei voi muttua tallennuksen jälkeen, poislukien sen voimassaolon päättymiseen, edellisen ja seuraavan version linkittämiseen ja elinkaaritilaan liittyvät attribuutit.
 {% include clause_end.html %}
 
 Näin taataan ulkoisten viittausten eheys, sillä kaavan kaikkien kohteiden paikalliset ja viittaustunnukset viittaavat aina vain tiettyn, sisällöllisesti muuttumattomaan versioon viittatusta kohteesta. Suositeltavaa on, että kaikki tallennusversiot myös pidetään pysyvästi tallessa, jotta mahdolliset keskenäiset ja ulkopuolelta tulevat linkit eivät mene rikki muutosten yhteydessä.
 
 ### Muutosten leviäminen viittausten kautta
-Kaavatietomallin tietokohteiden keskinäiset viittaukset kohdistuvat aina viitattavien tietokohteiden tiettyyn versioon, ja toisaalta kaikki kohteiden sisällölliset muutokset johtavat uusien versioiden tallentamiseen. Siten kohteiden välisten linkkien kohdetietoa täytyy muuttaa mikäli halutaan viitata jollain tapaa muuttuneeseen kohteeseen. Tämä päivitystarve johtaa edelleen myös viittaavan tietokohteen uuden version luomiseen, vaikka ainoa muuttunut tieto olisi linkki uuteen versioon viitatusta tietokohteesta. Molempiin suuntiin tietokohteiden välillä tehty linkitys saattaa siten johtaa hyvin laajalle leviävään muutosketjuun. Muutosten leviämistä voidaan rajoittaa  kaikkiin kaavan tietokohteisiin voidaan välttää tekemällä linkitys tietokohteiden välillä vain yhteen suuntaan, esimerkiksi vain joko kaavasta kaavamääräyskohteisiin ja kaavamääräyskohteista kaavamääräyksiin (ylhäältä alas), tai toisinpäin (alhaalta ylös). 
+Kaavatietomallin tietokohteiden keskinäiset viittaukset kohdistuvat aina viitattavien tietokohteiden tiettyyn versioon, ja toisaalta kaikki kohteiden sisällölliset muutokset johtavat uusien versioiden tallentamiseen. Siten kohteiden välisten linkkien kohdetietoa täytyy muuttaa mikäli halutaan viitata jollain tapaa muuttuneeseen kohteeseen. Tämä päivitystarve johtaa edelleen myös viittaavan tietokohteen uuden version luomiseen, vaikka ainoa muuttunut tieto olisi linkki uuteen versioon viitatusta tietokohteesta. Molempiin suuntiin tietokohteiden välillä tehty linkitys saattaa siten johtaa hyvin laajalle leviävään muutosketjuun. Muutosten leviämistä voidaan rajoittaa  kaikkiin kaavan tietokohteisiin voidaan välttää tekemällä linkitys tietokohteiden välillä vain yhteen suuntaan, esimerkiksi vain joko kaavasta kaavakohteisiin ja kaavakohteista kaavamääräyksiin (ylhäältä alas), tai toisinpäin (alhaalta ylös). 
 
-Kaavatietomallissa kukin kaavamääräyskohde on linkitetty kahdensuuntaisesti kaavaan ja kukin kaavamääräys kahdensuuntaisesti joko pelkästään suoraan kaavaan (yleismääräys) tai myös tiettyyn kaavamääräyskohteeseen. Tällöin yhden kaavamääräyksen muuttaminen johtaa uuden version luomiseen muutettavan kaavämääräyksen lisäksi myös siihen linkitetystä kaavamääräyskohteesta, ja edelleen sen sisältämästä kaava-objektista, mikä puolestaan johtaa lopulta uusien versioiden luomiseen kaikista ko. kaavan muistakin kaavamääräyskohteista ja kaavamääräyksistä.
+Kaavatietomallissa kukin [Kaavakohde](dokumentaatio/#kaavakohde) on linkitetty kahdensuuntaisesti kaavaan ja kukin [Kaavamääräys](dokumentaatio/#kaavamaarays) ja [Kaavasuositus](dokumentaatio/#kaavasuositus) kahdensuuntaisesti joko pelkästään suoraan kaavaan (yleismääräys/yleissuositus) tai myös kaavakohteisiin, joiden alueita ne koskevat. Tällöin yhden kaavamääräyksen muuttaminen johtaa uuden version luomiseen muutettavan kaavamääräyksen lisäksi myös siihen linkitetyistä kaavakohteista, ja edelleen niihin linkitetystä kaava-objektista, mikä puolestaan johtaa lopulta uusien versioiden luomiseen kaikista ko. kaavan muistakin kaavakohteista, kaavamääräyksistä ja -suosituksista, koska kaava-objektiin päin osoittavat linkit pitää muuttaa osoittamaan sen uuteen versioon.
 
-Minkä tahansa kaavanmääräyksen muuttaminen johtaa siis kaikkien muidenkin ko. kaavan kaavamääräyskohteiden ja kaavamääräysten uusiin versiohin. Suorat linkit sekä kaavamääräyskohteista että kaavamääräyksistä kaavaluokan objekteihin mahdollistavat tehokkaat ja yksikertaiset hakuoperaatiot tiettyyn kaavan versioon liittyvien kaavamääräysten palauttamiseksi. Kaavaluokan viittaukset alaspäin sen sisältämiin kaavamääräyskohteisiin ja yleismääräyksen luoteisiin kaavamääräyksiin toisaalta tekevät navigoinnin helpoksi kaavan suunnasta ja toisaalta mahdollistavat kaavaan liittyvien kaavamääräyskohteiden ja kaavamääräysten poistamisen kaavan kehitysversioden välillä vain jättämällä ne pois seuraavasta tallennusversiosta: Ilman linkkejä kaavasta kaavamääräyksiin kaava-objekti voisi säilyä tallennuksessa muuttumattomana, vaikka tallennuksesta puuttuusikin yksi tai useampi aiemman version kaavamääräyskohde. Koska kaava-objektista ei tällöin luotaisi uutta versiota, viittaisivat uudesta versiosta pois jätetyt kaavamääräyskohteet edelleen uusimpaan (muuttumattomaan) kaavan versioon yhdessä muutettujen ja uusien kaavamääräyskohteiden kanssa. Vastaavasti [Kaavaselostus](dokumentaatio/#kaavaselostus)- ja [Kaava](dokumentaatio/#kaava)-luokkien välinen assosiaatio on kaksisuuntainen, jolloin kumman tahansa muutos luo automaattisesti uudet versiot molemmista.
+Minkä tahansa kaavanmääräyksen tai -suosituksen muuttaminen johtaa siis kaikkien muidenkin ko. kaavan kaavakohteiden, kaavamääräysten ja kaavasuositusten uusiin versiohin, mikä on hieman ongelmallista todellisten kaavan muutosten seurannan kannalta. Kahdensuuntainen linkitys on kuitenkin tässä perusteltavissa. Suorat linkit kaavakohteista, kaavamääräyksistä ja kaavasuosituksista ylöspäin Kaava-luokan objektiin mahdollistavat tehokkaat ja yksikertaiset hakuoperaatiot tiettyyn kaavan versioon liittyvien kaavamääräysten ja -suositusten noutamiseksi. Toisaalta Kaava-luokan viittaukset alaspäin sen sisältämiin kaavakohteisiin, yleismääräyksen luonteisiin kaavamääräyksiin ja yleissuosituksen luonteisiin kaavasuosituksiin helpottavat kaikkien kaavaan liittyvien kaavamääräysten ja -suositusten poimintaa, kun ne voidaan löytää iteratiivisesti puumaista rakennetta seuraamalla.
 
-Kaavaprosessin historian kuvaavat [AbstraktiTapahtuma](dokumentaatio/#abstraktitapahtuma)-luokasta perityt käsittely- ja vuorovaikutustapahtumat puolestaan on linkitetty vain [AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokkaan päin, jolloin niihin tehtävät muutokset eivät vaadi uuden version luomista Kaava-luokan tietokohteesta.
+Linkit kaava-objektista alaspäin mahdollistavat myös kaavaan liittyvien kaavakohteiden, kaavamääräysten ja kaavasuositusten poistamisen kaavaluonnoksesta tai ehdotuksesta vain jättämällä ne yksinkertaisesti pois seuraavasta kaavan tallennusversiosta: Mikäli kaava-objektissa ei olisi suoria linkkejä sen sisältämiin kaavakohteisiin, voisi se säilyä tallennuksessa muuttumattomana, vaikka tallennuksesta puuttuusikin yksi tai useampi aiempaa kaava-versioon sisältynyt kaavakohde. Muuttumattomasta kaava-objektista ei tällöin luotaisi uutta versiota, ja siten uudesta versiosta pois jätetytkin kaavakohteet viittaisivat edelleen uusimpaan (muuttumattomaan) kaavan versioon yhdessä muutettujen ja uusien kaavakohteiden kanssa. Vastaavasti kaavamääräysten poistaminen tietystä kaavakohteesta voidaan tehdä yksinkertaisesti jättämällä ne pois kaavan seuraavasta tallennusversiosta.
+
+[Kaava](dokumentaatio/#kaava)-luokan assosiaatiot [Kaavaselostus](dokumentaatio/#kaavaselostus)- ja [OsallistumisJaArviointisuunnitelma](dokumentaatio/#osallistumisjaarviointisuunnitelma)-luokkiin ovat yksisuuntaisia. Tallennettu versio kaavaselostuksesta tai osallistumis- ja arviointisuunnitelmasta voi pysyä samana kaavan uuden version tallennuksen yhteydessä, jolloin niistä ei ole tarpeen luoda uusia versiota. Sama kaavaselostuksen tai osallistumis- ja arviointisuunnitelman versio voi siis liittyä useampaan saman kaavan tallennusversioon.
+
+Kaavaprosessin historian kuvaavat [AbstraktiTapahtuma](dokumentaatio/#abstraktitapahtuma)-luokasta perityt käsittely- ja vuorovaikutustapahtumat on puolestaan linkitetty yksisuuntaisesti [AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokkaan (Kaava-luokan yläluokka) päin, jolloin tapahtumiin tehtävät muutokset eivät vaadi uuden version luomista Kaava-luokan tietokohteesta, sen kaavakohteista, kaavamääräyksistä tai -suosituksista.
 
 ### Yksittäisen kaavan elinkaaren vaiheisiin liittyvät muutokset
 Kaavatietomalli mahdollistaa tunnistettavien kaavan tietokohteiden eri kehitysversioiden erottamisen toisistaan. Kullakin tietomallin kohteella on sekä sen tosimaailman identiteettiin liittyvä ns. identiteettitunnus että yksittäisen tallennusversion tunnus (paikallinen tunnus). Tallennettaessa uutta versiota samasta kaavasta tai sen sisältämästä tietokohteesta, sen identiteettitunnus pysyy ennallaan, mutta sen paikallinen tunnus muuttuu. Tallennettaessa Kaava-luokan objektia se katsotaan saman tietokohteen uudeksi versioksi, mikäli sen kaavatunnus on sama. Muiden kaavatietomallin versioitavien objektien suhteen samuuden määritteleminen on tietoja tuottavien järjestelmien vastuulla: mikäli objektilla on tallennettavaksi lähetettäessä saman ```identititeettiTunnus```-attribuutin arvo kuin aiemmin tallennetulla, samantyyppisellä tietokohteella, katsotaan uusi objekti on saman tietokohteen uudeksi versioksi.
@@ -244,13 +247,13 @@ Tallennettaessa osittain voimaan määrättävä kaava, tulee tuottavassa tietoj
 ```elinkaaritila```-attribuutin arvon [Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11) saavien [Kaavamaarays](dokumentaatio/#kaavamaarays)- ja [Kaavasuositus](dokumentaatio/#kaavasuositus)-luokan objektien ```voimassaoloAika```-attribuuteille annetaan alkuajaksi asetaan voimaantulevaksi määräämisen ajanhetki, ja loppuaikaa ei anneta.
 {% include clause_end.html %}
 
-Kaavamääräysten kumoaminen kaavan osittaisen voimaan määräyksen yhteydessä saattaa johtaa tilanteeseen, jossa kaavassa ei enää kohdistu mitään kumoamattomia määräyksiä tietyn [KaavamaaraysKohde](dokumentaatio/#kaavamaarayskohde)-luokan objektin alueelle. Tästä ei kuitenkaan automaattisesti aiheudu "reikää" kaava-alueeseen, sillä kaavan yleismääräykset voidaan edelleen haluta saattaa voimaan myös ko. kaavamääräyskohteen alueella.
+Kaavamääräysten kumoaminen kaavan osittaisen voimaan määräyksen yhteydessä saattaa johtaa tilanteeseen, jossa kaavassa ei enää kohdistu mitään kumoamattomia määräyksiä tietyn [Kaavakohde](dokumentaatio/#kaavakohde)-luokan objektin alueelle. Tästä ei kuitenkaan automaattisesti aiheudu "reikää" kaava-alueeseen, sillä kaavan yleismääräykset voidaan edelleen haluta saattaa voimaan myös ko. kaavakohteen alueella.
 
 {% include clause_start.html type="req" id="elinkaari/vaat-osittainen-voimaantulo-aluerajaus" %}
-[Kaava](dokumentaatio/#kaava)-luokan tietokohteen uuden version ```aluerajaus```-attribuuttin arvo päivitetään poistamalla siitä vain kumottavia kaavamääräyksiä sisältävien kaavamääräyskohteen geometriat ainoastaan siinä tapauksessa, että että osa kaavan alkuperäisestä alueesta halutaan jättää kokonaan kaavan vaikutusalueen ulkopuolelle. Tällöin ulkopuolelle jätettävälle alueelle ei saa olla kohdistua kumoamattomia kaavamääräyksiä.
+[Kaava](dokumentaatio/#kaava)-luokan tietokohteen uuden version ```aluerajaus```-attribuuttin arvo päivitetään poistamalla siitä vain kumottavia kaavamääräyksiä sisältävien kaavakohteen geometriat ainoastaan siinä tapauksessa, että että osa kaavan alkuperäisestä alueesta halutaan jättää kokonaan kaavan vaikutusalueen ulkopuolelle. Tällöin ulkopuolelle jätettävälle alueelle ei saa olla kohdistua kumoamattomia kaavamääräyksiä.
 {% include clause_end.html %}
 
-On mahdollista, että voimassaolevaan kaavaan saattaa kuulua sellaisia kaavamääräyskohteita, jotka sijaitsevat kaavan aluerajauksen ulkopuolella. Nämä kaavamääräyskohteet voivat kuitenkin sisältävää vain kumottuja kaavamääräyksiä.
+On mahdollista, että voimassaolevaan kaavaan saattaa kuulua sellaisia kaavakohteita, jotka sijaitsevat kaavan aluerajauksen ulkopuolella. Nämä kaavakohteet voivat kuitenkin sisältävää vain kumottuja kaavamääräyksiä.
 
 ### Kaavamuutokset ja vaihekaavat
 Hyväksyttyjen kaavojen sisältämiä kaavamääräyksiä voidaan kumota tai korvata laatimalla kaavamuutos tai vaihekaava. Kaavatietomallissa sekä kaavamuutos että vaihekaava toteutetaan [Kaava](dokumentaatio/#kaava)-luokan avulla samoin kuin ensimmäinenkin tietylle alueelle laadittava kaava. Vaihekaavat erotetaan ensimmäisistä kaavoista ja kaavamuutoksista Kaava-luokan attribuutin ```laji``` (arvona koodisto [Kaavalaji](http://uri.suomi.fi/codelist/rytj/Kaavalajit)) avulla. Vaihekaavat sisältävät tyypillisesti vain vähäisiä ja rajattuja muutoksia kaavoihin, joita niillä muutetaan. Muutettavien kaavojen kaavamääräykset säilyvät vaihekaavan alueella tyypillisesti pääosin ennallaan, ja niitä kumotaan ja korvataan vaihekaavassa vain tarpeellilta osin. Kaavamuutos puolestaan kumoaa voimaan tullessaan tyypillisesti yhden tai useamman aiemmin hyväksytyn kaavan kaikki kaavamääräykset ```aluerajaus```-attribuuttinsa määrittämällä alueella. 
@@ -286,19 +289,15 @@ Kumottavasta kaavasta kumotaan kaikki kaavamäärykset, jotka on kohdistettu kok
 
 Kunkin voimassaolevan kaavamääräyksen osalta voidaan tarkastella onko se asetettu kumottavaksi vireillä olevassa, vielä ei-lainvoimaisessa kaavamuutoksessa ja vaihekaavassa hakemalla siihen sen sisältävään kaavan kohdistuvat kaavamuutokset ja vaihekaavat, ja vertaamalla niiden ```kumoamistieto```-attribuuttien arvoja kaavamäääräyksen tietoihin.
 
-{% include question.html content="Pitääkö kaavamääräyskohteessa olla tieto siitä, onko kyseessä alue, jolla kyseinen kaava on ensimmäinen (koodisto 'Aiempi kaavoitustilanne', arvot esim. 'Alueella on voimassaoleva saman tasoinen kaava', 'Alueella ei ole voimassaolevaaa saman tasoista kaavaa')?" %}
-
-{% include question.html content="Pitääkö myös kaavasuosituksia voida kumota kaavamuutoksilla ja vaihekaavoilla?" %}
+{% include question.html content="Pitääkö kaavakohteessa olla tieto siitä, onko kyseessä alue, jolla kyseinen kaava on ensimmäinen (koodisto 'Aiempi kaavoitustilanne', arvot esim. 'Alueella on voimassaoleva saman tasoinen kaava', 'Alueella ei ole voimassaolevaa saman tasoista kaavaa')?" %}
 
 {% include question.html content="Pitäisikö yleismääräyksiä voida kumota myös sisällyttämällä koko kumottavan yleismääräystekstin? Ei-tietomallipohjaisissa kaavoissa kumottavien yleismääräysten yksilöiminen voi muutoin olla mahdotonta." %}
-
-{% include bug.html content="KaavanKumoamistieto-luokassa on attribuutti kumottavanKohteenTunnus, mutta Kaavamääräyskohde-luokalla ei enää ole elinkaaritilaa, eli sitä ei voi kumota" %}
 
 ## Kaavan elinkaaren vaiheet ja elinkaaritila-attribuutin käyttö
 Kaavan ja sen sisältämien kaavamääräysten elinkaareen liittyvää tilaa hallitaan ko. tietokohteiden ```elinkaaritila```-attribuutin ja sen mahdolliset arvot kuvaavan [Elinkaaren tila](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila)-koodiston avulla. [Kaava](dokumentaatio/#kaava)-, [Kaavamaarays](dokumentaatio/#kaavamaarays)-, ja [Kaavasuositus](dokumentaatio/#kaavasuositus)-luokkien ```elinkaaritila```-attribuutit ovat pakollisia. 
 
-[Elinkaaren tila](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila)-koodisto kuvaa 13 mahdollista tilaa, joissa kaava voi olla sen elinkaaren eri vaiheissa:
-* [01 - Kaavoitusaloite](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/01) 
+[Elinkaaren tila](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaaritila)-koodisto kuvaa 13 mahdollista tilaa, joissa kaava voi olla sen elinkaaren eri vaiheissa:
+* [01 - Kaavoitusaloite](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/01)
 * [02 - Vireilletullut](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/02)
 * [03 - Kaavaluonnos](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/03)
 * [04 - Kaavaehdotus](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/04)
@@ -312,22 +311,40 @@ Kaavan ja sen sisältämien kaavamääräysten elinkaareen liittyvää tilaa hal
 * [13 - Kumoutunut](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/13)
 * [14 - Rauennut](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/14)
 
+{% include question.html content="Mitkä ovat ```Kumoutunut```-, ```Kumottu```- ja ```Rauennut```-tilojen tarkat määritelmät ja erot?" %}
+
+{% include question.html content="Pitäisikö kaavan voida olla yhtäaikaa sekä ```Oikaisukehotuksen alainen``` että ```Valituksen alainen```?" %}
+
 Kaavojen, joiden elinkaaritila on 01 - 08, kaavan laadinta- ja päätösprosessi on kesken, eli niiden kaavamääräykset eivät (vielä) ole lainvoimaisia. Kaavat, jotka ovat elinkaaritilassa 10 tai 11 sisältävät nykyajanhetkellä rajaamallaan alueella voimassa olevia kaavamääräyksiä. Koodit 12-14 kuvaavat kaavan tiloja, joissa olevan kaavan elinkaari on päättynyt.
 
 ### Sallitut kaavan elinkaaren tilan muutokset
-Kaavan elinkaaritila voi kaavan laadinta-, päätös-, valitus-, voimassaolo- ja kumoutumisvaiheidensa aikana muuttua vain seuraavilla tavoilla:
+Kaavan elinkaaritila voi sen laadinta-, päätös-, valitus-, voimassaolo- ja kumoutumisvaiheidensa esiintyä ja muuttua vain tässä luvussa kuvatuilla tavoilla.
 
-{% include clause_start.html type="req" id="elinkaari/vaat-elinkaaritilan-muutokset" %}
-* Ensimmäinen tallennus kaavatietovarastoon
-   * Mikäli kaava laaditaan suoraan tietomallimuotoon (Kaavan ```digitaalinenAlkuperä```-attribuutin arvo [01 - Tietomallin mukaan laadittu
-](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/01)), ja laki ja asetukset edellyttävät sen viemistä kaavatietovarastoon lainvoiman saamiseksi: mahdolliset tilat 01, 02, 03, 04, 05 tai 06.
-   * Mikäli kaava tuodaan kaavatietovarastoon aiemmin laaditun kaavan digitoituna versiona: ei rajoituksia.
-* 
+{% include clause_start.html type="req" id="elinkaari/vaat-ensimmainen-elinkaaritila" %}
+Kaavan elinkaaritila tallennettaessa kaava ensimmäistä kertaa kaavatietovarastoon voi olla jokin seuraavista riippuen Kaavan ```digitaalinenAlkupera```-attribuutin arvosta:
+   * [01 - Tietomallin mukaan laadittu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/01)): tilat 01, 02, 03, 04, 05 tai 06.
+   * [02 - Kokonaan digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/02), [03 - Osittain digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/03) tai [04 - Kaavan rajaus digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/04): tilat 10, 11, 12, 13 tai 14.
 {% include clause_end.html %}
 
+{% include clause_start.html type="req" id="elinkaari/vaat-elinkaaritila-siirtymat" %}
+Kaavan ```elinkaaritila```-attribuutin arvo voi kahden sen peräkkäisen tallennusversion välillä vain seuraavilla tavoilla:
+* Tilasta ```01``` tilaan ```02```, ```03```, ```04```, ```05```, ```06``` tai ```14```.
+* Tilasta ```02``` tilaan ```03```, ```04```, ```05```, ```06```, ```13``` tai ```14```.
+* Tilasta ```03``` tilaan ```04```, ```05```, ```06```, ```13``` tai ```14```.
+* Tilasta ```04``` tilaan ```05```, ```06```, ```13``` tai ```14```.
+* Tilasta ```05``` tilaan ```06```, ```13``` tai ```14```.
+* Tilasta ```06``` tilaan ```07```, ```08```, ```10```, ```11```, ```12```, ```13``` tai ```14```.
+* Tilasta ```07``` tilaan ```08```, ```10```, ```11```, ```12```, ```13``` tai ```14```.
+* Tilasta ```08``` tilaan ```07```, ```10```, ```11```, ```12```, ```13``` tai ```14```.
+* Tilasta ```10``` tilaan ```12``` tai ```13```.
+* Tilasta ```11``` tilaan ```12``` tai ```13```.
+* Tilasta ```12``` ei sallittuja siirtymiä.
+* Tilasta ```13``` ei sallittuja siirtymiä.
+* Tilasta ```14``` ei sallittuja siirtymiä.
+{% include clause_end.html %}
 
 ### Kaavamääräysten ja -suositusten elinkaaren tila
-Tavallisesti kaavan sisältämien kaavamääräysten elinkaaritilan arvo on sama kuin koko kaavalla, mutta ne voivat erota toisistaan kahdessa tapauksessa:
+Tavallisesti kaavan sisältämien kaavamääräysten ja -suositusten elinkaaritilan arvo on sama kuin koko kaavalla, mutta ne voivat erota toisistaan kahdessa tapauksessa:
 * Kaavan osittaisen voimaan määräämisen tapauksessa osa kaavamääräyksistä ja -suosituksista voidaan kumota (ks. [Kaavan osittainen määrääminen voimaan](#elinkaari-vaat-osittainen-voimaantulo))
 * Kaavamuutoksen tai vaihekaavan voimaantulo aiheuttaa siinä kumottaviksi yksilöityjen kaavamääräysten kumoamisen (ks. [Kaavamuutokset ja vaihekaavat](#elinkaari-vaat-kaavamuutoksen-voimaantulo))
 
@@ -351,7 +368,7 @@ Tavallisesti kaavan sisältämien kaavamääräysten elinkaaritilan arvo on sama
 
 ### Kaavan voimaantulosta kuuluttaminen
 
-### Kaavan, sen yksittäisten kaavamääräyskohteiden tai kaavamääräysten kumoaminen
+### Kaavan, sen yksittäisten kaavamääräysten tai -suositusten kumoaminen
 
 
 
