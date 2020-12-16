@@ -123,6 +123,10 @@ b {
      .inner {
        max-width: none;
        padding: 0px;
+
+       h1, p {
+         margin-left: 1rem;
+       }
      }
    }
    &.sidebar-container {

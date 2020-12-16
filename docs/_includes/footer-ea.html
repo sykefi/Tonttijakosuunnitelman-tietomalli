@@ -24,13 +24,10 @@
       /* Terrible hack to get the EA diagram to resize to fit after 'enough' time from loading */
       window.setTimeout(function() {
         resizePage();
-      }, 300);
-      window.setTimeout(function() {
-        resizePage();
         $('#tocIFrame').width('21%').css('min-width','20em').css('height','100em').css('vertical-align: top');;
         $('#contentIFrame').width('78%').css('height','100em').css('vertical-align: top');
         $('#resizeFrames').hide();
-      }, 1500);
+      }, 500);
      
     });
   </script>
