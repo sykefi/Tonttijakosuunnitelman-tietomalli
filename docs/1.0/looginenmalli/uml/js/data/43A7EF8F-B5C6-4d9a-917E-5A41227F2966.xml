@@ -6,5 +6,5 @@ tocTab[tocTab.length] = new Array("0.1.2:5", "", "kt_m1: Kaavamaarays", "EARoot/
 tocTab[tocTab.length] = new Array("0.1.2:6", "", "kt_m2: Kaavamaarays", "EARoot/EA1/EA2/EA25.html", "25.png", "E79696", "0", "", "Object0","{565E15F8-FA93-40f8-8781-BE0E8018400A}");
 tocTab[tocTab.length] = new Array("0.1.2:7", "", "kt_maara1", "EARoot/EA1/EA2/EA26.html", "25.png", "E79789", "0", "", "Object0","{35129B12-B6C6-46dc-82A1-D08AD6226C36}");
 tocTab[tocTab.length] = new Array("0.1.2:8", "", "kt_maara2", "EARoot/EA1/EA2/EA27.html", "25.png", "E79790", "0", "", "Object0","{AFA8BB46-B21E-4f1b-895C-1C27D57FF38E}");
-tocTab[tocTab.length] = new Array("0.1.2:9", "", "mka1: Kaavamaarayskohde", "EARoot/EA1/EA2/EA28.html", "25.png", "E79692", "0", "", "Object0","{A772C868-3A4C-47c8-B00A-E4B2926CACF3}");
+tocTab[tocTab.length] = new Array("0.1.2:9", "", "mka1: Kaavakohde", "EARoot/EA1/EA2/EA28.html", "25.png", "E79692", "0", "", "Object0","{A772C868-3A4C-47c8-B00A-E4B2926CACF3}");
 tocTab[tocTab.length] = new Array("0.1.2:10", "", "na3", "EARoot/EA1/EA2/EA29.html", "25.png", "E79795", "0", "", "Object0","{E87DB671-97AC-4d2f-9DD4-76372AD96D68}");
