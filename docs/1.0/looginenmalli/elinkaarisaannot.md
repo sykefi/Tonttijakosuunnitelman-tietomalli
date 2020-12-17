@@ -14,7 +14,7 @@ status: "Keskeneräinen"
 
 ## Johdanto
 
-Kaavan (tietojärjestelmän objektin, paikkatietokohde) elinkaari, JHS-viittaus
+Kaavoilla, niiden kaavamääräyksillä ja -suosituksilla on Kaavatietomallissa elinkaari, joka määrää miten kyseiset tietokohteet syntyvät, miten ja voivat muuttua kaavaprosessin aikana ennen niiden voimassaolon alkua, ja miten ne kumoutuvat johtaen niiden voimassaolon päättymiseen. Elinkaarisääntöjen määrittely liittyy olennaisesti tietokohteiden versionhallintaan, eli miten yksittäisten tietokohteiden niiden elinkaaren aikana muodotettavat versiot voidaan tallentaa ja yksilöidä viittauskelpoisten pysyvien tunnusten avulla. Tässä annetut säännöt pohjautuvat paikkatietokohteiden yksilöivien tunnusten ja elinkaarisääntöjen periaatteisiin, jotka on kuvattu jukishallinnon suosituksessa [JHS 193 - Paikkatiedon yksilöivät tunnukset](http://www.jhs-suositukset.fi/suomi/jhs193).
 
 ### HTTP URI -tunnukset
 
@@ -32,9 +32,16 @@ Kaavatietomallissa UUID-muotoisia tunnuksia suositellaan käytettäväksi [ident
 
 
 ## Kaavatietomallin kohteiden elinkaaren hallinnan periaatteet
-Kaavatietomallin mukaisten aineistojen tallentamisessa erotetaan toisistaan tietojen tuottaminen ja muokkaus sisäisesti niiden tuottamiseen ja muokkaamiseen käytettävissä tietojärjestelmissä ja niiden hallinta yhteisessä versiohallitussa kaavatietovarastossa.
+Kaavatietomallin elinkaarisäännöt mahdollistavat tietomallin tietokohteiden käsittelyn, tallentamisen ja muuttamisen hallitusti sekä niiden laatimis- että voimassaolovaiheissa. Kaavatietomallin mukaiset tietosisällöt ovat merkittäviä oikeusvaikutuksia aiheuttavia, juridisesti päteviä aineistoja, joita käsitellään hajautetusti eri toimijoiden tietojärjestelmissä. Tämän vuoksi niiden tunnusten, viittausten ja versionnin hallintaan on syytä kiinnittää erityistä huomiota.
 
-Kaavatietomallissa ei ole mielekästä asettaa vaatimuksia kaavatietoa tuottavien tietojärjestelmien tunnusten ja versioden hallintaan, vaan tietomallissa tulee varautua siihen, että yhteiseen tietovarastoon tallennettavia tietoja on muokattu ja tallennettu sisäisesti tuntematon määrä kertoja ennen ensimmäistä viemistä yhteiseen tietovarastoon, ja samoin tuntematon määrä kertoja kunkin yhteiseen varastoon vietävän version välillä. Näin ollen on mahdollista, että kaavasta voi olla joissain tietojärjestelmissä tallennettuna paikallisia versiota, joita ei ole koskaan viety yhteiseen kaavatietovarastoon.
+Seuraavat keskeiset periaatteet ohjaavat kaavatietomallin elinkaaren hallintaa:
+* Kukin kaavatietovarastoon tallennettu versio kaavasta ja sen sisältämistä yksittäisistä tietokohteista saa pysyvän, versiokohtaisen tunnuksen.
+* Kuhinkin kaavatietovarastoon tallennettun tietokohteen versioon voidaan viitata sen pysyvän tunnuksen avulla.
+* Kaavatietomallin tietokohteiden väliset viittaukset toteutetaan hallitusti sekä kaavatietoa tuottavissa tietojärjestelmissä että yhteisissä kaavatietovarastoissa.
+* Kaavatietovarasto vastaa pysyvien tunnusten luomisesta ja antamisesta tallennettaville tietokohteille.
+* Lainvoiman saaneita kaavoja ei voi muuttaa kaavatietovarastossa muilta osin kuin niiden tai niiden osien kumoamiseen liittyen.
+
+Kaavatietomallin mukaisten aineistojen tallentamisessa erotetaan toisistaan tietojen tuottaminen ja muokkaus sisäisesti niiden tuottamiseen ja muokkaamiseen käytettävissä tietojärjestelmissä ja niiden hallinta yhteisessä versiohallitussa kaavatietovarastossa. Kaavatietomallin ei ole mielekästä asettaa vaatimuksia kaavatietoa tuottavien tietojärjestelmien tunnusten ja versioden hallintaan, vaan tietomallissa tulee varautua siihen, että yhteiseen tietovarastoon tallennettavia tietoja on muokattu ja tallennettu sisäisesti tuntematon määrä kertoja ennen ensimmäistä viemistä yhteiseen tietovarastoon, ja samoin tuntematon määrä kertoja kunkin yhteiseen varastoon vietävän version välillä. Näin ollen on mahdollista, että kaavasta voi olla joissain tietojärjestelmissä tallennettuna paikallisia versiota, joita ei ole koskaan viety yhteiseen kaavatietovarastoon.
 
 ## Tunnukset ja niiden hallinta
 
@@ -181,6 +188,24 @@ Versionhallinnan näkökulmasta on tärkeää, että kaavan tuottava tietojärje
 Tietovaraston tallennusrajapinta palauttaa tallennetun kaavan tiedot tuottavalle tietojärjestelmälle tallennusoperaation yhteydessä siten, että ne sisältävät yllä mainittujen tunnustenhallintasääntöjen mukaisesti mahdollisesti generoidut tai muokatut identiteettitunnukset, paikalliset tunnukset, nimiavaruudet ja viittaustunnukset kaikille tallennetuille tietokohteille.
 {% include clause_end.html %}
 
+### Kaavan tietokohteisiin viittaaminen ja viitteiden ylläpito
+
+{% include clause_start.html type="req" id="elinkaari/vaat-kaavan-sisaiset-viittaukset" %}
+Saman kaavan tietokohteiden keskinäiset assosiaatiot toteutetaan viitattavan tietokohteen [paikallinenTunnus](#paikallinen-tunnus)-attribuuttia käyttäen.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="elinkaari/vaat-tietovaraston-sisaiset-viittaukset" %}
+Kaavatietokohteen luokkien assosiaatiot eri kaavojen välillä tai kaavojen ja muiden maankäyttöpäätösten tietokohteiden välillä toteutetaan viitattavan tietokohteen [viittaustunnus](#viittaustunnus)-attribuuttia käyttäen.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="elinkaari/vaat-viittaukset-ulkoa" %}
+Pysyvät viittaukset Kaavatietomallin ulkopuolelta tietomallin tietokohteisiin toteutetaan viitattavan tietokohteen [viittaustunnus](#viittaustunnus)-attribuuttia käyttäen.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="elinkaari/vaat-viittaukset-tallennettaessa" %}
+Tallennettaessa Kaavatietomallin tietokohteita kaavatietovarastoon tietokohteiden tunnukset muuttuvat niiden pysyvään muotoon, kuten kuvattu luvussa [Tunnukset ja niiden hallinta](#tunnukset-ja-niiden-hallinta). Kaavatietovaraston vastuulla on päivittää kunkin paikallisen tunnuksen muuttamisen yhteydessä myös kaikkien ko. tietokohteen versioon sen paikallisen tunnuksen avulla viittaavien muiden ko. kaavan tietokohteiden viittaukset käyttämään tietokohteen muutettua paikallista tunnusta.   
+{% include clause_end.html %}
+
 ## Muutokset ja tietojen versionti
 {% include clause_start.html type="req" id="elinkaari/vaat-pysyva-sisalto" %}
 Kukin kaavan tai sen osien tallennusoperaatio yhteiseen tietovarastoon muodostaa uuden version tallennettavista tietokohteista, mikäli yksittäinen tietokohde on miltään osin muuttunut verrattuna sen edelliseen versioon. Myös muutokset muissa Kaavatietomallin tietokohteissa, joihin tietokohteesta on viittaus, lasketaan tietokohteen muutoksiksi. Tallennetun tietokohteen version sisältö ei voi muuttua tallennuksen jälkeen, poislukien sen voimassaolon päättymiseen, seuraavaan versioon linkittämiseen ja elinkaaritilaan liittyvät attribuutit, joita kaavatietovarasto itse päivittää tietyissä tilanteissa.
@@ -199,16 +224,15 @@ Linkit kaava-objektista alaspäin mahdollistavat myös kaavaan liittyvien kaavak
 
 [Kaava](dokumentaatio/#kaava)-luokan assosiaatiot [Kaavaselostus](dokumentaatio/#kaavaselostus)- ja [OsallistumisJaArviointisuunnitelma](dokumentaatio/#osallistumisjaarviointisuunnitelma)-luokkiin ovat yksisuuntaisia. Tallennettu versio kaavaselostuksesta tai osallistumis- ja arviointisuunnitelmasta voi pysyä samana kaavan uuden version tallennuksen yhteydessä, jolloin niistä ei ole tarpeen luoda uusia versiota. Sama kaavaselostuksen tai osallistumis- ja arviointisuunnitelman versio voi siis liittyä useampaan saman kaavan tallennusversioon.
 
+**Esimerkki**:
 
-
-**Esimerkki 1**:
-
-Tallennuspalveluun viedään Kaava, jonka yhteen kaavakohteeseen liittyvää kaavamääräystä [Lisärakennusoikeus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0309) on muutettu siten, että sen numeerinen arvo muuttuu arvosta ```1000 k-m2``` arvoon ```1500 k-m2```. Kaikki kaavan muut tietoteet ovat identtisiä kaavan edellisen tallennusversion kanssa.
+Tallennuspalveluun viedään kaavaehdotus, jonka yhteen kaavakohteeseen liittyvää kaavamääräystä [Lisärakennusoikeus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0309) on muutettu siten, että sen numeerinen arvo muuttuu arvosta ```1000 k-m2``` arvoon ```1500 k-m2```. Kaikki kaavan muut tietokohteet ovat identtisiä kaavan edellisen tallennusversion kanssa.
 
 * Muuttuvasta kaavamääräys-tietokohteesta luodaan uusi versio.
 * Kaavakohteesta, johon muuttunut kaavamääräys kohdistuu, luodaan uusi versio, jossa muuttuu vain linkki, viitaten nyt kaavamääräyksen uuteen versioon.
 * Kaikista muista kaavan tietokohteista, joista on viittaus kyseiseen kaavakohteeseen, luodaan uudet versiot, joissa muuttuvat vain linkit, viitaten nyt kaavakohteen uuteen versioon, mukaan lukien kaava-objekti ja ko. kaavakohteen kaikki muut kaavamääräykset.
-* Kaikista 
+* Kaikista ko. kaavan muistakin kaavakohteista, kaavamääräyksistä ja kaavasuosituksista luodaan uudet versiot, koska niiden viittaukset muuttuneeseen kaava-tietokohteeseen pitää muuttaa.
+* Kaavan mahdollisesti liittyvistä kaavaselostus- ja osallistumis- ja arviointisuunnitelma -tietokohteista ei luoda uusia versiota, vaan sekä uusi että vanha kaavan versio viittaavat samoihin selostus- ja OAS-tietokohteiden versioihin.
 
 
 ### Yksittäisen kaavan elinkaaren vaiheisiin liittyvät muutokset
@@ -378,12 +402,19 @@ Tavallisesti kaavan sisältämien kaavamääräysten ja -suositusten elinkaariti
 Kun kaavasta viedään kaavatietovarastoon uusi versio, jossa sen elinkaaritila on muuttunut, liittyy kyseisen kaavan version syntymiseen tyypillisesti jokin käsittelytapahtuma.
 
 {% include clause_start.html type="req" id="elinkaari/vaat-elinkaaritilan-muutostapahtumat" %}
-[Kaavan](dokumentaatio/#kaava) ```elinkaaritila```-attribuutin arvo muuttumiseen tiettyyn arvoon tulee aina liittyä [Kasittelytapahtuma](dokumentaatio/#kasittelytapahtuma), jonka ```laji```-attribuutin arvo tulee olla elinkaarimuutosta vastaava seuraavasti:
+[Kaavan](dokumentaatio/#kaava) ```elinkaaritila```-attribuutin arvon seuraaviin muutoksiin tulee aina liittyä [Kasittelytapahtuma](dokumentaatio/#kasittelytapahtuma), jonka ```laji```-attribuutin arvo tulee olla elinkaarimuutosta vastaava:
 * Muutos tilaan [02 Virelletullut](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/02): Liityttävä käsittelytapahtuman laji [04 Kaava virelletulo](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/04)
 * Muutos tilaan [06 Hyväksytty kaava](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/06): Liityttävä joko käsittelytapahtuman laji [09 Kaavan hyväksyminen](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/09) tai [10 Kaavan hyväksyminen oikaisukehotuksen johdosta](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/10).
 * Muutos tilaan [11 Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/10): Liityttävä käsittelytapahtuman laji [13 Kaavan voimaantulo](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/13).
-
 Yllä luetellut käsittelytapahtumat tulee tallentaa samaan aikaan elinkaaritilaltaan muuttuneen kaavan kanssa.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="elinkaari/vaat-ehdotuksen-nahtavilleasettaminen" %}
+[Kaavan](dokumentaatio/#kaava) ```elinkaaritila```-attribuutin arvon muuttuminen arvosta [04 - Kaavaehdotus](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/04) arvoon [06 - Hyväksytty kaava](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/06) vaatii, että johonkin ko. kaavan aiemmista [04 - Kaavaehdotus](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/04)-tilan versiosta liittyy käsittelytapahtuma lajia [06 Kaavaehdotuksen nähtäville asettaminen](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/06).
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="elinkaari/vaat-tarkistetun-ehdotuksen-nahtavilleasettaminen" %}
+[Kaavan](dokumentaatio/#kaava) ```elinkaaritila```-attribuutin arvon muuttuminen arvosta [05 - Tarkistettu kaavaehdotus](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/05) arvoon [06 - Hyväksytty kaava](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/06) vaatii, että johonkin ko. kaavan aiemmista [05 - Tarkistettu kaavaehdotus](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/05)-tilan versiosta liittyy käsittelytapahtuma lajia [07 Korjatun kaavaehdotuksen nähtäville asettaminen](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/07).
 {% include clause_end.html %}
 
 {% include question.html content="Pitäiskö olla käsittelytapahtuman laji ```Kaavan määrääminen voimaan osittain```? Osittaisesta määrämisestä voimaan tulee kuitenkin tehdä päätös, jolle ei nyt ole oikein luontevaa käsittelytapahtuman lajia" %}
@@ -391,9 +422,7 @@ Yllä luetellut käsittelytapahtumat tulee tallentaa samaan aikaan elinkaaritila
 Huomaa, että muutos tilaan [12 Kumottu](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/10) voi liittyvä joko käsittelytapahtuman lajiin [11 Kaavan kumoaminen](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/11) tai kaavan kumoamiseen [kaavamuutokseen tai vaihekaavan](##kaavamuutokset-ja-vaihekaavat) lainvoimaiseksi tulon yhteydessä.
 
 
-## Kaavan tietokohteisiin viittaaminen ja viitteiden ylläpito
-### Kaavan tietokohteiden sisäiset viittaukset
-### Kaavan tietokohteisiin viittaaminen toisista kaavoista ja ulkopuolelta
+
 
 ## Esimerkkejä elinkaaritapahtumista
 
@@ -406,6 +435,8 @@ Huomaa, että muutos tilaan [12 Kumottu](http://uri.suomi.fi/codelist/rytj/Kaava
 ### Käsittely- tai vuorovaikutustapahtuman lisääminen
 
 ### Kaavan hyväksyminen
+
+### Kaavan määrääminen voimaan osittain
 
 ### Kaavan voimaantulosta kuuluttaminen
 
