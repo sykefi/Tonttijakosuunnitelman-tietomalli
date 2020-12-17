@@ -1668,10 +1668,15 @@
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000245_7432_4208_B008_46B3486B8E3E" value="1"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000246_7432_4208_B008_46B3486B8E3E" value="1"/>
 					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_94C525E0_C66A_4e0e_BDF4_0BAB03396882" name="paatosKumottu">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000247_C66A_4e0e_BDF4_0BAB03396882" value="1"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000248_C66A_4e0e_BDF4_0BAB03396882" value="1"/>
+						<type xmi:idref="EAJava_boolean"/>
+					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst56BC0B_76C8_4ae2_8D3B_9FAE0E4B5042" name="kasittelija" association="EAID_2056BC0B_76C8_4ae2_8D3B_9FAE0E4B5042">
 						<type xmi:idref="EAID_B3D292CB_1FA2_43bb_A196_49BEFF88D793"/>
-						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000247__76C8_4ae2_8D3B_9FAE0E4B5042" value="0"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000248__76C8_4ae2_8D3B_9FAE0E4B5042" value="1"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000249__76C8_4ae2_8D3B_9FAE0E4B5042" value="0"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000250__76C8_4ae2_8D3B_9FAE0E4B5042" value="1"/>
 					</ownedAttribute>
 					<generalization xmi:type="uml:Generalization" xmi:id="EAID_56F7D630_D7F0_49b1_B0DD_668A1B47C932" general="EAID_4131AAAE_C5B9_4d2d_8DDA_54969CB1FABB"/>
 				</packagedElement>
@@ -1685,28 +1690,28 @@
 				<packagedElement xmi:type="uml:Class" xmi:id="EAID_B720E434_1797_4bc0_9A6C_BF40DBD1DCB0" name="Lahtotietoaineisto">
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_41BD7307_1E35_4e0c_A09F_F750E7497869" name="aineistoTunnus">
 						<type xmi:idref="EAID_DFC4D1CC_7484_47b3_9D6F_008BE7CD78FD"/>
-						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000249_1E35_4e0c_A09F_F750E7497869" value="0"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000250_1E35_4e0c_A09F_F750E7497869" value="1"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000251_1E35_4e0c_A09F_F750E7497869" value="0"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000252_1E35_4e0c_A09F_F750E7497869" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_BE0632A8_D306_49f0_86C6_EC2DC04AAE2F" name="nimi">
 						<type xmi:idref="EAID_53BD60D4_114A_4a03_BB9F_3C8955DC81ED"/>
-						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000251_D306_49f0_86C6_EC2DC04AAE2F" value="0"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000252_D306_49f0_86C6_EC2DC04AAE2F" value="*"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000253_D306_49f0_86C6_EC2DC04AAE2F" value="0"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000254_D306_49f0_86C6_EC2DC04AAE2F" value="*"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_CF99CA28_90B6_47a7_98A1_3F783750E0ED" name="laji">
 						<type xmi:idref="EAID_B23638F5_4A97_4a47_9815_27D3D310799E"/>
-						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000253_90B6_47a7_98A1_3F783750E0ED" value="1"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000254_90B6_47a7_98A1_3F783750E0ED" value="1"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000255_90B6_47a7_98A1_3F783750E0ED" value="1"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000256_90B6_47a7_98A1_3F783750E0ED" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_BA28A58A_28D8_4a85_912A_B8133240EA6D" name="lisatietolinkki">
 						<type xmi:idref="EAID_9792C112_C336_4a27_B255_AE3446B7A803"/>
-						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000255_28D8_4a85_912A_B8133240EA6D" value="0"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000256_28D8_4a85_912A_B8133240EA6D" value="1"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000257_28D8_4a85_912A_B8133240EA6D" value="0"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000258_28D8_4a85_912A_B8133240EA6D" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_BD148F34_5477_4fc3_8595_ADFBD1AA3991" name="metatietokuvaus">
 						<type xmi:idref="EAID_9792C112_C336_4a27_B255_AE3446B7A803"/>
-						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000257_5477_4fc3_8595_ADFBD1AA3991" value="0"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000258_5477_4fc3_8595_ADFBD1AA3991" value="1"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000259_5477_4fc3_8595_ADFBD1AA3991" value="0"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000260_5477_4fc3_8595_ADFBD1AA3991" value="1"/>
 					</ownedAttribute>
 					<generalization xmi:type="uml:Generalization" xmi:id="EAID_6336D33E_3B34_4790_81CF_40666FA0053D" general="EAID_75FFA532_FF9F_4880_AA35_1DC37E0CF36A"/>
 				</packagedElement>
@@ -1715,26 +1720,31 @@
 				<packagedElement xmi:type="uml:Class" xmi:id="EAID_F9E9F8F4_CF2A_47c4_8A71_46930B8181C2" name="Tapahtumahistoria">
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_480A162F_B2E4_49ce_BA13_A778273BA0EB" name="asianIdentiteettiTunnus">
 						<type xmi:idref="EAID_DFC4D1CC_7484_47b3_9D6F_008BE7CD78FD"/>
-						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000259_B2E4_49ce_BA13_A778273BA0EB" value="1"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000260_B2E4_49ce_BA13_A778273BA0EB" value="1"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000261_B2E4_49ce_BA13_A778273BA0EB" value="1"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000262_B2E4_49ce_BA13_A778273BA0EB" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst1328AA_E455_4a4b_873D_9619EA425B43" name="tapahtuma" association="EAID_531328AA_E455_4a4b_873D_9619EA425B43" aggregation="composite">
 						<type xmi:idref="EAID_4131AAAE_C5B9_4d2d_8DDA_54969CB1FABB"/>
-						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000261__E455_4a4b_873D_9619EA425B43" value="0"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000262__E455_4a4b_873D_9619EA425B43" value="*"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000263__E455_4a4b_873D_9619EA425B43" value="0"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000264__E455_4a4b_873D_9619EA425B43" value="*"/>
 					</ownedAttribute>
 					<generalization xmi:type="uml:Generalization" xmi:id="EAID_D5A02672_295E_40a6_9D9C_D35D128ADEDD" general="EAID_75FFA532_FF9F_4880_AA35_1DC37E0CF36A"/>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_src5690AB_9096_4b31_A4B8_D40A5D14C8FF" name="asia" association="EAID_A45690AB_9096_4b31_A4B8_D40A5D14C8FF">
 						<type xmi:idref="EAID_541DF740_5AE1_4150_9D96_6C55526B3FA0"/>
-						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000263__9096_4b31_A4B8_D40A5D14C8FF" value="1"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000264__9096_4b31_A4B8_D40A5D14C8FF" value="1"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000265__9096_4b31_A4B8_D40A5D14C8FF" value="1"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000266__9096_4b31_A4B8_D40A5D14C8FF" value="1"/>
 					</ownedAttribute>
 				</packagedElement>
 				<packagedElement xmi:type="uml:Class" xmi:id="EAID_43EC363E_FA14_4fcb_9BB2_D15343BC445A" name="Vuorovaikutustapahtuma">
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_6E7C76BB_2A14_4db8_AFBD_855BE5E49C4F" name="laji">
 						<type xmi:idref="EAID_D0E1693F_2554_45d1_9EC3_8B744317F1B8"/>
-						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000265_2A14_4db8_AFBD_855BE5E49C4F" value="1"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000266_2A14_4db8_AFBD_855BE5E49C4F" value="1"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000267_2A14_4db8_AFBD_855BE5E49C4F" value="1"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000268_2A14_4db8_AFBD_855BE5E49C4F" value="1"/>
+					</ownedAttribute>
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_C42058AD_3322_4a7d_829D_9DB06AAE4E4D" name="peruttu">
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000269_3322_4a7d_829D_9DB06AAE4E4D" value="1"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000270_3322_4a7d_829D_9DB06AAE4E4D" value="1"/>
+						<type xmi:idref="EAJava_boolean"/>
 					</ownedAttribute>
 					<generalization xmi:type="uml:Generalization" xmi:id="EAID_6D234D2E_E345_4786_8157_9286F68AF6EE" general="EAID_4131AAAE_C5B9_4d2d_8DDA_54969CB1FABB"/>
 				</packagedElement>
@@ -4717,6 +4727,21 @@
 						<tags/>
 						<xrefs/>
 					</attribute>
+					<attribute xmi:idref="EAID_94C525E0_C66A_4e0e_BDF4_0BAB03396882" name="paatosKumottu" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="113705" ea_guid="{94C525E0-C66A-4e0e-BDF4-0BAB03396882}"/>
+						<properties type="boolean" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0"/>
+						<containment containment="Not Specified" position="1"/>
+						<stereotype/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags/>
+						<xrefs/>
+					</attribute>
 				</attributes>
 				<links>
 					<Association xmi:id="EAID_2056BC0B_76C8_4ae2_8D3B_9FAE0E4B5042" start="EAID_71B1BC34_F46F_4e18_8E02_66A18E0CC584" end="EAID_B3D292CB_1FA2_43bb_A196_49BEFF88D793"/>
@@ -4906,6 +4931,21 @@
 						<properties type="AbstraktiVuorovaikutustapahtumanLaji" collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="0"/>
+						<stereotype/>
+						<bounds lower="1" upper="1"/>
+						<options/>
+						<style/>
+						<styleex value="volatile=0;"/>
+						<tags/>
+						<xrefs/>
+					</attribute>
+					<attribute xmi:idref="EAID_C42058AD_3322_4a7d_829D_9DB06AAE4E4D" name="peruttu" scope="Public">
+						<initial/>
+						<documentation/>
+						<model ea_localid="113704" ea_guid="{C42058AD-3322-4a7d-829D-9DB06AAE4E4D}"/>
+						<properties type="boolean" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<coords ordered="0"/>
+						<containment containment="Not Specified" position="1"/>
 						<stereotype/>
 						<bounds lower="1" upper="1"/>
 						<options/>
