@@ -183,7 +183,7 @@ Tietovaraston tallennusrajapinta palauttaa tallennetun kaavan tiedot tuottavalle
 
 ## Muutokset ja tietojen versionti
 {% include clause_start.html type="req" id="elinkaari/vaat-pysyva-sisalto" %}
-Kukin kaavan tai sen osien tallennusoperaatio yhteiseen tietovarastoon muodostaa aina uuden version tallennettavista tietokohteista. Tallennetun tietokohteen version sisältö ei voi muttua tallennuksen jälkeen, poislukien sen voimassaolon päättymiseen, edellisen ja seuraavan version linkittämiseen ja elinkaaritilaan liittyvät attribuutit.
+Kukin kaavan tai sen osien tallennusoperaatio yhteiseen tietovarastoon muodostaa uuden version tallennettavista tietokohteista, mikäli yksittäinen tietokohde on miltään osin muuttunut verrattuna sen edelliseen versioon. Myös muutokset muissa Kaavatietomallin tietokohteissa, joihin tietokohteesta on viittaus, lasketaan tietokohteen muutoksiksi. Tallennetun tietokohteen version sisältö ei voi muuttua tallennuksen jälkeen, poislukien sen voimassaolon päättymiseen, seuraavaan versioon linkittämiseen ja elinkaaritilaan liittyvät attribuutit, joita kaavatietovarasto itse päivittää tietyissä tilanteissa.
 {% include clause_end.html %}
 
 Näin taataan ulkoisten viittausten eheys, sillä kaavan kaikkien kohteiden paikalliset ja viittaustunnukset viittaavat aina vain tiettyn, sisällöllisesti muuttumattomaan versioon viittatusta kohteesta. Suositeltavaa on, että kaikki tallennusversiot myös pidetään pysyvästi tallessa, jotta mahdolliset keskenäiset ja ulkopuolelta tulevat linkit eivät mene rikki muutosten yhteydessä.
@@ -199,13 +199,23 @@ Linkit kaava-objektista alaspäin mahdollistavat myös kaavaan liittyvien kaavak
 
 [Kaava](dokumentaatio/#kaava)-luokan assosiaatiot [Kaavaselostus](dokumentaatio/#kaavaselostus)- ja [OsallistumisJaArviointisuunnitelma](dokumentaatio/#osallistumisjaarviointisuunnitelma)-luokkiin ovat yksisuuntaisia. Tallennettu versio kaavaselostuksesta tai osallistumis- ja arviointisuunnitelmasta voi pysyä samana kaavan uuden version tallennuksen yhteydessä, jolloin niistä ei ole tarpeen luoda uusia versiota. Sama kaavaselostuksen tai osallistumis- ja arviointisuunnitelman versio voi siis liittyä useampaan saman kaavan tallennusversioon.
 
-Kaavaprosessin historian kuvaavat [AbstraktiTapahtuma](dokumentaatio/#abstraktitapahtuma)-luokasta perityt käsittely- ja vuorovaikutustapahtumat on puolestaan linkitetty yksisuuntaisesti [AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokkaan (Kaava-luokan yläluokka) päin, jolloin tapahtumiin tehtävät muutokset eivät vaadi uuden version luomista Kaava-luokan tietokohteesta, sen kaavakohteista, kaavamääräyksistä tai -suosituksista.
+
+
+**Esimerkki 1**:
+
+Tallennuspalveluun viedään Kaava, jonka yhteen kaavakohteeseen liittyvää kaavamääräystä [Lisärakennusoikeus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0309) on muutettu siten, että sen numeerinen arvo muuttuu arvosta ```1000 k-m2``` arvoon ```1500 k-m2```. Kaikki kaavan muut tietoteet ovat identtisiä kaavan edellisen tallennusversion kanssa.
+
+* Muuttuvasta kaavamääräys-tietokohteesta luodaan uusi versio.
+* Kaavakohteesta, johon muuttunut kaavamääräys kohdistuu, luodaan uusi versio, jossa muuttuu vain linkki, viitaten nyt kaavamääräyksen uuteen versioon.
+* Kaikista muista kaavan tietokohteista, joista on viittaus kyseiseen kaavakohteeseen, luodaan uudet versiot, joissa muuttuvat vain linkit, viitaten nyt kaavakohteen uuteen versioon, mukaan lukien kaava-objekti ja ko. kaavakohteen kaikki muut kaavamääräykset.
+* Kaikista 
+
 
 ### Yksittäisen kaavan elinkaaren vaiheisiin liittyvät muutokset
 Kaavatietomalli mahdollistaa tunnistettavien kaavan tietokohteiden eri kehitysversioiden erottamisen toisistaan. Kullakin tietomallin kohteella on sekä sen tosimaailman identiteettiin liittyvä ns. identiteettitunnus että yksittäisen tallennusversion tunnus (paikallinen tunnus). Tallennettaessa uutta versiota samasta kaavasta tai sen sisältämästä tietokohteesta, sen identiteettitunnus pysyy ennallaan, mutta sen paikallinen tunnus muuttuu. Tallennettaessa Kaava-luokan objektia se katsotaan saman tietokohteen uudeksi versioksi, mikäli sen kaavatunnus on sama. Muiden kaavatietomallin versioitavien objektien suhteen samuuden määritteleminen on tietoja tuottavien järjestelmien vastuulla: mikäli objektilla on tallennettavaksi lähetettäessä saman ```identititeettiTunnus```-attribuutin arvo kuin aiemmin tallennetulla, samantyyppisellä tietokohteella, katsotaan uusi objekti on saman tietokohteen uudeksi versioksi.
 
 {% include clause_start.html type="req" id="elinkaari/vaat-version-korvaus" %}
-Kun kaavan tietokohteesta tallennetaan uusi versio, tulee tietokohteen edellisen version ```korvattuObjektilla```-assosiaatio asettaa viittaamaan tietokohteen uuteen versioon. Uuden tietokohteen version ```korvaaObjektin```-assosiaatio puolestaan asetetaan viittaamaan tietokohteen edelliseen, korvattavaan versioon. Molempien kohteiden ```tallennusAika```-attribuutin arvoksi asetetaan ajanhetki, jolloin tallennus ja muutos kaavatietovarastoon on tehty.
+Kun kaavan tietokohteesta tallennetaan uusi muuttunut versio, tulee tietokohteen edellisen version ```korvattuObjektilla```-assosiaatio asettaa viittaamaan tietokohteen uuteen versioon. Uuden tietokohteen version ```korvaaObjektin```-assosiaatio puolestaan asetetaan viittaamaan tietokohteen edelliseen, korvattavaan versioon. Molempien kohteiden ```tallennusAika```-attribuutin arvoksi asetetaan ajanhetki, jolloin tallennus ja muutos kaavatietovarastoon on tehty.
 {% include clause_end.html %}
 
 Yksittäisen tietokohteen yksityiskohtainen muutoshistoria kaavatietovarastossa saadaan seuraavalla sen ```korvattuObjektilla```- ja ```korvaaObjektin```-assosiaatioita. Ainoa muutos, joka ei näy tietokohteen omana versionaan, on kohteen kumoaminen, jolloin sen viimeisimmän version tietoja päivitetään sen elinkaaritilan, voimassaolon ja tallennusajan osalta.
@@ -213,6 +223,21 @@ Yksittäisen tietokohteen yksityiskohtainen muutoshistoria kaavatietovarastossa 
 {% include question.html content="Pitääkö [AbstraktiVersioituObjekti](dokumentaatio/#abstraktiversioituobjekti)-luokalle lisätä attribuutti ```ensimmainenTallennusAika```, joka kertoo ko. version alkuperäisen tallennusajan? Kumoamisen yhteydessä ```tallennusAika```-attribuutin arvoa muutetaan, jolloin hukkuu tieto ko. version alkuperäisestä tallennusajankohdasta." %}
 
 Attribuutin ```viimeisinMuutos``` arvo kuvaa ajanhetkeä, jolloin ko. tietokohteeseen on tehty sisällöllinen muutos tiedontuottajan tietojärjestelmässä. Tiedontuottajan järjestelmän osalta ei vaadita tiukkaa versiontipolitiikkaa, eli ```paikallinenTunnus```-attribuutin päivittämistä jokaisen tietokohteen muutoksen johdosta. ```viimeisinMuutos```-attribuutin päivittämien riittää kuvaamaan tiedon todellisen muuttumisajankohdan.
+
+### Kaavan käsittely- ja vuorovaikutustapahtumien elinkaari
+Kaavaprosessin historian yhdessä kuvaavat [AbstraktiTapahtuma](dokumentaatio/#abstraktitapahtuma)-luokasta perityt [Kasittelytapahtuma](dokumentaatio/#kasittelytapahtuma)- ja [Vuorovaikutustapahtuma](dokumentaatio/#vuorovaikutustapahtuma)-luokan tietokohteet linkitetään yksisuuntaisesti [AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokkaan (Kaava-luokan yläluokka) päin. Tapahtumatietokohteiden uusina versiona tallennettavat muutokset eivät koskaan johda uuden version luomista Kaava-luokan tietokohteesta, sen kaavakohteista, kaavamääräyksistä tai -suosituksista. Syy tähän on se, että käsittely- ja vuorovaikutustapahtumien on tärkeää kohdistua nimenomaan tiettyyn, pysyvään versioon kaavasta.
+
+{% include clause_start.html type="req" id="elinkaari/vaat-tapahtumien-muutokset" %}
+[AbstraktiTapahtuma](dokumentaatio/#abstraktitapahtuma)-luokan tietokohteet voivat elinkaarensa aikana viitata vain yhteen [AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokan versioon. Siten niiden ```liittyvaAsia```-assosiaatio ei voi muuttua saman tietokohteen versiosta toiseen.
+{% include clause_end.html %}
+
+{% include note.html content="Kun kaavaan liittyen kaavatietovarastoon viedään Vuorovaikutustapahtuma-tietokohde, esimerkiksi kaavaehdotuksen nähtävilläolo, se voidaan tallentaa vain joko samaan aikaan tai myöhemmin kuin se Kaava-luokan tietokohteen versio, johon tapahtuma liittyy. Mikäli kaavaehdotuksesta tallennetaan vielä korjattu versio, joka halutaankin asettaa nähtäville aiemman version sijasta, tulee sille tehdä uusi vuorovaikutustapahtuma, ja asettaa vanhan vuorovaikutustapahtuman attribuutti ```peruttu``` arvoon ```true```." %}
+
+{% include note.html content="Kun kaavaan liittyen kaavatietovarastoon viedään Käsittelytapahtuma-tietokohde, esimerkiksi kaavaehdotuksen nähtäville asettaminen, se voidaan tallentaa vain joko samaan aikaan tai myöhemmin kuin se Kaava-luokan tietokohteen versio, johon tapahtuma liittyy. Mikäli päätös nähtäville asettamisesta kumotaan syystä tai toisesta, tai kaavaehdotusta muokataan, ja se tallennetaan uutena versiona vielä ennen nähtäville asettamista, tulee sille tehdä uusi käsittelytapahtuma, ja asettaa vanhan käsittelytapahtuman attribuutti ```peruttu``` arvoon ```true```." %}
+
+{% include clause_start.html type="req" id="elinkaari/vaat-tapahtumien-poistaminen" %}
+Kerran tallennettuja [AbstraktiTapahtuma](dokumentaatio/#abstraktitapahtuma)-luokan tietokohteita ei voi poistaa kaavatietovarastosta. Mikäli suunniteltu vuorovaikutustapahtuma ei syystä tai toisesta toteudu tai käsittelytapahtumaan liittyvä päätös kumotaan, tulee sen attribuutti ```peruttu``` asettaa arvoon ```true```.
+{% include clause_end.html %}
 
 ### Kaavan ja sen tietokohteiden voimaantulo
 Kaavan ```voimassaoloAika``` -attribuutin alkuaika on ajanhetki, jolloin kaava sen valitusajan umpeuduttua ja mahdollisten valitusten ja oikaisukehotusten käsittelyn jälkeen kuulutetaan voimaantulleeksi.
@@ -234,7 +259,6 @@ Kaava ja sen kaavamääräykset ja -suositukset ovat voimassa niiden ```voimassa
 
 
 ### Kaavan määrääminen voimaan osittain
-
 [Maankäyttö- ja rakennuslain pykälässä 201](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132#L26P201) (säädös 132/1999) säädetään mahdollisuudesta määrätä kaava osittain voimaan:
 > Kunnanhallitus voi valitusajan kuluttua määrätä yleis- ja asemakaavan tulemaan voimaan ennen kuin se on saanut lainvoiman kaava-alueen siltä osalta, johon valitusten tai oikaisukehotuksen ei voida katsoa kohdistuvan.
 
@@ -343,11 +367,28 @@ Kaavan ```elinkaaritila```-attribuutin arvo voi kahden sen peräkkäisen tallenn
 * Tilasta ```14``` ei sallittuja siirtymiä.
 {% include clause_end.html %}
 
+{% include question.html content="Onko kaava heti lainvoimainen (ja siis sen voimassaoloaika alkanut), kun se on päätetty määrätä osittain voimaan? Vai seuraako ositain lainvoimaiseksi määräämispäätöksestä vielä valitusaika, jonka jälkeen kaava tulee erikseen kuuluttaa lainvoimaiseksi? Jos erillinen lainvoimaiseksi kuuluttaminen on tarpeen, tulee sallia myös tilamuutos ```10 -> 11```" %}
+
 ### Kaavamääräysten ja -suositusten elinkaaren tila
 Tavallisesti kaavan sisältämien kaavamääräysten ja -suositusten elinkaaritilan arvo on sama kuin koko kaavalla, mutta ne voivat erota toisistaan kahdessa tapauksessa:
 * Kaavan osittaisen voimaan määräämisen tapauksessa osa kaavamääräyksistä ja -suosituksista voidaan kumota (ks. [Kaavan osittainen määrääminen voimaan](#elinkaari-vaat-osittainen-voimaantulo))
 * Kaavamuutoksen tai vaihekaavan voimaantulo aiheuttaa siinä kumottaviksi yksilöityjen kaavamääräysten kumoamisen (ks. [Kaavamuutokset ja vaihekaavat](#elinkaari-vaat-kaavamuutoksen-voimaantulo))
 
+### Kaavan elinkaaritilan muutoksiin liittyvät käsittelytapahtumat
+Kun kaavasta viedään kaavatietovarastoon uusi versio, jossa sen elinkaaritila on muuttunut, liittyy kyseisen kaavan version syntymiseen tyypillisesti jokin käsittelytapahtuma.
+
+{% include clause_start.html type="req" id="elinkaari/vaat-elinkaaritilan-muutostapahtumat" %}
+[Kaavan](dokumentaatio/#kaava) ```elinkaaritila```-attribuutin arvo muuttumiseen tiettyyn arvoon tulee aina liittyä [Kasittelytapahtuma](dokumentaatio/#kasittelytapahtuma), jonka ```laji```-attribuutin arvo tulee olla elinkaarimuutosta vastaava seuraavasti:
+* Muutos tilaan [02 Virelletullut](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/02): Liityttävä käsittelytapahtuman laji [04 Kaava virelletulo](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/04)
+* Muutos tilaan [06 Hyväksytty kaava](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/06): Liityttävä joko käsittelytapahtuman laji [09 Kaavan hyväksyminen](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/09) tai [10 Kaavan hyväksyminen oikaisukehotuksen johdosta](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/10).
+* Muutos tilaan [11 Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/10): Liityttävä käsittelytapahtuman laji [13 Kaavan voimaantulo](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/13).
+
+Yllä luetellut käsittelytapahtumat tulee tallentaa samaan aikaan elinkaaritilaltaan muuttuneen kaavan kanssa.
+{% include clause_end.html %}
+
+{% include question.html content="Pitäiskö olla käsittelytapahtuman laji ```Kaavan määrääminen voimaan osittain```? Osittaisesta määrämisestä voimaan tulee kuitenkin tehdä päätös, jolle ei nyt ole oikein luontevaa käsittelytapahtuman lajia" %}
+
+Huomaa, että muutos tilaan [12 Kumottu](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/10) voi liittyvä joko käsittelytapahtuman lajiin [11 Kaavan kumoaminen](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/11) tai kaavan kumoamiseen [kaavamuutokseen tai vaihekaavan](##kaavamuutokset-ja-vaihekaavat) lainvoimaiseksi tulon yhteydessä.
 
 
 ## Kaavan tietokohteisiin viittaaminen ja viitteiden ylläpito
