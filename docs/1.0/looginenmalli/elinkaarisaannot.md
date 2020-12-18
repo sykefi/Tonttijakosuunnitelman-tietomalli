@@ -353,17 +353,18 @@ Kaavan ja sen sisältämien kaavamääräysten elinkaareen liittyvää tilaa hal
 * [06 - Hyväksytty kaava](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/06)
 * [07 - Oikaisukehotuksen alainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/07)
 * [08 - Valituksen alainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/08)
-* [10 - Osittain voimassa](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/10)
-* [11 - Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11)
-* [12 - Kumottu](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/12)
-* [13 - Kumoutunut](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/13)
-* [14 - Rauennut](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/14)
+* [09 - Osittain voimassa](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/09)
+* [10 - Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/10)
+* [11 - Kumottu](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/11)
+* [12 - Kumoutunut](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/12)
+* [13 - Rauennut](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/13)
+* [14 - Hylätty](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/14)
 
-{% include question.html content="Mitkä ovat ```Kumoutunut```-, ```Kumottu```- ja ```Rauennut```-tilojen tarkat määritelmät ja erot?" %}
+{% include question.html content="Mitkä ovat ```Kumoutunut```-, ```Kumottu```-, ```Rauennut```- ja ```Hylätty``` -tilojen tarkat määritelmät ja erot?" %}
 
 {% include question.html content="Pitäisikö kaavan voida olla yhtäaikaa sekä ```Oikaisukehotuksen alainen``` että ```Valituksen alainen```?" %}
 
-Kaavojen, joiden elinkaaritila on 01 - 08, kaavan laadinta- ja päätösprosessi on kesken, eli niiden kaavamääräykset eivät (vielä) ole lainvoimaisia. Kaavat, jotka ovat elinkaaritilassa 10 tai 11 sisältävät nykyajanhetkellä rajaamallaan alueella voimassa olevia kaavamääräyksiä. Koodit 12-14 kuvaavat kaavan tiloja, joissa olevan kaavan elinkaari on päättynyt.
+Kaavojen, joiden elinkaaritila on 01 - 08, kaavan laadinta- ja päätösprosessi on kesken, eli niiden kaavamääräykset eivät (vielä) ole lainvoimaisia. Kaavat, jotka ovat elinkaaritilassa 09 tai 10 sisältävät nykyajanhetkellä rajaamallaan alueella voimassa olevia kaavamääräyksiä. Koodit 11-14 kuvaavat kaavan tiloja, joissa olevan kaavan elinkaari on päättynyt.
 
 ### Sallitut kaavan elinkaaren tilan muutokset
 Kaavan elinkaaritila voi sen laadinta-, päätös-, valitus-, voimassaolo- ja kumoutumisvaiheidensa esiintyä ja muuttua vain tässä luvussa kuvatuilla tavoilla.
@@ -371,27 +372,28 @@ Kaavan elinkaaritila voi sen laadinta-, päätös-, valitus-, voimassaolo- ja ku
 {% include clause_start.html type="req" id="elinkaari/vaat-ensimmainen-elinkaaritila" %}
 Kaavan elinkaaritila tallennettaessa kaava ensimmäistä kertaa kaavatietovarastoon voi olla jokin seuraavista riippuen Kaavan ```digitaalinenAlkupera```-attribuutin arvosta:
    * [01 - Tietomallin mukaan laadittu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/01)): tilat 01, 02, 03, 04, 05 tai 06.
-   * [02 - Kokonaan digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/02), [03 - Osittain digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/03) tai [04 - Kaavan rajaus digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/04): tilat 10, 11, 12, 13 tai 14.
+   * [02 - Kokonaan digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/02), [03 - Osittain digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/03) tai [04 - Kaavan rajaus digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/04): tilat 09, 10, 11, 12 tai 13.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-elinkaaritila-siirtymat" %}
 Kaavan ```elinkaaritila```-attribuutin arvo voi kahden sen peräkkäisen tallennusversion välillä vain seuraavilla tavoilla:
 * Tilasta ```01``` tilaan ```02```, ```03```, ```04```, ```05```, ```06``` tai ```14```.
-* Tilasta ```02``` tilaan ```03```, ```04```, ```05```, ```06```, ```13``` tai ```14```.
-* Tilasta ```03``` tilaan ```04```, ```05```, ```06```, ```13``` tai ```14```.
-* Tilasta ```04``` tilaan ```05```, ```06```, ```13``` tai ```14```.
-* Tilasta ```05``` tilaan ```06```, ```13``` tai ```14```.
-* Tilasta ```06``` tilaan ```07```, ```08```, ```10```, ```11```, ```12```, ```13``` tai ```14```.
-* Tilasta ```07``` tilaan ```08```, ```10```, ```11```, ```12```, ```13``` tai ```14```.
-* Tilasta ```08``` tilaan ```07```, ```10```, ```11```, ```12```, ```13``` tai ```14```.
-* Tilasta ```10``` tilaan ```12``` tai ```13```.
-* Tilasta ```11``` tilaan ```12``` tai ```13```.
+* Tilasta ```02``` tilaan ```03```, ```04```, ```05```, ```06``` tai ```13```.
+* Tilasta ```03``` tilaan ```04```, ```05```, ```06``` tai ```13```.
+* Tilasta ```04``` tilaan ```05```, ```06``` tai ```13```.
+* Tilasta ```05``` tilaan ```06``` tai ```13```.
+* Tilasta ```06``` tilaan ```07```, ```08```, ```09```, ```10``` tai ```12```.
+* Tilasta ```07``` tilaan ```08```, ```09```, ```10``` tai ```12```.
+* Tilasta ```08``` tilaan ```07```, ```09```, ```10``` tai ```12```.
+* Tilasta ```09``` tilaan ```11```.
+* Tilasta ```10``` tilaan ```11```.
+* Tilasta ```11``` ei sallittuja siirtymiä.
 * Tilasta ```12``` ei sallittuja siirtymiä.
 * Tilasta ```13``` ei sallittuja siirtymiä.
 * Tilasta ```14``` ei sallittuja siirtymiä.
 {% include clause_end.html %}
 
-{% include question.html content="Onko kaava heti lainvoimainen (ja siis sen voimassaoloaika alkanut), kun se on päätetty määrätä osittain voimaan? Vai seuraako ositain lainvoimaiseksi määräämispäätöksestä vielä valitusaika, jonka jälkeen kaava tulee erikseen kuuluttaa lainvoimaiseksi? Jos erillinen lainvoimaiseksi kuuluttaminen on tarpeen, tulee sallia myös tilamuutos ```10 -> 11```" %}
+{% include question.html content="Onko kaava heti lainvoimainen (ja siis sen voimassaoloaika alkanut), kun se on päätetty määrätä osittain voimaan? Vai seuraako ositain lainvoimaiseksi määräämispäätöksestä vielä valitusaika, jonka jälkeen kaava tulee erikseen kuuluttaa lainvoimaiseksi? Jos erillinen lainvoimaiseksi kuuluttaminen on tarpeen, tulee sallia myös tilamuutos ```09 -> 10```" %}
 
 ### Kaavamääräysten ja -suositusten elinkaaren tila
 Tavallisesti kaavan sisältämien kaavamääräysten ja -suositusten elinkaaritilan arvo on sama kuin koko kaavalla, mutta ne voivat erota toisistaan kahdessa tapauksessa:
@@ -405,7 +407,7 @@ Kun kaavasta viedään kaavatietovarastoon uusi versio, jossa sen elinkaaritila 
 [Kaavan](dokumentaatio/#kaava) ```elinkaaritila```-attribuutin arvon seuraaviin muutoksiin tulee aina liittyä [Kasittelytapahtuma](dokumentaatio/#kasittelytapahtuma), jonka ```laji```-attribuutin arvo tulee olla elinkaarimuutosta vastaava:
 * Muutos tilaan [02 Virelletullut](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/02): Liityttävä käsittelytapahtuman laji [04 Kaava virelletulo](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/04)
 * Muutos tilaan [06 Hyväksytty kaava](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/06): Liityttävä joko käsittelytapahtuman laji [09 Kaavan hyväksyminen](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/09) tai [10 Kaavan hyväksyminen oikaisukehotuksen johdosta](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/10).
-* Muutos tilaan [11 Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/10): Liityttävä käsittelytapahtuman laji [13 Kaavan voimaantulo](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/13).
+* Muutos tilaan [10 Lainvoimainen](http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/10): Liityttävä käsittelytapahtuman laji [13 Kaavan voimaantulo](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/13).
 Yllä luetellut käsittelytapahtumat tulee tallentaa samaan aikaan elinkaaritilaltaan muuttuneen kaavan kanssa.
 {% include clause_end.html %}
 
