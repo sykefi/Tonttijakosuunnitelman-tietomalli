@@ -4,7 +4,7 @@ title: "Kaavatietomalli - Kaava-JSON"
 description: ""
 page: "kaava-json"
 modelversion: "1.0"
-status: "Keskeneräinen"
+status: "Ehdotus"
 ---
 # Kaava-JSON
 {:.no_toc}
@@ -968,7 +968,7 @@ liittyvaAsiakirja | Dokumentti [0..*] | properties.relatedDocuments | array of o
                 }
             ],
             "lifecycleStatus": {
-                "code": "http://uri.suomi.fi/codelist/rytj/KaavanElinkaariTila/code/06",
+                "code": "http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/06",
                 "title": {
                     "fin": "Hyväksytty kaava"
                 }
@@ -1023,7 +1023,7 @@ Toteuttaa loogisen tietomallin luokan [Lisatieto](../../looginenmalli/dokumentaa
 
 Nimi          | UML tyyppi              | JSON property name    | JSON type   | huomioita
 --------------|-------------------------|-----------------------|-------------|--------------
-laji          | AbstraktiLisatiedonLaji | type                  | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji>
+laji          | AbstraktiLisatiedonLaji | type                  | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_AK>, <http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_YK>
 nimi          | LanguageString [0..*]   | name       | object (LanguageString)
 arvo          | AbstraktiArvo [0..*]    | values      | array of object (TimeInstantValue, TimePeriodValue, GeometryValue, CodeValue, NumericValue, NumericRange, ElevationPosition, ElevationRange, TextValue tai IdentifierValue)
 
@@ -1144,8 +1144,8 @@ otsikko       | LanguageString [0..*]   | title                 | object (Langua
 ```json
     {
         "valueType": "CodeValue",
-        "value": "http://uri.suomi.fi/codelist/rytj/Sitovuuslaji/code/01",
-        "codeList": "http://uri.suomi.fi/codelist/rytj/Sitovuuslaji",
+        "value": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
+        "codeList": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji",
         "title": {
             "fin": "Sitova"
         }
