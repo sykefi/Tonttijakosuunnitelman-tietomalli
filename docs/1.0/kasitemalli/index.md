@@ -4,7 +4,7 @@ title: "Kaavatietomalli - käsitemalli ja määritelmät"
 description: ""
 page: "kasitemalli"
 modelversion: "1.0"
-status: "Keskeneräinen"
+status: "Ehdotus"
 ---
 # Käsitteet ja määritelmät
 {:.no_toc}
