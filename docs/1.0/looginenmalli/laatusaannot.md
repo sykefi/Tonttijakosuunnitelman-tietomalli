@@ -78,11 +78,11 @@ profile (with Corrigendum) v2.0](http://portal.opengeospatial.org/files/?artifac
 
 {% include note.html content="Kaavatietomalli ei vaadi GML-kielen käyttämistä geometrioiden kuvaamisessa. Kaavatietomallin mukaiset fyysiset tietomallit voivat rajoittaa mahdollisia geometriatyyppejä ja niiden ominaisuuksia GML simple features -profiilin tukemaa joukkoa pienemmäksi." %}
 
+#### Sallitut koordinaatistot ja koordinaattijärjestys
+
 #### Geometrinen ja topologinen eheys
 
 #### Kohteiden geometrioiden päällekkäisyys
-
-#### Sallitut koordinaatistot ja koordinaattijärjestys
 
 ### Päivämäärät ja kelloanajat
 
