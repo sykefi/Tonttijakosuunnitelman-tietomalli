@@ -68,6 +68,8 @@ Testausta varten toteutettiin tiedonhallintajärjestelmä. Järjestelmä asennet
 
 Tietokantana oli PostGIS. Tallennuspalvelu ja rajapintapalvelu toteutettiin NodeJS:llä.
 
+Huom! Tiedonhallintajärjestelmä on tehty testauksen aikaisella versiolla tietomallia. Tietomallia kehitettiin eteenpäin testaustulosten ja muun palautteen perusteella. Siksi tässä dokumentissa sekä järjestelmässä (tietokannan sisältö, rajapinnan palauttama aineisto ja käyttöliittymä) oleva aineisto ei ole ajan tasalla uusimman tietomallin määrityksen kanssa.
+
 
 ### Tietokanta
 
