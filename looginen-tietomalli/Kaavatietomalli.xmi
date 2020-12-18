@@ -1527,7 +1527,7 @@
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000202_4143_44ac_B564_1B041EEB4E52" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_526317FD_27A6_46ba_ACA1_C9B471B95D16" name="sijainti">
-						<type xmi:idref="EAID_3CC5A3E8_2ECA_4e42_B09C_935BD5D3B64A"/>
+						<type xmi:idref="EAID_2E900284_8E24_449b_920A_CA436229BFAD"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000203_27A6_46ba_ACA1_C9B471B95D16" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000204_27A6_46ba_ACA1_C9B471B95D16" value="1"/>
 					</ownedAttribute>
@@ -4411,7 +4411,7 @@
 						<initial/>
 						<documentation/>
 						<model ea_localid="113692" ea_guid="{526317FD-27A6-46ba-ACA1-C9B471B95D16}"/>
-						<properties type="GM_Point" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="Point" collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="2"/>
 						<stereotype/>
@@ -9792,7 +9792,6 @@
 		<EAStub xmi:id="EAID_2E900284_8E24_449b_920A_CA436229BFAD" name="Point" UMLType="Interface"/>
 		<EAStub xmi:id="EAID_9792C112_C336_4a27_B255_AE3446B7A803" name="URL" UMLType="Class"/>
 		<EAStub xmi:id="EAID_313E57F2_5D3C_424a_B7B2_0F4617104EB3" name="TM_Object" UMLType="Class"/>
-		<EAStub xmi:id="EAID_3CC5A3E8_2ECA_4e42_B09C_935BD5D3B64A" name="GM_Point" UMLType="Class"/>
 	</xmi:Extension>
 	<GML:DataType base_Class="EAID_AC67A092_A817_4b0e_A74D_5FFBF04F9D3B" noPropertyType="false" isCollection="false"/>
 	<GML:FeatureType base_Class="EAID_CCDEA216_16F7_47c8_9BFD_D0AFF7E8788F" noPropertyType="false" isCollection="false" byValuePropertyType="false"/>
