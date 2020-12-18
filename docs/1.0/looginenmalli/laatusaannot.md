@@ -169,7 +169,7 @@ Kaavatietovarastossa ei tule olla kahta [Kaava](dokumentaatio/#kaava)-luokan obj
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-kaava-voimassaolo-alku" %}
-[Kaava](dokumentaatio/#kaava)-luokan objektilla, jonka [elinkaatila](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaaritila) on osittain voimassa, lainvoimainen, tai niitä myöhempi (koodi 09, 10, 11 tai 12) tulee olla ei-tyhjä ```voimassaAika```-attribuutin alkuajanhetken arvo.
+[Kaava](dokumentaatio/#kaava)-luokan objektilla, jonka [elinkaatila](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaaritila) on osittain voimassa, voimassa, tai niitä myöhempi (koodi 09, 10, 11 tai 12) tulee olla ei-tyhjä ```voimassaAika```-attribuutin alkuajanhetken arvo.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-kaava-voimassaolo-loppu" %}
