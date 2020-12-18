@@ -4,7 +4,7 @@ title: "Kaavatietomalli - looginen tietomalli - laatusäännöt"
 description: ""
 page: "laatusaannot"
 modelversion: "1.0"
-status: "Keskeneräinen"
+status: "Ehdotus"
 ---
 # Laatusäännöt
 {:.no_toc}
