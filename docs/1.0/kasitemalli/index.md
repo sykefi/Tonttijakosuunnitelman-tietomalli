@@ -27,7 +27,7 @@ Viittaukset toisiin käsitteisiin:
 * [Osallistumis- ja arviointisuunnitelma](#osallistumis--ja-arviointisuunnitelma) [0..1]: kaavan osallistumis- ja arviointisuunnitelma
 * [Kaavan liite](#kaavan-liite) [0..*]: muu kaavan liite kuin selostus tai osallistumis- ja arviointisuunnitelma
 * [Kaavan kumoamistieto](#kaavan-kumoamistieto) [0..1]: minkä kaavan tai sen osat kaava voimaantullessaan kumoaa
-* [Kaavamääräyskohde](#kaavamääräyskohde) [0..*] (kompositio): kaavan liittyä kaavamääräyksiä tai -suosituksia kohdistava paikkatietokohde
+* [Kaavakohde](#kaavakohde) [0..*] (kompositio): kaavan liittyä kaavamääräyksiä tai -suosituksia kohdistava paikkatietokohde
 * [Kaavamääräys](#kaavamääräys) [0..*] (kompositio): yleismääräys, joka koskee koko kaavan aluetta
 * [Kaavasuositus](#kaavasuositus) [0..*] (kompositio): yleissuositus, joka koskee koko kaavan aluetta
 
@@ -59,30 +59,30 @@ Viittaukset toisiin käsitteisiin:
 * [Kaava](#kaava) [1]: kaavan versio, johon tapahtuma liittyy
 
 ### Kaavan kumoamistieto
-{% include defintionref.html id="concept-2000" name="kaavan kumoamistieto" def="tieto kaavan hyväksymisen johdosta kokonaisuudessaan kumoutuvasta kaavasta tai kaavan kumottavasta osa-alueesta, yksittäisistä kaavamääräyskohteista tai kaavamääräyksistä." note="kumoamistieto kuvaa miten kaavan voimaantulo vaikuttaa toisten kaavojen ja niiden sisältämien määräysten tai suositusten kumoutumiseen." %}
+{% include defintionref.html id="concept-2000" name="kaavan kumoamistieto" def="tieto kaavan hyväksymisen johdosta kokonaisuudessaan kumoutuvasta kaavasta tai kaavan kumottavasta osa-alueesta, yksittäisistä kaavakohteista tai kaavamääräyksistä." note="kumoamistieto kuvaa miten kaavan voimaantulo vaikuttaa toisten kaavojen ja niiden sisältämien määräysten tai suositusten kumoutumiseen." %}
 
-### Kaavamääräyskohde
-{% include defintionref.html id="concept-1009" name="kaavamääräyskohde" def="kaavaan sisältyvä aluerajaus tai kohde, jonka alueella maankäyttöä tai rakentamista halutaan ohjata" note="Kaavamääräyskohteella on maantieteellinen sijainti ja muoto. Velvoittava ohjausvaikutus kuvataan liittyvien kaavamääräysten ja ei-velvoittava liittyvien kaavasuositusten avulla." %}
+### Kaavakohde
+{% include defintionref.html id="concept-1009" name="kaavakohde" def="kaavaan sisältyvä aluerajaus tai kohde, jonka alueella maankäyttöä tai rakentamista halutaan ohjata" note="Kaavakohteella on maantieteellinen sijainti ja muoto. Velvoittava ohjausvaikutus kuvataan liittyvien kaavamääräysten ja ei-velvoittava liittyvien kaavasuositusten avulla." %}
 
 Viittaukset toisiin käsitteisiin:
 * [Kaava](#kaava) [1]: kaavan versio, johon kohde sisältyy
 
 ### Kaavamääräys
-{% include defintionref.html id="concept-1010" name="kaavamääräys" def="kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." note="Kaavoissa käytettävät kaavamääräysten lajit on yhteisesti sovittu. Määräys voi kohdistua joko yksittäiseen kaavamääräyskohteeseen tai koko kaavaan. Kaavamääräykseen voi sisältyä sen lajiin perustuvaa ohjausvaikutusta tarkentavia arvoja ja lisätietoja." %}
+{% include defintionref.html id="concept-1010" name="kaavamääräys" def="kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." note="Kaavoissa käytettävät kaavamääräysten lajit on yhteisesti sovittu. Määräys voi kohdistua joko yksittäiseen kaavakohteeseen tai koko kaavaan. Kaavamääräykseen voi sisältyä sen lajiin perustuvaa ohjausvaikutusta tarkentavia arvoja ja lisätietoja." %}
 
 Viittaukset toisiin käsitteisiin:
 * [Kaava](#kaava) [1]: kaavan versio, johon määräys sisältyy
 * [Arvo](#arvo) [0..*]: tarkentava arvo
 * [Lisätieto](#lisätieto) [0..*]: tarkentava tai rajaava lisätieto
-* [Kaavamääräyskohde](#kaavamääräyskohde) [0..*]: kaavamääräyskohteiden versio, johon määräyksen vaikutus kohdistuu. Jos ei ole, on kyseessä yleismääräys
+* [Kaavakohde](#kaavakohde) [0..*]: kaavakohteiden versio, johon määräyksen vaikutus kohdistuu. Jos ei ole, on kyseessä yleismääräys
 
 ### Kaavasuositus
-{% include defintionref.html id="concept-3002" name="kaavasuositus" def="kaavaan sisältyvä ei-velvoittava ohje, joka ilmentää esimerkiksi toteutuksen tapaa ja tavoitetta." note="Suositus voi kohdistua joko yksittäiseen kaavamääräyskohteeseen tai koko kaavaan. Kaavasuositukseen voi sisältyä sen ohjausvaikutusta tarkentavia arvoja." %}
+{% include defintionref.html id="concept-3002" name="kaavasuositus" def="kaavaan sisältyvä ei-velvoittava ohje, joka ilmentää esimerkiksi toteutuksen tapaa ja tavoitetta." note="Suositus voi kohdistua joko yksittäiseen kaavakohteeseen tai koko kaavaan. Kaavasuositukseen voi sisältyä sen ohjausvaikutusta tarkentavia arvoja." %}
 
 Viittaukset toisiin käsitteisiin:
 * [Kaava](#kaava) [1]: kaavan versio, johon suositus sisältyy
 * [Arvo](#arvo) [0..*]: tarkentava arvo
-* [Kaavamääräyskohde](#kaavamääräyskohde) [0..*]: kaavamääräyskohteiden versio, johon suosituksen vaikutus kohdistuu. Jos ei ole, on kyseessä yleissuositus
+* [Kaavakohde](#kaavakohde) [0..*]: kaavakohteiden versio, johon suosituksen vaikutus kohdistuu. Jos ei ole, on kyseessä yleissuositus
 
 
 ### Lisätieto
