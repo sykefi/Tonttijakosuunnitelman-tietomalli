@@ -27,7 +27,7 @@ Kunkin fyysisen tietomallin kuvauksessa tulee määritellä minkälaista rakenne
 
 ### Tunnisteet ja sisäisten viittausten eheys
 {% include clause_start.html type="req" id="laatu/vaat-tunnukset-viittaukset" %}
-Kaavatietomallin versioitavilla tietokohteilla tulee olla yksilöivät tunnukset, joiden luomisessa ja käyttämisessä tulee noudattaa elinkaarisääntöjen luvun [Tunnukset ja niiden hallinta](elinkaarisaannot.html#tunnukset-ja-niiden-hallinta) vaatimuksia.
+Kaavatietomallin versioitavilla tietokohteilla tulee olla yksilöivät tunnukset, joiden luomisessa ja käyttämisessä viittaamiseen toisiin tietokohteisiin tulee noudattaa elinkaarisääntöjen luvun [Tunnukset ja niiden hallinta](elinkaarisaannot.html#tunnukset-ja-niiden-hallinta) vaatimuksia.
 {% include clause_end.html %}
 
 ### Elinkaarisääntöjen mukaisuus
@@ -47,10 +47,10 @@ Kaikki Kaavatietomallin tekstimuotoiset sisällöt on tiedonsiirtoa varten kooda
 {% include clause_end.html %}
 
 #### Monikielinen sisältö ja kielikoodit
-Kaikki kaavavietomallin tekstimuotoinen sisältö ilmaistaan ISO 19013 -standardin määrittelemän [LanguageString](dokumentaatio/#languagestring)-luokan avulla.
+Kaikki kaavavietomallin tekstimuotoinen sisältö ilmaistaan ISO 19103 -standardin määrittelemän [LanguageString](dokumentaatio/#languagestring)-luokan avulla.
 
 {% include clause_start.html type="req" id="laatu/vaat-monikielisyys-kielikoodi" %}
-Kunkin LanguageString-luokan objektin tulee sisältää ```language```-attribuutti, jonka arvona on ISO 639-2 -standardin mukainen terminologinen, kolmekirjaiminen kielikoodi code (ISO 639-2/T).
+Kunkin LanguageString-luokan objektin tulee toteuttaa ```language```-attribuutti, jonka arvona on ISO 639-2 -standardin mukainen terminologinen, kolmekirjaiminen kielikoodi code (ISO 639-2/T).
 {% include clause_end.html %}
 
 {% include note.html content="ISO 639-2/T koodilistan mukaiset koodit Suomen virallisille kielille ovat ```fin``` (suomi), ```swe``` (ruotsi), ```smn``` (inarinsaami), ```sms```(koltansaami) ja ```sme``` (pohjoissaami). Muita Suomessa paljon puhuttujen kielten ISO 639-2/T -koodeja: ```rus``` (venäjä), ```est``` (viro), ```ara```(arabia),  ```eng``` (englanti), ```som``` (somali), ```kur``` (kurdi)." %}
@@ -101,16 +101,19 @@ Geometrioiden ilmaisemisessa tulee noudattaa kunkin koordinaatiston määritelm�
 
 #### Geometrinen ja topologinen eheys
 
-{% include clause_start.html type="req" id="laatu/vaat-suljetut-viivat" %}
-Viivamaisten geometrioiden on oltava suljettuja, eli niiden alku- ja loppuppisteiden on oltava samat. Mikäli viiva on osa aluemaisen geometrian reunaviivaa, on myös sen oltava suljettu.
+{% include clause_start.html type="req" id="laatu/vaat-suljetut-ringit" %}
+Mikäli viiva on osa aluemaisen geometrian reunaviivaa, on sen oltava suljettu, eli sen alku- ja loppuppisteiden on oltava samat.
+
+{% include clause_start.html type="req" id="laatu/vaat-viiva-kielletyt-leikkaukset" %}
+Viivamainen geometria ei saa leikata itseään.
 {% include clause_end.html %}
 
-{% include clause_start.html type="req" id="laatu/vaat-kielletyt-leikkaukset" %}
+{% include clause_start.html type="req" id="laatu/vaat-alue-kielletyt-leikkaukset" %}
 Aluemaisen geometrian ulkoreunan ja reikien reunaviivat eivät saa leikata itseään tai toisiaan. Kukin reunaviiva saa koskettaa alueen ulkoreunaa, toisen reiän reunaa tai itseään vain yksittäisissä pisteissä.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-yhteneva-alue" %}
-Aluemaisen geometrian sisäosan on oltava yhtenevä, eli minkä tahansa kahden alueen sisäpisteen välillä on voitava muodostaa viiva, joka kulkee kokonaan alueen sisällä.
+Aluemaisen geometrian sisäosan on oltava yhtenevä, eli minkä tahansa kahden alueen sisäpisteen välillä on voitava muodostaa yhtenäinen käyrä, joka kulkee kokonaan alueen sisällä.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-ei-tyhja-alue" %}
@@ -118,7 +121,7 @@ Aluemaisen geometrian sisäosan pinta-ala on oltava mitattavissa, eli alueeseen 
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-pinnan-orientaatio" %}
-Aluemaisten geometrioiden kiertosuuntien tulee noudattaa ISO 19107:2019-standardin määritelmää: Geometrioiden reunojen kiertosuunnat tulee valita siten, että pinnan yläpuolelta katsottuna ulkorajan reunan kiertosuunta on vastapäivään ja pinnan mahdollisten reikien reunojen kiertosuunnat ovat myötäpäivään. Mikäli pinta on osa 3-ulotteisten geometrian ulkorajaa, ulkopuoli vastaa yläpuolta.
+Aluemaisten geometrioiden kiertosuuntien tulee noudattaa ISO 19107 -standardin määritelmää: Geometrioiden reunojen kiertosuunnat tulee valita siten, että pinnan yläpuolelta katsottuna ulkorajan reunan kiertosuunta on vastapäivään ja pinnan mahdollisten reikien reunojen kiertosuunnat ovat myötäpäivään. Mikäli pinta on osa 3-ulotteisten geometrian ulkorajaa, ulkopuoli vastaa yläpuolta.
 {% include clause_end.html %}
 
 
@@ -131,7 +134,7 @@ Aluemaisten geometrioiden kiertosuuntien tulee noudattaa ISO 19107:2019-standard
 
 
 ### Päivämäärät ja kelloanajat
-Kaavatietomallin yksittäisiä ajanhetkiä kuvaavat attribuutit ovat ISO 19108-standardin määrittämää tyyppiä [TM_Instant](dokumentaatio/#tm_instant) ja aikavälejä kuvaavat attribuutit tyyppiä [TM_Period](dokumentaatio/#tm_period). Päivämäärät annetaan käyttäen Gregoriaanista kalenteria ja kellonajat käyttäen 24 tunnin kelloaikamuotoa alkaen kellonajasta 00:00:00.000  ja päättyen ajanhetkeen 23:59:59.999 (tunti, minuutti, sekunti, millisekunti).
+Kaavatietomallin yksittäisiä ajanhetkiä kuvaavat attribuutit ovat ISO 19108 -standardin määrittämää tyyppiä [TM_Instant](dokumentaatio/#tm_instant) ja aikavälejä kuvaavat attribuutit tyyppiä [TM_Period](dokumentaatio/#tm_period). Päivämäärät annetaan käyttäen Gregoriaanista kalenteria ja kellonajat käyttäen 24 tunnin kelloaikamuotoa alkaen kellonajasta 00:00:00.000  ja päättyen ajanhetkeen 23:59:59.999 (tunti, minuutti, sekunti, millisekunti).
 
 {% include clause_start.html type="req" id="laatu/vaat-ajanhetki-tarkkuus" %}
 Yksittäisiä ajanhetkiä kuvaavat attribuutit ilmaistaan joko pelkän päivämäärän tai päivämäärän ja kelloajan avulla. Päivämäärät ilmaistaan antamalla vuoden, kuukauden ja kuukauden päivän numeeriset arvot. Kellonajat ilmaistaan vähintään yhden minuutin ja enintään yhden millisekunnin tarkkuudella antamalla tunnin, minuutin, sekunnin ja millisekunnin numeeriset arvot.
@@ -146,14 +149,17 @@ Mikäli fyysinen tietomalli ei aseta ajanhetken muodolle rajoituksia, on suosite
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-aikavali-maar" %}
-Aikavälejä kuvaavat attribuutit voidaan antaa joko sekä alku- että loppuajanhetken avulla tai vain joko alku- tai loppuajanhetken avulla. Mikäli alkuajanhetkeä ei anneta, tulkitaan aikavälin sisältävän minkä tahansa ajanhetken loppuajanhetkeen saakka. Vastaavasti Mikäli loppuajanhetkeä ei anneta, tulkitaan aikavälin sisältävän minkä tahansa ajanhetken alkujanhetkestä lähtien.
+Aikavälejä kuvaavat attribuutit voidaan antaa joko sekä alku- että loppuajanhetken avulla tai vain joko alku- tai loppuajanhetken avulla. Mikäli alkuajanhetkeä ei anneta, tulkitaan aikavälin sisältävän minkä tahansa ajanhetken loppuajanhetkeen saakka. Vastaavasti mikäli loppuajanhetkeä ei anneta, tulkitaan aikavälin sisältävän minkä tahansa ajanhetken alkujanhetkestä lähtien.
 {% include clause_end.html %}
 
 ## Luokkakohtaiset säännöt
 
 ### Kaava
 {% include clause_start.html type="req" id="laatu/vaat-kaava-paallekkaiset-aluerajaukset" %}
-Kaavatietovarastossa ei tule olla kahta [Kaava](dokumentaatio/#kaava)-luokan objektia, joiden ```laji```-attribuutin arvot ovat samat, joiden ```voimassaoloAika```-attribuutin arvojen kuvaamat aikavälit ovat sisäkkäisiä tai lomittain, ja joiden ```aluerajaus```-attribuuttien kuvaavat geometriat leikaavat toisiaan tai ovat sisäkkäisiä.
+Kaavatietovarastossa ei tule olla kahta [Kaava](dokumentaatio/#kaava)-luokan objektia, joiden 
+* ```laji```-attribuutin arvot ovat samat,
+* ```voimassaoloAika```-attribuutin arvojen kuvaamat aikavälit ovat sisäkkäisiä tai lomittain, ja
+* ```aluerajaus```-attribuuttien kuvaavat geometriat leikaavat toisiaan tai ovat sisäkkäisiä.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-kaava-aluerajaus-annettava" %}
@@ -181,7 +187,11 @@ Kaavatietovarastossa ei tule olla kahta [Kaava](dokumentaatio/#kaava)-luokan obj
 ### Käyttötarkoitusalueet
 
 {% include clause_start.html type="req" id="laatu/vaat-kayttotarkoitusalue-maar" %}
-Asemakaavan [Kaavakohde](dokumentaatio/#kaavakohde)-luokan objektit, joihin liittyy assosiaatiolla ```maarays``` yksi tai useampi sellainen [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan objekti, jonka ```laji```-attribuutin arvo on jokin [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)-koodin alakoodeista, määrittelevät asemakaavan käyttötarkoitusalueet. Käyttötarkoitusalueiden ```geometria```-attribuutin kuvaamaan geometrian tulee olla aluemainen.
+Asemakaavan käyttötarkoitusalue on [Kaavakohde](dokumentaatio/#kaavakohde)-luokan objekti, joka liittyy assosiaatiolla ```maarays``` yhteen tai useampaan sellaiseen [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan objektiin, jonka ```laji```-attribuutin arvo on jokin [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)-koodin alakoodeista.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="laatu/vaat-aluemainen-kayttotarkoitusalue" %}
+Asemakaavan käyttötarkoitusalueiden ```geometria```-attribuutin kuvaamaan geometrian tulee olla aluemainen.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-ei-leikkaavat-kayttotarkoitusalueet" %}
