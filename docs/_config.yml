@@ -4,6 +4,7 @@ home: "https://ym-rakennettu-ymparisto.github.io/kaavatietomalli"
 plugins:
   - jekyll-sitemap
 repository: YM-rakennettu-ymparisto/kaavatietomalli
+google_analytics: G-TL17CQFMFK
 plugins:
 - jekyll-sitemap
 - kramdown
