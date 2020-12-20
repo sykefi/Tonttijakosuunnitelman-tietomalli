@@ -103,6 +103,7 @@ Geometrioiden ilmaisemisessa tulee noudattaa kunkin koordinaatiston m채채ritelm�
 
 {% include clause_start.html type="req" id="laatu/vaat-suljetut-ringit" %}
 Mik채li viiva on osa aluemaisen geometrian reunaviivaa, on sen oltava suljettu, eli sen alku- ja loppuppisteiden on oltava samat.
+{% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-viiva-kielletyt-leikkaukset" %}
 Viivamainen geometria ei saa leikata itse채채n.
