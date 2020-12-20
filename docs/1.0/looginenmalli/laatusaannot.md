@@ -110,7 +110,7 @@ Viivamainen geometria ei saa leikata itseään.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-alue-kielletyt-leikkaukset" %}
-Aluemaisen geometrian ulkoreunan ja reikien reunaviivat eivät saa leikata itseään tai toisiaan. Kukin reunaviiva saa koskettaa alueen ulkoreunaa, toisen reiän reunaa tai itseään vain yksittäisissä pisteissä.
+Aluemaisen geometrian ulkoreunan ja reikien reunaviivat eivät saa leikata itseään tai toisiaan. Kukin reunaviiva saa koskettaa alueen ulkoreunaa tai reiän reunaa, mukaanlukien se itse, vain yksittäisissä pisteissä.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-yhteneva-alue" %}
