@@ -1,6 +1,6 @@
 theme: jekyll-theme-slate
-url: "https://ym-rakennettu-ymparisto.github.io/kaavatietomalli" # the base hostname & protocol for your site
-home: "https://ym-rakennettu-ymparisto.github.io/kaavatietomalli"
+url: "https://kaavatietomalli.fi" # the base hostname & protocol for your site
+home: "https://kaavatietomalli.fi"
 plugins:
   - jekyll-sitemap
 repository: YM-rakennettu-ymparisto/kaavatietomalli
