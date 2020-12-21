@@ -94,3 +94,6 @@ Viittaukset toisiin käsitteisiin:
 ### Arvo
 {% include defintionref.html id="concept-1011" name="ominaisuuden arvo" def="kaavamääräystä, kaavasuositusta tai lisätietoa tarkentava arvo." note="Yhteinen yläluokka erityyppisille numeerisille, luetelluille ja sanallisille arvoille sekä arvoväleille" %}
 
+### Kaavatietovarasto
+{% include defintionref.html id="concept-3004" name="kaavatietovarasto" def="tietojärjestelmä, jonka tehtävänä on vastaanottaa, säilyttää ja jaella tietomallimuotoista kaavatietoa laatu- ja elinkaarisääntöjen mukaisesti" note="kaavatietovarasto voi vastata kaavatiedon hallinnoinnista joko paikallisesti tai kansallisesti" %}
+
