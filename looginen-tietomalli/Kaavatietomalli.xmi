@@ -1104,9 +1104,9 @@
 						<type xmi:idref="EAJava_boolean"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E81A0A59_CF30_449e_824E_1A19B1A6885A" name="kumottavaKaavanAlue">
-						<type xmi:idref="EAID_3BAC7212_C1AE_4e37_8373_01C87A43A0A5"/>
+						<type xmi:idref="EAID_74ADE5A7_8C5B_4676_A74C_33CC59B23B9B"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000089_CF30_449e_824E_1A19B1A6885A" value="0"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000090_CF30_449e_824E_1A19B1A6885A" value="*"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000090_CF30_449e_824E_1A19B1A6885A" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E0F816B6_8D83_4665_82EC_86E2156672B9" name="kumottavanMaarayksenTunnus">
 						<type xmi:idref="EAID_DFC4D1CC_7484_47b3_9D6F_008BE7CD78FD"/>
@@ -3304,11 +3304,11 @@
 						<initial/>
 						<documentation/>
 						<model ea_localid="113571" ea_guid="{E81A0A59-CF30-449e-824E-1A19B1A6885A}"/>
-						<properties type="Surface" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="Geometry" collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="2"/>
 						<stereotype/>
-						<bounds lower="0" upper="*"/>
+						<bounds lower="0" upper="1"/>
 						<options/>
 						<style/>
 						<styleex value="volatile=0;"/>
@@ -9619,9 +9619,9 @@
 			<diagram xmi:id="EAID_D7047AC9_5E4D_4c2d_92E7_0CB7D37AE4D4">
 				<model package="EAPK_FCB0EA38_A78E_42b8_BE04_2E5B89486FF7" localID="38714" owner="EAPK_FCB0EA38_A78E_42b8_BE04_2E5B89486FF7"/>
 				<properties name="Kaavatiedot" type="Logical"/>
-				<project author="ior" version="1.0" created="2020-09-16 16:55:07" modified="2020-12-17 11:53:00"/>
+				<project author="ior" version="1.0" created="2020-09-16 16:55:07" modified="2020-12-22 16:10:42"/>
 				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=815;DocSize.cy=1067;ShowDetails=0;Orientation=P;Zoom=50;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=32512;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
-				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=AE15543F;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=85604738;"/>
 				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-13,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
 				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
 				<extendedProperties/>
@@ -9644,7 +9644,7 @@
 					<element geometry="Left=446;Top=83;Right=671;Bottom=291;" subject="EAID_16FDCD6D_90B4_471c_9CD2_29335EA59CE4" seqno="16" style="DUID=906207D9;AttCustom=0;OpCustom=0;AttInh=1;RzO=1;"/>
 					<element geometry="Left=76;Top=450;Right=360;Bottom=658;" subject="EAID_CCDEA216_16F7_47c8_9BFD_D0AFF7E8788F" seqno="17" style="DUID=05F48B99;AttCustom=0;OpCustom=0;AttInh=1;RzO=1;"/>
 					<element geometry="Left=663;Top=943;Right=887;Bottom=1028;" subject="EAID_3F8A2EB2_871B_436a_A4E6_EABB2FB06C44" seqno="18" style="DUID=5535B8D9;"/>
-					<element geometry="Left=672;Top=307;Right=897;Bottom=418;" subject="EAID_2DE58D5C_4D57_41e8_8706_F173CCB76F5C" seqno="19" style="DUID=18404A76;"/>
+					<element geometry="Left=671;Top=307;Right=896;Bottom=418;" subject="EAID_2DE58D5C_4D57_41e8_8706_F173CCB76F5C" seqno="19" style="DUID=18404A76;"/>
 					<element geometry="Left=578;Top=463;Right=866;Bottom=587;" subject="EAID_587AC2DA_71BE_49cc_90CE_1528C572EB4A" seqno="20" style="DUID=8D72BD5C;AttCustom=0;OpCustom=0;RzO=1;"/>
 					<element geometry="Left=76;Top=712;Right=360;Bottom=907;" subject="EAID_29ED9917_41FE_4c16_B7CB_A9AF19623264" seqno="21" style="DUID=D0B7A5EE;AttCustom=0;OpCustom=0;AttInh=1;RzO=1;"/>
 					<element geometry="Left=76;Top=17;Right=360;Bottom=384;" subject="EAID_6192D7E3_8615_4969_AEFD_312C2DB53892" seqno="22" style="DUID=946DF5AA;AttCustom=0;OpCustom=0;AttInh=1;RzO=1;"/>
@@ -9787,7 +9787,6 @@
 		<EAStub xmi:id="EAID_84DA4535_B19B_4ce7_BCD4_5A0059E3AD79" name="TM_Period" UMLType="Class"/>
 		<EAStub xmi:id="EAID_7C93189A_9214_4be4_9AEB_91E48CBA0E7E" name="TM_Instant" UMLType="Class"/>
 		<EAStub xmi:id="EAID_DFC4D1CC_7484_47b3_9D6F_008BE7CD78FD" name="URI" UMLType="Interface"/>
-		<EAStub xmi:id="EAID_3BAC7212_C1AE_4e37_8373_01C87A43A0A5" name="Surface" UMLType="Interface"/>
 		<EAStub xmi:id="EAID_0A614EA9_13B7_4ebe_85ED_AA187D27CBD1" name="CharacterString" UMLType="Interface"/>
 		<EAStub xmi:id="EAID_2E900284_8E24_449b_920A_CA436229BFAD" name="Point" UMLType="Interface"/>
 		<EAStub xmi:id="EAID_313E57F2_5D3C_424a_B7B2_0F4617104EB3" name="TM_Object" UMLType="Class"/>
