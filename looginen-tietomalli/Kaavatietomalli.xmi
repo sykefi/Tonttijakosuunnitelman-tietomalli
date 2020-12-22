@@ -1062,7 +1062,7 @@
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000079_38C2_46b6_9E28_A2597777B1E2" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000080_38C2_46b6_9E28_A2597777B1E2" value="*"/>
 					</ownedAttribute>
-					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_B442D96D_05FA_47f8_B3DA_5FA12A51A0B7" name="voimassaoloaika">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_B442D96D_05FA_47f8_B3DA_5FA12A51A0B7" name="voimassaoloAika">
 						<type xmi:idref="EAID_84DA4535_B19B_4ce7_BCD4_5A0059E3AD79"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000081_05FA_47f8_B3DA_5FA12A51A0B7" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000082_05FA_47f8_B3DA_5FA12A51A0B7" value="1"/>
@@ -1176,7 +1176,7 @@
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000109_2B19_4c39_A727_4C0CFEE3A381" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000110_2B19_4c39_A727_4C0CFEE3A381" value="*"/>
 					</ownedAttribute>
-					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_2353615B_26CB_4f98_802D_C4D893C8465B" name="voimassaoloaika">
+					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_2353615B_26CB_4f98_802D_C4D893C8465B" name="voimassaoloAika">
 						<type xmi:idref="EAID_84DA4535_B19B_4ce7_BCD4_5A0059E3AD79"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000111_26CB_4f98_802D_C4D893C8465B" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000112_26CB_4f98_802D_C4D893C8465B" value="1"/>
@@ -3187,7 +3187,7 @@
 						<tags/>
 						<xrefs/>
 					</attribute>
-					<attribute xmi:idref="EAID_B442D96D_05FA_47f8_B3DA_5FA12A51A0B7" name="voimassaoloaika" scope="Public">
+					<attribute xmi:idref="EAID_B442D96D_05FA_47f8_B3DA_5FA12A51A0B7" name="voimassaoloAika" scope="Public">
 						<initial/>
 						<documentation/>
 						<model ea_localid="113609" ea_guid="{B442D96D-05FA-47f8-B3DA-5FA12A51A0B7}"/>
@@ -3515,7 +3515,7 @@
 						<tags/>
 						<xrefs/>
 					</attribute>
-					<attribute xmi:idref="EAID_2353615B_26CB_4f98_802D_C4D893C8465B" name="voimassaoloaika" scope="Public">
+					<attribute xmi:idref="EAID_2353615B_26CB_4f98_802D_C4D893C8465B" name="voimassaoloAika" scope="Public">
 						<initial/>
 						<documentation/>
 						<model ea_localid="113700" ea_guid="{2353615B-26CB-4f98-802D-C4D893C8465B}"/>
