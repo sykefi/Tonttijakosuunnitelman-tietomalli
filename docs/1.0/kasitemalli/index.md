@@ -19,7 +19,7 @@ status: "Ehdotus"
 
 ## Käsitteet
 ### Kaava
-{% include defintionref.html id="concept-1008" name="kaava" def="kaavoituksen lopputuloksena syntyvä säännöstö ja suunnitelma, joka on alueellaan maankäytön ja rakentamisen tarkempaa suunnittelua ja toteuttamista velvoittava." %}
+{% include defintionref.html id="concept-1008" name="kaava" def="maankäyttö- ja rakennuslain mukaisen kaavoitusprosessin lopputuloksena syntyvä lainvoimainen maankäyttöä tai rakentamista ohjaava suunnitelma." %}
 
 Viittaukset toisiin käsitteisiin:
 * [Lähtötietoaineisto](#lähtötietoaineisto) [0..*]: kaavan laadinnassa hyödynnetty lähtötietoaineisto
