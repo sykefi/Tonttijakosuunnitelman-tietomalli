@@ -40,7 +40,7 @@ tallennusAika | TM_Instant [0..1]       | properties.storageTime | string (date-
 nimi             | LanguageString [0..*]| properties.name                  | object (LanguageString)
 kuvaus           | LanguageString [0..*] | properties.description           | object (LanguageString)
 oikeusvaikutteisuus | OikeusvaikutteisuudenLaji [0..1] | properties.legalEffectiveness | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_OikeusvaikutteisuudenLaji>
-metatietokuvaus | URL [0..1]            | properties.metadata              | string (uri)
+metatietokuvaus | URI [0..1]            | properties.metadata              | string (uri)
 voimassaoloAika | TM_Period [0..1]      | properties.validFrom, properties.validTo | string (date-time)
 laji            | Kaavalaji             | properties.type          | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_Kaavalaji>
 kaavatunnus     | URI                   | properties.spatialPlanId | string (uri)
@@ -234,8 +234,8 @@ tallennusAika | TM_Instant [0..1]       | properties.storageTime | string (date-
 asiakirjanTunnus | URI [0..*]           | properties.documentId            | array of string (uri)
 nimi             | LanguageString [0..*]| properties.name                  | object (LanguageString)
 laji             | AsiakirjanLaji       | properties.type                  | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_AsiakirjanLaji_YKAK>
-lisatietolinkki  | URL [0..1]           | properties.externalInformationLink | string (uri)
-metadatakuvaus   | URL [0..1]           | properties.metadata              | string (uri)
+lisatietolinkki  | URI [0..1]           | properties.externalInformationLink | string (uri)
+metadatakuvaus   | URI [0..1]           | properties.metadata              | string (uri)
 
 *Assosiaatiot**
 
@@ -299,8 +299,8 @@ tallennusAika | TM_Instant [0..1]       | properties.storageTime | string (date-
 aineistoTunnus   | URI [0..1]           | properties.datasetId             | string (uri)
 nimi             | LanguageString [0..*]| properties.name                  | object (LanguageString)
 laji             | LahtietoaineistonLaji | properties.type                  | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_LahtotietoaineistonLaji>
-lisatietolinkki  | URL [0..1]           | properties.externalInformationLink | string (uri)
-metadatakuvaus   | URL [0..1]           | properties.metadata              | string (uri)
+lisatietolinkki  | URI [0..1]           | properties.externalInformationLink | string (uri)
+metadatakuvaus   | URI [0..1]           | properties.metadata              | string (uri)
 
 **Assosiaatiot**
 
@@ -369,7 +369,7 @@ tallennusAika | TM_Instant [0..1]       | properties.storageTime | string (date-
 nimi             | LanguageString [0..*]| properties.name    | object (LanguageString)
 tapahtumaAika    | TM_Object [0..1]     | properties.eventTime, properties.eventTime_start, properties.eventTime_end | string (date-time)
 laji             | AbstraktiKasittelytapahtumanLaji | properties.type  | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji>
-lisatietolinkki | URL [0..1]            | properties.additionalInformationLink | string (uri)
+lisatietolinkki | URI [0..1]            | properties.additionalInformationLink | string (uri)
 peruttu       | boolean = false         | cancelled             | boolean
 
 **Assosiaatiot**
@@ -462,7 +462,7 @@ nimi             | LanguageString [0..*]| properties.name    | object (LanguageS
 tapahtumaAika    | TM_Object [0..1]      | properties.eventTime, properties.eventTime_start, properties.eventTime_end | string (date-time)
 laji             | AbstraktiVuorovaikutustapahtumaLaji | properties.type  | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_KaavanVuorovaikutustapahtumanLaji>
 
-lisatietolinkki | URL [0..1]            | properties.additionInformationLink | string (uri)
+lisatietolinkki | URI [0..1]            | properties.additionInformationLink | string (uri)
 peruttu       | boolean = false         | cancelled             | boolean
  
 **Assosiaatiot**
@@ -721,7 +721,6 @@ nimi            | LanguageString [0..*] | properties.name                  | obj
 pystysuuntainenRajaus | Korkeusvali [0..*] | properties.verticalLimits | array of object (ElevationRange)
 laji          | AbstraktiKaavamaarayskohdeLaji [0..1] | properties.type       | object (CodelistValue), ei arvoja toistaiseksi
 sijainninSitovuus | Sitovuuslaji [0..1] | properties.bindingnessOfLocation | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji>
-voimassaoloaika | TM_Period [0..1]      | properties.validFrom, properties.validTo | string (date-time)
 liittyvanLahtotietokohteenTunnnus | URI [0..*] | properties.relatedInputDatasetObjectIds | array of string (uri)
 maanalaisuus    | MaanalaisuudenLaji [0..1] | properties.groundRelativePosition | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_MaanalaisuudenLaji>
 ymparistomuutoksenLaji | AbstraktiYmparistomuutoksenLaji | properties.environmentalChangeNature | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_ymparistomuutoksenLaji_YK> (vain yleiskaava)
@@ -840,7 +839,7 @@ laji          | AbstraktiKaavamaaraysLaji | properties.type       | object (Code
 elinkaaritila   | KaavanElinkaaritila   | properties.lifecycleStatus | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila>
 teema         | AbstraktiKaavoitusteema [0..*] | properties.themes     | array of object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_Kaavoitusteema_AK>, <http://uri.suomi.fi/codelist/rytj/RY_Kaavoitusteema_YK>
 lisatieto     | Lisatieto [0..*]        | properties.supplementaryInfo | array of object (SupplementaryInformation)
-voimassaoloaika | TM_Period [0..1]      | properties.validFrom, properties.validTo | string (date-time)
+voimassaoloAika | TM_Period [0..1]      | properties.validFrom, properties.validTo | string (date-time)
 
 **Assosiaatiot**
 
@@ -919,7 +918,7 @@ nimi          | LanguageString [0..*]   | properties.name       | object (Langua
 arvo          | AbstraktiArvo [0..*]    | properties.values      | array of object (TextValue)
 elinkaaritila   | KaavanElinkaaritila   | properties.lifecycleStatus | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila>
 teema         | AbstraktiKaavoitusteema [0..*] | properties.themes     | array of object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_Kaavoitusteema_AK>, <http://uri.suomi.fi/codelist/rytj/RY_Kaavoitusteema_YK>
-voimassaoloaika | TM_Period [0..1]      | properties.validFrom, properties.validTo | string (date-time)
+voimassaoloAika | TM_Period [0..1]      | properties.validFrom, properties.validTo | string (date-time)
 
 **Assosiaatiot**
 
@@ -1344,7 +1343,7 @@ Ominaisuus       | tyyppi                   | pakollinen | huomiot
 -----------------|--------------------------|------------|-------------
 linkedFeatureId  | string (uri)             | k          | kohteen id-kentän arvo
 linkedFeatureType | string                  | e          | kohteen featureType-kentän arvo, auttaa päättelemään linkatun tietorakenteen
-href             | string (uri-reference)   | e          | suora URL viitattuun kohteeseen, API populoi ei käytetä lataustiedostossa
+href             | string (uri-reference)   | e          | suora URL viitattuun kohteeseen, API populoi, ei käytetä tallennustiedostossa
 role             | object (LanguageString)  | e          | roolitieto (miten liittyy) mikäli tarvitaan assosiaatiossa
 title            | object (LanguageString)  | e          | viitatun kohteen selväkielinen nimi, mikäli tarpeen  
 
