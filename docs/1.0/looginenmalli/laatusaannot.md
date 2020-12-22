@@ -68,28 +68,28 @@ Kunkin yhdellä kielellä annetun LanguageString-tyyppisen merkkijonon enimmäis
 
 ### Geometriat
 
-#### Sallitut geometriatyypit
-{% include clause_start.html type="req" id="laatu/vaat-2d-geom-tyyppit" %}
-Kaavatietomallin 2-ulotteisten geometria-tyyppisten attribuuttien arvoina käytetään OGC [Geography Markup Language (GML) simple features
-profile (with Corrigendum) v2.0](http://portal.opengeospatial.org/files/?artifact_id=42729) -standardin taulukon 6 kuvaamia [GML 3.2 -standardin](http://portal.opengeospatial.org/files/?artifact_id=20509) geometriaominaisuuksia vastaavia geometriatyyppejä.
+#### Geometriatyypit
+{% include clause_start.html type="req" id="laatu/vaat-geom-piste-maar" %}
+Pistemäiset geometriat toteuttavat ISO 19107 -standardin määrittelemän ```Point```-rajapinnan.
 {% include clause_end.html %}
 
-**GML simple features profile -geometriatyypit**
+{% include clause_start.html type="req" id="laatu/vaat-geom-viiva-maar" %}
+Viivamaiset geometriat toteuttavat ISO 19107 -standardin määrittelemän ```Curve```-rajapinnan.
+{% include clause_end.html %}
 
-GML:n geometriaominaisuuden tyyppi | Rajoitukset
------------------------------------|--------------------------------------
-gml:PointPropertyType              | GML:n mukainen
-gml:CurvePropertyType              | Tuettuja segmenttityyppejä ovat gml:LineString tai gml:Curve koostuen gml:LineStringSegment:istä, gml:Arc, gml:Circle tai  gml:CircleByCenterPoint.
-gml:SurfacePropertyType            | Tuettuja tyyppejä ovat gml:Polygon tai gml:Surface käyttäen gml:PolygonPatch -osia. Pintojen reunukset kuvataan käyttäen segmenttityyppejä gml:LinearRing tai gml:Ring käyttäen yhtä gml:Curve-tyyppistä viivaa koostuen gml:LineStringSegment:istä, gml:Arc, gml:Circle tai gml:CircleByCenterPoint.
-gml:GeometryPropertyType           | Tuettuja arvotyyppejä ovat  gml:Point,gml:LineString, gml:Curve, gml:Polygon, gml:Surface, gml:MultiPoint, gml:MultiCurve ja gml:MultiSurface
-gml:MultiPointPropertyType         | GML:n mukainen
-gml:MultiCurvePropertyType         | Samat rajoitukset kuin gml:CurvePropertyType:lle
-gml:MultiSurfacePropertyType       | Samat rajoitukset kuin gml:SurfacePropertyType
+{% include clause_start.html type="req" id="laatu/vaat-geom-2d-alue-maar" %}
+Aluemaiset geometriat toteuttavat ISO 19107 -standardin määrittelemän ```Surface```-rajapinnan.
+{% include clause_end.html %}
 
+{% include clause_start.html type="req" id="laatu/vaat-geom-3d-kappale-maar" %}
+3-ulotteiset kappalegeometriat toteuttavat joko ISO 19107 -standardin määrittelemän ```Solid```-rajapinnan.
+{% include clause_end.html %}
 
-{% include question.html content="Miten tulisi määritellä sallitut 3-ulotteiset geometriatyypit? gml:Solid-tyyppinen voluumi ainakin tarvitaan. Ehkä CityGML 2.0:n mukaiset 3D-geometriatyypit?" %}
+{% include clause_start.html type="req" id="laatu/vaat-geom-kokoelmat-maar" %}
+Geometriakokoelmat toteuttavat ISO 19107 -standardin määrittelemän ```Collection```-rajapinnan. Monipiste (multipoint) -geometriat rakentuvat ```Point```-rajapinnan, moniviiva (multicurve) -geometriat ```Curve```-rajapinnan, monialue (multisurface) -geometriat ```Surface```-rajapinnan ja monikappale (multisolid) -geometriat ```Solid```-rajapinnan toteuttavista osista (```element```-attribuutti).
+{% include clause_end.html %}
 
-{% include note.html content="Kaavatietomalli ei vaadi GML-kielen käyttämistä geometrioiden kuvaamisessa. Kaavatietomallin mukaiset fyysiset tietomallit voivat rajoittaa mahdollisia geometriatyyppejä ja niiden ominaisuuksia GML simple features -profiilin tukemaa joukkoa pienemmäksi." %}
+{% include note.html content="Kaavatietomalli ei vaadi kaikkien ISO 19107 -standardin mukaisten geometriatyyppien tukemista. Kaavatietomallin mukaiset fyysiset tietomallit voivat rajoittaa mahdollisia geometriatyyppejä ja niiden ominaisuuksia." %}
 
 #### Sallitut koordinaatistot ja koordinaattijärjestys
 
@@ -155,6 +155,21 @@ Aikavälejä kuvaavat attribuutit voidaan antaa joko sekä alku- että loppuajan
 
 ## Luokkakohtaiset säännöt
 
+### AbstraktiMaankayttoasia
+{% include clause_start.html type="req" id="laatu/vaat-mkp-aluerajaus-geometria" %}
+[AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokan objektien ```aluerajaus```-attribuutin arvon tulee kuvata kaavan vaikutusalue joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
+{% include clause_end.html %}
+
+### Lahtotietoaineisto
+{% include clause_start.html type="req" id="laatu/vaat-lahtotietoaineisto-aluerajaus-geometria" %}
+[Lahtotietoaineito](dokumentaatio/#lahtotietoaineisto)-luokan objektien ```aluerajaus```-attribuutin arvon tulee kuvata aineiston maantieteellinen kattavuus joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
+{% include clause_end.html %}
+
+### KaavanKumoamistieto
+{% include clause_start.html type="req" id="laatu/vaat-lahtotietoaineisto-aluerajaus-geometria" %}
+[KaavanKumoamistieto](dokumentaatio/#kaavankumoamistieto)-luokan objektien ```kumottavanKaavanAlue```-attribuutin arvon tulee kuvata kumottava alue joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
+{% include clause_end.html %}
+
 ### Kaava
 {% include clause_start.html type="req" id="laatu/vaat-kaava-paallekkaiset-aluerajaukset" %}
 Kaavatietovarastossa ei tule olla kahta [Kaava](dokumentaatio/#kaava)-luokan objektia, joiden 
@@ -182,6 +197,25 @@ Kaavatietovarastossa ei tule olla kahta [Kaava](dokumentaatio/#kaava)-luokan obj
 {% include clause_start.html type="req" id="laatu/vaat-kaava-voimassaolo-loppu" %}
 [Kaava](dokumentaatio/#kaava)-luokan objektilla, jonka [elinkaatila](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaaritila) on  kumottu tai kumoutunut (koodi 11 tai 12), tulee olla annettu ei-tyhjä ```voimassaAika```-attribuutin loppuajanhetken arvo.
 {% include clause_end.html %}
+
+### Kaavakohde
+
+{% include clause_start.html type="req" id="laatu/vaat-kaavakohde-geometria" %}
+[Kaavakohde](dokumentaatio/#kaavakohde)-luokan objektin ```geometria```-attribuutin arvon tulee olla [piste](#laatu-vaat-geom-piste-maar), [viiva](#laatu-vaat-geom-viiva-maar), [alue](#laatu-vaat-geom-2d-alue-maar), [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar), [moniviiva, monialue tai monikappale](#laatu-vaat-geom-kokoelmat-maar).
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="laatu/vaat-kaavakohde-3d-konsistenssi" %}
+Mikäli [Kaavakohde](dokumentaatio/#kaavakohde)-luokan objektin ```geometria```-attribuutin arvo on [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar) tai [monikappale](#laatu-vaat-geom-kokoelmat-maar), ja sille on annettu ```pystysuuntainenRajaus```-attribuutti, tulee ```geometria```-attribuutin arvon sijaita pystysuuntaisen rajauksen määrittämien korkeuksien ala- ja ylärajojen väleissä. 
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="laatu/vaat-paallekkaiset-kaavakohteet" %}
+Kaavatietovarastossa ei tule olla kahta [Kaavakohde](dokumentaatio/#kaavakohde)-luokan objektia, joiden
+* ```kaava```-attribuutin arvo viittaavat eri kaavoihin, 
+* ```voimassaoloAika```-attribuutin arvojen kuvaamat aikavälit ovat sisäkkäisiä tai lomittain, ja
+* ```geometria```- ja ```pystysuuntainenRajaus```-attribuuttien yhdessä kuvaavat geometriat leikaavat toisiaan tai ovat sisäkkäisiä.
+{% include clause_end.html %}
+
+
 
 ## Kaavamääräyskohtaiset säännöt
 
