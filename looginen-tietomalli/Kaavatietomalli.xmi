@@ -1403,9 +1403,9 @@
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000172_CCC6_4bf7_AC86_24ABE832FD49" value="*"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_5E947F8A_F489_4b4a_84B9_5CAC55E1A753" name="aluerajaus">
-						<type xmi:idref="EAID_3BAC7212_C1AE_4e37_8373_01C87A43A0A5"/>
+						<type xmi:idref="EAID_74ADE5A7_8C5B_4676_A74C_33CC59B23B9B"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000173_F489_4b4a_84B9_5CAC55E1A753" value="0"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000174_F489_4b4a_84B9_5CAC55E1A753" value="*"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000174_F489_4b4a_84B9_5CAC55E1A753" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_EC994267_4F6A_44ce_AF31_8CE8A8FA3FC1" name="oikeusvaikutteisuus">
 						<type xmi:idref="EAID_9A0421F4_A80C_4dc9_A51E_0CD1E022F893"/>
@@ -1527,7 +1527,7 @@
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000202_4143_44ac_B564_1B041EEB4E52" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_526317FD_27A6_46ba_ACA1_C9B471B95D16" name="sijainti">
-						<type xmi:idref="EAID_2E900284_8E24_449b_920A_CA436229BFAD"/>
+						<type xmi:idref="EAID_74ADE5A7_8C5B_4676_A74C_33CC59B23B9B"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000203_27A6_46ba_ACA1_C9B471B95D16" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000204_27A6_46ba_ACA1_C9B471B95D16" value="1"/>
 					</ownedAttribute>
@@ -1707,7 +1707,7 @@
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000256_90B6_47a7_98A1_3F783750E0ED" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_3B8D5FD1_9F6A_4f0d_B453_B4ECEFE71BF8" name="aluerajaus">
-						<type xmi:idref="EAID_3BAC7212_C1AE_4e37_8373_01C87A43A0A5"/>
+						<type xmi:idref="EAID_74ADE5A7_8C5B_4676_A74C_33CC59B23B9B"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000257_9F6A_4f0d_B453_B4ECEFE71BF8" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000258_9F6A_4f0d_B453_B4ECEFE71BF8" value="*"/>
 					</ownedAttribute>
@@ -4297,11 +4297,11 @@
 						<initial/>
 						<documentation/>
 						<model ea_localid="113509" ea_guid="{5E947F8A-F489-4b4a-84B9-5CAC55E1A753}"/>
-						<properties type="Surface" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="Geometry" collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="3"/>
 						<stereotype/>
-						<bounds lower="0" upper="*"/>
+						<bounds lower="0" upper="1"/>
 						<options/>
 						<style/>
 						<styleex value="volatile=0;"/>
@@ -4415,7 +4415,7 @@
 						<initial/>
 						<documentation/>
 						<model ea_localid="113692" ea_guid="{526317FD-27A6-46ba-ACA1-C9B471B95D16}"/>
-						<properties type="Point" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="Geometry" collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="2"/>
 						<stereotype/>
@@ -4833,7 +4833,7 @@
 						<initial/>
 						<documentation/>
 						<model ea_localid="113707" ea_guid="{3B8D5FD1-9F6A-4f0d-B453-B4ECEFE71BF8}"/>
-						<properties type="Surface" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="Geometry" collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="3"/>
 						<stereotype/>
