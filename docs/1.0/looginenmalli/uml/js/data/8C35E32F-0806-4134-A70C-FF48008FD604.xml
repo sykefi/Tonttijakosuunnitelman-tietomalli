@@ -1,5 +1,5 @@
 tocTab[tocTab.length] = new Array("0.3:1", "", "Koodistot", "EARoot/EA3/EA111.html", "175.png", "38719", "0", "", "Logical diagram0","{5713ACB6-0229-4342-AE9D-9FE99A10D705}");
-tocTab[tocTab.length] = new Array("0.3:2", "", "RYTJ-ydin", "EARoot/EA3/EA113.html", "175.png", "38715", "0", "", "Logical diagram0","{40EB80A5-88D9-404c-B1C2-3AE3F2009F50}");
+tocTab[tocTab.length] = new Array("0.3:2", "", "MPK-ydin", "EARoot/EA3/EA113.html", "175.png", "38715", "0", "", "Logical diagram0","{40EB80A5-88D9-404c-B1C2-3AE3F2009F50}");
 tocTab[tocTab.length] = new Array("0.3:3", "", "«CodeList» AbstraktiKasittelytapahtumanLaji", "EARoot/EA3/EA116.html", "5.png", "E79815", "0", "", "Class0","{7FE1D815-70B5-467a-8F8E-A7A160F00708}");
 tocTab[tocTab.length] = new Array("0.3:4", "", "«FeatureType» AbstraktiMaankayttoasia", "EARoot/EA3/EA117.html", "5.png", "E79661", "0", "", "Class0","{541DF740-5AE1-4150-9D96-6C55526B3FA0}");
 tocTab[tocTab.length] = new Array("0.3:5", "", "«FeatureType» AbstraktiTapahtuma", "EARoot/EA3/EA118.html", "5.png", "E79665", "0", "", "Class0","{4131AAAE-C5B9-4d2d-8DDA-54969CB1FABB}");

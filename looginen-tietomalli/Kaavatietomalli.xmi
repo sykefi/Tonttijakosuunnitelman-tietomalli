@@ -1389,7 +1389,7 @@
 					<generalization xmi:type="uml:Generalization" xmi:id="EAID_94558196_D036_4d5d_BAF7_39F1DBE68CD0" general="EAID_438A30F5_5D5B_4a53_B2AF_7017334DBF48"/>
 				</packagedElement>
 			</packagedElement>
-			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_8C35E32F_0806_4134_A70C_FF48008FD604" name="RYTJ-ydin">
+			<packagedElement xmi:type="uml:Package" xmi:id="EAPK_8C35E32F_0806_4134_A70C_FF48008FD604" name="MKP-ydin">
 				<packagedElement xmi:type="uml:Class" xmi:id="EAID_7FE1D815_70B5_467a_8F8E_A7A160F00708" name="AbstraktiKasittelytapahtumanLaji" isAbstract="true"/>
 				<packagedElement xmi:type="uml:Class" xmi:id="EAID_541DF740_5AE1_4150_9D96_6C55526B3FA0" name="AbstraktiMaankayttoasia" isAbstract="true">
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_85E0B138_E299_42d5_9FB3_3A7A0DE113B2" name="nimi">
@@ -1413,7 +1413,7 @@
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000176_4F6A_44ce_AF31_8CE8A8FA3FC1" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_2DE8A615_89CB_49cc_8C15_0004ABE49BCE" name="metatietokuvaus">
-						<type xmi:idref="EAID_9792C112_C336_4a27_B255_AE3446B7A803"/>
+						<type xmi:idref="EAID_DFC4D1CC_7484_47b3_9D6F_008BE7CD78FD"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000177_89CB_49cc_8C15_0004ABE49BCE" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000178_89CB_49cc_8C15_0004ABE49BCE" value="1"/>
 					</ownedAttribute>
@@ -1532,9 +1532,9 @@
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000204_27A6_46ba_ACA1_C9B471B95D16" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_695BEA73_3C29_4de4_AEB6_0F02887AA33C" name="lisatietolinkki">
-						<type xmi:idref="EAID_9792C112_C336_4a27_B255_AE3446B7A803"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000205_3C29_4de4_AEB6_0F02887AA33C" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000206_3C29_4de4_AEB6_0F02887AA33C" value="1"/>
+						<type xmi:idref="EAJava_URL"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_E6FCA72C_33FA_42d3_88AC_3CD883238E64" name="peruttu">
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000207_33FA_42d3_88AC_3CD883238E64" value="1"/>
@@ -1642,12 +1642,11 @@
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000238_B60E_4902_AD39_BC3997BD4E46" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_02520C51_7253_4f52_8049_6345792E7DFB" name="lisatietolinkki">
-						<type xmi:idref="EAID_9792C112_C336_4a27_B255_AE3446B7A803"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000239_7253_4f52_8049_6345792E7DFB" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000240_7253_4f52_8049_6345792E7DFB" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_5C748FD2_8074_4b7b_BAF6_3157B173558D" name="metatietokuvaus">
-						<type xmi:idref="EAID_9792C112_C336_4a27_B255_AE3446B7A803"/>
+						<type xmi:idref="EAID_DFC4D1CC_7484_47b3_9D6F_008BE7CD78FD"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000241_8074_4b7b_BAF6_3157B173558D" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000242_8074_4b7b_BAF6_3157B173558D" value="1"/>
 					</ownedAttribute>
@@ -1695,7 +1694,7 @@
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_41BD7307_1E35_4e0c_A09F_F750E7497869" name="aineistoTunnus">
 						<type xmi:idref="EAID_DFC4D1CC_7484_47b3_9D6F_008BE7CD78FD"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000251_1E35_4e0c_A09F_F750E7497869" value="0"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000252_1E35_4e0c_A09F_F750E7497869" value="1"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000252_1E35_4e0c_A09F_F750E7497869" value="*"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_BE0632A8_D306_49f0_86C6_EC2DC04AAE2F" name="nimi">
 						<type xmi:idref="EAID_53BD60D4_114A_4a03_BB9F_3C8955DC81ED"/>
@@ -1713,12 +1712,12 @@
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000258_9F6A_4f0d_B453_B4ECEFE71BF8" value="*"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_BA28A58A_28D8_4a85_912A_B8133240EA6D" name="lisatietolinkki">
-						<type xmi:idref="EAID_9792C112_C336_4a27_B255_AE3446B7A803"/>
+						<type xmi:idref="EAID_DFC4D1CC_7484_47b3_9D6F_008BE7CD78FD"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000259_28D8_4a85_912A_B8133240EA6D" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000260_28D8_4a85_912A_B8133240EA6D" value="1"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_BD148F34_5477_4fc3_8595_ADFBD1AA3991" name="metatietokuvaus">
-						<type xmi:idref="EAID_9792C112_C336_4a27_B255_AE3446B7A803"/>
+						<type xmi:idref="EAID_DFC4D1CC_7484_47b3_9D6F_008BE7CD78FD"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000261_5477_4fc3_8595_ADFBD1AA3991" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000262_5477_4fc3_8595_ADFBD1AA3991" value="1"/>
 					</ownedAttribute>
@@ -1785,14 +1784,14 @@
 	<xmi:Extension extender="Enterprise Architect" extenderID="6.5">
 		<elements>
 			<element xmi:idref="EAPK_C20FE8DF_84FE_4ac8_849A_8C873EA43B43" xmi:type="uml:Package" name="Rakennettu ymparisto" scope="public">
-				<model package2="EAID_C20FE8DF_84FE_4ac8_849A_8C873EA43B43" package="EAPK_B06EA14A_F562_4f33_98F5_3362CFBE9578" tpos="0" ea_localid="9694" ea_eleType="package"/>
+				<model package2="EAID_C20FE8DF_84FE_4ac8_849A_8C873EA43B43" package="EAPK_7B6B28E9_C583_4363_9E9C_F37A37AE06C9" tpos="0" ea_localid="9694" ea_eleType="package"/>
 				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
-				<project author="ior" version="1.0" phase="1.0" created="2020-09-16 16:55:01" modified="2020-12-02 19:16:01" complexity="1" status="Proposed"/>
+				<project author="ior" version="1.0" phase="1.0" created="2020-09-16 16:55:01" modified="2020-12-22 10:13:29" complexity="1" status="Proposed"/>
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
 				<xrefs/>
-				<extendedProperties tagged="0" package_name="Implementation Models"/>
+				<extendedProperties tagged="0" package_name="Conceptual Models"/>
 				<packageproperties version="1.0"/>
 				<paths/>
 				<times created="2020-09-16 16:55:01" modified="2020-12-02 19:16:01"/>
@@ -4219,10 +4218,10 @@
 					<Generalization xmi:id="EAID_94558196_D036_4d5d_BAF7_39F1DBE68CD0" start="EAID_7F1B470B_9D90_4753_96E8_510C530159DD" end="EAID_438A30F5_5D5B_4a53_B2AF_7017334DBF48"/>
 				</links>
 			</element>
-			<element xmi:idref="EAPK_8C35E32F_0806_4134_A70C_FF48008FD604" xmi:type="uml:Package" name="RYTJ-ydin" scope="public">
+			<element xmi:idref="EAPK_8C35E32F_0806_4134_A70C_FF48008FD604" xmi:type="uml:Package" name="MKP-ydin" scope="public">
 				<model package2="EAID_8C35E32F_0806_4134_A70C_FF48008FD604" package="EAPK_C20FE8DF_84FE_4ac8_849A_8C873EA43B43" tpos="0" ea_localid="9695" ea_eleType="package"/>
 				<properties isSpecification="false" sType="Package" nType="0" scope="public"/>
-				<project author="ior" version="1.0" phase="1.0" created="2020-09-16 17:03:59" modified="2020-09-16 17:03:59" complexity="1" status="Proposed"/>
+				<project author="ior" version="1.0" phase="1.0" created="2020-09-16 17:03:59" modified="2020-12-22 10:00:28" complexity="1" status="Proposed"/>
 				<code gentype="Java"/>
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
@@ -4230,7 +4229,7 @@
 				<extendedProperties tagged="0" package_name="Rakennettu ymparisto"/>
 				<packageproperties version="1.0"/>
 				<paths/>
-				<times created="2020-09-16 17:03:59" modified="2020-09-16 17:03:59"/>
+				<times created="2020-09-16 17:03:59" modified="2020-12-22 10:00:28"/>
 				<flags iscontrolled="FALSE" isprotected="FALSE" usedtd="FALSE" logxml="FALSE"/>
 			</element>
 			<element xmi:idref="EAID_7FE1D815_70B5_467a_8F8E_A7A160F00708" xmi:type="uml:Class" name="AbstraktiKasittelytapahtumanLaji" scope="public">
@@ -4245,7 +4244,7 @@
 					<tag xmi:id="EAID_01D89B76_3E68_4b6e_8490_42435B467162" name="extensibility" value="http://inspire.ec.europa.eu/registry/extensibility/narrower" modelElement="EAID_7FE1D815_70B5_467a_8F8E_A7A160F00708"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={1FED7B71-1395-4625-8675-9F0ED4992A08}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=CodeList;FQName=GML::CodeList;@ENDSTEREO;$DES;$CLT={7FE1D815-70B5-467a-8F8E-A7A160F00708}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 				<links>
 					<Generalization xmi:id="EAID_4A1C75C6_24AA_49f6_983D_0A52671D294B" start="EAID_667B15A9_6881_4588_B5CD_7E65E8D16DFD" end="EAID_7FE1D815_70B5_467a_8F8E_A7A160F00708"/>
 				</links>
@@ -4262,7 +4261,7 @@
 					<tag xmi:id="EAID_F9638764_B69A_b0b6_91C3_33BA0B293E5D" name="noPropertyType" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;Description: Suppress creation of a named complex type ( property type ) that supports inline or byReference encoding&#xA;" modelElement="EAID_541DF740_5AE1_4150_9D96_6C55526B3FA0"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={E1DC82CC-5DA3-41cf-AD93-7C0475EFFC8E}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FeatureType;FQName=GML::FeatureType;@ENDSTEREO;$DES;$CLT={541DF740-5AE1-4150-9D96-6C55526B3FA0}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 				<attributes>
 					<attribute xmi:idref="EAID_85E0B138_E299_42d5_9FB3_3A7A0DE113B2" name="nimi" scope="Public">
 						<initial/>
@@ -4328,7 +4327,7 @@
 						<initial/>
 						<documentation/>
 						<model ea_localid="113531" ea_guid="{2DE8A615-89CB-49cc-8C15-0004ABE49BCE}"/>
-						<properties type="URL" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="URI" collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="7"/>
 						<stereotype/>
@@ -4380,7 +4379,7 @@
 					<tag xmi:id="EAID_F9638764_B69A_b0b6_B8B9_9E172F0299E4" name="noPropertyType" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;Description: Suppress creation of a named complex type ( property type ) that supports inline or byReference encoding&#xA;" modelElement="EAID_4131AAAE_C5B9_4d2d_8DDA_54969CB1FABB"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={2E4A7E71-D6D9-4f10-8F73-143F0CEBD2DE}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FeatureType;FQName=GML::FeatureType;@ENDSTEREO;$DES;$CLT={4131AAAE-C5B9-4d2d-8DDA-54969CB1FABB}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 				<attributes>
 					<attribute xmi:idref="EAID_85C3C8AC_BA91_4bd9_93E3_CF711CC21536" name="nimi" scope="Public">
 						<initial/>
@@ -4479,7 +4478,7 @@
 					<tag xmi:id="EAID_F9638764_B69A_b0b6_A122_07965A0572BB" name="noPropertyType" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;Description: Suppress creation of a named complex type ( property type ) that supports inline or byReference encoding&#xA;" modelElement="EAID_75FFA532_FF9F_4880_AA35_1DC37E0CF36A"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={DB398F06-68C6-4b11-ADAB-C30FB709DED5}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FeatureType;FQName=GML::FeatureType;@ENDSTEREO;$DES;$CLT={75FFA532-FF9F-4880-AA35-1DC37E0CF36A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 				<attributes>
 					<attribute xmi:idref="EAID_381BA64E_DB3E_4452_A836_627373CD6C27" name="paikallinenTunnus" scope="Public">
 						<initial/>
@@ -4614,7 +4613,7 @@
 					<tag xmi:id="EAID_4BDA6221_0573_4db2_9056_D3A3983CCBAD" name="extensibility" value="http://inspire.ec.europa.eu/registry/extensibility/open" modelElement="EAID_D0E1693F_2554_45d1_9EC3_8B744317F1B8"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={BABBD1F2-02BA-4fa9-8ADC-5F334AE0A021}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=CodeList;FQName=GML::CodeList;@ENDSTEREO;$DES;$CLT={D0E1693F-2554-45d1-9EC3-8B744317F1B8}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 				<links>
 					<Generalization xmi:id="EAID_BB2FA9C6_D261_4a30_A3C5_92F191D3E287" start="EAID_A5E49310_CC73_42cf_BEBC_9A61B9607299" end="EAID_D0E1693F_2554_45d1_9EC3_8B744317F1B8"/>
 				</links>
@@ -4631,7 +4630,7 @@
 					<tag xmi:id="EAID_F9638764_B69A_b0b6_9827_5532C4D04791" name="noPropertyType" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;Description: Suppress creation of a named complex type ( property type ) that supports inline or byReference encoding&#xA;" modelElement="EAID_0BA484E8_5D47_413f_8608_FAB8C6790242"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={F5961BC0-EAA5-4c37-ACA8-F11D61EA9A20}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FeatureType;FQName=GML::FeatureType;@ENDSTEREO;$DES;$CLT={0BA484E8-5D47-413f-8608-FAB8C6790242}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 				<attributes>
 					<attribute xmi:idref="EAID_F1379DC3_819D_4bb9_843A_5BB2F33EAB38" name="asiakirjanTunnus" scope="Public">
 						<initial/>
@@ -4682,7 +4681,7 @@
 						<initial/>
 						<documentation/>
 						<model ea_localid="113688" ea_guid="{02520C51-7253-4f52-8049-6345792E7DFB}"/>
-						<properties type="URL" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<properties collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="4"/>
 						<stereotype/>
@@ -4697,7 +4696,7 @@
 						<initial/>
 						<documentation/>
 						<model ea_localid="113626" ea_guid="{5C748FD2-8074-4b7b-BAF6-3157B173558D}"/>
-						<properties type="URL" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="URI" collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="6"/>
 						<stereotype/>
@@ -4734,7 +4733,7 @@
 					<tag xmi:id="EAID_6919F654_5AB8_40e5_9314_739298870FFB" name="vocabulary" value="http://uri.suomi.fi/codelist/rytj/RY_AsiakirjanLaji_YKAK" modelElement="EAID_BC0DF6FD_991C_47a7_854E_8574C4F5E897"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={9D461EE6-15A9-456c-A0BB-F72562A0FC42}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=CodeList;FQName=GML::CodeList;@ENDSTEREO;$DES;$CLT={BC0DF6FD-991C-47a7-854E-8574C4F5E897}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 			</element>
 			<element xmi:idref="EAID_71B1BC34_F46F_4e18_8E02_66A18E0CC584" xmi:type="uml:Class" name="Kasittelytapahtuma" scope="public">
 				<model package="EAPK_8C35E32F_0806_4134_A70C_FF48008FD604" tpos="0" ea_localid="79667" ea_eleType="element"/>
@@ -4748,7 +4747,7 @@
 					<tag xmi:id="EAID_F9638764_B69A_b0b6_9DE8_71AE23AE217A" name="noPropertyType" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;Description: Suppress creation of a named complex type ( property type ) that supports inline or byReference encoding&#xA;" modelElement="EAID_71B1BC34_F46F_4e18_8E02_66A18E0CC584"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={82BAF843-C2A6-45ab-95D2-891454CCDEA1}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FeatureType;FQName=GML::FeatureType;@ENDSTEREO;$DES;$CLT={71B1BC34-F46F-4e18-8E02-66A18E0CC584}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 				<attributes>
 					<attribute xmi:idref="EAID_86CF38E3_7432_4208_B008_46B3486B8E3E" name="laji" scope="Public">
 						<initial/>
@@ -4783,7 +4782,7 @@
 					<tag xmi:id="EAID_F9638764_B69A_b0b6_B7AE_0B4CB1A2892C" name="noPropertyType" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;Description: Suppress creation of a named complex type ( property type ) that supports inline or byReference encoding&#xA;" modelElement="EAID_B720E434_1797_4bc0_9A6C_BF40DBD1DCB0"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={1ECC6DE5-0410-4bb8-A8C2-3976308319E2}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FeatureType;FQName=GML::FeatureType;@ENDSTEREO;$DES;$CLT={B720E434-1797-4bc0-9A6C-BF40DBD1DCB0}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 				<attributes>
 					<attribute xmi:idref="EAID_41BD7307_1E35_4e0c_A09F_F750E7497869" name="aineistoTunnus" scope="Public">
 						<initial/>
@@ -4793,7 +4792,7 @@
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="0"/>
 						<stereotype/>
-						<bounds lower="0" upper="1"/>
+						<bounds lower="0" upper="*"/>
 						<options/>
 						<style/>
 						<styleex value="volatile=0;"/>
@@ -4849,7 +4848,7 @@
 						<initial/>
 						<documentation/>
 						<model ea_localid="113689" ea_guid="{BA28A58A-28D8-4a85-912A-B8133240EA6D}"/>
-						<properties type="URL" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="URI" collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="4"/>
 						<stereotype/>
@@ -4864,7 +4863,7 @@
 						<initial/>
 						<documentation/>
 						<model ea_localid="113537" ea_guid="{BD148F34-5477-4fc3-8595-ADFBD1AA3991}"/>
-						<properties type="URL" collection="false" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="URI" collection="false" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0"/>
 						<containment containment="Not Specified" position="6"/>
 						<stereotype/>
@@ -4895,7 +4894,7 @@
 					<tag xmi:id="EAID_E38A667B_E5BF_469d_9623_5878C4DAB77F" name="vocabulary" value="http://uri.suomi.fi/codelist/rytj/RY_LahtotietoaineistonLaji" modelElement="EAID_B23638F5_4A97_4a47_9815_27D3D310799E"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={81A82204-26C9-453c-B713-7389D6D0D57D}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=CodeList;FQName=GML::CodeList;@ENDSTEREO;$DES;$CLT={B23638F5-4A97-4a47-9815-27D3D310799E}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 			</element>
 			<element xmi:idref="EAID_9A0421F4_A80C_4dc9_A51E_0CD1E022F893" xmi:type="uml:Class" name="OikeusvaikutteisuudenLaji" scope="public">
 				<model package="EAPK_8C35E32F_0806_4134_A70C_FF48008FD604" tpos="0" ea_localid="79708" ea_eleType="element"/>
@@ -4910,7 +4909,7 @@
 					<tag xmi:id="EAID_7EA50E54_690D_4673_B3D3_EA7A550D260A" name="vocabulary" value="http://uri.suomi.fi/codelist/rytj/RY_OikeusvaikutteisuudenLaji" modelElement="EAID_9A0421F4_A80C_4dc9_A51E_0CD1E022F893"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={79F10F62-1991-4833-809D-87AB87129956}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=CodeList;FQName=GML::CodeList;@ENDSTEREO;$DES;$CLT={9A0421F4-A80C-4dc9-A51E-0CD1E022F893}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 			</element>
 			<element xmi:idref="EAID_F9E9F8F4_CF2A_47c4_8A71_46930B8181C2" xmi:type="uml:Class" name="Tapahtumahistoria" scope="public">
 				<model package="EAPK_8C35E32F_0806_4134_A70C_FF48008FD604" tpos="0" ea_localid="79662" ea_eleType="element"/>
@@ -4924,7 +4923,7 @@
 					<tag xmi:id="EAID_F9638764_B69A_b0b6_BEB1_59A3F055247F" name="noPropertyType" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;Description: Suppress creation of a named complex type ( property type ) that supports inline or byReference encoding&#xA;" modelElement="EAID_F9E9F8F4_CF2A_47c4_8A71_46930B8181C2"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={21047037-C711-4785-AB9A-66CE9E32FF5F}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FeatureType;FQName=GML::FeatureType;@ENDSTEREO;$DES;$CLT={F9E9F8F4-CF2A-47c4-8A71-46930B8181C2}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 				<attributes>
 					<attribute xmi:idref="EAID_480A162F_B2E4_49ce_BA13_A778273BA0EB" name="asianIdentiteettiTunnus" scope="Public">
 						<initial/>
@@ -4960,7 +4959,7 @@
 					<tag xmi:id="EAID_F9638764_B69A_b0b6_A75A_88230639455E" name="noPropertyType" value="false#NOTES#Values: true,false&#xA;Default: false&#xA;Description: Suppress creation of a named complex type ( property type ) that supports inline or byReference encoding&#xA;" modelElement="EAID_43EC363E_FA14_4fcb_9BB2_D15343BC445A"/>
 				</tags>
 				<xrefs value="$XREFPROP=$XID={B8B55370-ACEE-4edc-B8E2-B4CC2F15CB5A}$XID;$NAM=Stereotypes$NAM;$TYP=element property$TYP;$VIS=Public$VIS;$PAR=0$PAR;$DES=@STEREO;Name=FeatureType;FQName=GML::FeatureType;@ENDSTEREO;$DES;$CLT={43EC363E-FA14-4fcb-9BB2-D15343BC445A}$CLT;$SUP=&lt;none&gt;$SUP;$ENDXREF;"/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 				<attributes>
 					<attribute xmi:idref="EAID_6E7C76BB_2A14_4db8_AFBD_855BE5E49C4F" name="laji" scope="Public">
 						<initial/>
@@ -4990,7 +4989,7 @@
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
 				<xrefs/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 				<operations>
 					<operation xmi:idref="EAID_A5ED8E70_BB63_4ccf_973E_508EA2611BC5" name="hallintoaluetunnus" scope="Public">
 						<properties position="0"/>
@@ -5082,7 +5081,7 @@
 				<style appearance="BackColor=-1;BorderColor=-1;BorderWidth=-1;FontColor=-1;VSwimLanes=1;HSwimLanes=1;BorderStyle=0;"/>
 				<tags/>
 				<xrefs/>
-				<extendedProperties tagged="0" package_name="RYTJ-ydin"/>
+				<extendedProperties tagged="0" package_name="MKP-ydin"/>
 				<operations>
 					<operation xmi:idref="EAID_735F04BE_8B44_4220_BE30_01074374CA6C" name="nimi" scope="Public">
 						<properties position="0"/>
@@ -9136,6 +9135,7 @@
 							<general href="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#Real"/>
 						</generalization>
 					</packagedElement>
+					<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_URL" name="URL"/>
 				</packagedElement>
 			</packagedElement>
 		</primitivetypes>
@@ -9749,10 +9749,10 @@
 			</diagram>
 			<diagram xmi:id="EAID_40EB80A5_88D9_404c_B1C2_3AE3F2009F50">
 				<model package="EAPK_8C35E32F_0806_4134_A70C_FF48008FD604" localID="38715" owner="EAPK_8C35E32F_0806_4134_A70C_FF48008FD604"/>
-				<properties name="RYTJ-ydin" type="Logical"/>
-				<project author="ior" version="1.0" created="2020-09-16 22:01:27" modified="2020-12-17 10:14:27"/>
+				<properties name="MPK-ydin" type="Logical"/>
+				<project author="ior" version="1.0" created="2020-09-16 22:01:27" modified="2020-12-22 10:00:46"/>
 				<style1 value="ShowPrivate=1;ShowProtected=1;ShowPublic=1;HideRelationships=0;Locked=0;Border=1;HighlightForeign=1;PackageContents=1;SequenceNotes=0;ScalePrintImage=0;PPgs.cx=0;PPgs.cy=0;DocSize.cx=815;DocSize.cy=1067;ShowDetails=0;Orientation=P;Zoom=40;ShowTags=0;OpParams=1;VisibleAttributeDetail=0;ShowOpRetType=1;ShowIcons=1;CollabNums=0;HideProps=0;ShowReqs=0;ShowCons=0;PaperSize=32512;HideParents=0;UseAlias=0;HideAtts=0;HideOps=0;HideStereo=0;HideElemStereo=0;ShowTests=0;ShowMaint=0;ConnectorNotation=UML 2.1;ExplicitNavigability=0;ShowShape=1;AllDockable=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;ShowNotes=0;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;"/>
-				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=4BCC93F2;"/>
+				<style2 value="ExcludeRTF=0;DocAll=0;HideQuals=0;AttPkg=1;ShowTests=0;ShowMaint=0;SuppressFOC=1;MatrixActive=0;SwimlanesActive=1;KanbanActive=0;MatrixLineWidth=1;MatrixLineClr=0;MatrixLocked=0;TConnectorNotation=UML 2.1;TExplicitNavigability=0;AdvancedElementProps=1;AdvancedFeatureProps=1;AdvancedConnectorProps=1;m_bElementClassifier=1;SPT=1;MDGDgm=;STBLDgm=;ShowNotes=0;VisibleAttributeDetail=0;ShowOpRetType=1;SuppressBrackets=0;SuppConnectorLabels=0;PrintPageHeadFoot=0;ShowAsList=0;SuppressedCompartments=;Theme=:119;SaveTag=CE50D4AB;"/>
 				<swimlanes value="locked=false;orientation=0;width=0;inbar=false;names=false;color=-1;bold=false;fcol=0;tcol=-1;ofCol=-1;ufCol=-1;hl=0;ufh=0;hh=0;cls=0;bw=0;hli=0;SwimlaneFont=lfh:-13,lfw:0,lfi:0,lfu:0,lfs:0,lfface:Calibri,lfe:0,lfo:0,lfchar:1,lfop:0,lfcp:0,lfq:0,lfpf=0,lfWidth=0;"/>
 				<matrixitems value="locked=false;matrixactive=false;swimlanesactive=true;kanbanactive=false;width=1;clrLine=0;"/>
 				<extendedProperties/>
@@ -9810,7 +9810,6 @@
 		<EAStub xmi:id="EAID_3BAC7212_C1AE_4e37_8373_01C87A43A0A5" name="Surface" UMLType="Interface"/>
 		<EAStub xmi:id="EAID_0A614EA9_13B7_4ebe_85ED_AA187D27CBD1" name="CharacterString" UMLType="Interface"/>
 		<EAStub xmi:id="EAID_2E900284_8E24_449b_920A_CA436229BFAD" name="Point" UMLType="Interface"/>
-		<EAStub xmi:id="EAID_9792C112_C336_4a27_B255_AE3446B7A803" name="URL" UMLType="Class"/>
 		<EAStub xmi:id="EAID_313E57F2_5D3C_424a_B7B2_0F4617104EB3" name="TM_Object" UMLType="Class"/>
 	</xmi:Extension>
 	<GML:DataType base_Class="EAID_AC67A092_A817_4b0e_A74D_5FFBF04F9D3B" noPropertyType="false" isCollection="false"/>
