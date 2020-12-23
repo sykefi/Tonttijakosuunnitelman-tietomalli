@@ -7,6 +7,10 @@ modelversion: "1.0"
 status: "Keskeneräinen"
 ---
 # Inspire-yhteensopivuus
+{:.no_toc}
+
+1. 
+{:toc}
 
 ## Inspire Planned Land Use -sovellusskeema
 
