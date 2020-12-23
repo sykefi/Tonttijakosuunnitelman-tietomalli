@@ -221,12 +221,16 @@ Kaavatietovarastossa ei tule olla kahta [Kaavakohde](dokumentaatio/#kaavakohde)-
 
 ### Käyttötarkoitusalueet
 
-{% include clause_start.html type="req" id="laatu/vaat-kayttotarkoitusalue-maar" %}
+{% include clause_start.html type="req" id="laatu/vaat-kayttotarkoitusalue-ak-maar" %}
 Asemakaavan käyttötarkoitusalue on [Kaavakohde](dokumentaatio/#kaavakohde)-luokan objekti, joka liittyy assosiaatiolla ```maarays``` yhteen tai useampaan sellaiseen [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan objektiin, jonka ```laji```-attribuutin arvo on jokin [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)-koodin alakoodeista.
 {% include clause_end.html %}
 
+{% include clause_start.html type="req" id="laatu/vaat-aluevaraus-yk-maar" %}
+Yleiskaavan aluevaraus on [Kaavakohde](dokumentaatio/#kaavakohde)-luokan objekti, joka liittyy assosiaatiolla ```maarays``` yhteen tai useampaan sellaiseen [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan objektiin, jonka ```laji```-attribuutin arvo on jokin [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01)-koodin alakoodeista.
+{% include clause_end.html %}
+
 {% include clause_start.html type="req" id="laatu/vaat-aluemainen-kayttotarkoitusalue" %}
-Asemakaavan käyttötarkoitusalueiden ```geometria```-attribuutin kuvaamaan geometrian tulee olla aluemainen.
+Asemakaavan käyttötarkoitusalueiden ja yleiskaavan aluevarausten ```geometria```-attribuutin kuvaamaan geometrian tulee olla aluemainen.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-ei-leikkaavat-kayttotarkoitusalueet" %}
