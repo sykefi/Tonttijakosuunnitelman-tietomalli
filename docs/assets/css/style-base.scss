@@ -61,6 +61,14 @@ h4 {
   background: none;
 }
 
+h5 {
+  font-size:16px;
+  font-weight: bold;
+  padding-bottom: 0px;
+  background: none;
+}
+
+
 img {
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -240,10 +248,19 @@ ol#markdown-toc > li:before {
       
   }
 
+  h4 {
+    counter-reset: h5counter;
+  }
+
   h4:before {
       content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) "\0000a0\0000a0";
       counter-increment: h4counter;
   }
+
+  h5:before {
+    content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "\0000a0\0000a0";
+    counter-increment: h5counter;
+}
 
   .clause {
     border-left-width: 5px;
@@ -268,8 +285,9 @@ ol#markdown-toc > li:before {
     &.rec {
       border-left-color: #8fbd73;
     }
-    h5.id {
+    .id {
       display: inline-block;
+      color: black;
       margin-left: 0.3em;
       font-family: monospace !important;
       font-weight: 400 !important;
