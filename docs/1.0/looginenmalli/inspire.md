@@ -52,7 +52,7 @@ Kukin Inspire Planned Land Use -skeeman ```SpatialPlan```-luokan instanssi johde
 
 ### ZoningElement
 
-Inspire Planned Land Use -skeeman ```ZoningElement```-luokan tiedot johdetaan loogisen tason Kaavatietomallin [Kaavakohde](dokumentaatio/#kaavakohde)-luokan ja siihen liittyvän [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan tiedoista alla esitettyjen taulukoiden mukaisesti. Syötteeksi ne Kaavakohde-luokkien instanssit, jotka ovat joko [asemakaavan käyttötarkoitusalue](laatusaannot.html#laatu-vaat-kayttotarkoitusalue-ak-maar)- tai [yleiskaavan aluevaraus](laatusaannot.html#vaat-aluevaraus-yk-maar) -tyyppisiä.
+Inspire Planned Land Use -skeeman ```ZoningElement```-luokan tiedot johdetaan loogisen tason Kaavatietomallin [Kaavakohde](dokumentaatio/#kaavakohde)-luokan ja siihen liittyvän [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan tiedoista alla esitettyjen taulukoiden mukaisesti. Syötteeksi ne Kaavakohde-luokkien instanssit, jotka ovat joko [asemakaavan käyttötarkoitusalue](../soveltamisohjeet/asemakaava/#sov-ak-vaat-kayttotarkoitusalue-maar)- tai [yleiskaavan aluevaraus](../soveltamisohjeet/yleiskaava/#sov-yk-vaat-aluevaraus-maar) -tyyppisiä.
 
 | Attribuutti                   |  Johtaminen Kaavatietomallin tiedoista        | Huomautukset
 ------------------------------- | --------------------------------------------- | -------------------------------
@@ -60,7 +60,7 @@ Inspire Planned Land Use -skeeman ```ZoningElement```-luokan tiedot johdetaan lo
 |                               | ```localId```: Kaavakohde.identiteettiTunnus       |
 |                               | ```version```: Kaavakohde.paikallinenTunnus ilman identiteettiTunnus -alkuosaa |
 |                               | ```namespace```: <http://paikkatiedot.fi/so/{aineistotunnus}/LU/ZoningElement>, jossa {aineistotunnus} on Maanmittauslaitoksen myöntämä
-| geometry: GM_MultiSurface [1]    | Kaavakohde.geometria                           | geometria on aina aluemainen, ks. [Laatusäännöt, vaatimus ```laatu-vaat-aluemainen-kayttotarkoitusalue```](laatusaannot.html#laatu-vaat-aluemainen-kayttotarkoitusalue)
+| geometry: GM_MultiSurface [1]    | Kaavakohde.geometria                           | geometria on aina aluemainen, ks. Soveltamisohjeet [asemakaava, vaatimus ```vaat-aluemainen-kayttotarkoitusalue```](../soveltamisohjeet/asemakaava/##sov-ak-vaat-aluemainen-kayttotarkoitusalue) ja [yleiskaava, vaatimus ```vaat-aluemainen-aluevaraus```](../soveltamisohjeet/yleiskaava/#sov-yk-vaat-aluemainen-aluevaraus)
 | validFrom: Date [0..1] (voidable) | Kaavakohde.maarays[laji = alakoodi([Alueen käyttötarkoitus (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)) TAI maarays.laji = alakoodi([Alueen käyttötarkoitus (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01))][1].voimassaoloAika.begin               |
 | validTo: Date [0..1] (voidable) | Kaavakohde.maarays[laji = alakoodi([Alueen käyttötarkoitus (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)) TAI maarays.laji = alakoodi([Alueen käyttötarkoitus (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01))][1].voimassaoloAika.end                 |
 | hilucsLandUse: HILUCSValue [1..*] | Kaavakohde.maarays[laji = alakoodi([Alueen käyttötarkoitus (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)) TAI maarays.laji = alakoodi([Alueen käyttötarkoitus (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01))].laji | ks. [HILUCSValue](#hilucsvalue)

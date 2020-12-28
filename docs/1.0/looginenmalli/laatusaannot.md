@@ -215,30 +215,3 @@ Kaavatietovarastossa ei tule olla kahta [Kaavakohde](dokumentaatio/#kaavakohde)-
 * ```geometria```- ja ```pystysuuntainenRajaus```-attribuuttien yhdessä kuvaavat geometriat leikaavat toisiaan tai ovat sisäkkäisiä.
 {% include clause_end.html %}
 
-
-
-## Kaavamääräyskohtaiset säännöt
-
-### Käyttötarkoitusalueet
-
-{% include clause_start.html type="req" id="laatu/vaat-kayttotarkoitusalue-ak-maar" %}
-Asemakaavan käyttötarkoitusalue on [Kaavakohde](dokumentaatio/#kaavakohde)-luokan objekti, joka liittyy assosiaatiolla ```maarays``` yhteen tai useampaan sellaiseen [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan objektiin, jonka ```laji```-attribuutin arvo on jokin [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)-koodin alakoodeista.
-{% include clause_end.html %}
-
-{% include clause_start.html type="req" id="laatu/vaat-aluevaraus-yk-maar" %}
-Yleiskaavan aluevaraus on [Kaavakohde](dokumentaatio/#kaavakohde)-luokan objekti, joka liittyy assosiaatiolla ```maarays``` yhteen tai useampaan sellaiseen [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan objektiin, jonka ```laji```-attribuutin arvo on jokin [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01)-koodin alakoodeista.
-{% include clause_end.html %}
-
-{% include clause_start.html type="req" id="laatu/vaat-aluemainen-kayttotarkoitusalue" %}
-Asemakaavan käyttötarkoitusalueiden ja yleiskaavan aluevarausten ```geometria```-attribuutin kuvaamaan geometrian tulee olla aluemainen.
-{% include clause_end.html %}
-
-{% include clause_start.html type="req" id="laatu/vaat-ei-leikkaavat-kayttotarkoitusalueet" %}
-Asemakaavan käyttötarkoitusalueet eivät saa leikata toisiaan.
-{% include clause_end.html %}
-
-{% include clause_start.html type="req" id="laatu/vaat-asemakaavan-kayttotarkoituspeite" %}
-Asemakaavan, jonka ```elinkaaritila```-attribuutin arvo on kaavaehdotus tai myöhempi (koodi 04, 05, 06, 07, 08, 09, 10, 11 tai 12), sisältämien käyttötarkoitusalueiden tulee peittää sen ```aluerajaus```-attribuutin ilmaisema kaavan alue siten, että kukin alueen sisäpiste sisältyy täsmälleen yhteen käyttötarkoitusalueeseen.
-{% include clause_end.html %}
-
-{% include question.html content="Alueen käyttötarkoituksen antaminen yhtenä kaavamääräyslajina tekee laatusäännöistä monimutkaisia, kun käyttötarkoitusalueita ei voida erotella tietyn yhden kaavamääräyksen avulla. Pitäisikö sittenkin antaa alueen käyttötarkoitus omana kaavamääräyslajinaan tai jopa palata ajatukseen kaavakohdelajin käyttämisestä käyttötarkoitusalueiden ilmoittamiseen?" %}
