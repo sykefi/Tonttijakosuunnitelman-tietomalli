@@ -196,11 +196,11 @@ Mikäli sallittua rakentamisen määrää ei ole jaoteltu käyttötarkoituksitta
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0308>
 
 {% include clause_start.html type="req" id="sov-ak/vaat-rakennuspaikkojen-maara-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä vain yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) joka kertoo sallitun rakennuspaikkojen enimmäismäärän sen kaavamääräyskohteen aluella, johon kaavamääräys on liitetty. Lukuarvoissa ei saa esiintyä nollasta poikkeavia desimaaleja. Yksikköä ei käytetä.
+```arvo```-attribuutin arvona saa esiintyä vain yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) joka kertoo sallitun rakennuspaikkojen enimmäismäärän sen kaavakohteen aluella, johon kaavamääräys on liitetty. Lukuarvoissa ei saa esiintyä nollasta poikkeavia desimaaleja. Yksikköä ei käytetä.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="sov-ak/vaat-rakennuspaikkojen-maara-lisatiedot" %}
-```lisatieto```-attribuutin arvoina saa esiintyä vain nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Käyttötarkoituskohdistus](http://uri.suomi.fi/codelist/rytj/RY_Lisatiedonlaji_AK/code/02), jolla on täsmälleen yksi ```arvo``` lajia [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa johonkin [Rakennusluokitus 2018](http://uri.suomi.fi/codelist/jhs/rakennus_1_20180712)-koodiston koodiin.
+```lisatieto```-attribuutin arvoina saa esiintyä vain nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Käyttötarkoituskohdistus](http://uri.suomi.fi/codelist/rytj/RY_Lisatiedonlaji_AK/code/02), jolla on täsmälleen yksi ```arvo``` lajia [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa johonkin [Rakennusluokitus 2018](http://uri.suomi.fi/codelist/jhs/rakennus_1_20180712)-koodiston koodiin. Mikäli vähintään yksi lisätieto on annettu, koskee rakennuspaikkojen lukumäärä vain lisätietojen avulla rajattuja rakennustyyppejä.
 {% include clause_end.html %}
 
 {% include note.html content="Käytetään tavallisesti vain ranta-asemakaavoissa" %}
@@ -294,7 +294,7 @@ Ilmaisee, että kaavakohteen geometria kuvaa paikkaa, jolla on rakennus tai joho
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="sov-ak/vaat-rakennuspaikka-lisatiedot" %}
-```lisatieto```-attribuutilla ei saa olla arvoja.
+```lisatieto```-attribuutin arvoina saa esiintyä vain nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Käyttötarkoituskohdistus](http://uri.suomi.fi/codelist/rytj/RY_Lisatiedonlaji_AK/code/02), jolla on täsmälleen yksi ```arvo``` lajia [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa johonkin [Rakennusluokitus 2018](http://uri.suomi.fi/codelist/jhs/rakennus_1_20180712)-koodiston koodiin. Mikäli vähintään yksi lisätieto on annettu, saa rakennuspaikkaan rakentaa vain lisätietojen avulla rajattuja rakennustyyppejä.
 {% include clause_end.html %}
 
 {% include note.html content="Käytetään tavallisesti vain ranta-asemakaavoissa" %}
@@ -311,159 +311,225 @@ Ilmaisee, että kaavakohteen geometria kuvaa paikkaa, jolla on rakennus tai joho
 {% include clause_end.html %}
 
 #### Rakentamistapa
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/03>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/05>
 
-Ryhmittelyotsikko, vain alemman tason koodeja käytetään.
+Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
 
 ##### Kattokaltevuus
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/031>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0501>
 
-Mahdolliset ```arvo```-attribuutin arvot:
-* Yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo rakennusten katon sallitun kaltevuuden asteina (```deg```) sen kaavamääräyskohteen alueella, johon kaavamääräys on liitetty.
+{% include clause_start.html type="req" id="sov-ak/vaat-kattokaltevuus-arvot" %}
+```arvo```-attribuutin arvoja saa esiintyä vain yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo rakennusten katon sallitun kaltevuuden asteina (```deg```) sen kaavakohteen alueella, johon kaavamääräys on liitetty.
+{% include clause_end.html %}
 
-Ei mahdollisia ```lisatieto```-attribuutin arvoja.
+{% include clause_start.html type="req" id="sov-ak/vaat-kattokaltevuus-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
 
 ##### Uloke
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/032>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0502>
 
-Ilmaisee, että kaavamääräyskohteen geometria kuvaa liikenne- rautatie- tai katualueen osaa, johon saa sijoittaa yläpuolisen rakentamisen vaatimia kantavia rakenteita, jotka eivät haittaa liikennealueen käyttöä.
+{% include clause_start.html type="req" id="sov-ak/vaat-uloke-maar" %}
+Ilmaisee, että kaavakohteen geometria kuvaa liikenne- rautatie- tai katualueen osaa, johon saa sijoittaa yläpuolisen rakentamisen vaatimia kantavia rakenteita, jotka eivät haittaa liikennealueen käyttöä.
+{% include clause_end.html %}
 
-Mahdolliset ```arvo```-attribuutin arvot:
-* Nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+{% include clause_start.html type="req" id="sov-ak/vaat-uloke-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+{% include clause_end.html %}
 
-Ei mahdollisia ```lisatieto```-attribuutin arvoja.
+{% include clause_start.html type="req" id="sov-ak/vaat-uloke-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
 
 ##### Rakennuksen harjasuunta
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/033>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0503>
 
-Mahdolliset ```arvo```-attribuutin arvot:
-* Yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo rakennusten katon harjan sallitun kompassisuunnan  asteina (```deg```) sen kaavamääräyskohteen alueella, johon kaavamääräys on liitetty.
+{% include clause_start.html type="req" id="sov-ak/vaat-harjasuunta-arvot" %}
+```arvo```-attribuutin arvona saa esiintyä vain yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat rakennusten katon harjan sallitun kompassisuunnan asteina (```deg```) sen kaavakohteen alueella, johon kaavamääräys on liitetty.
+{% include clause_end.html %}
 
-Ei mahdollisia ```lisatieto```-attribuutin arvoja.
+{% include clause_start.html type="req" id="sov-ak/vaat-harjasuunta-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
 
 ##### Kulkuaukko
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/034>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0504>
 
-Ilmaisee, että kaavamääräyskohteen geometria kuvaa paikka, johon rakennettavaan rakennukseen tulee jättää kulkuaukko.
+{% include clause_start.html type="req" id="sov-ak/vaat-kulkuaukko-maar" %}
+Ilmaisee, että kaavakohteen geometria kuvaa rakennukseen liittyvää paikkaa, johon tulee jättää kulkuaukko.
+{% include clause_end.html %}
 
-Mahdolliset ```arvo```-attribuutin arvot:
-* Nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+{% include clause_start.html type="req" id="sov-ak/vaat-kulkuaukko-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+{% include clause_end.html %}
 
-Ei mahdollisia ```lisatieto```-attribuutin arvoja.
+{% include clause_start.html type="req" id="sov-ak/vaat-kulkuaukko-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
 
 ##### Valokatteinen tila
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/035>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0505>
 
-Ilmaisee, että kaavamääräyskohteen geometria kuvaa alueen osaa, johon tulee rakentaa valokatteinen tila.
+{% include clause_start.html type="req" id="sov-ak/vaat-valokatteinen-tila-maar" %}
+Ilmaisee, että kaavakohteen geometria kuvaa alueen osaa, johon tulee rakentaa valokatteinen tila.
+{% include clause_end.html %}
 
-Mahdolliset ```arvo```-attribuutin arvot:
-* Nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+{% include clause_start.html type="req" id="sov-ak/vaat-valokatteinen-tila-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+{% include clause_end.html %}
 
-Ei mahdollisia ```lisatieto```-attribuutin arvoja.
+{% include clause_start.html type="req" id="sov-ak/vaat-valokatteinen-tila-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
 
 ##### Suora uloskäynti porrashuoneista
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/036>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0506>
 
-Mahdolliset ```arvo```-attribuutin arvot:
-* Yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavamääräyskohteen geometrian osan kanssa, jolla tulee olla suora uloskäunti porrashuoneista.
+{% include clause_start.html type="req" id="sov-ak/vaat-suora-uloskaynti-porrashuoneista-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, jonka kohdalla tulee olla suora uloskäunti porrashuoneista.
+{% include clause_end.html %}
 
-Ei mahdollisia ```lisatieto```-attribuutin arvoja.
+{% include clause_start.html type="req" id="sov-ak/vaat-suora-uloskaynti-porrashuoneista-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
 
 ##### Ei saa rakentaa ikkunoita
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/037>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0507>
 
-Mahdolliset ```arvo```-attribuutin arvot:
-* Yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavamääräyskohteen geometrian osan kanssa, jonka puoleisten rakennusten seiniin ei saa sijoittaa ikkunoita.
+{% include clause_start.html type="req" id="sov-ak/vaat-ei-ikkunoita-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, jonka puoleisten rakennusten seiniin ei saa sijoittaa ikkunoita.
+{% include clause_end.html %}
 
-Ei mahdollisia ```lisatieto```-attribuutin arvoja.
+{% include clause_start.html type="req" id="sov-ak/vaat-ei-ikkunoita-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
 
 ##### Ääneneristävyys
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/038>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0508>
 
-Mahdolliset ```arvo```-attribuutin arvot:
+{% include clause_start.html type="req" id="sov-ak/vaat-aaneneristavyys-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain seuraavat:
 * Yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), joka kuvaa rakennuksen ulkoseinien sekä ikkunoiden ja muiden rakenteiden ääneneristävyyden liikennemelua vastaan desibeleinä (```db```).
-* Nolla tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavamääräyskohteen geometrian osan kanssa, jonka puoleisia sivuja kaavamääräys koskee.
+* Nolla tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, jonka puoleisia sivuja kaavamääräys koskee.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="sov-ak/vaat-aaneneristavyys-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
 
 ##### Parvekkeet sijoitettava rungon sisään
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/039>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0509>
 
-Ilmaisee, että kaavamääräyskohteen aluella rakennusten parvekkeet tulee rakentaa talon rungon sisään.
+{% include clause_start.html type="req" id="sov-ak/vaat-parvekkeet-rungon-sisaan-maar" %}
+Ilmaisee, että kaavakohteen aluella rakennusten parvekkeet tulee rakentaa talon rungon sisään.
+{% include clause_end.html %}
 
-Mahdolliset ```arvo```-attribuutin arvot:
-* Nolla tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavamääräyskohteen geometrian osan kanssa, jonka puoleisia sivuja kaavamääräys koskee. 
+{% include clause_start.html type="req" id="sov-ak/vaat-parvekkeet-rungon-sisaan-arvot" %}
+```arvo```-attribuutin arvona saa esiintyä vain nolla tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, jonka puoleisia sivuja kaavamääräys koskee. 
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="sov-ak/vaat-parvekkeet-rungon-sisaan-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+##### Hissi
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0510>
+
+{% include clause_start.html type="req" id="sov-ak/vaat-hissi-maar" %}
+Ilmaisee, että kaavakohteen aluella rakennuksiin tai niiden tietyille sivuille on rakennettava hissit.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="sov-ak/vaat-hissi-arvot" %}
+```arvo```-attribuutin arvona saa esiintyä vain nolla tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, joka puoleisia sivuja kaavamääräys koskee. 
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="sov-ak/vaat-hissi-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
 
 ##### Viherkatto
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/0310>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0511>
 
-Ilmaisee, että kaavamääräyskohteen aluelle sijoitettavaan rakennukseen tai sen osaan on rakennettava viherkatto.
+{% include clause_start.html type="req" id="sov-ak/vaat-viherkatto-maar" %}
+Ilmaisee, että kaavakohteen aluelle sijoitettavaan rakennukseen tai sen osaan on rakennettava viherkatto.
+{% include clause_end.html %}
 
-Mahdolliset ```arvo```-attribuutin arvot:
-* Nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+{% include clause_start.html type="req" id="sov-ak/vaat-viherkatto-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+{% include clause_end.html %}
 
-Ei mahdollisia ```lisatieto```-attribuutin arvoja.
+{% include clause_start.html type="req" id="sov-ak/vaat-viherkatto-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
 
 ##### Kelluvat asuinrakennukset
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/0311>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0512>
 
-Ilmaisee, että kaavamääräyskohteen aluelle sijoitettavat asuinrakennukset voidaan toteuttaa veden päällä kelluvina.
+{% include clause_start.html type="req" id="sov-ak/vaat-kelluvat-rakennukset-maar" %}
+Ilmaisee, että kaavakohteen aluelle sijoitettavat rakennukset voidaan toteuttaa veden päällä kelluvina.
+{% include clause_end.html %}
 
-Mahdolliset ```arvo```-attribuutin arvot:
-* Nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+{% include clause_start.html type="req" id="sov-ak/vaat-kelluvat-rakennukset-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+{% include clause_end.html %}
 
-Ei mahdollisia ```lisatieto```-attribuutin arvoja.
+{% include clause_start.html type="req" id="sov-ak/vaat-kelluvat-rakennukset-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
 
 {% include question.html content="Pitäisikö määräyslajia laventaa koskemaan mitä tahansa rakennuksia, ei vain asuinrakennuksia?" %}
 
 ##### Muu rakentamistapaan liittyvä määräys
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/0311>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0513>
 
-Mahdolliset ```arvo```-attribuutin arvot:
-* Yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen.
-
-#### Ulkoalueet
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/05>
-
-Ryhmittelyotsikko, vain alemman tason koodeja käytetään.
-
-#### Liikenne
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/06>
-
-Ryhmittelyotsikko, vain alemman tason koodeja käytetään.
+{% include clause_start.html type="req" id="sov-ak/vaat-muu-rakentamistapa-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen.
+{% include clause_end.html %}
 
 #### Korkeusasema
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/09>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/06>
 
-Ryhmittelyotsikko, vain alemman tason koodeja käytetään.
+Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
 
-#### Tonttijako
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/10>
+#### Ulkoalueet
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/07>
 
-Ryhmittelyotsikko, vain alemman tason koodeja käytetään.
+Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
+
+#### Liikenne
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/08>
+
+Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
 
 #### Ympäristöarvojen vaaliminen
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/11>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/09>
 
-Ryhmittelyotsikko, vain alemman tason koodeja käytetään.
+Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
+
+#### Tonttijako
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/10>
+
+Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
 
 #### Yleismääräykset
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/12>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/11>
 
-Ryhmittelyotsikko, vain alemman tason koodeja käytetään.
+Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
 
 #### Yhdyskuntatekninen huolto
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/13>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/12>
 
-Ryhmittelyotsikko, vain alemman tason koodeja käytetään.
+Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
 
-#### Ympäristönsuojelu
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/14>
+#### Ympäristön ja terveyden suojelu
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/13>
 
-Ryhmittelyotsikko, vain alemman tason koodeja käytetään.
+Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
 
 #### Nimistö
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/Kaavamaaraykset/code/15>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/14>
 
-Ryhmittelyotsikko, vain alemman tason koodeja käytetään.
+Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
 
 ### Laatusäännöt
 
