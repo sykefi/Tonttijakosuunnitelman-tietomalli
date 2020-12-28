@@ -393,7 +393,7 @@ Ilmaisee, että kaavakohteen geometria kuvaa alueen osaa, johon tulee rakentaa v
 ```lisatieto```-attribuutilla ei saa olla arvoja.
 {% include clause_end.html %}
 
-##### Ei saa rakentaa ikkunoita
+##### Ikkunaton seinä
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0507>
 
 {% include clause_start.html type="req" id="sov-ak/vaat-ei-ikkunoita-arvot" %}
@@ -403,6 +403,9 @@ Ilmaisee, että kaavakohteen geometria kuvaa alueen osaa, johon tulee rakentaa v
 {% include clause_start.html type="req" id="sov-ak/vaat-ei-ikkunoita-lisatiedot" %}
 ```lisatieto```-attribuutilla ei saa olla arvoja.
 {% include clause_end.html %}
+
+{% include note.html content="Koodistossa otsikolla 'Ei saa rakentaa ikkunoita', tulisiko muuttaa?" %}
+
 
 ##### Ääneneristävyys
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0508>
@@ -491,6 +494,88 @@ Ilmaisee, että kaavakohteen aluelle sijoitettavat rakennukset voidaan toteuttaa
 
 Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
 
+##### Maanpinnan korkeusasema
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0601>
+
+Kaava-aineistossa voidaan ilmaista maanpinnan nimelliskorkeus merenpinnasta tietyissä pisteissä kaavamääräyksenä, vaikka sen arvon tuleekin perustua kaavan lähtötietoaineiston topografiseen tietoon.
+
+{% include clause_start.html type="req" id="sov-ak/vaat-maanpinnan-korkeusasema-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat maanpinnan korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona kaavakohteen sijainnissa. 
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="sov-ak/vaat-maanpinnan-korkeusasema-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+{% include question.html content="Miksi maanpinnan korkeusasema on kaavamääräys? Ei voi olla ristiriidassa topografisen pohjakartta-aineiston korkeuskäyrien kanssa?" %}
+
+##### Rakennuksen vesikaton ylimmän kohdan korkeusasema
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0602>
+
+{% include clause_start.html type="req" id="sov-ak/vaat-vesikaton-korkeusasema-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat kaavakohteen alueelle sijoitettavien rakennusten vesikaton ylimmän kohdan korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="sov-ak/vaat-vesikaton-korkeusasema-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+
+##### Rakennuksen julkisivupinnan ja vesikaton leikkauskohdan korkeusasema
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0603>
+
+{% include clause_start.html type="req" id="sov-ak/vaat-julkisivupinnan-ja-vesikaton-leikkauksen-korkeusasema-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat kaavakohteen alueelle sijoitettavien rakennusten julkisivupinnan ja vesikaton leikkauskohdan korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="sov-ak/vaat-julkisivupinnan-ja-vesikaton-leikkauksen-korkeusasema-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+##### Rakennuksen julkisivun enimmäiskorkeus metreinä
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0604>
+
+{% include clause_start.html type="req" id="sov-ak/vaat-julkisivun-enimmaiskorkeus-arvot" %}
+```arvo```-attribuutin arvona saa esiintyä vain yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat kaavakohteen alueelle sijoitettavien rakennusten julkisivujen enimmäiskorkeuden. Yksikkönä metri (```m```).
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="sov-ak/vaat-julkisivun-enimmaiskorkeus-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+{% include question.html content="Määräyksen otsikosta pois 'metreinä'?" %}
+
+##### Rakennuksen, rakenteiden ja laitteiden ylin korkeusasema
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0605>
+
+{% include clause_start.html type="req" id="sov-ak/vaat-rakennusken-rakenteiden-laitteiden-korkeusasema-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat kaavakohteen alueelle sijoitettavien rakennusten, rakenteiden ja laitteiden ylimmän korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="sov-ak/vaat-maanalaisen-kohteen-korkeusasema-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+##### Maanalaisen kohteen korkeusasema
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0606>
+
+{% include clause_start.html type="req" id="sov-ak/vaat-maanalaisen-kohteen-korkeusasema-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat maanalaisen kaavakohteen perustason korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona.
+{% include clause_end.html %}
+
+{% include question.html content="Mitä korkeutta tämä tarkalleen ottaen tarkoittaa? Mikä on oikea termi tälle 'perustasolle'?" %}
+
+{% include clause_start.html type="req" id="sov-ak/vaat-maanalaisen-kohteen-korkeusasema-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+##### Muu korkeusasemaan liittyvä määräys
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0607>
+
+{% include clause_start.html type="req" id="sov-ak/vaat-muu-korkeusasema-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen.
+{% include clause_end.html %}
+
 #### Ulkoalueet
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/07>
 
@@ -552,6 +637,13 @@ Asemakaavan, jonka ```elinkaaritila```-attribuutin arvo on kaavaehdotus tai myö
 {% include clause_end.html %}
 
 {% include question.html content="Alueen käyttötarkoituksen antaminen yhtenä kaavamääräyslajina tekee laatusäännöistä monimutkaisia, kun käyttötarkoitusalueita ei voida erotella tietyn yhden kaavamääräyslajin, vaan sen alakoodien avulla. Pitäisikö sittenkin antaa alueen käyttötarkoitus omana kaavamääräyslajinaan tai jopa palata ajatukseen kaavakohdelajin käyttämisestä käyttötarkoitusalueiden ilmoittamiseen?" %}
+
+
+#### Korkeusasemat
+
+{% include clause_start.html type="req" id="sov-ak/vaat-maanpinnan-korkeusasema-konsistenssi" %}
+[Maanpinnan korkeusasema](#maanpinnan-korkeusasema) -kaavamääräyksen arvon on vastattava kaavan [Pohjakartta](http://uri.suomi.fi/codelist/rytj/RY_LahtotietoaineistonLaji/code/11)-lajin [Lahtotietoaineiston](../../looginenmallin/dokumentaatio/#lahtotietoaineisto) topografisen aineiston maanpinnan korkeutta kaavakohteen sijannissa kuvaavaa arvoa.
+{% include clause_end.html %}
 
 ## Kaavamääräysten mallintamisen esimerkkejä
 
