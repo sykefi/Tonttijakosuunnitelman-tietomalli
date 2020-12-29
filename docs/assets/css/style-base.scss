@@ -82,7 +82,9 @@ b {
   font-weight: bold;
 }
 
-
+.dropdown-header {
+  font-size: 1.1rem;
+}
 
 .inner {
   position: static;
@@ -123,7 +125,10 @@ b {
      background-color:  #ffffffe0;
      padding-left: 2em;
      padding-right: 3em;
-     text-align: justify;
+   }
+
+   p {
+    text-align: justify;
    }
 
    &.ea {
