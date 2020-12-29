@@ -864,11 +864,27 @@ Ilmaisee, että kaavakohde kuvaa ekologisen yhteyden.
 Ilmaisee, että kaavakohde kuvaa alueen, jolla ympäristö säilytetään.
 {% include clause_end.html %}
 
+{% include clause_start.html type="req" id="prof-ak/vaat-sailytettava-ymparisto-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-sailytettava-ymparisto-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
 #### Alue, jolla on erityistä ulkoilun ohjaamistarvetta
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0904>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-ulkoilun-ohjaamistarve-maar" %}
 Ilmaisee, että kaavakohde kuvaa alueen, jolla on sen luontoarvojen vuoksi erityistä ulkoilun ohjaamistarvetta.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-ulkoilun-ohjaamistarve-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-ulkoilun-ohjaamistarve-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
 {% include clause_end.html %}
 
 ### Tonttijako
