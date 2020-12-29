@@ -1133,7 +1133,7 @@ Ilmaisee, että kaavakohde kuvaa alueen, jolla esiintyy siinä määrin melua, e
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-melualue-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä vain nolla tai useampi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kuvaa melun määrän äänitasona. Käytettävä yksikkö riippuu melun mittaustavasta, esim. L-Aeg-1h, L-AFmax tai L-Cpeak.
+```arvo```-attribuutin arvona saa esiintyä vain nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla kuvataan melun tyyppiä ja haitallisuutta.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-melualue-lisatiedot" %}
