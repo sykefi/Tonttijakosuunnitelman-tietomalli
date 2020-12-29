@@ -18,7 +18,7 @@ Tämän dokumentin vaatimukset ja suositukset muodostavat Kaavatietomallin loogi
 
 Tämän muodollisen dokumentin tietoja täydentää [Kaavatietomallin keittokirja - yleiskaava](./keittokirja.html), joka sisältää käytännön esimerkkejä Kaavatietomallin soveltamisesta yleiskaavoituksen kaavoitusratkaisuihin.
 
-{% include clause_start.html type="req" id="prof-ak/vaat-yleiskaava-aineisto-maar" %}
+{% include clause_start.html type="req" id="prof-yk/vaat-yleiskaava-aineisto-maar" %}
 Kaavatietomallin mukainen yleiskaava-aineisto koostuu [Kaava](../../looginenmalli/dokumentaatio/#kaava)-luokan instansseista, joiden ```laji```-attribuutin arvo on jokin [Kaavalajit]()-koodiston koodin [Yleiskaava](http://uri.suomi.fi/codelist/rytj/RY_Kaavalaji/code/2) [alakoodeista](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar), sekä näihin instansseihin Kaavatietomallin mukaisesti liittyvistä muiden luokkien instansseista.
 {% include clause_end.html %}
 
