@@ -415,7 +415,7 @@ Ilmaisee, että kaavakohteen geometria kuvaa alueen osaa, johon tulee rakentaa v
 
 {% include clause_start.html type="req" id="prof-ak/vaat-aaneneristavyys-arvot" %}
 ```arvo```-attribuutin arvoina saa esiintyä vain seuraavat:
-* Yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), joka kuvaa rakennuksen ulkoseinien sekä ikkunoiden ja muiden rakenteiden ääneneristävyyden liikennemelua vastaan desibeleinä (```db```).
+* Yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), joka kuvaa rakennuksen ulkoseinien sekä ikkunoiden ja muiden rakenteiden vähimmäisääneneristävyyden liikennemelua vastaan desibeleinä (```db```).
 * Nolla tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, jonka puoleisia sivuja kaavamääräys koskee.
 {% include clause_end.html %}
 
@@ -995,15 +995,250 @@ Rakentamistapaohje on suositeltavaa linkittää kaavamääräykseen ```liittyvaA
 
 Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
 
+#### Alin painovoimainen viemäröintitaso
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1201>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-alin-painovoimainen-viemarointitaso-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste), joka kertoo alimman painovoimaisen viemäröintitason korkeuden sovitun pystysuuntaisen koordinaatiston arvona.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-alin-painovoimainen-viemarointitaso-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+#### Aurinkokennojen alin sijoittumistaso
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1202>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-alin-aurinkokennojen-sijoittumistaso-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste), joka kertoo alimman aurinkokennojen sijoittumistason korkeuden sovitun pystysuuntaisen koordinaatiston arvona.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-alin-alin-aurinkokennojen-sijoittumistaso-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+#### Vaatimus hulevesisuunnitelman laatimisesta
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1203>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-hulevesisuunnitelma-laadittava-maar" %}
+Ilmaisee, että kaavakohde kuvaa alueen, jolle on laadittava hulevesisuunnitelma.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-hulevesisuunnitelma-laadittava-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-hulevesisuunnitelma-laadittava-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+#### Liitettävä kaukolämpöverkkoon
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1204>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-liitettava-kaukolampoverkkoon-maar" %}
+Ilmaisee, että kaavakohde kuvaa alueen, joka on liitettävä kaukolämpöverkkoon.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-liitettava-kaukolampoverkkoon-arvot" %}
+```arvo```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-liitettava-kaukolampoverkkoon-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+#### Hulevesien imeyttämisen periaate tai vaatimus
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1205>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-hulevesien-imeyttaminen-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa hulevesien imeyttämisen periaatteen tai vaatimuksen.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-hulevesien-imeyttaminen-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+#### Muu yhdyskuntatekniseen huoltoon liittyvä määräys
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1206>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-muu-yhdyskuntatekninen-huolto-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-muu-yhdyskuntatekninen-huolto-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
 ### Ympäristön ja terveyden suojelu
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/13>
 
 Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
 
+#### Pilaantunut maa-alue
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1301>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-pilaantunut-maa-alue-maar" %}
+Ilmaisee, että kaavakohde kuvaa alueen, jolla on ihmisen toiminnan seurauksena haitallisia aineita siinä määrin, että niistä aiheutuu haittaa tai merkittävä riski ympäristölle tai terveydelle, viihtyisyyden vähentymistä tai muuta niihin verrattavissa olevaa haittaa.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-pilaantunut-maa-alue-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa, esimerkiksi lisätietoa pilaantumisen laadusta.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-pilaantunut-maa-alue-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+{% include clause_start.html type="rec" id="prof-ak/suos-pilaantunut-maa-alue-liittyva-asiakirja" %}
+Mikäli pilaantumiseen liittyen on laadittu selvitys on suositeltavaa linkittää se kaavamääräykseen ```liittyvaAsiakirja```-assosiaation avulla.
+{% include clause_end.html %}
+
+{% include question.html content="Miksi pilaantunut maa-alue on kaavamääräys? Pitäisikö pilaantuneiden maa-alueiden olla osa lähtötietoaineistoja? SYKEn MATTI-järjestelmä?" %}
+
+#### Meluaita
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1302>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-meluaita-maar" %}
+Ilmaisee, että kaavakohde kuvaa alueen, jolle tulee rakentaa meluaita.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-meluaita-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain nolla tai yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), joka kuvaa aidan vähimmäisääneneristävyyden liikennemelua vastaan desibeleinä (```db```).
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-meluaita-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+#### Meluvalli
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1303>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-meluvalli-maar" %}
+Ilmaisee, että kaavakohde kuvaa alueen, jolle tulee rakentaa meluvalli.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-meluvalli-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain nolla tai yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), joka kuvaa vallin vähimmäisääneneristävyyden liikennemelua vastaan desibeleinä (```db```).
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-meluvalli-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+#### Melualue
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1304>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-melualue-maar" %}
+Ilmaisee, että kaavakohde kuvaa alueen, jolla esiintyy siinä määrin melua, että siitä voi aiheutua merkittävää haittaa.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-melualue-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain nolla tai useampi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kuvaa melun määrän äänitasona. Käytettävä yksikkö riippuu melun mittaustavasta, esim. L-Aeg-1h, L-AFmax tai L-Cpeak.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-melualue-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+{% include question.html content="Miksi melualue on kaavamääräys? Pitäisikö melualueiden olla osa lähtötietoaineistoja?" %}
+
+#### Radonhaitta huomioitava
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1305>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-radonhaitta-maar" %}
+Ilmaisee, että kaavakohde kuvaa alueen, jolla maaperästä saattaa erittyä radonkaasua siinä määrin, että siitä voi aiheutua terveyshaittaa. Radonhaitta on huomioitava rakennettaessa.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-radonhaitta-arvot" %}
+```arvo```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-radonhaitta-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+#### Muu ympäristönsuojeluun liittyvä määräys
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1306>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-muu-ymparistonsuojelu-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-muu-ymparistonsuojelu-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
 ### Nimistö
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/14>
 
 Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
+
+#### Kadun tai tien nimi
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1401>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-kadun-tien-nimi-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman kadun tai tien nimi.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-kadun-tien-nimi-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+#### Torin tai aukion nimi
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1402>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-torin-aukion-nimi-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman torin tai aukion nimi.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-torin-aukion-nimi-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+#### Puiston tai muun yleisen alueen nimi
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1403>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-yleisen-alueen-nimi-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman torin tai aukion nimi.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-yleisen-alueen-nimi-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+
+#### Kaupungin- tai kunnanosan nimi
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1404>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-kaupungin-kunnan-osan-nimi-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman kaupungin- tai kunnanosan nimi.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-kaupungin-kunnan-osan-nimi-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+#### Korttelinumero
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1405>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-korttelinumero-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo), jolla annetaan kaavakohteen kuvaaman korttelin korttelinumero.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-korttelinumero-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
+
+#### Muu nimistö
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1406>
+
+{% include clause_start.html type="req" id="prof-ak/vaat-muu-nimi-arvot" %}
+```arvo```-attribuutin arvoina saa esiintyä vain yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman kohteen nimi.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="prof-ak/vaat-muu-nimi-lisatiedot" %}
+```lisatieto```-attribuutilla ei saa olla arvoja.
+{% include clause_end.html %}
 
 ## Laatusäännöt
 Nämä laatusäännöt laajentavat Kaavatietomallin [yleisiä laatusääntöjä](../../looginenmalli/laatusaannot.html).
