@@ -152,6 +152,7 @@ b {
      float: right;
      text-align:right;
      font-size: smaller;
+     margin-left: 1em;
    }
 }
 
@@ -208,6 +209,10 @@ ol#markdown-toc > li {
     display: table;
     counter-increment: item;
     margin-bottom: 0.6em;
+}
+
+ol#markdown-toc > li:first-of-type {
+  margin-top: 1em;
 }
 
 ol#markdown-toc > li:before {
