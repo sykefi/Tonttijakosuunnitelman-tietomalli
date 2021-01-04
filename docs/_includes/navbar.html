@@ -43,7 +43,7 @@
           <a class="dropdown-item sublevel" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/soveltamisohjeet/yleiskaava/keittokirja.html">Keittokirja - YK</a>
         </div>
       </li>
-      {% if page.page == 'kaava-json' or page.page == 'demo' or page.page == 'testiaineistot' %}
+      {% if page.page == 'kaava-json' or page.page == 'demo' or page.page == 'testiaineistot' or page.page == 'kaava-postgre' %}
       <li class="nav-item active dropdown">
       {% else %}
       <li class="nav-item dropdown">
@@ -52,7 +52,8 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/fyysiset-mallit/json/">Kaava-JSON</a>
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/fyysiset-mallit/demo/">Demopalvelu</a>
-          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/fyysiset-mallit/aineistot/">Testiaineistoja</a>
+          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/fyysiset-mallit/aineistot/">Testiaineistot</a>
+          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: '1.0' }}/fyysiset-mallit/postgre/">PostgreSQL-tietokanta</a>
         </div>
       </li>
       {% if page.page == 'ak-yk-projekti' or page.page == 'ak-yk-sparrausryhma' or page.page == 'ak-yk-testaus' or page.page == 'ak-yk-jatkokehitys'%}
