@@ -8,7 +8,8 @@ status: "Ehdotus"
 ---
 # Testiaineistot
 
-Testauksessa tuotettiin kaavoista kaavan ulkoraja, kaavakohteet ja kaavamääräykset (sekä ulkorajaan että kaavakohteisiin liittyvät), ks. [Testauksen kuvaus](../../../projektit/ak-yk-tietomallit/testaus/)
+[Yleis- ja asemakaavan tietomallit -projektissa](../../../projektit/ak-yk-tietomallit/) laadittiin 
+[loogisen tason Kaavatietomallin](../../looginenmalli/dokumentaatio/) mukainen [PostgreSQL-tietokanta](../postgre/) ja [demopalvelu](../demo/) [Kaava-JSON](../json/)-formaatissa olevien kaavojen testaamiseksi. Testauksessa tuotettiin kaavoista kaavan ulkoraja, kaavakohteet ja kaavamääräykset (sekä ulkorajaan että kaavakohteisiin liittyvät), ks. [Testauksen kuvaus](../../../projektit/ak-yk-tietomallit/testaus/).
 
 Huomaa, että testiaineston koodistoviittaukset eivät vastaa [Yleis- ja asemakaavan tietomallit -projektin](../../../projektit/ak-yk-tietomallit/) lopullisia koodistoja, sillä ne pohjaustuvat testauksen aikaisiin versioihin koodistoista ja niiden sisältämistä koodeista. Myös tietoranteissa voi esiintyä pieniä eroja lopulliseen [Kaava-JSON](../json/)-formaattiin verrattuna samasta syystä.
 
