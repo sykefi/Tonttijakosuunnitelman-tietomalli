@@ -23,7 +23,7 @@ Testiainestot ovat saatavilla [projektin demopalvelussa](../demo/) 31.3.2021 saa
 
 [Alkuperäiset aineistot](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/tree/a01d15cc08fc262e0ab93d3bf9c4ab49415ec4c1/testaus/alkuperaiset-aineistot/Sipoo) (DWG)
 
-Mallinnetut elinkaaritilat:
+Mallinnetut elinkaaritilat [Kaava-JSON](../json/)-muodossa:
 
 * [Virelletullut](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-AK_SIPOO_1_vireilletulo_kaava-sipoo-nevasgard.geojson)
 * [Kaavaehdotus](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-AK_SIPOO_2_kaavaehdotus_kaava-sipoo-nevasgard.geojson)
@@ -39,7 +39,7 @@ Mallinnetut elinkaaritilat:
 
 [Alkuperäiset aineistot](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/tree/a01d15cc08fc262e0ab93d3bf9c4ab49415ec4c1/testaus/alkuperaiset-aineistot/Tampere) (Shapefile)
 
-Mallinnetut elinkaaritilat: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-YK_TAMPERE_HERVANTA_1_lainvoimainen_kaava-hervanta.geojson)
+Mallinnetut elinkaaritilat [Kaava-JSON](../json/)-muodossa: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-YK_TAMPERE_HERVANTA_1_lainvoimainen_kaava-hervanta.geojson)
 
 ## Vaiheasemakaava, Espoo Servinniemi (VK2001)
 
@@ -49,7 +49,7 @@ Mallinnetut elinkaaritilat: [Lainvoimainen kaava](https://github.com/YM-rakennet
 
 [Alkuperäiset aineistot](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/tree/a01d15cc08fc262e0ab93d3bf9c4ab49415ec4c1/testaus/alkuperaiset-aineistot/Espoo) (DWG, MapInfo)
 
-Mallinnetut elinkaaritilat: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-AK_ESPOO_uusi_kaava.geojson)
+Mallinnetut elinkaaritilat [Kaava-JSON](../json/)-muodossa: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-AK_ESPOO_uusi_kaava.geojson)
 
 Vanha kaava, jota vaihekaava muuttaa: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-AK_ESPOO_vanha_kaava.geojson)
 
@@ -61,7 +61,7 @@ Vanha kaava, jota vaihekaava muuttaa: [Lainvoimainen kaava](https://github.com/Y
 
 [Alkuperäiset aineistot](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/tree/a01d15cc08fc262e0ab93d3bf9c4ab49415ec4c1/testaus/alkuperaiset-aineistot/Lahti) (ShapeFile)
 
-Mallinnetut elinkaaritilat: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-YM_LAHTI_Enonsaari_1_lainvoimainen_kaava-enonsaari.geojson)
+Mallinnetut elinkaaritilat [Kaava-JSON](../json/)-muodossa: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-YM_LAHTI_Enonsaari_1_lainvoimainen_kaava-enonsaari.geojson)
 
 
 
