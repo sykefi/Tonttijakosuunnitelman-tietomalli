@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Kaavatietomalli - PostGreSQL-tietokanta"
+title: "Kaavatietomalli - PostgreSQL-tietokanta"
 description: ""
 page: "kaava-postgre"
 modelversion: "1.0"
