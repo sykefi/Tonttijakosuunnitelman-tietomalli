@@ -4,7 +4,7 @@ title: "Kaavatietomalli - soveltamisprofiili - asemakaava"
 description: ""
 page: "profiili-ak"
 modelversion: "1.0"
-status: "Keskeneräinen"
+status: "Ehdotus"
 ---
 # Kaavatietomallin soveltamisprofiili asemakaava-aineistoille
 {:.no_toc}
