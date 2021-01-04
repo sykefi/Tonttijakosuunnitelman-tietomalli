@@ -3,7 +3,7 @@ layout: "default"
 title: "Asema- ja yleiskaavan tietomallit  -projekti"
 description: ""
 page: "ak-yk-projekti"
-status: "Keskeneräinen"
+status: "Ehdotus"
 ---
 # Asema- ja yleiskaavan tietomallit  -projekti
 

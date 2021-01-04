@@ -1,9 +1,8 @@
 ---
 layout: "default"
-title: "Kaavatietomalli - testaus"
-description: ""
-page: "testaus"
-status: "Keskeneräinen"
+title: "Asema- ja yleiskaavan tietomallit -testaus"
+page: "ak-yk-testaus"
+status: "Ehdotus"
 ---
 # Kaavatietomallin testaus
 
@@ -14,10 +13,10 @@ Testauksessa koestettiin läpi prosessi kaavatiedon tuottamisesta, sen käsittel
 * Tietomallin mukaisen yleis- ja asemakaavatiedon tuottaminen: kaavan ulkoraja, kaavakohteet ja kaavamääräykset
 * Kaavatiedon vastaanottoa ja tallentamista tietojärjestelmään
 * Yksilöivät tunnisteet ja niihin liittyvä elinkaarikäsittely
-* Kaavatiedon julkaisemista rajapintapalvelelussa
+* Kaavatiedon julkaisemista rajapintapalvelussa
 * Kaavatiedon hyödyntämistä sovelluksessa: paikkatiedon ja kaavatiedon esittämistä sekä tiedon laskentaa (mm. Tyvi-lomakkeen tietojen laskeminen)
 
-Testauksessa tuotettiin kaavatietoa, tiedonhallintajärjestelmä sen tallentamiseksi sekä rajapinnat tiedon vastaaanottoon ja jakeluun.
+Testauksessa tuotettiin kaavatietoa, tiedonhallintajärjestelmä sen tallentamiseksi sekä rajapinnat tiedon vastaanottoon ja jakeluun.
 
 ## Rajaukset
 
@@ -54,7 +53,7 @@ Digitointi tehtiin kahdessa vaiheessa: geometrian muodostainen ja ominaisuustiet
 
 Geometriat muodostettiin QGIS:in avulla digitaalisesta lähtöaineistosta. Lopputulos tallennettin GeoJSON-muodossa. QGIS ei kuitenkaan sovellu rakenteellisten kohteen ominaisuustietojen syöttämiseen. Sen sijaan ominaisuustiedot tuotettiin ohjelmistokehittimellä. Työssä käytettiin avoimen lähdekoodin versiota Visual Studio Codesta. Ohjelmistokehittimeen sai lisäosan, joka näytti muokattavan geometrian halutun taustakartan päällä. Tämä auttoi digitointiprosessissa merkittävästi, sillä kohdetta oli helppo verrata alkuperäiseen kaavaselostukseen.
 
-Lopputuloksena jokaisesta kaavasta ja kaavan versiosta tuotettiin oma hakemisto. Hakemistoon tallennettiin kaavan ulkoraja ja siihen liittyvät kaavamääräykset omaan tiedostoonsa ja kukin kaavakohde ja tähän liittyvät määräykset omiin tiedostoihinsa. Tiedostot olivat GeoJSON-muodssa FeatureCollectioneita.
+Lopputuloksena jokaisesta kaavasta ja kaavan versiosta tuotettiin oma hakemisto. Hakemistoon tallennettiin kaavan ulkoraja ja siihen liittyvät kaavamääräykset omaan tiedostoonsa ja kukin kaavakohde ja tähän liittyvät määräykset omiin tiedostoihinsa. Tiedostot olivat GeoJSON-muodossa FeatureCollectioneita.
 
 Tässä vaiheessa kohteilla ei ollut vielä omia tunnisteita ja linkitys kohteiden välillä perustui siihen miten geometriaan (ulkoraja tai kaavakohde) liittyvät määräykset olivat samassa tiedostossa keskenään. Lopullisen tallennuspalveluun lähetettävä tietomallin mukainen FeatureCollection-tiedosto tuotettiin python-skripti, joka loi kaikille kohteille localId:n ja tuotti linkitykset kohteiden välille. Lopputuloksena siis yksi GeoJSON-tiedosto kokonaiselle kaavalle.
 
@@ -136,14 +135,15 @@ Kaavakohteiden ja niiden määräykset saa näkyviin listaan klikkaamalla kartal
 
 # Testauksen tulokset
 
-Testauksen aikana havaitut haasteet ja puutteet tietomallissa dokumentoitiin [githubiin](https://github.com/YM-rakennettu-ymparisto/AK-YK-tietomallit/issues?q=is%3Aissue+label%3AKehityssprintti). Tässä raportissa on nostettu esiin havainnoista muutama keskeinen:
+Testauksen aikana havaitut haasteet ja puutteet tietomallissa dokumentoitiin [githubiin](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/issues?q=is%3Aissue+label%3AKehityssprintti). Tässä raportissa on nostettu esiin havainnoista muutama keskeinen:
 
 ## Linkkaukset kohteista toiseen
 
 Testauksen aikana keskusteltiin linkityksestä oliosta toiseen. Tunnistettiin, että kaksisuuntaisella linkityksellä muutos mihin tahansa olioon (ulkoraja, kaavakohde, määräys) johtaa kaikkien kaavaan liitettyjen olioiden versiointiin. 
 
-[Github issue](https://github.com/YM-rakennettu-ymparisto/AK-YK-tietomallit/issues/57)
-[Analyysi elinkaarisäännöissä](https://ym-rakennettu-ymparisto.github.io/AK-YK-tietomallit/1.0/looginenmalli/elinkaarisaannot.html#muutosten-levi%C3%A4minen-viittausten-kautta)
+[Github issue](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/issues/57)
+
+[Analyysi elinkaarisäännöissä](https://kaavatietomalli.fi/1.0/looginenmalli/elinkaarisaannot.html#muutosten-levi%C3%A4minen-viittausten-kautta)
 
 ## Puuttuvia koodilistojen arvoja
 
@@ -151,11 +151,11 @@ Testauksen aikana tunnistettiin 19 puuttunutt koodilistan arvoa. Havaitut puutte
 
 ## Tunnusten muoto - URI vs UUID
 
-Rajapintapalvelun kohdalla HTTP-muotoiset osoitteet aiheuttavat tarpeetonta hankaluutta käytössä. Tämä käytännössä siksi, että tällaiset tunnukset sisältävät merkkejä (mm. `:`, `/`, `?`, `&` ja `=`), joilla on  erityismerkitys HTTP-osoitteissa. Jos ja kun osoitteella linkataan tunnuksen avulla tiettyyn tunnukseen, tulee osoitteesta tarpeettoman vaikea ja hankala lukea. Tästä lisää [elinkaarisäännöissä](https://ym-rakennettu-ymparisto.github.io/AK-YK-tietomallit/1.0/looginenmalli/elinkaarisaannot.html).
+Rajapintapalvelun kohdalla HTTP-muotoiset osoitteet aiheuttavat tarpeetonta hankaluutta käytössä. Tämä käytännössä siksi, että tällaiset tunnukset sisältävät merkkejä (mm. `:`, `/`, `?`, `&` ja `=`), joilla on  erityismerkitys HTTP-osoitteissa. Jos ja kun osoitteella linkataan tunnuksen avulla tiettyyn tunnukseen, tulee osoitteesta tarpeettoman vaikea ja hankala lukea. Tästä lisää [elinkaarisäännöissä](https://kaavatietomalli.fi/1.0/looginenmalli/elinkaarisaannot.html).
 
 ## Liikenne-aihepiirin käyttötarkoitukset
 
-Testauksessa kävi ilmi, että liikenne-aihepiirin kaavamääräyksien ja käyttötarkoitusten kohdalla on epäselviää, mikä tieto on kaavamääräyslaji ja mikä käyttötarkoituslaji. [Issue 65](https://github.com/YM-rakennettu-ymparisto/AK-YK-tietomallit/issues/65)
+Testauksessa kävi ilmi, että liikenne-aihepiirin kaavamääräyksien ja käyttötarkoitusten kohdalla on epäselviää, mikä tieto on kaavamääräyslaji ja mikä käyttötarkoituslaji. [Issue 65](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/issues/65)
 
 # Yhteenveto
 
