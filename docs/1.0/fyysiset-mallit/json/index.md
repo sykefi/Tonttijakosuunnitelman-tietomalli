@@ -17,6 +17,9 @@ Kaava-JSON on [loogisen tason Kaavatietomallin](../../looginenmalli/dokumentaati
 
 Kohdetyypit kuvataan GeoJSON Feature -objekteiksi. GeoJSON-objektin ominaisuuden "properties" alle tulevat kaikki muut tietokohteen loogisen mallin mukaiset ominaisuudet paitsi ```paikallinenTunnus``` (GeoJSON Feature-objektin ```id```) ja geometria-ominaisuudet. Paikkatietokohteiden ensisijainen geometriatieto ilmaistaa GeoJSON-objektin "geometry"-omainaisuutena, ja sen koordinaatisto "crs"-ominaisuutena (ks. [NamedCooodinateReferenceSystem](##namedcooodinatereferencesystem)). Kohteilla, jolla ei ole geometriatietoa "geometry"-ominaisuuden arvoksi tulee aina ```coordinates```-taulukoltaan tyhjä Polygon, jolla ei ole "crs" ominaisuutta.
 
+Kaava-JSON -formaatti ei rajoita koordinaatistojen käyttöä, mutta on hyvä tietää, että GeoJSON-spesifikaation ([IETF RFC 7946](https://www.rfc-editor.org/info/rfc7946)) mukaan GeoJSON-kohteiden koordinaatisto on aina WGS84 (urn:ogc:def:crs:OGC::CRS84), longitudi, latitudi -järjestyksessä. Tuottajien ja käyttäjien yhteisellä ennakkosopimuksella tästä  voidaan spesifikaation mukaan kuitenkin poiketa. Koordinaatistotieto on mallinnettu korvatun GeoJSON draft version 6:n "Named CRS" -rakenteen mukaisesti, ks. <http://wiki.geojson.org/GeoJSON_draft_version_6> (crs-ominaisuus on poistettu uudemmista GeoJSON-spesifikaatioista).
+
+
 ## Kohdetyypit (FeatureType)
 
 ### SpatialPlan (Kaava)
