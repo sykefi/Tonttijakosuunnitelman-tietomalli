@@ -9,14 +9,14 @@ status: "Ehdotus"
 # PostgreSQL/PostGIS -tietokanta
 
 [Yleis- ja asemakaavan tietomallit -projektissa](../../../projektit/ak-yk-tietomallit/) laadittiin 
-[loogisen tason Kaavatietomallin](../../looginenmalli/dokumentaatio/) mukainen PostgreSQL-tietokanta [Kaava-JSON](../json/)-formaatissa olevien kaavojen testaamiseksi. Testauksessa käytettiin PostgreSQL-tietokannanhallintajärjestelmän versiota 13.
+[loogisen tason Kaavatietomallin](../../looginenmalli/dokumentaatio/) mukainen PostgreSQL-tietokanta [Kaava-JSON](../json/)-formaatissa olevien kaavojen testaamiseksi. Testauksessa käytettiin PostgreSQL-tietokannanhallintajärjestelmän versiota 13. Valittu tietokantarakenne perustui siihen, että kaavatiedot tallennetaan GeoJSON-formaatissa, ja siinä hyödynnettiin PostgreSQL:n [PostGIS](https://postgis.net/)-geometriatukea ja JSON-tukea.
 
-Valittu tietokantarakenne perustui siihen, että kaavatiedot tallennetaan GeoJSON-formaatissa, ja siinä hyödynnettiin PostgreSQL:n [PostGIS](https://postgis.net/)-geometriatukea ja JSON-tukea.
+Tietokantauluina mallinnettiin seuraavat loogisen tietomallin luokat:
+* [Kaavatiedot::Kaava](../../looginenmalli/dokumentaatio/#kaava): ```spatial_plan```,
+* [Kaavakohde](../../looginenmalli/dokumentaatio/#kaavakohde): ```plan_regulation_object``` ja
+* [Kaavamaarays](../../looginenmalli/dokumentaatio/#kaavamaarays): ```plan_regulation```.
 
-* ```spatial_plan``` (toteuttaa loogisen tietomallin [Kaava](../../looginenmalli/dokumentaatio/#kaava)-luokan)
-* ```plan_regulation_object``` ([Kaavakohde](../../looginenmalli/dokumentaatio/#kaavakohde)-luokka)
-* ```plan_regulation``` ([Kaavamaarays](../../looginenmalli/dokumentaatio/#kaavamaarays)-luokka)) ja
-* ```feature_collection``` (kokonainen kaava kaikkine kaavakohteineen ja -määräyksineen)
+Lisäksi kantaan luotiin taulu ```feature_collection```, johon tallennettiin kokonainen kaava kaikkine kaavakohteineen ja -määräyksineen.
 
 Tietokantaan ei mallinnettu seuraavia testauksen ulkopuolelle jätettyjä loogisen tietomallin luokkia:
 * [MKP-ydin::Asiakirja](../../looginenmalli/dokumentaatio/#asiakirja)
@@ -38,7 +38,7 @@ Tietokannan, taulujen ja näkymien luomiseen käytetyn [luontiskriptin](https://
 {% include note.html content="Tietokantamallinnuksessa ei kiinnitetty erityistä huomiota rakenteiden hakutehokkuuteen ja tietojen indeksointiin, koska ensisijaisena tavoitteena oli testata loogisen tietomallin mallinnettavuutta tietokantarakenteena. Mikäli tässä kuvatun tietokantaratkaisun pohjalta luotaisiin operatiiviseen käyttöön soveltuva tietokanta, tulee sen suunnittelussa ottaa huomioon myös ratkaisun suorituskyky." %} 
 
 ## Luokkien mallinnus relaatioina
-Kaikki neljä relaatiota mallinnettiin täsmälleen samalla tavalla: taulun sarakkeiksi valittiin
+Kaikki neljä tietokantataulua mallinnettiin täsmälleen samalla tavalla: taulujen sarakkeiksi valittiin
 * ```id VARCHAR(255) PRIMARY KEY```: taulun pääavain,
 * ```created_time TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP```: latausaika,
 * ```properties JSONB NOT NULL```: koko kohteen GeoJSON-properties -objekti
