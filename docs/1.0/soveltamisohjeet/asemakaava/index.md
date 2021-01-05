@@ -66,9 +66,9 @@ Ryhmittelyotsikko, vain koodin [alakoodeja](../../looginenmalli/elinkaarisaannot
 {% include clause_start.html type="req" id="prof-ak/vaat-alueen-kayttotarkoitus" %}
 Kaikkien asemakaavojen tietoaineistojen sisältämien [Kaavamaarays](../../looginenmalli/dokumentaatio/#kaavamaarays)-luokan instanssien, joiden ```laji```-attribuutin arvo on jokin [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)-koodin alakoodi, osalta tulee noudattaa seuraavia rajoituksia:
 
-   * ```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+   * ```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 
-   * ```lisatieto```-attribuutin arvoina saa esiintyä nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Poisluettava käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_AK/code/04), ja jonka ```arvo```-attribuutin arvoina on yksi tai useampi [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), jotka viittaavat koodiston [KaavamääraysLaji](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01) koodien [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01) tai [Alueen osan käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/02) alakoodeihin. Muun tyyppiset arvot eivät ole sallituja.
+   * ```lisatieto```-attribuutin arvoina saa esiintyä nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Poisluettava käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_AK/code/04), ja jonka ```arvo```-attribuutin arvoina on yksi tai useampi [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), jotka viittaavat koodiston [KaavamääraysLaji](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01) koodien [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01) tai [Alueen osan käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/02) alakoodeihin. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 Poisluettavat käyttötarkoituslajit tulee valita siten, että ne kohdistuvat ```arvo```-attribuuttien avulla valittuun yleispiirteisempään joukkoon käyttötarkoituksia poislukien niistä osan. Esim. [Työ ja tuotanto](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0106) poislukien [Alue, jolle saa sijoittaa merkittävän, vaarallisia kemikaaleja valmistavan tai varastoivan laitoksen](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010604).
@@ -82,9 +82,9 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 {% include clause_start.html type="req" id="prof-ak/vaat-alueen-osan-kayttotarkoitus" %}
 Kaikkien asemakaavojen tietoaineistojen sisältämien [Kaavamaarays](../../looginenmalli/dokumentaatio/#kaavamaarays)-luokan instanssien, joiden ```laji```-attribuutin arvo on jokin [Alueen osan käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/02)-koodin alakoodi, osalta tulee noudattaa seuraavia rajoituksia:
 
-   * ```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+   * ```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 
-   * ```lisatieto```-attribuutin arvoina saa esiintyä nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Poisluettava käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_AK/code/04), ja jonka ```arvo```-attribuutin arvoina on yksi tai useampi [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), jotka viittaavat koodiston [KaavamääraysLaji](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01) koodin [Alueen osan käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/02) alakoodeihin. Muun tyyppiset arvot eivät ole sallituja.
+   * ```lisatieto```-attribuutin arvoina saa esiintyä nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Poisluettava käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_AK/code/04), ja jonka ```arvo```-attribuutin arvoina on yksi tai useampi [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), jotka viittaavat koodiston [KaavamääraysLaji](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01) koodin [Alueen osan käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/02) alakoodeihin. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 Poisluettavat käyttötarkoituslajit tulee valita siten, että ne kohdistuvat ```arvo```-attribuuttien avulla valittuun yleispiirteisempään joukkoon käyttötarkoituksia poislukien niistä osan.
@@ -98,11 +98,8 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0301>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-sallittu-kerrosala-arvot" %}
-```arvo```-attribuutin mahdolliset arvot ovat seuraavat:
-   * Yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo sallitun rakentamiseen kokonaismäärän kerrosneliömetreinä (```k-m2```) sen kaavakohteen aluella, johon kaavamääräys on liitetty.
-   * Nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+```arvo```-attribuutin arvoina saa esiintyä yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo sallitun rakentamiseen kokonaismäärän kerrosneliömetreinä (```k-m2```) sen kaavakohteen aluella, johon kaavamääräys on liitetty.
 {% include clause_end.html %}
-
 
 {% include clause_start.html type="req" id="prof-ak/vaat-sallittu-kerrosala-lisatiedot" %}
 ```lisatieto```-attribuutin arvoina saa esiintyä nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Käyttötarkoituksen osuus kerrosalasta](http://uri.suomi.fi/codelist/rytj/RY_Lisatiedonlaji_AK/code/01), jolla on täsmälleen kaksi arvoa:
@@ -116,9 +113,7 @@ Mikäli sallittua rakentamisen määrää ei ole jaoteltu käyttötarkoituksitta
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0302>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-sallittu-rakennustilavuus-arvot" %}
-```arvo```-attribuutin mahdolliset arvot ovat seuraavat:
-   * Yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat sallitun rakentamisen kokonaismäärän kuutiometreinä (```m3```) sen kaavakohteen aluella, johon kaavamääräys on liitetty.
-   * Nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+```arvo```-attribuutin arvoina saa esiintyä yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat sallitun rakentamisen kokonaismäärän kuutiometreinä (```m3```) sen kaavakohteen aluella, johon kaavamääräys on liitetty.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-sallittu-rakennustilavuus-lisatiedot" %}
@@ -137,7 +132,7 @@ Mikäli sallittua rakentamisen määrää ei ole jaoteltu käyttötarkoituksitta
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0303>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-tehokkuusluku-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä joko yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat rakennustehokkuden, eli alueen rakennusten yhteenlasketun kerrosalan suhteessa alueen pinta-alaan, sen kaavakohteen aluella, johon kaavamääräys on liitetty. Ilmaistaan tehokkuuslukuna ```e```, yksikkönä ```k-m2/m2```. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä joko yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat rakennustehokkuden, eli alueen rakennusten yhteenlasketun kerrosalan suhteessa alueen pinta-alaan, sen kaavakohteen aluella, johon kaavamääräys on liitetty. Ilmaistaan tehokkuuslukuna ```e```, yksikkönä ```k-m2/m2```. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-vaat-tehokkuusluku-lisatiedot" %}
@@ -150,7 +145,7 @@ Mikäli sallittua rakentamisen määrää ei ole jaoteltu käyttötarkoituksitta
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0304>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-maanpaallinen-kerrosluku-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä joko yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat rakennusten maanpäällisten kerrosten sallitun lukumäärän sen kaavakohteen aluella, johon kaavamääräys on liitetty. Lukuarvoissa ei saa esiintyä nollasta poikkeavia desimaaleja. Yksikköjä ei käytetä. Muun tyyppiset arvot eivät ole sallituja. 
+```arvo```-attribuutin arvona saa esiintyä joko yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat rakennusten maanpäällisten kerrosten sallitun lukumäärän sen kaavakohteen aluella, johon kaavamääräys on liitetty. Lukuarvoissa ei saa esiintyä nollasta poikkeavia desimaaleja. Yksikköjä ei käytetä. Muun tyyppiset arvot eivät ole sallittuja. 
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-maanpaallinen-kerrosluku-lisatiedot" %}
@@ -161,7 +156,7 @@ Mikäli sallittua rakentamisen määrää ei ole jaoteltu käyttötarkoituksitta
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0305>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-maanalainen-kerrosluku-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä joko yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat rakennusten maanalaisten kerrosten sallitun lukumäärän sen kaavakohteen aluella, johon kaavamääräys on liitetty. Lukuarvoissa ei saa esiintyä nollasta poikkeavia desimaaleja. Yksikköjä ei käytetä. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä joko yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat rakennusten maanalaisten kerrosten sallitun lukumäärän sen kaavakohteen aluella, johon kaavamääräys on liitetty. Lukuarvoissa ei saa esiintyä nollasta poikkeavia desimaaleja. Yksikköjä ei käytetä. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-maanalainen-kerrosluku-lisatiedot" %}
@@ -173,7 +168,7 @@ Mikäli sallittua rakentamisen määrää ei ole jaoteltu käyttötarkoituksitta
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0306>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-kellarin-sallittu-kerrosalaosuus-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä joko yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat kuinka suuren osan kunkin rakennuksen suurimman kerroksen alasta saa kellarikerroksessa käyttää kerrosalaan luettavaksi tilaksi sen kaavakohteen aluella, johon kaavamääräys on liitetty. Ilmaistaan prosentteina (```%```). Muun tyyppiset arvot eivät ole sallituja. 
+```arvo```-attribuutin arvona saa esiintyä joko yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat kuinka suuren osan kunkin rakennuksen suurimman kerroksen alasta saa kellarikerroksessa käyttää kerrosalaan luettavaksi tilaksi sen kaavakohteen aluella, johon kaavamääräys on liitetty. Ilmaistaan prosentteina (```%```). Muun tyyppiset arvot eivät ole sallittuja. 
 {% include clause_end.html %}
 
 {% include tip.html content="Murtolukuna ilmaistun osuuden voi ilmaista likimääräisesti myös arvovälinä, esim. ```1/3``` olisi ```33-34%```" %}
@@ -186,7 +181,7 @@ Mikäli sallittua rakentamisen määrää ei ole jaoteltu käyttötarkoituksitta
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0307>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-ullakon-sallittu-kerrosalaosuus-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä joko yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat kuinka suuren osan kunkin rakennuksen suurimman kerroksen alasta saa ullakkokerroksessa käyttää kerrosalaan luettavaksi tilaksi sen kaavakohteen aluella, johon kaavamääräys on liitetty. Ilmaistaan prosentteina (```%```). Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä joko yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat kuinka suuren osan kunkin rakennuksen suurimman kerroksen alasta saa ullakkokerroksessa käyttää kerrosalaan luettavaksi tilaksi sen kaavakohteen aluella, johon kaavamääräys on liitetty. Ilmaistaan prosentteina (```%```). Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include tip.html content="Murtolukuna ilmaistun osuuden voi ilmaista likimääräisesti myös arvovälinä, esim. ```1/3``` olisi ```33-34%```" %}
@@ -199,11 +194,11 @@ Mikäli sallittua rakentamisen määrää ei ole jaoteltu käyttötarkoituksitta
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0308>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-rakennuspaikkojen-maara-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) joka kertoo sallitun rakennuspaikkojen enimmäismäärän sen kaavakohteen aluella, johon kaavamääräys on liitetty. Lukuarvoissa ei saa esiintyä nollasta poikkeavia desimaaleja. Yksikköä ei käytetä. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) joka kertoo sallitun rakennuspaikkojen enimmäismäärän sen kaavakohteen aluella, johon kaavamääräys on liitetty. Lukuarvoissa ei saa esiintyä nollasta poikkeavia desimaaleja. Yksikköä ei käytetä. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-rakennuspaikkojen-maara-lisatiedot" %}
-```lisatieto```-attribuutin arvoina saa esiintyä nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Käyttötarkoituskohdistus](http://uri.suomi.fi/codelist/rytj/RY_Lisatiedonlaji_AK/code/02), jolla on täsmälleen yksi ```arvo``` lajia [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa johonkin [Rakennusluokitus 2018](http://uri.suomi.fi/codelist/jhs/rakennus_1_20180712)-koodiston koodiin. Muun tyyppiset arvot eivät ole sallituja.
+```lisatieto```-attribuutin arvoina saa esiintyä nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Käyttötarkoituskohdistus](http://uri.suomi.fi/codelist/rytj/RY_Lisatiedonlaji_AK/code/02), jolla on täsmälleen yksi ```arvo``` lajia [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa johonkin [Rakennusluokitus 2018](http://uri.suomi.fi/codelist/jhs/rakennus_1_20180712)-koodiston koodiin. Muun tyyppiset arvot eivät ole sallittuja.
 
 Mikäli vähintään yksi lisätieto on annettu, koskee rakennuspaikkojen lukumäärä vain lisätietojen avulla rajattuja rakennustyyppejä.
 {% include clause_end.html %}
@@ -226,7 +221,7 @@ Mikäli vähintään yksi lisätieto on annettu, koskee rakennuspaikkojen lukum�
    * Yksi [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa [KaavamääraysLaji](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01) koodien [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01) tai [Alueen osan käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/02) johonkin alakoodiin.
 {% include clause_end.html %}
 
-{% include question.html content="Miten lisärakennusoikeus eroaa käyttötarkoituskohtaisesti sallitusta kerrosalasta tai rakennustilavuudesta? Missä tapauksissa lisärakennusoikeutta käytettäisiin? Nykyisellään rakenne on identtinen" %}
+{% include question.html content="Miten lisärakennusoikeus eroaa käyttötarkoituskohtaisesti sallitusta kerrosalasta tai rakennustilavuudesta? Missä tapauksissa lisärakennusoikeutta käytettäisiin? Nykyisellään rakenne on lähes identtinen" %}
 
 ### Rakennusten sijoitus
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/04>
@@ -237,7 +232,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0401>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-rak-suhde-alueen-pinta-alaan-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä joko yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo kuinka suuren osan sen kaavakohteen pinta-alasta, johon kaavamääräys on liitetty, saa käyttää rakentamiseen. Ilmaistaan prosenttilukuna (```%```). Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä joko yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo kuinka suuren osan sen kaavakohteen pinta-alasta, johon kaavamääräys on liitetty, saa käyttää rakentamiseen. Ilmaistaan prosenttilukuna (```%```). Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-rak-suhde-alueen-pinta-alaan-lisatiedot" %}
@@ -265,9 +260,7 @@ Ilmaisee, että kaavakohteen alue on rakennusala. Mikäli rakennusaloja on mää
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-rakennusala-arvot" %}
-```arvo```-attribuutin mahdolliset arvot ovat seuraavat:
-   * Nolla tai useampi [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), jotka kuvaa rakennusalalle rakennettavaksi tarkoitetun rakennuksen lajin viittaamalla koodistoon [Rakennusluokitus 2018](http://uri.suomi.fi/codelist/jhs/rakennus_1_20180712).
-   * Nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), jotka kuvaa rakennusalalle rakennettavaksi tarkoitetun rakennuksen lajin viittaamalla koodistoon [Rakennusluokitus 2018](http://uri.suomi.fi/codelist/jhs/rakennus_1_20180712).
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-rakennusala-lisatiedot" %}
@@ -278,7 +271,7 @@ Ilmaisee, että kaavakohteen alue on rakennusala. Mikäli rakennusaloja on mää
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0404>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-rakennettava-kiinni-rajaan-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, johon alueen rakennukset tulee rakentaa kiinni. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, johon alueen rakennukset tulee rakentaa kiinni. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-rakennettava-kiinni-rajaan-lisatiedot" %}
@@ -299,7 +292,7 @@ Ilmaisee, että kaavakohteen geometria kuvaa paikkaa, jolla on rakennus tai joho
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-rakennuspaikka-lisatiedot" %}
-```lisatieto```-attribuutin arvoina saa esiintyä nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Käyttötarkoituskohdistus](http://uri.suomi.fi/codelist/rytj/RY_Lisatiedonlaji_AK/code/02), jolla on täsmälleen yksi ```arvo``` lajia [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa johonkin [Rakennusluokitus 2018](http://uri.suomi.fi/codelist/jhs/rakennus_1_20180712)-koodiston koodiin. Muun tyyppiset arvot eivät ole sallituja.
+```lisatieto```-attribuutin arvoina saa esiintyä nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), jonka laji on [Käyttötarkoituskohdistus](http://uri.suomi.fi/codelist/rytj/RY_Lisatiedonlaji_AK/code/02), jolla on täsmälleen yksi ```arvo``` lajia [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa johonkin [Rakennusluokitus 2018](http://uri.suomi.fi/codelist/jhs/rakennus_1_20180712)-koodiston koodiin. Muun tyyppiset arvot eivät ole sallittuja.
 
 Mikäli vähintään yksi lisätieto on annettu, saa rakennuspaikkaan rakentaa vain lisätietojen avulla rajattuja rakennustyyppejä.
 {% include clause_end.html %}
@@ -310,7 +303,7 @@ Mikäli vähintään yksi lisätieto on annettu, saa rakennuspaikkaan rakentaa v
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0406>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-rakennusten-sijoitus-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-rakennusten-sijoitus-lisatiedot" %}
@@ -326,7 +319,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0501>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-kattokaltevuus-arvot" %}
-```arvo```-attribuutin arvoja saa esiintyä yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo rakennusten katon sallitun kaltevuuden asteina (```deg```) sen kaavakohteen alueella, johon kaavamääräys on liitetty. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoja saa esiintyä yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo rakennusten katon sallitun kaltevuuden asteina (```deg```) sen kaavakohteen alueella, johon kaavamääräys on liitetty. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-kattokaltevuus-lisatiedot" %}
@@ -341,7 +334,7 @@ Ilmaisee, että kaavakohteen geometria kuvaa liikenne- rautatie- tai katualueen 
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-uloke-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-uloke-lisatiedot" %}
@@ -352,7 +345,7 @@ Ilmaisee, että kaavakohteen geometria kuvaa liikenne- rautatie- tai katualueen 
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0503>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-harjasuunta-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat rakennusten katon harjan sallitun kompassisuunnan asteina (```deg```) sen kaavakohteen alueella, johon kaavamääräys on liitetty. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) tai yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), jotka kertovat rakennusten katon harjan sallitun kompassisuunnan asteina (```deg```) sen kaavakohteen alueella, johon kaavamääräys on liitetty. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-harjasuunta-lisatiedot" %}
@@ -367,7 +360,7 @@ Ilmaisee, että kaavakohteen geometria kuvaa rakennukseen liittyvää paikkaa, j
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-kulkuaukko-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-kulkuaukko-lisatiedot" %}
@@ -382,7 +375,7 @@ Ilmaisee, että kaavakohteen geometria kuvaa alueen osaa, johon tulee rakentaa v
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-valokatteinen-tila-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-valokatteinen-tila-lisatiedot" %}
@@ -393,7 +386,7 @@ Ilmaisee, että kaavakohteen geometria kuvaa alueen osaa, johon tulee rakentaa v
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0506>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-suora-uloskaynti-porrashuoneista-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, jonka kohdalla tulee olla suora uloskäunti porrashuoneista. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, jonka kohdalla tulee olla suora uloskäunti porrashuoneista. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-suora-uloskaynti-porrashuoneista-lisatiedot" %}
@@ -404,7 +397,7 @@ Ilmaisee, että kaavakohteen geometria kuvaa alueen osaa, johon tulee rakentaa v
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0507>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-ei-ikkunoita-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, jonka puoleisten rakennusten seiniin ei saa sijoittaa ikkunoita. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, jonka puoleisten rakennusten seiniin ei saa sijoittaa ikkunoita. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-ei-ikkunoita-lisatiedot" %}
@@ -435,7 +428,7 @@ Ilmaisee, että kaavakohteen aluella rakennusten parvekkeet tulee rakentaa talon
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-parvekkeet-rungon-sisaan-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä nolla tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, jonka puoleisia sivuja kaavamääräys koskee. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä nolla tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, jonka puoleisia sivuja kaavamääräys koskee. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-parvekkeet-rungon-sisaan-lisatiedot" %}
@@ -450,7 +443,7 @@ Ilmaisee, että kaavakohteen aluella rakennuksiin tai niiden tietyille sivuille 
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-hissi-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä nolla tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, joka puoleisia sivuja kaavamääräys koskee. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä nolla tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, joka puoleisia sivuja kaavamääräys koskee. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-hissi-lisatiedot" %}
@@ -465,7 +458,7 @@ Ilmaisee, että kaavakohteen aluelle sijoitettavaan rakennukseen tai sen osaan o
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-viherkatto-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-viherkatto-lisatiedot" %}
@@ -480,7 +473,7 @@ Ilmaisee, että kaavakohteen aluelle sijoitettavat rakennukset voidaan toteuttaa
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-kelluvat-rakennukset-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-kelluvat-rakennukset-lisatiedot" %}
@@ -493,7 +486,7 @@ Ilmaisee, että kaavakohteen aluelle sijoitettavat rakennukset voidaan toteuttaa
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0513>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-rakentamistapa-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-rakentamistapa-lisatiedot" %}
@@ -511,7 +504,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 Kaava-aineistossa voidaan ilmaista maanpinnan nimelliskorkeus merenpinnasta tietyissä pisteissä kaavamääräyksenä, vaikka sen arvon tuleekin perustua kaavan lähtötietoaineiston topografiseen tietoon.
 
 {% include clause_start.html type="req" id="prof-ak/vaat-maanpinnan-korkeusasema-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat maanpinnan korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona kaavakohteen sijainnissa. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat maanpinnan korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona kaavakohteen sijainnissa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-maanpinnan-korkeusasema-lisatiedot" %}
@@ -524,7 +517,7 @@ Kaava-aineistossa voidaan ilmaista maanpinnan nimelliskorkeus merenpinnasta tiet
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0602>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-vesikaton-korkeusasema-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat kaavakohteen alueelle sijoitettavien rakennusten vesikaton ylimmän kohdan korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat kaavakohteen alueelle sijoitettavien rakennusten vesikaton ylimmän kohdan korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-vesikaton-korkeusasema-lisatiedot" %}
@@ -536,7 +529,7 @@ Kaava-aineistossa voidaan ilmaista maanpinnan nimelliskorkeus merenpinnasta tiet
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0603>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-julkisivupinnan-ja-vesikaton-leikkauksen-korkeusasema-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat kaavakohteen alueelle sijoitettavien rakennusten julkisivupinnan ja vesikaton leikkauskohdan korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat kaavakohteen alueelle sijoitettavien rakennusten julkisivupinnan ja vesikaton leikkauskohdan korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-julkisivupinnan-ja-vesikaton-leikkauksen-korkeusasema-lisatiedot" %}
@@ -547,7 +540,7 @@ Kaava-aineistossa voidaan ilmaista maanpinnan nimelliskorkeus merenpinnasta tiet
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0604>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-julkisivun-enimmaiskorkeus-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo kaavakohteen alueelle sijoitettavien rakennusten julkisivujen minimikorkeuden, maksimikorkeuden tai molemmat. Yksikkönä metri (```m```). Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo kaavakohteen alueelle sijoitettavien rakennusten julkisivujen minimikorkeuden, maksimikorkeuden tai molemmat. Yksikkönä metri (```m```). Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-julkisivun-enimmaiskorkeus-lisatiedot" %}
@@ -560,7 +553,7 @@ Kaava-aineistossa voidaan ilmaista maanpinnan nimelliskorkeus merenpinnasta tiet
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0605>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-rakennusten-rakent-lait-korkeusasema-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat kaavakohteen alueelle sijoitettavien rakennusten, rakenteiden ja laitteiden ylimmän korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat kaavakohteen alueelle sijoitettavien rakennusten, rakenteiden ja laitteiden ylimmän korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-rakennusten-rakent-lait-korkeusasema-lisatiedot" %}
@@ -573,7 +566,7 @@ Kaava-aineistossa voidaan ilmaista maanpinnan nimelliskorkeus merenpinnasta tiet
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0606>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-maanalaisen-kohteen-korkeusasema-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat maanalaisen kaavakohteen perustason korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste) tai yksi [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali), jotka kertovat maanalaisen kaavakohteen perustason korkeuden merenpinnasta sovitun pystysuuntaisen koordinaatiston arvona. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include question.html content="Mitä korkeutta tämä tarkalleen ottaen tarkoittaa? Mikä on oikea termi tälle 'perustasolle'?" %}
@@ -586,7 +579,7 @@ Kaava-aineistossa voidaan ilmaista maanpinnan nimelliskorkeus merenpinnasta tiet
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0607>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-korkeusasema-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-korkeusasema-lisatiedot" %}
@@ -606,7 +599,7 @@ Ilmisee, että kaavakohteen suunnittelussa ja toteuttamisessa tulee käyttää [
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-vihertehokuus-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä nolla tai yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), joka kertoo kaavakohteen alueen tonttien viherkertoimen vähimmäisarvon. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), joka kertoo kaavakohteen alueen tonttien viherkertoimen vähimmäisarvon. Muun tyyppiset arvot eivät ole sallittuja.
 
 Mikäli arvoa ei anneta, tulee noudattaa viherkerroinmenetelmässä määriteltyjä viherkertoimien ehdottomia minitasoja.
 {% include clause_end.html %}
@@ -625,7 +618,7 @@ Ilmaisee, että kaavakohteen aluella oleva puusto tai muu kasvillisuus on säily
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-puusto-kasvillisuus-sail-tai-korv-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-puusto-kasvillisuus-sail-tai-korv-lisatiedot" %}
@@ -641,7 +634,7 @@ Ilmaisee, että kaavakohteen aluella oleva puusto on säilytettävä.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-puusto-sailytettava-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-puusto-sailytettava-lisatiedot" %}
@@ -656,7 +649,7 @@ Ilmaisee, että kaavakohteen alueen maisema on säilytettävä avoimena.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-maisema-sailytettava-avoimena-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-maisema-sailytettava-avoimena-lisatiedot" %}
@@ -667,7 +660,7 @@ Ilmaisee, että kaavakohteen alueen maisema on säilytettävä avoimena.
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0705>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-ulkoalue-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-ulkoalue-lisatiedot" %}
@@ -679,11 +672,16 @@ Ilmaisee, että kaavakohteen alueen maisema on säilytettävä avoimena.
 
 Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
 
+{% include question.html content="Kevyen liikenteen/pyöräily/jalankulku väyliä ei ole kuvattu asemakaavan kaavamääräyksinä. Alueen käyttötarkoituksessa on kyllä jalankululle ja pyöräilylle varattu alue. Miten ilmaistaan yhdistetty jalankulku ja pyöräilyväylä? %}
+
+
+{% include question.html content="AK-kaavamääräyksissä ei ole raitiotie/pikaraitiotie/metroväyliä erikseen, vain yleinen rautatieliikenteen alue. Pitäiskö olla? Entä julkisen liikenteen pysäkit ja metron sisäänkäynti? %}
+
 #### Ajoneuvoliittymä
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0801>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-ajoneuvoliittyma-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, joka kuvaa ajoneuvoliittymän sijaintia alueen rajalla. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, joka kuvaa ajoneuvoliittymän sijaintia alueen rajalla. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-ajoneuvoliittyma-lisatiedot" %}
@@ -694,7 +692,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0802>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-ajoneuvoliittyma-kielto-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, jonka kohdalle ei saa rakentaa ajoneuvoliittymää. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä yksi tai useampi [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo), joka on päällekkäin sen kaavakohteen geometrian osan kanssa, jonka kohdalle ei saa rakentaa ajoneuvoliittymää. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-ajoneuvoliittyma-kielto-lisatiedot" %}
@@ -707,7 +705,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 Moottoajoneuvoille varattujen pysäköintipaikkojen lukumäärä voidaan ilmaista joko kaavakohteen alueelle toteutettavien paikkojen kokonaismääränä, lukumääränä per asunto tai lukumääränä per rakennusten kerrosneliömetri. Viimeksi mainitussa tapauksessa voidaan lukumäärä tarkentaa lisäksi koskemaan ainoastaan annettuun käyttötarkoitukseen toteutettavia kerrosneliömetrejä.
 
 {% include clause_start.html type="req" id="prof-ak/vaat-autopaikkojen-maara-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä nolla yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali) joka kertoo vaaditun pysäköintipaikkojen  minimimäärän, maksimimäärän tai molemmat sen kaavakohteen aluella, johon kaavamääräys on liitetty. Lukuarvoissa ei saa esiintyä nollasta poikkeavia desimaaleja. Yksikköä ei käytetä. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä nolla yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali) joka kertoo vaaditun pysäköintipaikkojen  minimimäärän, maksimimäärän tai molemmat sen kaavakohteen aluella, johon kaavamääräys on liitetty. Lukuarvoissa ei saa esiintyä nollasta poikkeavia desimaaleja. Yksikköä ei käytetä. Muun tyyppiset arvot eivät ole sallittuja.
 
 Mikäli arvoa ei anneta, tulee lukumäärä ilmaista ```lisätieto```-attribuutin avulla.
 {% include clause_end.html %}
@@ -730,7 +728,7 @@ Mikäli lisätiedon laji on [Lukumäärä per asunto](http://uri.suomi.fi/codeli
 Polkupyöräpysäköintipaikkojen lukumäärä voidaan ilmaista joko kaavakohteen alueelle toteutettavien paikkojen kokonaismääränä, lukumääränä per asunto tai lukumääränä per rakennusten kerrosneliömetri. Viimeksi mainitussa tapauksessa voidaan lukumäärä tarkentaa lisäksi koskemaan ainoastaan annettuun käyttötarkoitukseen toteutettavia kerrosneliömetrejä.
 
 {% include clause_start.html type="req" id="prof-ak/vaat-polkupyorapaikkojen-maara-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä nolla yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo vaaditun pysäköintipaikkojen  minimimäärän, maksimimäärän tai molemmat sen kaavakohteen aluella, johon kaavamääräys on liitetty. Lukuarvoissa ei saa esiintyä nollasta poikkeavia desimaaleja. Yksikköä ei käytetä. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä nolla yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo vaaditun pysäköintipaikkojen  minimimäärän, maksimimäärän tai molemmat sen kaavakohteen aluella, johon kaavamääräys on liitetty. Lukuarvoissa ei saa esiintyä nollasta poikkeavia desimaaleja. Yksikköä ei käytetä. Muun tyyppiset arvot eivät ole sallittuja.
 
 Mikäli arvoa ei anneta, tulee lukumäärä ilmaista ```lisätieto```-attribuutin avulla.
 {% include clause_end.html %}
@@ -744,7 +742,7 @@ Mikäli lisätiedon laji on [Lukumäärä per kerrosneliömetri](http://uri.suom
 
 Mikäli lisätiedon laji on [Lukumäärä per asunto](http://uri.suomi.fi/codelist/rytj/RY_Lisatiedonlaji_AK/code/13), tulee sillä olla täsmälleen yksi [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali), joka kertoo pysäköintipaikkojen minimimäärän, maksimimäärän tai molemmat jokaista kaavakohteen alueella sijaitsevan rakennuksen asuntoa kohden. Yksikköä ei käytetä.
 
-Muun tyyppiset lisätietojen arvot eivät ole sallituja.
+Muun tyyppiset lisätietojen arvot eivät ole sallittuja.
 
 {% include clause_end.html %}
 
@@ -754,7 +752,7 @@ Muun tyyppiset lisätietojen arvot eivät ole sallituja.
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0805>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-liikenne-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-liikenne-lisatiedot" %}
@@ -771,13 +769,13 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 
 {% include clause_start.html type="req" id="prof-ak/vaat-kulttuurihist-merkittava-alue" %}
 Kaikkien asemakaavojen tietoaineistojen sisältämien [Kaavamaarays](../../looginenmalli/dokumentaatio/#kaavamaarays)-luokan instanssien, joiden ```laji```-attribuutin arvo on jokin [Kultturihistoriallisesti arvokas alue tai kohde](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0901)-koodin alakoodi, osalta tulee noudattaa seuraavia rajoituksia:
-   * ```arvo```-attribuutin arvona saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+   * ```arvo```-attribuutin arvona saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
    * ```lisatieto```-attribuutin arvoina saa esiintyä nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), joka ```laji``` on yksi seuraavista:   
       * [Kulttuurihistoriallinen merkittävyys](http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_AK/code/05), jonka arvoina on yksi tai useampi [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), jotka viittaavat johonkin [Kulttuurihistoriallinen merkittävyys](http://uri.suomi.fi/codelist/rakrek/kulthistmer) koodiston koodeista,
       * [Kulttuurihistoriallinen arvotyyppi](http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_AK/code/06), jonka arvoina on yksi tai useampi [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), jotka viittaavat johonkin [Kulttuurihistoriallinen arvotyyppi](http://uri.suomi.fi/codelist/rakrek/Kulthistatyyp) koodiston koodeista,
       * [Kulttuurihistoriallinen tyyppi](http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_AK/code/07), jonka arvoina on yksi tai useampi [KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), jotka viittaavat johonkin [Kulttuurihistoriallinen tyyppi](http://uri.suomi.fi/codelist/rakrek/kulthistyyp) koodiston koodeista, tai
       * [Kulttuurihistoriallisen merkittävyyden kriteerit](http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_AK/code/08), jonka arvoina on yksi tai useampi[KoodiArvo](../../looginenmalli/dokumentaatio/#koodiarvo), joka viittaa johonkin [Kulttuurihistoriallisen merkittävyyden kriteerit](http://uri.suomi.fi/codelist/rakrek/KultKritee) koodiston koodeista.
-Muun tyyppiset arvot eivät ole sallituja.
+Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include question.html content="Kulttuurihistoriallisen merkittävyyden kriteerit on monikossa, kun muut koodien otsikot ovat yksikössä, pitäisikö myös se vaihtaa yksikköön? Samat nimet ovat käytössä viitatuissa rakrek-koodistoissa." %}
@@ -824,12 +822,12 @@ Ilmaisee, että kaavakohde kuvaa kiinteän muinaisjäännöksen.
 
 {% include clause_start.html type="req" id="prof-ak/vaat-kulttuurihist-merkittava-alue" %}
 Kaikkien asemakaavojen tietoaineistojen sisältämien [Kaavamaarays](../../looginenmalli/dokumentaatio/#kaavamaarays)-luokan instanssien, joiden ```laji```-attribuutin arvo on jokin [Luontoarvoiltaan arvokas alue tai kohde](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0902)-koodin alakoodi, osalta tulee noudattaa seuraavia rajoituksia:
-   * ```arvo```-attribuutin arvona saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+   * ```arvo```-attribuutin arvona saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
    * ```lisatieto```-attribuutin arvoina saa esiintyä nolla tai useampi [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto), joka ```laji``` on yksi seuraavista:   
       * [Ympäristöarvon peruste](http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_AK/code/09), jolla on yksi arvona yksi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo), joka kuvaa ympäristöarvon perusteen sanallisesti, tai
       * [Ympäristö- tai luontoarvon merkittävyys](http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_AK/code/10), on yksi arvona yksi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo), joka kuvaa ympäristö- tai luontoarvon merkittävyyden sanallisesti.
 
-Muun tyyppiset lisätietojen arvot eivät ole sallituja.
+Muun tyyppiset lisätietojen arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include note.html content="Mikäli ympäristöarvojen perusteet ja merkittävyydet kuvataan tulevaisuudessa omina koodistoinaan, tulee lisätietojen sallittuja arvoja muuttaa viittaamaan niihin" %}
@@ -881,7 +879,7 @@ Ilmaisee, että kaavakohde kuvaa alueen, jolla ympäristö säilytetään.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-sailytettava-ymparisto-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-sailytettava-ymparisto-lisatiedot" %}
@@ -896,7 +894,7 @@ Ilmaisee, että kaavakohde kuvaa alueen, jolla on sen luontoarvojen vuoksi erity
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-ulkoilun-ohjaamistarve-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-ulkoilun-ohjaamistarve-lisatiedot" %}
@@ -947,7 +945,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1101>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-yleismaarays-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-yleismaarays-lisatiedot" %}
@@ -962,7 +960,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 ```arvo```-attribuutin arvoina saa esiintyä joko
    * yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), joka kuvaa sen kaavan hyväksymisestä alkavan ajanjakson pituuden, jonka kuluttua kaavan ajanmukaisuus on arvioitava. Yksikkönä vuosi (```v```), tai
    * yksi [Ajanhetkiarvo](../../looginenmalli/dokumentaatio/#ajanhetkiarvo), joka kuvaa päivämäärän, johon mennessä kaavan ajanmukaisuus on arvioitava.
-Muun tyyppiset arvot eivät ole sallituja.
+Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-ajanmukaiden-arviointi-aikaraja-lisatiedot" %}
@@ -1016,7 +1014,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1201>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-alin-painovoimainen-viemarointitaso-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste), joka kertoo alimman painovoimaisen viemäröintitason korkeuden sovitun pystysuuntaisen koordinaatiston arvona. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste), joka kertoo alimman painovoimaisen viemäröintitason korkeuden sovitun pystysuuntaisen koordinaatiston arvona. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-alin-painovoimainen-viemarointitaso-lisatiedot" %}
@@ -1027,7 +1025,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1202>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-alin-aurinkokennojen-sijoittumistaso-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste), joka kertoo alimman aurinkokennojen sijoittumistason korkeuden sovitun pystysuuntaisen koordinaatiston arvona. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste), joka kertoo alimman aurinkokennojen sijoittumistason korkeuden sovitun pystysuuntaisen koordinaatiston arvona. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-alin-alin-aurinkokennojen-sijoittumistaso-lisatiedot" %}
@@ -1042,7 +1040,7 @@ Ilmaisee, että kaavakohde kuvaa alueen, jolle on laadittava hulevesisuunnitelma
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-hulevesisuunnitelma-laadittava-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-hulevesisuunnitelma-laadittava-lisatiedot" %}
@@ -1068,7 +1066,7 @@ Ilmaisee, että kaavakohde kuvaa alueen, joka on liitettävä kaukolämpöverkko
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1205>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-hulevesien-imeyttaminen-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa hulevesien imeyttämisen periaatteen tai vaatimuksen. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa hulevesien imeyttämisen periaatteen tai vaatimuksen. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-hulevesien-imeyttaminen-lisatiedot" %}
@@ -1079,7 +1077,7 @@ Ilmaisee, että kaavakohde kuvaa alueen, joka on liitettävä kaukolämpöverkko
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1206>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-yhdyskuntatekninen-huolto-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-yhdyskuntatekninen-huolto-lisatiedot" %}
@@ -1099,7 +1097,7 @@ Ilmaisee, että kaavakohde kuvaa alueen, jolla on ihmisen toiminnan seurauksena 
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-pilaantunut-maa-alue-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa, esimerkiksi lisätietoa pilaantumisen laadusta. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa, esimerkiksi lisätietoa pilaantumisen laadusta. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-pilaantunut-maa-alue-lisatiedot" %}
@@ -1120,7 +1118,7 @@ Ilmaisee, että kaavakohde kuvaa alueen, jolle tulee rakentaa meluaita.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-meluaita-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä nolla tai yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), joka kuvaa aidan vähimmäisääneneristävyyden liikennemelua vastaan desibeleinä (```db```). Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), joka kuvaa aidan vähimmäisääneneristävyyden liikennemelua vastaan desibeleinä (```db```). Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-meluaita-lisatiedot" %}
@@ -1135,7 +1133,7 @@ Ilmaisee, että kaavakohde kuvaa alueen, jolle tulee rakentaa meluvalli.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-meluvalli-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä nolla tai yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), joka kuvaa vallin vähimmäisääneneristävyyden liikennemelua vastaan desibeleinä (```db```). Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä nolla tai yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), joka kuvaa vallin vähimmäisääneneristävyyden liikennemelua vastaan desibeleinä (```db```). Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-meluvalli-lisatiedot" %}
@@ -1150,7 +1148,7 @@ Ilmaisee, että kaavakohde kuvaa alueen, jolla esiintyy siinä määrin melua, e
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-melualue-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla kuvataan melun tyyppiä ja haitallisuutta. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvona saa esiintyä nolla tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla kuvataan melun tyyppiä ja haitallisuutta. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-melualue-lisatiedot" %}
@@ -1178,7 +1176,7 @@ Ilmaisee, että kaavakohde kuvaa alueen, jolla maaperästä saattaa erittyä rad
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1306>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-ymparistonsuojelu-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), joka kuvaa kaavamääräyksen. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-ymparistonsuojelu-lisatiedot" %}
@@ -1194,7 +1192,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1401>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-kadun-tien-nimi-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman kadun tai tien nimi. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman kadun tai tien nimi. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-kadun-tien-nimi-lisatiedot" %}
@@ -1205,7 +1203,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1402>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-torin-aukion-nimi-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman torin tai aukion nimi. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman torin tai aukion nimi. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-torin-aukion-nimi-lisatiedot" %}
@@ -1216,7 +1214,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1403>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-yleisen-alueen-nimi-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman torin tai aukion nimi. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman torin tai aukion nimi. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-yleisen-alueen-nimi-lisatiedot" %}
@@ -1228,7 +1226,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1404>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-kaupungin-kunnan-osan-nimi-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman kaupungin- tai kunnanosan nimi. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman kaupungin- tai kunnanosan nimi. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-kaupungin-kunnan-osan-nimi-lisatiedot" %}
@@ -1239,7 +1237,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1405>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-korttelinumero-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo), jolla annetaan kaavakohteen kuvaaman korttelin korttelinumero. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo), jolla annetaan kaavakohteen kuvaaman korttelin korttelinumero. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-korttelinumero-lisatiedot" %}
@@ -1250,7 +1248,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1406>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-nimi-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman kohteen nimi. Muun tyyppiset arvot eivät ole sallituja.
+```arvo```-attribuutin arvoina saa esiintyä yksi tai useampi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo) (yksi kullakin kielellä), jolla annetaan kaavakohteen kuvaaman kohteen nimi. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-muu-nimi-lisatiedot" %}
