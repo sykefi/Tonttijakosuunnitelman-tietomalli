@@ -672,10 +672,10 @@ Ilmaisee, että kaavakohteen alueen maisema on säilytettävä avoimena.
 
 Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar) käytetään.
 
-{% include question.html content="Kevyen liikenteen/pyöräily/jalankulku väyliä ei ole kuvattu asemakaavan kaavamääräyksinä. Alueen käyttötarkoituksessa on kyllä jalankululle ja pyöräilylle varattu alue. Miten ilmaistaan yhdistetty jalankulku ja pyöräilyväylä? %}
+{% include question.html content="Kevyen liikenteen/pyöräily/jalankulku väyliä ei ole kuvattu asemakaavan kaavamääräyksinä. Alueen käyttötarkoituksessa on kyllä jalankululle ja pyöräilylle varattu alue. Miten ilmaistaan yhdistetty jalankulku ja pyöräilyväylä?" %}
 
 
-{% include question.html content="AK-kaavamääräyksissä ei ole raitiotie/pikaraitiotie/metroväyliä erikseen, vain yleinen rautatieliikenteen alue. Pitäiskö olla? Entä julkisen liikenteen pysäkit ja metron sisäänkäynti? %}
+{% include question.html content="AK-kaavamääräyksissä ei ole raitiotie/pikaraitiotie/metroväyliä erikseen, vain yleinen rautatieliikenteen alue. Pitäiskö olla? Entä julkisen liikenteen pysäkit ja metron sisäänkäynti?" %}
 
 #### Ajoneuvoliittymä
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0801>
