@@ -47,7 +47,7 @@ Kaikki Kaavatietomallin tekstimuotoiset sisällöt on tiedonsiirtoa varten kooda
 {% include clause_end.html %}
 
 #### Monikielinen sisältö ja kielikoodit
-Kaikki kaavavietomallin tekstimuotoinen sisältö ilmaistaan ISO 19103 -standardin määrittelemän [LanguageString](dokumentaatio/#languagestring)-luokan avulla.
+Kaikki kaavatietomallin tekstimuotoinen sisältö ilmaistaan ISO 19103 -standardin määrittelemän [LanguageString](dokumentaatio/#languagestring)-luokan avulla.
 
 {% include clause_start.html type="req" id="laatu/vaat-monikielisyys-kielikoodi" %}
 Kunkin LanguageString-luokan objektin tulee toteuttaa ```language```-attribuutti, jonka arvona on ISO 639-2 -standardin mukainen terminologinen, kolmekirjaiminen kielikoodi code (ISO 639-2/T).
@@ -55,7 +55,7 @@ Kunkin LanguageString-luokan objektin tulee toteuttaa ```language```-attribuutti
 
 {% include note.html content="ISO 639-2/T koodilistan mukaiset koodit Suomen virallisille kielille ovat ```fin``` (suomi), ```swe``` (ruotsi), ```smn``` (inarinsaami), ```sms```(koltansaami) ja ```sme``` (pohjoissaami). Muita Suomessa paljon puhuttujen kielten ISO 639-2/T -koodeja: ```rus``` (venäjä), ```est``` (viro), ```ara```(arabia),  ```eng``` (englanti), ```som``` (somali), ```kur``` (kurdi)." %}
 
-Tekstimuotoiset attribuutit on määritelty siten, että ne sisältävät 0 tai enemmän LanguageString-tyyppisiä arvoja.
+Tekstimuotoiset attribuutit on määritelty siten, että ne sisältävät nolla tai enemmän LanguageString-tyyppisiä arvoja.
 
 {% include clause_start.html type="req" id="laatu/vaat-yksi-teksti-per-kieli" %}
 Kunkin tekstimuotoista sisältöä kuvaavan attribuutin arvoina tulee olla enintään yksi LanguageString-tyyppinen arvo kutakin kielikoodia (```language```-attribuutti) kohti.
@@ -68,10 +68,14 @@ Kunkin yhdellä kielellä annetun LanguageString-tyyppisen merkkijonon enimmäis
 
 #### Tekstiarvojen käyttö
 
-Tekstimuotoisina annettujen kaavamääräysten ja niiden lisätietojen koneellinen tulkittavuus vaikeampaa, ja joka tapauksessa epätäsmällisempää ja epäluotettavampaa kuin koodistojen arvojen tai numeeristen arvojen avulla annettujen. Tekstimuotoiset arvot ovat kuitenkin toisinaan tarpeen, koska kaikkia mahdollisia yksityiskohtaisia kaavamääräystietoja ei ole mielekästä koodittaa. Ihmisen tulee todennäköisesti aina tarkistaa tekstimuotoisten kaavamääräysten tulkinta, mikä heikentää konetulkittavan kaavatiedon käsittelytehokkuutta. Tämän vuoksi tekstimuotoisia kaavamääräysten ja niiden lisätietojen arvoja ei tule käyttää tarpeettomasti, esimerkiksi kuvaamaan kaavamääräyslajikoodin otsikkoon, määritelmään tai kuvaukseen sisältyvää sisältöä.
+Tekstimuotoisina annettujen kaavamääräysten ja niiden lisätietojen koneellinen tulkittavuus on monimutkaisempaa, epätäsmällisempää ja epäluotettavampaa kuin kuvattaessa sama ohjausvaikutus koodistojen arvojen tai numeeristen arvojen avulla. Tekstimuotoiset arvot ovat kuitenkin toisinaan tarpeen, koska kaikkia mahdollisia yksityiskohtaisia kaavamääräystietoja ei ole mielekästä koodittaa. Ihmisen tulee todennäköisesti aina tarkistaa tekstimuotoisten kaavamääräysten tulkinta, mikä heikentää konetulkittavan kaavatiedon käsittelytehokkuutta. Tämän vuoksi tekstimuotoisia kaavamääräysten ja niiden lisätietojen arvoja ei tule käyttää tarpeettomasti, esimerkiksi kuvaamaan uudelleen jo kaavamääräyslajikoodin otsikkoon, määritelmään tai kuvaukseen sisältyvää sisältöä.
 
 {% include clause_start.html type="req" id="laatu/vaat-vain-tarpeelliset-tekstiarvot" %}
-Mikäli [Kaavamaarays](dokumentaatio/#kaavamaarays)- tai [Lisatieto](dokumentaatio/#lisatieto)-luokkien ```arvo```-attribuuteille on sallittu nollasta poikkeava määrä [TekstiArvo](dokumentaatio/#tekstiarvo)-tyyppisiä arvoja, tulee niitä käyttää ainoastaan tapauksissa, joissa teksti on välttämätön täydentämään kaavamääräyksen tai lisätiedon muiden attribuuttien avulla kuvattua merkitystä. Mikäli sama ohjausvaikutus saavutetaan myös ilman [TekstiArvo](dokumentaatio/#tekstiarvo)-tyyppisiä arvoja, ei niitä tule käyttää.
+Mikäli [Kaavamaarays](dokumentaatio/#kaavamaarays)- tai [Lisatieto](dokumentaatio/#lisatieto)-luokkien ```arvo```-attribuuteille on sallittu nollasta poikkeava määrä [TekstiArvo](dokumentaatio/#tekstiarvo)-tyyppisiä arvoja, tulee niitä käyttää ainoastaan tapauksissa, joissa teksti on välttämätön täydentämään kaavamääräyksen tai lisätiedon muiden attribuuttien avulla kuvattua merkitystä. Mikäli sama ohjausvaikutus saavutetaan myös jättämällä [TekstiArvo](dokumentaatio/#tekstiarvo)-tyyppinen arvo pois, ei sitä tule käyttää.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="laatu/vaat-otsikointi-nimi" %}
+[Kaavamaarays](dokumentaatio/#kaavamaarays)-, [Kaavasuositus](dokumentaatio/#kaavasuositus)- ja [Kaavakohde](dokumentaatio/#kaavakohde)-luokkien instanssien mahdolliseen ei-oikeusvaikutteiseen otsikointiin tulee käyttää niiden ```nimi```-attribuutteja.
 {% include clause_end.html %}
 
 ### Geometriat
