@@ -66,6 +66,14 @@ Kunkin tekstimuotoista sisältöä kuvaavan attribuutin arvoina tulee olla enint
 Kunkin yhdellä kielellä annetun LanguageString-tyyppisen merkkijonon enimmäispituus on 1024 merkkiä.
 {% include clause_end.html %}
 
+#### Tekstiarvojen käyttö
+
+Tekstimuotoisina annettujen kaavamääräysten ja niiden lisätietojen koneellinen tulkittavuus vaikeampaa, ja joka tapauksessa epätäsmällisempää ja epäluotettavampaa kuin koodistojen arvojen tai numeeristen arvojen avulla annettujen. Tekstimuotoiset arvot ovat kuitenkin toisinaan tarpeen, koska kaikkia mahdollisia yksityiskohtaisia kaavamääräystietoja ei ole mielekästä koodittaa. Ihmisen tulee todennäköisesti aina tarkistaa tekstimuotoisten kaavamääräysten tulkinta, mikä heikentää konetulkittavan kaavatiedon käsittelytehokkuutta. Tämän vuoksi tekstimuotoisia kaavamääräysten ja niiden lisätietojen arvoja ei tule käyttää tarpeettomasti, esimerkiksi kuvaamaan kaavamääräyslajikoodin otsikkoon, määritelmään tai kuvaukseen sisältyvää sisältöä.
+
+{% include clause_start.html type="req" id="laatu/vaat-vain-tarpeelliset-tekstiarvot" %}
+Mikäli [Kaavamaarays](dokumentaatio/#kaavamaarays)- tai [Lisatieto](dokumentaatio/#lisatieto)-luokkien ```arvo```-attribuuteille on sallittu nollasta poikkeava määrä [TekstiArvo](dokumentaatio/#tekstiarvo)-tyyppisiä arvoja, tulee niitä käyttää ainoastaan tapauksissa, joissa teksti on välttämätön täydentämään kaavamääräyksen tai lisätiedon muiden attribuuttien avulla kuvattua merkitystä. Mikäli sama ohjausvaikutus saavutetaan myös ilman [TekstiArvo](dokumentaatio/#tekstiarvo)-tyyppisiä arvoja, ei niitä tule käyttää.
+{% include clause_end.html %}
+
 ### Geometriat
 
 #### Geometriatyypit
