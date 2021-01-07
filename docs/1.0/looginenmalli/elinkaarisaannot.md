@@ -359,55 +359,55 @@ Kunkin voimassaolevan kaavamääräyksen osalta voidaan tarkastella onko se aset
 Kaavan ja sen sisältämien kaavamääräysten elinkaareen liittyvää tilaa hallitaan ko. tietokohteiden ```elinkaaritila```-attribuutin ja sen mahdolliset arvot kuvaavan [Elinkaaren tila](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila)-koodiston avulla. [Kaava](dokumentaatio/#kaava)-, [Kaavamaarays](dokumentaatio/#kaavamaarays)-, ja [Kaavasuositus](dokumentaatio/#kaavasuositus)-luokkien ```elinkaaritila```-attribuutit ovat pakollisia. 
 
 [Elinkaaren tila](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaaritila)-koodisto kuvaa 14 mahdollista tilaa, joissa kaava voi olla sen elinkaaren eri vaiheissa:
-* [01 - Kaavoitusaloite](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/01)
-* [02 - Vireilletullut](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/02)
-* [03 - Kaavaluonnos](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/03)
-* [04 - Kaavaehdotus](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/04)
-* [05 - Tarkistettu kaavaehdotus](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/05)
-* [06 - Hyväksytty kaava](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/06)
-* [07 - Oikaisukehotuksen alainen](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/07)
-* [08 - Valituksen alainen](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/08)
-* [09 - Osittain voimassa](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/09)
-* [10 - Voimassa](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/10)
-* [11 - Kumottu](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/11)
-* [12 - Kumoutunut](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/12)
-* [13 - Rauennut](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/13)
-* [14 - Hylätty](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/14)
+* [Kaavoitusaloite](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/01)
+* [Vireilletullut](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/02)
+* [Kaavaluonnos](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/03)
+* [Kaavaehdotus](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/04)
+* [Tarkistettu kaavaehdotus](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/05)
+* [Hyväksytty kaava](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/06)
+* [Oikaisukehotuksen alainen](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/07)
+* [Valituksen alainen](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/08)
+* [Osittain voimassa](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/09)
+* [Voimassa](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/10)
+* [Kumottu](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/11)
+* [Kumoutunut](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/12)
+* [Rauennut](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/13)
+* [Hylätty](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/14)
 
 {% include question.html content="Mitkä ovat ```Kumoutunut```-, ```Kumottu```-, ```Rauennut```- ja ```Hylätty``` -tilojen tarkat määritelmät ja erot?" %}
 
 {% include question.html content="Pitäisikö kaavan voida olla yhtäaikaa sekä ```Oikaisukehotuksen alainen``` että ```Valituksen alainen```?" %}
 
-Kaavojen, joiden elinkaaritila on 01 - 08, kaavan laadinta- ja päätösprosessi on kesken, eli niiden kaavamääräykset eivät (vielä) ole lainvoimaisia. Kaavat, jotka ovat elinkaaritilassa 09 tai 10 sisältävät nykyajanhetkellä rajaamallaan alueella voimassa olevia kaavamääräyksiä. Koodit 11-14 kuvaavat kaavan tiloja, joissa olevan kaavan elinkaari on päättynyt.
+Kaavojen, joiden elinkaaritila on Kaavoitusaloite,  Vireilletullut, Kaavaluonnos, Kaavaehdotus, Tarkistettu kaavaehdotus, Hyväksytty kaava, Oikaisukehotuksen alainen tai Valituksen alainen, laadinta- ja päätösprosessi on kesken, eli niiden kaavamääräykset eivät (vielä) ole lainvoimaisia. Kaavat, jotka ovat elinkaaritilassa Osittain voimassa tai Voimassa sisältävät nykyajanhetkellä rajaamallaan alueella voimassa olevia kaavamääräyksiä. Koodit Kumottu, Kumoutunut, Rauennut ja Hylätty kuvaavat kaavan tiloja, joissa olevan kaavan elinkaari on päättynyt.
 
 ### Sallitut kaavan elinkaaren tilan muutokset
 Kaavan elinkaaritila voi sen laadinta-, päätös-, valitus-, voimassaolo- ja kumoutumisvaiheidensa esiintyä ja muuttua vain tässä luvussa kuvatuilla tavoilla.
 
 {% include clause_start.html type="req" id="elinkaari/vaat-ensimmainen-elinkaaritila" %}
 Kaavan elinkaaritila tallennettaessa kaava ensimmäistä kertaa kaavatietovarastoon voi olla jokin seuraavista riippuen Kaavan ```digitaalinenAlkupera```-attribuutin arvosta:
-   * [01 - Tietomallin mukaan laadittu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/01): tilat 01, 02, 03, 04, 05 tai 06.
-   * [02 - Kokonaan digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/02), [03 - Osittain digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/03) tai [04 - Kaavan rajaus digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/04): tilat 09, 10, 11, 12 tai 13.
+   * [Tietomallin mukaan laadittu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/01): tilat Kaavoitusaloite, Vireilletullut, Kaavaluonnos, Kaavaehdotus, Tarkistettu kaavaehdotus tai Hyväksytty kaava.
+   * [Kokonaan digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/02), [Osittain digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/03) tai [Kaavan rajaus digitoitu](http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/04): tilat Osittain voimassa, Voimassa, Kumottu, Kumoutunut tai Rauennut.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-elinkaaritila-siirtymat" %}
 Kaavan ```elinkaaritila```-attribuutin arvo voi kahden sen peräkkäisen tallennusversion välillä vain seuraavilla tavoilla:
-* Tilasta ```01``` tilaan ```02```, ```03```, ```04```, ```05```, ```06``` tai ```14```.
-* Tilasta ```02``` tilaan ```03```, ```04```, ```05```, ```06``` tai ```13```.
-* Tilasta ```03``` tilaan ```04```, ```05```, ```06``` tai ```13```.
-* Tilasta ```04``` tilaan ```05```, ```06``` tai ```13```.
-* Tilasta ```05``` tilaan ```06``` tai ```13```.
-* Tilasta ```06``` tilaan ```07```, ```08```, ```09```, ```10``` tai ```12```.
-* Tilasta ```07``` tilaan ```08```, ```09```, ```10``` tai ```12```.
-* Tilasta ```08``` tilaan ```07```, ```09```, ```10``` tai ```12```.
-* Tilasta ```09``` tilaan ```11```.
-* Tilasta ```10``` tilaan ```11```.
-* Tilasta ```11``` ei sallittuja siirtymiä.
-* Tilasta ```12``` ei sallittuja siirtymiä.
-* Tilasta ```13``` ei sallittuja siirtymiä.
-* Tilasta ```14``` ei sallittuja siirtymiä.
+* Tilasta ```Kaavoitusaloite``` tilaan ```Vireilletullut```, ```Kaavaluonnos```, ```Kaavaehdotus```, ```Tarkistettu kaavaehdotus```, ```Hyväksytty kaava``` tai ```Hylätty```.
+* Tilasta ```Vireilletullut``` tilaan ```Kaavaluonnos```, ```Kaavaehdotus```, ```Tarkistettu kaavaehdotus```, ```Hyväksytty kaava``` tai ```Rauennut```.
+* Tilasta ```Kaavaluonnos``` tilaan ```Kaavaluonnos```, ```Tarkistettu kaavaehdotus```, ```Hyväksytty kaava``` tai ```Rauennut```.
+* Tilasta ```Kaavaehdotus``` tilaan ```Tarkistettu kaavaehdotus```, ```Hyväksytty kaava``` tai ```Rauennut```.
+* Tilasta ```Tarkistettu kaavaehdotus``` tilaan ```Hyväksytty kaava``` tai ```Rauennut```.
+* Tilasta ```Hyväksytty kaava``` tilaan ```Oikaisukehotuksen alainen```, ```Valituksen alainen```, ```Osittain voimassa```, ```Voimassa``` tai ```Kumoutunut```.
+* Tilasta ```Oikaisukehotuksen alainen``` tilaan ```Valituksen alainen```, ```Osittain voimassa```, ```Voimassa``` tai ```Kumoutunut```.
+* Tilasta ```Valituksen alainen``` tilaan ```Oikaisukehotuksen alainen```, ```Osittain voimassa```, ```Voimassa``` tai ```Kumoutunut```.
+* Tilasta ```Osittain voimassa``` tilaan ```Kumottu```.
+* Tilasta ```Voimassa``` tilaan ```Kumottu```.
+* Tilasta ```Kumottu``` ei sallittuja siirtymiä.
+* Tilasta ```Kumoutunut``` ei sallittuja siirtymiä.
+* Tilasta ```Rauennut``` ei sallittuja siirtymiä.
+* Tilasta ```Hylätty``` ei sallittuja siirtymiä.
 {% include clause_end.html %}
 
-{% include question.html content="Onko kaava heti lainvoimainen (ja siis sen voimassaoloaika alkanut), kun se on päätetty määrätä osittain voimaan? Vai seuraako osittain voimaan määräämispäätöksestä vielä valitusaika, jonka jälkeen kaava tulee vielä erikseen kuuluttaa lainvoimaiseksi? Jos erillinen lainvoimaiseksi kuuluttaminen on tarpeen, tulee sallia myös tilamuutos ```09 -> 10```" %}
+{% include question.html content="Onko kaava heti lainvoimainen (ja siis sen voimassaoloaika alkanut), kun se on päätetty määrätä osittain voimaan? Vai seuraako osittain voimaan määräämispäätöksestä vielä valitusaika, jonka jälkeen kaava tulee vielä erikseen kuuluttaa lainvoimaiseksi? Jos erillinen lainvoimaiseksi kuuluttaminen on tarpeen, tulee sallia myös tilamuutos ```Osittain voimassa -> Voimassa```" %}
 
 ### Kaavamääräysten ja -suositusten elinkaaren tila
 Tavallisesti kaavan sisältämien kaavamääräysten ja -suositusten elinkaaritilan arvo on sama kuin koko kaavalla, mutta ne voivat erota toisistaan kahdessa tapauksessa:
