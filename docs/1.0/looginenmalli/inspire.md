@@ -14,6 +14,18 @@ status: "Keskeneräinen"
 
 ## Inspire Planned Land Use -sovellusskeema
 
+Maankäytön suunnitteluun liittyvät kaavatietoaineistot julkaistaan Inspire-tietoaineistoina käyttäen Inspire-direktiivin liiteen 3 piiriin kuuluvan [Land Use (LU)](https://inspire.ec.europa.eu/Themes/129/2892) -teeman Planned Land Use -sovellusskeemaa (PLU). Skeeman ydin koostuu neljästä kohdetyyppi-stereotyypin (feature type) luokasta ja niiden välisistä assosiaatiosta: SpatialPlan, ZoningElement, SupplementaryRegulation ja OfficialDocumentation. 
+
+![Planned Land Use -sovellusskeeman kohdetyypit](inspire-plu-luokkakaavio.png "Planned Land Use -sovellusskeeman kohdetyypit")
+
+PLU-sovellusskeemassa määritellään myös seitsemän tietotyyppi-stereotyypin (data type) luokkaa: BackgroundMapValue, OrdinanceValue, DimensioningIndicationValue, DimensioningIndicationRealValue, DimensioningIndicationIntegerValue, DimensioningIndicationCharacterValue ja DimensioningIndicationMeasureValue.
+
+![Planned Land Use -sovellusskeeman tietotyypit](inspire-plu-luokkakaavio-datatypes.png "Planned Land Use -sovellusskeeman tietotyypit")
+
+Koodistojen osalta PLU-skeemassa määritellään seuraavat: [PlanTypeNameValue](https://inspire.ec.europa.eu/codelist/PlanTypeNameValue), [SpecificSupplementaryRegulationValue](https://inspire.ec.europa.eu/codelist/SpecificSupplementaryRegulationValue), [SupplementaryRegulationValue](https://inspire.ec.europa.eu/codelist/SupplementaryRegulationValue), [LevelOfSpatialPlanValue](https://inspire.ec.europa.eu/codelist/LevelOfSpatialPlanValue), [ProcessStepGeneralValue](https://inspire.ec.europa.eu/codelist/LevelOfSpatialPlanValue) ja [RegulationNatureValue](https://inspire.ec.europa.eu/codelist/RegulationNatureValue). Näiden lisäksi PLU-skeeman luokissa käytetään skeemasta Land Use Nomenclature koodistoja [LandUseClassificationValue](https://inspire.ec.europa.eu/codelist/LandUseClassificationValue) ja [HILUCSValue](https://inspire.ec.europa.eu/codelist/LandUseClassificationValue) sekä olemassaolevaa maankäyttöä kuvaavia SpecificPresence- ja HILUCSPresence -union-tyyppisiä luokkia.
+
+Tässä dokumentissa kuvataan miten loogisen tason Kaavatietomallin tiedoista voidaan tuottaa Inspire PLU -sovellusskeeman UML-mallin mukaisia tietoaineistoja.
+
 ## Luokka- ja ominaisuustason vastaavuudet
 
 ### SpatialPlan
@@ -36,14 +48,17 @@ Inspire Planned Land Use -skeeman ```SpatialPlan```-luokan tiedot johdetaan loog
 | alternativeTitle: CharacterString [1] (voidable) | ei anneta
 | planTypeName: PlanTypeName [1] | Kaava.laji                                   | [RY_Kaavalaji](http://uri.suomi.fi/codelist/rytj/RY_Kaavalaji)-koodisto tulisi määritellä laajentamaan Inspire:n [PlanTypeName](https://inspire.ec.europa.eu/codelist/PlanTypeNameValue)-koodistoa
 | processStepGeneral: ProcessStepGeneralValue [1] (voidable) | Kaava.elinkaaritila | ks. [ProcessStepGeneralValue](#processstepgeneralvalue)
-| backgroundMap: BackgroundMapValue [1] (voidable) | Kaava.hyodynnettyAineisto[laji = [Pohjakartta](http://uri.suomi.fi/codelist/rytj/RY_LahtotietoaineistonLaji/code/11)]
+| backgroundMap: BackgroundMapValue [1] (voidable) | Kaava.hyodynnettyAineisto[laji = [Pohjakartta](http://uri.suomi.fi/codelist/rytj/RY_LahtotietoaineistonLaji/code/11)], ks. seuraavat rivit |
+|                               | ```backgroundMapDate```: Lahtotietoaineisto.viimeisinMuutos |
+|                               | ```backgroundMapReference```: Lahtotietoaineisto.nimi |
+|                               | ```backgroundMapURI```: Lahtotietoaineisto.lisatietolinkki |
 | ordinance: OrdinanceValue [1..*] (voidable) | ks. seuraavat rivit
 |                                | ```ordinanceReference```: Kasittelytapahtuma[liittyvaAsia = Kaava.paikallinenTunnus JA (laji = [Kaavan hyväksyminen](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/09) TAI laji = [Kaavan hyväksyminen oikaisukehotuksen johdosta](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/10) TAI laji = [Kaavan kumoaminen](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/11))].liittyvaAsiakirja[laji = [Päätös](http://uri.suomi.fi/codelist/rytj/RY_AsiakirjanLaji_YKAK/code/12)].asiakirjanTunnus
 |                                | ```ordinanceDate```: Kasittelytapahtuma[liittyvaAsia = Kaava.paikallinenTunnus JA (laji = [Kaavan hyväksyminen](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/09) TAI laji = [Kaavan hyväksyminen oikaisukehotuksen johdosta](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/10) TAI laji = [Kaavan kumoaminen](http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji/code/11))].tapahtumanAika
 
 | Assosiaatio-rooli             | Johtaminen Kaavatietomallin tiedoista        | Huomautukset
 | ----------------------------- | -------------------------------------------- | ---------------------------------
-| officialDocument: OfficialDocumentation [1..*] (voidable) | Kaava.asianLiite | ks. [OfficialDocumentation](#officialDocumentation)
+| officialDocument: OfficialDocumentation [1..*] (voidable) | Kaava.asianLiite | ks. [OfficialDocumentation](#officialdocumentation)
 | member: ZoningElement [0..*]  | Kaava.kaavaKohde[maarays.laji = alakoodi([Alueen käyttötarkoitus (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)) TAI maarays.laji = alakoodi([Alueen käyttötarkoitus (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01))] | ks. [ZoningElement](#zoningelement)
 | restriction: SupplementaryRegulation [0..*] | Kaava.kaavaKohde[maarays.laji != alakoodi([Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01))] | ks. [SupplementaryRegulation](#supplementaryregulation)
 
@@ -69,14 +84,19 @@ Inspire Planned Land Use -skeeman ```ZoningElement```-luokan tiedot johdetaan lo
 | regulationNature: RegulationNatureValue [1] | <https://inspire.ec.europa.eu/codelist/RegulationNatureValue/generallyBinding>
 | endLifeSpanVersion: DateTime [1] (voidable) | Kaavakohde.korvattuKohteella.tallennusAika      |
 | processStepGeneral: ProcessStepGeneralValue [1] (voidable) | Kaavakohde.maarays[laji = alakoodi([Alueen käyttötarkoitus (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)) TAI maarays.laji = alakoodi([Alueen käyttötarkoitus (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01))].elinkaaritila | ks. [ProcessStepGeneralValue](#processstepgeneralvalue)
-| backgroundMap: BackgroundMapValue [1] (voidable) | Kaavakohde.kaava.hyodynnettyAineisto[laji = [Pohjakartta](http://uri.suomi.fi/codelist/rytj/RY_LahtotietoaineistonLaji/code/11)]
+| backgroundMap: BackgroundMapValue [1] (voidable) | Kaavakohde.kaava.hyodynnettyAineisto[laji = [Pohjakartta](http://uri.suomi.fi/codelist/rytj/RY_LahtotietoaineistonLaji/code/11)], ks. seuraavat rivit |
+|                               | ```backgroundMapDate```: Lahtotietoaineisto.viimeisinMuutos |
+|                               | ```backgroundMapReference```: Lahtotietoaineisto.nimi |
+|                               | ```backgroundMapURI```: Lahtotietoaineisto.lisatietolinkki |
 | dimensioningIndication: DimensioningIndicationValue [0..*] (voidable) | ei anneta |
 
+
+{% include question.html content="Voidaanko dimensioningIndication-attribuutille johtaa jokin mielekäs arvo?" %}
 
 | Assosiaatio-rooli             | Johtaminen Kaavatietomallin tiedoista        | Huomautukset
 | ----------------------------- | -------------------------------------------- | ---------------------------------
 | plan: SpatialPlan [1]         | Kaavakohde.kaava                             |
-| officialDocument: OfficialDocumentation [1..*] (voidable) | Kaavakohde.maarays.arvo.arvo | kukin TekstiArvo-tyyppisen arvon sisältö
+| officialDocument: OfficialDocumentation [1..*] (voidable) | ei annetta, [VoidReasonValue: Unpopulated](https://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated)
 
 
 ### SupplementaryRegulation
@@ -89,7 +109,10 @@ Inspire Planned Land Use -skeeman ```SupplementaryRegulation```-luokan tiedot jo
 | validTo: Date [0..1] (voidable) | Kaavamaarays.voimassaoloAika.end            | 
 | specificSupplementaryRegulation: SpecificSupplementaryRegulationValue [1..*] (voidable) | Kaavamaarays.laji | Tulisi määritellä [Kaavamääräyslaji (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK)- ja [Kaavamääräyslaji (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK) -koodistot laajentamaan Inspire:n [SpecificSupplementaryRegulationValue](https://inspire.ec.europa.eu/codelist/SpecificSupplementaryRegulationValue)-koodistoa
 | processStepGeneral: ProcessStepGeneralValue [1] (voidable) | Kaavamaarays.elinkaaritila | ks. [ProcessStepGeneralValue](#processstepgeneralvalue)
-| backgroundMap: BackgroundMapValue [1] (voidable) | Kaavamaarays.kaava.hyodynnettyAineisto[laji = [Pohjakartta](http://uri.suomi.fi/codelist/rytj/RY_LahtotietoaineistonLaji/code/11)]
+| backgroundMap: BackgroundMapValue [1] (voidable) | Kaavamaarays.kaava.hyodynnettyAineisto[laji = [Pohjakartta](http://uri.suomi.fi/codelist/rytj/RY_LahtotietoaineistonLaji/code/11)], ks. seuraavat rivit |
+|                               | ```backgroundMapDate```: Lahtotietoaineisto.viimeisinMuutos |
+|                               | ```backgroundMapReference```: Lahtotietoaineisto.nimi |
+|                               | ```backgroundMapURI```: Lahtotietoaineisto.lisatietolinkki |
 | beginLifeSpanVersion: DateTime [1] (voidable) | Kaavamaarays.viimeisinMuutos                    |
 | dimensioningIndication: DimensioningIndicationValue [0..*] (voidable) | ei anneta |
 | inspireId: Identifier [1]     |  ks. seuraavat rivit                          |
@@ -107,8 +130,27 @@ Inspire Planned Land Use -skeeman ```SupplementaryRegulation```-luokan tiedot jo
 | Assosiaatio-rooli             | Johtaminen Kaavatietomallin tiedoista        | Huomautukset
 | ----------------------------- | -------------------------------------------- | ---------------------------------
 | plan: SpatialPlan [1]         | Kaavamaarays.kaava                             |
-| officialDocument: OfficialDocumentation [1..*] (voidable) | Kaavamaarays.arvo.arvo | Kunkin TekstiArvo-tyyppisen arvon sisältö
+| officialDocument: OfficialDocumentation [1..*] (voidable) | ei annetta, [VoidReasonValue: Unpopulated](https://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated)
 
+
+### OfficialDocumentation
+
+Inspire Planned Land Use -skeeman ```OfficialDocument```-luokan tiedot johdetaan [Asiakirja](dokumentaatio/#kaavamaarays)-luokan tiedoista alla esitettyjen taulukoiden mukaisesti. 
+Syötteeksi valitaan kaikki kaavan Asiakirja-instanssit, joihin viitataan [Kaava](dokumentaatio/#kaava)-luokan instansseista assosiaation ```asianLiite``` avulla.
+
+| Attribuutti                   |  Johtaminen Kaavatietomallin tiedoista        | Huomautukset
+------------------------------- | --------------------------------------------- | -------------------------------
+| inspireId: Identifier [1]     |  ks. seuraavat rivit                          |
+|                               | ```localId```: Asiakirja.identiteettiTunnus   | 
+|                               | ```version```: Asiakirja.paikallinenTunnus ilman identiteettiTunnus -alkuosaa |
+|                               | ```namespace```: <http://paikkatiedot.fi/so/{aineistotunnus}/LU/OfficialDocumentation>, jossa {aineistotunnus} on Maanmittauslaitoksen myöntämä
+| legislationCitation: LegislationCitation[0..1] (voidable) | ei tuoteta        |
+| regulationText: CharacterString[0..1] (voidable) | ei tuoteta                 |
+| planDocument: DocumentCitation[0..1] (voidable) | ks. seuraavat rivit         |
+|                               | ```name```: Asiakirja.nimi                    | Vain yksi attribuutti Inspire-rakenteessa. Mikäli tuotetaan kunkin kielen Inspire-aineisto erikseen, valitaan oikean kielen sisältö sen mukaan. Mikäli kaikki kielet tuotetaan samaan aineistoon, voidaan paremman puutteessa tuottaa kaikkien kielien tekstit peräkkäin samaan kenttään.
+|                               | ```date```: Asiakirja.viimeisinMuutos         | Poimitaan vain päivämäärä
+|                               | ```link```: Asiakirja.viittausTunnus          |
+|                               | ```specificReference```: ei tuoteta           |
 
 ## Koodistojen vastaavuudet
 
