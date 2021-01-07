@@ -18,9 +18,7 @@ status: "Keskeneräinen"
 
 ### SpatialPlan
 
-Inspire Planned Land Use -skeeman ```SpatialPlan```-luokan tiedot johdetaan loogisen tason Kaavatietomallin [Kaava](dokumentaatio/#kaava)-luokan ja siihen liittyvien [Lahtotietoaineisto](dokumentaatio/#lahtotietoaineisto)- ja [Asiakirja](dokumentaatio/#asiakirja)-luokkien tiedoista alla esitettyjen taulukoiden mukaisesti.
-
-Kukin Inspire Planned Land Use -skeeman ```SpatialPlan```-luokan instanssi johdetaan yhdestä Kaavatietomallin ```Kaava```-luokan instanssista, jonka ```elinkaaritila```-attribuutin arvo on  [Osittain voimassa](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/09), [Voimassa](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/10), [Kumottu](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/11) tai [Kumoutunut](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/12).
+Inspire Planned Land Use -skeeman ```SpatialPlan```-luokan tiedot johdetaan loogisen tason Kaavatietomallin [Kaava](dokumentaatio/#kaava)-luokan ja siihen liittyvien [Lahtotietoaineisto](dokumentaatio/#lahtotietoaineisto)- ja [Asiakirja](dokumentaatio/#asiakirja)-luokkien tiedoista alla esitettyjen taulukoiden mukaisesti. Kukin Kaavatietomallin ```Kaava```-luokan instanssi vastaa yhtä Inspire Planned Land Use -skeeman ```SpatialPlan```-luokan instanssia.
 
 | Attribuutti                   |  Johtaminen Kaavatietomallin tiedoista        | Huomautukset
 ------------------------------- | --------------------------------------------- | -------------------------------
@@ -63,7 +61,7 @@ Inspire Planned Land Use -skeeman ```ZoningElement```-luokan tiedot johdetaan lo
 | geometry: GM_MultiSurface [1]    | Kaavakohde.geometria                           | geometria on aina aluemainen, ks. Soveltamisohjeet [asemakaava, vaatimus ```vaat-aluemainen-kayttotarkoitusalue```](../soveltamisohjeet/asemakaava/##sov-ak-vaat-aluemainen-kayttotarkoitusalue) ja [yleiskaava, vaatimus ```vaat-aluemainen-aluevaraus```](../soveltamisohjeet/yleiskaava/#sov-yk-vaat-aluemainen-aluevaraus)
 | validFrom: Date [0..1] (voidable) | Kaavakohde.maarays[laji = alakoodi([Alueen käyttötarkoitus (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)) TAI maarays.laji = alakoodi([Alueen käyttötarkoitus (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01))][1].voimassaoloAika.begin               |
 | validTo: Date [0..1] (voidable) | Kaavakohde.maarays[laji = alakoodi([Alueen käyttötarkoitus (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)) TAI maarays.laji = alakoodi([Alueen käyttötarkoitus (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01))][1].voimassaoloAika.end                 |
-| hilucsLandUse: HILUCSValue [1..*] | Kaavakohde.maarays[laji = alakoodi([Alueen käyttötarkoitus (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)) TAI maarays.laji = alakoodi([Alueen käyttötarkoitus (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01))].laji | ks. [HILUCSValue](#hilucsvalue)
+| hilucsLandUse: HILUCSValue [1..*] | Kaavakohde.maarays[laji = alakoodi([Alueen käyttötarkoitus (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)) TAI maarays.laji = alakoodi([Alueen käyttötarkoitus (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01))].laji | ks. [HILUCSValue (asemakaava)](#hilucsvalue-asemakaava) ja [HILUCSValue (yleiskaava)](#hilucsvalue-yleiskaava)
 | beginLifeSpanVersion: DateTime [1] (voidable) | Kaavakohde.viimeisinMuutos                    |
 | hilucsPresence: HILUCSPresence [1] (voidable) | ei anneta, [VoidReasonValue: Unknown](https://inspire.ec.europa.eu/codelist/VoidReasonValue/Unknown)              |
 | specificLandUse: LandUseClassificationValue [1..*] (voidable) | Kaavakohde.maarays[laji = alakoodi([Alueen käyttötarkoitus (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01)) TAI maarays.laji = alakoodi([Alueen käyttötarkoitus (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01))].laji       | Tulisi johtaa alueen käyttötarkoitus -koodistot, alijoukkoina [Kaavamääräyslaji (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK)- ja [Kaavamääräyslaji (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK)-koodistojen ```Alueen käyttötarkoitus```-koodin alikoodeista siten, että ne laajentavat Inspire:n [LandUseClassificationValue](https://inspire.ec.europa.eu/codelist/LandUseClassificationValue)-koodistoja.
@@ -104,7 +102,7 @@ Inspire Planned Land Use -skeeman ```SupplementaryRegulation```-luokan tiedot jo
 | specificRegulationNature: CharacterString [1] (voidable) | ei anneta, [VoidReasonValue: Unpopulated](https://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated)
 | name: CharacterString [0..*] (voidable) | Kaavamaarays.nimi                  | valitaan yksi kieli käyttäjän preferessin perusteella
 | regulationNature: RegulationNatureValue [1] | <https://inspire.ec.europa.eu/codelist/RegulationNatureValue/generallyBinding>
-| supplementaryRegulation: SupplementaryRegulationValue [1..*] | Kaavamaarays.laji | ks. [SupplementaryRegulationValue](#supplementaryregulationvalue)
+| supplementaryRegulation: SupplementaryRegulationValue [1..*] | Kaavamaarays.laji | ks. [SupplementaryRegulationValue (asemakaava)](#supplementaryregulationvalue-asemakaava) ja [SupplementaryRegulationValue (yleiskaava)](#supplementaryregulationvalue-yleiskaava)
 
 | Assosiaatio-rooli             | Johtaminen Kaavatietomallin tiedoista        | Huomautukset
 | ----------------------------- | -------------------------------------------- | ---------------------------------
@@ -120,21 +118,247 @@ Inspire Planned Land Use -skeeman ```SupplementaryRegulation```-luokan tiedot jo
 
 Elinkaaren tila                                                                            | Process Step General               |
 ------------------------------------------------------------------------------------------ | -----------------------------------|
-[Hyväksytty kaava](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/06)       | [in the process of adoption](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/adoption)
-[Oikaisukehotuksen alainen](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/07) | [in the process of adoption](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/adoption)
-[Valituksen alainen](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/08)     | [in the process of adoption](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/adoption)
-[Osittain voimassa](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/09)      | [legally binding or active](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/legalForce)
-[Voimassa](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/10)               | [legally binding or active](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/legalForce)
-[Kumottu](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/11)                | [obsolete](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/obsolete)
-[Kumoutunut](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/12)             | [obsolete](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/obsolete)
+[Kaavoitusaloite](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/01)        | [luonnnos (elaboration)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/elaboration)
+[Vireilletullut](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/02)         | [luonnnos (elaboration)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/elaboration)
+[Kaavaluonnos](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/03)           | [luonnnos (elaboration)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/elaboration)
+[Kaavaehdotus](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/04)           | [ehdotus (in the process of adoption)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/adoption)
+[Tarkistettu kaavaehdotus](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/05) | [ehdotus (in the process of adoption)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/adoption)
+[Hyväksytty kaava](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/06)       | [ehdotus (in the process of adoption)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/adoption)
+[Oikaisukehotuksen alainen](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/07) | [ehdotus (in the process of adoption)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/adoption)
+[Valituksen alainen](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/08)     | [ehdotus (in the process of adoption)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/adoption) 
+[Osittain voimassa](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/09)      | [laillisesti sitova tai voimassa (legally binding or active)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/legalForce)
+[Voimassa](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/10)               | [laillisesti sitova tai voimassa (legally binding or active)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/legalForce)
+[Kumottu](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/11)                | [kumottu (obsolete)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/obsolete)
+[Kumoutunut](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/12)             | [kumottu (obsolete)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/obsolete)
+[Rauennut](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/13)               | [kumottu (obsolete)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/obsolete)
+[Hylätty](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/14)                | [kumottu (obsolete)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/obsolete)
 
-### HILUCSValue
+### HILUCSValue (asemakaava)
 
-Kesken
+Kaavamääräyslaji (asemakaava) -koodiston koodin [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01) alikoodit kuvautuvat Inspire [HILUCSValue](https://inspire.ec.europa.eu/codelist/HILUCSValue)-koodiston arvoiksi alla olevien taulukkojen mukaisesti.
 
-### SupplementaryRegulationValue
+#### Asuminen
 
-Kesken
+Kaavamääräyslaji (asemakaava)                                                                         | HILUCSValue                       | Huomautukset
+------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------|
+[Asuminen](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0101)                        | [asuinalueet (residential use)](https://inspire.ec.europa.eu/codelist/HILUCSValue/5_ResidentialUse) |
+[Asuinkerrostaloalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010101)           | |
+[Asuinpientaloalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010102)             | |
+[Rivitalojen ja muiden kytkettyjen asuinrakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010103)           | |
+[Erillispientaloalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010104)           | |
+[Asumista palveleva yhteiskäyttöinen alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010105)           | |
+[Maatilan talouskeskuksen alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010106)           | |
+[Kyläalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010107)           | |
+[Erityisryhmien palveluasuminen](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010108)           | |
+[Muu asuminen](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010109)           | |
+
+
+#### Keskustatoiminnot
+
+Kaavamääräyslaji (asemakaava)                                                                         | HILUCSValue                       | Huomautukset
+------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------|
+[Keskustatoiminnot](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0102)               | ?                                 | |
+[Keskustatoimintojen alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010201)      | [asuinalueet (residential use)](https://inspire.ec.europa.eu/codelist/HILUCSValue/5_ResidentialUse) | HILUCSValue-koodin määritelmässä: "Tähän luokkaan kuuluvat myös asuinalueet, joita käytetään yhdessä muiden soveltuvien käyttötarkoitusten kanssa (keskusta-alueet)..." |
+[Keskustatoimintojen alakeskus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010202) | | |
+[Muut keskustatoiminnot](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010203)        | | |
+
+{% include question.html content="Ei ole selvää, onko päätason koodia 'Keskustatoiminnot' tarkoitus voida käyttää sellaisenaan, vai vain ryhmittelyotsikkona? Jos tarkoitus olla yleiskoodi kaikille keskustatoiminnoille, niin tulisiko koodi '010201 Keskustatoimintojen' alue olla 'Keskustatoimintojen pääkeskus' tms.?" %}
+
+
+#### Liike- ja toimistorakentaminen
+
+Kaavamääräyslaji (asemakaava)                                                                         | HILUCSValue                       | Huomautukset
+------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------|
+[Liike- ja toimistorakentaminen](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0103)  | | |
+[Liikerakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010301)         | | |
+[Toimistorakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010302)      | | |
+[Toimitilarakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010303)     | | |
+[Kaupallisten palvelujen alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010304)  | | |
+[Muu liike- ja toimistorakentaminen](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010305) | | |
+
+
+#### Palvelut
+
+Kaavamääräyslaji (asemakaava)                                                                         | HILUCSValue                       | Huomautukset
+------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------|
+[Palvelut](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0104)                        | | |
+[Palvelurakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010401)       | | |
+[Lähipalvelujen alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010402)           | | |
+[Huvi- ja viihdepalvelujen alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010403) | | |
+[Muut palvelut](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010404)                 | | |
+
+#### Julkiset palvelut
+
+Kaavamääräyslaji (asemakaava)                                                                         | HILUCSValue                       | Huomautukset
+------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------|
+[Julkiset palvelut](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0105)               | | |
+[Julkiset palvelut](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010501)             | | |
+[Yleisten rakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010502)     | | |
+[Julkisten lähipalvelujen alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010503) | | |
+[Hallinto- ja virastorakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010504) | | |
+[Opetustoimintaa palvelevien rakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010505) | | |
+[Sosiaalitointa ja terveydenhuoltoa palvelevien rakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010506) | | |
+[Kulttuuritoimintaa palvelevien rakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010507) | | |
+[Museorakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010508)         | | |
+[Kirkkojen ja muiden seurakunnallisten rakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010509) | | |
+[Urheilutoimintaa palvelevien rakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010510) | | |
+[Julkisten palvelujen ja hallinnon alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010511) | | Miten eroaa koodista 010510 Julkiset palvelut ?|
+[Muut julkiset palvelut](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010501)        | | |
+
+{% include question.html content="Ei ole selvää, onko päätason koodia 'Julkiset palvelut (0105)' tarkoitus voida käyttää sellaisenaan, vai vain ryhmittelyotsikkona? Jos tarkoitus olla yleiskoodi kaikille julkisille palveluille, niin tulisiko koodi '010501 Julkiset palvelut' poistaa?" %}
+
+#### Työ ja tuotanto
+
+Kaavamääräyslaji (asemakaava)                                                                         | HILUCSValue                       | Huomautukset
+------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------|
+[Työ ja tuotanto](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0106)                 | | |
+[Työpaikka-alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010601)                | | |
+[Teollisuusalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010602)                | | |
+[Varastorakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010603)       | | |
+[Alue, jolle saa sijoittaa merkittävän, vaarallisia kemikaaleja valmistavan tai varastoivan laitoksen](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010604) | | |
+[Ympäristövaikutuksiltaan merkittävien teollisuustoimintojen alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010605) | | |
+[Kiertotalous](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010606)                 | | |
+[Ympäristöhäiriötä aiheuttava teollisuustoiminta](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010607) | | |
+[Muu työpaikka tai tuotantoalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010608) | | |
+
+{% include bug.html content="Koodistossa 'Muu työpaikka tai tuontantoalue', tulisi olla 'Muu työpaikka tai tuotantoalue'" %}
+
+#### Virkistys
+
+Kaavamääräyslaji (asemakaava)                                                                         | HILUCSValue                       | Huomautukset
+------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------|
+[Virkistys](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0107)                       | | |
+[Virkistyalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010701)                  | | |
+[Puisto](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010702)                        | | |
+[Lähivirkistysalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010703)             | | |
+[Leikkipuisto](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010704)                  | | |
+[Urheilupalvelujen alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010705)        | | |
+[Retkeily- ja ulkoilualue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010706)      | | |
+[Uimaranta-alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010707)                | | |
+[Lähimetsä](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010708)                     | | |
+[Muu virkistysalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010709)             | | |
+
+{% include question.html content="Ei ole selvää, onko päätason koodia 'Virkistys (0107)' tarkoitus voida käyttää sellaisenaan, vai vain ryhmittelyotsikkona? Jos tarkoitus olla yleiskoodi kaikille virkistysalueille, niin tulisiko koodi '010701 Virkistysalue' poistaa?" %}
+
+#### Loma-asuminen ja matkailu
+
+Kaavamääräyslaji (asemakaava)                                                                         | HILUCSValue                       | Huomautukset
+------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------|
+[Loma-asuminen ja matkailu](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0108)       | | |
+[Loma-asuntojen alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010801)           | | |
+[Matkailua palvelevien rakennusten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010802) | | |
+[Leirintäalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010803)                  | | |
+[Asuntovaunualue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010804)               | | |
+[Siirtolapuutarha-/palstaviljelyalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010805) | | |
+[Muu loma-asumisen tai matkailun alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010806) | | |
+
+#### Liikenne
+
+Kaavamääräyslaji (asemakaava)                                                                         | HILUCSValue                       | Huomautukset
+------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------|
+[Liikenne](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0109)                        | | |
+[Liikennealue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010901)                  | | |
+[Yleisen tien alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010902)             | | |
+[Rautatieliikenteen alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010903)       | | |
+[Lentoliikenteen alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010904)          | | |
+[Satama-alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010905)                   | | |
+[Kanava-alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010906)                   | | |
+[Venesatama/venevalkama](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010907)        | | |
+[Yleinen pysäköintialue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010908)        | | |
+[Huoltoasema-alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010909)              | | |
+[Henkilöliikenteen terminaalialue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010910) | | |
+[Tavaraliikenteen terminaalialue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010911) | | |
+[Yleisten pysäköintilaitosten alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010912) | | |
+[Autopaikkojen alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010913)            | | |
+[Katualue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010914)                      | | |
+[Muu liikennealue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/010915)              | | |
+
+{% include question.html content="Ei ole selvää, onko päätason koodia 'Liikenne (0109)' tarkoitus voida käyttää sellaisenaan, vai vain ryhmittelyotsikkona? Jos tarkoitus olla yleiskoodi kaikille liikennealueille, niin tulisiko koodi '010901 Liikennealue' poistaa?" %}
+
+#### Erityisalueet
+
+Kaavamääräyslaji (asemakaava)                                                                         | HILUCSValue                       | Huomautukset
+------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------|
+[Erityisalueet](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0110)                   | | |
+[Erityisalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011001)                   | | |
+[Yhdyskuntateknisen huollon alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011002) | | |
+[Energiahuollon alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011003)           | | |
+[Jätteenkäsittelyalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011004)          | | |
+[Maa-ainesten ottoalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011005)         | | |
+[Kaivoisalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011006)                   | | |
+[Mastoalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011007)                     | | |
+[Ampumarata-alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011008)               | | |
+[Puolustusvoimien alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011009)         | | |
+[Hautausmaa-alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011010)               | | |
+[Suojaviheralue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011011)                | | |
+[Tuulivoimaloiden alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011012)         | | |
+[Moottorirata](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011013)                  | | |
+[Maa-ainesten vastaanotto- tai läjitysalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011014) | | |
+[Vankila-alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011015)                  | | |
+[Muu erityisalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011016)               | | |
+
+{% include question.html content="Ei ole selvää, onko päätason koodia 'Erityisalueet (0110)' tarkoitus voida käyttää sellaisenaan, vai vain ryhmittelyotsikkona? Jos tarkoitus olla yleiskoodi kaikille erityisalueille, niin tulisiko koodi '011001 Erityisalue' poistaa?" %}
+
+#### Suojelu
+
+Kaavamääräyslaji (asemakaava)                                                                         | HILUCSValue                       | Huomautukset
+------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------|
+[Suojelu](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0111)                         | | |
+[Suojelualue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011101)                   | | |
+[Luonnonsuojelualue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011102)            | | |
+[Muinaismuistoalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011103)             | | |
+[Rakennuslainsäädännön nojalla suojeltava alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011104)  | | |
+[Rakennussuojelulakien nojalla suojeltu alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011105) | | |
+[Muu suojelualue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011106)               | | |
+
+{% include question.html content="Ei ole selvää, onko päätason koodia 'Suojelu (0111)' tarkoitus voida käyttää sellaisenaan, vai vain ryhmittelyotsikkona? Jos tarkoitus olla yleiskoodi kaikille suojelualueille, niin tulisiko koodi '011101 Suojelualue' poistaa?" %}
+
+{% include question.html content="Ilmausten 'Rakennuslainsäädännön nojalla' ja 'Rakennussuojelulakien nojalla' ero?" %}
+
+{% include question.html content="Mitkä näistä ovat todellisuudessa asemakaavassa päätettäviä, mitkä lähtötietoaineistoja?" %}
+
+#### Maa- ja metsätalous
+
+Kaavamääräyslaji (asemakaava)                                                                         | HILUCSValue                       | Huomautukset
+------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------|
+[Maa- ja metsätalous](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0112)             | | |
+[Maa- ja metsätalousalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011201)       | | |
+[Maatalousalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011202)                  | | |
+[Kotieläintalouden suuryksikön alue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011203) | | |
+[Puutarha- ja kasvihuonealue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011204)   | | |
+[Maisemallisesti arvokas peltoalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011205) | | |
+[Poronhoitovaltainen maa- ja metsätalousalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011206) | | |
+[Muu maa- ja metsätalousalue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011207)   | | |
+
+{% include question.html content="Ei ole selvää, onko päätason koodia 'Maa- ja metsätalous (0112)' tarkoitus voida käyttää sellaisenaan, vai vain ryhmittelyotsikkona? Jos tarkoitus olla yleiskoodi kaikille maa- ja metsätalousalueille, niin tulisiko koodi '011201 Maa- ja metsätalousalue' poistaa?" %}
+
+{% include question.html content="Koodi 'Poronhoitovaltainen maa- ja metsätalousalue' on koko koodiston ainoa, jossa esiintyy '-valtainen', tulisiko olla vain 'Poronhoitoalue', kun käyttötarkoituksia voidaan antaa useita?" %}
+
+#### Vesialueet
+
+Kaavamääräyslaji (asemakaava)                                                                         | HILUCSValue                       | Huomautukset
+------------------------------------------------------------------------------------------------------|-----------------------------------|-----------------|
+[Vesialueet](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/0113)                      | | |
+[Vesialue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011301)                      | | |
+[Muu vesialue](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/011302)                  | | |
+
+
+{% include question.html content="Ei ole selvää, onko päätason koodia 'Vesialueet (0113)' tarkoitus voida käyttää sellaisenaan, vai vain ryhmittelyotsikkona? Jos tarkoitus olla yleiskoodi kaikillevesialueille, niin tulisiko koodi '011301 Vesialue' poistaa?" %}
+
+{% include question.html content="'Muu vesialue' ei ole mielekäs, kun vesialuetyyppejä on vain yleinen vesialue. Muu kuin mikä?" %}
+
+### HILUCSValue (yleiskaava)
+
+Kaavamääräyslaji (yleiskaava) -koodiston koodin [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01) alikoodit kuvautuvat Inspire [HILUCSValue](https://inspire.ec.europa.eu/codelist/HILUCSValue)-koodiston arvoiksi alla olevien taulukojen mukaisesti.
+
+### SupplementaryRegulationValue (asemakaava)
+
+[Kaavamääräyslaji (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/) -koodiston koodit, poislukien koodin [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01) alikoodit, kuvautuvat Inspire [SupplementaryRegulationValue](https://inspire.ec.europa.eu/codelist/SupplementaryRegulationValue)-koodiston arvoiksi alla olevan taulukon mukaisesti.
+
+### SupplementaryRegulationValue (yleiskaava)
+
+[Kaavamääräyslaji (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/) -koodiston koodit, poislukien koodin [Alueen käyttötarkoitus](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01) alikoodit, kuvautuvat Inspire [SupplementaryRegulationValue](https://inspire.ec.europa.eu/codelist/SupplementaryRegulationValue)-koodiston arvoiksi alla olevan taulukon mukaisesti.
+
 
 
 
