@@ -65,7 +65,7 @@ Inspire Planned Land Use -skeeman ```SpatialPlan```-luokan tiedot johdetaan loog
 
 ### ZoningElement
 
-Inspire Planned Land Use -skeeman ```ZoningElement```-luokan tiedot johdetaan loogisen tason Kaavatietomallin [Kaavakohde](dokumentaatio/#kaavakohde)-luokan ja siihen liittyvän [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan tiedoista alla esitettyjen taulukoiden mukaisesti. Syötteeksi ne Kaavakohde-luokkien instanssit, jotka ovat joko [asemakaavan käyttötarkoitusalue](../soveltamisohjeet/asemakaava/#sov-ak-vaat-kayttotarkoitusalue-maar)- tai [yleiskaavan aluevaraus](../soveltamisohjeet/yleiskaava/#sov-yk-vaat-aluevaraus-maar) -tyyppisiä.
+Inspire Planned Land Use -skeeman ```ZoningElement```-luokan tiedot johdetaan loogisen tason Kaavatietomallin [Kaavakohde](dokumentaatio/#kaavakohde)-luokan ja siihen liittyvän [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan tiedoista alla esitettyjen taulukoiden mukaisesti. Syötteeksi ne Kaavakohde-luokkien instanssit, jotka ovat joko [asemakaavan käyttötarkoitusalue](../soveltamisohjeet/asemakaava/#sov-ak-vaat-kayttotarkoitusalue-maar)- tai [yleiskaavan aluevaraus](../soveltamisohjeet/yleiskaava/#sov-yk-vaat-aluevaraus-maar) -tyyppisiä, eli joihin liittyy vähintään yksi alueen käyttötarkoitus -tyyppinen kaavamääräys.
 
 | Attribuutti                   |  Johtaminen Kaavatietomallin tiedoista        | Huomautukset
 ------------------------------- | --------------------------------------------- | -------------------------------
@@ -88,7 +88,7 @@ Inspire Planned Land Use -skeeman ```ZoningElement```-luokan tiedot johdetaan lo
 |                               | ```backgroundMapDate```: Lahtotietoaineisto.viimeisinMuutos |
 |                               | ```backgroundMapReference```: Lahtotietoaineisto.nimi |
 |                               | ```backgroundMapURI```: Lahtotietoaineisto.lisatietolinkki |
-| dimensioningIndication: DimensioningIndicationValue [0..*] (voidable) | ei anneta |
+| dimensioningIndication: DimensioningIndicationValue [0..*] (voidable) | Kaavakohde.maarays | ks. [DimensioningIndicationValue](#dimensioningindicationvalue)
 
 
 {% include question.html content="Voidaanko dimensioningIndication-attribuutille johtaa jokin mielekäs arvo?" %}
@@ -101,41 +101,42 @@ Inspire Planned Land Use -skeeman ```ZoningElement```-luokan tiedot johdetaan lo
 
 ### SupplementaryRegulation
 
-Inspire Planned Land Use -skeeman ```SupplementaryRegulation```-luokan tiedot johdetaan loogisen tason Kaavatietomallin [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan tiedoista alla esitettyjen taulukoiden mukaisesti. Syötteeksi valitaan kaikki kaavan Kaavamääräys-instanssit, joiden ```laji```-attribuutti ei ole koodien [Alueen käyttötarkoitus (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01) tai  [Alueen käyttötarkoitus (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/01) alikoodi.
+Inspire Planned Land Use -skeeman ```SupplementaryRegulation```-luokan tiedot johdetaan loogisen tason Kaavatietomallin [Kaavakohde](dokumentaatio/#kaavakohde)-luokan ja siihen liittyvän [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan tiedoista alla esitettyjen taulukoiden mukaisesti. Kaavakohde-luokkien instanssit, jotka eivät ole [asemakaavan käyttötarkoitusalue](../soveltamisohjeet/asemakaava/#sov-ak-vaat-kayttotarkoitusalue-maar)- tai [yleiskaavan aluevaraus](../soveltamisohjeet/yleiskaava/#sov-yk-vaat-aluevaraus-maar) -tyyppisiä, eli joihin ei liity yhtään alueen käyttötarkoitus -tyyppistä kaavamääräystä.
+
 
 | Attribuutti                   |  Johtaminen Kaavatietomallin tiedoista        | Huomautukset
 ------------------------------- | --------------------------------------------- | -------------------------------
-| validFrom: Date [0..1] (voidable) | Kaavamaarays.voimassaoloAika.begin        | 
-| validTo: Date [0..1] (voidable) | Kaavamaarays.voimassaoloAika.end            | 
-| specificSupplementaryRegulation: SpecificSupplementaryRegulationValue [1..*] (voidable) | Kaavamaarays.laji | Tulisi määritellä [Kaavamääräyslaji (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK)- ja [Kaavamääräyslaji (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK) -koodistot laajentamaan Inspire:n [SpecificSupplementaryRegulationValue](https://inspire.ec.europa.eu/codelist/SpecificSupplementaryRegulationValue)-koodistoa
-| processStepGeneral: ProcessStepGeneralValue [1] (voidable) | Kaavamaarays.elinkaaritila | ks. [ProcessStepGeneralValue](#processstepgeneralvalue)
-| backgroundMap: BackgroundMapValue [1] (voidable) | Kaavamaarays.kaava.hyodynnettyAineisto[laji = [Pohjakartta](http://uri.suomi.fi/codelist/rytj/RY_LahtotietoaineistonLaji/code/11)], ks. seuraavat rivit |
+| validFrom: Date [0..1] (voidable) | Kaavakohde.maarays[1].voimassaoloAika.begin        | 
+| validTo: Date [0..1] (voidable) | Kaavakohde.maarays[1].voimassaoloAika.begin            | 
+| specificSupplementaryRegulation: SpecificSupplementaryRegulationValue [1..*] (voidable) | Kaavakohde.maarays.laji | Tulisi määritellä [Kaavamääräyslaji (asemakaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK)- ja [Kaavamääräyslaji (yleiskaava)](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK) -koodistot laajentamaan Inspire:n [SpecificSupplementaryRegulationValue](https://inspire.ec.europa.eu/codelist/SpecificSupplementaryRegulationValue)-koodistoa
+| processStepGeneral: ProcessStepGeneralValue [1] (voidable) | Kaavakode.maarays[1].elinkaaritila | ks. [ProcessStepGeneralValue](#processstepgeneralvalue)
+| backgroundMap: BackgroundMapValue [1] (voidable) | Kaavakohde.kaava.hyodynnettyAineisto[laji = [Pohjakartta](http://uri.suomi.fi/codelist/rytj/RY_LahtotietoaineistonLaji/code/11)], ks. seuraavat rivit |
 |                               | ```backgroundMapDate```: Lahtotietoaineisto.viimeisinMuutos |
 |                               | ```backgroundMapReference```: Lahtotietoaineisto.nimi |
 |                               | ```backgroundMapURI```: Lahtotietoaineisto.lisatietolinkki |
-| beginLifeSpanVersion: DateTime [1] (voidable) | Kaavamaarays.viimeisinMuutos                    |
-| dimensioningIndication: DimensioningIndicationValue [0..*] (voidable) | ei anneta |
+| beginLifeSpanVersion: DateTime [1] (voidable) | Kaavakohde.viimeisinMuutos                    |
+| dimensioningIndication: DimensioningIndicationValue [0..*] (voidable) | Kaavakohde.maarays | ks. [DimensioningIndicationValue](#dimensioningindicationvalue)
 | inspireId: Identifier [1]     |  ks. seuraavat rivit                          |
-|                               | ```localId```: Kaavamaarays.identiteettiTunnus       | 
-|                               | ```version```: Kaavamaarays.paikallinenTunnus ilman identiteettiTunnus -alkuosaa |
+|                               | ```localId```: Kaavakohde.identiteettiTunnus       | 
+|                               | ```version```: Kaavakohde.paikallinenTunnus ilman identiteettiTunnus -alkuosaa |
 |                               | ```namespace```: <http://paikkatiedot.fi/so/{aineistotunnus}/LU/SupplementaryRegulation>, jossa {aineistotunnus} on Maanmittauslaitoksen myöntämä
-| endLifeSpanVersion: DateTime [1] (voidable) | Kaavamaarays.korvattuKohteella.tallennusAika      |
-| geometry: GM_Object [1]       | Kaavamaarays.kohdistus.geometria                           | 
-| inheritedFromOtherPlans: Boolean [1] (voidable) |
+| endLifeSpanVersion: DateTime [1] (voidable) | Kaavakohde.korvattuKohteella.tallennusAika      |
+| geometry: GM_Object [1]       | Kaavakohde.geometria |
+| inheritedFromOtherPlans: Boolean [1] (voidable) | ei anneta, [VoidReasonValue: Unpopulated](https://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated)  |
 | specificRegulationNature: CharacterString [1] (voidable) | ei anneta, [VoidReasonValue: Unpopulated](https://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated)
 | name: CharacterString [0..*] (voidable) | Kaavamaarays.nimi                  | valitaan yksi kieli käyttäjän preferessin perusteella
 | regulationNature: RegulationNatureValue [1] | <https://inspire.ec.europa.eu/codelist/RegulationNatureValue/generallyBinding>
-| supplementaryRegulation: SupplementaryRegulationValue [1..*] | Kaavamaarays.laji | ks. [SupplementaryRegulationValue (asemakaava)](#supplementaryregulationvalue-asemakaava) ja [SupplementaryRegulationValue (yleiskaava)](#supplementaryregulationvalue-yleiskaava)
+| supplementaryRegulation: SupplementaryRegulationValue [1..*] | Kaavakode.maarays.laji | ks. [SupplementaryRegulationValue (asemakaava)](#supplementaryregulationvalue-asemakaava) ja [SupplementaryRegulationValue (yleiskaava)](#supplementaryregulationvalue-yleiskaava)
 
 | Assosiaatio-rooli             | Johtaminen Kaavatietomallin tiedoista        | Huomautukset
 | ----------------------------- | -------------------------------------------- | ---------------------------------
-| plan: SpatialPlan [1]         | Kaavamaarays.kaava                             |
+| plan: SpatialPlan [1]         | Kaavakohde.kaava                             |
 | officialDocument: OfficialDocumentation [1..*] (voidable) | ei annetta, [VoidReasonValue: Unpopulated](https://inspire.ec.europa.eu/codelist/VoidReasonValue/Unpopulated)
 
 
 ### OfficialDocumentation
 
-Inspire Planned Land Use -skeeman ```OfficialDocument```-luokan tiedot johdetaan [Asiakirja](dokumentaatio/#kaavamaarays)-luokan tiedoista alla esitettyjen taulukoiden mukaisesti. 
+Inspire Planned Land Use -skeeman ```OfficialDocument```-luokan tiedot johdetaan [Asiakirja](dokumentaatio/#kaavamaarays)-luokan tiedoista alla esitetyn taulukon mukaisesti. 
 Syötteeksi valitaan kaikki kaavan Asiakirja-instanssit, joihin viitataan [Kaava](dokumentaatio/#kaava)-luokan instansseista assosiaation ```asianLiite``` avulla.
 
 | Attribuutti                   |  Johtaminen Kaavatietomallin tiedoista        | Huomautukset
@@ -147,10 +148,48 @@ Syötteeksi valitaan kaikki kaavan Asiakirja-instanssit, joihin viitataan [Kaava
 | legislationCitation: LegislationCitation[0..1] (voidable) | ei tuoteta        |
 | regulationText: CharacterString[0..1] (voidable) | ei tuoteta                 |
 | planDocument: DocumentCitation[0..1] (voidable) | ks. seuraavat rivit         |
-|                               | ```name```: Asiakirja.nimi                    | Vain yksi attribuutti Inspire-rakenteessa. Mikäli tuotetaan kunkin kielen Inspire-aineisto erikseen, valitaan oikean kielen sisältö sen mukaan. Mikäli kaikki kielet tuotetaan samaan aineistoon, voidaan paremman puutteessa tuottaa kaikkien kielien tekstit peräkkäin samaan kenttään.
+|                               | ```name```: Asiakirja.nimi                    | valitaan yksi kieli käyttäjän preferessin perusteella
 |                               | ```date```: Asiakirja.viimeisinMuutos         | Poimitaan vain päivämäärä
 |                               | ```link```: Asiakirja.viittausTunnus          |
 |                               | ```specificReference```: ei tuoteta           |
+
+### DimensioningIndicationValue
+
+Riippuen Kaavamaarays-luokan instanssin ```arvo```-attribuuttien luokista tuotetaan yksi tai useampi [DimensioningIndicationRealValue](#dimensioningindicationrealvalue)-, [DimensioningIndicationMeasureValue](#dimensioningindicationmeasurevalue)- tai [DimensioningIndicationCharacterValue](#dimensioningindicationcharactervalue)-luokan instanssi.
+
+### DimensioningIndicationRealValue
+
+Inspire Planned Land Use -skeeman ```DimensioningIndicationRealValue``` tiedot johdetaan loogisen tason Kaavatietomallin [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan ja siihen liittyvän [Arvo](dokumentaatio/#arvo)-luokan tiedoista alla esitetyn taulukon mukaisesti. Syötteeksi valitaan ne Kaavamaarays-luokan instanssit, joiden ```arvo```-attribuutilla on vähintään yksi sellainen [NumeerinenArvo](dokumentaatio/#numeerinenarvo)- tai [NumeerinenArvovali](dokumentaatio/#numeerinenarvovali)-luokan instanssi, jonka ```yksikko```-attribuuttia ei ole annettu. Kutakin NumeerinenArvo-luokan instanssia kohden luodaan yksi ja kutakin NumeerinenArvovali-luokan instanssia kohden kaksi DimensioningIndicationRealValue-instanssia (nimeäminen ks. indicationReference).
+
+| Attribuutti                   |  Johtaminen Kaavatietomallin tiedoista        | Huomautukset
+------------------------------- | --------------------------------------------- | -------------------------------
+| indicationReference: CharacterString [1] | Kaavamaarays.arvo[luokka = NumeerinenArvo TAI NumeerinenArvovali].laji | Mikäli kyseessä on arvoväli, luodaan kaksi instanssia, joiden indicationReference-arvot ovat NumeerinenArvovali.laji + '/minimiarvo' ja NumeerinenArvovali.laji + '/maksimiarvo'
+| value: Real[1]                | Kaavamaarays.arvo[luokka = NumeerinenArvo].arvo TAI Kaavamaarays.arvo[luokka = NumeerinenArvovali].minimiarvo ja maksimiarvo | Mikäli kyseessä on arvoväli, luodaan kaksi instanssia, joiden value-arvot ovat NumeerinenArvovali.minimiarvo ja NumeerinenArvovali.maksimiarvo
+
+### DimensioningIndicationMeasureValue
+
+Inspire Planned Land Use -skeeman ```DimensioningIndicationMeasureValue``` tiedot johdetaan loogisen tason Kaavatietomallin [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan ja siihen liittyvän [Arvo](dokumentaatio/#arvo)-luokan tiedoista alla esitetyn taulukon mukaisesti. Syötteeksi valitaan ne Kaavamaarays-luokan instanssit, joiden ```arvo```-attribuutilla on vähintään yksi sellainen [NumeerinenArvo](dokumentaatio/#numeerinenarvo)- tai [NumeerinenArvovali](dokumentaatio/#numeerinenarvovali)-luokan instanssi, jonka ```yksikko```-attribuutti on annettu. Kutakin NumeerinenArvo-luokan instanssia kohden luodaan yksi ja kutakin NumeerinenArvovali-luokan instanssia kohden kaksi DimensioningIndicationMeasureValue-instanssia (nimeäminen ks. indicationReference).
+
+| Attribuutti                   |  Johtaminen Kaavatietomallin tiedoista        | Huomautukset
+------------------------------- | --------------------------------------------- | -------------------------------
+| indicationReference: CharacterString [1] | Kaavamaarays.arvo[luokka = NumeerinenArvo TAI NumeerinenArvovali].laji | Mikäli kyseessä on arvoväli, luodaan kaksi instanssia, joiden indicationReference-arvot ovat NumeerinenArvovali.laji + '/minimiarvo' ja NumeerinenArvovali.laji + '/maksimiarvo'
+| value: Measure[1]                | ks. seuraavat rivit                        |
+|                                  | ```value```: Kaavamaarays.arvo[luokka = NumeerinenArvo].arvo TAI Kaavamaarays.arvo[luokka = NumeerinenArvovali].minimiarvo ja maksimiarvo | Mikäli kyseessä on arvoväli, luodaan kaksi instanssia, joiden value-arvot ovat NumeerinenArvovali.minimiarvo ja NumeerinenArvovali.maksimiarvo
+|                                  | ```unitOfMeasure```: Kaavamaarays .arvo[luokka = NumeerinenArvo].yksikko TAI Kaavamaarays.arvo[luokka = NumeerinenArvovali].yksikko |
+
+### DimensioningIndicationCharacterValue
+
+Inspire Planned Land Use -skeeman ```DimensioningIndicationCharacterValue``` tiedot johdetaan loogisen tason Kaavatietomallin [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan ja siihen liittyvän [Arvo](dokumentaatio/#arvo)-luokan tiedoista alla esitetyn taulukon mukaisesti. Syötteeksi valitaan ne Kaavamaarays-luokan instanssit, joiden ```arvo```-attribuutilla on vähintään yksi [TekstiArvo](dokumentaatio/#tekstiarvo)-, [KoodiArvo](dokumentaatio/#koodiarvo)-, [TunnusArvo](dokumentaatio/#tunnusarvo)-, [Ajanhetkiarvo](dokumentaatio/#ajanhetkiarvo)- tai [Aikavaliarvo](dokumentaatio/#aikavaliarvo)-luokan instanssi. Kutakin Arvo-luokan instanssia luodaan kohden yksi DimensioningIndicationCharacterValue-instanssi.
+
+| Attribuutti                   |  Johtaminen Kaavatietomallin tiedoista        | Huomautukset
+------------------------------- | --------------------------------------------- | -------------------------------
+| indicationReference: CharacterString [1] | Kaavamaarays.arvo[luokka = TekstiArvo TAI luokka = KoodiArvo TAI luokka = TunnusArvo TAI luokka = Ajanhetkiarvo TAI luokka = Aikavaliarvo].laji |
+| value: CharacterString[1]     | ks. seuraavat rivit                           | valitaan yksi seuraavien rivien vaihtoehdoista
+|                               | Kaavamaarays.arvo[luokka = TekstiArvo].arvo   | valitaan yksi kieli käyttäjän preferessin perusteella
+|                               | Kaavamaarays.arvo[luokka = KoodiArvo].arvo    | URI-arvo koodataan merkkijonona
+|                               | Kaavamaarays.arvo[luokka = TunnusArvo].arvo   | URI-arvo koodataan merkkijonona
+|                               | Kaavamaarays.arvo[luokka = Ajanhetkiarvo].arvo| Koodataan ajanhetki [IETF RFC 3339](https://tools.ietf.org/html/rfc3339)-standardin mukaisena päivämäärä tai päivämäärä + kelloaika -yhdistelmänä
+|                               | Kaavamaarays.arvo[luokka = Aikavaliarvo].arvo | Koodataan aikaväli kahtena [IETF RFC 3339](https://tools.ietf.org/html/rfc3339)-standardin mukaisena päivämäärä tai päivämäärä + kelloaika -yhdistelmänä erotettuna väliviivalla (```-```). Jos alku tai loppu puuttuu (indeterminatePosition = unknown), ei ko. arvoa tuoteta väliviivan kyseiselle puolelle.
 
 ## Koodistojen vastaavuudet
 
