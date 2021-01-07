@@ -8,5 +8,6 @@ google_analytics: G-TL17CQFMFK
 plugins:
 - jekyll-sitemap
 - kramdown
+default_modelversion: '1.1'
 
 
