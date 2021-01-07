@@ -1190,21 +1190,32 @@ Ilmaisee, että kaavakohde yleiseen virkistyskäyttöön tarkoitetun pienimuotoi
 ### Rajoitukset
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/05>
 
+Kesken
+
 ### Alueen osan erityisominaisuudet
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/06>
+
+Kesken
 
 ### Ympäristöarvojen vaaliminen
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/07>
 
+Kesken
+
 ### Yleismääräykset
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/08>
+
+Kesken
 
 ### Yhdyskuntatekninen huolto
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/09>
 
+Kesken
+
 ### Ympäristön ja terveyden suojelu
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK/code/10>
 
+Kesken
 
 ## Laatusäännöt
 Nämä laatusäännöt laajentavat Kaavatietomallin [yleisiä laatusääntöjä](../../looginenmalli/laatusaannot.html).
