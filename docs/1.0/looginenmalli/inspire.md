@@ -90,9 +90,6 @@ Inspire Planned Land Use -skeeman ```ZoningElement```-luokan tiedot johdetaan lo
 |                               | ```backgroundMapURI```: Lahtotietoaineisto.lisatietolinkki |
 | dimensioningIndication: DimensioningIndicationValue [0..*] (voidable) | Kaavakohde.maarays | ks. [DimensioningIndicationValue](#dimensioningindicationvalue)
 
-
-{% include question.html content="Voidaanko dimensioningIndication-attribuutille johtaa jokin mielekäs arvo?" %}
-
 | Assosiaatio-rooli             | Johtaminen Kaavatietomallin tiedoista        | Huomautukset
 | ----------------------------- | -------------------------------------------- | ---------------------------------
 | plan: SpatialPlan [1]         | Kaavakohde.kaava                             |
