@@ -837,7 +837,7 @@ tuottajakohtainenTunnus | CharacterString [0..1]  | properties.producerSpecificI
 viimeisinMuutos | TM_Instant [0..1]     | properties.latestChange | string (date-time)
 tallennusAika | TM_Instant [0..1]       | properties.storageTime | string (date-time)
 nimi          | LanguageString [0..*]   | properties.name       | object (LanguageString)
-arvo          | AbstraktiArvo [0..*]    | properties.values      | array of object (TimeInstantValue, TimePeriodValue, GeometryValue, CodeValue, NumericValue, NumericRange, ElevationPosition, ElevationRange, TextValue tai IdentifierValue)
+arvo          | AbstraktiArvo [0..*]    | properties.values      | array of object (TimeInstantValue, TimePeriodValue, GeometryValue, CodeValue, IntegerValue, IntegerRange, NumberValue, NumberRange, ElevationPosition, ElevationRange, TextValue tai IdentifierValue)
 laji          | AbstraktiKaavamaaraysLaji | properties.type       | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK>, <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_YK>
 elinkaaritila   | KaavanElinkaaritila   | properties.lifecycleStatus | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila>
 teema         | AbstraktiKaavoitusteema [0..*] | properties.themes     | array of object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_Kaavoitusteema_AK>, <http://uri.suomi.fi/codelist/rytj/RY_Kaavoitusteema_YK>
@@ -1027,7 +1027,7 @@ Nimi          | UML tyyppi              | JSON property name    | JSON type   | 
 --------------|-------------------------|-----------------------|-------------|--------------
 laji          | AbstraktiLisatiedonLaji | type                  | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_AK>, <http://uri.suomi.fi/codelist/rytj/RY_LisatiedonLaji_YK>
 nimi          | LanguageString [0..*]   | name       | object (LanguageString)
-arvo          | AbstraktiArvo [0..*]    | values      | array of object (TimeInstantValue, TimePeriodValue, GeometryValue, CodeValue, NumericValue, NumericRange, ElevationPosition, ElevationRange, TextValue tai IdentifierValue)
+arvo          | AbstraktiArvo [0..*]    | values      | array of object (TimeInstantValue, TimePeriodValue, GeometryValue, CodeValue, IntegerValue, IntegerRange, NumberValue, NumberRange, ElevationPosition, ElevationRange, TextValue tai IdentifierValue)
 
 **Esimerkki**
 
@@ -1048,9 +1048,9 @@ arvo          | AbstraktiArvo [0..*]    | values      | array of object (TimeIns
             }
         }, 
         {
-            "valueType": "NumericRange",
-            "minValue": 200,
-            "maxValue": 1000,
+            "valueType": "NumberRange",
+            "minValue": 200.0,
+            "maxValue": 1000.0,
             "unitOfMeasure": "m2"
         }
     ]
@@ -1155,49 +1155,94 @@ otsikko       | LanguageString [0..*]   | title                 | object (Langua
 ```
 
 
-### NumericValue (NumeerinenArvo)
+### IntegerValue (NumeerinenArvo)
 
-Toteuttaa loogisen tietomallin luokan [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo)
+Toteuttaa loogisen tietomallin luokan [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) siten, että ```arvo```-attribuutin tyyppi toteuttaa [Integer](../../looginenmalli/dokumentaatio/#integer)-rajapinnan.
 
 
 **Attribuutit**
 
 Nimi          | UML tyyppi              | JSON property name    | JSON type   | huomioita
 --------------|-------------------------|-----------------------|-------------|--------------
-[luokan nimi] |                         | valueType="NumericValue" | string |
-arvo          | double                  | value                | number      |
+[luokan nimi] |                         | valueType="IntegerValue" | string |
+arvo          | Number                  | value                | integer      |
 mittayksikko  | CharacterString [0..1]  | unitOfMeasure     | string      |
 
 **Esimerkki**
 
 ```json
 {
-    "valueType": "NumericValue",
-    "value": 20,
+    "valueType": "IntegerValue",
+    "value": 20
+}
+```
+
+### IntegerRange (NumeerinenArvovali)
+
+Toteuttaa loogisen tietomallin luokan [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali) siten, että ```minimiarvo```- ja ```maksimiarvo```-attribuuttien tyypit toteuttavat [Integer](../../looginenmalli/dokumentaatio/#integer)-rajapinnan.
+
+**Attribuutit**
+
+Nimi          | UML tyyppi              | JSON property name    | JSON type   | huomioita
+--------------|-------------------------|-----------------------|-------------|--------------
+[luokan nimi] |                         | valueType="IntegerRange" | string   |
+nimimiarvo    | Number [0..1]           | minValue              | integer     |
+maksimiarvo   | Number [0..1]           | maxValue              | integer     |
+mittayksikko  | CharacterString [0..1]  | unitOfMeasure         | string      |
+
+**Esimerkki**
+
+```json
+{
+    "valueType": "IntegerRange",
+    "minValue": 20,
+    "maxValue": 30,
+}
+```
+
+### NumberValue (NumeerinenArvo)
+
+Toteuttaa loogisen tietomallin luokan [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) siten, että ```arvo```-attribuutin tyyppi toteuttaa [Real](../../looginenmalli/dokumentaatio/#real)-rajapinnan.
+
+
+**Attribuutit**
+
+Nimi          | UML tyyppi              | JSON property name    | JSON type   | huomioita
+--------------|-------------------------|-----------------------|-------------|--------------
+[luokan nimi] |                         | valueType="NumberValue" | string    |
+arvo          | Number                  | value                 | number      |
+mittayksikko  | CharacterString [0..1]  | unitOfMeasure         | string      |
+
+**Esimerkki**
+
+```json
+{
+    "valueType": "NumberValue",
+    "value": 20.0,
     "unitOfMeasure": "dB"
 }
 ```
 
-### NumericRange (NumeerinenArvovali)
+### NumberRange (NumeerinenArvovali)
 
-Toteuttaa loogisen tietomallin luokan [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali)
+Toteuttaa loogisen tietomallin luokan [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali) siten, että ```minimiarvo```- ja ```maksimiarvo```-attribuuttien tyypit toteuttavat [Real](../../looginenmalli/dokumentaatio/#real)-rajapinnan.
 
 **Attribuutit**
 
 Nimi          | UML tyyppi              | JSON property name    | JSON type   | huomioita
 --------------|-------------------------|-----------------------|-------------|--------------
-[luokan nimi] |                         | valueType="NumericRange" | string |
-nimimiarvo    | double [0..1]           | minValue              | number      |
-maksimiarvo   | double [0..1]           | maxValue              | number      |
-mittayksikko  | CharacterString [0..1]  | unitOfMeasure     | string      |
+[luokan nimi] |                         | valueType="NumberRange" | string    |
+nimimiarvo    | Number [0..1]           | minValue              | number      |
+maksimiarvo   | Number [0..1]           | maxValue              | number      |
+mittayksikko  | CharacterString [0..1]  | unitOfMeasure         | string      |
 
 **Esimerkki**
 
 ```json
 {
-    "valueType": "NumericRange",
-    "minValue": 1000,
-    "maxValue": 2500,
+    "valueType": "NumberRange",
+    "minValue": 1000.0,
+    "maxValue": 2500.0,
     "unitOfMeasure": "m2"
 }
 ```
