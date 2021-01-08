@@ -41,6 +41,21 @@ Kuvaa yleisen merkkijonon, joka koostuu 0..* merkistä, merkkijonon pituudesta, 
 
 Kuvaa kielikohtaisen merkkijonon. Laajentaa [CharacterString](#characterstring)-rajapintaa lisäämällä siihen ```language```-attribuutin, jonka arvo on ```LanguageCode```-koodiston arvo. Kielikoodi voi [ISO 19103][ISO-19103]-standardin määritelmän mukaan olla mikä tahansa ISO 639 -standardin osa.
 
+#### Number
+
+Kuvaa yleisen numeroarvon, joka voi olla kokonaisluku, desimaaliluku tai liukuluku. Määritelty rajapintana [ISO 19103][ISO-19103]-standardissa.
+
+#### Integer
+
+Laajentaa [Number](#number)-rajapintaa kuvaamaan numeron, joka on kokonaisluku ilman murto- tai desimaaliosaa. Määritelty rajapintana [ISO 19103][ISO-19103]-standardissa.
+
+#### Decimal
+
+Laajentaa [Number](#number)-rajapintaa kuvaamaan numeron, joka on desimaaliluku. Decimal-rajapinnan toteuttava numero voidaan ilmaista virheettä yhden kymmenysosan tarkkuudella. Määritelty rajapintana [ISO 19103][ISO-19103]-standardissa. Decimal-numeroita käytetään, kun desimaalien käsittelyn tulee olla tarkkaa, esim. rahaan liityvissä tehtävissä.
+
+#### Real
+
+Laajentaa [Number](#number)-rajapintaa kuvaamaan numeron, joka on tarkkudeltaan rajoitettu liukuluku. Real-rajapinnan numero voi ilmaista tarkasti vain luvut, jotka ovat 1/2:n (puolen) potensseja. Määritelty rajapintana [ISO 19103][ISO-19103]-standardissa. Käytännössä esitystarkkuus riippuu numeron tallentamiseen varattujen bittien määrästä, esim. ```float (32-bittinen)``` (tarkkuus 7 desimaalia) ja ```double (64-bittinen)``` (tarkkuus 15 desimaalia).
 
 #### TM_Object
 
@@ -590,7 +605,7 @@ Arvo, joka kuvaa liukulukuna annettua numeroa.
 
 Nimi             | Name               | Tyyppi                       | Kardinaliteetti | Kuvaus
 -----------------|--------------------|------------------------------|-----------------|------------------------------------
-arvo             | value              | double                       | 1               | numeroarvo
+arvo             | value              | [Number](#number)            | 1               | numeroarvo, voidaan tarkentaa soveltamisprofiileissa tyyppeihin Integer, Decimal tai Real
 mittayksikko     | unitOfMeasure      | [CharacterString](#characterstring) | 0..1     | mittayksikön tunnus, esim. [UCUM](https://ucum.org/ucum.html)-notaation mukaisesti
 
 ### NumeerinenArvovali
@@ -604,8 +619,8 @@ Arvo, joka kuvaa liukulukuna annettua numeerista arvoväliä.
 
 Nimi             | Name               | Tyyppi                       | Kardinaliteetti | Kuvaus
 -----------------|--------------------|------------------------------|-----------------|------------------------------------
-nimimiarvo       | minimumValue       | double                       | 0..1            | välin alaraja. Jos ei anneta, kuvaa väliä, joka ulottuu äärettömän pitkälle alaspäin
-maksimiarvo      | maximumValue       | double                       | 0..1            | välin yläraja. Jos ei anneta, kuvaa väliä, joka ulottuu äärettömän pitkälle ylöspäin
+nimimiarvo       | minimumValue       | [Number](#number)            | 0..1            | välin alaraja, voidaan tarkentaa soveltamisprofiileissa tyyppeihin Integer, Decimal tai Real. Jos ei anneta, kuvaa väliä, joka ulottuu äärettömän pitkälle alaspäin
+maksimiarvo      | maximumValue       | [Number](#number)            | 0..1            | välin yläraja. voidaan tarkentaa soveltamisprofiileissa tyyppeihin Integer, Decimal tai Real. Jos ei anneta, kuvaa väliä, joka ulottuu äärettömän pitkälle ylöspäin
 mittayksikko     | unitOfMeasure      | [CharacterString](#characterstring) | 0..1     | mittayksikön tunnus, esim. [UCUM](https://ucum.org/ucum.html)-notaation mukaisesti
 
 ### Tunnusarvo
