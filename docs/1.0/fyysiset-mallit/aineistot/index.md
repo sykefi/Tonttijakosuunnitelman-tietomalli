@@ -23,15 +23,15 @@ Testiainestot ovat saatavilla [projektin demopalvelussa](../demo/) 31.3.2021 saa
 
 ([suurempi kuva](./ne1_nevas_gard_kaavakartta_hyvaksytty.png))
 
-[Alkuperäiset aineistot](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/tree/a01d15cc08fc262e0ab93d3bf9c4ab49415ec4c1/testaus/alkuperaiset-aineistot/Sipoo) (DWG)
+[Alkuperäiset aineistot](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/tree/master/testaus/alkuperaiset-aineistot/Sipoo) (DWG)
 
 Mallinnetut elinkaaritilat [Kaava-JSON](../json/)-muodossa:
 
-* [Virelletullut](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-AK_SIPOO_1_vireilletulo_kaava-sipoo-nevasgard.geojson)
-* [Kaavaehdotus](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-AK_SIPOO_2_kaavaehdotus_kaava-sipoo-nevasgard.geojson)
-* [Tarkistettu kaavaehdotus](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-AK_SIPOO_3_tarkistettu_kaavaehdotus_kaava-sipoo-nevasgard.geojson)
-* [Hyväksytty kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-AK_SIPOO_4_hyvaksytty_kaava_kaava-sipoo-nevasgard.geojson)
-* [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-AK_SIPOO_5_lainvoimainen_kaava-sipoo-nevasgard.geojson)
+* [Virelletullut](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/master/testaus/json-testiaineisto/OGR-AK_SIPOO_1_vireilletulo_kaava-sipoo-nevasgard.geojson)
+* [Kaavaehdotus](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/master/testaus/json-testiaineisto/OGR-AK_SIPOO_2_kaavaehdotus_kaava-sipoo-nevasgard.geojson)
+* [Tarkistettu kaavaehdotus](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/master/testaus/json-testiaineisto/OGR-AK_SIPOO_3_tarkistettu_kaavaehdotus_kaava-sipoo-nevasgard.geojson)
+* [Hyväksytty kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/master/testaus/json-testiaineisto/OGR-AK_SIPOO_4_hyvaksytty_kaava_kaava-sipoo-nevasgard.geojson)
+* [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/master/testaus/json-testiaineisto/OGR-AK_SIPOO_5_lainvoimainen_kaava-sipoo-nevasgard.geojson)
 
 ## Strateginen yleiskaava, Tampere Kantakaupungin yleiskaava 2040, Hervannan alue
 
@@ -39,9 +39,9 @@ Mallinnetut elinkaaritilat [Kaava-JSON](../json/)-muodossa:
 
 ([suurempi kuva](./Yk2040_Kartat_1-4_voimaantulo_20_1_2020.png))
 
-[Alkuperäiset aineistot](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/tree/a01d15cc08fc262e0ab93d3bf9c4ab49415ec4c1/testaus/alkuperaiset-aineistot/Tampere) (Shapefile)
+[Alkuperäiset aineistot](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/tree/master/testaus/alkuperaiset-aineistot/Tampere) (Shapefile)
 
-Mallinnetut elinkaaritilat [Kaava-JSON](../json/)-muodossa: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-YK_TAMPERE_HERVANTA_1_lainvoimainen_kaava-hervanta.geojson)
+Mallinnetut elinkaaritilat [Kaava-JSON](../json/)-muodossa: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/master/testaus/json-testiaineisto/OGR-YK_TAMPERE_HERVANTA_1_lainvoimainen_kaava-hervanta.geojson)
 
 ## Vaiheasemakaava, Espoo Servinniemi (VK2001)
 
@@ -49,11 +49,11 @@ Mallinnetut elinkaaritilat [Kaava-JSON](../json/)-muodossa: [Lainvoimainen kaava
 
 ([suurempi kuva](./VK2001_pdfA.png))
 
-[Alkuperäiset aineistot](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/tree/a01d15cc08fc262e0ab93d3bf9c4ab49415ec4c1/testaus/alkuperaiset-aineistot/Espoo) (DWG, MapInfo)
+[Alkuperäiset aineistot](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/tree/master/testaus/alkuperaiset-aineistot/Espoo) (DWG, MapInfo)
 
-Mallinnetut elinkaaritilat [Kaava-JSON](../json/)-muodossa: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-AK_ESPOO_uusi_kaava.geojson)
+Mallinnetut elinkaaritilat [Kaava-JSON](../json/)-muodossa: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/master/testaus/json-testiaineisto/OGR-AK_ESPOO_uusi_kaava.geojson)
 
-Vanha kaava, jota vaihekaava muuttaa: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-AK_ESPOO_vanha_kaava.geojson)
+Vanha kaava, jota vaihekaava muuttaa: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/master/testaus/json-testiaineisto/OGR-AK_ESPOO_vanha_kaava.geojson)
 
 ## Rakentamista ohjaava yleiskaava, Lahti Enonsaari (Y-165)
 
@@ -61,9 +61,9 @@ Vanha kaava, jota vaihekaava muuttaa: [Lainvoimainen kaava](https://github.com/Y
 
 ([suurempi kuva](./Y-165.png))
 
-[Alkuperäiset aineistot](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/tree/a01d15cc08fc262e0ab93d3bf9c4ab49415ec4c1/testaus/alkuperaiset-aineistot/Lahti) (ShapeFile)
+[Alkuperäiset aineistot](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/tree/master/testaus/alkuperaiset-aineistot/Lahti) (ShapeFile)
 
-Mallinnetut elinkaaritilat [Kaava-JSON](../json/)-muodossa: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/579bda3c26d128d5cc09536c4ec7b090453a21f5/testaus/json-testiaineisto/OGR-YM_LAHTI_Enonsaari_1_lainvoimainen_kaava-enonsaari.geojson)
+Mallinnetut elinkaaritilat [Kaava-JSON](../json/)-muodossa: [Lainvoimainen kaava](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/master/testaus/json-testiaineisto/OGR-YM_LAHTI_Enonsaari_1_lainvoimainen_kaava-enonsaari.geojson)
 
 
 
