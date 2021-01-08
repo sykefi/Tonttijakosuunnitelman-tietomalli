@@ -3450,7 +3450,7 @@
                 },
                 "values": [
                     {
-                        "valueType": "NumberValue",
+                        "valueType": "IntegerValue",
                         "value": 2
                     }
                 ],
@@ -3730,7 +3730,7 @@
                 },
                 "values": [
                     {
-                        "valueType": "NumberValue",
+                        "valueType": "IntegerValue",
                         "value": 15
                     }
                 ],
@@ -4238,7 +4238,7 @@
                 },
                 "values": [
                     {
-                        "valueType": "NumberValue",
+                        "valueType": "IntegerValue",
                         "value": 2
                     }
                 ],
@@ -4598,7 +4598,7 @@
                 },
                 "values": [
                     {
-                        "valueType": "NumberValue",
+                        "valueType": "IntegerValue",
                         "value": 2
                     }
                 ],
@@ -5090,7 +5090,7 @@
                 },
                 "values": [
                     {
-                        "valueType": "NumberValue",
+                        "valueType": "IntegerValue",
                         "value": 10
                     }
                 ],
@@ -5894,7 +5894,7 @@
                 },
                 "values": [
                     {
-                        "valueType": "NumberValue",
+                        "valueType": "IntegerValue",
                         "value": 2
                     }
                 ],
