@@ -29,14 +29,14 @@
                 "description": {
                     "fin": "Kuvaustekstiä"
                 },
-                "administrativeAreaIds": {},
+                "administrativeAreaIds": [],
                 "legalEffectiveness": {
                     "code": "http://uri.suomi.fi/codelist/rytj/OikeusvaikutteisuudenLaji2/code/01",
                     "title": {
                         "fin": "Oikeusvaikutteinen"
                     }
                 },
-                "usedInputDatasets": {},
+                "usedInputDatasets": [],
                 "responsibleOrganisation": {
                     "linkedFeatureType": "Organisation",
                     "linkedFeatureId": "http://uri.suomi.fi/object/rytj/yleinen/Organisation/e0fb82f9-be21-44f7-9caf-f565270c7f90/34",
@@ -45,13 +45,13 @@
                         "fin": "Kaupunki Sipoo"
                     }
                 },
-                "planners": {},
+                "planners": [],
                 "planCommentary": {
                     "linkedFeatureType": "SpatialPlanCommentary",
                     "linkedFeatureId": ""
                 },
-                "attachments": {},
-                "cancellations": {},
+                "attachments": [],
+                "cancellations": [],
                 "lifecycleStatus": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/02",
                     "title": {
@@ -66,8 +66,8 @@
                 },
                 "metadata": "",
                 "initiationTime": "2013-01-30",
-                "planObjects": {},
-                "generalRegulations": {},
+                "planObjects": [],
+                "generalRegulations": [],
                 "featureType": "SpatialPlan",
                 "generalGuidances": []
             },

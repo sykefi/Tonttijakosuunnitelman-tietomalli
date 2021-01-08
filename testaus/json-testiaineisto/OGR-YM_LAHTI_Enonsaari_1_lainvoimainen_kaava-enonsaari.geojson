@@ -29,14 +29,14 @@
                 "description": {
                     "fin": "Kuvaustekstiä"
                 },
-                "administrativeAreaIds": {},
+                "administrativeAreaIds": [],
                 "legalEffectiveness": {
                     "code": "http://uri.suomi.fi/codelist/rytj/OikeusvaikutteisuudenLaji2/code/01",
                     "title": {
                         "fin": "Oikeusvaikutteinen"
                     }
                 },
-                "usedInputDatasets": {},
+                "usedInputDatasets": [],
                 "responsibleOrganisation": {
                     "linkedFeatureType": "Organisation",
                     "linkedFeatureId": "",
@@ -45,13 +45,13 @@
                         "fin": "Kaupunki Lahti"
                     }
                 },
-                "planners": {},
+                "planners": [],
                 "planCommentary": {
                     "linkedFeatureType": "SpatialPlanCommentary",
                     "linkedFeatureId": ""
                 },
-                "attachments": {},
-                "cancellations": {},
+                "attachments": [],
+                "cancellations": [],
                 "lifecycleStatus": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/11",
                     "title": {
@@ -68,238 +68,238 @@
                 "initiationTime": "1998-08-25",
                 "approvalTime": "1999-12-13",
                 "validFrom": "2000-07-17",
-                "planObjects": {
-                    "0": {
+                "planObjects": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-1.GEOJSON"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-10.GEOJSON"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-11.GEOJSON"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-12.GEOJSON"
                     },
-                    "4": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-13.GEOJSON"
                     },
-                    "5": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-2.GEOJSON"
                     },
-                    "6": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-3.GEOJSON"
                     },
-                    "7": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-4.GEOJSON"
                     },
-                    "8": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-5.GEOJSON"
                     },
-                    "9": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-6.GEOJSON"
                     },
-                    "10": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-7.GEOJSON"
                     },
-                    "11": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-8.GEOJSON"
                     },
-                    "12": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-9.GEOJSON"
                     },
-                    "13": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/MUUT_ALUEET-34.GEOJSON"
                     },
-                    "14": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/MUUT_ALUEET-35.GEOJSON"
                     },
-                    "15": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-1.GEOJSON"
                     },
-                    "16": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-10.GEOJSON"
                     },
-                    "17": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-11.GEOJSON"
                     },
-                    "18": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-12.GEOJSON"
                     },
-                    "19": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-13.GEOJSON"
                     },
-                    "20": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-14.GEOJSON"
                     },
-                    "21": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-15.GEOJSON"
                     },
-                    "22": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-16.GEOJSON"
                     },
-                    "23": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-17.GEOJSON"
                     },
-                    "24": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-18.GEOJSON"
                     },
-                    "25": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-19.GEOJSON"
                     },
-                    "26": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-2.GEOJSON"
                     },
-                    "27": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-20.GEOJSON"
                     },
-                    "28": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-21.GEOJSON"
                     },
-                    "29": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-22.GEOJSON"
                     },
-                    "30": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-23.GEOJSON"
                     },
-                    "31": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-24.GEOJSON"
                     },
-                    "32": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-25.GEOJSON"
                     },
-                    "33": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-26.GEOJSON"
                     },
-                    "34": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-27.GEOJSON"
                     },
-                    "35": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-28.GEOJSON"
                     },
-                    "36": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-29.GEOJSON"
                     },
-                    "37": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-3.GEOJSON"
                     },
-                    "38": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-30.GEOJSON"
                     },
-                    "39": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-31.GEOJSON"
                     },
-                    "40": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-32.GEOJSON"
                     },
-                    "41": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-33.GEOJSON"
                     },
-                    "42": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-36.GEOJSON"
                     },
-                    "43": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-37.GEOJSON"
                     },
-                    "44": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-38.GEOJSON"
                     },
-                    "45": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-39.GEOJSON"
                     },
-                    "46": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-4.GEOJSON"
                     },
-                    "47": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-41.GEOJSON"
                     },
-                    "48": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-47.GEOJSON"
                     },
-                    "49": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-48.GEOJSON"
                     },
-                    "50": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-5.GEOJSON"
                     },
-                    "51": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-6.GEOJSON"
                     },
-                    "52": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-7.GEOJSON"
                     },
-                    "53": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-8.GEOJSON"
                     },
-                    "54": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-9.GEOJSON"
                     },
-                    "55": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-1.GEOJSON"
                     },
-                    "56": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-2.GEOJSON"
                     },
-                    "57": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-3.GEOJSON"
                     },
-                    "58": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-4.GEOJSON"
                     },
-                    "59": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-5.GEOJSON"
                     },
-                    "60": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-6.GEOJSON"
                     },
-                    "61": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-7.GEOJSON"
                     },
-                    "62": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-8.GEOJSON"
                     },
-                    "63": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/V_JOHTO-12.GEOJSON"
                     },
-                    "64": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-10.GEOJSON"
                     },
-                    "65": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-11.GEOJSON"
                     },
-                    "66": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-13.GEOJSON"
                     },
-                    "67": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-15.GEOJSON"
                     },
-                    "68": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-16.GEOJSON"
                     },
-                    "69": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-17.GEOJSON"
                     },
-                    "70": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-9.GEOJSON"
                     }
-                },
-                "generalRegulations": {
-                    "0": {
+                ],
+                "generalRegulations": [
+                    {
                         "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson/MAARAYS/4"
                     },
-                    "4": {
+                    {
                         "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson/MAARAYS/5"
                     }
-                },
+                ],
                 "featureType": "SpatialPlan",
                 "generalGuidances": []
             },
@@ -3179,14 +3179,14 @@
                         "fin": "Toimenpiderajoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Yleiskaava-alueella on voimassa RakL 124 a §:n mukainen toimenpidekielto lukuunottamatta alueen osaa, joka on suojeltu RakL 135 §:n nojalla. Toimenpidekiellon johdosta yleiskaava-alueella ei saa suorittaa kaivamis-, louhimis-, tasoittamis- tai rannan tai muun alueen täyttämistöitä, puiden kaatamista tai muita näihin verrattavia toimenpiteitä ilman rakennuslupaa."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -3215,14 +3215,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Rakennuksia, rakenteita ja metsäluontoa koskevat toimenpiteet tulee suunnitella siten, että ne edistävät Enonsaarelle ominaisten ekologisten, maisemallisten sekä luonnon- ja kulttuurihistoriallisten arvojen säilymistä ja että ne muutoinkin sovitetaan luonnon monimuotoisuuden turvaamisen ja muutosten sietokyvyn asettamiin puitteisiin. Saaren paikallisesti arvokkaita luontotyyppejä ovat lehitpuuvaltaiset lehdot, kalliorinteet ja niiden metsät, jyrkänteiden alarinteiden rehevä kasvillisuus, vanhat kuusikot, rantakasvillisuus, hiekkarannat sekä muinaiset rantakivikot. Mainitut luontotyypit sijaitsevat pääosin yleiskaavakartan VR/S1-alueella ja ne on osoitettu yleiskaavan selotuksen liitekartalla nro 6. Kulttuurihistoriallisesti arvokkaat rakennukset on osoitettu yleiskaavakartalla sr-merkinnöin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -3251,14 +3251,14 @@
                         "fin": "Yleiskaavan käyttö rakennusluvan myöntämisen perusteena"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Rakennuslupia alueelle myönnettäessä on tarkistettava, että - hankkeet sopivat ympäristöönsä ja noudattavat edellä esitettyjä paikallisia suunnitteluperiaatteita, - rakennukset sijoitetaan yleiskaavakarttaan merkityille rakennusaloille ja että - maisemallisesti tärkeätä rantapuustoa ei tarpeettomasti poisteta."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -3287,14 +3287,14 @@
                         "fin": "Yleiskaavan käyttö rakennusluvan myöntämisen perusteena"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Rakennusluvan voi myöntää ilman rantakaavaa tämän osayleiskaavan mukaisesti, milloin kysymys on tavanomaisen omarantaisen lomarakennuksen tai siihen liittyvän vierasmajan, saunan ja rakennuslupaa edellyttävän aputilan rakentamisesta."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -3323,14 +3323,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Upilan kylän tilan RN:o 1:10, Hersalan kylän tilan RN:0 2:11 sekä Tiirismaan kylän tilan RN:o 1:38 loma-asutuksen järjestämisen sekä rakennuslupakäsittelyn pohjaksi maanomistajan toimesta laaditaan rantakaava."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -3362,21 +3362,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/840",
                         "title": {
                             "fin": "Loma-asuntojen alue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue on tarkoitettu omarantaista loma-asutusta varten."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -3409,13 +3409,13 @@
                         "fin": "Sallittu kokonaiskerrosala"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericValue",
+                "values": [
+                    {
+                        "valueType": "NumberValue",
                         "value": 320,
                         "unitOfMeasure": "m2"
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -3448,12 +3448,12 @@
                         "fin": "Sallittujen rakennuspaikkojen lukumäärä"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericValue",
+                "values": [
+                    {
+                        "valueType": "NumberValue",
                         "value": 2
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -3486,14 +3486,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueen yksityiskohtaista käyttöä suunniteltaessa on otettava huomioon edellä yleismääräyksissä esitetyt suunnitteluperiaatteet."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -3535,20 +3535,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-1.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-1.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-1.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-1.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -3642,21 +3642,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/841",
                         "title": {
                             "fin": "Matkailua palvelevien rakennusten alue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue on tarkoitettu yhteisöjen lomailukäyttöön."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -3689,13 +3689,13 @@
                         "fin": "Sallittu kokonaiskerrosala"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericValue",
+                "values": [
+                    {
+                        "valueType": "NumberValue",
                         "value": 500,
                         "unitOfMeasure": "m2"
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -3728,12 +3728,12 @@
                         "fin": "Sallittujen rakennuspaikkojen lukumäärä"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericValue",
+                "values": [
+                    {
+                        "valueType": "NumberValue",
                         "value": 15
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -3766,14 +3766,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueen yksityiskohtaista käyttöä suunniteltaessa on otettava huomioon edellä yleismääräyksissä esitetyt suunnitteluperiaatteet."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -3815,20 +3815,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-10.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-10.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-10.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-10.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -4150,21 +4150,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/841",
                         "title": {
                             "fin": "Matkailua palvelevien rakennusten alue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue on tarkoitettu yhteisöjen lomailukäyttöön."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -4197,13 +4197,13 @@
                         "fin": "Sallittu kokonaiskerrosala"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericValue",
+                "values": [
+                    {
+                        "valueType": "NumberValue",
                         "value": 220,
                         "unitOfMeasure": "m2"
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -4236,12 +4236,12 @@
                         "fin": "Sallittujen rakennuspaikkojen lukumäärä"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericValue",
+                "values": [
+                    {
+                        "valueType": "NumberValue",
                         "value": 2
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -4274,14 +4274,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueen yksityiskohtaista käyttöä suunniteltaessa on otettava huomioon edellä yleismääräyksissä esitetyt suunnitteluperiaatteet."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -4323,20 +4323,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-11.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-11.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-11.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-11.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -4510,21 +4510,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/841",
                         "title": {
                             "fin": "Matkailua palvelevien rakennusten alue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue on tarkoitettu yhteisöjen lomailukäyttöön."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -4557,13 +4557,13 @@
                         "fin": "Sallittu kokonaiskerrosala"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericValue",
+                "values": [
+                    {
+                        "valueType": "NumberValue",
                         "value": 250,
                         "unitOfMeasure": "m2"
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -4596,12 +4596,12 @@
                         "fin": "Sallittujen rakennuspaikkojen lukumäärä"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericValue",
+                "values": [
+                    {
+                        "valueType": "NumberValue",
                         "value": 2
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -4634,14 +4634,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueen yksityiskohtaista käyttöä suunniteltaessa on otettava huomioon edellä yleismääräyksissä esitetyt suunnitteluperiaatteet."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -4683,20 +4683,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-12.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-12.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-12.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-12.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -5002,21 +5002,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/841",
                         "title": {
                             "fin": "Matkailua palvelevien rakennusten alue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue on tarkoitettu lomailua ja matkailua palveleville toiminnoille."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -5049,13 +5049,13 @@
                         "fin": "Sallittu kokonaiskerrosala"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericValue",
+                "values": [
+                    {
+                        "valueType": "NumberValue",
                         "value": 650,
                         "unitOfMeasure": "m2"
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -5088,12 +5088,12 @@
                         "fin": "Sallittujen rakennuspaikkojen lukumäärä"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericValue",
+                "values": [
+                    {
+                        "valueType": "NumberValue",
                         "value": 10
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -5126,14 +5126,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueen yksityiskohtaista käyttöä suunniteltaessa on otettava huomioon edellä yleismääräyksissä esitetyt suunnitteluperiaatteet."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -5175,20 +5175,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-13.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-13.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-13.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-13.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -5806,21 +5806,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/841",
                         "title": {
                             "fin": "Matkailua palvelevien rakennusten alue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue on tarkoitettu yhteisöjen lomailukäyttöön."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -5853,13 +5853,13 @@
                         "fin": "Sallittu kokonaiskerrosala"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericValue",
+                "values": [
+                    {
+                        "valueType": "NumberValue",
                         "value": 120,
                         "unitOfMeasure": "m2"
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -5892,12 +5892,12 @@
                         "fin": "Sallittujen rakennuspaikkojen lukumäärä"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericValue",
+                "values": [
+                    {
+                        "valueType": "NumberValue",
                         "value": 2
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -5930,14 +5930,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueen yksityiskohtaista käyttöä suunniteltaessa on otettava huomioon edellä yleismääräyksissä esitetyt suunnitteluperiaatteet."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -5979,20 +5979,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-2.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-2.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-2.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-2.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -6094,21 +6094,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/840",
                         "title": {
                             "fin": "Loma-asuntojen alue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue on tarkoitettu omarantaista loma-asutusta varten."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -6141,14 +6141,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Jokaista rakennuspaikkaa kohti voi rakentaa loma-asunnon sekä vierasmajan, joiden yhteenlaskettu kerrosala saa olla enintään 80m2, sekä saunan ja aputiloja, joiden yhteenlaskettu kerrosala saa olla enintään 40m2."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -6181,14 +6181,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueen yksityiskohtaista käyttöä suunniteltaessa on otettava huomioon edellä yleismääräyksissä esitetyt suunnitteluperiaatteet."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -6230,17 +6230,17 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-3.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-3.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-3.GEOJSON/MAARAYS/3"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -6390,21 +6390,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/737",
                         "title": {
                             "fin": "Retkeily- ja ulkoilualue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue varataan yleiseen retkeily- ja ulkoilukäyttöön."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -6437,14 +6437,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueen yksityiskohtaista käyttöä sekä metsänhoidollisia toimenpiteitä suunniteltaessa on otettava huomioon edellä yleismääräyksissä esitetyt suunnitteluperiaatteet. Alueen polkuverkoston sekä yhdyskuntateknisen verkon hienovarainen sovittaminen luontoon tulee tapahtua yleiskaavakartan ohjeellisten merkintöjen mukaisesti. Alueella sallitaan myös näihin verkostoihin liittyviä pienimuotoisia rakennelmia sekä saaren etelärannalla rt-merkinnällä osoitettu telttailualue pienimuotoisine rakennelmineen."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -6477,14 +6477,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Enonsaaren yleisen virkistyskäytön kehittämisen ja luonnonarvojen suojelun pohjaksi VR/S1-alueille laaditaan yksityiskohtainen hoito- ja kehittämissuunnitelma."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -6517,14 +6517,14 @@
                         "fin": "Merkittävät luontoarvot"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Retkeily- ja ulkoilualue, jota hoidetaan ja kehitetään niin, että sen merkittävät luonnonarvot säilyvät."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -6566,20 +6566,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-4.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-4.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-4.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-4.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -6893,21 +6893,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/737",
                         "title": {
                             "fin": "Retkeily- ja ulkoilualue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue varataan yleiseen retkeily- ja ulkoilukäyttöön."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -6940,14 +6940,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueen yksityiskohtaista käyttöä sekä metsänhoidollisia toimenpiteitä suunniteltaessa on otettava huomioon edellä yleismääräyksissä esitetyt suunnitteluperiaatteet. Alueen polkuverkoston sekä yhdyskuntateknisen verkon hienovarainen sovittaminen luontoon tulee tapahtua yleiskaavakartan ohjeellisten merkintöjen mukaisesti. Alueella sallitaan myös näihin verkostoihin liittyviä pienimuotoisia rakennelmia sekä saaren etelärannalla rt-merkinnällä osoitettu telttailualue pienimuotoisine rakennelmineen."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -6980,14 +6980,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Enonsaaren yleisen virkistyskäytön kehittämisen ja luonnonarvojen suojelun pohjaksi VR/S1-alueille laaditaan yksityiskohtainen hoito- ja kehittämissuunnitelma."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -7020,14 +7020,14 @@
                         "fin": "Merkittävät luontoarvot"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Retkeily- ja ulkoilualue, jota hoidetaan ja kehitetään niin, että sen merkittävät luonnonarvot säilyvät."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -7069,20 +7069,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-5.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-5.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-5.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-5.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -8116,21 +8116,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/840",
                         "title": {
                             "fin": "Loma-asuntojen alue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue on tarkoitettu omarantaista loma-asutusta varten."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -8163,14 +8163,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Jokaista rakennuspaikkaa kohti voi rakentaa loma-asunnon sekä vierasmajan, joiden yhteenlaskettu kerrosala saa olla enintään 80m2, sekä saunan ja aputiloja, joiden yhteenlaskettu kerrosala saa olla enintään 40m2."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -8203,14 +8203,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueen yksityiskohtaista käyttöä suunniteltaessa on otettava huomioon edellä yleismääräyksissä esitetyt suunnitteluperiaatteet."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -8243,14 +8243,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Osayleiskaavassa esitetyille kolmelle uudelle loma-asuntojen rakennuspaikalle voi saunan rakentaa rakennusalan ulkopuolelle edellyttäen, että sen kokonaiskerrosala on enintään 20 m2 ja että se sopii kaavan yleismääräyksissä esitetyin ehdoin ympäristöönsä."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -8292,20 +8292,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-6.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-6.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-6.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-6.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -8671,21 +8671,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/840",
                         "title": {
                             "fin": "Loma-asuntojen alue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue on tarkoitettu omarantaista loma-asutusta varten."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -8718,14 +8718,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Jokaista rakennuspaikkaa kohti voi rakentaa loma-asunnon sekä vierasmajan, joiden yhteenlaskettu kerrosala saa olla enintään 80m2, sekä saunan ja aputiloja, joiden yhteenlaskettu kerrosala saa olla enintään 40m2."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -8758,14 +8758,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueen yksityiskohtaista käyttöä suunniteltaessa on otettava huomioon edellä yleismääräyksissä esitetyt suunnitteluperiaatteet."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -8798,14 +8798,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Osayleiskaavassa esitetyille kolmelle uudelle loma-asuntojen rakennuspaikalle voi saunan rakentaa rakennusalan ulkopuolelle edellyttäen, että sen kokonaiskerrosala on enintään 20 m2 ja että se sopii kaavan yleismääräyksissä esitetyin ehdoin ympäristöönsä."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -8847,20 +8847,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-7.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-7.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-7.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-7.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -8958,21 +8958,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/840",
                         "title": {
                             "fin": "Loma-asuntojen alue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue on tarkoitettu omarantaista loma-asutusta varten."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -9005,14 +9005,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Jokaista rakennuspaikkaa kohti voi rakentaa loma-asunnon sekä vierasmajan, joiden yhteenlaskettu kerrosala saa olla enintään 80m2, sekä saunan ja aputiloja, joiden yhteenlaskettu kerrosala saa olla enintään 40m2."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -9045,14 +9045,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueen yksityiskohtaista käyttöä suunniteltaessa on otettava huomioon edellä yleismääräyksissä esitetyt suunnitteluperiaatteet."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -9085,14 +9085,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Osayleiskaavassa esitetyille kolmelle uudelle loma-asuntojen rakennuspaikalle voi saunan rakentaa rakennusalan ulkopuolelle edellyttäen, että sen kokonaiskerrosala on enintään 20 m2 ja että se sopii kaavan yleismääräyksissä esitetyin ehdoin ympäristöönsä."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -9134,20 +9134,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-8.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-8.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-8.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-8.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -9257,21 +9257,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/840",
                         "title": {
                             "fin": "Loma-asuntojen alue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue on tarkoitettu omarantaista loma-asutusta varten."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -9304,14 +9304,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Jokaista rakennuspaikkaa kohti voi rakentaa loma-asunnon sekä vierasmajan, joiden yhteenlaskettu kerrosala saa olla enintään 80m2, sekä saunan ja aputiloja, joiden yhteenlaskettu kerrosala saa olla enintään 40m2."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -9344,14 +9344,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueen yksityiskohtaista käyttöä suunniteltaessa on otettava huomioon edellä yleismääräyksissä esitetyt suunnitteluperiaatteet."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -9393,17 +9393,17 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-9.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-9.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEVARAUS-9.GEOJSON/MAARAYS/3"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -9493,21 +9493,21 @@
                         "fin": "Yksityiskohtainen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/TarkentavaKayttotarkoitusLaji/code/0210",
                         "title": {
                             "fin": "Telttailu"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue varataan lyhytaikaiseen telttailuun ja muuhun leirintään."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -9549,11 +9549,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/MUUT_ALUEET-34.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -9710,14 +9710,14 @@
                         "fin": "Merkittävät luontoarvot"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Rakennuslain 135 §:n nojalla määrätään, että tällä alueen osalla ei saa suorittaa sellaisia toimenpiteitä, jotka muuttavat sen luonnonoloja. Tällaisia toimenpiteitä ovat mm. kaivamis-, louhimis-, tasoittamis- ja täyttämistyöt ja puiden kaataminen."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -9759,11 +9759,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/MUUT_ALUEET-35.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -10029,11 +10029,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-1.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -10131,11 +10131,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-10.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -10233,11 +10233,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-11.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -10335,11 +10335,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-12.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -10437,11 +10437,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-13.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -10530,14 +10530,14 @@
                         "fin": "Merkittävät kulttuurihistorialliset arvot"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Kulttuurihistoriallisesti arvokas rakennus"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -10545,42 +10545,42 @@
                     "linkedFeatureId": "KAAVAKOHDE/RA-14.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
                 },
-                "additionalInfo": {
-                    "0": {
+                "additionalInfo": [
+                    {
                         "type": {
                             "code": "http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/002",
                             "title": {
                                 "fin": "Kulttuurihistoriallinen merkittävyys"
                             }
                         },
-                        "values": {
-                            "0": {
+                        "values": [
+                            {
                                 "valueType": "CodeValue",
                                 "code": "http://uri.suomi.fi/codelist/rakrek/kulthistmer/code/4",
                                 "title": {
                                     "fin": "Paikallinen merkittävyys"
                                 }
                             }
-                        }
+                        ]
                     },
-                    "1": {
+                    {
                         "type": {
                             "code": "http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/007",
                             "title": {
                                 "fin": "Kulttuurihistoriallinen arvotyyppi"
                             }
                         },
-                        "values": {
-                            "0": {
+                        "values": [
+                            {
                                 "valueType": "CodeValue",
                                 "code": "http://uri.suomi.fi/codelist/rakrek/Kulthistatyyp/code/04",
                                 "title": {
                                     "fin": "Rakennushistoriallinen"
                                 }
                             }
-                        }
+                        ]
                     }
-                },
+                ],
                 "featureType": "PlanRegulation",
                 "relatedDocuments": []
             },
@@ -10606,14 +10606,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Rakennuksia ei saa purkaa eikä niiden alkuperäistä ulkoasua muuttaa ilman pakottavaa syytä niin, että niiden kulttuurihistoriallinen tai rakennustaiteellinen arvo vaarantuu. Peruskorjaustoimenpiteitä suunniteltaessa tulee ottaa huomioon ne suunnitteluperiaatteet, jotka on esitetty edellä yleismääräyksissä sekä osayleiskaavan selotuksen liitteenä nro 11 olevissa kaupunginmuseon korjausohjeissa."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -10646,14 +10646,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueella olevia kulttuurihistoriallisesti arvokkaiksi merkittyjä rakennuksia (sr-merkintä) ja niiden lähiympäristöä koskevien peruskorjaus-, muutos- tai lisärakentamistöiden tulee soveltua päärakennuksen tyyliin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -10695,20 +10695,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-14.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-14.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-14.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-14.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -10854,11 +10854,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-15.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -10956,11 +10956,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-16.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -11058,11 +11058,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-17.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -11151,14 +11151,14 @@
                         "fin": "Merkittävät kulttuurihistorialliset arvot"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Kulttuurihistoriallisesti arvokas rakennus"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -11166,42 +11166,42 @@
                     "linkedFeatureId": "KAAVAKOHDE/RA-18.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
                 },
-                "additionalInfo": {
-                    "0": {
+                "additionalInfo": [
+                    {
                         "type": {
                             "code": "http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/002",
                             "title": {
                                 "fin": "Kulttuurihistoriallinen merkittävyys"
                             }
                         },
-                        "values": {
-                            "0": {
+                        "values": [
+                            {
                                 "valueType": "CodeValue",
                                 "code": "http://uri.suomi.fi/codelist/rakrek/kulthistmer/code/4",
                                 "title": {
                                     "fin": "Paikallinen merkittävyys"
                                 }
                             }
-                        }
+                        ]
                     },
-                    "1": {
+                    {
                         "type": {
                             "code": "http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/007",
                             "title": {
                                 "fin": "Kulttuurihistoriallinen arvotyyppi"
                             }
                         },
-                        "values": {
-                            "0": {
+                        "values": [
+                            {
                                 "valueType": "CodeValue",
                                 "code": "http://uri.suomi.fi/codelist/rakrek/Kulthistatyyp/code/04",
                                 "title": {
                                     "fin": "Rakennushistoriallinen"
                                 }
                             }
-                        }
+                        ]
                     }
-                },
+                ],
                 "featureType": "PlanRegulation",
                 "relatedDocuments": []
             },
@@ -11227,14 +11227,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Rakennuksia ei saa purkaa eikä niiden alkuperäistä ulkoasua muuttaa ilman pakottavaa syytä niin, että niiden kulttuurihistoriallinen tai rakennustaiteellinen arvo vaarantuu. Peruskorjaustoimenpiteitä suunniteltaessa tulee ottaa huomioon ne suunnitteluperiaatteet, jotka on esitetty edellä yleismääräyksissä sekä osayleiskaavan selotuksen liitteenä nro 11 olevissa kaupunginmuseon korjausohjeissa."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -11267,14 +11267,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueella olevia kulttuurihistoriallisesti arvokkaiksi merkittyjä rakennuksia (sr-merkintä) ja niiden lähiympäristöä koskevien peruskorjaus-, muutos- tai lisärakentamistöiden tulee soveltua päärakennuksen tyyliin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -11316,20 +11316,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-18.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-18.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-18.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-18.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -11475,11 +11475,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-19.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -11577,11 +11577,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-2.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -11670,14 +11670,14 @@
                         "fin": "Merkittävät kulttuurihistorialliset arvot"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Kulttuurihistoriallisesti arvokas rakennus"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -11685,42 +11685,42 @@
                     "linkedFeatureId": "KAAVAKOHDE/RA-20.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
                 },
-                "additionalInfo": {
-                    "0": {
+                "additionalInfo": [
+                    {
                         "type": {
                             "code": "http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/002",
                             "title": {
                                 "fin": "Kulttuurihistoriallinen merkittävyys"
                             }
                         },
-                        "values": {
-                            "0": {
+                        "values": [
+                            {
                                 "valueType": "CodeValue",
                                 "code": "http://uri.suomi.fi/codelist/rakrek/kulthistmer/code/4",
                                 "title": {
                                     "fin": "Paikallinen merkittävyys"
                                 }
                             }
-                        }
+                        ]
                     },
-                    "1": {
+                    {
                         "type": {
                             "code": "http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/007",
                             "title": {
                                 "fin": "Kulttuurihistoriallinen arvotyyppi"
                             }
                         },
-                        "values": {
-                            "0": {
+                        "values": [
+                            {
                                 "valueType": "CodeValue",
                                 "code": "http://uri.suomi.fi/codelist/rakrek/Kulthistatyyp/code/04",
                                 "title": {
                                     "fin": "Rakennushistoriallinen"
                                 }
                             }
-                        }
+                        ]
                     }
-                },
+                ],
                 "featureType": "PlanRegulation",
                 "relatedDocuments": []
             },
@@ -11746,14 +11746,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Rakennuksia ei saa purkaa eikä niiden alkuperäistä ulkoasua muuttaa ilman pakottavaa syytä niin, että niiden kulttuurihistoriallinen tai rakennustaiteellinen arvo vaarantuu. Peruskorjaustoimenpiteitä suunniteltaessa tulee ottaa huomioon ne suunnitteluperiaatteet, jotka on esitetty edellä yleismääräyksissä sekä osayleiskaavan selotuksen liitteenä nro 11 olevissa kaupunginmuseon korjausohjeissa."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -11786,14 +11786,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueella olevia kulttuurihistoriallisesti arvokkaiksi merkittyjä rakennuksia (sr-merkintä) ja niiden lähiympäristöä koskevien peruskorjaus-, muutos- tai lisärakentamistöiden tulee soveltua päärakennuksen tyyliin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -11835,20 +11835,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-20.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-20.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-20.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-20.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -11946,11 +11946,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-21.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -12056,11 +12056,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-22.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -12158,11 +12158,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-23.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -12260,11 +12260,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-24.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -12362,11 +12362,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-25.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -12464,11 +12464,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-26.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -12566,11 +12566,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-27.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -12668,11 +12668,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-28.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -12770,11 +12770,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-29.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -12872,11 +12872,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-3.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -12974,11 +12974,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-30.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -13076,11 +13076,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-31.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -13178,11 +13178,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-32.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -13280,11 +13280,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-33.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -13382,11 +13382,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-36.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -13484,11 +13484,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-37.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -13586,11 +13586,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-38.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -13679,14 +13679,14 @@
                         "fin": "Merkittävät kulttuurihistorialliset arvot"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Kulttuurihistoriallisesti arvokas rakennus"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -13694,42 +13694,42 @@
                     "linkedFeatureId": "KAAVAKOHDE/RA-39.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
                 },
-                "additionalInfo": {
-                    "0": {
+                "additionalInfo": [
+                    {
                         "type": {
                             "code": "http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/002",
                             "title": {
                                 "fin": "Kulttuurihistoriallinen merkittävyys"
                             }
                         },
-                        "values": {
-                            "0": {
+                        "values": [
+                            {
                                 "valueType": "CodeValue",
                                 "code": "http://uri.suomi.fi/codelist/rakrek/kulthistmer/code/4",
                                 "title": {
                                     "fin": "Paikallinen merkittävyys"
                                 }
                             }
-                        }
+                        ]
                     },
-                    "1": {
+                    {
                         "type": {
                             "code": "http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/007",
                             "title": {
                                 "fin": "Kulttuurihistoriallinen arvotyyppi"
                             }
                         },
-                        "values": {
-                            "0": {
+                        "values": [
+                            {
                                 "valueType": "CodeValue",
                                 "code": "http://uri.suomi.fi/codelist/rakrek/Kulthistatyyp/code/04",
                                 "title": {
                                     "fin": "Rakennushistoriallinen"
                                 }
                             }
-                        }
+                        ]
                     }
-                },
+                ],
                 "featureType": "PlanRegulation",
                 "relatedDocuments": []
             },
@@ -13755,14 +13755,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Rakennuksia ei saa purkaa eikä niiden alkuperäistä ulkoasua muuttaa ilman pakottavaa syytä niin, että niiden kulttuurihistoriallinen tai rakennustaiteellinen arvo vaarantuu. Peruskorjaustoimenpiteitä suunniteltaessa tulee ottaa huomioon ne suunnitteluperiaatteet, jotka on esitetty edellä yleismääräyksissä sekä osayleiskaavan selotuksen liitteenä nro 11 olevissa kaupunginmuseon korjausohjeissa."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -13795,14 +13795,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueella olevia kulttuurihistoriallisesti arvokkaiksi merkittyjä rakennuksia (sr-merkintä) ja niiden lähiympäristöä koskevien peruskorjaus-, muutos- tai lisärakentamistöiden tulee soveltua päärakennuksen tyyliin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -13844,20 +13844,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-39.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-39.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-39.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-39.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -13979,11 +13979,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-4.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -14081,11 +14081,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-41.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -14183,11 +14183,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-47.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -14285,11 +14285,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-48.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -14387,11 +14387,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-5.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -14489,11 +14489,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-6.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -14582,14 +14582,14 @@
                         "fin": "Merkittävät kulttuurihistorialliset arvot"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Kulttuurihistoriallisesti arvokas rakennus"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -14597,42 +14597,42 @@
                     "linkedFeatureId": "KAAVAKOHDE/RA-7.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
                 },
-                "additionalInfo": {
-                    "0": {
+                "additionalInfo": [
+                    {
                         "type": {
                             "code": "http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/002",
                             "title": {
                                 "fin": "Kulttuurihistoriallinen merkittävyys"
                             }
                         },
-                        "values": {
-                            "0": {
+                        "values": [
+                            {
                                 "valueType": "CodeValue",
                                 "code": "http://uri.suomi.fi/codelist/rakrek/kulthistmer/code/4",
                                 "title": {
                                     "fin": "Paikallinen merkittävyys"
                                 }
                             }
-                        }
+                        ]
                     },
-                    "1": {
+                    {
                         "type": {
                             "code": "http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/007",
                             "title": {
                                 "fin": "Kulttuurihistoriallinen arvotyyppi"
                             }
                         },
-                        "values": {
-                            "0": {
+                        "values": [
+                            {
                                 "valueType": "CodeValue",
                                 "code": "http://uri.suomi.fi/codelist/rakrek/Kulthistatyyp/code/04",
                                 "title": {
                                     "fin": "Rakennushistoriallinen"
                                 }
                             }
-                        }
+                        ]
                     }
-                },
+                ],
                 "featureType": "PlanRegulation",
                 "relatedDocuments": []
             },
@@ -14658,14 +14658,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Rakennuksia ei saa purkaa eikä niiden alkuperäistä ulkoasua muuttaa ilman pakottavaa syytä niin, että niiden kulttuurihistoriallinen tai rakennustaiteellinen arvo vaarantuu. Peruskorjaustoimenpiteitä suunniteltaessa tulee ottaa huomioon ne suunnitteluperiaatteet, jotka on esitetty edellä yleismääräyksissä sekä osayleiskaavan selotuksen liitteenä nro 11 olevissa kaupunginmuseon korjausohjeissa."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -14698,14 +14698,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueella olevia kulttuurihistoriallisesti arvokkaiksi merkittyjä rakennuksia (sr-merkintä) ja niiden lähiympäristöä koskevien peruskorjaus-, muutos- tai lisärakentamistöiden tulee soveltua päärakennuksen tyyliin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -14747,20 +14747,20 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-7.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-7.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-7.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-7.GEOJSON/MAARAYS/4"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -14922,11 +14922,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-8.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -15044,11 +15044,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RA-9.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/01",
                     "title": {
@@ -15105,14 +15105,14 @@
                         "fin": "Ulkoilureitti"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen pääulkoilureitti"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -15154,11 +15154,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-1.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -15207,14 +15207,14 @@
                         "fin": "Ulkoilureitti"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen pääulkoilureitti"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -15256,11 +15256,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-2.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -15373,14 +15373,14 @@
                         "fin": "Ulkoilureitti"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen pääulkoilureitti"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -15422,11 +15422,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-3.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -15663,14 +15663,14 @@
                         "fin": "Ulkoilureitti"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen pääulkoilureitti"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -15712,11 +15712,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-4.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -15813,14 +15813,14 @@
                         "fin": "Ulkoilureitti"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen pääulkoilureitti"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -15862,11 +15862,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-5.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -15951,14 +15951,14 @@
                         "fin": "Ulkoilureitti"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen pääulkoilureitti"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -16000,11 +16000,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-6.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -16109,14 +16109,14 @@
                         "fin": "Ulkoilureitti"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen pääulkoilureitti"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -16158,11 +16158,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-7.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -16207,14 +16207,14 @@
                         "fin": "Ulkoilureitti"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen pääulkoilureitti"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -16256,11 +16256,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ULKOILU-8.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -16297,14 +16297,14 @@
                         "fin": "Johto, putki tai linja"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen vesihuollon pääjohto"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -16346,11 +16346,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/V_JOHTO-12.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -16479,14 +16479,14 @@
                         "fin": "Johto, putki tai linja"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen sähkön jakelun avojohtolinja"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -16528,11 +16528,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-10.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -16581,14 +16581,14 @@
                         "fin": "Johto, putki tai linja"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen sähkön jakelun avojohtolinja"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -16630,11 +16630,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-11.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -16699,14 +16699,14 @@
                         "fin": "Johto, putki tai linja"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen sähkön jakelun avojohtolinja"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -16748,11 +16748,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-13.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -16801,14 +16801,14 @@
                         "fin": "Johto, putki tai linja"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen sähkön jakelun avojohtolinja"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -16850,11 +16850,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-15.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -16891,14 +16891,14 @@
                         "fin": "Johto, putki tai linja"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen sähkön jakelun avojohtolinja"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -16940,11 +16940,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-16.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -17001,14 +17001,14 @@
                         "fin": "Johto, putki tai linja"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen sähkön jakelun avojohtolinja"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -17050,11 +17050,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-17.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -17123,14 +17123,14 @@
                         "fin": "Johto, putki tai linja"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ohjeellinen sähkön jakelun avojohtolinja"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-enonsaari.geojson"
                 },
@@ -17172,11 +17172,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/Z_JOHTO-9.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {

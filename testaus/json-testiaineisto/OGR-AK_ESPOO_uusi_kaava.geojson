@@ -29,16 +29,16 @@
                 "description": {
                     "fin": "Vaiheitteinen asemakaavan muutos\n\n10.kaupunginosa, Otaniemi\nkorttelit 10007 ja 10008, osa korttelia 10005"
                 },
-                "administrativeAreaIds": {},
+                "administrativeAreaIds": [],
                 "legalEffectiveness": {
                     "code": "http://uri.suomi.fi/codelist/rytj/OikeusvaikutteisuudenLaji2/code/01",
                     "title": {
                         "fin": "Oikeusvaikutteinen"
                     }
                 },
-                "usedInputDatasets": {},
-                "relatedMatters": {
-                    "0": {
+                "usedInputDatasets": [],
+                "relatedMatters": [
+                    {
                         "linkedFeatureType": "SpatialPlan",
                         "linkedFeatureId": "4ac6aed8-e2fd-44a0-b10c-0441b8f750b5.1",
                         "title": {
@@ -48,7 +48,7 @@
                             "fin": "Muutettava kaava"
                         }
                     },
-                    "1": {
+                    {
                         "linkedFeatureType": "SpatialPlan",
                         "linkedFeatureId": null,
                         "title": {
@@ -58,7 +58,7 @@
                             "fin": "Muutettava kaava"
                         }
                     },
-                    "2": {
+                    {
                         "linkedFeatureType": "SpatialPlan",
                         "linkedFeatureId": null,
                         "title": {
@@ -68,7 +68,7 @@
                             "fin": "Muutettava kaava"
                         }
                     }
-                },
+                ],
                 "responsibleOrganisation": {
                     "linkedFeatureType": "Organisation",
                     "linkedFeatureId": "",
@@ -77,14 +77,14 @@
                         "fin": "Kaupunki Espoo"
                     }
                 },
-                "planners": {},
+                "planners": [],
                 "planCommentary": {
                     "linkedFeatureType": "SpatialPlanCommentary",
                     "linkedFeatureId": ""
                 },
-                "attachments": {},
-                "cancellations": {
-                    "0": {
+                "attachments": [],
+                "cancellations": [
+                    {
                         "cancelledPlan": {
                             "linkedFeatureType": "SpatialPlan",
                             "linkedFeatureId": "4ac6aed8-e2fd-44a0-b10c-0441b8f750b5.1",
@@ -93,27 +93,27 @@
                             }
                         },
                         "cancelsEntirePlan": false,
-                        "planningObjectIdsToCancel": {
-                            "0": "9d80d4e3-2bfd-4979-86bd-c64bd3a9532f.23"
-                        }
+                        "planningObjectIdsToCancel": [
+                            "9d80d4e3-2bfd-4979-86bd-c64bd3a9532f.23"
+                        ]
                     },
-                    "1": {
+                    {
                         "cancelledPlanId": "221200",
                         "cancelsEntirePlan": false,
                         "areaToCancel": {
                             "type": "MultiPolygon",
-                            "coordinates": {}
+                            "coordinates": []
                         }
                     },
-                    "2": {
+                    {
                         "cancelledPlanId": "220205",
                         "cancelsEntirePlan": false,
                         "areaToCancel": {
                             "type": "MultiPolygon",
-                            "coordinates": {}
+                            "coordinates": []
                         }
                     }
-                },
+                ],
                 "lifecycleStatus": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/11",
                     "title": {
@@ -130,12 +130,12 @@
                 "initiationTime": "2018-01-09",
                 "approvalTime": "2018-03-27",
                 "validFrom": "2018-04-30",
-                "planObjects": {
-                    "0": {
+                "planObjects": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON"
                     }
-                },
-                "generalRegulations": {},
+                ],
+                "generalRegulations": [],
                 "featureType": "SpatialPlan",
                 "generalGuidances": []
             },
@@ -267,15 +267,15 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/102",
                         "title": {
                             "fin": "Asuinkerrostaloalue"
                         }
                     }
-                },
+                ],
                 "targetObject": {
                     "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
@@ -308,12 +308,12 @@
                         "fin": "Korttelinumero"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericValue",
+                "values": [
+                    {
+                        "valueType": "IntegerValue",
                         "value": 10007
                     }
-                },
+                ],
                 "targetObject": {
                     "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
@@ -346,22 +346,22 @@
                         "fin": "Yksityiskohtainen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/TarkentavaKayttotarkoitusLaji/code/0103",
                         "title": {
                             "fin": "Yhteiskäyttöinen tila"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/TarkentavaKayttotarkoitusLaji/code/0114",
                         "title": {
                             "fin": "Asuntola"
                         }
                     }
-                },
+                ],
                 "targetObject": {
                     "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
@@ -394,14 +394,14 @@
                         "fin": "Muu tarkentava käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Myymälä-, toimisto- ja sosiaaliset tilat"
                         }
                     }
-                },
+                ],
                 "targetObject": {
                     "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
@@ -409,36 +409,36 @@
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/vaihekaava-espoo.geojson"
                 },
-                "additionalInfo": {
-                    "0": {
+                "additionalInfo": [
+                    {
                         "type": {
                             "code": "http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/001",
                             "title": {
                                 "fin": "Käyttötarkoituksen osuus kerrosalasta"
                             }
                         },
-                        "values": {
-                            "0": {
+                        "values": [
+                            {
                                 "valueType": "CodeValue",
                                 "code": "http://uri.suomi.fi/codelist/rytj/TarkentavaKayttotarkoitusLaji/code/03",
                                 "title": {
                                     "fin": "Muu tarkentava käyttötarkoitus"
                                 }
                             },
-                            "1": {
+                            {
                                 "valueType": "TextValue",
                                 "value": {
                                     "fin": "Myymälä-, toimisto- ja sosiaaliset tilat"
                                 }
                             },
-                            "2": {
-                                "valueType": "NumericRange",
+                            {
+                                "valueType": "NumberRange",
                                 "maximumValue": 10,
                                 "unitOfMeasure": "%"
                             }
-                        }
+                        ]
                     }
-                },
+                ],
                 "featureType": "PlanRegulation",
                 "relatedDocuments": []
             },
@@ -464,14 +464,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Korttelialueelle saa rakentaa myös asuntolarakennuksia sekä niihin liittyviä yhteiskäyttötiloja."
                         }
                     }
-                },
+                ],
                 "targetObject": {
                     "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
@@ -504,14 +504,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Asuntolahuoneiston keskimääräinen pinta-ala saa olla pienempi kuin 50 m2."
                         }
                     }
-                },
+                ],
                 "targetObject": {
                     "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
@@ -544,14 +544,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Rakennusten on oltava väreiltään ja materiaaleiltaan kortteleittain yhtenäisesti suunniteltuja."
                         }
                     }
-                },
+                ],
                 "targetObject": {
                     "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
@@ -584,14 +584,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Rakennusten porrashuoneista on oltava suora uloskäynti molemmille puolille rakennusta."
                         }
                     }
-                },
+                ],
                 "targetObject": {
                     "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
@@ -624,14 +624,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Oleskelu- ja leikkitila on osoitettava asemapiirroksen yhteydessä maastontasauksineen, istutuksineen ja laitteineen."
                         }
                     }
-                },
+                ],
                 "targetObject": {
                     "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
@@ -664,14 +664,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Rakentamaton tontinosa, jolle kuitenkin saadaan rakentaa tarpeelliset kulkuyhteydet, on istutettava ja pidettävä huolitellussa kunnossa."
                         }
                     }
-                },
+                ],
                 "targetObject": {
                     "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
@@ -704,14 +704,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Korttelin, korttelinosan tai alueen aitaaminen on kielletty. Rakennusluvan myöntävä viranomainen voi kuitenkin määräämillään ehdoilla sallia aitaamisen, milloin se vaarallisen maastonkohdan tai alueen käytön takia on katsottava tarpeelliseksi."
                         }
                     }
-                },
+                ],
                 "targetObject": {
                     "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
@@ -744,14 +744,14 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Autopaikkoja on rakennettava vähintään 1 ap valtion tukeman opiskelija-asuntotuotannon asuinkerrosalan 500 m2 kohti. Muita asuinrakennuksia varten on rakennettava 1 ap kutakin asuinkerrosalan 85 m2 kohti, kuitenkin vähintään 1 ap / asunto."
                         }
                     }
-                },
+                ],
                 "targetObject": {
                     "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
@@ -803,44 +803,44 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON/MAARAYS/4"
                     },
-                    "4": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON/MAARAYS/5"
                     },
-                    "5": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON/MAARAYS/6"
                     },
-                    "6": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON/MAARAYS/7"
                     },
-                    "7": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON/MAARAYS/8"
                     },
-                    "8": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON/MAARAYS/9"
                     },
-                    "9": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON/MAARAYS/10"
                     },
-                    "10": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON/MAARAYS/11"
                     },
-                    "11": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KORTTELI-10007.GEOJSON/MAARAYS/12"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {

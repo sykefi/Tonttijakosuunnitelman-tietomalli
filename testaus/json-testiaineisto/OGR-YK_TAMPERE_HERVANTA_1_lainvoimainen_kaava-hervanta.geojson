@@ -29,14 +29,14 @@
                 "description": {
                     "fin": "Kuvaustekstiä"
                 },
-                "administrativeAreaIds": {},
+                "administrativeAreaIds": [],
                 "legalEffectiveness": {
                     "code": "http://uri.suomi.fi/codelist/rytj/OikeusvaikutteisuudenLaji2/code/01",
                     "title": {
                         "fin": "Oikeusvaikutteinen"
                     }
                 },
-                "usedInputDatasets": {},
+                "usedInputDatasets": [],
                 "responsibleOrganisation": {
                     "linkedFeatureType": "Organisation",
                     "linkedFeatureId": "",
@@ -45,13 +45,13 @@
                         "fin": "Kaupunki Tampere"
                     }
                 },
-                "planners": {},
+                "planners": [],
                 "planCommentary": {
                     "linkedFeatureType": "SpatialPlanCommentary",
                     "linkedFeatureId": ""
                 },
-                "attachments": {},
-                "cancellations": {},
+                "attachments": [],
+                "cancellations": [],
                 "lifecycleStatus": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/11",
                     "title": {
@@ -68,178 +68,178 @@
                 "initiationTime": "2018-01-20",
                 "approvalTime": "2020-01-20",
                 "validFrom": "2020-01-20",
-                "planObjects": {
-                    "0": {
+                "planObjects": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEKESKUS-4.GEOJSON"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ELINVOIMA-2.GEOJSON"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/INNOVAATIO-31.GEOJSON"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KASVUN_VYOHYKE-4.GEOJSON"
                     },
-                    "4": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-124.GEOJSON"
                     },
-                    "5": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-125.GEOJSON"
                     },
-                    "6": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-126.GEOJSON"
                     },
-                    "7": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-13.GEOJSON"
                     },
-                    "8": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-185.GEOJSON"
                     },
-                    "9": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-190.GEOJSON"
                     },
-                    "10": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-284.GEOJSON"
                     },
-                    "11": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-285.GEOJSON"
                     },
-                    "12": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-286.GEOJSON"
                     },
-                    "13": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-287.GEOJSON"
                     },
-                    "14": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-306.GEOJSON"
                     },
-                    "15": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-93.GEOJSON"
                     },
-                    "16": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/LIIKENNE-20.GEOJSON"
                     },
-                    "17": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/PYORATIE-14.GEOJSON"
                     },
-                    "18": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/PYORATIE-36.GEOJSON"
                     },
-                    "19": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/PYORATIE-67.GEOJSON"
                     },
-                    "20": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-10.GEOJSON"
                     },
-                    "21": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-11.GEOJSON"
                     },
-                    "22": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-13.GEOJSON"
                     },
-                    "23": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-2.GEOJSON"
                     },
-                    "24": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-3.GEOJSON"
                     },
-                    "25": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-4.GEOJSON"
                     },
-                    "26": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-6.GEOJSON"
                     },
-                    "27": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-9.GEOJSON"
                     },
-                    "28": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-18.GEOJSON"
                     },
-                    "29": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-19.GEOJSON"
                     },
-                    "30": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-2.GEOJSON"
                     },
-                    "31": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-20.GEOJSON"
                     },
-                    "32": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-21.GEOJSON"
                     },
-                    "33": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-22.GEOJSON"
                     },
-                    "34": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-26.GEOJSON"
                     },
-                    "35": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-125.GEOJSON"
                     },
-                    "36": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-126.GEOJSON"
                     },
-                    "37": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-167.GEOJSON"
                     },
-                    "38": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-168.GEOJSON"
                     },
-                    "39": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-169.GEOJSON"
                     },
-                    "40": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-170.GEOJSON"
                     },
-                    "41": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-183.GEOJSON"
                     },
-                    "42": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-19.GEOJSON"
                     },
-                    "43": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-199.GEOJSON"
                     },
-                    "44": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-44.GEOJSON"
                     },
-                    "45": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-59.GEOJSON"
                     },
-                    "46": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-60.GEOJSON"
                     },
-                    "47": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-61.GEOJSON"
                     },
-                    "48": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-86.GEOJSON"
                     }
-                },
-                "generalRegulations": {
-                    "0": {
+                ],
+                "generalRegulations": [
+                    {
                         "linkedFeatureId": "KAAVA/kaava-hervanta.geojson/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVA/kaava-hervanta.geojson/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVA/kaava-hervanta.geojson/MAARAYS/3"
                     },
-                    "3": {
+                    {
                         "linkedFeatureId": "KAAVA/kaava-hervanta.geojson/MAARAYS/4"
                     },
-                    "4": {
+                    {
                         "linkedFeatureId": "KAAVA/kaava-hervanta.geojson/MAARAYS/5"
                     },
-                    "5": {
+                    {
                         "linkedFeatureId": "KAAVA/kaava-hervanta.geojson/MAARAYS/6"
                     },
-                    "6": {
+                    {
                         "linkedFeatureId": "KAAVA/kaava-hervanta.geojson/MAARAYS/7"
                     }
-                },
+                ],
                 "featureType": "SpatialPlan",
                 "generalGuidances": []
             },
@@ -11861,22 +11861,22 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "themes": {
-                    "0": {
+                "themes": [
+                    {
                         "code": "http://uri.suomi.fi/codelist/rytj/Kaavoitusteema/code/01",
                         "title": {
                             "fin": "Yhdyskuntarakenne"
                         }
                     }
-                },
-                "values": {
-                    "0": {
+                ],
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Yleiskaavan käyttötarkoitusalueilla voidaan sallia käyttötarkoituksesta poikkeavaa rakentamista, mikäli siitä ei aiheudu haittaa alueen pääasialliselle käyttötarkoitukselle. Asemakaavoitusta ja muuta alueidenkäytön suunnittelua ohjataan yleiskaavan kartoilla 1 - 4."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -11905,22 +11905,22 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "themes": {
-                    "0": {
+                "themes": [
+                    {
                         "code": "http://uri.suomi.fi/codelist/rytj/Kaavoitusteema/code/01",
                         "title": {
                             "fin": "Yhdyskuntarakenne"
                         }
                     }
-                },
-                "values": {
-                    "0": {
+                ],
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Yleiskaavan RA ja R -alueilla yleiskaavaa voidaan käyttää MRL 72 §:n mukaisesti rakentamisen ohjaamiseen. Muilla alueilla rakentaminen edellyttää pääsääntöisesti asemakaavaa."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -11949,22 +11949,22 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "themes": {
-                    "0": {
+                "themes": [
+                    {
                         "code": "http://uri.suomi.fi/codelist/rytj/Kaavoitusteema/code/01",
                         "title": {
                             "fin": "Yhdyskuntarakenne"
                         }
                     }
-                },
-                "values": {
-                    "0": {
+                ],
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Rakennettaessa yli 50 metriä korkeita tuulivoimaloita tulee pyytää erillinen lausunto Puolustusvoimilta."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -11993,22 +11993,22 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "themes": {
-                    "0": {
+                "themes": [
+                    {
                         "code": "http://uri.suomi.fi/codelist/rytj/Kaavoitusteema/code/01",
                         "title": {
                             "fin": "Yhdyskuntarakenne"
                         }
                     }
-                },
-                "values": {
-                    "0": {
+                ],
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Seudullisen vähittäiskaupan suuryksiköiden alarajat ovat paljon tilaa vaativan kaupan osalta 15 000 k-m², keskustahakuisen vähittäiskaupan osalta 10 000 k-m² ja päivittäistavarakaupan osalta 5 000 k-m²."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -12037,22 +12037,22 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "themes": {
-                    "0": {
+                "themes": [
+                    {
                         "code": "http://uri.suomi.fi/codelist/rytj/Kaavoitusteema/code/01",
                         "title": {
                             "fin": "Yhdyskuntarakenne"
                         }
                     }
-                },
-                "values": {
-                    "0": {
+                ],
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Keskustatoimintojen alueiden ulkopuolelle ei saa sijoittaa yli 3 000 k-m² suuruisia päivittäistavarakaupan suuryksiköitä tai yli 2 000 k-m² suuruisia keskustahakuisen erikoistavarakaupan suuryksiköitä."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -12081,22 +12081,22 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "themes": {
-                    "0": {
+                "themes": [
+                    {
                         "code": "http://uri.suomi.fi/codelist/rytj/Kaavoitusteema/code/06",
                         "title": {
                             "fin": "Kulttuuriympäristö"
                         }
                     }
-                },
-                "values": {
-                    "0": {
+                ],
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Muuttuvan maankäytön alueilla on arvioitava kulttuuriympäristöjä koskeva selvitystarve yhteistyössä museoviranomaisen kanssa. Vesialueiden muuttuvan käytön yhteydessä on arvioitava vedenalaiseen kulttuuriperintöön liittyvien selvitysten tarpeellisuus yhteistyössä museoviranomaisen kanssa. Erityistä huomiota on kiinnitettävä Tampereen maisemallisten erityispiirteiden säilymiseen."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -12125,22 +12125,22 @@
                         "fin": "Yleismääräys"
                     }
                 },
-                "themes": {
-                    "0": {
+                "themes": [
+                    {
                         "code": "http://uri.suomi.fi/codelist/rytj/Kaavoitusteema/code/08",
                         "title": {
                             "fin": "Vesitalous"
                         }
                     }
-                },
-                "values": {
-                    "0": {
+                ],
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Hulevesien käsittelyssä ja johtamisessa on noudatettava Tampereen kaupungin hulevesiohjelmassa esitettyä periaatejärjestystä: 1. Hulevesien syntyminen on ehkäistävä, 2. hulevedet on imeytettävä, 3. hulevedet on hyödynnettävä ja puhdistettava ja 4. hulevedet on viivytettävä syntypaikalla ennen johtamista avouomaan, vesistöön tai hulevesiviemäriin. Asemakaavoituksen ja muiden hankkeiden yhteydessä on selvitettävä hulevesien hallinta ja tarvittaessa varattava tila hulevesien käsittelylle. Rakennusluvan yhteydessä on laadittava hulevesijärjestelmän toteutussuunnitelma ja rakentamisen aikaisten hulevesien hallintasuunnitelma. Alueelliset huleveden hallintarakenteet on toteutettava alueen muun kunnallistekniikan rakentamisen yhteydessä."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -12172,14 +12172,14 @@
                         "fin": "Muu kehittämistarve"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Tampereen aluekeskus, jota kehitetään seudullisesti hyvin saavutettavana ja monipuolisena työpaikkojen, asumisen, palvelujen, vapaa-ajan toimintojen sekä kestävän liikenteen ja liityntäpysäköinnin alueena."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -12222,11 +12222,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ALUEKESKUS-4.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -12664,14 +12664,14 @@
                         "fin": "Muu kehittämistarve"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Tehokkaaseen joukkoliikenteeseen ja raitiotiehen tukeutuvalla vyöhykkeellä tulee mahdollistaa uusia sijainteja tehokkaalle työpaikkarakentamiselle. Innovaatioympäristöjen, korkeakoulutuksen, merkittävien keskustojen ja työpaikka-alueiden sekä kansainvälisten yhteyksien kehittämistä tulee tukea vyöhykkeellä toteuttamalla sekoittunutta tiivistä rakennetta etenkin pysäkkien välittömään läheisyyteen."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -12714,11 +12714,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/ELINVOIMA-2.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -13128,14 +13128,14 @@
                         "fin": "Muu kehittämistarve"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueella tuetaan kärkitoimialaan liittyvien hankkeiden kehittämistä. Alueella sallitaan pääkäyttötarkoituksen lisäksi asuminen. Alueen kytkeytymistä osaksi kaupunkirakennetta tulee edistää kehittämällä sujuvat kävely- ja pyöräily-yhteydet aluekeskuksen palveluihin ja lähivirkistysalueisiin. Alueen saavutettavuutta päärautatieasemalta ja lentokentältä tulee parantaa mm. pysäkkisijoittelun ja -yhteyksien avulla."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -13178,11 +13178,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/INNOVAATIO-31.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -13218,14 +13218,14 @@
                         "fin": "Muu kehittämistarve"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue on tehokkaan ja toiminnallisesti sekoittuneen täydennysrakentamisen ja keskitettyjen palvelujen vyöhyke. Vyöhyke koostuu keskuksista, ratavyöhykkeistä ja joukkoliikenteen laatukäytävistä, ja sille ohjataan kestävän kaupunkirakenteen tavoitteiden mukaan suurin osa kaavoitettavasta asuinkerrosalasta. Alueelle sijoittuvien hankkeiden tulee tukea kaupunkikehitystä ja ympäröivien kaupunginosien muodostamaa kokonaisuutta. Alueelle sijoittuvissa yksityisissä kehittämishankkeissa tulee varautua tarpeen mukaan julkisten palvelujen tarvitsemiin tilavarauksiin. Palvelujen sijoittamisessa ja lähiympäristön suunnittelussa huomioidaan niiden saavutettavuus joukkoliikenteellä, kävellen ja pyöräillen. Rakentaminen sovitetaan ympäristöönsä siten, että luonnonympäristön, viherympäristön ja kulttuuriympäristön arvot säilyvät."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -13259,14 +13259,14 @@
                         "fin": "Meluntorjuntatarve"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Väylien varressa rakennusten sijoittelua ja massoittelua hyödynnetään rakenteellisena melusuojauksena, joka suojaa kortteleiden ulko-oleskelualueita liikennemelulta."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -13308,14 +13308,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KASVUN_VYOHYKE-4.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KASVUN_VYOHYKE-4.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -14245,21 +14245,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/1",
                         "title": {
                             "fin": "Asuminen"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue varataan pääosin asumiselle sekä sitä palveleville toiminnoille, mm. virkistys- ja suojaviheralueille, lähipalveluille sekä nykyiselle ja uudelle ympäristöhäiriötä aiheuttamattomalle elinkeinotoiminnalle. Alueelle sijoittuvien yksityisten rakentamishankkeiden yhteydessä varaudutaan tarvittaessa julkisten palvelujen tarvitsemiin tilavarauksiin.Alueen suunnittelussa tulee kiinnittää huomiota kulttuuriympäristön arvoihin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -14302,11 +14302,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-124.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02",
                     "title": {
@@ -14622,21 +14622,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/1",
                         "title": {
                             "fin": "Asuminen"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue varataan pääosin asumiselle sekä sitä palveleville toiminnoille, mm. virkistys- ja suojaviheralueille, lähipalveluille sekä nykyiselle ja uudelle ympäristöhäiriötä aiheuttamattomalle elinkeinotoiminnalle. Alueelle sijoittuvien yksityisten rakentamishankkeiden yhteydessä varaudutaan tarvittaessa julkisten palvelujen tarvitsemiin tilavarauksiin.Alueen suunnittelussa tulee kiinnittää huomiota kulttuuriympäristön arvoihin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -14679,11 +14679,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-125.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02",
                     "title": {
@@ -15231,35 +15231,35 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/3",
                         "title": {
                             "fin": "Liike- ja toimistorakentaminen"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/4",
                         "title": {
                             "fin": "Palvelut"
                         }
                     },
-                    "2": {
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/6",
                         "title": {
                             "fin": "Työ ja tuotanto"
                         }
                     },
-                    "3": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Aluetta kehitetään monipuolisten työpaikka- ja koulutustoimintojen, kaupallisten palvelujen, kulttuuri- ja vapaa-ajantoimintojen sekä ympäristöhäiriötä aiheuttamattoman tuotantotoiminnan alueena. Alueen liikenneympäristön tulee tukea kestävien liikkumismuotojen käyttöä."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -15302,11 +15302,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-126.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02",
                     "title": {
@@ -16034,21 +16034,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/1381",
                         "title": {
                             "fin": "Vesialue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueella sijaitsee luonnonsuojelulain tarkoittamia suojeluarvoja. Alueen suunnittelussa on varmistettava, että suojeluarvot eivät vaarannu tai heikenny. Luonnonsuojelualueen tarkempi rajaus ja suojelun perusteet määritellään luonnonsuojelulain mukaisella rajaus- tai perustamispäätöksellä."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -16091,11 +16091,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-13.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02",
                     "title": {
@@ -16359,21 +16359,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/221",
                         "title": {
                             "fin": "Keskustatoimintojen alue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue varataan julkisille ja yksityisille palveluille, työpaikkatoiminnoille ja keskustaympäristöön soveltuvalle asumiselle sekä monipuolisesti virkistyksen, vapaa-ajan ja kaupunkikulttuurin toiminnoille. Alueen täydennysrakentamisen tulee edistää toimintojen monipuolisuutta sekä kestävän ja omaleimaisen kaupunkiympäristön muodostumista. Rakennusten julkiseen kaupunkitilaan avautuvat maantasokerrosten tilat on osoitettava pääsääntöisesti liike- ja toimitiloiksi. Suuryksikköjen tulee tukeutua joukkoliikenteen runkolinjastoon ja niiden maantasokerrosten tulee avautua katutilaan. Ydinkeskustan osalta ei seudullista vähittäiskauppaa ole mitoitettu. Tonteilla maantasoa ei pääsääntöisesti voida osoittaa pysäköintiin ja liikennealueiksi. Keskusta-alueiden liikenneympäristöjä tulee kehittää kävelyn ja pyöräilyn sekä joukkoliikenteen toimintaedellytysten ehdoilla. Alueilta tulee varata riittävästi tilaa julkiselle kaupunkitilalle sekä parannettava alueen yhteyksiä ulkopuolisille virkistysalueille. Alueen suunnittelussa tulee kiinnittää huomiota kulttuuriympäristön arvoihin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -16410,14 +16410,14 @@
                         "fin": "Alueen eheyttämis- tai tiivistämistarve"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Aluetta kehitetään täydennettävänä keskustatoimintojen alueena. Täydentämisen tulee edistää toimintojen monipuolisuutta ja keskustojen elinvoimaisuutta."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -16450,13 +16450,13 @@
                         "fin": "Vähittäiskaupan suuryksikkö"
                     }
                 },
-                "values": {
-                    "0": {
-                        "valueType": "NumericRange",
+                "values": [
+                    {
+                        "valueType": "NumberRange",
                         "maxValue": 70000,
                         "unitOfMeasure": "m2"
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -16498,17 +16498,17 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-185.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-185.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-185.GEOJSON/MAARAYS/3"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02",
                     "title": {
@@ -16976,21 +16976,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/1",
                         "title": {
                             "fin": "Asuminen"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue varataan pääosin asumiselle sekä sitä palveleville toiminnoille, mm. virkistys- ja suojaviheralueille, lähipalveluille sekä nykyiselle ja uudelle ympäristöhäiriötä aiheuttamattomalle elinkeinotoiminnalle. Alueelle sijoittuvien yksityisten rakentamishankkeiden yhteydessä varaudutaan tarvittaessa julkisten palvelujen tarvitsemiin tilavarauksiin.Alueen suunnittelussa tulee kiinnittää huomiota kulttuuriympäristön arvoihin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -17033,11 +17033,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-190.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02",
                     "title": {
@@ -17361,21 +17361,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/6",
                         "title": {
                             "fin": "Työ ja tuotanto"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue varataan teollisuus- ja tuotantotoiminnoille sekä logistisille toiminnoille ja palveluille. Alueita kehitetään tehokkaina ja hyvin saavutettavina tuotantotoiminnan alueina. Alueille ei tule sijoittaa sellaisia toimintoja, jotka häiriintyvät raskaasta liikenteestä, melusta, tärinästä ja päästöistä. Soveltuvilla osilla sallitaan lumenvastaanotto- ja maanvastaanottotoiminta. Alueiden yhteyksiä seudullisille ja valtakunnallisille pääväylille parannetaan kehittämällä logistiikan ja tavaraliikenteen sujuvuutta."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -17383,25 +17383,25 @@
                     "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-284.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
                 },
-                "additionalInfo": {
-                    "0": {
+                "additionalInfo": [
+                    {
                         "type": {
                             "code": "http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/005",
                             "title": {
                                 "fin": "Poisluettava käyttötarkoitus"
                             }
                         },
-                        "values": {
-                            "0": {
+                        "values": [
+                            {
                                 "valueType": "CodeValue",
                                 "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/639",
                                 "title": {
                                     "fin": "Ympäristöhäiriötä aiheuttava tuotantotoiminta"
                                 }
                             }
-                        }
+                        ]
                     }
-                },
+                ],
                 "featureType": "PlanRegulation",
                 "relatedDocuments": [],
                 "x-externalInformationLink": "http://www.tampere.fi/asuminen-ja-ymparisto/kaavoitus/yleiskaavoitus/voimassa-olevat-yleiskaavat/kantakaupungin-yleiskaava-2040/kartta-1.html#tyopaikkojenjaelinkeinojenalue"
@@ -17437,11 +17437,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-284.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02",
                     "title": {
@@ -18355,21 +18355,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/1",
                         "title": {
                             "fin": "Asuminen"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue varataan pääosin asumiselle sekä sitä palveleville toiminnoille, mm. virkistys- ja suojaviheralueille, lähipalveluille sekä nykyiselle ja uudelle ympäristöhäiriötä aiheuttamattomalle elinkeinotoiminnalle. Alueelle sijoittuvien yksityisten rakentamishankkeiden yhteydessä varaudutaan tarvittaessa julkisten palvelujen tarvitsemiin tilavarauksiin.Alueen suunnittelussa tulee kiinnittää huomiota kulttuuriympäristön arvoihin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -18412,11 +18412,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-285.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02",
                     "title": {
@@ -18636,21 +18636,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/1",
                         "title": {
                             "fin": "Asuminen"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue varataan pääosin asumiselle sekä sitä palveleville toiminnoille, mm. virkistys- ja suojaviheralueille, lähipalveluille sekä nykyiselle ja uudelle ympäristöhäiriötä aiheuttamattomalle elinkeinotoiminnalle. Alueelle sijoittuvien yksityisten rakentamishankkeiden yhteydessä varaudutaan tarvittaessa julkisten palvelujen tarvitsemiin tilavarauksiin.Alueen suunnittelussa tulee kiinnittää huomiota kulttuuriympäristön arvoihin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -18693,11 +18693,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-286.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02",
                     "title": {
@@ -18865,21 +18865,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/1",
                         "title": {
                             "fin": "Asuminen"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alue varataan pääosin asumiselle sekä sitä palveleville toiminnoille, mm. virkistys- ja suojaviheralueille, lähipalveluille sekä nykyiselle ja uudelle ympäristöhäiriötä aiheuttamattomalle elinkeinotoiminnalle. Alueelle sijoittuvien yksityisten rakentamishankkeiden yhteydessä varaudutaan tarvittaessa julkisten palvelujen tarvitsemiin tilavarauksiin.Alueen suunnittelussa tulee kiinnittää huomiota kulttuuriympäristön arvoihin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -18922,11 +18922,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-287.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02",
                     "title": {
@@ -19078,21 +19078,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/7",
                         "title": {
                             "fin": "Virkistys"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueita ylläpidetään ja kehitetään yhtenäisinä, hyvin saavutettavina sekä toiminnoiltaan ja luonnon ympäristöltään monipuolisina virkistys- ja viheralueina. Maisemaa muuttava maanrakennustyö, puiden kaataminen tai muut näihin verrattavat toimenpiteet ovat luvanvaraisia kuten MRL 128 §:ssä on säädetty. Aluetta ja sen toimintoja tarkemmin suunniteltaessa ja lupamenettelyn yhteydessä tulee ottaa huomioon luontoarvot, kulttuurihistorialliset ja maisemalliset arvot, ja varmistaa virkistys- ja ulkoilureittien ja ekologisen verkoston jatkuvuus. Alueelle voidaan sijoittaa pääkäyttötarkoitusta palvelevia rakennuksia sekä hulevesien hallintaan tarkoitettuja rakenteita tarkempien suunnitelmien mukaisesti. Alueella olevat rakennukset voidaan säilyttää. Rakennusten perusparantaminen, korjaaminen ja vähäinen laajentaminen sekä tuhoutuneen rakennuksen uudelleen rakentaminen ovat sallittuja."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -19135,11 +19135,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-306.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02",
                     "title": {
@@ -31593,21 +31593,21 @@
                         "fin": "Alueen käyttötarkoitus"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "CodeValue",
                         "code": "http://uri.suomi.fi/codelist/rytj/kayttotarkoitusluokka-ak/code/1170",
                         "title": {
                             "fin": "Luonnonsuojelualue"
                         }
                     },
-                    "1": {
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Alueella sijaitsee luonnonsuojelulain tarkoittamia suojeluarvoja. Alueen suunnittelussa on varmistettava, että suojeluarvot eivät vaarannu tai heikenny. Luonnonsuojelualueen tarkempi rajaus ja suojelun perusteet määritellään luonnonsuojelulain mukaisella rajaus- tai perustamispäätöksellä."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -31650,11 +31650,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/KAYTTOTARKOITUS-93.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "bindingnessOfLocation": {
                     "code": "http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02",
                     "title": {
@@ -32579,14 +32579,14 @@
                         "fin": "Liityntäpysäköinti"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Pysäkin välittömässä läheisyydessä tulee varautua pyöräpysäköintiin."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -32628,14 +32628,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/LIIKENNE-20.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/LIIKENNE-20.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -32671,14 +32671,14 @@
                         "fin": "Kevyen liikenteen yhteystarve"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Tavoiteverkkoa kehitetään sujuvan, nopean ja tasavauhtisen arkipyöräilyn mahdollistamiseksi. Reittien täsmälliset sijainnit ratkaistaan tarkemmassa suunnittelussa ja reitit toteutetaan siten, että pyöräilyväylän pituus- ja poikkileikkaus, sijoittuminen maastoon sekä risteämisratkaisut muun liikenteen kanssa tukevat pyöräilyn nopeutta, sujuvuutta ja turvallisuutta."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -32721,11 +32721,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/PYORATIE-14.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -32789,14 +32789,14 @@
                         "fin": "Kevyen liikenteen yhteystarve"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Tavoiteverkkoa kehitetään sujuvan, nopean ja tasavauhtisen arkipyöräilyn mahdollistamiseksi. Reittien täsmälliset sijainnit ratkaistaan tarkemmassa suunnittelussa ja reitit toteutetaan siten, että pyöräilyväylän pituus- ja poikkileikkaus, sijoittuminen maastoon sekä risteämisratkaisut muun liikenteen kanssa tukevat pyöräilyn nopeutta, sujuvuutta ja turvallisuutta."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -32839,11 +32839,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/PYORATIE-36.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -34343,14 +34343,14 @@
                         "fin": "Kevyen liikenteen yhteystarve"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Tavoiteverkkoa kehitetään sujuvan, nopean ja tasavauhtisen arkipyöräilyn mahdollistamiseksi. Reittien täsmälliset sijainnit ratkaistaan tarkemmassa suunnittelussa ja reitit toteutetaan siten, että pyöräilyväylän pituus- ja poikkileikkaus, sijoittuminen maastoon sekä risteämisratkaisut muun liikenteen kanssa tukevat pyöräilyn nopeutta, sujuvuutta ja turvallisuutta."
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -34393,11 +34393,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/PYORATIE-67.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -34595,11 +34595,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-10.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -34949,11 +34949,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-11.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -35259,11 +35259,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-13.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -35377,11 +35377,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-2.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -52923,11 +52923,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-3.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -53009,11 +53009,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-4.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -53095,11 +53095,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-6.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -53461,11 +53461,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIE-9.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -53758,14 +53758,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Kanjoni"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -53807,17 +53807,17 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-18.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-18.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-18.GEOJSON/MAARAYS/3"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -53918,14 +53918,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Hervantakeskus"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -53967,17 +53967,17 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-19.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-19.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-19.GEOJSON/MAARAYS/3"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -54078,14 +54078,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Hervantajärvi"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -54127,17 +54127,17 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-2.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-2.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-2.GEOJSON/MAARAYS/3"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -54238,14 +54238,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Mikontalo"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -54287,17 +54287,17 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-20.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-20.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-20.GEOJSON/MAARAYS/3"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -54398,14 +54398,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Etelä-Hervanta"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -54447,17 +54447,17 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-21.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-21.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-21.GEOJSON/MAARAYS/3"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -54558,14 +54558,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Hermia"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -54607,17 +54607,17 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-22.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-22.GEOJSON/MAARAYS/2"
                     },
-                    "2": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-22.GEOJSON/MAARAYS/3"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -54727,14 +54727,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-26.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/RAITIOTIEPYSAKKI-26.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -54803,14 +54803,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Opiskelijankatu"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -54852,14 +54852,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-125.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-125.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -55068,14 +55068,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ahvenisjärventie"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -55117,14 +55117,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-126.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-126.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -55589,14 +55589,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Kanjoninkatu"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -55638,14 +55638,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-167.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-167.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -55978,14 +55978,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ruovedenkatu"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -56027,14 +56027,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-168.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-168.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -56291,14 +56291,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Hervannantie"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -56340,14 +56340,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-169.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-169.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -56716,14 +56716,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Hepolamminkatu"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -56765,14 +56765,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-170.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-170.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -57131,24 +57131,24 @@
                     "linkedFeatureId": "KAAVAKOHDE/TIE-183.GEOJSON",
                     "linkedFeatureType": "PlanRegulationObject"
                 },
-                "additionalInfo": {
-                    "0": {
+                "additionalInfo": [
+                    {
                         "type": {
                             "code": "http://uri.suomi.fi/codelist/rytj/Lisatiedonlaji/code/007",
                             "title": {
                                 "fin": "Liikenneverkoston kehittäminen"
                             }
                         },
-                        "values": {
-                            "0": {
+                        "values": [
+                            {
                                 "valueType": "TextValue",
                                 "value": {
                                     "fin": "Ruskokehän (II-kehä) itäinen jatke"
                                 }
                             }
-                        }
+                        ]
                     }
-                },
+                ],
                 "featureType": "PlanRegulation",
                 "relatedDocuments": [],
                 "x-externalInformationLink": "http://www.tampere.fi/asuminen-ja-ymparisto/kaavoitus/yleiskaavoitus/voimassa-olevat-yleiskaavat/kantakaupungin-yleiskaava-2040/kartta-1.html#uusiseudullinenpaavayla"
@@ -57184,11 +57184,11 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-183.GEOJSON/MAARAYS/1"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -57293,14 +57293,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ruskontie"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -57342,14 +57342,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-19.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-19.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -57486,14 +57486,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Ruskonkehä"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -57535,14 +57535,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-199.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-199.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -58283,14 +58283,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Kauhakorvenkatu"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -58332,14 +58332,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-44.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-44.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -58876,14 +58876,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Turtolankatu"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -58925,14 +58925,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-59.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-59.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -59369,14 +59369,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Hermiankatu"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -59418,14 +59418,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-60.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-60.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -59754,14 +59754,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Hervannantie"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -59803,14 +59803,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-61.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-61.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
@@ -60075,14 +60075,14 @@
                         "fin": "Kadun, tien, katuaukion, torin, puiston tai muun yleisen alueen nimi"
                     }
                 },
-                "values": {
-                    "0": {
+                "values": [
+                    {
                         "valueType": "TextValue",
                         "value": {
                             "fin": "Hervannan valtaväylä"
                         }
                     }
-                },
+                ],
                 "spatialPlan": {
                     "linkedFeatureId": "KAAVA/kaava-hervanta.geojson"
                 },
@@ -60124,14 +60124,14 @@
                         "fin": "Maanpäällinen"
                     }
                 },
-                "regulations": {
-                    "0": {
+                "regulations": [
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-86.GEOJSON/MAARAYS/1"
                     },
-                    "1": {
+                    {
                         "linkedFeatureId": "KAAVAKOHDE/TIE-86.GEOJSON/MAARAYS/2"
                     }
-                },
+                ],
                 "featureType": "PlanObject"
             },
             "geometry": {
