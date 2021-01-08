@@ -1276,9 +1276,9 @@
 				<packagedElement xmi:type="uml:Class" xmi:id="EAID_68C5F002_07C4_4d84_B223_3F5F593AB90F" name="MaanalaisuudenLaji"/>
 				<packagedElement xmi:type="uml:Class" xmi:id="EAID_52A74B3E_0218_47b1_A303_8A4186F398C1" name="NumeerinenArvo">
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_DFC0A9E4_E67C_4ca3_802D_8BCB1EEDF8E2" name="arvo">
+						<type xmi:idref="EAID_ABB27DE7_0DDC_46f7_8578_7AE9FB99A71F"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000135_E67C_4ca3_802D_8BCB1EEDF8E2" value="1"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000136_E67C_4ca3_802D_8BCB1EEDF8E2" value="1"/>
-						<type xmi:idref="EAJava_double"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_1A5C9CC0_B7CF_46d5_BC61_41E84809771B" name="mittayksikko">
 						<type xmi:idref="EAID_0A614EA9_13B7_4ebe_85ED_AA187D27CBD1"/>
@@ -1289,14 +1289,14 @@
 				</packagedElement>
 				<packagedElement xmi:type="uml:Class" xmi:id="EAID_C8A8BFB6_C1FD_4718_8948_F99A2BACD6E9" name="NumeerinenArvovali">
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_55107435_A2F2_4df1_8CEE_EBAA1A6B0EE0" name="minimiarvo">
+						<type xmi:idref="EAID_ABB27DE7_0DDC_46f7_8578_7AE9FB99A71F"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000139_A2F2_4df1_8CEE_EBAA1A6B0EE0" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000140_A2F2_4df1_8CEE_EBAA1A6B0EE0" value="1"/>
-						<type xmi:idref="EAJava_double"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_4BA8F4A6_E557_4a35_A864_B4FADC09A2B8" name="maksimiarvo">
+						<type xmi:idref="EAID_ABB27DE7_0DDC_46f7_8578_7AE9FB99A71F"/>
 						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000141_E557_4a35_A864_B4FADC09A2B8" value="0"/>
 						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000142_E557_4a35_A864_B4FADC09A2B8" value="1"/>
-						<type xmi:idref="EAJava_double"/>
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_24478335_5B52_4b41_9E45_6A6DD2E5BB3C" name="mittayksikko">
 						<type xmi:idref="EAID_0A614EA9_13B7_4ebe_85ED_AA187D27CBD1"/>
@@ -3861,7 +3861,7 @@
 						<initial/>
 						<documentation/>
 						<model ea_localid="113679" ea_guid="{DFC0A9E4-E67C-4ca3-802D-8BCB1EEDF8E2}"/>
-						<properties type="double" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="Number" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
 						<containment containment="Not Specified" position="0"/>
 						<stereotype/>
@@ -3910,7 +3910,7 @@
 						<initial/>
 						<documentation/>
 						<model ea_localid="113680" ea_guid="{55107435-A2F2-4df1-8CEE-EBAA1A6B0EE0}"/>
-						<properties type="double" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="Number" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
 						<containment containment="Not Specified" position="0"/>
 						<stereotype/>
@@ -3925,7 +3925,7 @@
 						<initial/>
 						<documentation/>
 						<model ea_localid="113681" ea_guid="{4BA8F4A6-E557-4a35-A864-B4FADC09A2B8}"/>
-						<properties type="double" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
+						<properties type="Number" derived="0" precision="0" collection="false" length="0" static="0" duplicates="0" changeability="changeable"/>
 						<coords ordered="0" scale="0"/>
 						<containment containment="Not Specified" position="1"/>
 						<stereotype/>
@@ -9110,11 +9110,6 @@
 							<general href="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#Boolean"/>
 						</generalization>
 					</packagedElement>
-					<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_double" name="double">
-						<generalization xmi:type="uml:Generalization" xmi:id="EAJava_double_General">
-							<general href="http://www.omg.org/spec/UML/20110701/PrimitiveTypes.xmi#Real"/>
-						</generalization>
-					</packagedElement>
 					<packagedElement xmi:type="uml:PrimitiveType" xmi:id="EAJava_URL" name="URL"/>
 				</packagedElement>
 			</packagedElement>
@@ -9789,6 +9784,7 @@
 		<EAStub xmi:id="EAID_DFC4D1CC_7484_47b3_9D6F_008BE7CD78FD" name="URI" UMLType="Interface"/>
 		<EAStub xmi:id="EAID_0A614EA9_13B7_4ebe_85ED_AA187D27CBD1" name="CharacterString" UMLType="Interface"/>
 		<EAStub xmi:id="EAID_2E900284_8E24_449b_920A_CA436229BFAD" name="Point" UMLType="Interface"/>
+		<EAStub xmi:id="EAID_ABB27DE7_0DDC_46f7_8578_7AE9FB99A71F" name="Number" UMLType="Interface"/>
 		<EAStub xmi:id="EAID_313E57F2_5D3C_424a_B7B2_0F4617104EB3" name="TM_Object" UMLType="Class"/>
 	</xmi:Extension>
 	<GML:DataType base_Class="EAID_AC67A092_A817_4b0e_A74D_5FFBF04F9D3B" noPropertyType="false" isCollection="false"/>
