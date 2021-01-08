@@ -1237,7 +1237,7 @@ Ryhmittelyotsikko, vain [alakoodeja](../../looginenmalli/elinkaarisaannot.html#e
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1405>
 
 {% include clause_start.html type="req" id="prof-ak/vaat-korttelinumero-arvot" %}
-```arvo```-attribuutin arvoina saa esiintyä yksi [TekstiArvo](../../looginenmalli/dokumentaatio/#tekstiarvo), jolla annetaan kaavakohteen kuvaaman korttelin korttelinumero. Muun tyyppiset arvot eivät ole sallittuja.
+```arvo```-attribuutin arvoina saa esiintyä yksi [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo), jolla annetaan kaavakohteen kuvaaman korttelin korttelinumero. Numeerisen arvon on toteutettava [Integer](../../looginenmalli/dokumentaatio/#integer)-rajapinta. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="prof-ak/vaat-korttelinumero-lisatiedot" %}
