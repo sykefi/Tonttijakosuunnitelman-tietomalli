@@ -206,7 +206,7 @@ peruttu          | cancelled          | boolean = false     | 1               | 
 
 Roolinimi        | Role name          | Kohde               | Kardinaliteetti | Kuvaus
 -----------------|--------------------|---------------------|-----------------|------------------------------------
-liittyvaAsia     | relatedMatter      | [AbstraktiMaankayttoasia](#abstraktimaankayttoasia) | 1 | asia(n versio), johon tapahtuma liittyy.
+liittyvaAsia     | relatedMatter      | [AbstraktiMaankayttoasia](#abstraktimaankayttoasia) | 0..* | asia(n versio)t, joihin tapahtuma liittyy.
 liittyvaAsiakirja | relatedDocument      | [Asiakirja](#asiakirja) | 0..* | tapahtumaa liittyä asiakirja. Kukin assosiaatio voi sisältää ```rooli```-määreen tyyppiä [LanguageString](#languagestring),joka kuvaa miten asiakirja liittyy tähän tapahtumaan
 
 

@@ -382,7 +382,7 @@ Nimi          | UML tyyppi              | JSON property name    | JSON type
 --------------|-------------------------|-----------------------|------------
 korvaaObjektin | AbstraktiVersioituObjekti[0..*] | properties.replacesObjects | array of object (FeatureLink)
 korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObjects | array of object (FeatureLink)
-liittyvaAsia   | AbstraktiMaankayttoasia| properties.relatedMatter    | object (FeatureLink)
+liittyvaAsia   | AbstraktiMaankayttoasia[0..*] | properties.relatedMatters    | array of object (FeatureLink)
 liittyvaAsiakirja | Asiakirja [0..*]  | properties.relatedDocuments    | array of object (FeatureLink)
 kasittelija   | Organisaatio [0..1]     | properties.handler    | object (FeatureLink)
 
@@ -417,14 +417,16 @@ kasittelija   | Organisaatio [0..1]     | properties.handler    | object (Featur
                  "fin": "Asemakaava hyväksyttiin esityksen mukaisesti"
             },
             "eventTime": "2020-06-23",
-            "relatedMatter": {
-                "linkedFeatureType": "SpatialPlan",
-                "linkedFeatureId": "9c97e469-083d-4284-90a9-3dbebdfe5622.23",
-                "href": "https://rytj.fi/api/kaava/SpatialPlan/9c97e469-083d-4284-90a9-3dbebdfe5622.23",
-                "title": {
-                    "fin": "Asemakaava Y"
+            "relatedMatters": [
+                {
+                    "linkedFeatureType": "SpatialPlan",
+                    "linkedFeatureId": "9c97e469-083d-4284-90a9-3dbebdfe5622.23",
+                    "href": "https://rytj.fi/api/kaava/SpatialPlan/9c97e469-083d-4284-90a9-3dbebdfe5622.23",
+                    "title": {
+                        "fin": "Asemakaava Y"
+                    }
                 }
-            },
+            ],
             "handler": {
                 "linkedFeatureType": "Organisation",
                 "linkedFeatureId": "f2bae809-a8e3-4550-b4a0-71bfad95968a.1",
@@ -479,7 +481,7 @@ Nimi          | UML tyyppi              | JSON property name    | JSON type
 --------------|-------------------------|-----------------------|------------
 korvaaObjektin | AbstraktiVersioituObjekti[0..*] | properties.replacesObjects | array of object (FeatureLink)
 korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObjects | array of object (FeatureLink)
-liittyvaAsia   | AbstraktiMaankayttoasia | properties.relatedMatter    | object (FeatureLink)
+liittyvaAsia   | AbstraktiMaankayttoasia[0..*] | properties.relatedMatters    | array of object (FeatureLink)
 liittyvaAsiakirja | Asiakirja [0..*]  | properties.relatedDocuments    | array of object (FeatureLink)
 
 **Esimerkki**
@@ -515,14 +517,16 @@ liittyvaAsiakirja | Asiakirja [0..*]  | properties.relatedDocuments    | array o
             "eventTime_start": "2019-07-01T00:00:00Z",
             "eventTime_end": "2019-07-15T00:00:00Z",
             "additionInformationLink": "https://kunta.fi/tapahtumakalenteri/iqoergqoergoi",
-            "relatedMatter": {
-                "linkedFeatureType": "SpatialPlan",
-                "linkedFeatureId": "9c97e469-083d-4284-90a9-3dbebdfe5622.23",
-                "href": "https://rytj.fi/api/kaava/SpatialPlan/9c97e469-083d-4284-90a9-3dbebdfe5622.23",
-                "title": {
-                    "fin": "Asemakaava Y"
+            "relatedMatters": [
+                {
+                    "linkedFeatureType": "SpatialPlan",
+                    "linkedFeatureId": "9c97e469-083d-4284-90a9-3dbebdfe5622.23",
+                    "href": "https://rytj.fi/api/kaava/SpatialPlan/9c97e469-083d-4284-90a9-3dbebdfe5622.23",
+                    "title": {
+                        "fin": "Asemakaava Y"
+                    }
                 }
-            },
+            ],
             "relatedDocuments": [
                 {
                     "linkedFeatureType": "Document",
