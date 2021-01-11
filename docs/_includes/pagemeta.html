@@ -9,7 +9,7 @@
             {% assign my_ver = '/' | append: page.modelversion | append: '/' %}
             {% for version in site.data.versions %}
             {% assign other_ver = '/' | append: version.path | append: '/' %}
-            <a class="dropdown-item" href="{{ page.url | replace: my_ver, other_ver }}" title="{{ version.date | date: '%m.%d.%Y' }}">{{ version.number }} &mdash; {{ version.title }}</a>
+            <a class="dropdown-item" href="{{ page.url | replace: my_ver, other_ver }}" title="{{ version.date | date: '%d.%m.%Y' }}">{{ version.number }} &mdash; {{ version.title }}</a>
             {% endfor %}
         </div>
     </div>
