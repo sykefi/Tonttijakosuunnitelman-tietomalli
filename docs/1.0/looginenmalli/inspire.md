@@ -168,11 +168,11 @@ Inspire Planned Land Use -skeeman ```SupplementaryRegulation```-luokan tiedot jo
 
 ### OfficialDocumentation
 
-Inspire Planned Land Use -skeeman ```OfficialDocument```-luokan tiedot johdetaan [Asiakirja](dokumentaatio/#kaavamaarays)-luokan tiedoista alla esitetyn taulukon mukaisesti. 
+Inspire Planned Land Use -skeeman ```OfficialDocument```-luokan tiedot johdetaan [Asiakirja](dokumentaatio/#asiakirja)-luokan tiedoista alla esitetyn taulukon mukaisesti. 
 Syötteeksi valitaan kaikki kaavan Asiakirja-instanssit, joihin viitataan jollain seuraavista tavoista:
 * [Kaava](dokumentaatio/#kaava)-luokan instansseista assosiaation ```asianLiite``` avulla,
 * [Kaava](dokumentaatio/#kaava)-luokan instansseista assosiaation ```selostus``` ja edelleen [Kaavaselostus](dokumentaatio/#kaavaselostus)-luokan assosiaation ```asiakirja``` avulla, tai
-* [Kaava](dokumentaatio/#kaava)-luokan instansseista assosiaation ```osallistumisJaArviointisuunnitelma``` ja edelleen [OsallistumisJaArviointisuunnitelma](dokumentaatio/#kaavaselostus)-luokan assosiaation ```asiakirja``` avulla.
+* [Kaava](dokumentaatio/#kaava)-luokan instansseista assosiaation ```osallistumisJaArviointisuunnitelma``` ja edelleen [OsallistumisJaArviointisuunnitelma](dokumentaatio/#osallistumisjaarviointisuunnitelma)-luokan assosiaation ```asiakirja``` avulla.
 
 | Attribuutti                   |  Johtaminen Kaavatietomallin tiedoista        | Huomautukset
 ------------------------------- | --------------------------------------------- | -------------------------------
