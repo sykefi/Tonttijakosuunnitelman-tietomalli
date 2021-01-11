@@ -174,8 +174,19 @@ b {
    .pagemeta {
      float: right;
      text-align:right;
-     font-size: smaller;
      margin-left: 1em;
+
+     .btn {
+      font-size: smaller;
+
+        &.status {
+          opacity: 1.0;
+        }
+      }
+
+    .feedback {
+      margin-top: 5px;
+    }
    }
 }
 
