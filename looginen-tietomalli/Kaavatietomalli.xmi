@@ -1151,8 +1151,8 @@
 					</ownedAttribute>
 					<ownedAttribute xmi:type="uml:Property" xmi:id="EAID_dst59DF31_BFB1_4077_B10E_16C677C38702" name="liittyvaAsia" association="EAID_D659DF31_BFB1_4077_B10E_16C677C38702">
 						<type xmi:idref="EAID_541DF740_5AE1_4150_9D96_6C55526B3FA0"/>
-						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000209__BFB1_4077_B10E_16C677C38702" value="1"/>
-						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000210__BFB1_4077_B10E_16C677C38702" value="1"/>
+						<lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LI000209__BFB1_4077_B10E_16C677C38702" value="0"/>
+						<upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_LI000210__BFB1_4077_B10E_16C677C38702" value="*"/>
 					</ownedAttribute>
 				</packagedElement>
 				<packagedElement xmi:type="uml:Association" xmi:id="EAID_53887223_0D81_4382_BDBF_BB7EABB7AACE">
@@ -7129,7 +7129,7 @@
 				<target xmi:idref="EAID_541DF740_5AE1_4150_9D96_6C55526B3FA0">
 					<model ea_localid="79661" type="Class" name="AbstraktiMaankayttoasia"/>
 					<role name="liittyvaAsia" visibility="Public" targetScope="instance"/>
-					<type multiplicity="1" aggregation="none" containment="Unspecified"/>
+					<type multiplicity="0..*" aggregation="none" containment="Unspecified"/>
 					<constraints/>
 					<modifiers isOrdered="false" changeable="none" isNavigable="false"/>
 					<style value="Union=0;Derived=0;AllowDuplicates=0;Owned=0;Navigable=Navigable;"/>
@@ -7143,7 +7143,7 @@
 				<parameterSubstitutions/>
 				<documentation/>
 				<appearance linemode="3" linecolor="-1" linewidth="0" seqno="0" headStyle="0" lineStyle="0"/>
-				<labels rb="1" rt="+liittyvaAsia"/>
+				<labels rb="0..*" rt="+liittyvaAsia"/>
 				<extendedProperties virtualInheritance="0"/>
 				<style/>
 				<xrefs/>
