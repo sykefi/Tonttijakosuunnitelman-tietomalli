@@ -251,7 +251,7 @@ Elinkaaren tila                                                                 
 ------------------------------------------------------------------------------------------ | -----------------------------------|
 [Kaavoitusaloite](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/01)        | [luonnnos (elaboration)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/elaboration)
 [Vireilletullut](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/02)         | [luonnnos (elaboration)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/elaboration)
-[Kaavaluonnos](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/03)           | [luonnnos (elaboration)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/elaboration)
+[Valmistelu](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/03)             | [luonnnos (elaboration)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/elaboration)
 [Kaavaehdotus](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/04)           | [ehdotus (in the process of adoption)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/adoption)
 [Tarkistettu kaavaehdotus](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/05) | [ehdotus (in the process of adoption)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/adoption)
 [Hyväksytty kaava](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaariTila/code/06)       | [ehdotus (in the process of adoption)](https://inspire.ec.europa.eu/codelist/ProcessStepGeneralValue/adoption)
