@@ -370,6 +370,7 @@ tuottajakohtainenTunnus | CharacterString [0..1]  | properties.producerSpecificI
 viimeisinMuutos | TM_Instant [0..1]     | properties.latestChange | string (date-time)
 tallennusAika | TM_Instant [0..1]       | properties.storageTime | string (date-time)
 nimi             | LanguageString [0..*]| properties.name    | object (LanguageString)
+kuvaus           | LanguageString [0..*]| properties.description  | object (LanguageString)
 tapahtumaAika    | TM_Object [0..1]     | properties.eventTime, properties.eventTime_start, properties.eventTime_end | string (date-time)
 laji             | AbstraktiKasittelytapahtumanLaji | properties.type  | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_KaavanKasittelytapahtumanLaji>
 lisatietolinkki | URI [0..1]            | properties.additionalInformationLink | string (uri)
@@ -411,6 +412,9 @@ kasittelija   | Organisaatio [0..1]     | properties.handler    | object (Featur
             },
             "name": {
                 "fin": "Hyväksyminen kunnanvaltuuston kokouksessa"
+            },
+            "description": {
+                 "fin": "Asemakaava hyväksyttiin esityksen mukaisesti"
             },
             "eventTime": "2020-06-23",
             "relatedMatter": {
@@ -462,6 +466,7 @@ tuottajakohtainenTunnus | CharacterString [0..1]  | properties.producerSpecificI
 viimeisinMuutos | TM_Instant [0..1]     | properties.latestChange | string (date-time)
 tallennusAika | TM_Instant [0..1]       | properties.storageTime | string (date-time)
 nimi             | LanguageString [0..*]| properties.name    | object (LanguageString)
+kuvaus           | LanguageString [0..*]| properties.description  | object (LanguageString)
 tapahtumaAika    | TM_Object [0..1]      | properties.eventTime, properties.eventTime_start, properties.eventTime_end | string (date-time)
 laji             | AbstraktiVuorovaikutustapahtumaLaji | properties.type  | object (CodelistValue), <http://uri.suomi.fi/codelist/rytj/RY_KaavanVuorovaikutustapahtumanLaji>
 
@@ -502,7 +507,10 @@ liittyvaAsiakirja | Asiakirja [0..*]  | properties.relatedDocuments    | array o
                 }
             },
             "name": {
-                "fin": "Asemakaava nähtävillä Kohtauspaikassa 1.7. - 15.7.2019"
+                "fin": "Asemakaava nähtävillä"
+            },
+            "description": {
+                 "fin": "Asemakaava on nähtävillä Kohtauspaikassa 1.7. - 15.7.2019"
             },
             "eventTime_start": "2019-07-01T00:00:00Z",
             "eventTime_end": "2019-07-15T00:00:00Z",

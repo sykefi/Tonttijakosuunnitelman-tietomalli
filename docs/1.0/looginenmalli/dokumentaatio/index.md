@@ -196,6 +196,7 @@ Nimi             | Name               | Tyyppi              | Kardinaliteetti | 
 -----------------|--------------------|---------------------|-----------------|------------------------------------
 nimi             | name               | [LanguageString](#languagestring) | 0..* | tapahtuman nimi
 tapahtumaAika    | eventTime          | [TM_Object](#tm_object) | 0..1        | tapahtuman aika (hetki tai aikaväli)
+kuvaus           | description        | [LanguageString](#languagestring) | 0..* | tapahtuman tekstimuotoinen kuvaus
 sijainti         | location           | [Geometry](#geometry) | 0..1          | tapahtumapaikka
 lisatietolinkki  | additionalInformationLink | [URI](#uri)  | 0..1            | viittaus ulkoiseen lisätietokuvaukseen tapahtumasta
 peruttu          | cancelled          | boolean = false     | 1               | onko tapahtuma peruttu (oletus: false)
@@ -276,7 +277,7 @@ Englanninkielinen nimi: **InputDatasetKind**
 
 Stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open) 
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none) 
 
 {% include codelistref.html id="RY_LahtotietoaineistonLaji" name="Lähtötietoaineiston lajit (asema- ja yleiskaava)" %}
 
@@ -286,7 +287,7 @@ Englanninkielinen nimi: **DocumentKind**
 
 Stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open) 
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none) 
 
 {% include codelistref.html id="RY_AsiakirjanLaji_YKAK" name="Asiakirjan laji (yleis- ja asemakaava)" %}
 
@@ -306,7 +307,7 @@ Englanninkielinen nimi: **AbstractHandlingEventKind**
 
 Stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Laajennettavissa yksityiskohtaisemmilla koodiarvoilla](http://inspire.ec.europa.eu/registry/extensibility/narrower)
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
 Käsittelytapahtumien lajit kuvataan MKP-ydin -paketissa abstraktina koodistona, jota laajennetaan kunkin maankäyttöpäätöksen prosessin konkreettisten arvojen mukaisesti niiden tietomalleissa.
 
@@ -315,7 +316,7 @@ Englanninkielinen nimi: **AbstractInteractionEventKind**
 
 Stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
 Vuorovaikutustapahtumien lajit kuvataan MKP-ydin -paketissa abstraktina koodistona, jota laajennetaan kunkin maankäyttöpäätöksen prosessin konkreettisten arvojen mukaisesti niiden tietomalleissa.
 
@@ -339,6 +340,7 @@ virelletuloAika  | initiationTime     | [TM_Instant](#tm_instant)    | 0..1     
 hyvaksymisAika   | approvalTime       | [TM_Instant](#tm_instant)    | 0..1            | aika, jolloin kaava on tullut virallisesti hyväksytty
 digitaalinenAlkupera | digitalOrigin  | [DigitaalinenAlkupera](#digitaalinenalkupera) | 0..1 | luokittelu alunperin tietomallin mukaan luotuihin ja jälkeenpäin digituihin kaavoihin
 
+[AbstraktiMaankayttoasia](#abstraktimaankayttoasia)-luokasta peritytyvä attribuutti ```aluerajauus``` kuvaa kaavan suunnittelualueen.
 
 **Assosiaatiot**
 
@@ -410,7 +412,7 @@ Nimi             | Name               | Tyyppi                       | Kardinali
 -----------------|--------------------|------------------------------|-----------------|------------------------------------
 nimi             | name               | [LanguageString](#languagestring) | 0..*       | kohteen tunnistamiseen käytettävä nimi. Huom: kaavan oikeusvaikutteiset nimeämiset (mm. katujen, teiden ja yleisten alueiden nimet ja korttelinumerot) kuvataan kaavamääräysten arvojen avulla.
 geometria        | geometry           | [Geometry](#geometry)        | 1               | kohteen sijainti kaava-alueella
-pystysuuntainenRajaus | verticalLimit | [Korkeusvali](#korkeusvali)  | 0..*            | kohteen vaikutusalueen pysytsuuntainen rajaus
+pystysuuntainenRajaus | verticalLimit | [Korkeusvali](#korkeusvali)  | 0..*            | kohteen alueen pystysuuntainen rajaus
 
 **Assosiaatiot**
 
@@ -696,7 +698,7 @@ Englanninkielinen nimi: **SpatialPlanLifecycleStatus**
 
 Stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Laajennettavissa yksityiskohtaisemmilla arvoilla](http://inspire.ec.europa.eu/registry/extensibility/narrower)
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
 {% include codelistref.html id="RY_KaavanElinkaaritila" name="Elinkaaren tila (yleis- ja asemakaava)" %}
 
@@ -714,7 +716,7 @@ Englanninkielinen nimi: **GroundRelativenessKind**
 
 Stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Laajennettavissa yksityiskohtaisemmilla arvoilla](http://inspire.ec.europa.eu/registry/extensibility/narrower)
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
 {% include codelistref.html id="RY_MaanalaisuudenLaji" name="Maanalaisuuden laji" %}
 
@@ -783,14 +785,14 @@ Englanninkielinen nimi: **AbstractPlanRegulationKind**
 
 Stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Laajennettavissa yksityiskohtaisemmilla arvoilla](http://inspire.ec.europa.eu/registry/extensibility/narrower)
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
 #### KaavamaarayslajiAsemakaava
 Englanninkielinen nimi: **DetailPlanRegulationKind**
 
 Erikoistaa luokkaa [AbstraktiKaavamaarayslaji](#abstraktikaavamaarayslaji), stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Laajennettavissa yksityiskohtaisemmilla arvoilla](http://inspire.ec.europa.eu/registry/extensibility/narrower)
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
 {% include codelistref.html id="RY_KaavamaaraysLaji_AK" name="Kaavamääräyslaji (asemakaava)" %}
 
@@ -799,7 +801,7 @@ Englanninkielinen nimi: **MasterPlanRegulationKind**
 
 Erikoistaa luokkaa [AbstraktiKaavamaarayslaji](#abstraktikaavamaarayslaji), stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Laajennettavissa yksityiskohtaisemmilla arvoilla](http://inspire.ec.europa.eu/registry/extensibility/narrower)
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
 {% include codelistref.html id="RY_KaavamaaraysLaji_YK" name="Kaavamääräyslaji (yleiskaava)" %}
 
@@ -816,7 +818,7 @@ Englanninkielinen nimi: **DetailPlanAdditionInformationKind**
 
 Erikoistaa luokkaa [AbstraktiLisatiedonLaji](#abstraktilisatiedonlaji), stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
 {% include codelistref.html id="RY_LisatiedonLaji_AK" name="Kaavamääräyksen lisätiedon laji (asemakaava)" %}
 
@@ -825,7 +827,7 @@ Englanninkielinen nimi: **MasterPlanAdditionInformationKind**
 
 Erikoistaa luokkaa [AbstraktiLisatiedonLaji](#abstraktilisatiedonlaji), stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
 {% include codelistref.html id="RY_LisatiedonLaji_YK" name="Kaavamääräyksen lisätiedon laji (yleiskaava)" %}
 
@@ -834,7 +836,7 @@ Englanninkielinen nimi: **SpatialPlanHandlingEventKind**
 
 Erikoistaa luokkaa [AbstraktiKasittelytapahtumanLaji](#abstraktikasittelytapahtumanlaji), stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Laajennettavissa yksityiskohtaisemmilla arvoilla](http://inspire.ec.europa.eu/registry/extensibility/narrower)
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
 {% include codelistref.html id="RY_KaavanKasittelytapahtumanLaji" name="Käsittelytapahtuman laji (asema- ja yleiskaava)" %}
 
@@ -843,7 +845,7 @@ Englanninkielinen nimi: **SpatialPlanInteractionEventKind**
 
 Erikoistaa luokkaa [AbstraktiVuorovaikutustapahtumanLaji](#abstraktivuorovaikutustapahtumanlaji), stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: [Laajennettavissa kaikilla tasoilla](http://inspire.ec.europa.eu/registry/extensibility/open)
+Laajennettavuus: [Ei laajennettavissa](http://inspire.ec.europa.eu/registry/extensibility/none)
 
 {% include codelistref.html id="RY_KaavanVuorovaikutustapahtumanLaji" name="Vuorovaikutustapahtuman laji (asema- ja yleiskaava)" %}
 
