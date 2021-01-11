@@ -63,8 +63,10 @@ Kunkin tekstimuotoista sisältöä kuvaavan attribuutin arvoina tulee olla enint
 
 #### Enimmäispituudet
 {% include clause_start.html type="req" id="laatu/vaat-merkijono-pituus" %}
-Kunkin yhdellä kielellä annetun LanguageString-tyyppisen merkkijonon enimmäispituus on 1024 merkkiä.
+Kunkin yhdellä kielellä annetun LanguageString-tyyppisen merkkijonon enimmäispituus on 2048 merkkiä.
 {% include clause_end.html %}
+
+{% include note.html content="Valittu 2048 merkin raja perustuu arvioon yksittäisten kaavamäräystekstien tyypillisistä pituuksista. Merkkijonojen enimmäispituuden määrääminen loogisen tietomallin tasolla on jossain määrin kajoamista mallin tekniseen toteutukseen, mutta yhteentoimivuuden takaamisen näkökulmasta on tärkeää, että kaikkissa fyysisissä tietomalleissa varataan yhtä suuri maksimimäärä merkkejä tekstisisältöjen tallentamiseen. Muutoin on riskinä oikeusvaikuttteisen tiedon katoaminen tiedonsiirrossa tai -käsittelyproseseissa." %}
 
 #### Tekstiarvojen käyttö
 
@@ -169,7 +171,7 @@ Aikavälejä kuvaavat attribuutit voidaan antaa joko sekä alku- että loppuajan
 
 ### AbstraktiMaankayttoasia
 {% include clause_start.html type="req" id="laatu/vaat-mkp-aluerajaus-geometria" %}
-[AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokan objektien ```aluerajaus```-attribuutin arvon tulee kuvata kaavan vaikutusalue joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
+[AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokan objektien ```aluerajaus```-attribuutin arvon tulee kuvata kaavan suunnittelualue joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
 {% include clause_end.html %}
 
 ### Lahtotietoaineisto
