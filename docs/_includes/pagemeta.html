@@ -6,8 +6,10 @@
         </button>
         <div class="dropdown-menu">
             <span class="dropdown-header">Saatavilla olevat versiot</span>
+            {% assign my_ver = '/' | append: page.modelversion | append: '/' %}
             {% for version in site.data.versions %}
-            <a class="dropdown-item" href="{{ page.url | replace: page.modelversion, version.path }}" title="{{ version.date | date: '%m.%d.%Y' }}">{{ version.number }} &mdash; {{ version.title }}</a>
+            {% assign other_ver = '/' | append: version.path | append: '/' %}
+            <a class="dropdown-item" href="{{ page.url | replace: my_ver, other_ver }}" title="{{ version.date | date: '%m.%d.%Y' }}">{{ version.number }} &mdash; {{ version.title }}</a>
             {% endfor %}
         </div>
     </div>
