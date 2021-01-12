@@ -172,10 +172,17 @@ b {
    }
 
    .pagemeta {
-     float: right;
-     text-align:right;
-     margin-left: 1em;
-     font-size: 0.85rem;
+      border-width: 1px;
+      border-style: solid;
+      border-radius: 5px;
+      border-color: #bcc5ce;
+      padding: 0.5em;
+      margin-bottom: 1em;
+      margin-left: 1em;
+      position: relative;
+      right: -3em;
+      float: right;
+      font-size: 0.85rem;
 
      .btn {
       font-size: 0.85rem;
@@ -183,12 +190,16 @@ b {
         &.status {
           opacity: 1.0;
         }
-      }
+    }
+
+    .changelog {
+      margin-top: 5px;
+    }
 
     .feedback {
       margin-top: 5px;
     }
-   }
+  }
 }
 
 #markdown-toc {
