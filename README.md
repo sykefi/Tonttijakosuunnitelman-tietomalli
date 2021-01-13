@@ -72,6 +72,7 @@ default_modelversion: '1.1'
 8. Tee repon ```master```-haarasta [julkaisu (release)](https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/managing-releases-in-a-repository) GitHubin käyttöliittymän avulla.
 
 9. Tee seuraavalle kehitysversiolle uusi hakemisto käyttäen pohjana juuri julkaistua versiota:
+
 ```cp -r docs/1.1 docs/1.2-dev```
 
 10. Tee UML-mallin eap-tiedostosta uusi kopio (muista päivittää myös linkki UML-kaavion sivulla ```docs/looginenmalli/uml/index.md```):
