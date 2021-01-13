@@ -4,7 +4,7 @@ title: "Kaavatietomalli - soveltamisprofiili - yleiskaava"
 description: ""
 page: "profiili-yk"
 modelversion: "1.0"
-status: "Keskeneräinen"
+status: "Ehdotus"
 ---
 # Kaavatietomallin soveltamisprofiili yleiskaava-aineistoille
 {:.no_toc}
