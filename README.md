@@ -13,14 +13,12 @@ Osa sivuston sivuista on versiokohtaisia, eli samasta sivusta on saatavilla usea
 ```yaml
 - number: "v1.1-dev"
   title: "Kehitysversio"
-  date: "2021-01-17"
   path: "1.1-dev"
 ```
 
 ```yaml
 - number: "v1.1"
   title: "Julkaisuversio 1.1"
-  date: "2021-01-17"
   path: "1.1"
 ```
 
