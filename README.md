@@ -114,7 +114,7 @@ modelversion: "1.2-dev"
 
 12. Kommitoi ja vie muutokset GitHubiin:
 
-```git add docs/_data/versions.yml docs/1.2-dev```
+```git add docs/_data/versions.yml docs/1.2-dev looginen-tietomalli/Kaavatietomalli-1_2.eap```
 
 ```git commit -m "Luotu uusi kehitysversio 1.2-dev perustuen versioon 1.1"```
 
