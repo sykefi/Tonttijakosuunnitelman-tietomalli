@@ -9,7 +9,7 @@ status: "Ehdotus"
 # PostgreSQL/PostGIS -tietokanta
 
 [Yleis- ja asemakaavan tietomallit -projektissa](../../../projektit/ak-yk-tietomallit/) laadittiin 
-[loogisen tason Kaavatietomallin](../../looginenmalli/dokumentaatio/) mukainen PostgreSQL-tietokanta [Kaava-JSON](../json/)-formaatissa olevien kaavojen testaamiseksi. Testauksessa käytettiin PostgreSQL-tietokannanhallintajärjestelmän versiota 13. Valittu tietokantarakenne perustui siihen, että kaavatiedot tallennetaan GeoJSON-formaatissa, ja siinä hyödynnettiin PostgreSQL:n [PostGIS](https://postgis.net/)-geometriatukea ja JSON-tukea. Testauksessa käytetty aineisto on kuvattu [omalla sivullaan](../aineistot/).
+[loogisen tason Kaavatietomallin](../../looginenmalli/dokumentaatio/) mukainen PostgreSQL-tietokanta [Kaava-JSON](../json/)-formaatissa olevien kaavojen testaamiseksi. Testauksessa käytettiin PostgreSQL-tietokannanhallintajärjestelmän versiota 13. Valittu tietokantarakenne perustui siihen, että kaavatiedot tallennetaan GeoJSON-formaatissa, ja siinä hyödynnettiin PostgreSQL:n [PostGIS](https://postgis.net/)-geometriatukea ja JSON-tukea. Testauksessa käytetty aineisto on kuvattu [omalla sivullaan](../../../projektit/ak-yk-tietomallit/aineistot/).
 
 Tietokantauluina mallinnettiin seuraavat loogisen tietomallin luokat:
 * [Kaavatiedot::Kaava](../../looginenmalli/dokumentaatio/#kaava): ```spatial_plan```,
