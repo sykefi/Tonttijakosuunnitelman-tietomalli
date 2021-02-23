@@ -24,6 +24,6 @@ Kokoontumiset rytmitettiin projektin etenemisvaiheiden mukaan sparrausjaksoiksi,
   <li>6. Arviointikeskustelu (4.12.2020)</li>
 </ul>
 
-Sparrausryhmän tapaamiset toteutettiin Teamsin videoneuvottelusovelluksen avulla. Lisäksi työksentelyssä käytettiin apuna erilaisia sähköisiä yhteistyökaluja, kuten Miro- ja Padlet-alustoja. Teamsin työtilaan koottiin kaikki Sparrausryhmän materiaalit ja videotallenteet tilaisuuksista. Keskeisistä vuorovaikutusteemoista laadittiin sparrausjaksojen aikana tiivistelmiä, joita osallistujien oli mahdollista edelleen kommentoida.
+Sparrausryhmän tapaamiset toteutettiin Teamsin videoneuvottelusovelluksen avulla. Lisäksi työksentelyssä käytettiin apuna erilaisia sähköisiä yhteistyökaluja, kuten Miro- ja Padlet-alustoja. Teamsin työtilaan koottiin kaikki Sparrausryhmän materiaalit ja videotallenteet tilaisuuksista. Keskeisistä vuorovaikutusteemoista laadittiin sparrausjaksojen aikana [tiivistelmiä](AKYK-sparrausryhman_keskustelumuistiot_2020.pdf), joita osallistujien oli mahdollista edelleen kommentoida.
 
 Sparrausryhmän vaikutus tietomallityöhön on ollut merkittävä. Sen kautta on saatu suoraa palautetta substanssiasiantuntijoilta käsillä oleviin kysymyksiin projektin eri vaiheissa.
