@@ -1,7 +1,7 @@
-# Tonttitietomalli - tämä pitää vielä päivittää
+# Tonttijaon tietomalli
 
 
-## Uuden malliversion julkaisu sivustolle
+## Uuden malliversion julkaisu sivustolle <- katsotaan lopuksi pätevätkö nämä ohjeet vielä
 
 Osa sivuston sivuista on versiokohtaisia, eli samasta sivusta on saatavilla useampia versioita, yksi kullekin julkaistulle mallin kehitysversiolle.
 
