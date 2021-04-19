@@ -4,7 +4,7 @@ title: "Kaavatietomallit"
 description: "Asema- ja yleiskaavojen kansalliset tietomallit mahdollistavat kaavatietovarantojen hyödyntämisen monipuolisesti ja tehokkaasti"
 page: "main"
 ---
-# Kaavatietomallit
+# Tonttitietomalli
 
 Kaavoituksessa luotavaa maankäytön ja rakentamisen suunnitelma- ja ohjaustietoa tarvitaan sekä monissa muissa rakennetun ympäristön suunnittelun ja toteutuksen piiriin kuuluvissa prosesseissa että muissa yhteiskunnan ja elinkeinoelämän prosesseissa. Kaavatiedon saattaminen kattavasti yhtenäiseen tietoaineistomuotoon mahdollistaa tämän kansallisesti merkittävän kaavatietovarannon hyödyntämisen monipuolisesti ja tehokkaasti.
 
