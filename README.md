@@ -1,4 +1,4 @@
-# Tonttitietomalli
+# Tonttitietomalli - tämä pitää vielä päivittää
 
 
 ## Uuden malliversion julkaisu sivustolle
