@@ -1,4 +1,4 @@
-# Kaavatietomallit
+# Tonttitietomalli
 
 
 ## Uuden malliversion julkaisu sivustolle
