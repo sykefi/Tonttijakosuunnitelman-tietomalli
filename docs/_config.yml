@@ -1,10 +1,10 @@
 theme: jekyll-theme-slate
-url: "https://kaavatietomalli.fi" # the base hostname & protocol for your site
-home: "https://kaavatietomalli.fi"
+url: "https://koivusto.github.io/Tonttitietomalli/" # the base hostname & protocol for your site
+home: "https://koivusto.github.io/Tonttitietomalli/"
 plugins:
   - jekyll-sitemap
-repository: YM-rakennettu-ymparisto/kaavatietomalli
-google_analytics: G-TL17CQFMFK
+repository: Koivusto/Tonttitietomalli
+google_analytics: 
 plugins:
 - jekyll-sitemap
 - kramdown
