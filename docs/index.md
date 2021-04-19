@@ -26,6 +26,5 @@ Tonttijaon tietomallin ensisijainen sovelluskohde on [Rakennetyn ympäristön ti
 Tonttijaon tietomallia on kehitetty seuraavissa hankkeissa:
 * _hanke_
 * _hanke_
-* _hanke_
 
 {% include note.html content="Tonttijaon tietomalli-sivusto on luotu alunperin _projektin_ loppuraporttina" %}
