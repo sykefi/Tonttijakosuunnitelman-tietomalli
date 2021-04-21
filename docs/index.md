@@ -10,6 +10,8 @@ Ympäristönministeriön rahoittamassa Ryhti-hankkeessa määritellään rakenne
 
 Tonttijakosuunnitelmalla kunnat osoittavat yleensä asemakaavan laadinnan yhteydessä rakennuskortteleiden jakoperiaatteet tonteiksi. Suunnitelma voidaan tehdä myös erillisenä, irrallisena varsinaisesta asemakaavan vahvistamisprosessista. Sillä osoitetaan tontit, niiden rajat ja määräalat. 
 
+Tässä kuvattu tietomalli esittelee uutena tietoentiteettinä *esitontin*.
+
 Tämä sivusto rakentuu seuraavista osioista:
 - Tontinjakosuunnitelman looginen tietomalli
 - Soveltamisohjeet
@@ -23,6 +25,6 @@ Sivustolla on esitetty tonttijakosuunnitelman looginen malli, jossa kuvataan ton
 
 Tonttijakosuunnitelmaa hyödynnetään tällä hetkellä... Ja tulevaisuudessa myös...
 
-Lisätietoja tontinjakosuunnitelmasta voi lukea [Maanmittauslaitoksen](www.mml.fi) ja [ympäristöministeriön](www.ym.fi) sivuilta. 
+Tontinjakosuunnitelmasta on säädetty osana [maankäyttö- ja rakennuslakia (MRL)]()Lisätietoja tontinjakosuunnitelmasta voi lukea [Maanmittauslaitoksen](www.mml.fi) ja [ympäristöministeriön](www.ym.fi) sivuilta. 
 
 {% include note.html content="Sivustoa ylläpitää [Ubigu Oy](www.ubigu.fi)" %}
