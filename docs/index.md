@@ -12,10 +12,10 @@ Tonttijakosuunnitelmalla kunnat osoittavat yleensä asemakaavan laadinnan yhteyd
 
 Tässä kuvattu tietomalli esittelee uutena tietoentiteettinä *esitontin*.
 
-Tämä sivusto rakentuu seuraavista osioista:
-- Tontinjakosuunnitelman looginen tietomalli
+Projekti on rakentunut seuraavista osista:
+- Hyödynnettävien käsitteiden laatiminen (käsitemalli)
+- Tontinjakosuunnitelman looginen tietomalli ja sen soveltamisprofiili
 - Soveltamisohjeet
-- Tontinjakosuunnitelman fyysiset mallit
 
 Tämä sivu pohjaa Ryhti-hankkeen yhteydessä jo julkaistuun Kaavatietomalliin, johon voi tutustua osoitteessa https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/. Yhtymäkohdat asema- ja yleiskaavojen tietomalleihin on avattu tällä sivustolla. Myöhemmin nämä tietomallit täydentyvät vielä x,x ja x vastaavilla malleilla. 
 
