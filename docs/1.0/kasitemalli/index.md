@@ -13,28 +13,28 @@ status: "Ehdotus"
 {:toc}
 
 ## Käsitekaavio
-![Kaavatietomallin keskeiset käsitteet](kaavan-kasitemalli.png "Kaavatietomallin keskeiset käsitteet")
+![Tontinjakosuunnitelman keskeiset käsitteet](tjs-kasitemalli.png "Tontinjakosuunnitelman keskeiset käsitteet")
 
-(Lataa [käsitekaavio määritelmien kanssa](kaavan-kasitemalli-maaritelmat.png))
+(Lataa [käsitekaavio määritelmien kanssa](tjs-kasitemalli.png)) <!-- Tässä vielä väärä kuva toistaiseksi -->
 
 ## Käsitteet
-### Kaava
-{% include defintionref.html id="concept-1008" name="kaava" def="maankäyttö- ja rakennuslain mukaisen kaavoitusprosessin lopputuloksena syntyvä lainvoimainen maankäyttöä tai rakentamista ohjaava suunnitelma." %}
+### Tontinjakosuunnitelma
+{% include defintionref.html id="concept-1008" name="Tontinjakosuunnitelma" def="Maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen uudistamisen yksityiskohtaiseksi ohjaamiseksi." %}
+<!-- Mikä toi id=concept elementti on? -->
 
 Viittaukset toisiin käsitteisiin:
-* [Lähtötietoaineisto](#lähtötietoaineisto) [0..*]: kaavan laadinnassa hyödynnetty lähtötietoaineisto
-* [Kaavaselostus](#kaavaselostus) [0..1]: kaavan kaavaselostus
+<!-- * [Lähtötietoaineisto](#lähtötietoaineisto) [0..*]: kaavan laadinnassa hyödynnetty lähtötietoaineisto 
+* [Kaavaselostus](#kaavaselostus) [0..1]: kaavan kaavaselostus 
 * [Osallistumis- ja arviointisuunnitelma](#osallistumis--ja-arviointisuunnitelma) [0..1]: kaavan osallistumis- ja arviointisuunnitelma
 * [Kaavan liite](#kaavan-liite) [0..*]: muu kaavan liite kuin selostus tai osallistumis- ja arviointisuunnitelma
 * [Kaavan kumoamistieto](#kaavan-kumoamistieto) [0..1]: minkä kaavan tai sen osat kaava voimaantullessaan kumoaa
 * [Kaavakohde](#kaavakohde) [0..*] (kompositio): kaavan liittyä kaavamääräyksiä tai -suosituksia kohdistava paikkatietokohde
 * [Kaavamääräys](#kaavamääräys) [0..*] (kompositio): yleismääräys, joka koskee koko kaavan aluetta
 * [Kaavasuositus](#kaavasuositus) [0..*] (kompositio): yleissuositus, joka koskee koko kaavan aluetta
-
+-->
 
 ### Lähtötietoaineisto
-{% include defintionref.html id="concept-13" name="kaavan lähtötietoaineisto" def="kaavan laadinnassa hyödynnetty tietoaineisto, joka sisältää sellaista kaavan tulkinnan yhteydessä hyödyllistä tietoa, jota ei luoda ja josta ei päätetä osana kaavoitusprosessia" note="Käytetyt lähtötietoaineistot yhdessä kuvaavat kaavan laadintavaiheessa käytettävissä ollutta taustatietoa, johon tehdyt suunnittelupäätökset ovat perustuneet.
-Lähtötietoaineisto voidaan usein esittää graafisesti karttatasona, jossa aineiston sijainnilliset tietokomponentit ja niiden tietosisältö visualisoidaan käytetään standardisoituja merkintätapoja." %}
+{% include defintionref.html id="concept-13" name="Lähtötietoaineisto" def="Tonttijakosuunnitelman laadinnassa hyödynnetty tietoaineisto, joka sisältää sellaista tulkittavaa tietoa, joka tulee huomioida laadinnassa, jota ei luoda ja josta ei päätetä osana tonttijakosuunnitelmaprosessia." %}
 
 
 ### Kaavaselostus
