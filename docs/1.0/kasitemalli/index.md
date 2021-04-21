@@ -1,12 +1,12 @@
 ---
 layout: "default"
-title: "Kaavatietomalli - käsitemalli ja määritelmät"
+title: "Tontinjakosuunnitelma - käsitemalli"
 description: ""
 page: "kasitemalli"
 modelversion: "1.0"
 status: "Ehdotus"
 ---
-# Käsitteet ja määritelmät
+# Käsitemalli
 {:.no_toc}
 
 1. 

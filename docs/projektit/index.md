@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Kaavatietomalli - Projektit"
+title: "Tontinjakosuunnitelman tietomalli - Projektit"
 description: ""
 page: "projektit"
 status: "Ehdotus"
