@@ -1,28 +1,26 @@
 ---
 layout: "default"
 title: "Kaavatietomallit"
-description: "Asema- ja yleiskaavojen kansalliset tietomallit mahdollistavat kaavatietovarantojen hyödyntämisen monipuolisesti ja tehokkaasti"
+description: "Tonttijakosuunnitelman kansallinen tietomalli täydentää aiempia kaavatietomalleja"
 page: "main"
 ---
-# Tonttijaon tietomalli
+# Tonttijakosuunnitelman tietomalli
 
-Tämä tietomallien sanallinen kuvaus pohjaa Ryhti-hankkeessa julkaistuun Kaavatietomalliin: https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/
+Tonttijakosuunnitelmalla kunnat osoittavat yleensä asemakaavan laadinnan yhteydessä rakennuskortteleiden jakoperiaatteet tonteiksi. Suunnitelma voidaan tehdä myös erillisenä, irrallisena varsinaisesta asemakaavan vahvistamisprosessista. Sillä osoitetaan tontit, niiden rajat ja määräalat. 
+- tontit
+- tonttien sijainnit
+- tonttien määräalat
 
-Tonttitietomallit-sivusto on kehittyvä ja täydentyvä kokonaisuus, jota kehitetään ympäristöministeriön [Ryhti-hankkeen](https://ym.fi/fi/ryhti) ja edelleen tietomallimuotoisen kaavatiedon soveltamiskokemusten ja kehitystarpeiden myötä. Sivuston kuvaamien tietomallien ja soveltamisohjeiden avulla eri kaavatasojen kaavatietoa voidaan tuottaa kansallisesti yhdenmukaisina konetulkittavina paikkatietoaineistoina. Sivusto sisältää tällä hetkellä Kaavatietomallin soveltamisprofiilit asema- ja yleiskaava-aineistoille.
+Lisätietoja tontinjakosuunnitelmasta osana maankäytön suunnittelua voi lukea [Maanmittauslaitoksen](www.mml.fi) ja [ympäristöministeriön](www.ym.fi) sivuilta. 
 
-Tämä sivusto kuvaa tonttijakosuunnitelman tietoentiteetit ja niiden väliset suhteet. 
+Ryhti-hankkeessa määritellään rakennetun ympäristön tietoja yhteisen, kansallisen tietomallin alle. 
 
-Kaavatiedon sisältö on perinteisesti kuvattu sen graafisen esitystavan, kaavakartan ja sen sisältämien vakioitujen merkintätapojen, avulla. Tietomalli, joka perustuisi vain kaavakartan ja sen merkintöjen kuvaamiseen koneluettavasti, ei täyttäisi niitä tiedon monipuoliseen analysointiin ja muihin tietoaineistoihin yhdistämiseen liittyviä vaatimuksia, joita kaavatietoon tulevaisuudessa kohdistuu. Tonttitietojaon tietomalli pyrkii:
-* luomaan kansallisen standardin tonttijakosuunnitelman tietomallille, 
-* jotain,
-* jotain. 
+Tämä sivu pohjaa Ryhti-hankkeen yhteydessä jo julkaistuun Kaavatietomalliin, johon voi tutustua osoitteessa https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/. Yhtymäkohdat asema- ja yleiskaavojen tietomalleihin on avattu tällä sivustolla. Myöhemmin nämä tietomallit täydentyvät vielä x,x ja x vastaavilla malleilla. 
 
-_sisältöä_
+Tonttijakosuunnitelman tietomallia kehitetään läpi Ryhti-hankkeen elinkaaren, ja myös siitä eteenpäin. Tietomallin ja tällä sivustolla tarjottavien ohjeiden avulla suunnitelman hyödyntäminen ja käyttö paikkatietoaineistona helpottuu. 
 
-Tonttijaon tietomallin ensisijainen sovelluskohde on [Rakennetyn ympäristön tietojärjestelmä](https://ym.fi/fi/ryhti), johon tulevaisuudessa kootaan kuntien rakennetun ympäristön tietomalleja. 
+Sivustolla on esitetty tonttijakosuunnitelman looginen malli, jossa kuvataan tonttijakosuunnitelman entiteetit ja niiden väliset suhteet.  
 
-Tonttijaon tietomallia on kehitetty seuraavissa hankkeissa:
-* _hanke_
-* _hanke_
+Tonttijakosuunnitelmaa hyödynnetään tällä hetkellä... Ja tulevaisuudessa myös...
 
-{% include note.html content="Tonttijaon tietomalli-sivusto on luotu alunperin _projektin_ loppuraporttina" %}
+{% include note.html content="Tonttijakosuunnitelman tietomalli-sivustoa ylläpitää [Ubigu Oy](www.ubigu.fi)" %}
