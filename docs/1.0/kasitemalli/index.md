@@ -20,9 +20,10 @@ status: "Ehdotus"
 ## Käsitteet
 ### Tontinjakosuunnitelma
 {% include defintionref.html id="concept-1008" name="Tontinjakosuunnitelma" def="Maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen uudistamisen yksityiskohtaiseksi ohjaamiseksi." %}
-<!-- Mikä toi id=concept elementti on? -->
+<!-- Mikä toi id=concept elementti on? > se viittaa sanastossa id:hen nähtävästi, eli pitää kattoa onko siellä jo olemassa käsitteet ja sitten kattoa niiden id:t-->
 
 Viittaukset toisiin käsitteisiin:
+*Tähän kuvataan tontinjakosuunnitelman liitynnät muihin käsitteisiin tai käsitekokonaisuuksiin.*
 <!-- * [Lähtötietoaineisto](#lähtötietoaineisto) [0..*]: kaavan laadinnassa hyödynnetty lähtötietoaineisto 
 * [Kaavaselostus](#kaavaselostus) [0..1]: kaavan kaavaselostus 
 * [Osallistumis- ja arviointisuunnitelma](#osallistumis--ja-arviointisuunnitelma) [0..1]: kaavan osallistumis- ja arviointisuunnitelma
@@ -34,14 +35,13 @@ Viittaukset toisiin käsitteisiin:
 -->
 
 ### Lähtötietoaineisto
-{% include defintionref.html id="concept-13" name="Lähtötietoaineisto" def="Tonttijakosuunnitelman laadinnassa hyödynnetty tietoaineisto, joka sisältää sellaista tulkittavaa tietoa, joka tulee huomioida laadinnassa, jota ei luoda ja josta ei päätetä osana tonttijakosuunnitelmaprosessia." %}
+{% include defintionref.html id="concept-13" name="Lähtötietoaineisto" def="Tonttijakosuunnitelman laadinnassa hyödynnetty tietoaineisto, joka sisältää sellaista tulkittavaa tietoa, joka tulee huomioida laadinnassa, jota ei luoda ja josta ei päätetä osana tonttijakosuunnitelmaprosessia." note="Tähän voi lisätä jonkin tarvittavan tarkennuksen tai lisäyksen" %}
 
+### Liite
+{% include defintionref.html dict="rakymp" dictname="Rakennetun ympäristön pääsanasto" id="c126" name="Liite" def="Tonttijakosuunnitelmaan liittyvä asiakirja, joka ei sisällä tonttijakosuunnitelman oikeusvaikutuksellista suunnitelma- tai säännöstietoa." %}
 
-### Kaavaselostus
-{% include defintionref.html dict="rakymp" dictname="Rakennetun ympäristön pääsanasto" id="c126" name="kaavaselostus" def="kaavaan liittyvä selostus, jossa esitetään kaavan tavoitteiden, mahdollisten vaihtoehtojen ja niiden vaikutusten sekä ratkaisujen perusteiden arvioimiseksi tarpeelliset tiedot" note="Kaavaselostus on laadittava kaikkien lakisääteisten kaavojen yhteydessä, mutta kaavaselostus ei ole juridisesti sitova." %}
-
-### Osallistumis- ja arviointisuunnitelma
-{% include defintionref.html dict="mrl" dictname="Maankäyttö- ja rakennuslain käsitteitä" id="concept-159" name="osallistumis- ja arviointisuunnitelma" def="kaavoituksen alkuvaiheessa laadittava suunnitelma, jossa kuvataan kaavoituksen lähtökohdat ja tavoitteet, suunniteltu aikataulu, osallistumis- ja vuorovaikutusmuodot sekä kaavan vaikutusten arviointitavat" %}
+### Käsittelytapahtuma
+{% include defintionref.html dict="mrl" dictname="Maankäyttö- ja rakennuslain käsitteitä" id="concept-159" name="Käsittelytapahtuma" def="Tonttijakosuunnitelman käsittelyprosessiin kuuluva tapahtuma, jonka johdosta elinkaaren tila voi muuttua" %}
 
 ### Kaavan liite
 {% include defintionref.html id="concept-1007" name="kaavan liite" def="kaavaprosessiin tai kaavan tulkintaan liittyvä asiakirja, joka ei sisällä kaavan oikeusvaikutuksellista suunnitelma- tai säännöstietoa." note="esimerkiksi selvitys, suunnitelma, kartta, havainnekuva tai muistio." %}
@@ -53,13 +53,15 @@ Viittaukset toisiin käsitteisiin:
 * [Kaava](#kaava) [1]: kaavan versio, johon tapahtuma liittyy
 
 ### Vuorovaikutustapahtuma
-{% include defintionref.html id="concept-1004" name="kaavan vuorovaikutustapahtuma" def="kaavanprosessiin kuuluva tapahtuma, jonka tarkoituksena on tarjota kaavan osallisille tai muille kiinnostuneille mahdollisuus lausua mielipiteensä ja antaa palautetta valmisteilla olevasta kaavasta tai sen osasta" note="Esimerkkejä vuorovaikutustapahtumista ovat kaavaehdotusen nähtävilläolo tai kuulemistilaisuus. Vuorovaikutustapahtumiin voi liittyä dokumentteja, kuten annettuja huomioita ja kysymyksiä, sekä niiden vastineita." %}
+{% include defintionref.html id="concept-1004" name="vuorovaikutustapahtuma" def="Tonttijakosuunnitelmaprosessiin kuuluva tapahtuma, jonka tarkoituksena on tarjota tonttijakosuunnitelman asianosaiselle mahdollisuus lausua mielipiteensä ehdotuksesta." %}
 
+<!--
 Viittaukset toisiin käsitteisiin:
 * [Kaava](#kaava) [1]: kaavan versio, johon tapahtuma liittyy
+-->
 
-### Kaavan kumoamistieto
-{% include defintionref.html id="concept-2000" name="kaavan kumoamistieto" def="tieto kaavan hyväksymisen johdosta kokonaisuudessaan kumoutuvasta kaavasta tai kaavan kumottavasta osa-alueesta, yksittäisistä kaavakohteista tai kaavamääräyksistä." note="kumoamistieto kuvaa miten kaavan voimaantulo vaikuttaa toisten kaavojen ja niiden sisältämien määräysten tai suositusten kumoutumiseen." %}
+### Kumoamistieto
+{% include defintionref.html id="concept-2000" name="Kumoamistieto" def="Tieto tonttijakosuunnitelman hyväksymisen johdosta kokonaisuudessaan kumoutuvasta tonttijakosuunnitelmasta tai tonttijakosuunnitelman kumottavasta osa-alueesta." %}
 
 ### Kaavakohde
 {% include defintionref.html id="concept-1009" name="kaavakohde" def="kaavaan sisältyvä aluerajaus tai kohde, jonka alueella maankäyttöä tai rakentamista halutaan ohjata" note="Kaavakohteella on maantieteellinen sijainti ja muoto. Velvoittava ohjausvaikutus kuvataan liittyvien kaavamääräysten ja ei-velvoittava liittyvien kaavasuositusten avulla." %}
@@ -76,24 +78,9 @@ Viittaukset toisiin käsitteisiin:
 * [Lisätieto](#lisätieto) [0..*]: tarkentava tai rajaava lisätieto
 * [Kaavakohde](#kaavakohde) [0..*]: kaavakohteiden versio, johon määräyksen vaikutus kohdistuu. Jos ei ole, on kyseessä yleismääräys
 
-### Kaavasuositus
-{% include defintionref.html id="concept-3002" name="kaavasuositus" def="kaavaan sisältyvä ei-velvoittava ohje, joka ilmentää esimerkiksi toteutuksen tapaa ja tavoitetta." note="Suositus voi kohdistua joko yksittäiseen kaavakohteeseen tai koko kaavaan. Kaavasuositukseen voi sisältyä sen ohjausvaikutusta tarkentavia arvoja." %}
-
-Viittaukset toisiin käsitteisiin:
-* [Kaava](#kaava) [1]: kaavan versio, johon suositus sisältyy
-* [Arvo](#arvo) [0..*]: tarkentava arvo
-* [Kaavakohde](#kaavakohde) [0..*]: kaavakohteiden versio, johon suosituksen vaikutus kohdistuu. Jos ei ole, on kyseessä yleissuositus
-
-
-### Lisätieto
-{% include defintionref.html id="concept-2003" name="kaavamääräyksen lisätieto" def="kaavamääräyksen tietosisältöä tarkentava nimetty ominaisuus ja sen mahdollinen arvo." note="Kaavoissa käytettävät lisätiedon lajit on yhteisesti sovittu. Lisätiedolla voidaan esimerkiksi rajata tai kohdistaa määräyksen ohjausvaikutusta." %}
-
-Viittaukset toisiin käsitteisiin:
-* [Arvo](#arvo) [0..*]: tarkentava arvo
-
 ### Arvo
 {% include defintionref.html id="concept-1011" name="ominaisuuden arvo" def="kaavamääräystä, kaavasuositusta tai lisätietoa tarkentava arvo." note="Yhteinen yläluokka erityyppisille numeerisille, luetelluille ja sanallisille arvoille sekä arvoväleille" %}
 
-### Kaavatietovarasto
-{% include defintionref.html id="concept-3004" name="kaavatietovarasto" def="tietojärjestelmä, jonka tehtävänä on vastaanottaa, säilyttää ja jaella tietomallimuotoista kaavatietoa laatu- ja elinkaarisääntöjen mukaisesti" note="kaavatietovarasto voi vastata kaavatiedon hallinnoinnista joko paikallisesti tai kansallisesti" %}
+### Esitonttitietovarasto
+{% include defintionref.html id="concept-3004" name="Esitonttitietovarasto" def="Kuvaus puuttuu" %}
 
