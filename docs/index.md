@@ -7,9 +7,6 @@ page: "main"
 # Tonttijakosuunnitelman tietomalli
 
 Tonttijakosuunnitelmalla kunnat osoittavat yleensä asemakaavan laadinnan yhteydessä rakennuskortteleiden jakoperiaatteet tonteiksi. Suunnitelma voidaan tehdä myös erillisenä, irrallisena varsinaisesta asemakaavan vahvistamisprosessista. Sillä osoitetaan tontit, niiden rajat ja määräalat. 
-- tontit
-- tonttien sijainnit
-- tonttien määräalat
 
 Lisätietoja tontinjakosuunnitelmasta osana maankäytön suunnittelua voi lukea [Maanmittauslaitoksen](www.mml.fi) ja [ympäristöministeriön](www.ym.fi) sivuilta. 
 
