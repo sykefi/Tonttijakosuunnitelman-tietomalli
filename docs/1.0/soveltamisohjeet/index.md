@@ -6,7 +6,7 @@ page: "soveltamisohje-tjs"
 modelversion: "1.0"
 status: "Ehdotus"
 ---
-# Tonttijakosuunnitelman soveltamisprofiili
+# Soveltamisprofiili
 {:.no_toc}
 
 1. 

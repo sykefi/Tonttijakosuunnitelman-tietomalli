@@ -6,8 +6,9 @@ page: "cookbook-ak"
 modelversion: "1.0"
 status: "Keskeneräinen"
 ---
-# Kaavatietomallin keittokirja - asemakaava
-Sisältö täydentyy
+# Keittokirja
+## Käytännön esimerkkejä tietomallin käytöstä
+Tähän voi kirjata havainnollistavia käyttöesimerkkejä.
 
 
 
