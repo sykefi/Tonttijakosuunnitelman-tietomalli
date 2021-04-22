@@ -1,11 +1,11 @@
 theme: jekyll-theme-slate # tämä on valmis tyyli
-url: "https://koivusto.github.io/Tonttitietomalli/" # the base hostname & protocol for your site
+url:  # the base hostname & protocol for your site
 home: "https://koivusto.github.io/Tonttitietomalli/"
-repository: Koivusto/Tonttitietomalli
+repository: Koivusto/Tonttitietomalli 
 google_analytics: # Lisätään tähän API-key, kun Analytics on tarpeen/tiedossa
 plugins:
 - jekyll-sitemap # Tämä helpottaa hakukoneen työtä
 - kramdown # defaul markdown renderer for jekyll
-default_modelversion: '1.0'
+default_modelversion: '1.0' # useita versioita sivuista, tähän viitataan varmaan sivujen front matterissa
 
 
