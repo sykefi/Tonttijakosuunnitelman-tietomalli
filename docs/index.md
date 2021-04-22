@@ -1,7 +1,7 @@
 ---
 layout: "default"
 title: "Tonttijakosuunnitelman tietomalli"
-description: "Tonttijakosuunnitelman kansallinen tietomalli täydentää aiempia kaavatietomalleja"
+description: "Tonttijakosuunnitelman kansallinen tietomalli on osa Ryhti-hanketta"
 page: "main"
 ---
 # Tonttijakosuunnitelman tietomalli
