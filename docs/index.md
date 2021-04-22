@@ -6,8 +6,6 @@ page: "main"
 ---
 # Tonttijakosuunnitelman tietomalli
 
-TÄMÄ ON MUUTOS
-
 Ympäristönministeriön rahoittamassa Ryhti-hankkeessa määritellään rakennetun ympäristön tietoja yhteisen, kansallisen tietomallin alle. Tarkoituksena on yhdenmukaistaa rakennetun ympäristön tiedonhallintaa yhteisten, kansallisten standardien alle. Lähtökohtana on uudistuvan maankäyttö- ja rakennuslain pykäläluonnos. Maankäyttö- ja rakennuslaki uudistuu tulevien vuosien aikana. Voit tutustua lain valmistelutyöhön [täällä](https://www.mrluudistus.fi).
 
 Tonttijakosuunnitelmalla kunnat osoittavat yleensä asemakaavan laadinnan yhteydessä rakennuskortteleiden jakoperiaatteet tonteiksi. Suunnitelma voidaan tehdä myös erillisenä, irrallisena varsinaisesta asemakaavan vahvistamisprosessista. Sillä osoitetaan tontit, niiden rajat ja määräalat. 
