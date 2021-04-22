@@ -1,8 +1,8 @@
 ---
 layout: "default"
-title: "Kaavatietomalli - keittokirja - asemakaava"
-description: "Esimerkkejä Kaavatietomallin soveltamisesta asemakaavoituksen kaavoitusratkaisuihin"
-page: "cookbook-ak"
+title: "Keittokirja"
+description: "Esimerkkejä tonttijaon tietomallin soveltamisesta"
+page: "cookbook-tjs"
 modelversion: "1.0"
 status: "Keskeneräinen"
 ---

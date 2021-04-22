@@ -1,10 +1,14 @@
 ---
 layout: "ea-frame"
-title: "Kaavatietomalli - looginen tietomalli - UML"
+title: "Tonttijakosuunnitelma - UML"
 description: ""
 page: "uml"
 modelversion: "1.0"
 defaultDiagram: "./EARoot/EA2/EA34.html"
 ---
-# Loogisen tason kaavatietomalli - UML-luokkakaaviot
-UML-tietomalli ladattavissa sekä [Enterprise Architect-muodossa (eap)](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/blob/master/looginen-tietomalli/Kaavatietomalli-1_0.eap?raw=true) että [XMI-muodossa](https://raw.githubusercontent.com/YM-rakennettu-ymparisto/kaavatietomalli/master/looginen-tietomalli/Kaavatietomalli-1_0.xmi). UML-mallia vastaava looginen tietomalli on kuvattu myös Yhteentoimivuusalustan [Kaavatietomalli](https://tietomallit.suomi.fi/model/rytj-kaava/)-soveltamisprofiilina.
+# Loogisen tason tonttijakosuunnitelma - UML-luokkakaaviot
+UML-tietomalli ladattavissa sekä Enterprise Architect-muodossa (eap) että XMI-muodossa. UML-mallia vastaava looginen tietomalli on kuvattu myös yhteentoimivuusalustan soveltamisprofiilina.
+
+{% include note.html content="Lisää linkki Y-alustan soveltamisprofiiliin, kun sellainen valmistuu."}
+
+{% include note.html content="Lisää linkit EAP- ja XMI-muotoisiin malleihin, kun tulevat saataville."}

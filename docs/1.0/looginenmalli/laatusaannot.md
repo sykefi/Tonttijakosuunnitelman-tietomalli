@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Kaavatietomalli - looginen tietomalli - laatusäännöt"
+title: "Laatusäännöt"
 description: ""
 page: "laatusaannot"
 modelversion: "1.0"
@@ -18,7 +18,7 @@ status: "Ehdotus"
 
 ### UML-mallin mukaisuus
 {% include clause_start.html type="req" id="laatu/vaat-uml-mukaisuus" %}
-Kaavatietomallin loogisen tietomallin toteutusten tulee noudattaa tietomallin [UML-kielisen luokkakaavion](./uml/) määrityksiä luokkien attribuuttien ja assosiaatioiden kardinaliteetin ja tyypin suhteen.
+Tonttijakosuunnitelman loogisen tietomallin toteutusten tulee noudattaa [UML-kielisen luokkakaavion](./uml/) määrityksiä luokkien attribuuttien, assosiaatioiden, kardinaliteetin ja tyypin suhteen.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-uml-toteutus" %}
@@ -27,20 +27,22 @@ Kunkin fyysisen tietomallin kuvauksessa tulee määritellä minkälaista rakenne
 
 ### Tunnisteet ja sisäisten viittausten eheys
 {% include clause_start.html type="req" id="laatu/vaat-tunnukset-viittaukset" %}
-Kaavatietomallin versioitavilla tietokohteilla tulee olla yksilöivät tunnukset, joiden luomisessa ja käyttämisessä viittaamiseen toisiin tietokohteisiin tulee noudattaa elinkaarisääntöjen luvun [Tunnukset ja niiden hallinta](elinkaarisaannot.html#tunnukset-ja-niiden-hallinta) vaatimuksia.
+Tonttijakosuunnitelman tietomallin versioitavilla tietokohteilla tulee olla yksilöivät tunnukset, joiden luomisessa ja käytöstä toisiin tietokohteisiin viittaamisessa tulee noudattaa elinkaarisääntöjen luvun [Tunnukset ja niiden hallinta](elinkaarisaannot.html#tunnukset-ja-niiden-hallinta) vaatimuksia.
 {% include clause_end.html %}
 
 ### Elinkaarisääntöjen mukaisuus
 {% include clause_start.html type="req" id="laatu/vaat-elinkaarisaannot" %}
-Kaavatietomallin mukaisten aineistojen tulee noudattaa Kaavatietomallin [elinkaarisääntöjen](elinkaarisaannot.html) vaatimuksia, ja niiden on suositeltavaa noudattaa elinkaarisääntöjen suosituksia. Vaatimukset ja suositukset on erotettu selkeästi elinkaarisääntöjen muusta sisällöstä.
+Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa tonttijakosuunnitelman tietomallin [elinkaarisääntöjen](elinkaarisaannot.html) vaatimuksia, ja niiden on suositeltavaa noudattaa elinkaarisääntöjen suosituksia. Vaatimukset ja suositukset on erotettu selkeästi elinkaarisääntöjen muusta sisällöstä.
 {% include clause_end.html %}
 
 ### Soveltamisohjeiden mukaisuus
 {% include clause_start.html type="req" id="laatu/vaat-soveltamisohjeet" %}
-Kaavatietomallin mukaisten aineistojen tulee noudattaa niiden kaavalajikohtaisten soveltamisprofiilien ([Asemakaava](../soveltamisohjeet/asemakaava/), [Yleiskaava](../soveltamisohjeet/yleiskaava/)) vaatimuksia, ja niiden on suositeltavaa noudattaa soveltamisprofiilien suosituksia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
+Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa niiden kaavatietomallin yksilöimää ([asemakaavan](../soveltamisohjeet/asemakaava/)soveltamisprofiilia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
 {% include clause_end.html %}
 
-### Merkkijonojen käyttö
+{% include question.html content="Onko tarvetta puhua tässä, ja muuallakin jatkuvasti myös yleiskaavan soveltamisprofiilista ja sen noudattamisesta, vai riittääkö yksinään asemakaavaan viittaaminen?" %}
+
+### Merkkijonojen käyttö JATKA TÄSTÄ 23.4
 #### Merkistöt
 {% include clause_start.html type="req" id="laatu/vaat-merkisto-utf8" %}
 Kaikki Kaavatietomallin tekstimuotoiset sisällöt on tiedonsiirtoa varten koodattava käyttäen UTF-8 -merkistökoodausta.
