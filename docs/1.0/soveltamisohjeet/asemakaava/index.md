@@ -2,7 +2,7 @@
 layout: "default"
 title: "Tonttijakosuunnitelma - soveltamisprofiili"
 description: ""
-page: "profiili-tjs"
+page: "soveltamisohje-tjs"
 modelversion: "1.0"
 status: "Ehdotus"
 ---
