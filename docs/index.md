@@ -6,7 +6,7 @@ page: "main"
 ---
 # Tonttijakosuunnitelman tietomalli
 
-Ympäristönministeriön rahoittamassa Ryhti-hankkeessa määritellään rakennetun ympäristön tietoja yhteisen, kansallisen tietomallin alle. Tarkoituksena on yhdenmukaistaa rakennetun ympäristön tiedonhallintaa yhteisten, kansallisten standardien alle. Lähtökohtana on uudistuvan maankäyttö- ja rakennuslain pykäläluonnos. Maankäyttö- ja rakennuslaki uudistuu tulevien vuosien aikana. Voit tutustua lain valmistelutyöhön [täällä](www.mrluudistus.fi).
+Ympäristönministeriön rahoittamassa Ryhti-hankkeessa määritellään rakennetun ympäristön tietoja yhteisen, kansallisen tietomallin alle. Tarkoituksena on yhdenmukaistaa rakennetun ympäristön tiedonhallintaa yhteisten, kansallisten standardien alle. Lähtökohtana on uudistuvan maankäyttö- ja rakennuslain pykäläluonnos. Maankäyttö- ja rakennuslaki uudistuu tulevien vuosien aikana. Voit tutustua lain valmistelutyöhön [täällä](https://www.mrluudistus.fi).
 
 Tonttijakosuunnitelmalla kunnat osoittavat yleensä asemakaavan laadinnan yhteydessä rakennuskortteleiden jakoperiaatteet tonteiksi. Suunnitelma voidaan tehdä myös erillisenä, irrallisena varsinaisesta asemakaavan vahvistamisprosessista. Sillä osoitetaan tontit, niiden rajat ja määräalat. 
 
@@ -30,6 +30,6 @@ Sivustolla on esitetty tonttijakosuunnitelman looginen malli, jossa kuvataan ton
 
 Tonttijakosuunnitelmaa hyödynnetään tällä hetkellä... Ja tulevaisuudessa myös...
 
-Toistaiseksi tontinjakosuunnitelmasta on säädetty osana lainvoimaista [maankäyttö- ja rakennuslakia (MRL)](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132). Lisätietoja tontinjakosuunnitelmasta voi lukea [Maanmittauslaitoksen](www.mml.fi) ja [ympäristöministeriön](www.ym.fi) sivuilta. 
+Toistaiseksi tontinjakosuunnitelmasta on säädetty osana lainvoimaista [maankäyttö- ja rakennuslakia (MRL)](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132). Lisätietoja tontinjakosuunnitelmasta voi lukea [Maanmittauslaitoksen](https://www.mml.fi) ja [ympäristöministeriön](https://www.ym.fi) sivuilta. 
 
-{% include note.html content="Sivustoa ylläpitää [Ubigu Oy](www.ubigu.fi)" %}
+{% include note.html content="Sivustoa ylläpitää [Ubigu Oy](https://www.ubigu.fi)" %}
