@@ -3,7 +3,7 @@ layout: "default"
 title: "Elinkaarisäännöt"
 description: ""
 page: "elinkaarisaannot"
-modelversion: "1.0"
+modelversion: "1.0-dev"
 status: "Ehdotus"
 ---
 

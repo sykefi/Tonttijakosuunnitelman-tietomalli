@@ -3,7 +3,7 @@ layout: "default"
 title: "Keittokirja"
 description: "Esimerkkejä tonttijaon tietomallin soveltamisesta"
 page: "cookbook-tjs"
-modelversion: "1.0"
+modelversion: "1.0-dev"
 status: "Keskeneräinen"
 ---
 # Keittokirja

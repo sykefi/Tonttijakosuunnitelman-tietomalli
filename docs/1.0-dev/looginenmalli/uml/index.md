@@ -3,7 +3,7 @@ layout: "ea-frame"
 title: "Tonttijakosuunnitelma - UML"
 description: ""
 page: "uml"
-modelversion: "1.0"
+modelversion: "1.0-dev"
 defaultDiagram: "./EARoot/EA2/EA34.html"
 ---
 # Loogisen tason tonttijakosuunnitelma - UML-luokkakaaviot

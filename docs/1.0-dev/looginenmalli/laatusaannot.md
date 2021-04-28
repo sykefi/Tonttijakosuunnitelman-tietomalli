@@ -3,7 +3,7 @@ layout: "default"
 title: "Laatusäännöt"
 description: ""
 page: "laatusaannot"
-modelversion: "1.0"
+modelversion: "1.0-dev"
 status: "Ehdotus"
 ---
 # Laatusäännöt
