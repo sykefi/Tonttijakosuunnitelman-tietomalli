@@ -1,8 +1,7 @@
 # Tonttijaon tietomalli
 
 
-## Uuden malliversion julkaisu sivustolle <- katsotaan lopuksi pätevätkö nämä ohjeet vielä
-
+## Uuden malliversion julkaisu sivustolle (tämä suoraan kaavatietomallista vielä)
 Osa sivuston sivuista on versiokohtaisia, eli samasta sivusta on saatavilla useampia versioita, yksi kullekin julkaistulle mallin kehitysversiolle.
 
 1. Mikäli olet tehnyt muutokset hakemistoon, joka ei vastaa lopullista julkaisuversion numeroa, vaihda versio oikeaksi:
