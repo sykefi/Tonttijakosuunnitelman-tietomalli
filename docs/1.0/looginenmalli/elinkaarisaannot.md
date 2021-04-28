@@ -6,11 +6,13 @@ page: "elinkaarisaannot"
 modelversion: "1.0"
 status: "Ehdotus"
 ---
+
 # Elinkaarisäännöt
 {:.no_toc}
 
 1. 
 {:toc}
+
 
 ## Johdanto
 
@@ -283,7 +285,7 @@ Tonttijakosuunnitelma ja sen tietolajit ovat voimassa niiden ```voimassaoloAika`
 {% include clause_end.html %}
 
 ## Tonttijakosuunnitelman elinkaaren vaiheet ja elinkaaritila-attribuutin käyttö
-Tonttijakosuunnitelman ja sen sisältämien määräysten elinkaareen liittyvää tilaa hallitaan ko. tietokohteiden ```elinkaaritila```-attribuutin ja sen mahdolliset arvot kuvaavan koodiston avulla. <!-- lisää linkki Y-alustan koodistoon -->
+Tonttijakosuunnitelman ja sen sisältämien määräysten elinkaareen liittyvää tilaa hallitaan ko. tietokohteiden ```elinkaaritila```-attribuutin ja sen mahdolliset arvot kuvaavan koodiston avulla. <!-- lisää linkki Y-alustan koodistoon
 
 Koodisto kuvaa x mahdollista tilaa, joissa tonttijakosuunnitelma voi olla sen elinkaaren eri vaiheissa:
 * [Kaavoitusaloite](https://koodistot.suomi.fi/codescheme;registryCode=rytj;schemeCode=RY_KaavanElinkaaritila)
@@ -313,6 +315,7 @@ Tonttijakosuunnitelman ```elinkaaritila```-attribuutin arvo voi kahden sen perä
 {% include note.html content="Yllä listatut ovat vain esimerkkejä kaavatietomallista. Luodaan omat rajoitteet tjs:lle. " %}
 
 <!--
+
 ## Esimerkkejä elinkaaritapahtumista
 
 ### Kaavan luominen ja muokkaus ennen ensimmäistä tallennusta kaavatietovarastoon
@@ -330,6 +333,5 @@ Tonttijakosuunnitelman ```elinkaaritila```-attribuutin arvo voi kahden sen perä
 ### Kaavan voimaantulosta kuuluttaminen
 
 ### Kaavan, sen yksittäisten kaavamääräysten tai -suositusten kumoaminen
+
 -->
-
-
