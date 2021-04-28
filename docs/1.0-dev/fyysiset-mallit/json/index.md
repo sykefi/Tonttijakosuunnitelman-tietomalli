@@ -3,7 +3,7 @@ layout: "default"
 title: "Kaavatietomalli - Kaava-JSON"
 description: ""
 page: "kaava-json"
-modelversion: "1.0"
+modelversion: "1.0-dev"
 status: "Ehdotus"
 ---
 # Kaava-JSON
