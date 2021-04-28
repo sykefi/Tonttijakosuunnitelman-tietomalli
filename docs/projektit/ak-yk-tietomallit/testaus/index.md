@@ -1,7 +1,7 @@
 ---
 layout: "default"
 title: "Tietomallin testaus"
-page: "ak-yk-testaus"
+page: "tjs-testaus"
 status: "Ehdotus"
 ---
 # Kaavatietomallin testaus
