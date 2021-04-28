@@ -4,6 +4,7 @@
         <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Malliversio {{ page.modelversion }}
         </button>
+        <!-- 
         <div class="dropdown-menu">
             <span class="dropdown-header">Saatavilla olevat versiot</span>
             {% assign my_ver = '/' | append: page.modelversion | append: '/' %}
@@ -12,6 +13,7 @@
             <a class="dropdown-item" href="{{ page.url | replace: my_ver, other_ver }}" title="{{ version.date | date: '%d.%m.%Y' }}">{{ version.number }} &mdash; {{ version.title }}</a>
             {% endfor %}
         </div>
+        Tämä kommentoitu pois, koska toistaiseksi meillä ei ole useampaa versiota, joita listata pop uppiin -->
     </div>
     {% endif %}
     {% if page.status %}
