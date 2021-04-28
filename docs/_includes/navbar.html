@@ -51,16 +51,14 @@
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/fyysiset-mallit/postgre/">PostgreSQL-tietokanta</a>
         </div>
       </li>
-      {% if page.page == 'ak-yk-projekti' or page.page == 'tjs-projektitiimi' or page.page == 'tjs-testaus' or page.page == 'tjs-jatkokehitys'%}
+      {% if page.page == 'tjs-projektitiimi' or page.page == 'tjs-testaus' or page.page == 'tjs-jatkokehitys'%}
       <li class="nav-item active dropdown">
       {% else %}
       <li class="nav-item dropdown">
       {% endif %}
-        <a class="nav-link dropdown-toggle" href="{{ site.url }}/projektit/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kehitysprojektit</a>
+        <a class="nav-link dropdown-toggle" href="{{ site.url }}/projektit/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kehitystyö</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{ site.url }}/projektit/ak-yk-tietomallit/">AK-YK -tietomallit 2020</a>
-          <a class="dropdown-item sublevel" href="{{ site.url }}/projektit/ak-yk-tietomallit/sparrausryhma.html">Sparrausryhmä</a>
-          <a class="dropdown-item sublevel" href="{{ site.url }}/projektit/ak-yk-tietomallit/kyselyt.html">Ota kantaa -kyselyt</a>
+          <a class="dropdown-item sublevel" href="{{ site.url }}/projektit/ak-yk-tietomallit/sparrausryhma.html">Projektitiimi</a>
           <a class="dropdown-item sublevel" href="{{ site.url }}/projektit/ak-yk-tietomallit/testaus/">Tietomallin testaus</a>
           <a class="dropdown-item sublevel" href="{{ site.url }}/projektit/ak-yk-tietomallit/demo/">Demopalvelu</a>
           <a class="dropdown-item sublevel" href="{{ site.url }}/projektit/ak-yk-tietomallit/aineistot/">Testiaineistot</a>

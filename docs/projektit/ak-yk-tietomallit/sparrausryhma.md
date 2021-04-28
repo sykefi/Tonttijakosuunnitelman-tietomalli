@@ -7,9 +7,9 @@ page: "tjs-projektitiimi"
 # Projektitiimi
 
 Ubigulta työhön osallistuivat:
--Marko Kauppi
--Esa Östring
--Ville Koivisto
+- Marko Kauppi
+- Esa Östring
+- Ville Koivisto
 
 {% include note.html content="Kuvaillaan tänne projektitiimi" %}
 
