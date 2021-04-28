@@ -13,7 +13,7 @@ status: "Ehdotus"
 1. 
 {:toc}
 
-<!--
+
 ## Johdanto
 
 Tonttijakosuunnitelmalla on elinkaari, ja siinä tietyt ennaltamäärätyt vaiheet. Elinkaarisääntöjen määrittely liittyy olennaisesti tietokohteiden versionhallintaan, eli miten yksittäisten tietokohteiden niiden elinkaaren aikana muodotettavat versiot voidaan tallentaa ja yksilöidä viittauskelpoisten pysyvien tunnusten avulla. Tässä annetut säännöt pohjautuvat paikkatietokohteiden yksilöivien tunnusten ja elinkaarisääntöjen periaatteisiin, jotka on kuvattu jukishallinnon suosituksessa [JHS 193 - Paikkatiedon yksilöivät tunnukset](http://www.jhs-suositukset.fi/suomi/jhs193).
@@ -175,9 +175,11 @@ Kaavatunnus on kaavalle ennakolta haettava, kaavan kansallisesti yksilöivä tun
 Kaavatunnuksen suositeltu muoto on UUID.
 {% include clause_end.html %}
 
+
+
 Esimerkki: ```df5b2d6f-d6d6-4695-938c-dd7c4c784c28```
 
-{% include note.html content="Meidän pitää katsoa, miten ja mistä haetaan kaavatunnus, koska tjs:n osalta se on aina olemassa ensin."}
+{% include note.html content="Meidän pitää katsoa, miten ja mistä haetaan kaavatunnus, koska tjs:n osalta se on aina olemassa ensin." %}
 
 ### Pysyvien tunnusten palauttaminen tuottavalle järjestelmälle
 
@@ -314,6 +316,7 @@ Tonttijakosuunnitelman ```elinkaaritila```-attribuutin arvo voi kahden sen perä
 
 {% include note.html content="Yllä listatut ovat vain esimerkkejä kaavatietomallista. Luodaan omat rajoitteet tjs:lle. " %}
 
+<!--
 ## Esimerkkejä elinkaaritapahtumista
 
 ### Kaavan luominen ja muokkaus ennen ensimmäistä tallennusta kaavatietovarastoon
