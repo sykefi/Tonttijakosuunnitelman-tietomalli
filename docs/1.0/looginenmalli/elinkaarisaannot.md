@@ -13,7 +13,7 @@ status: "Ehdotus"
 1. 
 {:toc}
 
-
+<!--
 ## Johdanto
 
 Tonttijakosuunnitelmalla on elinkaari, ja siinä tietyt ennaltamäärätyt vaiheet. Elinkaarisääntöjen määrittely liittyy olennaisesti tietokohteiden versionhallintaan, eli miten yksittäisten tietokohteiden niiden elinkaaren aikana muodotettavat versiot voidaan tallentaa ja yksilöidä viittauskelpoisten pysyvien tunnusten avulla. Tässä annetut säännöt pohjautuvat paikkatietokohteiden yksilöivien tunnusten ja elinkaarisääntöjen periaatteisiin, jotka on kuvattu jukishallinnon suosituksessa [JHS 193 - Paikkatiedon yksilöivät tunnukset](http://www.jhs-suositukset.fi/suomi/jhs193).
@@ -331,3 +331,4 @@ Tonttijakosuunnitelman ```elinkaaritila```-attribuutin arvo voi kahden sen perä
 ### Kaavan voimaantulosta kuuluttaminen
 
 ### Kaavan, sen yksittäisten kaavamääräysten tai -suositusten kumoaminen
+-->
