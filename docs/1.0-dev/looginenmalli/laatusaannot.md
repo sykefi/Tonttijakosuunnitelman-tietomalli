@@ -4,7 +4,7 @@ title: "Laatusäännöt"
 description: ""
 page: "laatusaannot"
 modelversion: "1.0-dev"
-status: "Ehdotus"
+status: "Keskeneräinen"
 ---
 # Laatusäännöt
 {:.no_toc}

@@ -4,7 +4,7 @@ title: "Kaavatietomalli - Kaava-JSON"
 description: ""
 page: "kaava-json"
 modelversion: "1.0-dev"
-status: "Ehdotus"
+status: "Keskeneräinen"
 ---
 # Kaava-JSON
 {:.no_toc}

@@ -4,7 +4,7 @@ title: "TJS - looginen tietomalli - dokumentaatio"
 description: ""
 page: "dokumentaatio"
 modelversion: "1.0-dev"
-status: "Ehdotus"
+status: "Keskeneräinen"
 ---
 # Loogisen tason tonttijakosuunnitelmamalli
 {:.no_toc}

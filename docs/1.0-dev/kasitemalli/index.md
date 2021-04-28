@@ -4,7 +4,7 @@ title: "Tontinjakosuunnitelma - käsitemalli"
 description: ""
 page: "kasitemalli"
 modelversion: "1.0-dev"
-status: "Ehdotus"
+status: "Keskeneräinen"
 ---
 # Käsitemalli
 {:.no_toc}

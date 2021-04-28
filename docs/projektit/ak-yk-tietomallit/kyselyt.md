@@ -3,7 +3,7 @@ layout: "default"
 title: "Ota kantaa -kyselyt"
 description: ""
 page: "ak-yk-kyselyt"
-status: "Ehdotus"
+status: "Keskeneräinen"
 ---
 # Ota kantaa -kyselyt, syksy 2020
 
