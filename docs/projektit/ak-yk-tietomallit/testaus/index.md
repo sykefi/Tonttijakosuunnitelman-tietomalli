@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Asema- ja yleiskaavan tietomallit -testaus"
+title: "Tietomallin testaus"
 page: "ak-yk-testaus"
 status: "Ehdotus"
 ---

@@ -1,22 +1,21 @@
 ---
 layout: "default"
-title: "Kaavatietomalli - demopalvelu"
+title: "tjs - demopalvelu"
 description: ""
 page: "demo"
-modelversion: "1.0"
-status: "Ehdotus"
+modelversion: "1.1-dev"
+status: "Keskeneräinen"
 ---
 # Demopalvelu
-[Yleis- ja asemakaavojen tietomallit -projektin](../../../projektit/ak-yk-tietomallit/) testausvaiheen aikana suunniteltiin ja toteutettiin demopalvelu kaavatiedon fyysisen [Kaava-JSON -tietomallin](../json/) mukaisen yleis- ja asemakaavatiedon käsittelyyn ja esittämiseen [sparrausryhmän](../../../projektit/ak-yk-tietomallit/sparrausryhma.html) jäseniltä kerättyjen [testiaineistojen](../aineistot/) avulla.
 
-![Demosovelluksen käyttöliittymä](demosovellus-screenshot.png)
+{% include note.html content="Jos haluamme oman demopalvelun, tai tuoda työmme osaksi kaavamallin demopalvelua, voimme hyödyntää tätä välilehteä." %}
 
-Testaukseen rakennetusta tiedonhallintajärjestelmästä voit lukea lisää [testausraportin](../../../projektit/ak-yk-tietomallit/testaus/) alta.
+Testaukseen rakennetusta tiedonhallintajärjestelmästä voit lukea lisää [testausraportin](../../../projektit/tjs-tietomallit/testaus/) alta.
 
-Demopalvelut ovat käytettävissä 31.3.2021 saakka:
+Demopalvelut ovat käytettävissä xx.xx.xxxx saakka:
 
-* Karttakäyttöliittymä: <https://ym-yk-ak.spatineo-devops.com/>
-* [OGC API - Features](https://www.ogc.org/standards/ogcapi-features) -standardin mukainen latauspalvelu: <https://ym-yk-ak.spatineo-devops.com/api/>
+* Karttakäyttöliittymä: (linkki)
+* [OGC API - Features](https://www.ogc.org/standards/ogcapi-features) -standardin mukainen latauspalvelu: (linkki)
 
 
 
