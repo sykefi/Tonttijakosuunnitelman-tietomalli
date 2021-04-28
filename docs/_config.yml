@@ -6,6 +6,6 @@ google_analytics: # Lisätään tähän API-key, kun Analytics on tarpeen/tiedos
 plugins:
 - jekyll-sitemap # Tämä helpottaa hakukoneen työtä
 - kramdown # defaul markdown renderer for jekyll
-default_modelversion: '1.0' # useita versioita sivuista, tähän viitataan varmaan sivujen front matterissa
+default_modelversion: '1.0-dev' # useita versioita sivuista, tähän viitataan varmaan sivujen front matterissa
 
 
