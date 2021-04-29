@@ -1,8 +1,18 @@
-# Tonttijaon tietomalli
+# Tonttijakosuunnitelman tietomalli
 
+## Projektista
+Ympäristöministeriön Ryhti-hankkeen *tonttijakosuunnitelman tietomalli* –projektissa määriteltiin kansallinen tietomalli tonttijakosuunnitelmalle. Tietomalli ja sen taustat on esitelty tällä sivulla. Sivusto pohjaa saman Ryhti-hankkeen aiempaan projektiin, jossa määriteltiin kansallinen [kaavatietomalli](https://kaavatietomalli.fi). Tonttijakosuunnitelman tietomallin on kehittänyt Ubigu Oy. Projekti oli käynnissä aikavälillä xx.xx.xxxx-xx.xx.xxxx.
 
-## Uuden malliversion julkaisu sivustolle (tämä suoraan kaavatietomallista vielä)
-Osa sivuston sivuista on versiokohtaisia, eli samasta sivusta on saatavilla useampia versioita, yksi kullekin julkaistulle mallin kehitysversiolle.
+Kaavatietomallin on toteuttanut Spatineo Oy yhdessä Asiantuntijat n+1 Oy:n kanssa. Tonttijakosuunnitelman tietomalli on suunniteltu yhteensopivaksi kaavatietomallin kanssa. Ryhti-hankkeen tulevat tietomallinnusprojektit tulevat olemaan yhteensopivia molempien mallien kanssa. 
+
+## Versioiden julkaisu sivustolla
+Osa sivuston sivuista on versiokohtaisia, eli samasta sivusta on saatavilla useampia versioita, yksi kullekin julkaistulle mallin kehitysversiolle. Näin lukija pääsee tutustumaan tuotannossa olevan version lisäksi myös tulevaan kehitykseen ennen sen julkaisua. Sisällöllä, jota versioidaan, on sivun oikeassa yläkulmassa painike, jonka kautta voi navigoida eri versioihin.
+
+{% include note.html content="Tämä painike on toistaiseksi disabloitu, koska meillä ei ole enempää kuin yksi versio. " %}
+
+### Uuden malliversion julkaisu sivustolle
+
+{% include note.html content="Nämä ohjeet ovat sellaisenaan kaavatietomallilta." %}
 
 1. Mikäli olet tehnyt muutokset hakemistoon, joka ei vastaa lopullista julkaisuversion numeroa, vaihda versio oikeaksi:
 ```git mv docs/1.1-dev docs/1.1```
@@ -122,8 +132,3 @@ modelversion: "1.2-dev"
 13. Varmista, että uusi versio näkyy oikein [kaavatietomalli](https://kaavatietomalli.fi/)-sivustolla ja että vaihtaminen versiosta toiseen onnistuu. Sivuston generoituminen kestää muutamia minuutteja push:sta.
 
 14. Jatka kehittämistä kehystysversion hakemiston tiedostoilla (docs/1.2-dev)
-
-## Asema- ja yleiskaavan tietomallit -projekti
-
-Ympäristöministeriön asema- ja yleiskaavojen tietomallit –projektissa määriteltiin kansalliset tietomallit asema- ja yleiskaavoille.
-Projekti käynnistyi toukokuussa 2020 ja valmistui vuoden 2021 tammikuussa. Työn toteutti Spatineo Oy yhdessä Asiantuntijat n+1 Oy:n kanssa.

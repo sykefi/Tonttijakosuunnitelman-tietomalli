@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "tjs - testiaineistot"
+title: "tjs-testiaineistot"
 description: ""
 page: "testiaineistot"
 modelversion: "1.0-dev"
