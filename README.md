@@ -8,8 +8,7 @@ Kaavatietomallin on toteuttanut Spatineo Oy yhdessä Asiantuntijat n+1 Oy:n kans
 ## Versioiden julkaisu sivustolla
 Osa sivuston sivuista on versiokohtaisia, eli samasta sivusta on saatavilla useampia versioita, yksi kullekin julkaistulle mallin kehitysversiolle. Näin lukija pääsee tutustumaan tuotannossa olevan version lisäksi myös tulevaan kehitykseen ennen sen julkaisua. Sisällöllä, jota versioidaan, on sivun oikeassa yläkulmassa painike, jonka kautta voi navigoida eri versioihin.
 
-{% include note.html content="Tämä painike on toistaiseksi disabloitu, koska meillä ei ole enempää kuin yksi versio. " %}
-
+==Tämä painike on toistaiseksi disabloitu, koska meillä ei ole enempää kuin yksi versio.==
 ### Uuden malliversion julkaisu sivustolle
 
 {% include note.html content="Nämä ohjeet ovat sellaisenaan kaavatietomallilta." %}
