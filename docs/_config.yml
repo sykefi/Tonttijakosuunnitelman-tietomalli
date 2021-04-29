@@ -1,6 +1,6 @@
 theme: jekyll-theme-slate # tämä on valmis tyyli
-url: "https://koivusto.github.io/Tonttijakosuunnitelman-tietomalli" # the base hostname & protocol for your site
-home: "https://koivusto.github.io/Tonttijakosuunnitelman-tietomalli"
+url: "https://ubigu.github.io/Tonttijakosuunnitelman-tietomalli" # the base hostname & protocol for your site
+home: "https://ubigu.github.io/Tonttijakosuunnitelman-tietomalli"
 repository: Koivusto/Tonttijakosuunnitelman-tietomalli
 google_analytics: # Lisätään tähän API-key, kun Analytics on tarpeen/tiedossa
 plugins:
