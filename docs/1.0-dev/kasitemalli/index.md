@@ -7,49 +7,80 @@ modelversion: "1.0-dev"
 status: "Keskeneräinen"
 ---
 # Käsitemalli
-Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan sanasto-työkalussa. Käsitemallin nimiavaruus on [rytj-tjs](http://uri.suomi.fi/terminology/rytj-tjs/). Mukana on myös kaksi kaavatietomallin käsitemallin käsitettä. Niiden nimiavaruus on [rytj-kaava](http://uri.suomi.fi/terminology/rytj-kaava/).
-
 {:.no_toc}
 
 1. 
 {:toc}
 
 ## Käsitekaavio
-![Tonttijakosuunnitelman käsitemalli graafisena mallinnuksena](Kasitemalli_graafinen_mallinnus_neo4j.png "Tonttijakosuunnitelman käsitemalli graafisena mallinnuksena")
+![Tontinjakosuunnitelman keskeiset käsitteet](tjs-kasitemalli.png "Tontinjakosuunnitelman keskeiset käsitteet")
 
-(Lataa [käsitekaavio määritelmien kanssa](Kasitemalli_graafinen_mallinnus_neo4j.png))
+(Lataa [käsitekaavio määritelmien kanssa](tjs-kasitemalli.png)) <!-- Tässä vielä väärä kuva toistaiseksi -->
 
 ## Käsitteet
+### Tontinjakosuunnitelma
+{% include defintionref.html id="concept-1008" name="Tontinjakosuunnitelma" def="Maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen uudistamisen yksityiskohtaiseksi ohjaamiseksi." %}
+<!-- Mikä toi id=concept elementti on? > se viittaa sanastossa id:hen nähtävästi, eli pitää kattoa onko siellä jo olemassa käsitteet ja sitten kattoa niiden id:t-->
 
-### rytj-tjs: Tonttijakosuunnitelma
-{% include defintionref.html id="concept-0" name="Tontinjakosuunnitelma" def="maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen uudistamisen yksityiskohtaiseksi ohjaamiseksi." %}
+Viittaukset toisiin käsitteisiin:
+*Tähän kuvataan tontinjakosuunnitelman liitynnät muihin käsitteisiin tai käsitekokonaisuuksiin.*
+<!-- * [Lähtötietoaineisto](#lähtötietoaineisto) [0..*]: kaavan laadinnassa hyödynnetty lähtötietoaineisto 
+* [Kaavaselostus](#kaavaselostus) [0..1]: kaavan kaavaselostus 
+* [Osallistumis- ja arviointisuunnitelma](#osallistumis--ja-arviointisuunnitelma) [0..1]: kaavan osallistumis- ja arviointisuunnitelma
+* [Kaavan liite](#kaavan-liite) [0..*]: muu kaavan liite kuin selostus tai osallistumis- ja arviointisuunnitelma
+* [Kaavan kumoamistieto](#kaavan-kumoamistieto) [0..1]: minkä kaavan tai sen osat kaava voimaantullessaan kumoaa
+* [Kaavakohde](#kaavakohde) [0..*] (kompositio): kaavan liittyä kaavamääräyksiä tai -suosituksia kohdistava paikkatietokohde
+* [Kaavamääräys](#kaavamääräys) [0..*] (kompositio): yleismääräys, joka koskee koko kaavan aluetta
+* [Kaavasuositus](#kaavasuositus) [0..*] (kompositio): yleissuositus, joka koskee koko kaavan aluetta
+-->
 
-### rytj-tjs: Esitontti
-{% include defintionref.html id="concept-1" name="Tontinjakosuunnitelma" def="Tonttijakosuunnitelmassa osoitettu tontti (esitontti) kiinteistöjaotuksen uudistamiseksi, jonka alueella maankäyttöä tai rakentamista halutaan ohjata." %}
+### Lähtötietoaineisto
+{% include defintionref.html id="concept-13" name="Lähtötietoaineisto" def="Tonttijakosuunnitelman laadinnassa hyödynnetty tietoaineisto, joka sisältää sellaista tulkittavaa tietoa, joka tulee huomioida laadinnassa, jota ei luoda ja josta ei päätetä osana tonttijakosuunnitelmaprosessia." note="Tähän voi lisätä jonkin tarvittavan tarkennuksen tai lisäyksen" %}
 
-### rytj-tjs: Tonttijakosuunnitelman liite
-{% include defintionref.html id="concept-2" name="Tonttijakosuunnitelmaan liittyvä asiakirja, joka ei sisällä tonttijakosuunnitelman oikeusvaikutuksellista suunnitelma- tai säännöstietoa." %}
+### Liite
+{% include defintionref.html dict="rakymp" dictname="Rakennetun ympäristön pääsanasto" id="c126" name="Liite" def="Tonttijakosuunnitelmaan liittyvä asiakirja, joka ei sisällä tonttijakosuunnitelman oikeusvaikutuksellista suunnitelma- tai säännöstietoa." %}
 
-### rytj-tjs: Tonttijakosuunnitelman käsittelytapahtuma
-{% include defintionref.html id="concept-3" name="Tonttijakosuunnitelman käsittelyprosessiin kuuluva tapahtuma, jonka johdosta elinkaaren tila voi muuttua." %}
+### Käsittelytapahtuma
+{% include defintionref.html dict="mrl" dictname="Maankäyttö- ja rakennuslain käsitteitä" id="concept-159" name="Käsittelytapahtuma" def="Tonttijakosuunnitelman käsittelyprosessiin kuuluva tapahtuma, jonka johdosta elinkaaren tila voi muuttua" %}
 
-### rytj-tjs: Tonttijakosuunnitelman käsittelytapahtuma
-{% include defintionref.html id="concept-4" name="Tonttijakosuunnitelmaprosessiin kuuluva tapahtuma, jonka tarkoituksena on tarjota tonttijakosuunnitelman asianosaiselle mahdollisuus lausua mielipiteensä ehdotuksesta." %}
+### Kaavan liite
+{% include defintionref.html id="concept-1007" name="kaavan liite" def="kaavaprosessiin tai kaavan tulkintaan liittyvä asiakirja, joka ei sisällä kaavan oikeusvaikutuksellista suunnitelma- tai säännöstietoa." note="esimerkiksi selvitys, suunnitelma, kartta, havainnekuva tai muistio." %}
 
-### rytj-tjs: Tonttijakosuunnitelman kumoamistieto
-{% include defintionref.html id="concept-5" name="Tieto tonttijakosuunnitelman hyväksymisen johdosta kokonaisuudessaan kumoutuvasta tonttijakosuunnitelmasta tai tonttijakosuunnitelman kumottavasta esitontista." %}
+### Käsittelytapahtuma
+{% include defintionref.html id="concept-1005" name="kaavan käsittelytapahtuma" def="kaavan käsittelyprosessiin kuuluva tapahtuma, jonka johdosta elinkaaren tila voi muuttua" note="Käsittelytapahtumaan voi dokumentteja, kuten päätöspöytäkirjoja. Esimerkiksi kaavan virelletulo, kaavaehdotuksen käsittely kunnanvaltuustossa tai kaavan voimaantulo." %}
 
-### rytj-tjs: Esitonttikohteen muutostieto
-{% include defintionref.html id="concept-9" name="Tieto kaavan hyväksymisen johdosta muuttuvista, kumoutuvista tai muun muutoksen aiheuttamista esitonttikohteista." %}
+Viittaukset toisiin käsitteisiin:
+* [Kaava](#kaava) [1]: kaavan versio, johon tapahtuma liittyy
 
-### rytj-tjs: Esitonttikohde
-{% include defintionref.html id="concept-6" name="Tonttijakosuunnitelmassa osoitettu aluemainen tai pistemäinen kohde kiinteistöjaotuksen uudistamiseksi, jonka alueella maankäyttöä tai rakentamista halutaan ohjata." %}
+### Vuorovaikutustapahtuma
+{% include defintionref.html id="concept-1004" name="vuorovaikutustapahtuma" def="Tonttijakosuunnitelmaprosessiin kuuluva tapahtuma, jonka tarkoituksena on tarjota tonttijakosuunnitelman asianosaiselle mahdollisuus lausua mielipiteensä ehdotuksesta." %}
 
-### rytj-kaava: Kaavamääräys
-{% include defintionref_kaava.html id="concept-1010" name="Kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
+<!--
+Viittaukset toisiin käsitteisiin:
+* [Kaava](#kaava) [1]: kaavan versio, johon tapahtuma liittyy
+-->
 
-### rytj-kaava: Arvo
-{% include defintionref_kaava.html id="concept-1011" name="Kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
+### Kumoamistieto
+{% include defintionref.html id="concept-2000" name="Kumoamistieto" def="Tieto tonttijakosuunnitelman hyväksymisen johdosta kokonaisuudessaan kumoutuvasta tonttijakosuunnitelmasta tai tonttijakosuunnitelman kumottavasta osa-alueesta." %}
 
-### rytj-tjs: Esitonttitietovarasto
-{% include defintionref.html id="concept-7" name="Tietojärjestelmä, jonka tehtävänä on vastaanottaa, säilyttää ja jaella tietomallimuotoista tonttjakosuunnitelmatietoa laatu- ja elinkaarisääntöjen mukaisesti." %}
+### Kaavakohde
+{% include defintionref.html id="concept-1009" name="kaavakohde" def="kaavaan sisältyvä aluerajaus tai kohde, jonka alueella maankäyttöä tai rakentamista halutaan ohjata" note="Kaavakohteella on maantieteellinen sijainti ja muoto. Velvoittava ohjausvaikutus kuvataan liittyvien kaavamääräysten ja ei-velvoittava liittyvien kaavasuositusten avulla." %}
+
+Viittaukset toisiin käsitteisiin:
+* [Kaava](#kaava) [1]: kaavan versio, johon kohde sisältyy
+
+### Kaavamääräys
+{% include defintionref.html id="concept-1010" name="kaavamääräys" def="kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." note="Kaavoissa käytettävät kaavamääräysten lajit on yhteisesti sovittu. Määräys voi kohdistua joko yksittäiseen kaavakohteeseen tai koko kaavaan. Kaavamääräykseen voi sisältyä sen lajiin perustuvaa ohjausvaikutusta tarkentavia arvoja ja lisätietoja." %}
+
+Viittaukset toisiin käsitteisiin:
+* [Kaava](#kaava) [1]: kaavan versio, johon määräys sisältyy
+* [Arvo](#arvo) [0..*]: tarkentava arvo
+* [Lisätieto](#lisätieto) [0..*]: tarkentava tai rajaava lisätieto
+* [Kaavakohde](#kaavakohde) [0..*]: kaavakohteiden versio, johon määräyksen vaikutus kohdistuu. Jos ei ole, on kyseessä yleismääräys
+
+### Arvo
+{% include defintionref.html id="concept-1011" name="ominaisuuden arvo" def="kaavamääräystä, kaavasuositusta tai lisätietoa tarkentava arvo." note="Yhteinen yläluokka erityyppisille numeerisille, luetelluille ja sanallisille arvoille sekä arvoväleille" %}
+
+### Esitonttitietovarasto
+{% include defintionref.html id="concept-3004" name="Esitonttitietovarasto" def="Kuvaus puuttuu" %}
+

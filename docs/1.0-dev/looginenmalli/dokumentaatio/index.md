@@ -13,14 +13,7 @@ status: "Keskeneräinen"
 {:toc}
 
 ## Yleistä
-
-Loogisen tason tietomalli määrittelee kaikille tonttijakosuunnitelman kohteille yhteiset tietorakenteet, joita sovelletaan tonttijaon ilmaisemiseen laadittujen soveltamisohjeiden ja niissä kiinnitettyjen koodistojen sekä elinkaari- ja laatusääntöjen mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta.
-
-## Kaava- ja tonttijakosuunnitelmaprosessin prosessi-integraatio
-
-Kaavatietomallin kaavamääräykset joiden laji-attribuutin arvo on Tonttijako-koodin “Esitontti” tai “Sitova tonttijako laadittava”, ovat lähtötietoja tonttijakosuunnitelman laatimiselle. Kaavakohde siirtyy suoraan tietorakenteena tonttijakosuunnitelman laatimisen prosessiin. Esitonttikohteita laadittaessa laatija tulkitsee kaavassa osoitetut määräykset sisältyväksi esitonttikohteeseen. 
-
-{% include note.html content="Tähän varmaan halutaan viittaukset kyseisiin koodeihin y-alustalla." %}
+Loogisen tason tonttijakosuunnitelmamalli määrittelee yhteiset tietorakenteet, joita sovelletaan suunnitelman ilmaisemiseen laadittujen soveltamisohjeiden, koodistojen sekä elinkaari- ja laatusääntöjen mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta (esim. relaatiotietokanta, tietyn ohjelmointikielen tietorakenteet, XML, JSON).
 
 ## Normatiiviset viittaukset
 Seuraavat dokumentit ovat välttämättömiä tämän dokumentin täysipainoisessa soveltamisessa:
