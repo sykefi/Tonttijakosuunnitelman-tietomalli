@@ -12,15 +12,16 @@ status: "Keskeneräinen"
 1. 
 {:toc}
 
-## Looginen malli kaaviona
-![Tonttijakosuunnitelman looginen malli graafisena mallinnuksena](looginenmalli.png "Tonttijakosuunnitelman looginen malli graafisena mallinnuksena")
-
-(Lataa [Kaavio määritelmien kanssa](looginenmalli.png))
-
-
 ## Yleistä
 
 Loogisen tason tietomalli määrittelee kaikille tonttijakosuunnitelman kohteille yhteiset tietorakenteet, joita sovelletaan tonttijaon ilmaisemiseen laadittujen soveltamisohjeiden ja niissä kiinnitettyjen koodistojen sekä elinkaari- ja laatusääntöjen mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta.
+
+Tietomalli perustuu kaavatietomallin yhteiskäyttöisiin tietokomponentteihin. Kaavatietomallin MKP-ydin kuvaa maankäyttöpäätösten tietomallintamisessa yleiskäyttöisiksi suunnitellut luokat ja niihin liittyvät koodistot, joita hyödynnetään Tonttijakosuunnitelman soveltamisprofiilin kautta. MKP-ytimen lisäksi hyödynnetään laajasti Kaavatietomallin abstrakteja ja muita luokkia Tonttijakosuunnitelmatietomallin määrittelemien koodistojen ja soveltamisprofiilin avulla. 
+
+## Graafinen mallinnus loogisesta tietomallista
+![Tonttijakosuunnitelman looginen malli graafisena mallinnuksena](looginenmalli.png "Looginen tietomalli -  graafinen mallinnus (Neo4j)")
+
+(Lataa [Kaavio määritelmien kanssa](looginenmalli.png))
 
 ## Kaava- ja tonttijakosuunnitelmaprosessin prosessi-integraatio
 
@@ -52,23 +53,47 @@ Myös tietomallin standardointi on yhdenmukainen aiemmin luodun kaavatietomallin
 
 {% include question.html content="Muutoksia tähän?" %}
 
-### Muualla määritellyt luokat ja tietotyypit
+### MKP-ydin
 
-#### CharacterString
+#### AbstraktiVersioituObjekti
 
-Kuvaa yleisen merkkijonon, joka koostuu 0..* merkistä, merkkijonon pituudesta, merkistökoodista ja maksimipituudesta. Määritelty rajapinta-tyyppisenä [ISO 19103][ISO-19103]-standardissa.
+Yhteinen yläluokka kaikille tonttijakosuunnitelman versiohallituille luokille. Kuvaa kaikkien kohdetyyppien yhteiset ominaisuudet ja assosiaatiot.
 
-#### LanguageString
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+paikallinenTunnus| [CharacterString](#characterstring)     | 0..1 | kohteen pääavain (id)
+nimiavaruus      | [URI](#uri) | 0..1  | tunnusten nimiavaruus
+viittausTunnus   | [URI](#uri) | 0..1  | johdettu nimiavaruudesta, luokan englanninkielisestä nimestä ja paikallisesta tunnuksesta
+identiteettiTunnus | [CharacterString](#characterstring)     | 0..1  | kohteen versioriippumaton tunnus
+tuottajakohtainenTunnus | [CharacterString](#characterstring) | 0..1 | kohteen tunnus tuottajatietojärjestelmässä
+viimeisinMuutos  | [TM_Instant](#tm_instant) | 0..1 | ajanhetki, jolloin kohteen tietoja on viimeksi muutettu tuottajatietojärjestelmässä
+tallennusAika    | [TM_Instant](#tm_instant) | 0..1 | ajanhetki, jolloin kohde on tietojärjestelmään
 
-Kuvaa kielikohtaisen merkkijonon. Laajentaa [CharacterString](#characterstring)-rajapintaa lisäämällä siihen ```language```-attribuutin, jonka arvo on ```LanguageCode```-koodiston arvo. Kielikoodi voi [ISO 19103][ISO-19103]-standardin määritelmän mukaan olla mikä tahansa ISO 639 -standardin osa.
 
-#### Number
+#### AbstraktiMaankayttoasia
 
-Kuvaa yleisen numeroarvon, joka voi olla kokonaisluku, desimaaliluku tai liukuluku. Määritelty rajapintana [ISO 19103][ISO-19103]-standardissa.
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+nimi| [LanguageString](#languagestring)     | 0..* | asian nimi
+kuvaus      | [LanguageString](#languagestring) | 0..* | asian kuvausteksti
+metatietokuvaus  | [URI](#uri) | 0..1  | viittaus ulkoiseen metatietokuvaukseen
 
-#### Integer
+#### Asiakirja
 
-Laajentaa [Number](#number)-rajapintaa kuvaamaan numeron, joka on kokonaisluku ilman murto- tai desimaaliosaa. Määritelty rajapintana [ISO 19103][ISO-19103]-standardissa.
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+asiakirjatunnus| [ [URI](#uri) | 0..* | asiakirjan pysyvä tunnus, esim. diaarinumero tai muu dokumentinhallinnan tunnus
+laji | [Asiakirjalaji](#asiakirjalaji) | 1  | asiakirjan tyyppi
+lisatietolinkki  | [URI](#uri) | 0..1 | viittaus ulkoiseen lisätietokuvaukseen asiakirjasta
+metatietolinkki | [URI](#uri) | 0..1 | viittaus ulkoiseen metatietokuvaukseen asiakirjasta
+
+#### AbstraktiTapahtuma
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+nimi |[LanguageString](#languagestring) | 0..* | tapahtuman kuvaus
+tapahtumaAika | [TM_Object](#tm_object) | 0..1  | tapahtuman aika (hetki tai aikaväli)
+kuvaus  | [LanguageString](#languagestring) | 0..* | tapahtuman tekstimuotoinen kuvaus
 
 #### Decimal
 
@@ -111,24 +136,9 @@ Tonttijakomallin UML-luokkakaaviot ovat saatavilla erillisellä [UML-kaaviot](..
 
 ## Tonttijakomallin luokat
 
-### AbstraktiVersioituObjekti
-Englanninkielinen nimi: **AbstractVersionedObject**
-
-Stereotyyppi: FeatureType (kohdetyyppi)
-
-Yhteinen yläluokka kaikille kaavatietomallin versiohallituille luokille. Kuvaa kaikkien kohdetyyppien yhteiset ominaisuudet ja assosiaatiot.
 
 **Ominaisuudet**
 
-Nimi             | Name               | Tyyppi              | Kardinaliteetti | Kuvaus
------------------|--------------------|---------------------|-----------------|------------------------------------
-paikallinenTunnus| localId            | [CharacterString](#characterstring)     | 0..1            | kohteen pääavain (id)
-nimiavaruus      | namespace          | [URI](#uri)                 | 0..1            | tunnusten nimiavaruus
-viittausTunnus   | referenceId        | [URI](#uri)                 | 0..1            | johdettu nimiavaruudesta, luokan englanninkielisestä nimestä ja paikallisesta tunnuksesta
-identiteettiTunnus | identityId       | [CharacterString](#characterstring)     | 0..1            | kohteen versioriippumaton tunnus
-tuottajakohtainenTunnus | producerSpecificId | [CharacterString](#characterstring) | 0..1         | kohteen tunnus tuottajatietojärjestelmässä
-viimeisinMuutos  | latestChange       | [TM_Instant](#tm_instant)          | 0..1            | ajanhetki, jolloin kohteen tietoja on viimeksi muutettu tuottajatietojärjestelmässä
-tallennusAika    | storageTime        | [TM_Instant](#tm_instant)          | 0..1            | ajanhetki, jolloin kohde on tietojärjestelmään
 
 {% include question.html content="Tämä kaavatietomallin, muokataan tarpeen mukaan." %}
 
