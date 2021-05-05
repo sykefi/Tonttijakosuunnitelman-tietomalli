@@ -95,6 +95,46 @@ nimi |[LanguageString](#languagestring) | 0..* | tapahtuman kuvaus
 tapahtumaAika | [TM_Object](#tm_object) | 0..1  | tapahtuman aika (hetki tai aikaväli)
 kuvaus  | [LanguageString](#languagestring) | 0..* | tapahtuman tekstimuotoinen kuvaus
 
+#### Kasittelytapahtuma
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+laji | [AbstraktiKasittelytapahtumanLaji](#AbstraktiKasittelytapahtumanLaji) | 1  | käsittelytapahtuman tyyppi
+
+#### Vuorovaikutustapahtuma
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+laji | [AbstraktiVuorovaikutustapahtumanLaji](#AbstraktiVuorovaikutustapahtumanLaji) | 1  | vuorovaikutustapahtuman tyyppi
+
+#### Organisaatio
+
+{% include note.html content="Tulossa" %}
+
+#### Koodistot
+- LahtotietoaineistonLaji
+- AsiakirjanLaji
+- AbstraktiKasittelytapahtumanLaji
+- AbstraktiVuorovaikutustapahtumanLaji
+
+### INSPIRE datamääritelmät
+
+#### CharacterString
+
+Kuvaa yleisen merkkijonon, joka koostuu 0..* merkistä, merkkijonon pituudesta, merkistökoodista ja maksimipituudesta. Määritelty rajapinta-tyyppisenä [ISO 19103][ISO-19103]-standardissa.
+
+#### LanguageString
+
+Kuvaa kielikohtaisen merkkijonon. Laajentaa CharacterString-rajapintaa lisäämällä siihen language-attribuutin, jonka arvo on LanguageCode-koodiston arvo. Kielikoodi voi [ISO 19103][ISO-19103]-standardin määritelmän mukaan olla mikä tahansa ISO 639 -standardin osa.
+
+#### Number
+
+Kuvaa yleisen numeroarvon, joka voi olla kokonaisluku, desimaaliluku tai liukuluku. Määritelty rajapintana [ISO 19103][ISO-19103]-standardissa.
+
+#### Integer
+
+Laajentaa Number-rajapintaa kuvaamaan numeron, joka on kokonaisluku ilman murto- tai desimaaliosaa. Määritelty rajapintana [ISO 19103][ISO-19103]-standardissa.
+
 #### Decimal
 
 Laajentaa [Number](#number)-rajapintaa kuvaamaan numeron, joka on desimaaliluku. Decimal-rajapinnan toteuttava numero voidaan ilmaista virheettä yhden kymmenysosan tarkkuudella. Määritelty rajapintana [ISO 19103][ISO-19103]-standardissa. Decimal-numeroita käytetään, kun desimaalien käsittelyn tulee olla tarkkaa, esim. rahaan liityvissä tehtävissä.
@@ -126,31 +166,28 @@ Kaikkien geometria-tyyppien yhteinen rajapinta [ISO 19107][ISO-19107]-standardis
 #### Point
 Täsmälleen yhdestä pisteestä koostuva geometriatyyppi. Määritelty rajapintana [ISO 19107][ISO-19107]-standardissa.
 
-## Tonttijakomallin yleispiirteet
+## Tonttijakosuunnitelman tiedot
 
-UML-mallin suunnittelussa on kiinnitetty erityistä huomiota siihen, että malli tarjoaa hyvän yhteentoimivuuskehikon tulevaisuuden kaavatietojen tietomallipohjaiseen kuvaamiseen erilaisissa tietojärjestelmissä. Malliin on tarkoituksellisesti jätetty useita laajennusmahdollisuuksia käyttäen abstrakteja luokkia ja koodistoja. Käyttämällä yhteistä luokkarakennetta ja erikoistamala koodistoja kaavalajikohtaisesti on saatu aikaan malli, joka mahdollistaa eri kaavalajien käsittelyn, tiedonsiirron ja tallentamisen samojen tietojärjestelmien ja -rakenteiden avulla, mutta tarjoaa kuitenkin riittävät mahdollisuudet eri kaavalajien erityispiirteiden huomioimiseen niiden tietosisällön ja merkityksen osalta.
+### Tonttijakosuunnitelma
 
-Tonttijakomallin UML-luokkakaaviot ovat saatavilla erillisellä [UML-kaaviot](../uml/)-sivulla.
-
-{% include note.html content="Kopioitu suoraan kaavatietomallilta, muutettu vain tietomallin nimi. Lisäksi KTM:llä UML-kaaviot jaettu kahdeksi, MKP ja kaavatiedot." %}
-
-## Tonttijakomallin luokat
-
-
-**Ominaisuudet**
-
-
-{% include question.html content="Tämä kaavatietomallin, muokataan tarpeen mukaan." %}
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+laji | [Codelist](#tonttijakosuunnitelmanLaji) | 1  | kertoo, millainen tonttijakosuunnitelma on laadittu
+tunnus  | [CharacterString](#CharacterString) | 1 | yksilöivä ID
+elinkaarentila | [Codelist](#tonttijakosuunnitelmanElinkaarentila) | 1 | yleisimmät arvot vireillä oleva,  hyväksytty tai voimassa
+kumoamistieto | [TonttijakosuunnitelmanKumoamistieto](#TonttijakosuunnitelmanKumoamistieto) | 0..* | tonttijakosuunnitelman tai sen osa, jonka tämä tonttijakosuunnitelma kumoaa
+vireilletuloAika | [dateTime](#dateTime) | 0..1 | aika, jolloin tonttijakosuunnitema on tullut vireille
+hyvaksymisAika | [dateTime](#dateTime) | 0..1 | aika, jolloin tonttijakosuunnitelma on tullut virallisesti hyväksyttyä
+digitaalinenAlkupera | [DigitaalinenAlkupera](#DigitaalinenAlkupera) | 0..1 | luokittelu alunperin tietomallin mukaan luotuihin ja jälkeenpäin digitoituihin tonttijakosuunnitelmiin
 
 **Assosiaatiot**
 
-Roolinimi        | Role name          | Kohde               | Kardinaliteetti | Kuvaus
+Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
 -----------------|--------------------|---------------------|-----------------|------------------------------------
-korvaaObjektin   | replacesObject     | [AbstraktiVersioituObjekti](#abstraktiversioituobjekti) | 0..* | kohteen versio, jonka tämä versio korvaa. Voi olla saman kohteen edellinen versio tai poistuva kohde, jonka tämä kohde korvaa. Oltava saman luokan instanssi.
-korvattuObjektilla | replacedByObject | [AbstraktiVersioituObjekti](#abstraktiversioituobjekti) | 0..* | kohteen versio, jolla tämä versio on korvattu. Voi olla saman kohteen seuraava versio tai uusi kohde, jolla tämä kohde on korvattu. Oltava saman luokan instanssi.
+esitonttikohde | [Kaavakohde](#Kaavakohde) | 1 | paikkatietokohde, johon kohdistuu kaavamääräyksiä tai -suosituksia
+laatija | [TonttijakosuunnitelmanLaatija](#TonttijakosuunnitelmanLaatija) | 1 | tonttijakosuunnitelman laatija
 
-{% include question.html content="Tämä kaavatietomallin, muokataan tarpeen mukaan." %}
-
+<!-- Jatka tästä -->
 ### Luokka
 Englanninkielinen nimi: 
 
