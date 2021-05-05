@@ -1,5 +1,5 @@
 <div class="definitionref">
-    <h1>Yhteentoimivuusalustan sanasto: <a href="http://uri.suomi.fi/terminology/{{ include.dict | default: 'rytj-tjs' }}/terminological-vocabulary-0">{{ include.dictname | default: 'Tonttijakosuunnitelma' }}</a></h1>
+    <h1>Yhteentoimivuusalustan sanasto: <a href="http://uri.suomi.fi/terminology/{{ include.dict | default: 'rytj-kaava' }}/terminological-vocabulary-0">{{ include.dictname | default: 'Kaavatietomalli' }}</a></h1>
     <dl class="definition">
         <dt class="definition-concept">{{ include.name }}</dt>
         {% if include.def %}
@@ -11,5 +11,5 @@
         <dd class="definition-note">{{ include.note }}</dd>
         {% endif %}  
     </dl>
-    <p><a href="http://uri.suomi.fi/terminology/{{ include.dict | default: 'rytj-tjs' }}/{{ include.id }}" class="definition-uri">http://uri.suomi.fi/terminology/{{ include.dict | default: 'rytj-tjs' }}/{{ include.id }}</a>&nbsp;<i class="fas fa-external-link-alt"></i></p>
+    <p><a href="http://uri.suomi.fi/terminology/{{ include.dict | default: 'rytj-kaava' }}/{{ include.id }}" class="definition-uri">http://uri.suomi.fi/terminology/{{ include.dict | default: 'rytj-kaava' }}/{{ include.id }}</a>&nbsp;<i class="fas fa-external-link-alt"></i></p>
 </div>
