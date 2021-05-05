@@ -12,6 +12,12 @@ status: "Keskeneräinen"
 1. 
 {:toc}
 
+## Looginen malli kaaviona
+![Tonttijakosuunnitelman looginen malli graafisena mallinnuksena](looginenmalli.png "Tonttijakosuunnitelman looginen malli graafisena mallinnuksena")
+
+(Lataa [Kaavio määritelmien kanssa](looginenmalli.png))
+
+
 ## Yleistä
 
 Loogisen tason tietomalli määrittelee kaikille tonttijakosuunnitelman kohteille yhteiset tietorakenteet, joita sovelletaan tonttijaon ilmaisemiseen laadittujen soveltamisohjeiden ja niissä kiinnitettyjen koodistojen sekä elinkaari- ja laatusääntöjen mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta.
@@ -46,7 +52,7 @@ Myös tietomallin standardointi on yhdenmukainen aiemmin luodun kaavatietomallin
 
 {% include question.html content="Muutoksia tähän?" %}
 
-### Muulla määritellyt luokat ja tietotyypit
+### Muualla määritellyt luokat ja tietotyypit
 
 #### CharacterString
 
