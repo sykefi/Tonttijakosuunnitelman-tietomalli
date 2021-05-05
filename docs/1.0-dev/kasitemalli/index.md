@@ -34,7 +34,7 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan san
 {% include defintionref_tjs.html id="concept-3" name="tonttijakosuunnitelman käsittelytapahtuma" def="Tonttijakosuunnitelman käsittelyprosessiin kuuluva tapahtuma, jonka johdosta elinkaaren tila voi muuttua." %}
 
 ### rytj-tjs: Tonttijakosuunnitelman vuorovaikutustapahtuma
-{% include defintionref_tjsf.html id="concept-4" name="tonttijakosuunnitelman vuorovaikutustapahtuma" def="Tonttijakosuunnitelmaprosessiin kuuluva tapahtuma, jonka tarkoituksena on tarjota tonttijakosuunnitelman asianosaiselle mahdollisuus lausua mielipiteensä ehdotuksesta." %}
+{% include defintionref_tjs.html id="concept-4" name="tonttijakosuunnitelman vuorovaikutustapahtuma" def="Tonttijakosuunnitelmaprosessiin kuuluva tapahtuma, jonka tarkoituksena on tarjota tonttijakosuunnitelman asianosaiselle mahdollisuus lausua mielipiteensä ehdotuksesta." %}
 
 ### rytj-tjs: Tonttijakosuunnitelman kumoamistieto
 {% include defintionref_tjs.html id="concept-5" name="tonttijakosuunnitelman kumoamistieto" def="Tieto tonttijakosuunnitelman hyväksymisen johdosta kokonaisuudessaan kumoutuvasta tonttijakosuunnitelmasta tai tonttijakosuunnitelman kumottavasta esitontista." %}
@@ -46,10 +46,10 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan san
 {% include defintionref_tjs.html id="concept-6" name="esitonttikohde" def="Tonttijakosuunnitelmassa osoitettu aluemainen tai pistemäinen kohde kiinteistöjaotuksen uudistamiseksi, jonka alueella maankäyttöä tai rakentamista halutaan ohjata." %}
 
 ### rytj-kaava: Kaavamääräys
-{% include defintionref_kaava.html id="concept-1010" name="kaavamääräys" def="Kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
+{% include defintionref.html id="concept-1010" name="kaavamääräys" def="Kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
 
 ### rytj-kaava: Arvo
-{% include defintionref_kaava.html id="concept-1011" name="ominaisuuden arvo" def="Kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
+{% include defintionref.html id="concept-1011" name="ominaisuuden arvo" def="Kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
 
 ### rytj-tjs: Esitonttitietovarasto
 {% include defintionref_tjs.html id="concept-7" name="esitonttitietovarasto" def="Tietojärjestelmä, jonka tehtävänä on vastaanottaa, säilyttää ja jaella tietomallimuotoista tonttjakosuunnitelmatietoa laatu- ja elinkaarisääntöjen mukaisesti." %}
