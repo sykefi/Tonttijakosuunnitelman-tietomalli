@@ -15,9 +15,9 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan san
 {:toc}
 
 ## Käsitekaavio
-![Tonttijakosuunnitelman käsitemalli graafisena mallinnuksena](Kasitemalli_graafinen_mallinnus_neo4j.png "Tonttijakosuunnitelman käsitemalli graafisena mallinnuksena")
+![Tonttijakosuunnitelman käsitemalli graafisena mallinnuksena](kasitemalli.png "Tonttijakosuunnitelman käsitemalli graafisena mallinnuksena")
 
-(Lataa [käsitekaavio määritelmien kanssa](Kasitemalli_graafinen_mallinnus_neo4j.png))
+(Lataa [käsitekaavio määritelmien kanssa](kasitemalli.png))
 
 ## Käsitteet
 
