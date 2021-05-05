@@ -23,7 +23,7 @@ Kaavatietomallin kaavamääräykset joiden laji-attribuutin arvo on Tonttijako-k
 {% include note.html content="Tähän varmaan halutaan viittaukset kyseisiin koodeihin y-alustalla." %}
 
 ## Normatiiviset viittaukset
-Seuraavat dokumentit ovat välttämättömiä tämän dokumentin täysipainoisessa soveltamisessa:
+Tonttijakosuunnitelman tietomalli hyödyntää samoja normatiivisia viittauksia kuin kaavatietomallikin. Tämä käsittää seuraavat dokumentit:
 
 * [ISO 639-2:1998 Codes for the representation of names of languages — Part 2: Alpha-3 code][ISO-639-2]
 * [ISO 8601-1:2019 Date and time — Representations for information interchange — Part 1: Basic rules][ISO-8601-1]
@@ -36,12 +36,13 @@ Seuraavat dokumentit ovat välttämättömiä tämän dokumentin täysipainoises
 {% include question.html content="Nämä ovat kaavatietolajin: mitä on liikaa, mitä puuttuu?" %}
 
 ## Standardienmukaisuus
-Looginen tonttijakosuunnitelmamalli perustuu [ISO 19109][ISO-19109]-standardin yleinen kohdetietomalliin (General Feature Model, GFM), joka määrittelee rakennuspalikat paikkatiedon ISO-standardiperheen mukaisten sovellusskeemojen määrittelyyn. GFM kuvaa muun muassa metaluokat ```FeatureType```, ```AttributeType``` ja ```FeatureAssociationType```. 
+
+Myös tietomallin standardointi on yhdenmukainen aiemmin luodun kaavatietomallin standardienmukaisuuden kanssa. 
+
+{% include defintionref_tjs.html def="Looginen tonttijakosuunnitelmamalli perustuu [ISO 19109][ISO-19109]-standardin yleinen kohdetietomalliin (General Feature Model, GFM), joka määrittelee rakennuspalikat paikkatiedon ISO-standardiperheen mukaisten sovellusskeemojen määrittelyyn. GFM kuvaa muun muassa metaluokat ```FeatureType```, ```AttributeType``` ja ```FeatureAssociationType```. 
 Tonttijakosuunnitelmamalli kaikki tietokohteet, joilla on tunnus ja jota voivat esiintyä erillään toisista kohteista on määritelty kohdetyypeinä (stereotyyppi ```FeatureType```. Sellaiset tietokohteet, joilla ei ole omaa tunnusta ja jotka voivat esiintyä vain kohdetyyppien attribuuttien arvoina on määritelty [ISO 19103][ISO-19103]-standardin ```DataType```-stereotyypin avulla. Lisäksi [HallinnollinenAlue](#hallinnollinenalue) ja [Organisaatio](#organisaatio) on mallinnettu vain rajapintojen (```Interface```) avulla, koska on niitä ei ole tarpeen kuvata tonttijakosuunnitelmamallissa yksityiskohtaisesti, ja on todennäköistä, että suunnitelmia ylläpitävät tietojärjestelmät tarjovat niille konkreettiset toteuttavat luokat.
 
-[ISO 19109][ISO-19109] -standardin lisäksi tonttijakosuunnitelmamalli perustuu muihin paikkatiedon ISO-standardeihin, joista keskeisimpiä ovat [ISO 19103][ISO-19103] (UML-kielen käyttö paikkatietojen mallinnuksessa), [ISO 19107][ISO-19107] (sijaintitiedon mallintaminen) ja [ISO 19108][ISO-19108] (aikaan sidotun tiedon mallintaminen).
-
-{% include note.html content="Kopioitu suoraan kaavatietomallilta, muutettu vain tietomallin nimi. " %}
+[ISO 19109][ISO-19109] -standardin lisäksi tonttijakosuunnitelmamalli perustuu muihin paikkatiedon ISO-standardeihin, joista keskeisimpiä ovat [ISO 19103][ISO-19103] (UML-kielen käyttö paikkatietojen mallinnuksessa), [ISO 19107][ISO-19107] (sijaintitiedon mallintaminen) ja [ISO 19108][ISO-19108] (aikaan sidotun tiedon mallintaminen)." %}
 
 ### Muulla määritellyt luokat ja tietotyypit
 

@@ -7,7 +7,7 @@ modelversion: "1.0-dev"
 status: "Keskeneräinen"
 ---
 # Käsitemalli
-Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan sanasto-työkalussa. Käsitemallin nimiavaruus on [rytj-tjs](http://uri.suomi.fi/terminology/rytj-tjs/). Mukana on myös kaksi kaavatietomallin käsitemallin käsitettä. Niiden nimiavaruus on [rytj-kaava](http://uri.suomi.fi/terminology/rytj-kaava/).
+Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan sanasto-työkalussa. Käsitemallin nimiavaruus on [rytj-tjs](http://uri.suomi.fi/terminology/rytj-tjs/). Mukana on käsitteitä myös kaavatietomallista, ja niiden nimiavaruus on [rytj-kaava](http://uri.suomi.fi/terminology/rytj-kaava/).
 
 {:.no_toc}
 
