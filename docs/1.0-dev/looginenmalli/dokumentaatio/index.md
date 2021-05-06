@@ -254,30 +254,58 @@ kumoaaEsitonttikohteenKokonaan | [Boolean](#Boolean) | 1  | jos arvo on true, ku
 ## Koodistot
 
 ### MKP:n koodistot
-- LahtotietoaineistonLaji
-- AsiakirjanLaji
-- AbstraktiKasittelytapahtumanLaji
-- AbstraktiVuorovaikutustapahtumanLaji
 
-{% include note.html content="Tarvitsee linkit MKP:n koodistoihin y-alustalla." %}
+#### LahtotietoaineistonLaji
+
+#### AsiakirjanLaji
+
+#### AbstraktiKasittelytapahtumanLaji
+
+#### AbstraktiVuorovaikutustapahtumanLaji
 
 ### Tonttijakosuunnitelman koodistot
 
 #### TonttijakosuunnitelmanLaji
 
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: 
+
+{% include codelistref.html id="RY_TonttijakosuunnitelmanLaji" name="Tonttijakosuunnitelman laji" %}
+
 #### TonttijakosuunnitelmanElinkaarentila
 
-{% include note.html content="Koodisto perustuu lain x momentiin 11§." %}
+Stereotyyppi: CodeList (koodisto)
 
-#### Asiakirjalaji 
+Laajennettavuus: 
+
+{% include codelistref.html id="RY_TonttijakosuunnitelmanElinkaarentila" name="Tonttijakosuunnitelman elinkaaren tila" %}
+
+{% include note.html content="Perustuu MRL:n 11. lukuun." %}
+
+#### TonttijakosuunnitelmanAsiakirjanLaji
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: 
+
+{% include codelistref.html id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Tonttijakosuunnitelmaa koskevan asiakirjan laji" %}
 
 #### MaanalaisuudenLaji
 
-{% include note.html content="Tulossa." %}
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: 
+
+{% include note.html content="Ei löydy vielä y-alustalta." %}
 
 #### AbstraktiKaavamaarayslaji
 
-{% include note.html content="Tulossa." %}
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: 
+
+{% include note.html content="Ei löydy vielä y-alustalta." %}
 
 #### KaavamääräyslajiAsemakaava
 
