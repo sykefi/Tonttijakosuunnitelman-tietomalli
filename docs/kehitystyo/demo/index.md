@@ -2,7 +2,7 @@
 layout: "default"
 title: "tjs - demopalvelu"
 description: ""
-page: "tjs-demopalvelu"
+page: "demo"
 modelversion: "1.1-dev"
 status: "Keskeneräinen"
 ---

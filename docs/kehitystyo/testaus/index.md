@@ -1,7 +1,7 @@
 ---
 layout: "default"
 title: "Tietomallin testaus"
-page: "tjs-testaus"
+page: "testaus"
 status: "Ehdotus"
 ---
 # Tietomallin testaus

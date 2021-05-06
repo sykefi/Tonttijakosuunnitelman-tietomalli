@@ -2,7 +2,7 @@
 layout: "default"
 title: "tjs-projektitiimi"
 description: ""
-page: "tjs-projektitiimi"
+page: "projektitiimi"
 ---
 # Projektitiimi
 

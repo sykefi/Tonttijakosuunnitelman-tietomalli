@@ -2,7 +2,7 @@
 layout: "default"
 title: "tjs-jatkokehitys"
 description: ""
-page: "tjs-jatkokehitys"
+page: "jatkokehitys"
 status: "Keskeneräinen"
 ---
 # Jatkokehitys

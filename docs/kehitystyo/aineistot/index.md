@@ -2,7 +2,7 @@
 layout: "default"
 title: "tjs-testiaineistot"
 description: ""
-page: "tjs-testiaineistot"
+page: "aineistot"
 modelversion: "1.0-dev"
 status: "Keskeneräinen"
 ---
