@@ -1,8 +1,8 @@
 ---
 layout: "default"
-title: "tjs-testiaineistot"
+title: "Tonttijakosuunnitelma - testiaineistot"
 description: ""
-page: "testiaineistot"
+page: "aineistot"
 modelversion: "1.0-dev"
 status: "Keskeneräinen"
 ---

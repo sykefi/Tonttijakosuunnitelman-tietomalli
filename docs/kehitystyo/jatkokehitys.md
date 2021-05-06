@@ -1,8 +1,8 @@
 ---
 layout: "default"
-title: "tjs-jatkokehitys"
+title: "Tonttijakosuunnitelman jatkokehitys"
 description: ""
-page: "tjs-jatkokehitys"
+page: "jatkokehitys"
 status: "Keskeneräinen"
 ---
 # Jatkokehitys

@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Kaavatietomalli - Kaava-JSON"
+title: "Tonttijakosuunnitelma - JSON"
 description: ""
 page: "kaava-json"
 modelversion: "1.0-dev"

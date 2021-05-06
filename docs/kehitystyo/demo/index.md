@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "tjs - demopalvelu"
+title: "Tonttijakosuunnitelman demopalvelu"
 description: ""
 page: "demo"
 modelversion: "1.1-dev"

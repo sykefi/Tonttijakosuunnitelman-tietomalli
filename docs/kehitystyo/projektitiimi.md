@@ -1,8 +1,8 @@
 ---
 layout: "default"
-title: "tjs-projektitiimi"
+title: "Tonttijakosuunnitelman tietomallin projektitiimi"
 description: ""
-page: "tjs-projektitiimi"
+page: "projektitiimi"
 ---
 # Projektitiimi
 

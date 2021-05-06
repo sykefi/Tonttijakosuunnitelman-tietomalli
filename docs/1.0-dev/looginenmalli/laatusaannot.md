@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Laatusäännöt"
+title: "Tonttijakosuunnitelma - looginen tietomalli -Laatusäännöt"
 description: ""
 page: "laatusaannot"
 modelversion: "1.0-dev"

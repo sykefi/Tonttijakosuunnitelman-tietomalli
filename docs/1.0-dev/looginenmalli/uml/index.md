@@ -1,6 +1,6 @@
 ---
 layout: "ea-frame"
-title: "Tonttijakosuunnitelma - UML"
+title: "Tonttijakosuunnitelma - looginen tietomalli - UML"
 description: ""
 page: "uml"
 modelversion: "1.0-dev"
