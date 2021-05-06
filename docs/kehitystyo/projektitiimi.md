@@ -16,7 +16,7 @@ Ubigulta työhön osallistuivat:
 # Sidosryhmät
 
 Ympäristöministeriöstä työn ohjaukseen osallistuivat:
-- Pekka Muukalainen
-- Risto Jussinpoika
+- Anssi Hänninen
+- Jari Vaarma
 
 {% include note.html content="Kuvaillaan tänne sidosryhmät ja annetaan kiitosta sinne, minne se kuuluu" %}
