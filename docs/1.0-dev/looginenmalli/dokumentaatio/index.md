@@ -317,6 +317,15 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_KaavamaaraysLaji_AK" name="Kaavamääräyslaji (asemakaava)" %}
 
+#### EsitonttiRajapiste
+
+Erikoistaa luokkaa AbstraktiKaavamaarayslaji.
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: Ei laajennettavissa
+
+{% include codelistref.html id="RY_EsitonttiRajapiste" name="Esitonttirajapiste" %}
 
 <!-- linkit standardeihin, joihin mainittu sivun alussa -->
 [ISO-8601-1]: https://www.iso.org/standard/70907.html "ISO 8601-1:2019 Date and time — Representations for information interchange — Part 1: Basic rules"
