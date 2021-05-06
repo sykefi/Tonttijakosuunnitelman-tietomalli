@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Tontinjakosuunnitelma - käsitemalli"
+title: "Tonttijakosuunnitelma - käsitemalli"
 description: ""
 page: "kasitemalli"
 modelversion: "1.0-dev"

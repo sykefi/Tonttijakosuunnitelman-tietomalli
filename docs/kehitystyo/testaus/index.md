@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Tietomallin testaus"
+title: "Tonttijakosuunnitelman testaus"
 page: "testaus"
 status: "Ehdotus"
 ---

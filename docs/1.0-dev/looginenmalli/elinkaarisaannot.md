@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Elinkaarisäännöt"
+title: "Tonttijakosuunnitelma - looginen tietomalli - Elinkaarisäännöt"
 description: ""
 page: "elinkaarisaannot"
 modelversion: "1.0-dev"

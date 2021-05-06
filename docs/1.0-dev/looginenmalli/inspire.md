@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Kaavatietomalli - looginen tietomalli - Inspire"
+title: "Tonttijakosuunnitelma - looginen tietomalli - Inspire"
 description: ""
 page: "inspire"
 modelversion: "1.0-dev"

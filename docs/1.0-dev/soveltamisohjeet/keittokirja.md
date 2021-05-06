@@ -1,14 +1,12 @@
 ---
 layout: "default"
-title: "Keittokirja"
-description: "Esimerkkejä tonttijaon tietomallin soveltamisesta"
+title: "Tonttijakosuunnitelma - Keittokirja"
+description: "Esimerkkejä tonttijakosuunnitelman soveltamisesta"
 page: "cookbook-tjs"
 modelversion: "1.0-dev"
 status: "Keskeneräinen"
 ---
 # Keittokirja
 ## Käytännön esimerkkejä tietomallin käytöstä
-Tähän voi kirjata havainnollistavia käyttöesimerkkejä.
 
-
-
+{% include tip.html content="Tähän voi kirjata havainnollistavia käyttöesimerkkejä." %}

@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "TJS - looginen tietomalli - dokumentaatio"
+title: "Looginen tietomalli - looginen tietomalli - dokumentaatio"
 description: ""
 page: "dokumentaatio"
 modelversion: "1.0-dev"
