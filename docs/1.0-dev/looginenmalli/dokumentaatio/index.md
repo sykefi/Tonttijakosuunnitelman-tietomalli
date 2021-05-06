@@ -297,7 +297,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: 
 
-{% include note.html content="Ei löydy vielä y-alustalta." %}
+{% include codelistref.html id="RY_MaanalaisuudenLaji" name="Maanalaisuuden laji" %}
 
 #### AbstraktiKaavamaarayslaji
 
