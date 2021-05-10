@@ -21,24 +21,10 @@ Tämän muodollisen dokumentin tietoja täydentää [Tonttijakosuunnitelman keit
 
 <!-- **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/01>  <- Tässä esimerkki, miten voidaan viitata suoraan koodiin koodistot-palvelussa. -->
 
-## Koodistot (tämä pääotsikko)
+## Koodistot
 
 ### Aliotsikko
 
-### Aliotsikko
-
-### Aliotsikko
-
-### Aliotsikko
-
-### Aliotsikko
-
-### Aliotsikko
-
-## Seuraava pääotsikko
-
-### Aliotsikko
-
-### Aliotsikko
+## Pääotsikko
 
 ### Aliotsikko
