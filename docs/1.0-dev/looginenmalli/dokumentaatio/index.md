@@ -27,8 +27,17 @@ Tietomalli perustuu kaavatietomallin yhteiskäyttöisiin tietokomponentteihin. K
 
 Kaavatietomallin kaavamääräykset joiden laji-attribuutin arvo on Tonttijako-koodin “Esitontti” tai “Sitova tonttijako laadittava”, ovat lähtötietoja tonttijakosuunnitelman laatimiselle. Kaavakohde siirtyy suoraan tietorakenteena tonttijakosuunnitelman laatimisen prosessiin. Esitonttikohteita laadittaessa laatija tulkitsee kaavassa osoitetut määräykset sisältyväksi esitonttikohteeseen. 
 
-{% include note.html content="Tähän varmaan halutaan viittaukset kyseisiin koodeihin y-alustalla." %}
+{% include note.html content="Lisää vaadittavat viittaukset kyseisiin koodeihin y-alustalla." %}
 
+**Tonttijako-koodien merkitykset:**
+- “Sitova tonttijako laadittava” koskee koko kaavaa tai kaavan osaa.
+- “Esitontti” ilmaisee suunniteltua kiinteistöjaotusta.
+- Kaavakohteen sijainninSitovuus ilmaiseen Esitontin sitovuuden, jonka arvot voivat olla “Sitova” tai “Ohjeellinen”
+
+{% include note.html content="Tähän huomioitava kaavatietomallin Kaavakohteen sijainninSitovuus attribuutti." %}
+
+{% include note.html content="Tähän kuvataan käyttötapaus kuinka kaavakohde siirtyy esitontin lähtötiedoksi." %}
+ 
 ## Normatiiviset viittaukset
 Tonttijakosuunnitelman tietomalli hyödyntää samoja normatiivisia viittauksia kuin kaavatietomallikin. Tämä käsittää seuraavat dokumentit:
 
