@@ -9,6 +9,8 @@ status: "Keskeneräinen"
 # Inspire-yhteensopivuus
 {:.no_toc}
 
+{% include important.html content="Tämä sivu on vielä kaavatietomallin mukainen, eikä vastaa välttämättä täysin tonttijakosuunnitelman piirteitä INSPIRE:n suhteen." %}
+
 1. 
 {:toc}
 
