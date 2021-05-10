@@ -13,6 +13,7 @@ status: "Keskeneräinen"
 1. 
 {:toc}
 
+{% include important.html content="Tässä esitettävä tieto on toistaiseksi kaavatietomallin." %}
 
 ## Johdanto
 
