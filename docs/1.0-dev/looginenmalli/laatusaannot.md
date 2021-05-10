@@ -8,7 +8,7 @@ status: "Keskeneräinen"
 ---
 # Laatusäännöt
 {:.no_toc}
-
+{% include important.html content="Tämä sivu on vielä kaavatietomallin mukainen, eikä vastaa välttämättä täysin tonttijakosuunnitelman laatusääntöjä." %}
 1. 
 {:toc}
 
@@ -41,8 +41,8 @@ Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa niiden 
 {% include clause_end.html %}
 
 {% include question.html content="Onko tarvetta puhua tässä, ja muuallakin jatkuvasti myös yleiskaavan soveltamisprofiilista ja sen noudattamisesta, vai riittääkö yksinään asemakaavaan viittaaminen?" %}
-
-### Merkkijonojen käyttö JATKA TÄSTÄ 23.4
+<!-- Jatka tästä työstöä. -->
+### Merkkijonojen käyttö
 #### Merkistöt
 {% include clause_start.html type="req" id="laatu/vaat-merkisto-utf8" %}
 Kaikki Kaavatietomallin tekstimuotoiset sisällöt on tiedonsiirtoa varten koodattava käyttäen UTF-8 -merkistökoodausta.
