@@ -7,9 +7,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="297mm"
+   height="210mm"
+   viewBox="0 0 297 210"
    version="1.1"
    id="svg8"
    sodipodi:docname="ym_background.svg"
@@ -27,9 +27,9 @@
      inkscape:window-height="1526"
      id="namedview189"
      showgrid="false"
-     inkscape:zoom="0.12598564"
-     inkscape:cx="-674.35916"
-     inkscape:cy="-133.16573"
+     inkscape:zoom="0.50394254"
+     inkscape:cx="81.281797"
+     inkscape:cy="496.86374"
      inkscape:window-x="2869"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
@@ -70,13 +70,13 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      id="layer1"
-     transform="matrix(-5.452038,0,0,-5.452038,760.98374,734.26254)">
+     transform="matrix(-1.2450339,0,0,-1.2450339,316.332,279.56451)">
     <g
        id="g841"
        transform="matrix(0.26458333,0,0,0.26458333,-43.80594,34.864525)">
