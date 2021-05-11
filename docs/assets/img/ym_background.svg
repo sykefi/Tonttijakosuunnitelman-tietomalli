@@ -12,7 +12,7 @@
    viewBox="0 0 210 297"
    version="1.1"
    id="svg8"
-   sodipodi:docname="YM_teema.svg"
+   sodipodi:docname="ym_background.svg"
    inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)">
   <sodipodi:namedview
      pagecolor="#ffffff"
@@ -27,13 +27,14 @@
      inkscape:window-height="1526"
      id="namedview189"
      showgrid="false"
-     inkscape:zoom="0.71268238"
-     inkscape:cx="210.80126"
-     inkscape:cy="542.7719"
+     inkscape:zoom="0.50394254"
+     inkscape:cx="50.463624"
+     inkscape:cy="554.20053"
      inkscape:window-x="2869"
      inkscape:window-y="-11"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg8" />
+     inkscape:current-layer="svg8"
+     inkscape:document-rotation="0" />
   <defs
      id="defs2">
     <clipPath
@@ -75,7 +76,7 @@
   </metadata>
   <g
      id="layer1"
-     transform="rotate(-90,104.72056,139.87236)">
+     transform="matrix(0,-1.2474911,1.2474911,0,-65.446565,262.91804)">
     <g
        id="g841"
        transform="matrix(0.26458333,0,0,0.26458333,-43.80594,34.864525)">
@@ -83,7 +84,7 @@
          id="g843">
         <path
            d="M 0,81.120003 H 1122.5601 V 712.47998 H 0 Z"
-           style="fill:#236192;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           style="fill:#f5f5f5;fill-opacity:1;fill-rule:nonzero;stroke:none"
            id="path845" />
       </g>
       <g
