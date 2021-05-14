@@ -52,12 +52,30 @@ body {
     }
 }
 
-h1, h2, h3, h4, h5 {
+h1 {
   line-height: 1.25 !important;
     font-family: "Gelion-Bold",Helvetica,Arial,sans-serif !important;
     font-weight: 700 !important;
     font-variant-ligatures: no-common-ligatures;
-    color: #373737;
+    color: #a02626;
+    scroll-margin-top: 3.8em;
+}
+
+h2 {
+  line-height: 1.25 !important;
+    font-family: "Gelion-Bold",Helvetica,Arial,sans-serif !important;
+    font-weight: 700 !important;
+    font-variant-ligatures: no-common-ligatures;
+    color: #3ed671;
+    scroll-margin-top: 3.8em;
+}
+
+h3, h4, h5 {
+  line-height: 1.25 !important;
+    font-family: "Gelion-Bold",Helvetica,Arial,sans-serif !important;
+    font-weight: 700 !important;
+    font-variant-ligatures: no-common-ligatures;
+    color: #3525c3;
     scroll-margin-top: 3.8em;
 }
 
