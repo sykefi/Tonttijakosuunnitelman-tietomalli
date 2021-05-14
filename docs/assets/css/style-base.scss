@@ -271,8 +271,9 @@ ol#markdown-toc > li:before {
   padding-top: 0px;
   font-weight: 400;
   counter-reset: h2counter;
+  // tässä tocin fill-väri
   a {
-    color: #2c5234;
+    color: #116df7;
     font-weight: 700;
     text-decoration: none;
   }
