@@ -57,7 +57,7 @@ h1 {
     font-family: "Gelion-Bold",Helvetica,Arial,sans-serif !important;
     font-weight: 700 !important;
     font-variant-ligatures: no-common-ligatures;
-    color: #a02626;
+    color: rgb(37, 55, 70);
     scroll-margin-top: 3.8em;
 }
 
@@ -291,7 +291,7 @@ ol#markdown-toc > li:before {
   counter-reset: h2counter;
   // tässä tocin fill-väri
   a {
-    color: #116df7;
+    color: rgb(37, 55, 70);
     font-weight: 700;
     text-decoration: none;
   }
