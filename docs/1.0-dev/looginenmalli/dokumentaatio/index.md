@@ -266,15 +266,41 @@ kumoaaEsitonttikohteenKokonaan | [Boolean](#Boolean) | 1  | jos arvo on true, ku
 
 #### LahtotietoaineistonLaji
 
+Englanninkielinen nimi:
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: 
+
 #### AsiakirjanLaji
+
+Englanninkielinen nimi:
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: 
 
 #### AbstraktiKasittelytapahtumanLaji
 
+Englanninkielinen nimi:
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: 
+
 #### AbstraktiVuorovaikutustapahtumanLaji
+
+Englanninkielinen nimi:
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: 
 
 ### Tonttijakosuunnitelman koodistot
 
 #### TonttijakosuunnitelmanLaji
+
+Englanninkielinen nimi:
 
 Stereotyyppi: CodeList (koodisto)
 
@@ -283,6 +309,8 @@ Laajennettavuus:
 {% include codelistref.html id="RY_TonttijakosuunnitelmanLaji" name="Tonttijakosuunnitelman laji" %}
 
 #### TonttijakosuunnitelmanElinkaarentila
+
+Englanninkielinen nimi:
 
 Stereotyyppi: CodeList (koodisto)
 
@@ -294,6 +322,8 @@ Laajennettavuus:
 
 #### TonttijakosuunnitelmanAsiakirjanLaji
 
+Englanninkielinen nimi:
+
 Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: 
@@ -301,6 +331,8 @@ Laajennettavuus:
 {% include codelistref.html id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Tonttijakosuunnitelmaa koskevan asiakirjan laji" %}
 
 #### MaanalaisuudenLaji
+
+Englanninkielinen nimi:
 
 Stereotyyppi: CodeList (koodisto)
 
@@ -310,6 +342,8 @@ Laajennettavuus:
 
 #### AbstraktiKaavamaarayslaji
 
+Englanninkielinen nimi:
+
 Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: 
@@ -317,6 +351,8 @@ Laajennettavuus:
 {% include note.html content="Ei löydy vielä y-alustalta." %}
 
 #### KaavamääräyslajiAsemakaava
+
+Englanninkielinen nimi:
 
 Erikoistaa luokkaa AbstraktiKaavamaarayslaji.
 
@@ -327,6 +363,8 @@ Laajennettavuus: Ei laajennettavissa
 {% include codelistref.html id="RY_KaavamaaraysLaji_AK" name="Kaavamääräyslaji (asemakaava)" %}
 
 #### EsitonttiRajapiste
+
+Englanninkielinen nimi:
 
 Erikoistaa luokkaa AbstraktiKaavamaarayslaji.
 
