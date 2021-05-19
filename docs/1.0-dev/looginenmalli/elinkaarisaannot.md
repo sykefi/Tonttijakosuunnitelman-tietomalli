@@ -13,8 +13,6 @@ status: "Keskeneräinen"
 1. 
 {:toc}
 
-{% include important.html content="Tässä esitettävä tieto on toistaiseksi kaavatietomallin." %}
-
 ## Johdanto
 
 Tonttijakosuunnitelmalla on tietomallissa elinkaari, joka määrää sen sisältämien tietokohteiden: 
@@ -158,31 +156,40 @@ Tonttijakosuunnitelmatietoa tuottavat järjestelmät voivat niin halutessaan kä
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-tuottajakohtainen-tunnus-gen" %}
-Tonttijaon tietovarasto ei koskaan muuta tuottavan tietojärjestelmän mahdollisesti asettamia tuottajakohtaisia tunnuksia, ja ne palautetaan sellaisenaan ladattaessa tietokohteita tietovarastosta.
+Tonttijakosuunnitelmatietovaranto ei koskaan muuta tuottavan tietojärjestelmän mahdollisesti asettamia tuottajakohtaisia tunnuksia, ja ne palautetaan sellaisenaan latattaessa tietokohteita tietovarannosta.
 {% include clause_end.html %}
 
-Tietojärjestelmät voivat käyttää tuottajakohtaisia tunnuksia kohdistamaan tonttijaon tietovarastoon ja paikallisiin tietojärjestelmiin tallennettuja tietokohteita toisiinsa esimerkiksi päivitettäessä niiden tallennuksen yhteydessä syntyneitä tunnuksia, vertailtaessa tonttijaon tietovarastoon tallennettuja kohteita ja paikallisia kohteita toisiinsa, sekä esitettäessä validointipalvelun tuloksia suunnitteluohjelmiston käyttäjälle.
+Tietojärjestelmät voivat käyttää tuottajakohtaisia tunnuksia kohdistamaan tonttijakosuunnitelmatietovarantoon ja paikallisiin tietojärjestelmiin tallennettuja tietokohteita toisiinsa esimerkiksi päivitettäessä niiden tallennuksen yhteydessä syntyneitä tunnuksia, vertailtaessa tonttijakosuunnitelmatietovarantoon tallennettuja kohteita ja paikallisia kohteita toisiinsa, sekä esitettäessä validointipalvelun tuloksia suunnitteluohjelmiston käyttäjälle.
 
-Tuottajakohtaisilta tunnuksilta ei vaadita yksilöivyyttä tai mitään tiettyä yhtenäistä muotoa, mutta UUID-muodon käyttäminen tarjoaa hyvin määritellyn ja standardoidun tavan luoda tuottajakohtaisista tunnuksista yksilöiviä eri tietojärjestelmien kesken. Tästä saattaa olla etua haluttaessa tehdä tuotettavista tonttijakoa koskevista tiedoista mahdollisimman järjestelmäriippumattomia ja esimerkiksi taata tuottajakohtaisten tunnusten yksilöivyys yli mahdollisten tonttijakosuunnitelmia tuottavien tietojärjestelmien vaihdosten ja päivitysten. 
+Tuottajakohtaisilta tunnuksilta ei vaadita yksilöivyyttä tai mitään tiettyä yhtenäistä muotoa, mutta UUID-muodon käyttäminen tarjoaa hyvin määritellyn ja standardoidun tavan luoda tuottajakohtaisista tunnuksista yksilöiviä eri tietojärjestelmien kesken. Tästä saattaa olla etua haluttaessa tehdä tuotettavista tonttijakosuunnitelmatiedoista mahdollisimman järjestelmäriippumattomia ja esimerkiksi taata tuottajakohtaisten tunnusten yksilöivyys yli mahdollisten tonttijakosuunnitelmatietoa tuottavien tietojärjestelmien vaihdosten ja päivitysten.
+
 
 {% include clause_start.html type="rec" id="elinkaari/suos-tuottajakohtainen-tunnus-form" %}
 Tuottajakohtaisen tunnuksen suositeltu muoto on UUID.
 {% include clause_end.html %}
 
-Esimerkki: ```123e4567-e89b-12d3-a456-426655440000```
+Esimerkki: ```tj-123445```
 
-### Kaavatunnus
-{% include clause_start.html type="req" id="elinkaari/vaat-kaavatunnus-maar" %}
-Kaavatunnus on kaavalle ennakolta haettava, kaavan kansallisesti yksilöivä tunnus. Tonttijaon tietomallissa kaavatunnus kuvataan [Kaava](dokumentaatio/#kaava)-luokan attribuutilla ```kaavaTunnus```.
+### Tonttijakosuunnitelmatunnus
+{% include clause_start.html type="req" id="elinkaari/vaat-tonttijakosuunnitelmatunnus-maar" %}
+Tonttijakosuunnitelmatunnus on tonttijakosuunnitelmalle ennakolta haettava, tonttijakosuunnitelman kansallisesti yksilöivä tunnus. Tonttijakosuunnitelman tietomallissa tonttijakosuunnitelmatunnus kuvataan [Tonttijakosuunnitelma](../../looginenmalli/dokumentaatio/#tonttijakosuunnitelma)-luokan attribuutilla ```tonttijakosuunnitelmaTunnus```.
 {% include clause_end.html %}
 
-{% include clause_start.html type="rec" id="elinkaari/suos-kaavatunnus-form" %}
-Kaavatunnuksen suositeltu muoto on UUID.
+{% include clause_start.html type="req" id="elinkaari/vaat-tonttijakosuunnitelmatunnus-gen" %}
+Tuottava tietojärjestelmän vastaa tonttijakosuunnitelmatunnuksen asettamisesta [Tonttijakosuunnitelma](../../looginenmalli/dokumentaatio/#tonttijakosuunnitelma)-luokan attribuutiksi. Se tulee olla asetettuna myös tonttijakosuunnitelman  ensimmäisen tonttijakosuunnitelmatietovarantoon tallennuksen yhteydessä.
+{% include clause_end.html %}
+
+{% include clause_start.html type="req" id="elinkaari/vaat-tonttijakosuunnitelmatunnus-yks" %}
+Tonttijakosuunnitelmatunnus on [Tonttijakosuunnitelma](../../looginenmalli/dokumentaatio/#tonttijakosuunnitelma)-luokan objekteille globaalisti yksilöivä, eikä muutu saman tonttijakosuunnitelman eri elinkaaren aikaisten versioiden tallennuksen yhteydessä.
+{% include clause_end.html %}
+
+Käytännössä myönnetyt tonttijakosuunnitelmatunnukset kannattaa tallentaa valmiiksi tonttijakosuunnitelmatietovarantoon, jotta voidaan tarkistaa, onko tallennettavaksi tarkoitettu tonttijakosuunnitelmatunnus myönnetty organisaatiolle, jonka tonttijakosuunnitelmaa ollaan tallentamassa. Kuntakoodin tai muun hallinnollisen alueen tunnuksen käyttö osana tonttijakosuunnitelmatunnusta ei ole suositeltavaa, sillä hallinnolliset alueet muuttuvat ajan kuluessa. Kun sidos tunnuksen ja hallinnollisen alueen välillä ei näy tunnuksessa, voidaan tonttijakosuunnitelman hallinnollista aluetta muuttaa joustavammin tonttijakosuunnitelman elinkaaren aikana.
+
+{% include clause_start.html type="rec" id="elinkaari/suos-tonttijakosuunnitelmatunnus-form" %}
+Tonttijakosuunnitelmatunnuksen suositeltu muoto on UUID.
 {% include clause_end.html %}
 
 Esimerkki: ```df5b2d6f-d6d6-4695-938c-dd7c4c784c28```
-
-{% include note.html content="Meidän pitää katsoa, miten ja mistä haetaan kaavatunnus, koska tjs:n osalta se on aina olemassa ensin." %}
 
 ### Pysyvien tunnusten palauttaminen tuottavalle järjestelmälle
 
