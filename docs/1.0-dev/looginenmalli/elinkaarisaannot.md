@@ -193,28 +193,28 @@ Esimerkki: ```df5b2d6f-d6d6-4695-938c-dd7c4c784c28```
 
 ### Pysyvien tunnusten palauttaminen tuottavalle järjestelmälle
 
-Versionhallinnan näkökulmasta on tärkeää, että tonttijakosuunnitelman tuottava tietojärjestelmä käyttää saman suunnitelman seuraavan version tallentamisessa ensimmäisen version tallennuksen yhteydessä luotua identiteettitunnusta. Vastaavasti kaikkien tietokohteiden osalta käytetään niiden ensimmäisen tallennuksen yhteydessä luotuja identiteettitunnuksia, mikäli objektin katsotaan kuvaavan ko. tietokohteen uutta versiota.
+Versionhallinnan näkökulmasta on tärkeää, että tonttijakosuunnitelman tuottava tietojärjestelmä käyttää saman tonttijakosuunnitelman seuraavan version tallentamisessa tonttijakosuunnitelman ensimmäisen version tallennuksen yhteydessä luotua identiteettitunnusta. Vastaavasti kaikkien tonttijakosuunnitelman tietokohteiden osalta käytetään niiden ensimmäisen tallennuksen yhteydessä luotuja identiteettitunnuksia, mikäli objektin katsotaan kuvaavan ko. tietokohteen uutta versiota.
 
 {% include clause_start.html type="req" id="elinkaari/vaat-tunnusten-palautus" %}
-Tietovaraston tallennusrajapinta palauttaa tallennetun tonttijakosuunnitelman tiedot tuottavalle tietojärjestelmälle tallennusoperaation yhteydessä siten, että ne sisältävät yllä mainittujen tunnustenhallintasääntöjen mukaisesti mahdollisesti generoidut tai muokatut identiteettitunnukset, paikalliset tunnukset, nimiavaruudet ja viittaustunnukset kaikille tallennetuille tietokohteille.
+Tietovarannon tallennusrajapinta palauttaa tallennetun tonttijakosuunnitelman tiedot tuottavalle tietojärjestelmälle tallennusoperaation yhteydessä siten, että ne sisältävät yllä mainittujen tunnustenhallintasääntöjen mukaisesti mahdollisesti generoidut tai muokatut identiteettitunnukset, paikalliset tunnukset, nimiavaruudet ja viittaustunnukset kaikille tallennetuille tietokohteille.
 {% include clause_end.html %}
 
 ### Tonttijakosuunnitelman tietokohteisiin viittaaminen ja viitteiden ylläpito
 
-{% include clause_start.html type="req" id="elinkaari/vaat-kaavan-sisaiset-viittaukset" %}
+{% include clause_start.html type="req" id="vaat-tonttijakosuunnitelman-sisaiset-viittaukset" %}
 Saman tonttijakosuunnitelman tietokohteiden keskinäiset assosiaatiot toteutetaan viitattavan tietokohteen [paikallinenTunnus](#paikallinen-tunnus)-attribuuttia käyttäen.
 {% include clause_end.html %}
 
-{% include clause_start.html type="req" id="elinkaari/vaat-tietovaraston-sisaiset-viittaukset" %}
-Tonttijaon tietokohteen luokkien assosiaatiot eri suunnitelmien välillä tai tonttijakosuunnitelman ja muiden maankäyttöpäätösten tietokohteiden välillä toteutetaan viitattavan tietokohteen [viittaustunnus](#viittaustunnus)-attribuuttia käyttäen.
+{% include clause_start.html type="req" id="elinkaari/vaat-tietovarannon-sisaiset-viittaukset" %}
+Tonttijakosuunitelmatietokohteen luokkien assosiaatiot eri tonttijakosuunnitelmien välillä tai tonttijakosuunnitelman ja muiden maankäyttöpäätösten tietokohteiden välillä toteutetaan viitattavan tietokohteen [viittaustunnus](#viittaustunnus)-attribuuttia käyttäen.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-viittaukset-ulkoa" %}
-Pysyvät viittaukset tonttijaon tietomallin ulkopuolelta tietomallin tietokohteisiin toteutetaan viitattavan tietokohteen [viittaustunnus](#viittaustunnus)-attribuuttia käyttäen.
+Pysyvät viittaukset Tonttijakosuunnitelman tietomallin ulkopuolelta tietomallin tietokohteisiin toteutetaan viitattavan tietokohteen [viittaustunnus](#viittaustunnus)-attribuuttia käyttäen.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-viittaukset-tallennettaessa" %}
-Tallennettaessa tonttijaon tietomallin tietokohteita tonttijaon tietovarastoon tietokohteiden tunnukset muuttuvat niiden pysyvään muotoon, kuten kuvattu luvussa [Tunnukset ja niiden hallinta](#tunnukset-ja-niiden-hallinta). Tonttijaon tietovaraston vastuulla on päivittää kunkin paikallisen tunnuksen muuttamisen yhteydessä myös kaikkien ko. tietokohteen versioon sen paikallisen tunnuksen avulla viittaavien muiden ko. suunnitelman tietokohteiden viittaukset käyttämään tietokohteen muutettua paikallista tunnusta.   
+Tallennettaessa Tonttijakosuunnitelman tietomallin tietokohteita tonttijakosuunnitelmatietovarantoon tietokohteiden tunnukset muuttuvat niiden pysyvään muotoon, kuten kuvattu luvussa [Tunnukset ja niiden hallinta](#tunnukset-ja-niiden-hallinta). Tonttijakosuunnitelmatietovarannon vastuulla on päivittää kunkin paikallisen tunnuksen muuttamisen yhteydessä myös kaikkien ko. tietokohteen versioon sen paikallisen tunnuksen avulla viittaavien muiden ko. tonttijakosuunnitelman tietokohteiden viittaukset käyttämään tietokohteen muutettua paikallista tunnusta.   
 {% include clause_end.html %}
 
 ### Koodistojen koodien tunnuksiin liittyvät vaatimukset
@@ -235,72 +235,74 @@ Koodin ```A``` alakoodin ```B``` tunnus alkaa koodin ```A``` tunnuksella ja sis�
 
 ## Muutokset ja tietojen versionti
 {% include clause_start.html type="req" id="elinkaari/vaat-pysyva-sisalto" %}
-Kukin tonttijakosuunnitelman tai sen osien tallennusoperaatio yhteiseen tietovarastoon muodostaa uuden version tallennettavista tietokohteista, mikäli yksittäinen tietokohde on miltään osin muuttunut verrattuna sen edelliseen versioon. Myös muutokset muissa tietomallin tietokohteissa, joihin tietokohteesta on viittaus, lasketaan tietokohteen muutoksiksi. Tallennetun tietokohteen version sisältö ei voi muuttua tallennuksen jälkeen, poislukien sen voimassaolon päättymiseen, seuraavaan versioon linkittämiseen ja elinkaaritilaan liittyvät attribuutit, joita tietovarasto itse päivittää tietyissä tilanteissa.
+Kukin tonttijakosuunnitelman tai sen kohteiden tallennusoperaatio yhteiseen tietovarantoon muodostaa uuden version tallennettavista tietokohteista, mikäli yksittäinen tietokohde on miltään osin muuttunut verrattuna sen edelliseen versioon. Myös muutokset muissa Tonttijakosuunnitelman tietomallin tietokohteissa, joihin tietokohteesta on viittaus, lasketaan tietokohteen muutoksiksi. Tallennetun tietokohteen version sisältö ei voi muuttua tallennuksen jälkeen, poislukien sen voimassaolon päättymiseen, seuraavaan versioon linkittämiseen ja elinkaaritilaan liittyvät attribuutit, joita tonttijakosuunnitelmatietovaranto itse päivittää tietyissä tilanteissa.
 {% include clause_end.html %}
 
-Näin taataan ulkoisten viittausten eheys, sillä kaavan kaikkien kohteiden paikalliset ja viittaustunnukset viittaavat aina vain tiettyn, sisällöllisesti muuttumattomaan versioon viitatusta kohteesta. Suositeltavaa on, että kaikki tallennusversiot myös pidetään pysyvästi tallessa, jotta mahdolliset keskenäiset ja ulkopuolelta tulevat linkit eivät mene rikki muutosten yhteydessä.
+Näin taataan ulkoisten viittausten eheys, sillä tonttijakosuunnitelman kaikkien kohteiden paikalliset ja viittaustunnukset viittaavat aina vain tietyn, sisällöllisesti muuttumattomaan versioon viittatusta kohteesta. Suositeltavaa on, että kaikki tallennusversiot myös pidetään pysyvästi tallessa, jotta mahdolliset keskenäiset ja ulkopuolelta tulevat linkit eivät mene rikki muutosten yhteydessä.
 
 ### Muutosten leviäminen viittausten kautta
-Tietomallin tietokohteiden keskinäiset viittaukset kohdistuvat aina viitattavien tietokohteiden tiettyyn versioon, ja toisaalta kaikki kohteiden sisällölliset muutokset johtavat uusien versioiden tallentamiseen. Siten kohteiden välisten linkkien kohdetietoa täytyy muuttaa mikäli halutaan viitata jollain tapaa muuttuneeseen kohteeseen. Tämä päivitystarve johtaa edelleen myös viittaavan tietokohteen uuden version luomiseen, vaikka ainoa muuttunut tieto olisi linkki uuteen versioon viitatusta tietokohteesta. Molempiin suuntiin tietokohteiden välillä tehty linkitys saattaa siten johtaa hyvin laajalle leviävään muutosketjuun. Muutosketjun liiallinen paisuminen voidaan välttää tekemällä linkitys tietokohteiden välillä vain yhteen suuntaan, esimerkiksi vain joko tonttijakosuunnitelmasta esitontteihin (ylhäältä alas) tai toisinpäin (alhaalta ylös). 
+Tonttijakosuunnitelman tietomallin tietokohteiden keskinäiset viittaukset kohdistuvat aina viitattavien tietokohteiden tiettyyn versioon, ja toisaalta kaikki kohteiden sisällölliset muutokset johtavat uusien versioiden tallentamiseen. Siten kohteiden välisten linkkien kohdetietoa täytyy muuttaa mikäli halutaan viitata jollain tapaa muuttuneeseen kohteeseen. Tämä päivitystarve johtaa edelleen myös viittaavan tietokohteen uuden version luomiseen, vaikka ainoa muuttunut tieto olisi linkki uuteen versioon viitatusta tietokohteesta. Molempiin suuntiin tietokohteiden välillä tehty linkitys saattaa siten johtaa hyvin laajalle leviävään muutosketjuun.
 
-{% include question.html content="Leviävätkö muutosviittaukset tjs:n osalta yksi- vai kaksisuuntaisesti? Kuvataan tämä tietokohteittain" %}
-
-Seuraavat muutosvittausketjut ovat yksisuuntaisia: 
-- tietokohde
-- tietokohde
-
-Seuraavat muutosvittausketjut suhteet ovat kaksisuuntaisia: 
-- tietokohde
-- tietokohde
-
-{% include note.html content="Kirjaa alle kattava esimerkki muutosketjusta. Tietokohteiden hierarkia ja esimerkiksi spatiaalinen elementti siinä. " %}
+Tonttijakosuunnitelman tietomallissa kukin Esitonttikohde on linkitetty kahdensuuntaisesti tonttijakosuunnitelmaan ja kukin Kaavamääräys yhdensuuntaisesti esitonttikohteisiin, joiden alueita ne koskevat. Tällöin uuden kaavamääräyksen luominen johtaa uuden version luomiseen siihen linkitetyistä esitonttikohteista, ja edelleen niihin linkitetystä tonttijakosuunnitelma-objektista, mikä puolestaan johtaa lopulta uusien versioiden luomiseen kaikista ko. tonttijakosuunnitelman muistakin esitonttikohteista, koska tonttijakosuunnitelma-objektiin päin osoittavat linkit pitää muuttaa osoittamaan sen uuteen versioon. 
 
 **Esimerkki**:
 
-Tallennuspalveluun viedään tonttijakosuunnitelman ehdotus, jossa kahden esitontin välistä rajalinjaa muutetaan. Esitontin ````A```` määräala kasvaa 250 neliömetrillä, kun taas esitontin ````B```` määräala pienenee vastaavalla arvolla. Muihin tonttijakosuunnitelman tietokohteisiin ei kohdistu muutoksia. 
+Tallennuspalveluun viedään tonttijakosuunnitelma, jonka yhteen esitonttikohteeseen liittyvää kaavamääräystä **asuinpientaloalue** on muutettu kaavaprosessissa **erillispientaloalueeksi**. Kaikki tonttijakosuunnitelman muut tietokohteet ovat identtisiä tonttijakosuunnitelman edellisen tallennusversion kanssa.
 
-* Muuttuvista esitonteista muodostuu uudet versiot
-* Miten tonttijakosuunnitelma muuttuu viittauksiltaan?
-* Jos tonttijakosuunnitelma saa uuden versionumeron, miten kaikki muut sen alaiset tietokohteet reagoivat versioinniltaan?
+- Esitonttikohteesta, johon muuttunut kaavamääräys kohdistuu, luodaan uusi versio, jossa muuttuu vain linkki, viitaten nyt uuteen kaavamääräykseen.
 
 ### Yksittäisen tonttijakosuunnitelman elinkaaren vaiheisiin liittyvät muutokset
-Tonttijakosuunnitelman tietomalli mahdollistaa tunnistettavien suunnitelman sisältämien tietokohteiden eri kehitysversioiden erottamisen toisistaan. Kullakin tietomallin kohteella on sekä sen tosimaailman identiteettiin liittyvä ns. identiteettitunnus että yksittäisen tallennusversion tunnus (paikallinen tunnus). Tallennettaessa uutta versiota samasta suunnitelmasta tai sen sisältämästä tietokohteesta, sen identiteettitunnus pysyy ennallaan, mutta sen paikallinen tunnus muuttuu. Tallennettaessa Tonttijakosuunnitelma-luokan objektia se katsotaan saman tietokohteen uudeksi versioksi, mikäli sen kaavatunnus on sama. Muiden kaavatietomallin versioitavien objektien suhteen vastaavuuden määritteleminen on tietoja tuottavien järjestelmien vastuulla: mikäli objektilla on tallennettavaksi lähetettäessä sama ```identititeettiTunnus```-attribuutin arvo kuin aiemmin tallennetulla, samantyyppisellä tietokohteella, katsotaan uusi objekti on saman tietokohteen uudeksi versioksi.
+Tonttijakosuunnitelman tietomalli mahdollistaa tunnistettavien tonttijakosuunnitelman tietokohteiden eri kehitysversioiden erottamisen toisistaan. Kullakin tietomallin kohteella on sekä sen tosimaailman identiteettiin liittyvä ns. identiteettitunnus että yksittäisen tallennusversion tunnus (paikallinen tunnus). Tallennettaessa uutta versiota samasta tonttijakosuunnitelmasta tai sen sisältämästä tietokohteesta, sen identiteettitunnus pysyy ennallaan, mutta sen paikallinen tunnus muuttuu. Tallennettaessa Tonttijakosuunnitelma-luokan objektia se katsotaan saman tietokohteen uudeksi versioksi, mikäli sen tonttijakosuunnitelmatunnus on sama. Muiden tonttijakosuunnitelman tietomallin versioitavien objektien suhteen samuuden määritteleminen on tietoja tuottavien järjestelmien vastuulla: mikäli objektilla on tallennettavaksi lähetettäessä saman ```identititeettiTunnus```-attribuutin arvo kuin aiemmin tallennetulla, samantyyppisellä tietokohteella, katsotaan uusi objekti on saman tietokohteen uudeksi versioksi.
 
 {% include clause_start.html type="req" id="elinkaari/vaat-version-korvaus" %}
-Kun tonttijakosuunnitelman tietokohteesta tallennetaan uusi muuttunut versio, tulee tietokohteen edellisen version ```korvattuObjektilla```-assosiaatio asettaa viittaamaan tietokohteen uuteen versioon. Uuden tietokohteen version ```korvaaObjektin```-assosiaatio puolestaan asetetaan viittaamaan tietokohteen edelliseen, korvattavaan versioon. Molempien kohteiden ```tallennusAika```-attribuutin arvoksi asetetaan ajanhetki, jolloin tallennus ja muutos tonttijaon tietovarastoon on tehty.
+Kun tonttijakosuunnitelman tietokohteesta tallennetaan uusi muuttunut versio, tulee tietokohteen edellisen version ```korvattuObjektilla```-assosiaatio asettaa viittaamaan tietokohteen uuteen versioon. Uuden tietokohteen version ```korvaaObjektin```-assosiaatio puolestaan asetetaan viittaamaan tietokohteen edelliseen, korvattavaan versioon. Molempien kohteiden ```tallennusAika```-attribuutin arvoksi asetetaan ajanhetki, jolloin tallennus ja muutos  tonttijakosuunnitelmatietovarantoon on tehty.
 {% include clause_end.html %}
 
-Yksittäisen tietokohteen yksityiskohtainen muutoshistoria tonttijaon tietovarastossa saadaan seuraamalla sen ```korvattuObjektilla```- ja ```korvaaObjektin```-assosiaatioita. Ainoa muutos, joka ei näy tietokohteen omana versionaan, on kohteen kumoaminen, jolloin sen viimeisimmän version tietoja päivitetään sen elinkaaritilan, voimassaolon ja tallennusajan osalta.
+Yksittäisen tietokohteen yksityiskohtainen muutoshistoria tonttijakosuunnitelmatietovarannossa saadaan seuraamalla sen ```korvattuObjektilla```- ja ```korvaaObjektin```-assosiaatioita. Ainoa muutos, joka ei näy tietokohteen omana versionaan, on kohteen kumoaminen, jolloin sen viimeisimmän version tietoja päivitetään sen elinkaaritilan, voimassaolon ja tallennusajan osalta.
 
 {% include question.html content="Pitääkö [AbstraktiVersioituObjekti](dokumentaatio/#abstraktiversioituobjekti)-luokalle lisätä attribuutti ```ensimmainenTallennusAika```, joka kertoo ko. version alkuperäisen tallennusajan? Kumoamisen yhteydessä ```tallennusAika```-attribuutin arvoa muutetaan, jolloin hukkuu tieto ko. version alkuperäisestä tallennusajankohdasta." %}
 
-Attribuutin ```viimeisinMuutos``` arvo kuvaa ajanhetkeä, jolloin ko. tietokohteeseen on tehty sisällöllinen muutos tiedontuottajan tietojärjestelmässä. Tiedontuottajan järjestelmän osalta ei vaadita tiukkaa versiontipolitiikkaa, eli ```paikallinenTunnus```-attribuutin päivittämistä jokaisen tietokohteen muutoksen johdosta. ```viimeisinMuutos```-attribuutin päivittämien riittää kuvaamaan tiedon todellisen muuttumisajankohdan.
+Attribuutin ```viimeisinMuutos``` arvo kuvaa ajanhetkeä, jolloin ko. tietokohteeseen on tehty sisällöllinen muutos tiedontuottajan tietojärjestelmässä. Tiedontuottajan järjestelmän osalta ei vaadita tiukkaa versiointipolitiikkaa, eli ```paikallinenTunnus```-attribuutin päivittämistä jokaisen tietokohteen muutoksen johdosta. ```viimeisinMuutos```-attribuutin päivittämien riittää kuvaamaan tiedon todellisen muuttumisajankohdan.
 
-### Tonttijakosuunnitelman käsittelytapahtumien elinkaari
-Tonttijakosuunnitelman käsittelyprosessin historian kuvaa [AbstraktiTapahtuma](dokumentaatio/#abstraktitapahtuma)-luokasta periytyvä [Kasittelytapahtuma](dokumentaatio/#kasittelytapahtuma). Käsittelytapahtumat linkittyvät yksisuuntaisesti [AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokkaan (myös Kaava-luokan yläluokka) päin.
+### Tonttijakosuunnitelman käsittely- ja vuorovaikutustapahtumien elinkaari
+Tonttijakosuunnitelmaprosessin historian yhdessä kuvaavat AbstraktiTapahtuma-luokasta perityt Kasittelytapahtuma- ja Vuorovaikutustapahtuma-luokan tietokohteet linkitetään yksisuuntaisesti AbstraktiMaankayttoasia-luokkaan (Tonttijakosuunnitelma-luokan yläluokka) päin. Tapahtumatietokohteiden uusina versiona tallennettavat muutokset eivät koskaan johda uuden version luomiseen Tonttijakosuunnitelma-luokan tietokohteesta tai sen esitonttikohteista. Syy tähän on se, että käsittely- ja vuorovaikutustapahtumien on tärkeää kohdistua nimenomaan tiettyyn, pysyvään versioon tonttijakosuunnitelmasta.
+
+Tietyllä ajanhetkellä nähtävillä olevat tai nähtävillä olleet tonttijakosuunnitelman versiot voidaan poimia valitsemalla ne tonttijakosuunnitelmat, joihin kohdistuu Vuorovaikutustapahtuma, jonka laji-attribuutin arvo on Nähtävilläolo, tapahtumaAika-attribuuttin aikaväli kattaa halutun ajankohdan ja peruttu-attribuutin arvo on false. Näiden vuorovaikutustapahtumien liittyvaAsia-assosiaatio viittaa siihen AbstraktiMaankayttoasia-luokan instanssiin, joka ko. aikaan on nähtävillä. Katso tonttijakosuunnitelmaehdotuksen nähtävilläolon ilmoittamiseen liittyvät vaatimukset kohdasta Tonttijakosuunniteman elinkaaritilan muutoksiin liittyvät käsittely- ja vuorovaikutustapahtumat.
 
 {% include clause_start.html type="req" id="elinkaari/vaat-tapahtumien-poistaminen" %}
-Kerran tallennettuja [AbstraktiTapahtuma](dokumentaatio/#abstraktitapahtuma)-luokan tietokohteita ei voi poistaa kaavatietovarastosta. Mikäli suunniteltu käsittelytapahtuma ei syystä tai toisesta toteudu tai käsittelytapahtumaan liittyvä päätös kumotaan, tulee sen attribuutti ```peruttu``` asettaa arvoon ```true```.
+Kerran tallennettuja AbstraktiTapahtuma-luokan tietokohteita ei voi poistaa tonttijakosuunnitelmatietovarannosta. Mikäli suunniteltu vuorovaikutustapahtuma ei syystä tai toisesta toteudu tai käsittelytapahtumaan liittyvä päätös kumotaan, tulee sen attribuutti peruttu asettaa arvoon true.
 {% include clause_end.html %}
-
-{% include question.html content="Tästä poistettu kaavatietomallissa ilmenevä ````vuorovaikutustapahtuma````. Tarvitaanko?" %}
 
 {% include question.html content="Miten käsittelytapahtumat vaikuttavat versiointiin ja sen muutosketjuun?" %}
 
-{% include question.html content="Miten tjs:n eri elinkaarikoodit vaikuttavat käsittelytapahtumiin?" %}
+{% include question.html content="Miten tonttijakosuunnitelman eri elinkaarikoodit vaikuttavat käsittelytapahtumiin?" %}
 
 ### Tonttijakosuunnitelman ja sen tietokohteiden voimaantulo
-Tonttijakosuunnitelman ```voimassaoloAika``` -attribuutin alkuaika on ajanhetki, jolloin suunnitelma katsotaan voimaantulleeksi.
+Tonttijakosuunnitelman ```voimassaoloAika``` -attribuutin alkuaika on ajanhetki, jolloin tonttijakosuunnitelma sen nähtävilläoloajan umpeuduttua ja mahdollisten mielipiteiden käsittelyn jälkeen tulee voimaan.
 
-{% include clause_start.html type="req" id="elinkaari/vaat-voimassaoloaika" %}
-Tonttijakosuunnitelma ja sen tietolajit ovat voimassa niiden ```voimassaoloAika```-attribuuttien määräämillä aikaväleillä. Mikäli ```voimassaoloAika```-attribuutin loppuaika puuttuu, on tietokohde voimassa toistaiseksi.
+{% include clause_start.html type="req" id="vaat-tonttijakosuunnitelman-voimaantulo" %}
+Voimaantulemisen yhteydessä tonttijakosuunnitelmasta tallennetaan tonttijakosuunnitelmatietovarantoon uusi versio, jossa sen:
+- Tonttijakosuunnitelma-luokan objektin elinkaaritila-attribuutin arvoksi on asetettu Voimassa,
+- Tonttijakosuunnitelma-luokan objektin voimassaoloAika-attribuutin alkuajaksi on asetettu kuulutuksen ajanhetki ja loppuaikaa ei ole annettu.
 {% include clause_end.html %}
 
-## Tonttijakosuunnitelman elinkaaren vaiheet ja elinkaaritila-attribuutin käyttö
-Tonttijakosuunnitelman ja sen sisältämien määräysten elinkaareen liittyvää tilaa hallitaan ko. tietokohteiden ```elinkaaritila```-attribuutin ja sen mahdolliset arvot kuvaavan koodiston avulla. 
+{% include clause_start.html type="req" id="elinkaari/vaat-voimassaoloaika" %}
+Tonttijakosuunnitelma ja sen esitonttikohteet ovat voimassa niiden voimassaoloAika-attribuuttien määräämillä aikaväleillä. Mikäli voimassaoloAika-attribuutin loppuaika puuttuu, on tietokohde voimassa toistaiseksi.
+{% include clause_end.html %}
 
-Koodisto kuvaa x mahdollista tilaa, joissa tonttijakosuunnitelma voi olla sen elinkaaren eri vaiheissa:
-* [Kaavoitusaloite](https://koodistot.suomi.fi/codescheme;registryCode=rytj;schemeCode=RY_KaavanElinkaaritila)
+{% include clause_start.html type="req" id="vaat-elinkaaritila-voimassaoloaika" %}
+Tonttijakosuunnitelma ja sen esitonttikohteet voivat olla elinkaaritilassa Voimassa ainoastaan, mikäli niiden voimassaoloAika on annettu ja sisältää vain alkuajan ilman loppuaikaa. Tonttijakosuunnitelman ja sen esitonttikohteiden voimassaoloAika voi olla annettu vain mikäli ne ovat joko elinkaaritilassa Voimassa tai Kumottu. Tonttijakosuunnitelman ja sen esitonttikohteiden voimassaoloAika sisältää sekä alku- että loppuajan vain, kun ne ovat elinkaaritilassa Kumottu.
+{% include clause_end.html %}
+
+## Tonttijakosuunnitelman kumoutuminen ja kumoaminen 
+
+Maankäyttö- ja rakennuslain pykälässä 99 (säädös 132/1999) säädetään tonttijakosuunnitelman kumoutumisesta ja kumoamisesta.
+
+Voimassaoleva tonttijakosuunnitelma voi kumoutua uudella tonttijakosuunnitelmalla osittain tai kokonaan.  Tonttijakosuunnitelma voidaan kumota, jos alueelta kumotaan kokonaan tai osittain se asemakaava, jonka toteuttamiseksi tonttijakosuunnitelma on tehty, kumoutuu myös tonttijakosuunnitelma kyseisen alueen osalta.
+
+{% include clause_start.html type="req" id="elinkaari/vaat-kumoutumistieto-per-tonttijakosuunnitelma" %}
+Tonttijakosuunnitelmilla kumoutuvat, aiemmin hyväksyttyjen tonttijakosuunnitelmien esitonttikohteet tulee yksilöidä kumoutuvassa tonttijakosuunnitelmassa. Kutakin tonttijakosuunnitelmaa kohti tulee antaa yksi Tonttijakosuunnitelma-luokan attribuutin kumoamistieto arvo tyyppiä TonttijakosuunnitelmanKumoamistieto, jonka kumottavanTonttijakosuunnitelmanTunnus-attribuutin arvo on kumottavan tonttijakosuunnitelman viittaustunnus.
+{% include clause_end.html %}
 
 Tonttijakosuunnitelma, jonka elinkaaritila x, y tai z on kesken, eli sen määräykset eivät (vielä) ole lainvoimaisia. Tonttijakosuunnitelma, jonka elinkaaritila on a, b tai c, on voimassa, ja sen määräyksiä tulee suunnitelman rajaamalla alueella noudattaa. Koodit d, e ja f kuvaavat kaavan tiloja, joissa tonttijakosuunnitelman elinkaari on päättynyt.
 
