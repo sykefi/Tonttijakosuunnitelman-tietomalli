@@ -1,13 +1,15 @@
 ---
-layout: "ea-frame"
+layout: "default"
 title: "Tonttijakosuunnitelma - looginen tietomalli - UML"
 description: ""
 page: "uml"
 modelversion: "1.0-dev"
-defaultDiagram: "./EARoot/EA2/EA34.html"
+status: "Keskeneräinen"
+
 ---
 # Loogisen tason tonttijakosuunnitelma - UML-luokkakaaviot
 UML-tietomalli tulee olemaaan ladattavissa sekä Enterprise Architect-muodossa (eap) että XMI-muodossa. UML-mallia vastaava looginen tietomalli on kuvattu myös yhteentoimivuusalustan soveltamisprofiilina.
 
+![Tonttijakosuunnitelman UML-kaavio](TJS_UML_20052021.png "UML-kaavio")
 
-
+(Lataa [Kaavio](TJS_UML_20052021.png))
