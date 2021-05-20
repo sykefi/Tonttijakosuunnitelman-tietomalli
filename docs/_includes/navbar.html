@@ -15,7 +15,7 @@
       {% endif %}
         <a class="nav-link " href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/kasitemalli/">Käsitemalli</a>
       </li>
-      {% if page.page == 'dokumentaatio' or page.page == 'uml' or page.page == 'elinkaarisaannot' or page.page == 'laatusaannot' or page.page == 'inspire' %}
+      {% if page.page == 'dokumentaatio' or page.page == 'uml' or page.page == 'elinkaarisaannot' or page.page == 'laatusaannot' %}
       <li class="nav-item active dropdown">
       {% else %}
       <li class="nav-item dropdown">
@@ -26,7 +26,6 @@
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/looginenmalli/uml/">UML-kaaviot</a>
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/looginenmalli/elinkaarisaannot.html">Elinkaarisäännöt</a>
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/looginenmalli/laatusaannot.html">Laatusäännöt</a>
-          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/looginenmalli/inspire.html">Inspire-yhteensopivuus</a>
         </div>
       </li>
       {% if page.page == 'soveltamisohje-tjs' or page.page == 'cookbook-tjs'%}
