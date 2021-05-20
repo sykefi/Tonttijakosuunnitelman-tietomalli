@@ -4,7 +4,7 @@ title: "Tonttijakosuunnitelman tietomalli"
 description: "Tonttijakosuunnitelman kansallinen tietomalli täydentää aiempia kaavatietomalleja"
 page: "main"
 ---
-# 1. Tonttijakosuunnitelman tietomalli
+# Tonttijakosuunnitelman tietomalli
 
 Tonttijakosuunnitelmatietomallin laatiminen -projektissa on laadittu tonttijakosuunnitelman käsitteet, looginen tietomalli ja sen soveltamisprofiili, joka kuvaa tonttijakosuunnitelman laatimista joko asemakaavan laatimisen yhteydessä tai erikseen hyväksyttävänä suunnitelmana. Projekti on osa Ryhti-hanketta. 
 
@@ -26,7 +26,7 @@ Tietomallista järjestettiin kansallinen kommentointikierros xx/2021. Tonttijako
 
 Toistaiseksi tontinjakosuunnitelmasta on säädetty osana lainvoimaista [maankäyttö- ja rakennuslakia (MRL)](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132). Lisätietoja tontinjakosuunnitelmasta voi lukea [Maanmittauslaitoksen](https://www.mml.fi) ja [ympäristöministeriön](https://www.ym.fi) sivuilta. 
 
-## 1.1 Kaavatietomallin ja tonttijakosuunnitelman tietomallin suhde
+## Kaavatietomallin ja tonttijakosuunnitelman tietomallin suhde
 
 Kaavatietomallin mukaiset kaavamääräykset, joiden laji-attribuutin arvo on Tonttijako-koodin “Esitontti” tai “Sitova tonttijako laadittava”, ovat aluemaisia lähtötietoja tonttijakosuunnitelman laatimiselle.
 
