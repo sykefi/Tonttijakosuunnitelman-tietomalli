@@ -63,11 +63,34 @@ Ilmaisee, että esitonttikohde kuvaa sijainnin, johon on tarkoitus rakentaa kiin
 arvo-attribuutin arvona saa esiintyä nolla tai useampi TekstiArvo, jotka kuvaavat tulevan tontin rajamerkkien numeroita tietojärjestelmissä tai rekistereissä.
 {% include clause_end.html %}
 
-
-**Esimerkkejä**
-
-**Kaavakohde**
-<!-- Lisää taulukko-->
+## Esimerkkejä
 
 **Kaavakohde**
-<!-- Lisää taulukko-->
+
+Muuttuja         | Arvo              
+-----------------|---------------------
+identiteettiTunnus | 9c97e469-083d-4284-90a9-3dbebdfe5622) 
+paikallinenTunnus | 9c97e469-083d-4284-90a9-3dbebdfe5622.23 
+tuottajakohtainenTunnus | 83730109300001
+sijainninSitovuus | sitova
+liittyvanLahtotietokohteenTunnus | url
+manalaisuus | null
+geometria | xyz alue tai kolmiulotteinen kappale
+pinta-ala | 1000
+maarays	| **laji:** Tonttijako => Esitontti, **arvo:** valtakunnallinen URI + 83730109300001
+maarays	| **laji:**	Kaavamääräyslaji => Alueen kayttotarkoitus =>Asuinpientaloalue	
+maarays	| **laji:**	Kaavamääräyslaji => Rakentamisen tehokkuus => Tehokkuus, **arvo:** 0.5
+maarays	| **laji:**	Kaavamääräyslaji => Rakentamisen tehokkuus => Maanpäällinen kerrosluku, **arvo:** 2
+
+**Kaavakohde**
+
+Muuttuja         | Arvo              
+-----------------|---------------------
+identiteettiTunnus | 9c97e469-083d-4284-90a9-3dbebdfe5623
+paikallinenTunnus | 9c97e469-083d-4284-90a9-3dbebdfe5623.12
+tuottajakohtainenTunnus | 83
+sijainninSitovuus | sitova
+liittyvanLahtotietokohteenTunnus | url
+maanalaisuus | null
+geometria | xyz piste
+maarays | **laji:** EsitonttiRajapiste => Rajapiste, **arvo:** 83
