@@ -403,7 +403,7 @@ Tavallisesti tonttijakosuunnitelman sisältämien esitonttikohteiden elinkaariti
 
  (ks. Tonttijakosuunnitelman kumoutuminen ja kumoaminen)
 
- ### Tonttijakosuunnitelman elinkaaritilan muutoksiin liittyvät käsittely- ja vuorovaikutustapahtumat
+### Tonttijakosuunnitelman elinkaaritilan muutoksiin liittyvät käsittely- ja vuorovaikutustapahtumat
 
  Kun tonttijakosuunnitelmasta viedään tonttijakosuunnitelmatietovarantoon uusi versio, jossa sen elinkaaritila on muuttunut, liittyy kyseisen tonttijakosuunniteman version syntymiseen tyypillisesti jokin käsittelytapahtuma.
 
