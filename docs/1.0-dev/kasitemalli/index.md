@@ -21,28 +21,28 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan san
 
 ## Käsitteet
 
-### rytj-tjs: Tonttijakosuunnitelma
+### Tonttijakosuunnitelma
 {% include defintionref_tjs.html id="concept-0" name="tonttijakosuunnitelma" def="maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen uudistamisen yksityiskohtaiseksi ohjaamiseksi." %}
 
-### rytj-tjs: Esitontti
+### Esitontti
 {% include defintionref_tjs.html id="concept-1" name="esitontti" def="Tonttijakosuunnitelmassa osoitettu tontti (esitontti) kiinteistöjaotuksen uudistamiseksi, jonka alueella maankäyttöä tai rakentamista halutaan ohjata." %}
 
-### rytj-tjs: Tonttijakosuunnitelman liite
+### Tonttijakosuunnitelman liite
 {% include defintionref_tjs.html id="concept-2" name="tonttijakosuunnitelman liite" def="Tonttijakosuunnitelmaan liittyvä asiakirja, joka ei sisällä tonttijakosuunnitelman oikeusvaikutuksellista suunnitelma- tai säännöstietoa." %}
 
-### rytj-tjs: Tonttijakosuunnitelman käsittelytapahtuma
+### Tonttijakosuunnitelman käsittelytapahtuma
 {% include defintionref_tjs.html id="concept-3" name="tonttijakosuunnitelman käsittelytapahtuma" def="Tonttijakosuunnitelman käsittelyprosessiin kuuluva tapahtuma, jonka johdosta elinkaaren tila voi muuttua." %}
 
-### rytj-tjs: Tonttijakosuunnitelman vuorovaikutustapahtuma
+### Tonttijakosuunnitelman vuorovaikutustapahtuma
 {% include defintionref_tjs.html id="concept-4" name="tonttijakosuunnitelman vuorovaikutustapahtuma" def="Tonttijakosuunnitelmaprosessiin kuuluva tapahtuma, jonka tarkoituksena on tarjota tonttijakosuunnitelman asianosaiselle mahdollisuus lausua mielipiteensä ehdotuksesta." %}
 
-### rytj-tjs: Tonttijakosuunnitelman kumoamistieto
+### Tonttijakosuunnitelman kumoamistieto
 {% include defintionref_tjs.html id="concept-5" name="tonttijakosuunnitelman kumoamistieto" def="Tieto tonttijakosuunnitelman hyväksymisen johdosta kokonaisuudessaan kumoutuvasta tonttijakosuunnitelmasta tai tonttijakosuunnitelman kumottavasta esitontista." %}
 
-### rytj-tjs: Esitonttikohteen muutostieto
+### Esitonttikohteen muutostieto
 {% include defintionref_tjs.html id="concept-9" name="esitonttikohteen muutostieto" def="Tieto kaavan hyväksymisen johdosta muuttuvista, kumoutuvista tai muun muutoksen aiheuttamista esitonttikohteista." %}
 
-### rytj-tjs: Esitonttikohde
+### Esitonttikohde
 {% include defintionref_tjs.html id="concept-6" name="esitonttikohde" def="Tonttijakosuunnitelmassa osoitettu aluemainen tai pistemäinen kohde kiinteistöjaotuksen uudistamiseksi, jonka alueella maankäyttöä tai rakentamista halutaan ohjata." %}
 
 ### rytj-kaava: Kaavamääräys
@@ -51,5 +51,5 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan san
 ### rytj-kaava: Arvo
 {% include defintionref.html id="concept-1011" name="ominaisuuden arvo" def="Kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
 
-### rytj-tjs: Esitonttitietovarasto
+### Esitonttitietovarasto
 {% include defintionref_tjs.html id="concept-7" name="esitonttitietovarasto" def="Tietojärjestelmä, jonka tehtävänä on vastaanottaa, säilyttää ja jaella tietomallimuotoista tonttjakosuunnitelmatietoa laatu- ja elinkaarisääntöjen mukaisesti." %}
