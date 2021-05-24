@@ -45,12 +45,12 @@ Tonttijakosuunnitelman tietomallissa UUID-muotoisia tunnuksia suositellaan käyt
 Tonttijakosuunnitelman tietomallin elinkaarisäännöt mahdollistavat tietomallin tietokohteiden käsittelyn, tallentamisen ja muuttamisen hallitusti sekä niiden laatimis- että voimassaolovaiheissa. Tonttijakosuunnitelman tietomallin mukaiset tietosisällöt ovat merkittäviä oikeusvaikutuksia aiheuttavia, juridisesti päteviä aineistoja, joita käsitellään hajautetusti eri toimijoiden tietojärjestelmissä. Tämän vuoksi niiden tunnusten, viittausten ja versionnin hallintaan on syytä kiinnittää erityistä huomiota.
 
 Seuraavat keskeiset periaatteet ohjaavat tonttijakomallin elinkaaren hallintaa:
-* Kukin tonttijakosuunnitelmatietovarantoon tallennettu versio tonttijakosuunnitelmasta ja sen sisältämistä yksittäisistä esitonttikohteista saa pysyvän, versiokohtaisen tunnuksen.
-* Kuhunkin tonttijakosuunnitelmatietovarantoon tallennetun tietokohteen versioon voidaan viitata sen pysyvän tunnuksen avulla.
+* Kukin tonttijakosuunnitelmatietovarastoon tallennettu versio tonttijakosuunnitelmasta ja sen sisältämistä yksittäisistä esitonttikohteista saa pysyvän, versiokohtaisen tunnuksen.
+* Kuhunkin tonttijakosuunnitelmatietovarastoon tallennetun tietokohteen versioon voidaan viitata sen pysyvän tunnuksen avulla.
 * Tonttijakosuunnitelman tietomallin tietokohteiden väliset viittaukset toteutetaan hallitusti sekä tonttijakosuunnitelmatietoa tuottavissa tietojärjestelmissä että yhteisissä tonttijakosuunnitelmatietovarannoissa.
-* Tonttijakosuunnitelmatietovaranto vastaa pysyvien tunnusten luomisesta ja antamisesta tallennettaville tietokohteille.
+* Tonttijakosuunnitelmatietovarasto vastaa pysyvien tunnusten luomisesta ja antamisesta tallennettaville tietokohteille.
 
-Tonttijakosuunnitelman tietomallin mukaisten aineistojen tallentamisessa erotetaan toisistaan tietojen tuottaminen ja muokkaus sisäisesti niiden tuottamiseen ja muokkaamiseen käytettävissä tietojärjestelmissä ja niiden hallinta yhteisessä versiohallitussa tonttijakosuunnitelmatietovarannossa. Tonttijakosuunnitelman tietomallin ei ole mielekästä asettaa vaatimuksia tonttijakosuunnitelmatietoa tuottavien tietojärjestelmien tunnusten ja versioiden hallintaan, vaan tietomallissa tulee varautua siihen, että yhteiseen tietovarantoon tallennettavia tietoja on muokattu ja tallennettu sisäisesti tuntematon määrä kertoja ennen ensimmäistä viemistä yhteiseen tietovarantoon, ja samoin tuntematon määrä kertoja kunkin yhteiseen varantoon vietävän version välillä. Näin ollen on mahdollista, että tonttijakosuunnitelmasta voi olla joissain tietojärjestelmissä tallennettuna paikallisia versiota, joita ei ole koskaan viety yhteiseen tonttijakosuunnitelmatietovarantoon.
+Tonttijakosuunnitelman tietomallin mukaisten aineistojen tallentamisessa erotetaan toisistaan tietojen tuottaminen ja muokkaus sisäisesti niiden tuottamiseen ja muokkaamiseen käytettävissä tietojärjestelmissä ja niiden hallinta yhteisessä versiohallitussa tonttijakosuunnitelmatietovarannossa. Tonttijakosuunnitelman tietomallin ei ole mielekästä asettaa vaatimuksia tonttijakosuunnitelmatietoa tuottavien tietojärjestelmien tunnusten ja versioiden hallintaan, vaan tietomallissa tulee varautua siihen, että yhteiseen tietovarastoon tallennettavia tietoja on muokattu ja tallennettu sisäisesti tuntematon määrä kertoja ennen ensimmäistä viemistä yhteiseen tietovarastoon, ja samoin tuntematon määrä kertoja kunkin yhteiseen varastoon vietävän version välillä. Näin ollen on mahdollista, että tonttijakosuunnitelmasta voi olla joissain tietojärjestelmissä tallennettuna paikallisia versiota, joita ei ole koskaan viety yhteiseen tonttijakosuunnitelmatietovarastoon.
 
 ## Tunnukset ja niiden hallinta
 
@@ -67,15 +67,15 @@ Tonttijakosuunnitelman tietomallin tietokohteissa identiteettitunnus kuvataan at
 
 Yksittäisen tonttijakosuunnitelman tietokohteen koko ko. tietojärjestelmään tallennettu kehityshistoria saadaan noutamalla kaikki ko. tyyppisen tietokohteen objektit, joilla on sama ```identiteettiTunnus```-attribuutin arvo.
 
-Yhteinen tonttijakosuunnitelmatietovaranto on vastuussa uusien identiteettitunnusten luomisesta tarvittaessa tallennustapahtumien yhteydessä, ja niiden välittämisestä tiedoksi tallentavalle tietojärjestelmälle. Tallentavan tietojärjestelmän tulee tallentaa itselleen kopiot tietovaraston tallennustapahtuman yhteydessä palautamistä kaavan ja sen tietokohteiden identiteettitunnuksista, sillä ne tulee sisällyttää ko. tietokohteiden seuraavien versioden tallennettavaksi lähetettäviin objekteihin.
+Yhteinen tonttijakosuunnitelmatietovarasto on vastuussa uusien identiteettitunnusten luomisesta tarvittaessa tallennustapahtumien yhteydessä, ja niiden välittämisestä tiedoksi tallentavalle tietojärjestelmälle. Tallentavan tietojärjestelmän tulee tallentaa itselleen kopiot tietovaraston tallennustapahtuman yhteydessä palautamistä kaavan ja sen tietokohteiden identiteettitunnuksista, sillä ne tulee sisällyttää ko. tietokohteiden seuraavien versioden tallennettavaksi lähetettäviin objekteihin.
 
 {% include clause_start.html type="req" id="elinkaari/vaat-identiteettitunnus-gen" %}
-* Mikäli tallennettavalle tietokohteelle ei ole annettu ```identiteettitunnus```-attribuuttia, tai tietovarasto ei sisällä sellaista saman luokan tietokohdetta, jolla on sama ```identiteettiTunnus```-attribuutin arvo, tonttijakosuunnitelmatietovaranto luo ko. objektille uuden identiteettitunnuksen, joka korvaa tuottavan tietojärjestelmän objektille mahdollisesti antaman ```identiteettiTunnus```-attribuutin arvon. Tällöin objektia pidetään uuden tietokohteen ensimmäisenä versiona.
-* Mikäli tietovarasto sisältää saman luokan tietokohteen, jolla on sama ```identiteettiTunnus```-attribuutin arvo kuin tallennetavalla objektilla, objekti tallennetaan tonttijakosuunnitelmatietovarantoon ko. tietokohteen uutena versiona. Tällöin tallennettavan objektin ```identiteettiTunnus```-attribuutin arvo ei muutu.
+* Mikäli tallennettavalle tietokohteelle ei ole annettu ```identiteettitunnus```-attribuuttia, tai tietovarasto ei sisällä sellaista saman luokan tietokohdetta, jolla on sama ```identiteettiTunnus```-attribuutin arvo, tonttijakosuunnitelmatietovarasto luo ko. objektille uuden identiteettitunnuksen, joka korvaa tuottavan tietojärjestelmän objektille mahdollisesti antaman ```identiteettiTunnus```-attribuutin arvon. Tällöin objektia pidetään uuden tietokohteen ensimmäisenä versiona.
+* Mikäli tietovarasto sisältää saman luokan tietokohteen, jolla on sama ```identiteettiTunnus```-attribuutin arvo kuin tallennetavalla objektilla, objekti tallennetaan tonttijakosuunnitelmatietovarastoon ko. tietokohteen uutena versiona. Tällöin tallennettavan objektin ```identiteettiTunnus```-attribuutin arvo ei muutu.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-kaavan-identiteettitunnus" %}
-[Tonttijakosuunnitelma](../../looginenmalli/dokumentaatio/#tonttijakosuunnitelma)-luokan tietokohteen tallennuksen yhteydessä tonttijakosuunnitelmatietovaranto tarkistaa, että sen attribuutti ```tonttijakosuunnitelmaTunnus``` on annettu ja validi.
+[Tonttijakosuunnitelma](../../looginenmalli/dokumentaatio/#tonttijakosuunnitelma)-luokan tietokohteen tallennuksen yhteydessä tonttijakosuunnitelmatietovarasto tarkistaa, että sen attribuutti ```tonttijakosuunnitelmaTunnus``` on annettu ja validi.
 * Mikäli kohde katsotaan sen ```identiteettiTunnus```-attribuutin arvon perusteella uudeksi tietokohteeksi, sama ```tonttijakosuunnitelmaTunnus```-attribuutti ei saa olla käytössä muilla [Tonttijakosuunnitelma](../../looginenmalli/dokumentaatio/#tonttijakosuunnitelma)-luokan objekteilla.
 * Mikäli kohde katsotaan sen ```identiteettiTunnus```-attribuutin arvon perusteella aiemmin tallennetun tietokohteen uudeksi versioksi, aiemmin tallennetun version ```tonttijakosuunnitelmaTunnus```-attribuutin tulee olla sama kuin tallennettavassa objektissa.
 {% include clause_end.html %}
@@ -94,7 +94,7 @@ Tonttijakosuunnitelman tietomallin tietokohteissa paikallinen tunnus kuvataan at
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-paikallinentunnus-gen" %}
-Tietokohteiden paikallinen tunnus muuttuu sen jokaisen version tallennuksen yhteydessä. Tonttijakosuunnitelmatietovaranto vastaa paikallisten tunnusten luomisesta tallennustapahtuman yhteydessä. Tuottavan tietojärjestelmän mahdollisesti asettamat arvot korvataan..
+Tietokohteiden paikallinen tunnus muuttuu sen jokaisen version tallennuksen yhteydessä. Tonttijakosuunnitelmatietovarasto vastaa paikallisten tunnusten luomisesta tallennustapahtuman yhteydessä. Tuottavan tietojärjestelmän mahdollisesti asettamat arvot korvataan..
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-paikallinentunnus-form" %}
@@ -123,14 +123,14 @@ Nimiavaruus on HTTP URI -muotoinen.
 Nimiavaruus on syytä valita huolella siten, että se olisi mahdollisimman pysyvä, eikä sitä tarvitsisi tulevaisuudessa muuttaa esimerkiksi valtionhallinnon virastojen tai ministeriröiden mahdollisten uudelleenorganisointien ja -nimeämisten johdosta. Valittu URL-osoite tulee myös voida aina tarvittaessa ohjata kulloinkin käytössä olevaan rajapintapalveluun (HTTP redirect). 
 
 {% include clause_start.html type="req" id="elinkaari/vaat-nimiavaruus-gen" %}
-Tonttijakosuunnitelmatietovaranto vastaa ```nimiavaruus```-attribuuttien asetamisesta tallennustapahtuman yhteydessä. Tuottavan tietojärjestelmän mahdollisesti antamat arvot korvataan.
+Tonttijakosuunnitelmatietovarasto vastaa ```nimiavaruus```-attribuuttien asetamisesta tallennustapahtuman yhteydessä. Tuottavan tietojärjestelmän mahdollisesti antamat arvot korvataan.
 {% include clause_end.html %}
 
 Esimerkki: ```http://uri.suomi.fi/object/rytj/tjs```
 
 ### Viittaustunnus
 {% include clause_start.html type="req" id="elinkaari/vaat-viittaustunnus-maar" %}
-Viittaustunnus yksilöi tonttijakosuunnitelman tietokohteen yhden, keskitettyyn tonttijakosuunnitelmatietovarantoon tallennetun kehitysversion globaalisti. Tonttijakosuunnitelman tietomallin tietokohteissa paikallinen tunnus kuvataan attribuutilla ```viittausTunnus```.
+Viittaustunnus yksilöi tonttijakosuunnitelman tietokohteen yhden, keskitettyyn tonttijakosuunnitelmatietovarastoon tallennetun kehitysversion globaalisti. Tonttijakosuunnitelman tietomallin tietokohteissa paikallinen tunnus kuvataan attribuutilla ```viittausTunnus```.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-viittaustunnus-form" %}
@@ -138,7 +138,7 @@ Viittaustunnus on HTTP URI -muotoinen ja se muodostuu nimiavaruudesta, tietokoht
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-nimiavaruus-gen" %}
-Tonttijakosuunnitelmatietovaranto vastaa ```viittausTunnus```-attribuuttien asetamisesta tallennustapahtuman yhteydessä. Tuottavan tietojärjestelmän mahdollisesti antamat arvot korvataan.
+Tonttijakosuunnitelmatietovarasto vastaa ```viittausTunnus```-attribuuttien asetamisesta tallennustapahtuman yhteydessä. Tuottavan tietojärjestelmän mahdollisesti antamat arvot korvataan.
 {% include clause_end.html %}
 
 Tallentavan tietojärjestelmän ei siis tarvitse tallentaa luotuja viittaustunnuksia itselleen seuraavia tallennuksia varten.
@@ -156,10 +156,10 @@ Tonttijakosuunnitelmatietoa tuottavat järjestelmät voivat niin halutessaan kä
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-tuottajakohtainen-tunnus-gen" %}
-Tonttijakosuunnitelmatietovaranto ei koskaan muuta tuottavan tietojärjestelmän mahdollisesti asettamia tuottajakohtaisia tunnuksia, ja ne palautetaan sellaisenaan latattaessa tietokohteita tietovarannosta.
+Tonttijakosuunnitelmatietovarasto ei koskaan muuta tuottavan tietojärjestelmän mahdollisesti asettamia tuottajakohtaisia tunnuksia, ja ne palautetaan sellaisenaan latattaessa tietokohteita tietovarannosta.
 {% include clause_end.html %}
 
-Tietojärjestelmät voivat käyttää tuottajakohtaisia tunnuksia kohdistamaan tonttijakosuunnitelmatietovarantoon ja paikallisiin tietojärjestelmiin tallennettuja tietokohteita toisiinsa esimerkiksi päivitettäessä niiden tallennuksen yhteydessä syntyneitä tunnuksia, vertailtaessa tonttijakosuunnitelmatietovarantoon tallennettuja kohteita ja paikallisia kohteita toisiinsa, sekä esitettäessä validointipalvelun tuloksia suunnitteluohjelmiston käyttäjälle.
+Tietojärjestelmät voivat käyttää tuottajakohtaisia tunnuksia kohdistamaan tonttijakosuunnitelmatietovarastoon ja paikallisiin tietojärjestelmiin tallennettuja tietokohteita toisiinsa esimerkiksi päivitettäessä niiden tallennuksen yhteydessä syntyneitä tunnuksia, vertailtaessa tonttijakosuunnitelmatietovarastoon tallennettuja kohteita ja paikallisia kohteita toisiinsa, sekä esitettäessä validointipalvelun tuloksia suunnitteluohjelmiston käyttäjälle.
 
 Tuottajakohtaisilta tunnuksilta ei vaadita yksilöivyyttä tai mitään tiettyä yhtenäistä muotoa, mutta UUID-muodon käyttäminen tarjoaa hyvin määritellyn ja standardoidun tavan luoda tuottajakohtaisista tunnuksista yksilöiviä eri tietojärjestelmien kesken. Tästä saattaa olla etua haluttaessa tehdä tuotettavista tonttijakosuunnitelmatiedoista mahdollisimman järjestelmäriippumattomia ja esimerkiksi taata tuottajakohtaisten tunnusten yksilöivyys yli mahdollisten tonttijakosuunnitelmatietoa tuottavien tietojärjestelmien vaihdosten ja päivitysten.
 
@@ -176,14 +176,14 @@ Tonttijakosuunnitelmatunnus on tonttijakosuunnitelmalle ennakolta haettava, tont
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-tonttijakosuunnitelmatunnus-gen" %}
-Tuottava tietojärjestelmän vastaa tonttijakosuunnitelmatunnuksen asettamisesta [Tonttijakosuunnitelma](../../looginenmalli/dokumentaatio/#tonttijakosuunnitelma)-luokan attribuutiksi. Se tulee olla asetettuna myös tonttijakosuunnitelman  ensimmäisen tonttijakosuunnitelmatietovarantoon tallennuksen yhteydessä.
+Tuottava tietojärjestelmän vastaa tonttijakosuunnitelmatunnuksen asettamisesta [Tonttijakosuunnitelma](../../looginenmalli/dokumentaatio/#tonttijakosuunnitelma)-luokan attribuutiksi. Se tulee olla asetettuna myös tonttijakosuunnitelman  ensimmäisen tonttijakosuunnitelmatietovarastoon tallennuksen yhteydessä.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-tonttijakosuunnitelmatunnus-yks" %}
 Tonttijakosuunnitelmatunnus on [Tonttijakosuunnitelma](../../looginenmalli/dokumentaatio/#tonttijakosuunnitelma)-luokan objekteille globaalisti yksilöivä, eikä muutu saman tonttijakosuunnitelman eri elinkaaren aikaisten versioiden tallennuksen yhteydessä.
 {% include clause_end.html %}
 
-Käytännössä myönnetyt tonttijakosuunnitelmatunnukset kannattaa tallentaa valmiiksi tonttijakosuunnitelmatietovarantoon, jotta voidaan tarkistaa, onko tallennettavaksi tarkoitettu tonttijakosuunnitelmatunnus myönnetty organisaatiolle, jonka tonttijakosuunnitelmaa ollaan tallentamassa. Kuntakoodin tai muun hallinnollisen alueen tunnuksen käyttö osana tonttijakosuunnitelmatunnusta ei ole suositeltavaa, sillä hallinnolliset alueet muuttuvat ajan kuluessa. Kun sidos tunnuksen ja hallinnollisen alueen välillä ei näy tunnuksessa, voidaan tonttijakosuunnitelman hallinnollista aluetta muuttaa joustavammin tonttijakosuunnitelman elinkaaren aikana.
+Käytännössä myönnetyt tonttijakosuunnitelmatunnukset kannattaa tallentaa valmiiksi tonttijakosuunnitelmatietovarastoon, jotta voidaan tarkistaa, onko tallennettavaksi tarkoitettu tonttijakosuunnitelmatunnus myönnetty organisaatiolle, jonka tonttijakosuunnitelmaa ollaan tallentamassa. Kuntakoodin tai muun hallinnollisen alueen tunnuksen käyttö osana tonttijakosuunnitelmatunnusta ei ole suositeltavaa, sillä hallinnolliset alueet muuttuvat ajan kuluessa. Kun sidos tunnuksen ja hallinnollisen alueen välillä ei näy tunnuksessa, voidaan tonttijakosuunnitelman hallinnollista aluetta muuttaa joustavammin tonttijakosuunnitelman elinkaaren aikana.
 
 {% include clause_start.html type="rec" id="elinkaari/suos-tonttijakosuunnitelmatunnus-form" %}
 Tonttijakosuunnitelmatunnuksen suositeltu muoto on UUID.
@@ -214,7 +214,7 @@ Pysyvät viittaukset Tonttijakosuunnitelman tietomallin ulkopuolelta tietomallin
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-viittaukset-tallennettaessa" %}
-Tallennettaessa Tonttijakosuunnitelman tietomallin tietokohteita tonttijakosuunnitelmatietovarantoon tietokohteiden tunnukset muuttuvat niiden pysyvään muotoon, kuten kuvattu luvussa [Tunnukset ja niiden hallinta](#tunnukset-ja-niiden-hallinta). Tonttijakosuunnitelmatietovarannon vastuulla on päivittää kunkin paikallisen tunnuksen muuttamisen yhteydessä myös kaikkien ko. tietokohteen versioon sen paikallisen tunnuksen avulla viittaavien muiden ko. tonttijakosuunnitelman tietokohteiden viittaukset käyttämään tietokohteen muutettua paikallista tunnusta.   
+Tallennettaessa Tonttijakosuunnitelman tietomallin tietokohteita tonttijakosuunnitelmatietovarastoon tietokohteiden tunnukset muuttuvat niiden pysyvään muotoon, kuten kuvattu luvussa [Tunnukset ja niiden hallinta](#tunnukset-ja-niiden-hallinta). Tonttijakosuunnitelmatietovarannon vastuulla on päivittää kunkin paikallisen tunnuksen muuttamisen yhteydessä myös kaikkien ko. tietokohteen versioon sen paikallisen tunnuksen avulla viittaavien muiden ko. tonttijakosuunnitelman tietokohteiden viittaukset käyttämään tietokohteen muutettua paikallista tunnusta.   
 {% include clause_end.html %}
 
 ### Koodistojen koodien tunnuksiin liittyvät vaatimukset
@@ -235,7 +235,7 @@ Koodin ```A``` alakoodin ```B``` tunnus alkaa koodin ```A``` tunnuksella ja sis�
 
 ## Muutokset ja tietojen versionti
 {% include clause_start.html type="req" id="elinkaari/vaat-pysyva-sisalto" %}
-Kukin tonttijakosuunnitelman tai sen kohteiden tallennusoperaatio yhteiseen tietovarantoon muodostaa uuden version tallennettavista tietokohteista, mikäli yksittäinen tietokohde on miltään osin muuttunut verrattuna sen edelliseen versioon. Myös muutokset muissa Tonttijakosuunnitelman tietomallin tietokohteissa, joihin tietokohteesta on viittaus, lasketaan tietokohteen muutoksiksi. Tallennetun tietokohteen version sisältö ei voi muuttua tallennuksen jälkeen, poislukien sen voimassaolon päättymiseen, seuraavaan versioon linkittämiseen ja elinkaaritilaan liittyvät attribuutit, joita tonttijakosuunnitelmatietovaranto itse päivittää tietyissä tilanteissa.
+Kukin tonttijakosuunnitelman tai sen kohteiden tallennusoperaatio yhteiseen tietovarastoon muodostaa uuden version tallennettavista tietokohteista, mikäli yksittäinen tietokohde on miltään osin muuttunut verrattuna sen edelliseen versioon. Myös muutokset muissa Tonttijakosuunnitelman tietomallin tietokohteissa, joihin tietokohteesta on viittaus, lasketaan tietokohteen muutoksiksi. Tallennetun tietokohteen version sisältö ei voi muuttua tallennuksen jälkeen, poislukien sen voimassaolon päättymiseen, seuraavaan versioon linkittämiseen ja elinkaaritilaan liittyvät attribuutit, joita tonttijakosuunnitelmatietovarasto itse päivittää tietyissä tilanteissa.
 {% include clause_end.html %}
 
 Näin taataan ulkoisten viittausten eheys, sillä tonttijakosuunnitelman kaikkien kohteiden paikalliset ja viittaustunnukset viittaavat aina vain tietyn, sisällöllisesti muuttumattomaan versioon viittatusta kohteesta. Suositeltavaa on, että kaikki tallennusversiot myös pidetään pysyvästi tallessa, jotta mahdolliset keskenäiset ja ulkopuolelta tulevat linkit eivät mene rikki muutosten yhteydessä.
@@ -255,7 +255,7 @@ Tallennuspalveluun viedään tonttijakosuunnitelma, jonka yhteen esitonttikohtee
 Tonttijakosuunnitelman tietomalli mahdollistaa tunnistettavien tonttijakosuunnitelman tietokohteiden eri kehitysversioiden erottamisen toisistaan. Kullakin tietomallin kohteella on sekä sen tosimaailman identiteettiin liittyvä ns. identiteettitunnus että yksittäisen tallennusversion tunnus (paikallinen tunnus). Tallennettaessa uutta versiota samasta tonttijakosuunnitelmasta tai sen sisältämästä tietokohteesta, sen identiteettitunnus pysyy ennallaan, mutta sen paikallinen tunnus muuttuu. Tallennettaessa Tonttijakosuunnitelma-luokan objektia se katsotaan saman tietokohteen uudeksi versioksi, mikäli sen tonttijakosuunnitelmatunnus on sama. Muiden tonttijakosuunnitelman tietomallin versioitavien objektien suhteen samuuden määritteleminen on tietoja tuottavien järjestelmien vastuulla: mikäli objektilla on tallennettavaksi lähetettäessä saman ```identititeettiTunnus```-attribuutin arvo kuin aiemmin tallennetulla, samantyyppisellä tietokohteella, katsotaan uusi objekti on saman tietokohteen uudeksi versioksi.
 
 {% include clause_start.html type="req" id="elinkaari/vaat-version-korvaus" %}
-Kun tonttijakosuunnitelman tietokohteesta tallennetaan uusi muuttunut versio, tulee tietokohteen edellisen version ```korvattuObjektilla```-assosiaatio asettaa viittaamaan tietokohteen uuteen versioon. Uuden tietokohteen version ```korvaaObjektin```-assosiaatio puolestaan asetetaan viittaamaan tietokohteen edelliseen, korvattavaan versioon. Molempien kohteiden ```tallennusAika```-attribuutin arvoksi asetetaan ajanhetki, jolloin tallennus ja muutos  tonttijakosuunnitelmatietovarantoon on tehty.
+Kun tonttijakosuunnitelman tietokohteesta tallennetaan uusi muuttunut versio, tulee tietokohteen edellisen version ```korvattuObjektilla```-assosiaatio asettaa viittaamaan tietokohteen uuteen versioon. Uuden tietokohteen version ```korvaaObjektin```-assosiaatio puolestaan asetetaan viittaamaan tietokohteen edelliseen, korvattavaan versioon. Molempien kohteiden ```tallennusAika```-attribuutin arvoksi asetetaan ajanhetki, jolloin tallennus ja muutos  tonttijakosuunnitelmatietovarastoon on tehty.
 {% include clause_end.html %}
 
 Yksittäisen tietokohteen yksityiskohtainen muutoshistoria tonttijakosuunnitelmatietovarannossa saadaan seuraamalla sen ```korvattuObjektilla```- ja ```korvaaObjektin```-assosiaatioita. Ainoa muutos, joka ei näy tietokohteen omana versionaan, on kohteen kumoaminen, jolloin sen viimeisimmän version tietoja päivitetään sen elinkaaritilan, voimassaolon ja tallennusajan osalta.
@@ -281,7 +281,7 @@ Kerran tallennettuja AbstraktiTapahtuma-luokan tietokohteita ei voi poistaa tont
 Tonttijakosuunnitelman ```voimassaoloAika``` -attribuutin alkuaika on ajanhetki, jolloin tonttijakosuunnitelma sen nähtävilläoloajan umpeuduttua ja mahdollisten mielipiteiden käsittelyn jälkeen tulee voimaan.
 
 {% include clause_start.html type="req" id="vaat-tonttijakosuunnitelman-voimaantulo" %}
-Voimaantulemisen yhteydessä tonttijakosuunnitelmasta tallennetaan tonttijakosuunnitelmatietovarantoon uusi versio, jossa sen:
+Voimaantulemisen yhteydessä tonttijakosuunnitelmasta tallennetaan tonttijakosuunnitelmatietovarastoon uusi versio, jossa sen:
 - Tonttijakosuunnitelma-luokan objektin elinkaaritila-attribuutin arvoksi on asetettu Voimassa,
 - Tonttijakosuunnitelma-luokan objektin voimassaoloAika-attribuutin alkuajaksi on asetettu kuulutuksen ajanhetki ja loppuaikaa ei ole annettu.
 {% include clause_end.html %}
@@ -312,14 +312,14 @@ Kumoutumisessa esitonttikohteet kuvataan ensisijaisesti kumoattavanEsitonttikoht
 
 <!-- Lisää tähän vielä sisäiset linkit kuntoon -->
 {% include clause_start.html type="req" id="elinkaari/vaat-tonttijakosuunnitelman-voimaantulo" %}
-Kun tonttijakosuunnitelman kumoutumisessa tallennetaan versio, jonka elinkaaritila-attribuutin arvo on Voimassa, tonttijakosuunnitelmatietovaranto päivittää niiden siinä kumoutuviksi asetettuja esitonttikohteita, joiden elinkaaritila-attribuutin arvo on Voimassa, attribuutteja seuraavasti luomatta niistä uusia versioita:
+Kun tonttijakosuunnitelman kumoutumisessa tallennetaan versio, jonka elinkaaritila-attribuutin arvo on Voimassa, tonttijakosuunnitelmatietovarasto päivittää niiden siinä kumoutuviksi asetettuja esitonttikohteita, joiden elinkaaritila-attribuutin arvo on Voimassa, attribuutteja seuraavasti luomatta niistä uusia versioita:
 
 - ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin uuden tonttijakosuuunnitelman ```voimassaoloAika```-attribuutin alkamisaika.
 - ```elinkaaritila```-attribuutin arvoksi asetetaan Kumottu.
-- ```tallennusAika```-attribuutin arvoksi asetetaan ajanhetki, jolloin tonttijakosuunnitelma tallennettiin tonttijakosuunnitelmatietovarantoon elinkaaritilassa Voimassa.
+- ```tallennusAika```-attribuutin arvoksi asetetaan ajanhetki, jolloin tonttijakosuunnitelma tallennettiin tonttijakosuunnitelmatietovarastoon elinkaaritilassa Voimassa.
 {% include clause_end.html %}
 
-Tonttijakosuunnitelman tietomalli ei sisällä omaa tietorakennettaan ajantasaiselle tonttijakosuunnitelma-aineistolle, joka sisältää annetun alueella tietyllä ajanhetkellä voimassaolevat esitonttikohteet, huomioiden kaavamuutosten ja vaihekaavojen vaikutukset niiltä osin kun ne ovat ko. ajanhetkellä voimassa. Tällainen toiminnallisuus on kuitenkin aivan ilmeisesti yhteisen tonttijakosuunnitelmatietovarannon palveluna erittäin hyödyllinen. Esitonttikohteiden ```voimassaoloAika```-attribuutin arvojen avulla tällainen ajantasainen “Esitonttimatto” voidaan laskea mille tahansa ajanhetkelle, olettaen, että kaikki kyseisen alueen tonttijakosuunnitelmat on viety tonttijakosuunnitelmatietovarantoon tonttijakosuunnitelman tietomallin mukaisessa muodossa.
+Tonttijakosuunnitelman tietomalli ei sisällä omaa tietorakennettaan ajantasaiselle tonttijakosuunnitelma-aineistolle, joka sisältää annetun alueella tietyllä ajanhetkellä voimassaolevat esitonttikohteet, huomioiden kaavamuutosten ja vaihekaavojen vaikutukset niiltä osin kun ne ovat ko. ajanhetkellä voimassa. Tällainen toiminnallisuus on kuitenkin aivan ilmeisesti yhteisen tonttijakosuunnitelmatietovarannon palveluna erittäin hyödyllinen. Esitonttikohteiden ```voimassaoloAika```-attribuutin arvojen avulla tällainen ajantasainen “Esitonttimatto” voidaan laskea mille tahansa ajanhetkelle, olettaen, että kaikki kyseisen alueen tonttijakosuunnitelmat on viety tonttijakosuunnitelmatietovarastoon tonttijakosuunnitelman tietomallin mukaisessa muodossa.
 
 ### Asemakaavan suhde esitonttikohteeseen
 
@@ -378,7 +378,7 @@ Tonttijakosuunnitelmien, joiden elinkaaritila on Vireillä, Luonnos, Ehdotus, Hy
 Tonttijakosuunnitelman elinkaaritila voi sen laadinta-, päätös-, valitus-, voimassaolo- ja kumoutumisvaiheidensa esiintyä ja muuttua vain tässä luvussa kuvatuilla tavoilla.
 
 {% include clause_start.html type="req" id="elinkaari/vaat-ensimmainen-elinkaaritila" %}
-Tonttijakosuunnitelman elinkaaritila tallennettaessa tonttijakosuunnitelmaa ensimmäistä kertaa tonttijakosuunnitelmatietovarantoon voi olla jokin seuraavista riippuen Tonttijakosuunnitelman ```digitaalinenAlkupera```-attribuutin arvosta:
+Tonttijakosuunnitelman elinkaaritila tallennettaessa tonttijakosuunnitelmaa ensimmäistä kertaa tonttijakosuunnitelmatietovarastoon voi olla jokin seuraavista riippuen Tonttijakosuunnitelman ```digitaalinenAlkupera```-attribuutin arvosta:
 
 - **Tietomallin mukaan laadittu**: tilat Vireillä, Luonnos, Ehdotus, Hyväksytty, Voimassa tonttijakosuunnitelma.
 - **Kokonaan digitoitu**, **Osittain digitoitu** tai **Tonttijakosuunnitelman rajaus digitoitu**: tilat Voimassa, Kumottu osittain, Kumottu, Kumoutunut osittain, Kumoutunut
@@ -405,7 +405,7 @@ Tavallisesti tonttijakosuunnitelman sisältämien esitonttikohteiden elinkaariti
 
 ### Tonttijakosuunnitelman elinkaaritilan muutoksiin liittyvät käsittely- ja vuorovaikutustapahtumat
 
- Kun tonttijakosuunnitelmasta viedään tonttijakosuunnitelmatietovarantoon uusi versio, jossa sen elinkaaritila on muuttunut, liittyy kyseisen tonttijakosuunniteman version syntymiseen tyypillisesti jokin käsittelytapahtuma.
+ Kun tonttijakosuunnitelmasta viedään tonttijakosuunnitelmatietovarastoon uusi versio, jossa sen elinkaaritila on muuttunut, liittyy kyseisen tonttijakosuunniteman version syntymiseen tyypillisesti jokin käsittelytapahtuma.
 
 {% include clause_start.html type="req" id="elinkaari/vaat-elinkaaritilan-muutostapahtumat" %}
 Tonttijakosuunnitelman ```elinkaaritila```-attribuutin arvon seuraaviin muutoksiin tulee aina liittyä **Kasittelytapahtuma**, jonka ```laji```-attribuutin arvo tulee olla elinkaarimuutosta vastaava:

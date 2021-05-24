@@ -4,6 +4,7 @@ title: "Tonttijakosuunnitelman tietomallin projektitiimi"
 description: ""
 page: "projektitiimi"
 ---
+
 # Projektitiimi
 
 Ubigulta työhön osallistuivat:
@@ -11,12 +12,12 @@ Ubigulta työhön osallistuivat:
 - Esa Östring
 - Ville Koivisto
 
-{% include note.html content="Kuvaillaan tänne projektitiimi" %}
 
 # Sidosryhmät
+
+Työtä on käsitelty semanttisen yhteentoimivuuden työryhmässä ja sitä on ohjannut ympäristöministeriö.
 
 Ympäristöministeriöstä työn ohjaukseen osallistuivat:
 - Anssi Hänninen
 - Jari Vaarma
 
-{% include note.html content="Kuvaillaan tänne sidosryhmät ja annetaan kiitosta sinne, minne se kuuluu" %}
