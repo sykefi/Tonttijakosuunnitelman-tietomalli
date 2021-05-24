@@ -29,9 +29,7 @@ Tonttijakosuunnitelman UML-kaaviot ovat saatavilla erillisinä dokumentteina.
 
 Kaavatietomallin mukaiset kaavamääräykset, joiden laji-attribuutin arvo on Tonttijako-koodin “Esitontti” tai “Sitova tonttijako laadittava”, ovat aluemaisia lähtötietoja tonttijakosuunnitelman laatimiselle.
 
-Tonttijakosuunnitelman tietomallin esitonteille kaavamääräykset linkitetään suoraan kaavatietomallista. Linkitys tietomallien välillä perustuu viittaustunnukseen, joka muodostetaan Tonttijakosuunnitelman tietomallin Kaavamaarays-luokan liittyvanKaavamaarayksenTunnus-attribuutille annettavalla Kaavatietomallin Kaavamääräys-luokan viittaustunnuksella.
-
-{% include note.html content="Lisää vaadittavat viittaukset kyseisiin koodeihin y-alustalla." %}
+Tonttijakosuunnitelman tietomallin esitonteille kaavamääräykset linkitetään suoraan kaavatietomallista. Linkitys tietomallien välillä perustuu viittaustunnukseen, joka muodostetaan Tonttijakosuunnitelman tietomallin [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) liittyvanKaavamaarayksenTunnus-attribuutille annettavalla Kaavatietomallin [Kaavamääräys-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnuksella.
 
 **Tonttijako-koodien merkitykset:**
 - “Sitova tonttijako laadittava” koskee koko kaavaa tai kaavan osaa.
@@ -223,16 +221,21 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 geometria | [geometry](#geometry) | 0..1  | esitonttikohteen sijainti
 kohteenPinta-ala | [Number](#Number) | 0..*  | esitontin pinta-ala tai kolmiulotteisen esitontin projisoitu pinta-ala
-pystysuunteinenRajaus | [Korkeusvali](#Korkeusvali) | 0..1  | kolmiulotteisen esitontin ylin ja alin korkeus merenpinnasta.
+pystysuunteinenRajaus | [Korkeusvali](#Korkeusvali) | 0..1  | kolmiulotteisen esitontin ylin ja alin korkeus merenpinnasta
 
 ### Esitonttikohde
-<!--Tämä ei taida olla vielä ajantaisainen -->
+
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-laji | [AbstraktiKaavakohdelaji](#AbstraktiKaavakohdelaji) | 1  | kuvaa kaavakohteen tyypin
-liittyvanLahtotietokohteenTunnus | [URI](#URI) | 0..*  | ?
-maanalaisuus| [MaanalaisuudenLaji](#MaanalaisuudenLaji) | 0..1  | luokittelu tonttijakosuunnitelman sijoittumisesta suhteessa peruskiinteistöön. Merkitään vain 3D-esitonteille.
-elinkaarentila | [TonttijakosuunnitelmanElinkaarentila](#TonttijakosuunnitelmanElinkaarentila) | 1  | ?
+laji | [EsitonttikohdeLaji](#EsitonttikohdeLaji) | 1  | kuvaa esitonttikohteen tyypin
+suhdePeruskiinteistoon | [suhdePeruskiinteistoon](#suhdePeruskiinteistoon) | 0..1  | luokittelu esitonttikohteen sijoittumisesta suhteessa peruskiinteistöön, joka merkitään vain 3D-esitonttikohteelle
+elinkaarentila | [TonttijakosuunnitelmanElinkaarentila](#TonttijakosuunnitelmanElinkaarentila) | 1  | 
+muodostajatieto | [MuodostajaTieto](#MuodostajaTieto) | 1..* | tieto muodostajakiinteistöistä, josta/joista esitontti muodostetaan
+kaavasuhdetieto | [KaavaSuhdetieto](#KaavaSuhdetieto) | 1..* | tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista
+rakennettu | [boolean](#boolean) | 0..1 | tieto muun muassa kiinteistöverotusta varten siitä, onko esitonttikohde rakennettu asemakaavan mukaisesti
+rakennuskielto | [boolean](#boolean) | 0..1 | kuvaa, onko esitonttikohteella rakennuskielto
+voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aikaväli, jona asiasta tehty päätös suunnitelmineen ja säännöksineen on lainvoimainen
+
 
 **Assosiaatiot**
 
