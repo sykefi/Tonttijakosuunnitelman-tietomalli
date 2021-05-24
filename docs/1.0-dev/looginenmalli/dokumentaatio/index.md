@@ -242,8 +242,6 @@ voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aikaväli, jona asiasta tehty
 Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
 -----------------|--------------------|---------------------|----------
 maarays | [Kaavamaarays](#Kaavamaarays) | 0..* | kaavaan sisältyvä sanallinen määräys, jolla ohjataan alueiden suunnittelua ja rakentamista
-muodostaja | [Muodostustieto](#Muodostustieto) | 1 | tieto muodostajakiinteistöistä, josta esitontti muodostetaan
-suhdeasemakaavaan | [SuhdeAsemakaavaan](#SuhdeAsemakaavaan) | 1..* | tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista
 
 ### Muodostustieto
 
