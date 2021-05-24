@@ -294,7 +294,7 @@ Tonttijakosuunnitelma ja sen esitonttikohteet ovat voimassa niiden voimassaoloAi
 Tonttijakosuunnitelma ja sen esitonttikohteet voivat olla elinkaaritilassa Voimassa ainoastaan, mikäli niiden voimassaoloAika on annettu ja sisältää vain alkuajan ilman loppuaikaa. Tonttijakosuunnitelman ja sen esitonttikohteiden voimassaoloAika voi olla annettu vain mikäli ne ovat joko elinkaaritilassa Voimassa tai Kumottu. Tonttijakosuunnitelman ja sen esitonttikohteiden voimassaoloAika sisältää sekä alku- että loppuajan vain, kun ne ovat elinkaaritilassa Kumottu.
 {% include clause_end.html %}
 
-## Tonttijakosuunnitelman kumoutuminen ja kumoaminen 
+### Tonttijakosuunnitelman kumoutuminen ja kumoaminen 
 
 Maankäyttö- ja rakennuslain pykälässä XX säädetään tonttijakosuunnitelman kumoutumisesta ja kumoamisesta.
 
@@ -324,16 +324,17 @@ Tonttijakosuunnitelman tietomalli ei sisällä omaa tietorakennettaan ajantasais
 ### Asemakaavan suhde esitonttikohteeseen
 
 <!-- Lisää sisäiset linkit-->
-Voimassaolevan tonttijakosuunnitelman esitonttikohde voi saada uuden version tai kumoutua kokonaan kaavamuutoksen tai vaiheasemakaavan voimaan tullessa esitonttikohteen alueella. 
+Voimassaolevan tonttijakosuunnitelman esitonttikohde voi saada uuden version tai kumoutua kokonaan kaavamuutoksen tai vaiheasemakaavan voimaan tullessa esitonttikohteen alueella.
 
 {% include clause_start.html type="req" id="elinkaari/vaat-kaavatunnus" %}
-Esitonttikohteille tulee yksilöidä tonttijakosuunnitelmassa siihen liittyvät asemakaavat. Kutakin  esitonttikohdetta kohti tulee antaa yksi Esitonttikohde-luokan attribuutin ```kaavasuhdetieto``` arvo tyyppiä KaavaSuhdetieto, jonka ```kaavaTunnus```-attribuutin arvo on Kaava-luokan ```viittaustunnus```.
+Esitonttikohteille tulee yksilöidä tonttijakosuunnitelmassa siihen liittyvät asemakaavat. Kutakin  esitonttikohdetta kohti tulee antaa yksi [Esitonttikohde-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#esitonttikohde) attribuutin ```kaavasuhdetieto``` arvo tyyppiä KaavaSuhdetieto, jonka ```kaavaTunnus```-attribuutin arvo on [Kaava-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaava) ```viittaustunnus```.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-kaavalaji-vaikutus" %}
-Jos asemakaavan muutos tai vaiheasemakaava hyväksytään esitonttikohteen alueella, tulee esitonttikohteesta luoda uusi tallennusversio ja KaavaSuhdetieto-luokan ```kaavalaji```-attribuutin arvoksi asetetaan hyväksytyn kaavan kaavalaji-koodi.
+Jos asemakaavan muutos tai vaiheasemakaava hyväksytään esitonttikohteen alueella, tulee esitonttikohteesta luoda uusi tallennusversio ja [KaavaSuhdetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```kaavalaji```-attribuutin arvoksi asetetaan hyväksytyn kaavan kaavalaji-koodi.
 
-Asemakaavan määräysten muuttuessa asetetaan kaavatietomallin uuden Kaavamaarays-luokan viittaustunnus tonttijakosuunnitelman tietomallin Kaavamaarays-luokan ```liittyvanKaavamääräyksenTunnus```-attribuutin arvoksi. Lisäksi Kaavamaarays-luokan viittaustunnus tallennetaan esitonttikohteen uudelle tallennusversiolle.
+Asemakaavan määräysten muuttuessa asetetaan kaavatietomallin uuden [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tonttijakosuunnitelman tietomallin [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) ```liittyvanKaavamääräyksenTunnus```-attribuutin arvoksi. Lisäksi [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tallennetaan esitonttikohteen uudelle tallennusversiolle.
+
 Asemakaavan määräysten tullessa voimaan tonttijakosuunnitelman laatijan tulee tulkita tonttijakosuunnitelman kaavan mukaisuus. Jos tonttijakosuunnitelma ei ole kaavan mukainen, tulee tonttijakosuunnitelman sisältämät ei kaavan mukaiset esitonttikohteet asettaa rakennuskieltoon. Kaavakohteen rajojen muutos  asettaa esitonttikohteen aina rakennuskieltoon:
 
 - ```rakennuskielto```-attribuutin arvoksi asetetaan true.
@@ -344,16 +345,15 @@ Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden tonttijakosuunn
 {% include note.html content="Kaavan kaavalaji-koodia ei ole toistaiseksi olemassa." %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-kumoaa-esitonttikohteen" %}
-Jos asemakaavan muutos koskee uutta yleistä aluetta ja asemakaavan rajojen muutosta esitonttikohteen alueella, kumoaa asemakaava esitonttikohteen. Esitonttikohteesta ei luoda uutta versiota:
+Jos asemakaavalla esitontin rajat muuttuvat kokonaan tai osittain yleiseksi alueeksi, kumoaa asemakaava esitonttikohteen. Näin esitonttikohde muuttuu ei-kortteliksi, ja kumoaminen tonttijakosuunnitelmalla ei olisi mahdollista. [KaavaSuhdetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) kumoaa-attribuutin arvoksi asetetaan true. Esitonttikohteesta ei luoda uutta versiota, vaan:
 
-- ```rakennuskielto```-attribuutin arvoksi asetetaan true.
-- ```elinkaarentila```-attribuutin arvoksi asetetaan kumoutunut.
-- ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin kaavan voimassaoloAika-attribuutin alkamisaika.
+- ```elinkaarentila```-attribuutin arvoksi asetetaan **kumoutunut**.
+- ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin kaavan ```voimassaoloAika```-attribuutin alkamisaika.
 
 Tämä edellyttää uuden tonttijakosuunnitelman laatimista kumotun esitonttikohteen alueelle.
 {% include clause_end.html %}
 
-### Tonttijakosuunnitelman elinkaaren vaiheet ja elinkaaritila-attribuutin käyttötavat
+## Tonttijakosuunnitelman elinkaaren vaiheet ja elinkaaritila-attribuutin käyttötavat
 
 Tonttijakosuunnitelman ja sen sisältämien esitonttikohteiden elinkaareen liittyvää tilaa hallitaan ko. tietokohteiden elinkaaritila-attribuutin ja sen mahdolliset arvot kuvaavan Elinkaaren tila-koodiston avulla. Tonttijakosuunnitelma- ja  Esitonttikohde-luokkien elinkaaritila-attribuutit ovat pakollisia.
 
