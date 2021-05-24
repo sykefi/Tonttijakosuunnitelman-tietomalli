@@ -26,10 +26,4 @@ Tietomallista järjestettiin kansallinen kommentointikierros xx/2021. Tonttijako
 
 Toistaiseksi tontinjakosuunnitelmasta on säädetty osana lainvoimaista [maankäyttö- ja rakennuslakia (MRL)](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132). Lisätietoja tontinjakosuunnitelmasta voi lukea [Maanmittauslaitoksen](https://www.mml.fi) ja [ympäristöministeriön](https://www.ym.fi) sivuilta. 
 
-<ins>**Kaavatietomallin ja tonttijakosuunnitelman tietomallin suhde**</ins>
-
-Kaavatietomallin mukaiset kaavamääräykset, joiden laji-attribuutin arvo on Tonttijako-koodin “Esitontti” tai “Sitova tonttijako laadittava”, ovat aluemaisia lähtötietoja tonttijakosuunnitelman laatimiselle.
-
-Tonttijakosuunnitelman tietomallin esitonteille kaavamääräykset linkitetään suoraan kaavatietomallista. Linkitys tietomallien välillä perustuu viittaustunnukseen, joka muodostetaan Tonttijakosuunnitelman tietomallin Kaavamaarays-luokan liittyvanKaavamaarayksenTunnus-attribuutille annettavalla Kaavatietomallin Kaavamääräys-luokan viittaustunnuksella.
-
 {% include note.html content="Sivustoa ylläpitää [Ubigu Oy](https://www.ubigu.fi). Yhteyshenkilö projektille on Marko Kauppi." %}
