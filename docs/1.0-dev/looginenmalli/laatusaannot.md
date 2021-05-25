@@ -39,7 +39,7 @@ Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa tonttij
 
 ### Soveltamisohjeiden mukaisuus
 {% include clause_start.html type="req" id="laatu/vaat-soveltamisohjeet" %}
-Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa Tonttijakosuunnitelman tietomallin yksilöimää [Tonttijakosuunnitelman](../soveltamisohjeet/) soveltamisprofiilia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
+Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa tonttijakosuunnitelman tietomallin yksilöimää [Tonttijakosuunnitelman](../soveltamisohjeet/) soveltamisprofiilia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
 {% include clause_end.html %}
 
 {% include question.html content="" %}
@@ -175,7 +175,7 @@ Aikavälejä kuvaavat attribuutit voidaan antaa joko sekä alku- että loppuajan
 
 ### AbstraktiMaankayttoasia
 {% include clause_start.html type="req" id="laatu/vaat-mkp-aluerajaus-geometria" %}
-[AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokan objektien ```aluerajaus```-attribuutin arvon tulee kuvata kaavan suunnittelualue joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
+[AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokan objektien ```aluerajaus```-attribuutin arvon tulee kuvata tonttijakosuunnitelman suunnittelualue joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
 {% include clause_end.html %}
 <!--
 ### Lahtotietoaineisto
