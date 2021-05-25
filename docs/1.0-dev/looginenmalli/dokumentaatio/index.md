@@ -225,8 +225,8 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 laji | [EsitonttikohdeLaji](#EsitonttikohdeLaji) | 1  | kuvaa esitonttikohteen tyypin
 suhdePeruskiinteistoon | [suhdePeruskiinteistoon](#suhdePeruskiinteistoon) | 0..1  | luokittelu esitonttikohteen sijoittumisesta suhteessa peruskiinteistöön, joka merkitään vain 3D-esitonttikohteelle
 elinkaarentila | [TonttijakosuunnitelmanElinkaarentila](#TonttijakosuunnitelmanElinkaarentila) | 1  | 
-muodostajatieto | [MuodostajaTieto](#MuodostajaTieto) | 1..* | tieto muodostajakiinteistöistä, josta/joista esitontti muodostetaan
-kaavasuhdetieto | [KaavaSuhdetieto](#KaavaSuhdetieto) | 1..* | tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista
+muodostajatieto | [Muodostajatieto](#Muodostajatieto) | 1..* | tieto muodostajakiinteistöistä, josta/joista esitontti muodostetaan
+kaavasuhdetieto | [Kaavasuhdetieto](#Kaavasuhdetieto) | 1..* | tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista
 rakennettu | [boolean](#boolean) | 0..1 | tieto muun muassa kiinteistöverotusta varten siitä, onko esitonttikohde rakennettu asemakaavan mukaisesti
 rakennuskielto | [boolean](#boolean) | 0..1 | kuvaa, onko esitonttikohteella rakennuskielto
 voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aikaväli, jona asiasta tehty päätös suunnitelmineen ja säännöksineen on lainvoimainen
@@ -245,13 +245,13 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 kiinteistoTunnus | [Tunnusarvo](#Tunnusarvo) | 1  | kiinteistörekisteriin merkityn rekisteriyksikön yksilöivä tunnus
 muodostusPinta-ala | [Number](#Number) | 1  | muodostavan rekisterikiinteistön pinta-alan määrä neliömetreissä
 
-### KaavanSuhdetieto
+### Kaavasuhdetieto
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 kaavaTunnus | [URI](#URI) | 1  | kaavatunnus, joka muuttaa esitonttikohteen kaavamääräyksiä tai kumoaa esitonttikohteen
 kaavalaji | [Kaavalaji](#Kaavalaji) | 1 | alueiden käytön ohjaustarpeeseen, kaavan sisältövaatimuksiin, prosessiin ja vastuulliseen hallintoviranomaiseen perustuva luokittelu
-kumoaa | [boolean](#boolean) | 1 | jos arvo on true, kaava kumoaa esitonttikohteen kokonaan
+kumoaaEsitonttikohteen | [boolean](#boolean) | 1 | jos arvo on true, kaava kumoaa esitonttikohteen kokonaan
 
 ### Kaavamaarays
 
