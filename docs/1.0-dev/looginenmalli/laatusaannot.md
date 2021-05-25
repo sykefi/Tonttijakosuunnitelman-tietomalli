@@ -218,16 +218,16 @@ Kaavatietovarastossa ei tule olla kahta [Kaava](dokumentaatio/#kaava)-luokan obj
 -->
 ### Esitonttikohde
 
-{% include clause_start.html type="req" id="laatu/vaat-kaavakohde-geometria" %}
-[Esitonttikohde](dokumentaatio/#kaavakohde)-luokan objektin ```geometria```-attribuutin arvon tulee olla [piste](#laatu-vaat-geom-piste-maar), [alue](#laatu-vaat-geom-2d-alue-maar), [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar), [monialue tai monikappale](#laatu-vaat-geom-kokoelmat-maar).
+{% include clause_start.html type="req" id="laatu/vaat-esitonttikohde-geometria" %}
+[Esitonttikohde](dokumentaatio/#esitonttikohde)-luokan objektin ```geometria```-attribuutin arvon tulee olla [piste](#laatu-vaat-geom-piste-maar), [alue](#laatu-vaat-geom-2d-alue-maar), [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar), [monialue tai monikappale](#laatu-vaat-geom-kokoelmat-maar).
 {% include clause_end.html %}
 
-{% include clause_start.html type="req" id="laatu/vaat-kaavakohde-3d-konsistenssi" %}
-Mikäli [Esitonttikohde](dokumentaatio/#kaavakohde)-luokan objektin ```geometria```-attribuutin arvo on [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar) tai [monikappale](#laatu-vaat-geom-kokoelmat-maar), ja sille on annettu ```pystysuuntainenRajaus```-attribuutti, tulee ```geometria```-attribuutin arvon sijaita pystysuuntaisen rajauksen määrittämien korkeuksien ala- ja ylärajojen väleissä. 
+{% include clause_start.html type="req" id="laatu/vaat-esitonttikohde-3d-konsistenssi" %}
+Mikäli [Esitonttikohde](dokumentaatio/#esitonttikohde)-luokan objektin ```geometria```-attribuutin arvo on [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar) tai [monikappale](#laatu-vaat-geom-kokoelmat-maar), ja sille on annettu ```pystysuuntainenRajaus```-attribuutti, tulee ```geometria```-attribuutin arvon sijaita pystysuuntaisen rajauksen määrittämien korkeuksien ala- ja ylärajojen väleissä. 
 {% include clause_end.html %}
 
-{% include clause_start.html type="req" id="laatu/vaat-paallekkaiset-kaavakohteet" %}
-Tonttijakosuunnitelmatietovarastossa ei tule olla kahta [Esitonttikohde](dokumentaatio/#kaavakohde)-luokan objektia, joiden
+{% include clause_start.html type="req" id="laatu/vaat-paallekkaiset-esitonttikohteet" %}
+Tonttijakosuunnitelmatietovarastossa ei tule olla kahta [Esitonttikohde](dokumentaatio/#esitonttikohde)-luokan objektia, joiden
 * ```voimassaoloAika```-attribuutin arvojen kuvaamat aikavälit ovat sisäkkäisiä tai lomittain, ja
 * ```geometria```- ja ```pystysuuntainenRajaus```-attribuuttien yhdessä kuvaavat geometriat leikaavat toisiaan tai ovat sisäkkäisiä.
 {% include clause_end.html %}
