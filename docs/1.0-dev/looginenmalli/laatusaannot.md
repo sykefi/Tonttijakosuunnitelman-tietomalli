@@ -39,7 +39,7 @@ Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa tonttij
 
 ### Soveltamisohjeiden mukaisuus
 {% include clause_start.html type="req" id="laatu/vaat-soveltamisohjeet" %}
-Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa Tonttijakosuunnitelman tietomallin yksilöimää ([asemakaavan](../soveltamisohjeet/)soveltamisprofiilia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
+Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa Tonttijakosuunnitelman tietomallin yksilöimää (../soveltamisohjeet/)soveltamisprofiilia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
 {% include clause_end.html %}
 
 {% include question.html content="" %}
