@@ -39,19 +39,19 @@ Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa tonttij
 
 ### Soveltamisohjeiden mukaisuus
 {% include clause_start.html type="req" id="laatu/vaat-soveltamisohjeet" %}
-Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa niiden kaavatietomallin yksilöimää ([asemakaavan](../soveltamisohjeet/asemakaava/)soveltamisprofiilia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
+Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa Tonttijakosuunnitelman tietomallin yksilöimää ([asemakaavan](../soveltamisohjeet/)soveltamisprofiilia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
 {% include clause_end.html %}
 
-{% include question.html content="Onko tarvetta puhua tässä, ja muuallakin jatkuvasti myös yleiskaavan soveltamisprofiilista ja sen noudattamisesta, vai riittääkö yksinään asemakaavaan viittaaminen?" %}
+{% include question.html content="" %}
 <!-- Jatka tästä työstöä. -->
 ### Merkkijonojen käyttö
 #### Merkistöt
 {% include clause_start.html type="req" id="laatu/vaat-merkisto-utf8" %}
-Kaikki Kaavatietomallin tekstimuotoiset sisällöt on tiedonsiirtoa varten koodattava käyttäen UTF-8 -merkistökoodausta.
+Kaikki Tonttijakosuunnitelman tietomallin tekstimuotoiset sisällöt on tiedonsiirtoa varten koodattava käyttäen UTF-8 -merkistökoodausta.
 {% include clause_end.html %}
 
 #### Monikielinen sisältö ja kielikoodit
-Kaikki kaavatietomallin tekstimuotoinen sisältö ilmaistaan ISO 19103 -standardin määrittelemän [LanguageString](dokumentaatio/#languagestring)-luokan avulla.
+Kaikki Tonttijakosuunnitelman tietomallin tekstimuotoinen sisältö ilmaistaan ISO 19103 -standardin määrittelemän [LanguageString](dokumentaatio/#languagestring)-luokan avulla.
 
 {% include clause_start.html type="req" id="laatu/vaat-monikielisyys-kielikoodi" %}
 Kunkin LanguageString-luokan objektin tulee toteuttaa ```language```-attribuutti, jonka arvona on ISO 639-2 -standardin mukainen terminologinen, kolmekirjaiminen kielikoodi code (ISO 639-2/T).
@@ -71,7 +71,7 @@ Kunkin yhdellä kielellä annetun LanguageString-tyyppisen merkkijonon enimmäis
 {% include clause_end.html %}
 
 {% include note.html content="Valittu 2048 merkin raja perustuu arvioon yksittäisten kaavamäräystekstien tyypillisistä pituuksista. Merkkijonojen enimmäispituuden määrääminen loogisen tietomallin tasolla on jossain määrin kajoamista mallin tekniseen toteutukseen, mutta yhteentoimivuuden takaamisen näkökulmasta on tärkeää, että kaikkissa fyysisissä tietomalleissa varataan yhtä suuri maksimimäärä merkkejä tekstisisältöjen tallentamiseen. Muutoin on riskinä oikeusvaikuttteisen tiedon katoaminen tiedonsiirrossa tai -käsittelyproseseissa." %}
-
+<!-- poistettu toistaiseksi 
 #### Tekstiarvojen käyttö
 
 Tekstimuotoisina annettujen kaavamääräysten ja niiden lisätietojen koneellinen tulkittavuus on monimutkaisempaa, epätäsmällisempää ja epäluotettavampaa kuin kuvattaessa sama ohjausvaikutus koodistojen arvojen tai numeeristen arvojen avulla. Tekstimuotoiset arvot ovat kuitenkin toisinaan tarpeen, koska kaikkia mahdollisia yksityiskohtaisia kaavamääräystietoja ei ole mielekästä koodittaa. Ihmisen tulee todennäköisesti aina tarkistaa tekstimuotoisten kaavamääräysten tulkinta, mikä heikentää konetulkittavan kaavatiedon käsittelytehokkuutta. Tämän vuoksi tekstimuotoisia kaavamääräysten ja niiden lisätietojen arvoja ei tule käyttää tarpeettomasti, esimerkiksi kuvaamaan uudelleen jo kaavamääräyslajikoodin otsikkoon, määritelmään tai kuvaukseen sisältyvää sisältöä.
@@ -83,7 +83,7 @@ Mikäli [Kaavamaarays](dokumentaatio/#kaavamaarays)- tai [Lisatieto](dokumentaat
 {% include clause_start.html type="req" id="laatu/vaat-otsikointi-nimi" %}
 [Kaavamaarays](dokumentaatio/#kaavamaarays)-, [Kaavasuositus](dokumentaatio/#kaavasuositus)- ja [Kaavakohde](dokumentaatio/#kaavakohde)-luokkien instanssien mahdolliseen ei-oikeusvaikutteiseen otsikointiin tulee käyttää niiden ```nimi```-attribuutteja.
 {% include clause_end.html %}
-
+-->
 ### Geometriat
 
 #### Geometriatyypit
@@ -147,13 +147,13 @@ Aluemaisten geometrioiden kiertosuuntien tulee noudattaa ISO 19107 -standardin m
 #### Paikkatietokohteiden geometrioiden sisäkkäisyys ja päällekkäisyys
 
 {% include clause_start.html type="req" id="laatu/vaat-kaavakohteet-kaavan-sisalla" %}
-[Kaava](dokumentaatio/#kaava)-luokan objektin ```aluerajaus```-attribuutin ilmaiseman kaava-alueen tulee pitää sisällään kaikki kaavaan sisältyvien [AbstraktiKaavakohde](dokumentaatio/#abstraktikaavakohde)-luokan objektien geometriat, poislukien sellaiset [Kaavakohde](dokumentaatio/#kaavakohde)-luokan objektit, joiden kaikki kaavamääräykset ja kaavasuositukset ovat kumottuja.
+[Tonttijakosuunnitelma](dokumentaatio/#kaava)-luokan objektin ```aluerajaus```-attribuutin ilmaiseman tonttijakosuunnitelma-alueen tulee pitää sisällään kaikki tonttijakosuunnitelmaan sisältyvien [AbstraktiKaavakohde](dokumentaatio/#abstraktikaavakohde)-luokan objektien geometriat, poislukien sellaiset [Esitonttikohde](dokumentaatio/#kaavakohde)-luokan objektit, jotka ovat kumottuja.
 {% include clause_end.html %}
 
 
 
 ### Päivämäärät ja kelloanajat
-Kaavatietomallin yksittäisiä ajanhetkiä kuvaavat attribuutit ovat ISO 19108 -standardin määrittämää tyyppiä [TM_Instant](dokumentaatio/#tm_instant) ja aikavälejä kuvaavat attribuutit tyyppiä [TM_Period](dokumentaatio/#tm_period). Päivämäärät annetaan käyttäen Gregoriaanista kalenteria ja kellonajat käyttäen 24 tunnin kelloaikamuotoa alkaen kellonajasta 00:00:00.000  ja päättyen ajanhetkeen 23:59:59.999 (tunti, minuutti, sekunti, millisekunti).
+Tonttijakosuunnitelman tietomallin yksittäisiä ajanhetkiä kuvaavat attribuutit ovat ISO 19108 -standardin määrittämää tyyppiä [TM_Instant](dokumentaatio/#tm_instant) ja aikavälejä kuvaavat attribuutit tyyppiä [TM_Period](dokumentaatio/#tm_period). Päivämäärät annetaan käyttäen Gregoriaanista kalenteria ja kellonajat käyttäen 24 tunnin kelloaikamuotoa alkaen kellonajasta 00:00:00.000  ja päättyen ajanhetkeen 23:59:59.999 (tunti, minuutti, sekunti, millisekunti).
 
 {% include clause_start.html type="req" id="laatu/vaat-ajanhetki-tarkkuus" %}
 Yksittäisiä ajanhetkiä kuvaavat attribuutit ilmaistaan joko pelkän päivämäärän tai päivämäärän ja kelloajan avulla. Päivämäärät ilmaistaan antamalla vuoden, kuukauden ja kuukauden päivän numeeriset arvot. Kellonajat ilmaistaan vähintään yhden minuutin ja enintään yhden millisekunnin tarkkuudella antamalla tunnin, minuutin, sekunnin ja millisekunnin numeeriset arvot.
@@ -177,18 +177,18 @@ Aikavälejä kuvaavat attribuutit voidaan antaa joko sekä alku- että loppuajan
 {% include clause_start.html type="req" id="laatu/vaat-mkp-aluerajaus-geometria" %}
 [AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokan objektien ```aluerajaus```-attribuutin arvon tulee kuvata kaavan suunnittelualue joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
 {% include clause_end.html %}
-
+<!--
 ### Lahtotietoaineisto
 {% include clause_start.html type="req" id="laatu/vaat-lahtotietoaineisto-aluerajaus-geometria" %}
 [Lahtotietoaineito](dokumentaatio/#lahtotietoaineisto)-luokan objektien ```aluerajaus```-attribuutin arvon tulee kuvata aineiston maantieteellinen kattavuus joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
 {% include clause_end.html %}
 
-### KaavanKumoamistieto
+### TonttijakosuunnitelmanKumoamistieto
 {% include clause_start.html type="req" id="laatu/vaat-lahtotietoaineisto-aluerajaus-geometria" %}
 [KaavanKumoamistieto](dokumentaatio/#kaavankumoamistieto)-luokan objektien ```kumottavanKaavanAlue```-attribuutin arvon tulee kuvata kumottava alue joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
 {% include clause_end.html %}
 
-### Kaava
+### Tonttijakosuunnitelma
 {% include clause_start.html type="req" id="laatu/vaat-kaava-paallekkaiset-aluerajaukset" %}
 Kaavatietovarastossa ei tule olla kahta [Kaava](dokumentaatio/#kaava)-luokan objektia, joiden 
 * ```laji```-attribuutin arvot ovat samat,
@@ -215,20 +215,19 @@ Kaavatietovarastossa ei tule olla kahta [Kaava](dokumentaatio/#kaava)-luokan obj
 {% include clause_start.html type="req" id="laatu/vaat-kaava-voimassaolo-loppu" %}
 [Kaava](dokumentaatio/#kaava)-luokan objektilla, jonka [elinkaatila](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaaritila) on  kumottu tai kumoutunut (koodi 11 tai 12), tulee olla annettu ei-tyhjä ```voimassaAika```-attribuutin loppuajanhetken arvo.
 {% include clause_end.html %}
-
-### Kaavakohde
+-->
+### Esitonttikohde
 
 {% include clause_start.html type="req" id="laatu/vaat-kaavakohde-geometria" %}
-[Kaavakohde](dokumentaatio/#kaavakohde)-luokan objektin ```geometria```-attribuutin arvon tulee olla [piste](#laatu-vaat-geom-piste-maar), [viiva](#laatu-vaat-geom-viiva-maar), [alue](#laatu-vaat-geom-2d-alue-maar), [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar), [moniviiva, monialue tai monikappale](#laatu-vaat-geom-kokoelmat-maar).
+[Esitonttikohde](dokumentaatio/#kaavakohde)-luokan objektin ```geometria```-attribuutin arvon tulee olla [piste](#laatu-vaat-geom-piste-maar), [alue](#laatu-vaat-geom-2d-alue-maar), [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar), [monialue tai monikappale](#laatu-vaat-geom-kokoelmat-maar).
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-kaavakohde-3d-konsistenssi" %}
-Mikäli [Kaavakohde](dokumentaatio/#kaavakohde)-luokan objektin ```geometria```-attribuutin arvo on [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar) tai [monikappale](#laatu-vaat-geom-kokoelmat-maar), ja sille on annettu ```pystysuuntainenRajaus```-attribuutti, tulee ```geometria```-attribuutin arvon sijaita pystysuuntaisen rajauksen määrittämien korkeuksien ala- ja ylärajojen väleissä. 
+Mikäli [Esitonttikohde](dokumentaatio/#kaavakohde)-luokan objektin ```geometria```-attribuutin arvo on [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar) tai [monikappale](#laatu-vaat-geom-kokoelmat-maar), ja sille on annettu ```pystysuuntainenRajaus```-attribuutti, tulee ```geometria```-attribuutin arvon sijaita pystysuuntaisen rajauksen määrittämien korkeuksien ala- ja ylärajojen väleissä. 
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="laatu/vaat-paallekkaiset-kaavakohteet" %}
-Kaavatietovarastossa ei tule olla kahta [Kaavakohde](dokumentaatio/#kaavakohde)-luokan objektia, joiden
-* ```kaava```-attribuutin arvo viittaavat eri kaavoihin, 
+Tonttijakosuunnitelmatietovarastossa ei tule olla kahta [Esitonttikohde](dokumentaatio/#kaavakohde)-luokan objektia, joiden
 * ```voimassaoloAika```-attribuutin arvojen kuvaamat aikavälit ovat sisäkkäisiä tai lomittain, ja
 * ```geometria```- ja ```pystysuuntainenRajaus```-attribuuttien yhdessä kuvaavat geometriat leikaavat toisiaan tai ovat sisäkkäisiä.
 {% include clause_end.html %}
