@@ -24,6 +24,6 @@ Tämä sivusto jakautuu seuraaviin osa-alueisiin:
 
 Tietomallista järjestettiin kansallinen kommentointikierros xx/2021. Tonttijakosuunnitelman tietomallia kehitetään läpi Ryhti-hankkeen elinkaaren, ja myös siitä eteenpäin. 
 
-Toistaiseksi tontinjakosuunnitelmasta on säädetty osana lainvoimaista [maankäyttö- ja rakennuslakia (MRL)](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132). Lisätietoja tontinjakosuunnitelmasta voi lukea [Maanmittauslaitoksen](https://www.mml.fi) ja [ympäristöministeriön](https://www.ym.fi) sivuilta. 
+Toistaiseksi tonttijaosta on säädetty osana lainvoimaista [maankäyttö- ja rakennuslakia (MRL)](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132). Lisätietoja tontinjakosuunnitelmasta voi lukea [ympäristöministeriön](https://www.ym.fi) sivuilta. 
 
 {% include note.html content="Sivustoa ylläpitää [Ubigu Oy](https://www.ubigu.fi). Yhteyshenkilö projektille on Marko Kauppi." %}
