@@ -14,7 +14,7 @@ status: "Keskeneräinen"
 
 ## Johdanto
 
-{% include important.html content="Tässä esitettävä tieto on toistaiseksi kaavatietomallin." %}
+<!--{% include important.html content="Tässä esitettävä tieto on toistaiseksi kaavatietomallin." %}-->
 
 ## Yhteiset laatusäännöt
 
