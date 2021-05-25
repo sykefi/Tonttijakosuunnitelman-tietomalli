@@ -16,6 +16,12 @@ status: "Keskeneräinen"
 
 Loogisen tason tietomalli määrittelee kaikille tonttijakosuunnitelman kohteille yhteiset tietorakenteet, joita sovelletaan tonttijaon ilmaisemiseen laadittujen soveltamisohjeiden ja niissä kiinnitettyjen koodistojen sekä elinkaari- ja laatusääntöjen mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta.
 
+**Graafinen mallinnus loogisesta tietomallista**
+
+![Tonttijakosuunnitelman looginen malli graafisena mallinnuksena](looginenmalli.png "Looginen tietomalli -  graafinen mallinnus (Neo4j)")
+
+(Lataa [Kaavio määritelmien kanssa](looginenmalli.png))
+
 ### Normatiiviset viittaukset
 Tonttijakosuunnitelman tietomalli hyödyntää samoja normatiivisia viittauksia kuin kaavatietomallikin. Tämä käsittää seuraavat dokumentit:
 
@@ -27,11 +33,6 @@ Tonttijakosuunnitelman tietomalli hyödyntää samoja normatiivisia viittauksia 
 * [ISO 19109:2015 Geographic information — Rules for application schema][ISO-19109]
 * [ISO 19505-2:ISO/IEC 19505-2:2012, Information technology — Object Management Group Unified Modeling Language (OMG UML) — Part 2: Superstructure][ISO-19505-2]
 
-### Graafinen mallinnus loogisesta tietomallista
-![Tonttijakosuunnitelman looginen malli graafisena mallinnuksena](looginenmalli.png "Looginen tietomalli -  graafinen mallinnus (Neo4j)")
-
-(Lataa [Kaavio määritelmien kanssa](looginenmalli.png))
- 
 ### Standardienmukaisuus
 
 Looginen tonttijakosuunnitelman tietomalli perustuu [ISO 19109][ISO-19109]-standardin yleinen kohdetietomalliin (General Feature Model, GFM), joka määrittelee rakennuspalikat paikkatiedon ISO-standardiperheen mukaisten sovellusskeemojen määrittelyyn. GFM kuvaa muun muassa metaluokat ```FeatureType```, ```AttributeType``` ja ```FeatureAssociationType```. 
