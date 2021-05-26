@@ -101,7 +101,7 @@ Kaavatietomallin mukaiset kaavamääräykset, joiden laji-attribuutin arvo on To
 
 Tonttijakosuunnitelman tietomallin esitonteille kaavamääräykset linkitetään suoraan kaavatietomallista. Linkitys tietomallien välillä perustuu viittaustunnukseen, joka muodostetaan Tonttijakosuunnitelman tietomallin Kaavamaarays-luokan ```liittyvanKaavamaarayksenTunnus```-attribuutille annettavalla Kaavatietomallin Kaavamääräys-luokan viittaustunnuksella. Tällä vältetään toisteellisen kaavamääräystiedon tuottamiselta. Tonttijakosuunnitelman tietomalli mahdollistaa kuitenkin tonttijakosuunnitelman laatijan määrittää kerrosala laskennallisesti esitonttikohteille.
 
-Elinkaarisäännöt-sivulla [Asemakaavan suhde esitonttikohteeseen -luku](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/elinkaarisaannot.html#asemakaavan-suhde-esitonttikohteeseen) kuvaa kaavatietojen vaikutukset tonttijakosuunnitelman elinkaarisääntöihin.
+Elinkaarisäännöt-sivulla [Asemakaavan suhde esitonttikohteeseen -luku](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/elinkaarisaannot.html#asemakaavan-suhde-esitonttikohteeseen) kuvaa kaavatiedon elinkaaren vaikutukset esitonttikohteen elinkaareen.
 
 ## MKP-ydin
 
