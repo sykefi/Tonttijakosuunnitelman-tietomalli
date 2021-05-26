@@ -196,7 +196,9 @@ Englanninkielinen nimi:
 
 Stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: 
+Laajennettavuus: Ei laajennettavissa
+
+Käsittelytapahtumien lajit kuvataan MKP-ydin -paketissa abstraktina koodistona, jota laajennetaan kunkin maankäyttöpäätöksen prosessin konkreettisten arvojen mukaisesti niiden tietomalleissa.
 
 #### AbstraktiVuorovaikutustapahtumanLaji
 
@@ -204,7 +206,9 @@ Englanninkielinen nimi:
 
 Stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: 
+Laajennettavuus: Ei laajennettavissa
+
+Vuorovaikutustapahtumien lajit kuvataan MKP-ydin -paketissa abstraktina koodistona, jota laajennetaan kunkin maankäyttöpäätöksen prosessin konkreettisten arvojen mukaisesti niiden tietomalleissa.
 
 ## Tonttijakosuunnitelman tiedot
 
@@ -386,7 +390,7 @@ Englanninkielinen nimi:
 
 Stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: 
+Laajennettavuus: Ei laajennettavissa
 
 {% include note.html content="Ei löydy vielä y-alustalta." %}
 
