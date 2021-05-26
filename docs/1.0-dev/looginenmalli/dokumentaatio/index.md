@@ -309,9 +309,9 @@ kumottavanTonttijakosuunnitelmanTunnus | [URI](#URI) | 1  | tonttijakosuunnitelm
 kumoaaTonttijakosuunnitelmanKokonaan | [Boolean](#Boolean) | 1  | jos arvo on true, kumoaa tonttijakosuunniteman kokonaisuudessaan, muuten muiden ominaisuuksien yksilöimällä tavalla
 kumottavanEsitonttikohteenTunnus | [URI](#URI) | 0..*  | esitonttikohde, johon kumoaminen kohdistuu
 
-## Tonttijakosuunnitelman koodistot
+### Tonttijakosuunnitelman koodistot
 
-### TonttijakosuunnitelmanLaji
+#### TonttijakosuunnitelmanLaji
 
 Englanninkielinen nimi: PlotPlanKind
 
@@ -321,7 +321,7 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_TonttijakosuunnitelmanLaji" name="Tonttijakosuunnitelman laji" %}
 
-### TonttijakosuunnitelmanElinkaarentila
+#### TonttijakosuunnitelmanElinkaarentila
 
 Englanninkielinen nimi: PlotPlanLifeCycleState
 
@@ -331,7 +331,7 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_TonttijakosuunnitelmanElinkaarentila" name="Tonttijakosuunnitelman elinkaaren tila" %}
 
-### TonttijakosuunnitelmanAsiakirjanLaji
+#### TonttijakosuunnitelmanAsiakirjanLaji
 
 Englanninkielinen nimi: PlotPlanDocumentType
 
@@ -341,7 +341,7 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Tonttijakosuunnitelmaa koskevan asiakirjan laji" %}
 
-### SuhdePeruskiinteistoon
+#### SuhdePeruskiinteistoon
 
 Englanninkielinen nimi: RelationToBaseProperty
 
@@ -351,7 +351,7 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_SuhdePeruskiinteistoon" name="Esitonttikohteen suhde peruskiinteistöön" %}
 
-### EsitonttikohdeLaji
+#### EsitonttikohdeLaji
 
 <!--Lisää sisäinen linkki? -->
 Erikoistaa luokkaa AbstraktiKaavamaarayslaji. 
@@ -364,7 +364,7 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_EsitonttikohdeLaji" name="Esitonttikohteen laji" %}
 
-### TonttijakosuunnitelmanVuorovaikutustapahtumanLaji
+#### TonttijakosuunnitelmanVuorovaikutustapahtumanLaji
 
 <!--Lisää sisäinen linkki? -->
 Erikoistaa luokkaa AbstraktiVuorovaikutustapahtumanLaji. 
@@ -377,7 +377,7 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_TonttijakosuunnitelmanVuorovaikutustapahtumanLaji" name="Tonttijakosuunnitelman vuorovaikutustapahtuman laji" %}
 
-### TonttijakosuunnitelmanKasittelytapahtumanLaji
+#### TonttijakosuunnitelmanKasittelytapahtumanLaji
 
 <!--Lisää sisäinen linkki? -->
 Erikoistaa luokkaa AbstraktiKasittelytapahtumanLaji. 
