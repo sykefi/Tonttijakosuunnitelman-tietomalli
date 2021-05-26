@@ -59,6 +59,8 @@ Ilmaisee, että esitonttikohde kuvaa esitontin 2-ulotteisena alueena tai 3-ulott
 
 ### Esitonttirajapiste
 
+**Koodi:** http://uri.suomi.fi/codelist/rytj/RY_EsitonttikohdeLaji/code/02
+
 <!--Lisää sisäiset linkit vielä -->
 {% include clause_start.html type="req" id="prof-tjs/vaat-esitonttirajapiste" %}
 Ilmaisee, että esitonttikohde kuvaa sijainnin, johon on tarkoitus rakentaa kiinteistönmuodostustoimituksessa rajamerkki.
