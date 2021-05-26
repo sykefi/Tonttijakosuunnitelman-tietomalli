@@ -331,7 +331,7 @@ Esitonttikohteille tulee yksilöidä tonttijakosuunnitelmassa siihen liittyvät 
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-kaavalaji-vaikutus" %}
-Jos asemakaavan muutos tai vaiheasemakaava hyväksytään esitonttikohteen alueella, tulee esitonttikohteesta luoda uusi tallennusversio ja [KaavaSuhdetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```kaavalaji```-attribuutin arvoksi asetetaan hyväksytyn kaavan kaavalaji-koodi.
+Jos asemakaavan muutos tai vaiheasemakaava hyväksytään esitonttikohteen alueella, tulee esitonttikohteesta luoda uusi tallennusversio ja [Kaavasuhdetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```kaavalaji```-attribuutin arvoksi asetetaan hyväksytyn kaavan kaavalaji-koodi.
 
 Asemakaavan määräysten muuttuessa asetetaan kaavatietomallin uuden [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tonttijakosuunnitelman tietomallin [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) ```liittyvanKaavamääräyksenTunnus```-attribuutin arvoksi. Lisäksi [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tallennetaan esitonttikohteen uudelle tallennusversiolle.
 
@@ -345,7 +345,7 @@ Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden tonttijakosuunn
 {% include note.html content="Kaavan kaavalaji-koodia ei ole toistaiseksi olemassa." %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-kumoaa-esitonttikohteen" %}
-Jos asemakaavalla esitontin rajat muuttuvat kokonaan tai osittain yleiseksi alueeksi, kumoaa asemakaava esitonttikohteen. Näin esitonttikohde muuttuu ei-kortteliksi, ja kumoaminen tonttijakosuunnitelmalla ei olisi mahdollista. [KaavaSuhdetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) kumoaa-attribuutin arvoksi asetetaan true. Esitonttikohteesta ei luoda uutta versiota, vaan:
+Jos asemakaavalla esitontin rajat muuttuvat kokonaan tai osittain yleiseksi alueeksi, kumoaa asemakaava esitonttikohteen. Näin esitonttikohde muuttuu ei-kortteliksi, ja kumoaminen tonttijakosuunnitelmalla ei olisi mahdollista. [Kaavasuhdetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) kumoaa-attribuutin arvoksi asetetaan true. Esitonttikohteesta ei luoda uutta versiota, vaan:
 
 - ```elinkaarentila```-attribuutin arvoksi asetetaan **kumoutunut**.
 - ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin kaavan ```voimassaoloAika```-attribuutin alkamisaika.
