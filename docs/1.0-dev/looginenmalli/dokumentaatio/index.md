@@ -103,7 +103,7 @@ Tonttijakosuunnitelman tietomallin esitonteille kaavamääräykset linkitetään
 
 Elinkaarisäännöt-sivulla [Asemakaavan suhde esitonttikohteeseen -luku](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/elinkaarisaannot.html#asemakaavan-suhde-esitonttikohteeseen) kuvaa kaavatiedon elinkaaren vaikutukset esitonttikohteen elinkaareen.
 
-## MKP-ydin
+## Maankäyttöpäätöksien ydin (MKP-ydin)
 
 ### AbstraktiVersioituObjekti
 
