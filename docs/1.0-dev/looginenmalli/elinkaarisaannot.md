@@ -342,7 +342,7 @@ Asemakaavan määräysten muuttuessa tonttijakosuunnitelman laatijan tulee tulki
 Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden tonttijakosuunnitelman laatimista niiltä osin, mitä esitonttikohteita rakennuskielto koskee.
 {% include clause_end.html %}
 
-{% include note.html content="Kaavan kaavalaji-koodia ei ole toistaiseksi olemassa. Elinkaarenhallinnan näkökulmasta merkittävimmät lajit ovat: ensimmäinen asemakaava, asemakaavan määräysten muutos ja asemakaavan rajojen muutos. " %}
+{% include note.html content="Kaavan kaavalaji-koodia ei ole toistaiseksi olemassa. Elinkaarenhallinnan näkökulmasta merkittävimmät kaavalajit voisi olla: ensimmäinen asemakaava, asemakaavan määräysten muutos ja asemakaavan rajojen muutos. " %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-kumoaa-esitonttikohteen" %}
 Jos asemakaavalla esitontin rajat muuttuvat kokonaan tai osittain yleiseksi alueeksi, kumoaa asemakaava esitonttikohteen. Näin esitonttikohde muuttuu ei-kortteliksi, ja kumoaminen tonttijakosuunnitelmalla ei olisi mahdollista. [Kaavasuhdetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) kumoaa-attribuutin arvoksi asetetaan true. Esitonttikohteesta ei luoda uutta versiota, vaan:
