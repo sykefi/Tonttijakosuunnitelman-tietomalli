@@ -32,8 +32,14 @@ Luokan AbstraktiVuorovaikutustapahtumanLaji sijaan tulee käyttää tarkentavaa 
 Luokan AbstraktiKasittelytapahtumanLaji sijaan tulee käyttää tarkentavaa luokkaa TonttijakosuunnitelmanKasittelytapahtumanLaji.
 {% include clause_end.html %}
 
-## Kaavamääräys-luokan arvot
+## Liittyvän kaavamääräyksen arvot
 
+{% include clause_start.html type="req" id="prof-tjs/vaat-liittyva-kaavamaarays-tunnus" %}
+Tonttijakosuunnitelman Esitonttikohde -luokan laji-attribuutin arvon ollessa Esitontti-koodi, esitonteille liittyvät Kaavatietomallin kaavamääräykset linkitetään Kaavatietomallin Kaavamääräys-luokan viittaustunnuksella. Viittaustunnuksen URL-arvo annetaan Tonttijakosuunnitelman tietomallin Kaavamaarays-luokan liittyvanKaavamaarayksenTunnus-attribuutille. Tonttijakosuunnitelman Kaavamaarays-luokan osalta tulee noudattaa seuraavia rajoituksia:
+
+liittyvanKaavamaarayksenTunnus-attribuutin arvoina saa esiintyä vain yksi viittaustunnus.
+arvo-attribuutin arvoina saa esiintyä nolla tai yksi NumeerinenArvo, joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
+{% include clause_end.html %}
 
 ## Esitonttikohteen lajien arvot
 
