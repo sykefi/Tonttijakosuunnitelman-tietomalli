@@ -394,16 +394,6 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_KaavamaaraysLaji_AK" name="Kaavamääräyslaji (asemakaava)" %}
 
-#### EsitonttiRajapiste
-
-Englanninkielinen nimi:
-
-Erikoistaa luokkaa AbstraktiKaavamaarayslaji.
-
-Stereotyyppi: CodeList (koodisto)
-
-Laajennettavuus: Ei laajennettavissa
-
 {% include codelistref.html id="RY_EsitonttiRajapiste" name="Esitonttirajapiste" %}
 
 <!-- linkit standardeihin, joihin mainittu sivun alussa -->
