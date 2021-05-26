@@ -158,13 +158,21 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 laji | [AbstraktiVuorovaikutustapahtumanLaji](#AbstraktiVuorovaikutustapahtumanLaji) | 1  | vuorovaikutustapahtuman tyyppi
 
+### HallinnollinenAlue
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+hallintoaluetunnus | [CharacterString](#characterstring) | 1  | palauttaa hallinnollisen alueen tunnuksen
+alue | [geometry](#geometry) | 1  | palauttaa hallinnollisen alueen aluerajauksen
+nimi | [CharacterString](#characterstring) | 1  | palauttaa hallinnollisen alueen nimen valitulla kielellä
+
 ### Organisaatio
 
-Englanninkielinen nimi: Organization
+<!--Englanninkielinen nimi: Organization
 
 Stereotyyppi: Interface (rajapinta)
 
-Organisaatio on kuvattu kaavatietomallissa ainoastaan rajapintana, koska sen mallintaminen on kuulu kaavatietomallin sovellusalaan. Toteuttavien tietojärjestelmien tulee tarjota rajapinnan määrittelemät vähimmäistoiminnallisuudet.
+Organisaatio on kuvattu kaavatietomallissa ainoastaan rajapintana, koska sen mallintaminen on kuulu kaavatietomallin sovellusalaan. Toteuttavien tietojärjestelmien tulee tarjota rajapinnan määrittelemät vähimmäistoiminnallisuudet.-->
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
