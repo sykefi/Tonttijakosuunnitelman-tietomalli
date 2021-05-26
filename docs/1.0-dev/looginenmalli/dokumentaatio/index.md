@@ -136,6 +136,7 @@ asiakirjatunnus | [URI](#uri) | 0..* | asiakirjan pysyvä tunnus, esim. diaarinu
 laji | [TonttijakosuunnitelmanAsiakirjaLaji](#tonttijakosuunnitelmanasiakirjalaji) | 1  | asiakirjan tyyppi
 lisatietolinkki  | [URI](#uri) | 0..1 | viittaus ulkoiseen lisätietokuvaukseen asiakirjasta
 metatietolinkki | [URI](#uri) | 0..1 | viittaus ulkoiseen metatietokuvaukseen asiakirjasta
+nimi | [LanguageString](#languagestring) | 0..* | asiakirjan nimi
 
 ### AbstraktiTapahtuma
 
