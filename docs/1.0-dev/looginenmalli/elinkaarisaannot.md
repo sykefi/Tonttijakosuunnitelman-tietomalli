@@ -335,7 +335,7 @@ Asemakaavan muutoksen tai vaiheasemakaavan hyväksyminen esitonttikohteen alueel
 
 Asemakaavan määräysten muuttuessa asetetaan kaavatietomallin uuden [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tonttijakosuunnitelman tietomallin [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) ```liittyvanKaavamaarayksenTunnus```-attribuutin arvoksi. Lisäksi [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tallennetaan esitonttikohteen uudelle tallennusversiolle.<!-- Tällöin esitonttikohteen versiolla voi olla voimassa olevan asemakaavan ja luonnosvaiheessa olevan asemakaavan määräyksiä. Kun asemakaava tulee voimaan, tallennetaan esitonttikohteesta uusi tallennusversio, jolla vain uudet asemakaavan määräykset.-->
 
-Asemakaavan määräysten muuttuessa tonttijakosuunnitelman laatijan tulee tulkita tonttijakosuunnitelman kaavan mukaisuus. Jos tonttijakosuunnitelma ei ole asemakaavan mukainen, tulee tonttijakosuunnitelman sisältämät ei kaavan mukaiset esitonttikohteet asettaa rakennuskieltoon, kun asemakaava hyväksytään. Kaavakohteen rajojen muutos  asettaa esitonttikohteen aina rakennuskieltoon:
+Asemakaavan määräysten muuttuessa tulee tulkita tonttijakosuunnitelman kaavan mukaisuus. Jos tonttijakosuunnitelma ei ole asemakaavan mukainen, tulee tonttijakosuunnitelman sisältämät ei kaavan mukaiset esitonttikohteet asettaa rakennuskieltoon, kun asemakaava hyväksytään. Kaavakohteen rajojen muutos  asettaa esitonttikohteen aina rakennuskieltoon:
 
 - ```rakennuskielto```-attribuutin arvoksi asetetaan true.
 
