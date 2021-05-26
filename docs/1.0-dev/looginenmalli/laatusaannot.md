@@ -14,7 +14,7 @@ status: "Keskeneräinen"
 
 ## Johdanto
 
-{% include important.html content="Tässä esitettävä tieto on toistaiseksi kaavatietomallin." %}
+<!--{% include important.html content="Tässä esitettävä tieto on toistaiseksi kaavatietomallin." %}-->
 
 ## Yhteiset laatusäännöt
 
@@ -39,7 +39,7 @@ Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa tonttij
 
 ### Soveltamisohjeiden mukaisuus
 {% include clause_start.html type="req" id="laatu/vaat-soveltamisohjeet" %}
-Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa Tonttijakosuunnitelman tietomallin yksilöimää (../soveltamisohjeet/)soveltamisprofiilia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
+Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa tonttijakosuunnitelman tietomallin yksilöimää [Tonttijakosuunnitelman](../soveltamisohjeet/) soveltamisprofiilia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
 {% include clause_end.html %}
 
 {% include question.html content="" %}
@@ -107,7 +107,7 @@ Aluemaiset geometriat toteuttavat ISO 19107 -standardin määrittelemän ```Surf
 Geometriakokoelmat toteuttavat ISO 19107 -standardin määrittelemän ```Collection```-rajapinnan. Monipiste (multipoint) -geometriat rakentuvat ```Point```-rajapinnan, moniviiva (multicurve) -geometriat ```Curve```-rajapinnan, monialue (multisurface) -geometriat ```Surface```-rajapinnan ja monikappale (multisolid) -geometriat ```Solid```-rajapinnan toteuttavista osista (```element```-attribuutti).
 {% include clause_end.html %}
 
-{% include note.html content="Kaavatietomalli ei vaadi kaikkien ISO 19107 -standardin mukaisten geometriatyyppien tukemista. Kaavatietomallin mukaiset fyysiset tietomallit voivat rajoittaa mahdollisia geometriatyyppejä ja niiden ominaisuuksia." %}
+{% include note.html content="Tonttijakosuunnitelman tietomalli ei vaadi kaikkien ISO 19107 -standardin mukaisten geometriatyyppien tukemista. Tonttijakosuunnitelman tietomallin mukaiset fyysiset tietomallit voivat rajoittaa mahdollisia geometriatyyppejä ja niiden ominaisuuksia." %}
 
 #### Sallitut koordinaatistot ja koordinaattijärjestys
 
@@ -175,7 +175,7 @@ Aikavälejä kuvaavat attribuutit voidaan antaa joko sekä alku- että loppuajan
 
 ### AbstraktiMaankayttoasia
 {% include clause_start.html type="req" id="laatu/vaat-mkp-aluerajaus-geometria" %}
-[AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokan objektien ```aluerajaus```-attribuutin arvon tulee kuvata kaavan suunnittelualue joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
+[AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokan objektien ```aluerajaus```-attribuutin arvon tulee kuvata tonttijakosuunnitelman suunnittelualue joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
 {% include clause_end.html %}
 <!--
 ### Lahtotietoaineisto
@@ -218,16 +218,16 @@ Kaavatietovarastossa ei tule olla kahta [Kaava](dokumentaatio/#kaava)-luokan obj
 -->
 ### Esitonttikohde
 
-{% include clause_start.html type="req" id="laatu/vaat-kaavakohde-geometria" %}
-[Esitonttikohde](dokumentaatio/#kaavakohde)-luokan objektin ```geometria```-attribuutin arvon tulee olla [piste](#laatu-vaat-geom-piste-maar), [alue](#laatu-vaat-geom-2d-alue-maar), [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar), [monialue tai monikappale](#laatu-vaat-geom-kokoelmat-maar).
+{% include clause_start.html type="req" id="laatu/vaat-esitonttikohde-geometria" %}
+[Esitonttikohde](dokumentaatio/#esitonttikohde)-luokan objektin ```geometria```-attribuutin arvon tulee olla [piste](#laatu-vaat-geom-piste-maar), [alue](#laatu-vaat-geom-2d-alue-maar), [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar), [monialue tai monikappale](#laatu-vaat-geom-kokoelmat-maar).
 {% include clause_end.html %}
 
-{% include clause_start.html type="req" id="laatu/vaat-kaavakohde-3d-konsistenssi" %}
-Mikäli [Esitonttikohde](dokumentaatio/#kaavakohde)-luokan objektin ```geometria```-attribuutin arvo on [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar) tai [monikappale](#laatu-vaat-geom-kokoelmat-maar), ja sille on annettu ```pystysuuntainenRajaus```-attribuutti, tulee ```geometria```-attribuutin arvon sijaita pystysuuntaisen rajauksen määrittämien korkeuksien ala- ja ylärajojen väleissä. 
+{% include clause_start.html type="req" id="laatu/vaat-esitonttikohde-3d-konsistenssi" %}
+Mikäli [Esitonttikohde](dokumentaatio/#esitonttikohde)-luokan objektin ```geometria```-attribuutin arvo on [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar) tai [monikappale](#laatu-vaat-geom-kokoelmat-maar), ja sille on annettu ```pystysuuntainenRajaus```-attribuutti, tulee ```geometria```-attribuutin arvon sijaita pystysuuntaisen rajauksen määrittämien korkeuksien ala- ja ylärajojen väleissä. 
 {% include clause_end.html %}
 
-{% include clause_start.html type="req" id="laatu/vaat-paallekkaiset-kaavakohteet" %}
-Tonttijakosuunnitelmatietovarastossa ei tule olla kahta [Esitonttikohde](dokumentaatio/#kaavakohde)-luokan objektia, joiden
+{% include clause_start.html type="req" id="laatu/vaat-paallekkaiset-esitonttikohteet" %}
+Tonttijakosuunnitelmatietovarastossa ei tule olla kahta [Esitonttikohde](dokumentaatio/#esitonttikohde)-luokan objektia, joiden
 * ```voimassaoloAika```-attribuutin arvojen kuvaamat aikavälit ovat sisäkkäisiä tai lomittain, ja
 * ```geometria```- ja ```pystysuuntainenRajaus```-attribuuttien yhdessä kuvaavat geometriat leikaavat toisiaan tai ovat sisäkkäisiä.
 {% include clause_end.html %}

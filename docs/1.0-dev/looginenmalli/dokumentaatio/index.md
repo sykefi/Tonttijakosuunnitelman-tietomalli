@@ -16,11 +16,11 @@ status: "Keskeneräinen"
 
 Loogisen tason tietomalli määrittelee kaikille tonttijakosuunnitelman kohteille yhteiset tietorakenteet, joita sovelletaan tonttijaon ilmaisemiseen laadittujen soveltamisohjeiden ja niissä kiinnitettyjen koodistojen sekä elinkaari- ja laatusääntöjen mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta.
 
-**Graafinen mallinnus loogisesta tietomallista**
+<!--**Graafinen mallinnus loogisesta tietomallista**
 
 ![Tonttijakosuunnitelman looginen malli graafisena mallinnuksena](looginenmalli.png "Looginen tietomalli -  graafinen mallinnus (Neo4j)")
 
-(Lataa [Kaavio määritelmien kanssa](looginenmalli.png))
+(Lataa [Kaavio määritelmien kanssa](looginenmalli.png))-->
 
 ### Normatiiviset viittaukset
 Tonttijakosuunnitelman tietomalli hyödyntää samoja normatiivisia viittauksia kuin kaavatietomallikin. Tämä käsittää seuraavat dokumentit:
@@ -101,7 +101,7 @@ Kaavatietomallin mukaiset kaavamääräykset, joiden laji-attribuutin arvo on To
 
 Tonttijakosuunnitelman tietomallin esitonteille kaavamääräykset linkitetään suoraan kaavatietomallista. Linkitys tietomallien välillä perustuu viittaustunnukseen, joka muodostetaan Tonttijakosuunnitelman tietomallin Kaavamaarays-luokan ```liittyvanKaavamaarayksenTunnus```-attribuutille annettavalla Kaavatietomallin Kaavamääräys-luokan viittaustunnuksella. Tällä vältetään toisteellisen kaavamääräystiedon tuottamiselta. Tonttijakosuunnitelman tietomalli mahdollistaa kuitenkin tonttijakosuunnitelman laatijan määrittää kerrosala laskennallisesti esitonttikohteille.
 
-Elinkaarisäännöt-sivulla [Asemakaavan suhde esitonttikohteeseen -luku](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/elinkaarisaannot.html#asemakaavan-suhde-esitonttikohteeseen) kuvaa kaavatietojen ja tonttijakosuunnitelman väliset elinkaarisäännöt.
+Elinkaarisäännöt-sivulla [Asemakaavan suhde esitonttikohteeseen -luku](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/elinkaarisaannot.html#asemakaavan-suhde-esitonttikohteeseen) kuvaa kaavatiedon elinkaaren vaikutukset esitonttikohteen elinkaareen.
 
 ## MKP-ydin
 
@@ -132,10 +132,11 @@ metatietokuvaus  | [URI](#uri) | 0..1  | viittaus ulkoiseen metatietokuvaukseen
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-asiakirjatunnus| [ [URI](#uri) | 0..* | asiakirjan pysyvä tunnus, esim. diaarinumero tai muu dokumentinhallinnan tunnus
-laji | [Asiakirjalaji](#asiakirjalaji) | 1  | asiakirjan tyyppi
+asiakirjatunnus | [URI](#uri) | 0..* | asiakirjan pysyvä tunnus, esim. diaarinumero tai muu dokumentinhallinnan tunnus
+laji | [TonttijakosuunnitelmanAsiakirjanLaji](#tonttijakosuunnitelmanasiakirjanlaji) | 1  | asiakirjan tyyppi
 lisatietolinkki  | [URI](#uri) | 0..1 | viittaus ulkoiseen lisätietokuvaukseen asiakirjasta
 metatietolinkki | [URI](#uri) | 0..1 | viittaus ulkoiseen metatietokuvaukseen asiakirjasta
+nimi | [LanguageString](#languagestring) | 0..* | asiakirjan nimi
 
 ### AbstraktiTapahtuma
 
@@ -157,15 +158,31 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 laji | [AbstraktiVuorovaikutustapahtumanLaji](#AbstraktiVuorovaikutustapahtumanLaji) | 1  | vuorovaikutustapahtuman tyyppi
 
+### HallinnollinenAlue
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+hallintoaluetunnus | [CharacterString](#characterstring) | 1  | palauttaa hallinnollisen alueen tunnuksen
+alue | [geometry](#geometry) | 1  | palauttaa hallinnollisen alueen aluerajauksen
+nimi | [CharacterString](#characterstring) | 1  | palauttaa hallinnollisen alueen nimen valitulla kielellä
+
 ### Organisaatio
 
-{% include note.html content="Puuttuu toistaiseksi." %}
+<!--Englanninkielinen nimi: Organization
+
+Stereotyyppi: Interface (rajapinta)
+
+Organisaatio on kuvattu kaavatietomallissa ainoastaan rajapintana, koska sen mallintaminen on kuulu kaavatietomallin sovellusalaan. Toteuttavien tietojärjestelmien tulee tarjota rajapinnan määrittelemät vähimmäistoiminnallisuudet.-->
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+nimi | [CharacterString](#characterstring) | 1  | palauttaa organisaation alueen nimen valitulla kielellä
 
 ### Koodistot
 
 #### TonttijakosuunnitelmanAsiakirjanLaji
 
-Englanninkielinen nimi: DocumentKind
+Englanninkielinen nimi: PlotPlanDocumentKind
 
 Stereotyyppi: CodeList (koodisto)
 
@@ -244,8 +261,8 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 laji | [EsitonttikohdeLaji](#EsitonttikohdeLaji) | 1  | kuvaa esitonttikohteen tyypin
 suhdePeruskiinteistoon | [suhdePeruskiinteistoon](#suhdePeruskiinteistoon) | 0..1  | luokittelu esitonttikohteen sijoittumisesta suhteessa peruskiinteistöön, joka merkitään vain 3D-esitonttikohteelle
 elinkaarentila | [TonttijakosuunnitelmanElinkaarentila](#TonttijakosuunnitelmanElinkaarentila) | 1  | 
-muodostajatieto | [MuodostajaTieto](#MuodostajaTieto) | 1..* | tieto muodostajakiinteistöistä, josta/joista esitontti muodostetaan
-kaavasuhdetieto | [KaavaSuhdetieto](#KaavaSuhdetieto) | 1..* | tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista
+muodostustieto | [Muodostustieto](#muodostustieto) | 1..* | tieto muodostajakiinteistöistä, josta/joista esitontti muodostetaan
+kaavasuhdetieto | [Kaavasuhdetieto](#kaavasuhdetieto) | 1..* | tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista
 rakennettu | [boolean](#boolean) | 0..1 | tieto muun muassa kiinteistöverotusta varten siitä, onko esitonttikohde rakennettu asemakaavan mukaisesti
 rakennuskielto | [boolean](#boolean) | 0..1 | kuvaa, onko esitonttikohteella rakennuskielto
 voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aikaväli, jona asiasta tehty päätös suunnitelmineen ja säännöksineen on lainvoimainen
