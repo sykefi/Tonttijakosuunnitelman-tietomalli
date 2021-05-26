@@ -35,10 +35,10 @@ Luokan AbstraktiKasittelytapahtumanLaji sijaan tulee käyttää tarkentavaa luok
 ## Liittyvän kaavamääräyksen arvot
 
 {% include clause_start.html type="req" id="prof-tjs/vaat-liittyva-kaavamaarays-tunnus" %}
-Tonttijakosuunnitelman Esitonttikohde -luokan laji-attribuutin arvon ollessa Esitontti-koodi, esitonteille liittyvät Kaavatietomallin kaavamääräykset linkitetään Kaavatietomallin Kaavamääräys-luokan viittaustunnuksella. Viittaustunnuksen URL-arvo annetaan Tonttijakosuunnitelman tietomallin Kaavamaarays-luokan liittyvanKaavamaarayksenTunnus-attribuutille. Tonttijakosuunnitelman Kaavamaarays-luokan osalta tulee noudattaa seuraavia rajoituksia:
+Tonttijakosuunnitelman Esitonttikohde -luokan ```laji```-attribuutin arvon ollessa Esitontti-koodi, esitonteille liittyvät Kaavatietomallin kaavamääräykset linkitetään Kaavatietomallin Kaavamääräys-luokan viittaustunnuksella. Viittaustunnuksen URL-arvo annetaan Tonttijakosuunnitelman tietomallin Kaavamaarays-luokan ```liittyvanKaavamaarayksenTunnus```-attribuutille. Tonttijakosuunnitelman Kaavamaarays-luokan osalta tulee noudattaa seuraavia rajoituksia:
 
-liittyvanKaavamaarayksenTunnus-attribuutin arvoina saa esiintyä vain yksi viittaustunnus.
-arvo-attribuutin arvoina saa esiintyä nolla tai yksi NumeerinenArvo, joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
+- ```liittyvanKaavamaarayksenTunnus```-attribuutin arvoina saa esiintyä vain yksi viittaustunnus.
+- ```arvo```-attribuutin arvoina saa esiintyä nolla tai yksi NumeerinenArvo, joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include clause_end.html %}
 
 ## Esitonttikohteen lajien arvot
@@ -54,7 +54,7 @@ Ilmaisee, että esitonttikohde kuvaa esitontin 2-ulotteisena alueena tai 3-ulott
 
 <!--Lisää sisäiset linkit vielä -->
 {% include clause_start.html type="req" id="prof-tjs/vaat-esitontti-arvot" %}
-arvo-attribuutin arvona saa esiintyä nolla tai yksi Tunnusarvo, jotka kuvaavat tulevan tontin tunnusarvoa tietojärjestelmissä tai rekistereissä.
+```arvo```-attribuutin arvona saa esiintyä nolla tai yksi Tunnusarvo, jotka kuvaavat tulevan tontin tunnusarvoa tietojärjestelmissä tai rekistereissä.
 {% include clause_end.html %}
 
 ### Esitonttirajapiste
@@ -66,5 +66,5 @@ Ilmaisee, että esitonttikohde kuvaa sijainnin, johon on tarkoitus rakentaa kiin
 
 <!--Lisää sisäiset linkit vielä -->
 {% include clause_start.html type="req" id="prof-tjs/vaat-esitonttrajapiste-arvot" %}
-arvo-attribuutin arvona saa esiintyä nolla tai useampi TekstiArvo, jotka kuvaavat tulevan tontin rajamerkkien numeroita tietojärjestelmissä tai rekistereissä.
+```arvo```-attribuutin arvona saa esiintyä nolla tai useampi TekstiArvo, jotka kuvaavat tulevan tontin rajamerkkien numeroita tietojärjestelmissä tai rekistereissä.
 {% include clause_end.html %}
