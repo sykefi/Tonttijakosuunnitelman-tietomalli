@@ -133,7 +133,7 @@ metatietokuvaus  | [URI](#uri) | 0..1  | viittaus ulkoiseen metatietokuvaukseen
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 asiakirjatunnus | [URI](#uri) | 0..* | asiakirjan pysyvä tunnus, esim. diaarinumero tai muu dokumentinhallinnan tunnus
-laji | [TonttijakosuunnitelmanAsiakirjaLaji](#tonttijakosuunnitelmanasiakirjalaji) | 1  | asiakirjan tyyppi
+laji | [TonttijakosuunnitelmanAsiakirjanLaji](#tonttijakosuunnitelmanasiakirjanlaji) | 1  | asiakirjan tyyppi
 lisatietolinkki  | [URI](#uri) | 0..1 | viittaus ulkoiseen lisätietokuvaukseen asiakirjasta
 metatietolinkki | [URI](#uri) | 0..1 | viittaus ulkoiseen metatietokuvaukseen asiakirjasta
 nimi | [LanguageString](#languagestring) | 0..* | asiakirjan nimi
@@ -160,25 +160,43 @@ laji | [AbstraktiVuorovaikutustapahtumanLaji](#AbstraktiVuorovaikutustapahtumanL
 
 ### Organisaatio
 
-{% include note.html content="Lisättävä." %}
+Englanninkielinen nimi: Organization
+
+Stereotyyppi: Interface (rajapinta)
+
+Organisaatio on kuvattu kaavatietomallissa ainoastaan rajapintana, koska sen mallintaminen on kuulu kaavatietomallin sovellusalaan. Toteuttavien tietojärjestelmien tulee tarjota rajapinnan määrittelemät vähimmäistoiminnallisuudet.
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+nimi | [CharacterString](#characterstring) | 1  | palauttaa organisaation alueen nimen valitulla kielellä
 
 ### Koodistot
 
-#### LahtotietoaineistonLaji
+### TonttijakosuunnitelmanAsiakirjanLaji
 
-{% include note.html content="Lisättävä." %}
+Englanninkielinen nimi:
 
-#### AsiakirjanLaji
+Stereotyyppi: CodeList (koodisto)
 
-{% include note.html content="Lisättävä." %}
+Laajennettavuus: Ei laajennettavissa
 
-#### AbstraktiKasittelytapahtumanLaji
+{% include codelistref.html id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Tonttijakosuunnitelmaa koskevan asiakirjan laji" %}
 
-{% include note.html content="Lisättävä." %}
+### AbstraktiKasittelytapahtumanLaji
 
-#### AbstraktiVuorovaikutustapahtumanLaji
+Englanninkielinen nimi:
 
-{% include note.html content="Lisättävä." %}
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: 
+
+### AbstraktiVuorovaikutustapahtumanLaji
+
+Englanninkielinen nimi:
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: 
 
 ## Tonttijakosuunnitelman tiedot
 
@@ -285,45 +303,7 @@ kumoaaEsitonttikohteenKokonaan | [Boolean](#Boolean) | 1  | jos arvo on true, ku
 
 ## Koodistot
 
-### MKP:n koodistot
-
-#### LahtotietoaineistonLaji
-
-Englanninkielinen nimi:
-
-Stereotyyppi: CodeList (koodisto)
-
-Laajennettavuus: 
-
-#### TonttijakosuunnitelmanAsiakirjanLaji
-
-Englanninkielinen nimi:
-
-Stereotyyppi: CodeList (koodisto)
-
-Laajennettavuus: Ei laajennettavissa
-
-{% include codelistref.html id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Tonttijakosuunnitelmaa koskevan asiakirjan laji" %}
-
-#### AbstraktiKasittelytapahtumanLaji
-
-Englanninkielinen nimi:
-
-Stereotyyppi: CodeList (koodisto)
-
-Laajennettavuus: 
-
-#### AbstraktiVuorovaikutustapahtumanLaji
-
-Englanninkielinen nimi:
-
-Stereotyyppi: CodeList (koodisto)
-
-Laajennettavuus: 
-
-### Tonttijakosuunnitelman koodistot
-
-#### TonttijakosuunnitelmanLaji
+### TonttijakosuunnitelmanLaji
 
 Englanninkielinen nimi:
 
@@ -333,7 +313,7 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_TonttijakosuunnitelmanLaji" name="Tonttijakosuunnitelman laji" %}
 
-#### TonttijakosuunnitelmanElinkaarentila
+### TonttijakosuunnitelmanElinkaarentila
 
 Englanninkielinen nimi:
 
@@ -343,7 +323,7 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_TonttijakosuunnitelmanElinkaarentila" name="Tonttijakosuunnitelman elinkaaren tila" %}
 
-#### SuhdePeruskiinteistoon
+### SuhdePeruskiinteistoon
 
 Englanninkielinen nimi:
 
@@ -353,7 +333,7 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_SuhdePeruskiinteistoon" name="Esitonttikohteen suhde peruskiinteistöön" %}
 
-#### EsitonttikohdeLaji
+### EsitonttikohdeLaji
 
 <!--Lisää sisäinen linkki -->
 Erikoistaa luokkaa AbstraktiKaavamaarayslaji. 
@@ -366,7 +346,7 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_EsitonttikohdeLaji" name="Esitonttikohteen laji" %}
 
-#### TonttijakosuunnitelmanVuorovaikutustapahtumanLaji
+### TonttijakosuunnitelmanVuorovaikutustapahtumanLaji
 
 <!--Lisää sisäinen linkki -->
 Erikoistaa luokkaa AbstraktiVuorovaikutustapahtumanLaji. 
@@ -379,7 +359,7 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_TonttijakosuunnitelmanVuorovaikutustapahtumanLaji" name="Tonttijakosuunnitelman vuorovaikutustapahtuman laji" %}
 
-#### TonttijakosuunnitelmanKasittelytapahtumanLaji
+### TonttijakosuunnitelmanKasittelytapahtumanLaji
 
 <!--Lisää sisäinen linkki -->
 Erikoistaa luokkaa AbstraktiKasittelytapahtumanLaji. 
@@ -392,7 +372,7 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_TonttijakosuunnitelmanKasittelytapahtumanLaji" name="Tonttijakosuunnitelman kasittelytapahtuman laji" %}
 
-#### AbstraktiKaavamaarayslaji
+### AbstraktiKaavamaarayslaji
 
 Englanninkielinen nimi:
 
@@ -402,7 +382,7 @@ Laajennettavuus:
 
 {% include note.html content="Ei löydy vielä y-alustalta." %}
 
-#### KaavamääräyslajiAsemakaava
+### KaavamääräyslajiAsemakaava
 
 Englanninkielinen nimi:
 
@@ -414,7 +394,7 @@ Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_KaavamaaraysLaji_AK" name="Kaavamääräyslaji (asemakaava)" %}
 
-#### EsitonttiRajapiste
+### EsitonttiRajapiste
 
 Englanninkielinen nimi:
 
