@@ -133,7 +133,7 @@ metatietokuvaus  | [URI](#uri) | 0..1  | viittaus ulkoiseen metatietokuvaukseen
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 asiakirjatunnus| [ [URI](#uri) | 0..* | asiakirjan pysyvä tunnus, esim. diaarinumero tai muu dokumentinhallinnan tunnus
-laji | [Asiakirjalaji](#asiakirjalaji) | 1  | asiakirjan tyyppi
+laji | [TonttijakosuunnitelmanAsiakirjaLaji](#tonttijakosuunnitelmanasiakirjalaji) | 1  | asiakirjan tyyppi
 lisatietolinkki  | [URI](#uri) | 0..1 | viittaus ulkoiseen lisätietokuvaukseen asiakirjasta
 metatietolinkki | [URI](#uri) | 0..1 | viittaus ulkoiseen metatietokuvaukseen asiakirjasta
 
@@ -294,13 +294,15 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: 
 
-#### AsiakirjanLaji
+#### TonttijakosuunnitelmanAsiakirjanLaji
 
 Englanninkielinen nimi:
 
 Stereotyyppi: CodeList (koodisto)
 
-Laajennettavuus: 
+Laajennettavuus: Ei laajennettavissa
+
+{% include codelistref.html id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Tonttijakosuunnitelmaa koskevan asiakirjan laji" %}
 
 #### AbstraktiKasittelytapahtumanLaji
 
@@ -339,16 +341,6 @@ Stereotyyppi: CodeList (koodisto)
 Laajennettavuus: Ei laajennettavissa
 
 {% include codelistref.html id="RY_TonttijakosuunnitelmanElinkaarentila" name="Tonttijakosuunnitelman elinkaaren tila" %}
-
-#### TonttijakosuunnitelmanAsiakirjanLaji
-
-Englanninkielinen nimi:
-
-Stereotyyppi: CodeList (koodisto)
-
-Laajennettavuus: Ei laajennettavissa
-
-{% include codelistref.html id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Tonttijakosuunnitelmaa koskevan asiakirjan laji" %}
 
 #### SuhdePeruskiinteistoon
 
