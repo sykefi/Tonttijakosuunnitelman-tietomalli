@@ -230,9 +230,6 @@ Laajennettavuus: Ei laajennettavissa
 
 Käsittelytapahtumien lajit kuvataan MKP-ydin -paketissa abstraktina koodistona, jota laajennetaan kunkin maankäyttöpäätöksen prosessin konkreettisten arvojen mukaisesti niiden tietomalleissa.
 
-{% include note.html content="Puuttuu toistaiseksi."%}
-<!-- Lisää myöhemmin codelistref.html, kun löytyy y-alustalta. -->
-
 #### AbstraktiVuorovaikutustapahtumanLaji
 
 Englanninkielinen nimi: AbstractInteractionEventKind
@@ -242,8 +239,6 @@ Stereotyyppi: CodeList (koodisto)
 Laajennettavuus: Ei laajennettavissa
 
 Vuorovaikutustapahtumien lajit kuvataan MKP-ydin -paketissa abstraktina koodistona, jota laajennetaan kunkin maankäyttöpäätöksen prosessin konkreettisten arvojen mukaisesti niiden tietomalleissa.
-
-{% include codelistref.html id="RY_AbstraktiVuorovaikutustapahtumanLaji" name="Abstrakti vuorovaikutustapahtuman laji" %}
 
 ## Tonttijakosuunnitelman tiedot
 
