@@ -28,18 +28,16 @@
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/looginenmalli/laatusaannot.html">Laatusäännöt</a>
         </div>
       </li>
-      {% if page.page == 'soveltamisohje-tjs' or page.page == 'cookbook-tjs'%}
-      <li class="nav-item active dropdown">
+
+      {% if page.page == 'soveltamisohje-tjs' %}
+      <li class="nav-item active">
       {% else %}
-      <li class="nav-item dropdown">
+      <li class="nav-item">
       {% endif %}
-        <a class="nav-link dropdown-toggle" href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/soveltamisohjeet/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Soveltamisohjeet</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/soveltamisohjeet/index.html">Soveltamisprofiili</a>
-          <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/soveltamisohjeet/keittokirja.html">Keittokirja</a>
-        </div>
+        <a class="nav-link " href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/soveltamisohjeet/index.html">Soveltamisprofiili</a>
       </li>
-      {% if page.page == 'projektitiimi' or page.page == 'testaus' or page.page == 'jatkokehitys' or page.page == 'aineistot' or page.page == 'demo' %}
+
+      {% if page.page == 'projektitiimi' or page.page == 'jatkokehitys' %}
       <li class="nav-item active dropdown">
       {% else %}
       <li class="nav-item dropdown">
@@ -47,9 +45,6 @@
         <a class="nav-link dropdown-toggle" href="{{ site.url }}/kehitystyo/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kehitystyö</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item sublevel" href="{{ site.url }}/kehitystyo/projektitiimi.html">Projektitiimi</a>
-          <a class="dropdown-item sublevel" href="{{ site.url }}/kehitystyo/testaus/">Tietomallin testaus</a>
-          <a class="dropdown-item sublevel" href="{{ site.url }}/kehitystyo/demo/">Demopalvelu</a>
-          <a class="dropdown-item sublevel" href="{{ site.url }}/kehitystyo/aineistot/">Testiaineistot</a>
           <a class="dropdown-item sublevel" href="{{ site.url }}/kehitystyo/jatkokehitys.html">Jatkokehitys</a>
         </div>
       </li>
