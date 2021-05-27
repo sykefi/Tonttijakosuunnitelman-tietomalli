@@ -179,7 +179,7 @@ Stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-laji | [AbstraktiKasittelytapahtumanLaji](#AbstraktiKasittelytapahtumanLaji) | 1  | käsittelytapahtuman tyyppi
+laji | [AbstraktiKasittelytapahtumanLaji](#abstraktikasittelytapahtumanlaji) | 1  | käsittelytapahtuman tyyppi
 
 ### Vuorovaikutustapahtuma
 
@@ -191,7 +191,7 @@ Stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-laji | [AbstraktiVuorovaikutustapahtumanLaji](#AbstraktiVuorovaikutustapahtumanLaji) | 1  | vuorovaikutustapahtuman tyyppi
+laji | [AbstraktiVuorovaikutustapahtumanLaji](#abstraktivuorovaikutustapahtumanlaji) | 1  | vuorovaikutustapahtuman tyyppi
 
 ### HallinnollinenAlue
 
