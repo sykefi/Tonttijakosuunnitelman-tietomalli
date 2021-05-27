@@ -331,7 +331,7 @@ Esitonttikohteille tulee yksilöidä tonttijakosuunnitelmassa siihen liittyvät 
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-kaavalaji-vaikutus" %}
-Asemakaavan muutoksen tai vaiheasemakaavan hyväksyminen esitonttikohteen alueella, edellyttää esitonttikohteen uuden tallennusversion luomista ja [Kaavasuhdetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```kaavalaji```-attribuutin arvoksi tulee asettaa hyväksytyn kaavan kaavalaji-koodi.
+Asemakaavan muutoksen tai vaiheasemakaavan hyväksyminen esitonttikohteen alueella, edellyttää uuden tallennusversion luomista esitonttikohteesta ja [Kaavasuhdetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```kaavalaji```-attribuutin arvoksi tulee asettaa hyväksytyn kaavan kaavalaji-koodi.
 
 Asemakaavan määräysten muuttuessa asetetaan kaavatietomallin uuden [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tonttijakosuunnitelman tietomallin [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) ```liittyvanKaavamaarayksenTunnus```-attribuutin arvoksi. Lisäksi [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tallennetaan esitonttikohteen uudelle tallennusversiolle.<!-- Tällöin esitonttikohteen versiolla voi olla voimassa olevan asemakaavan ja luonnosvaiheessa olevan asemakaavan määräyksiä. Kun asemakaava tulee voimaan, tallennetaan esitonttikohteesta uusi tallennusversio, jolla vain uudet asemakaavan määräykset.-->
 
