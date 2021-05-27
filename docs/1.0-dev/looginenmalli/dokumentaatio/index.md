@@ -185,7 +185,7 @@ laji | [AbstraktiKasittelytapahtumanLaji](#abstraktikasittelytapahtumanlaji) | 1
 
 Englanninkielinen nimi: InteractionEvent
 
-Kuvaa käsitteen Vuorovaikutustapahtuma, erikoistaa luokkaa [AbstraktiTapahtuma](#abstraktitapahtuma).
+Kuvaa käsitteen Vuorovaikutustapahtuma. Erikoistaa luokkaa [AbstraktiTapahtuma](#abstraktitapahtuma).
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
