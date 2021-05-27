@@ -69,15 +69,15 @@ Laajentaa [Number](#number)-rajapintaa kuvaamaan numeron, joka on tarkkudeltaan 
 
 #### TM_Object
 
-Aikamääreiden yhteinen yläluokka, käytetään, mikäli arvo voi olla joko yksittäinen ajanhetki tai aikaväli. Määritelty luokkana [ISO 19108][ISO-19108]-standardissa. 
+Aikamääreiden yhteinen yläluokka, jota käytetään, mikäli arvo voi olla joko yksittäinen ajanhetki tai aikaväli. Määritelty luokkana [ISO 19108][ISO-19108]-standardissa. 
 
 #### TM_Instant
 
-Kuvaa yksittäisen ajanhetken 0-ulotteisena ajan geometriana, joka vastaa pistettä avaruudessa. Määritelty luokkana [ISO 19108][ISO-19108]-standardissa. Aikapisteen arvo on määritelty ```TM_Position```-luokalla yhdistelmänä [ISO 8601][ISO-8601-1]-standin mukaisia päivämäärä- tai kellonaika-kenttiä tai näiden yhdistelmää, tai muuta ```TM_TemporalPosition```-luokan avulla kuvattua aikapistettä. Viimeksi mainitun luokan attribuutti ```indeterminatePosition``` mahdollistaa ei-täsmällisen ajanhetken ilmaisemisen liittämällä mahdolliseen arvoon luokittelun tuntematon, nyt, ennen, jälkeen tai nimi.
+Kuvaa yksittäisen ajanhetken 0-ulotteisena ajan geometriana, joka vastaa pistettä avaruudessa. Määritelty luokkana [ISO 19108][ISO-19108]-standardissa. Aikapisteen arvo on määritelty ```TM_Position```-luokalla [ISO 8601][ISO-8601-1]-standardin mukaisilla päivämäärä- tai kellonaikakentilla tai niiden yhdistelmällä, tai muulla ```TM_TemporalPosition```-luokan avulla kuvatulla aikapisteellä. Viimeksi mainitun luokan attribuutti ```indeterminatePosition``` mahdollistaa ei-täsmällisen ajanhetken ilmaisemisen liittämällä mahdolliseen arvoon luokittelun *tuntematon*, *nyt*, *ennen*, *jälkeen* tai *nimi*.
 
 #### TM_Period
 
-Kuvaa aikavälin [TM_Instant](#tm_instant)-tyyppisten ```begin```- ja ```end```-attribuuttien avulla. Molemmat attribuutit ovat pakollisia, mutta voivat sisältää tuntemattoman arvon  ```indeterminatePosition = unknown``` -attribuutin arvon avulla annettuna. Määritelty luokkana [ISO 19108][ISO-19108]-standardissa.
+Kuvaa aikavälin [TM_Instant](#tm_instant)-tyyppisten ```begin```- ja ```end```-attribuuttien avulla. Molemmat attribuutit ovat pakollisia, mutta voivat sisältää tuntemattoman arvon hyödyntämällä ```indeterminatePosition = unknown``` -attribuuttia. Määritelty luokkana [ISO 19108][ISO-19108]-standardissa.
 
 #### URI
 
@@ -92,7 +92,7 @@ Täsmälleen yhdestä pisteestä koostuva geometriatyyppi. Määritelty rajapint
 
 ## Tietomallin yleispiirteet
 
-Tietomalli perustuu kaavatietomallin yhteiskäyttöisiin tietokomponentteihin. Kaavatietomallin MKP-ydin kuvaa maankäyttöpäätösten tietomallintamisessa yleiskäyttöisiksi suunnitellut luokat ja niihin liittyvät koodistot, joita hyödynnetään Tonttijakosuunnitelman soveltamisprofiilin kautta. MKP-ytimen lisäksi hyödynnetään laajasti Kaavatietomallin abstrakteja ja muita luokkia Tonttijakosuunnitelmatietomallin määrittelemien koodistojen ja soveltamisprofiilin avulla. 
+Tietomalli perustuu kaavatietomallin yhteiskäyttöisiin tietokomponentteihin. Kaavatietomallin MKP-ydin (maankäyttöpäätökset, MKP) kuvaa maankäyttöpäätösten tietomallintamisessa yleiskäyttöisiksi suunnitellut luokat ja niihin liittyvät koodistot, joita hyödynnetään tonttijakosuunnitelman soveltamisprofiilin kautta. MKP-ytimen lisäksi hyödynnetään laajasti Kaavatietomallin abstrakteja ja muita luokkia tonttijakosuunnitelmatietomallin määrittelemien koodistojen ja soveltamisprofiilin avulla. 
 
 Tonttijakosuunnitelman UML-luokkakaaviot ovat saatavilla erillisellä [UML-kaaviot-sivulla](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/uml/).
 
