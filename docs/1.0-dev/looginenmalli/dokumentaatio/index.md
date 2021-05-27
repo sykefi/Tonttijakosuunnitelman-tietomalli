@@ -107,7 +107,7 @@ Elinkaarisäännöt-sivulla [Asemakaavan suhde esitonttikohteeseen -luku](https:
 
 ### AbstraktiVersioituObjekti
 
-Englanninkielinen nimi: [AbstractVersionedObject]AbstractVersionedObject
+Englanninkielinen nimi: [AbstractVersionedObject][AbstractVersionedObject]
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
