@@ -7,12 +7,4 @@ status: "Keskeneräinen"
 ---
 # Jatkokehitys
 
-Tonttijakosuunnitelman tietomallit -projektin tulosten pohjalta on laadittu seuraavat ehdotukset tietomallin jatkokehitystä varten:
-
-## Tarve 1
-
-*Sisältöä*
-
-## Tarve 2
-
-*Sisältöä*
+Tonttijakosuunnitelman tietomallit -projektin tulosten pohjalta laaditaan  ehdotuksia tietomallin jatkokehitystä varten. Ne esitellään tällä välilehdellä. 
