@@ -129,7 +129,9 @@ tallennusAika    | [TM_Instant](#tm_instant) | 0..1 | ajanhetki, jolloin kohde o
 
 Englanninkielinen nimi: AbstractLandUseMatter
 
-Erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
+Erikoistaa luokkaa [AbstraktiVersioituObjekti](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#abstraktiversioituobjekti).
+
+Stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -141,7 +143,9 @@ metatietokuvaus  | [URI](#uri) | 0..1  | viittaus ulkoiseen metatietokuvaukseen
 
 Englanninkielinen nimi: Document
 
-Kuvaa käsitteen Tonttijakosuunnitelman liite, erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen [tonttijakosuunnitelman liite](https://www.tonttijakosuunnitelma.fi/1.0-dev/kasitemalli/#tonttijakosuunnitelman-liite). Erikoistaa luokkaa [AbstraktiVersioituObjekti](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#abstraktiversioituobjekti). 
+
+Stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -155,7 +159,9 @@ nimi | [LanguageString](#languagestring) | 0..* | asiakirjan nimi
 
 Englanninkielinen nimi: AbstractEvent
 
-Erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
+Erikoistaa luokkaa [AbstraktiVersioituObjekti](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#abstraktiversioituobjekti).
+
+Stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -167,7 +173,9 @@ kuvaus  | [LanguageString](#languagestring) | 0..* | tapahtuman tekstimuotoinen 
 
 Englanninkielinen nimi: HandlingEvent
 
-Kuvaa käsitteen Käsittelytapahtuma, erikoistaa luokkaa AbstraktiTapahtuma, stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen käsittelytapahtuma. Erikoistaa luokkaa [AbstraktiTapahtuma](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#abstraktiversioituobjekti).
+
+Stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -177,7 +185,9 @@ laji | [AbstraktiKasittelytapahtumanLaji](#AbstraktiKasittelytapahtumanLaji) | 1
 
 Englanninkielinen nimi: InteractionEvent
 
-Kuvaa käsitteen Vuorovaikutustapahtuma, erikoistaa luokkaa AbstraktiTapahtuma, stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Vuorovaikutustapahtuma, erikoistaa luokkaa [AbstraktiTapahtuma](#abstraktitapahtuma).
+
+Stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
