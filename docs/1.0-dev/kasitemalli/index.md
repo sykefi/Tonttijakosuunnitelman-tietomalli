@@ -16,7 +16,7 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan san
 ## Graafinen käsitekaavio
 ![Tonttijakosuunnitelma graafisena käsitekaaviona](kasitemalli.png "Graafinen käsitekaavio tonttijakosuunnitelmasta (Neo4j)")
 
-(Lataa [käsitekaavio määritelmien kanssa](kasitemalli.png))
+(Lataa [käsitekaavio määritelmien kanssa](kasitekaavio_selitteet.png))
 
 ## Käsitteet
 
