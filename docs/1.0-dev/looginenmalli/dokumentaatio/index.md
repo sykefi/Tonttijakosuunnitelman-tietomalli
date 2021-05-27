@@ -107,6 +107,10 @@ Elinkaarisäännöt-sivulla [Asemakaavan suhde esitonttikohteeseen -luku](https:
 
 ### AbstraktiVersioituObjekti
 
+Englanninkielinen nimi: [AbstractVersionedObject]AbstractVersionedObject
+
+Stereotyyppi: FeatureType (kohdetyyppi)
+
 Yhteinen yläluokka kaikille tonttijakosuunnitelman versiohallituille luokille. Kuvaa kaikkien kohdetyyppien yhteiset ominaisuudet ja assosiaatiot.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
@@ -121,6 +125,10 @@ tallennusAika    | [TM_Instant](#tm_instant) | 0..1 | ajanhetki, jolloin kohde o
 
 
 ### AbstraktiMaankayttoasia
+
+Englanninkielinen nimi: AbstractLandUseMatter
+
+Erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
