@@ -4,7 +4,7 @@ title: "Looginen tietomalli - looginen tietomalli - dokumentaatio"
 description: ""
 page: "dokumentaatio"
 modelversion: "1.0-dev"
-status: "Keskeneräinen"
+status: "Luonnos"
 ---
 # Loogisen tason tonttijakosuunnitelmamalli
 {:.no_toc}
