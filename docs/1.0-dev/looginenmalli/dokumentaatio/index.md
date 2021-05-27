@@ -98,11 +98,11 @@ Tonttijakosuunnitelman UML-luokkakaaviot ovat saatavilla erillisellä [UML-kaavi
 
 ## Kaavatietomallin ja tonttijakosuunnitelman tietomallin suhde ja tietovirrat
 
-Kaavatietomallin mukaiset kaavamääräykset, joiden laji-attribuutin arvo on Tonttijako-koodin “Esitontti” tai “Sitova tonttijako laadittava”, ovat aluemaisia lähtötietoja tonttijakosuunnitelman laatimiselle.
+Kaavatietomallin mukaiset kaavamääräykset, joiden ```laji-attribuutin``` arvo on [Tonttijako-koodin](https://koodistot.suomi.fi/code;registryCode=rytj;schemeCode=RY_KaavamaaraysLaji_AK;codeCode=10) *Esitontti* tai *Sitova tonttijako laadittava*, ovat aluemaisia lähtötietoja tonttijakosuunnitelman laatimiselle.
 
-Tonttijakosuunnitelman tietomallin esitonteille kaavamääräykset linkitetään suoraan kaavatietomallista. Linkitys tietomallien välillä perustuu viittaustunnukseen, joka muodostetaan Tonttijakosuunnitelman tietomallin Kaavamaarays-luokan ```liittyvanKaavamaarayksenTunnus```-attribuutille annettavalla Kaavatietomallin Kaavamääräys-luokan viittaustunnuksella. Tällä vältetään toisteellisen kaavamääräystiedon tuottamiselta. Tonttijakosuunnitelman tietomalli mahdollistaa kuitenkin tonttijakosuunnitelman laatijan määrittää kerrosala laskennallisesti esitonttikohteille.
+Tonttijakosuunnitelman tietomallin esitonteille kaavamääräykset linkitetään suoraan kaavatietomallista. Linkitys tietomallien välillä perustuu viittaustunnukseen, joka muodostetaan tonttijakosuunnitelman tietomallin  [Kaavamaarays-luokan](#Kaavamaarays) ```liittyvanKaavamaarayksenTunnus```-attribuutille annettavalla kaavatietomallin [Kaavamääräys-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) ```viittaustunnus``` -attribuutilla. Tällä vältytään toisteellisen kaavamääräystiedon tuottamiselta. Tonttijakosuunnitelman tietomalli mahdollistaa kuitenkin tonttijakosuunnitelman laatijan määrittää kerrosala laskennallisesti esitonttikohteille.
 
-Elinkaarisäännöt-sivulla [Asemakaavan suhde esitonttikohteeseen -luku](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/elinkaarisaannot.html#asemakaavan-suhde-esitonttikohteeseen) kuvaa kaavatiedon elinkaaren vaikutukset esitonttikohteen elinkaareen.
+Elinkaarisäännöt-sivulla [Asemakaavan suhde esitonttikohteeseen -luvussa](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/elinkaarisaannot.html#asemakaavan-suhde-esitonttikohteeseen) on kuvattu kaavatiedon elinkaaren vaikutukset esitonttikohteen elinkaareen.
 
 ## Maankäyttöpäätöksien ydin (MKP-ydin)
 
