@@ -7,7 +7,7 @@ modelversion: "1.0-dev"
 status: "Luonnos"
 ---
 # Käsitemalli
-Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan sanasto-työkalussa. Käsitemallin nimiavaruus on [rytj-tjs](http://uri.suomi.fi/terminology/rytj-tjs/).
+Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sanasto-työkalussa](https://sanastot.suomi.fi/concepts/43d39261-c7ba-4189-9f5a-9ad263436ee8). Käsitemallin nimiavaruus on [rytj-tjs](http://uri.suomi.fi/terminology/rytj-tjs/).
 {:.no_toc}
 
 1. 
@@ -44,10 +44,10 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan san
 ### Tonttijakosuunnitelman kumoamistieto
 {% include defintionref_tjs.html id="concept-5" name="tonttijakosuunnitelman kumoamistieto" def="Tieto tonttijakosuunnitelman hyväksymisen johdosta kokonaisuudessaan kumoutuvasta tonttijakosuunnitelmasta tai tonttijakosuunnitelman kumottavasta esitontista." %}
 
-### Kaavasuhdetieto
+### Esitonttikohteen kaavasuhdetieto
 {% include defintionref_tjs.html id="concept-10" name="esitonttikohteen kaavasuhdetieto" def="Tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista." %}
 
-### Muodostustieto
+### Esitonttikohteen muodostustieto
 {% include defintionref_tjs.html id="concept-11" name="esitonttikohteen muodostustieto" def="Tieto muodostajakiinteistöistä, josta esitontti muodostetaan." %}
 
 ### Esitonttitietovarasto
@@ -56,5 +56,5 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan san
 ### Kaavamääräys
 {% include defintionref.html id="concept-1010" name="kaavamääräys" def="Kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
 
-### Arvo
+### Ominaisuuden arvo
 {% include defintionref.html id="concept-1011" name="ominaisuuden arvo" def="Kaavamääräystä tarkentava arvo." %}

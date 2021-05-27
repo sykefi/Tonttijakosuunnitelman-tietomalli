@@ -6,7 +6,7 @@ page: "main"
 ---
 # Tonttijakosuunnitelman tietomalli
 
-Tonttijakosuunnitelmatietomallin laatiminen -projektissa on laadittu tonttijakosuunnitelman käsitteet, looginen tietomalli ja sen soveltamisprofiili, joka kuvaa tonttijakosuunnitelman laatimista joko asemakaavan laatimisen yhteydessä tai erikseen hyväksyttävänä suunnitelmana. Projekti on osa Ryhti-hanketta. 
+Tonttijakosuunnitelman tietomallin osana on laadittu tonttijakosuunnitelman käsitteet, looginen tietomalli ja sen soveltamisprofiili, joka kuvaa tonttijakosuunnitelman laatimista joko asemakaavan laatimisen yhteydessä tai erikseen hyväksyttävänä suunnitelmana. Projekti on osa Ryhti-hanketta. 
 
 Loogisen tason tietomalli määrittelee kaikille tonttijakosuunnitelman kohteille yhteiset tietorakenteet, joita sovelletaan tonttijaon ilmaisemiseen laadittujen soveltamisohjeiden ja niissä kiinnitettyjen koodistojen sekä elinkaari- ja laatusääntöjen mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta.
 
@@ -17,12 +17,10 @@ Tämä sivusto ja sen kuvaamat tietomallit pohjaavat saman hankkeen yhteydessä 
 Tämä sivusto jakautuu seuraaviin osa-alueisiin:
 - Käsitemalli
 - Looginen tietomalli
-- Soveltamisprofiili
-- Tietovirtaus kaavatietomallin kanssa
-- Mallin soveltamisohjeet ja käyttöesimerkit
-- Projektin aikaiset tuotokset, kuten kyselyt
+- Soveltamisohjeet
+- Kehitystyö
 
-Tietomallista järjestettiin kansallinen kommentointikierros 05-06/2021. Tonttijakosuunnitelman tietomallia kehitetään läpi Ryhti-hankkeen elinkaaren, ja myös siitä eteenpäin. 
+Tietomallista järjestettiin kansallinen kommentointikierros 05-06/2021 otakantaa-palvelussa. Projektin päättymisestä huolimatta tonttijakosuunnitelman tietomallia kehitetään läpi koko Ryhti-hankkeen.
 
 Toistaiseksi tonttijaosta on säädetty osana lainvoimaista [maankäyttö- ja rakennuslakia (MRL)](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132). Lisätietoja tontinjakosuunnitelmasta voi lukea [ympäristöministeriön](https://ym.fi/fi/ryhti) sivuilta. 
 
