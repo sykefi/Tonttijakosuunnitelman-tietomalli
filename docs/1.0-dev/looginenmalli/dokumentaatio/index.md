@@ -100,7 +100,7 @@ Tonttijakosuunnitelman UML-luokkakaaviot ovat saatavilla erillisellä [UML-kaavi
 
 Kaavatietomallin mukaiset kaavamääräykset, joiden ```laji-attribuutin``` arvo on [Tonttijako-koodin](https://koodistot.suomi.fi/code;registryCode=rytj;schemeCode=RY_KaavamaaraysLaji_AK;codeCode=10) *Esitontti* tai *Sitova tonttijako laadittava*, ovat aluemaisia lähtötietoja tonttijakosuunnitelman laatimiselle.
 
-Tonttijakosuunnitelman tietomallin esitonteille kaavamääräykset linkitetään suoraan kaavatietomallista. Linkitys tietomallien välillä perustuu viittaustunnukseen, joka muodostetaan tonttijakosuunnitelman tietomallin  [Kaavamaarays-luokan](#kaavamaarays) ```liittyvanKaavamaarayksenTunnus```-attribuutille annettavalla kaavatietomallin [Kaavamääräys-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) ```viittaustunnus``` -attribuutilla. Tällä vältytään toisteellisen kaavamääräystiedon tuottamiselta. Tonttijakosuunnitelman tietomalli mahdollistaa kuitenkin tonttijakosuunnitelman laatijan määrittää kerrosala laskennallisesti esitonttikohteille.
+Tonttijakosuunnitelman tietomallin esitonteille kaavamääräykset linkitetään suoraan kaavatietomallista. Linkitys tietomallien välillä perustuu viittaustunnukseen, joka muodostetaan tonttijakosuunnitelman tietomallin  [Kaavamaarays-luokan](#kaavamaarays) ```liittyvanKaavamaarayksenTunnus```-attribuutille annettavalla kaavatietomallin [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) ```viittaustunnus``` -attribuutilla. Tällä vältytään toisteellisen kaavamääräystiedon tuottamiselta. Tonttijakosuunnitelman tietomalli mahdollistaa kuitenkin tonttijakosuunnitelman laatijan määrittää kerrosala laskennallisesti esitonttikohteille.
 
 Elinkaarisäännöt-sivulla [Asemakaavan suhde esitonttikohteeseen -luvussa](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/elinkaarisaannot.html#asemakaavan-suhde-esitonttikohteeseen) on kuvattu kaavatiedon elinkaaren vaikutukset esitonttikohteen elinkaareen.
 
@@ -129,7 +129,7 @@ tallennusAika    | [TM_Instant](#tm_instant) | 0..1 | ajanhetki, jolloin kohde o
 
 Englanninkielinen nimi: AbstractLandUseMatter
 
-Erikoistaa luokkaa [AbstraktiVersioituObjekti](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#abstraktiversioituobjekti).
+Erikoistaa luokkaa [AbstraktiVersioituObjekti](#abstraktiversioituobjekti).
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
@@ -143,7 +143,7 @@ metatietokuvaus  | [URI](#uri) | 0..1  | viittaus ulkoiseen metatietokuvaukseen
 
 Englanninkielinen nimi: Document
 
-Kuvaa käsitteen [tonttijakosuunnitelman liite](https://www.tonttijakosuunnitelma.fi/1.0-dev/kasitemalli/#tonttijakosuunnitelman-liite). Erikoistaa luokkaa [AbstraktiVersioituObjekti](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#abstraktiversioituobjekti). 
+Kuvaa käsitteen [tonttijakosuunnitelman liite](../kasitemalli/#tonttijakosuunnitelman-liite). Erikoistaa luokkaa [AbstraktiVersioituObjekti](#abstraktiversioituobjekti). 
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
@@ -159,7 +159,7 @@ nimi | [LanguageString](#languagestring) | 0..* | asiakirjan nimi
 
 Englanninkielinen nimi: AbstractEvent
 
-Erikoistaa luokkaa [AbstraktiVersioituObjekti](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#abstraktiversioituobjekti).
+Erikoistaa luokkaa [AbstraktiVersioituObjekti](#abstraktiversioituobjekti).
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
@@ -173,7 +173,7 @@ kuvaus  | [LanguageString](#languagestring) | 0..* | tapahtuman tekstimuotoinen 
 
 Englanninkielinen nimi: HandlingEvent
 
-Kuvaa käsitteen käsittelytapahtuma. Erikoistaa luokkaa [AbstraktiTapahtuma](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#abstraktiversioituobjekti).
+Kuvaa käsitteen käsittelytapahtuma. Erikoistaa luokkaa [AbstraktiTapahtuma](#abstraktitapahtuma).
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
