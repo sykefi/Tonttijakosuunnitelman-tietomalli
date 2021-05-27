@@ -9,7 +9,6 @@ page: "projektitiimi"
 
 Ubigulta työhön osallistuivat:
 - Marko Kauppi
-- Esa Östring
 - Ville Koivisto
 
 
