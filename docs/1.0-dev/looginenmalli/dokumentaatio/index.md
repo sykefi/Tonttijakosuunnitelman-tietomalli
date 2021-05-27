@@ -6,7 +6,7 @@ page: "dokumentaatio"
 modelversion: "1.0-dev"
 status: "Keskeneräinen"
 ---
-# Loogisen tason tonttijakosuunnitelmamalli
+# Loogisen tason tonttijakosuunnitelman tietomalli
 {:.no_toc}
 
 1. 
