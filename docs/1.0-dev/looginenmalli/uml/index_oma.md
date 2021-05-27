@@ -4,8 +4,7 @@ title: "Tonttijakosuunnitelma - looginen tietomalli - UML"
 description: ""
 page: "uml"
 modelversion: "1.0-dev"
-status: "Luonnos"
-defaultDiagram: "./EARoot/EA2/EA3.html"
+status: "Keskeneräinen"
 
 ---
 # Loogisen tason tonttijakosuunnitelma - UML-luokkakaaviot
