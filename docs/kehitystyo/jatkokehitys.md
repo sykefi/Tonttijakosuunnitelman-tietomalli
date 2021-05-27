@@ -7,4 +7,4 @@ status: "Keskeneräinen"
 ---
 # Jatkokehitys
 
-Tonttijakosuunnitelman tietomallit -projektin tulosten pohjalta laaditaan  ehdotuksia tietomallin jatkokehitystä varten. Ne esitellään tällä välilehdellä. 
+Tietomallinnusprojektin tulosten pohjalta laaditaan ehdotuksia tietomallin jatkokehitystä varten. Ne tullaan esitellään tällä välilehdellä projektin päätyttyä. 
