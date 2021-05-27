@@ -15,8 +15,6 @@
       {% endif %}
         <a class="nav-link " href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/kasitemalli/">Käsitemalli</a>
       </li>
-
-
       {% if page.page == 'dokumentaatio' or page.page == 'uml' or page.page == 'elinkaarisaannot' or page.page == 'laatusaannot' %}
       <li class="nav-item active dropdown">
       {% else %}
@@ -30,7 +28,6 @@
           <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/looginenmalli/laatusaannot.html">Laatusäännöt</a>
         </div>
       </li>
-
       {% if page.page == 'soveltamisohje-tjs' %}
       <li class="nav-item active">
       {% else %}
@@ -38,7 +35,6 @@
       {% endif %}
         <a class="dropdown-item" href="{{ site.url }}/{{ page.modelversion | default: site.default_modelversion }}/soveltamisohjeet/index.html">Soveltamisprofiili</a>
       </li>
-
       {% if page.page == 'projektitiimi' or page.page == 'jatkokehitys' %}
       <li class="nav-item active dropdown">
       {% else %}
