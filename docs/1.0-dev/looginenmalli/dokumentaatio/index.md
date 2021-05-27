@@ -174,6 +174,8 @@ laji | [AbstraktiKasittelytapahtumanLaji](#AbstraktiKasittelytapahtumanLaji) | 1
 
 ### Vuorovaikutustapahtuma
 
+Englanninkielinen nimi: InteractionEvent
+
 Kuvaa käsitteen Vuorovaikutustapahtuma, erikoistaa luokkaa AbstraktiTapahtuma, stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
