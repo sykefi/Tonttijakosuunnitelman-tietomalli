@@ -107,7 +107,7 @@ Elinkaarisäännöt-sivulla [Asemakaavan suhde esitonttikohteeseen -luku](https:
 
 ### AbstraktiVersioituObjekti
 
-Englanninkielinen nimi: [AbstractVersionedObject][AbstractVersionedObject]
+Englanninkielinen nimi: AbstractVersionedObject
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
@@ -138,6 +138,10 @@ metatietokuvaus  | [URI](#uri) | 0..1  | viittaus ulkoiseen metatietokuvaukseen
 
 ### Asiakirja
 
+Englanninkielinen nimi: Document
+
+Kuvaa käsitteen Tonttijakosuunnitelman liite, erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
+
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 asiakirjatunnus | [URI](#uri) | 0..* | asiakirjan pysyvä tunnus, esim. diaarinumero tai muu dokumentinhallinnan tunnus
@@ -148,6 +152,10 @@ nimi | [LanguageString](#languagestring) | 0..* | asiakirjan nimi
 
 ### AbstraktiTapahtuma
 
+Englanninkielinen nimi: AbstractEvent
+
+Erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
+
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 nimi |[LanguageString](#languagestring) | 0..* | tapahtuman kuvaus
@@ -156,17 +164,29 @@ kuvaus  | [LanguageString](#languagestring) | 0..* | tapahtuman tekstimuotoinen 
 
 ### Kasittelytapahtuma
 
+Englanninkielinen nimi: HandlingEvent
+
+Kuvaa käsitteen Käsittelytapahtuma, erikoistaa luokkaa AbstraktiTapahtuma, stereotyyppi: FeatureType (kohdetyyppi)
+
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 laji | [AbstraktiKasittelytapahtumanLaji](#AbstraktiKasittelytapahtumanLaji) | 1  | käsittelytapahtuman tyyppi
 
 ### Vuorovaikutustapahtuma
 
+Kuvaa käsitteen Vuorovaikutustapahtuma, erikoistaa luokkaa AbstraktiTapahtuma, stereotyyppi: FeatureType (kohdetyyppi)
+
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 laji | [AbstraktiVuorovaikutustapahtumanLaji](#AbstraktiVuorovaikutustapahtumanLaji) | 1  | vuorovaikutustapahtuman tyyppi
 
 ### HallinnollinenAlue
+
+Englanninkielinen nimi: AdministrativeArea
+
+Stereotyyppi: Interface (rajapinta)
+
+Hallinnollinen alue on kuvattu tonttijakosuunniteman tietomallissa ainoastaan rajapintana, koska sen mallintaminen on kuulu tonttijakosuunnitelman tietomallin sovellusalaan. Toteuttavien tietojärjestelmien tulee tarjota rajapinnan määrittelemät vähimmäistoiminnallisuudet.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -176,11 +196,11 @@ nimi | [CharacterString](#characterstring) | 1  | palauttaa hallinnollisen aluee
 
 ### Organisaatio
 
-<!--Englanninkielinen nimi: Organization
+Englanninkielinen nimi: Organization
 
 Stereotyyppi: Interface (rajapinta)
 
-Organisaatio on kuvattu kaavatietomallissa ainoastaan rajapintana, koska sen mallintaminen on kuulu kaavatietomallin sovellusalaan. Toteuttavien tietojärjestelmien tulee tarjota rajapinnan määrittelemät vähimmäistoiminnallisuudet.-->
+Organisaatio on kuvattu tonttijakosuunnitelman tietomallissa ainoastaan rajapintana, koska sen mallintaminen on kuulu tonttijakosuunnitelman tietomallin sovellusalaan. Toteuttavien tietojärjestelmien tulee tarjota rajapinnan määrittelemät vähimmäistoiminnallisuudet.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -227,6 +247,8 @@ Vuorovaikutustapahtumien lajit kuvataan MKP-ydin -paketissa abstraktina koodisto
 
 ### Tonttijakosuunnitelma
 
+Kuvaa käsitteen Tonttijakosuunnitelma, erikoistaa luokkaa AbstraktiMaankayttoasia, stereotyyppi: FeatureType (kohdetyyppi)
+
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 laji | [Codelist](#tonttijakosuunnitelmanLaji) | 1  | kertoo, millainen tonttijakosuunnitelma on laadittu
@@ -237,6 +259,8 @@ vireilletuloAika | [TM_Instant](#TM_Instant) | 0..1 | aika, jolloin tonttijakosu
 hyvaksymisAika | [TM_Instant](#TM_Instant) | 0..1 | aika, jolloin tonttijakosuunnitelma on tullut virallisesti hyväksyttyä
 digitaalinenAlkupera | [DigitaalinenAlkupera](#DigitaalinenAlkupera) | 0..1 | luokittelu alunperin tietomallin mukaan luotuihin ja jälkeenpäin digitoituihin tonttijakosuunnitelmiin
 
+AbstraktiMaankayttoasia-luokasta peritytyvä attribuutti aluerajauus kuvaa tonttijakosuunnitelman suunnittelualueen.
+
 **Assosiaatiot**
 
 Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
@@ -246,12 +270,16 @@ laatija | [TonttijakosuunnitelmanLaatija](#TonttijakosuunnitelmanLaatija) | 1 | 
 
 ### TonttijakosuunnitelmanLaatija
 
+Kuvaa käsitteen Tonttijakosuunnitelman laatija, erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
+
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 nimi | [CharacterString](#CharacterString) | 1  | laatijan nimi
 nimike | [LanguageString](#LanguageString) | 0..*  | ammatti- tai virkanimike
 
 ### Abstraktikaavakohde
+
+Erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
 
 Kaikkien tonttijakosuunnitelmaan liittyvien paikkatietokohteiden yhteinen abstrakti yläluokka. Kohteen geometria voi olla 2-ulotteinen piste,tai alue, tai 3-ulotteinen kappale. Moniosaiset geometriat (multigeometry) ovat sallittuja.
 
@@ -263,6 +291,8 @@ kohteenPinta-ala | [Number](#Number) | 0..*  | esitontin pinta-ala tai kolmiulot
 pystysuunteinenRajaus | [Korkeusvali](#Korkeusvali) | 0..1  | kolmiulotteisen esitontin ylin ja alin korkeus merenpinnasta
 
 ### Esitonttikohde
+
+Kuvaa käsitteen Esitonttikohde, erikoistaa luokkaa AbstraktiKaavakohde, stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -284,12 +314,20 @@ maarays | [Kaavamaarays](#Kaavamaarays) | 0..* | kaavaan sisältyvä sanallinen 
 
 ### Muodostustieto
 
+Stereotyyppi: DataType (tietotyyppi)
+
+Tieto muodostajakiinteistöistä, josta esitontti muodostetaan.
+
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 kiinteistoTunnus | [Tunnusarvo](#Tunnusarvo) | 1  | kiinteistörekisteriin merkityn rekisteriyksikön yksilöivä tunnus
 muodostusPinta-ala | [Number](#Number) | 1  | muodostavan rekisterikiinteistön pinta-alan määrä neliömetreissä
 
 ### Kaavasuhdetieto
+
+Stereotyyppi: DataType (tietotyyppi)
+
+Tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -299,17 +337,27 @@ kumoaaEsitonttikohteen | [boolean](#boolean) | 1 | jos arvo on true, kaava kumoa
 
 ### Kaavamaarays
 
+Kuvaa käsitteen Kaavamääräys, erikoistaa luokkaa AbstraktiTietoyksikko, stereotyyppi: FeatureType (kohdetyyppi)
+
 laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 liittyvanKaavamaarayksenTunnus | [URI](#URI) | 1  | viittaustunnus kaavaan sisältyvän kaavamääräyksen tietokohteeseen, joka liittyy esitonttikohteeseen
 
 ### AbstraktiTietoyksikko
 
+Erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
+
+Kaikkien tonttijakosuunnitelmiin liittyvien tietoelementtien yhteinen abstrakti yläluokka.
+
 laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 arvo | [AbstraktiArvo](#AbstraktiArvo) | 0..*  | kuvaa tonttijakosuunnitelman laatijan tulkitsemaa arvoa esim. rakentamisen määrä
 
 ### TonttijakosuunnitelmanKumoamistieto
+
+Stereotyyppi: DataType (tietotyyppi)
+
+Kumoamistieto yksilöi mitä tonttijakosuunnitelmia tai niiden esitonttikohteita tonttijakosuunnitelma kumoaa lainvoimaiseksi tullessaan.
 
 laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
