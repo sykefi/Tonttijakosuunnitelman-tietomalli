@@ -5,7 +5,7 @@ description: ""
 page: "uml"
 modelversion: "1.0-dev"
 status: "Luonnos"
-defaultDiagram: "./EARoot/EA2/EA24.html"
+defaultDiagram: "./EARoot/EA2/EA3.html"
 
 ---
 # Loogisen tason tonttijakosuunnitelma - UML-luokkakaaviot
