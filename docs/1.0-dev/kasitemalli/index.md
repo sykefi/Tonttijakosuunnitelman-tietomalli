@@ -4,11 +4,10 @@ title: "Tonttijakosuunnitelma - käsitemalli"
 description: ""
 page: "kasitemalli"
 modelversion: "1.0-dev"
-status: "Keskeneräinen"
+status: "Luonnos"
 ---
 # Käsitemalli
-Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan sanasto-työkalussa. Käsitemallin nimiavaruus on [rytj-tjs](http://uri.suomi.fi/terminology/rytj-tjs/). Mukana on käsitteitä myös kaavatietomallista, ja niiden nimiavaruus on [rytj-kaava](http://uri.suomi.fi/terminology/rytj-kaava/).
-
+Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan sanasto-työkalussa. Käsitemallin nimiavaruus on [rytj-tjs](http://uri.suomi.fi/terminology/rytj-tjs/).
 {:.no_toc}
 
 1. 
@@ -54,8 +53,8 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan san
 ### Esitonttitietovarasto
 {% include defintionref_tjs.html id="concept-7" name="esitonttitietovarasto" def="Tietojärjestelmä, jonka tehtävänä on vastaanottaa, säilyttää ja jaella tietomallimuotoista tonttjakosuunnitelmatietoa laatu- ja elinkaarisääntöjen mukaisesti." %}
 
-### rak: Kaavamääräys
+### Kaavamääräys
 {% include defintionref.html id="concept-1010" name="kaavamääräys" def="Kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
 
-### rak: Arvo
+### Arvo
 {% include defintionref.html id="concept-1011" name="ominaisuuden arvo" def="Kaavamääräystä tarkentava arvo." %}
