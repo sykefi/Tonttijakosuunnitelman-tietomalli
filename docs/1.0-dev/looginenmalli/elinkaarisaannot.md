@@ -4,7 +4,7 @@ title: "Tonttijakosuunnitelma - looginen tietomalli - Elinkaarisäännöt"
 description: ""
 page: "elinkaarisaannot"
 modelversion: "1.0-dev"
-status: "Keskeneräinen"
+status: "Luonnos"
 ---
 
 # Elinkaarisäännöt

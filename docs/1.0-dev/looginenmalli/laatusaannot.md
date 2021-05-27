@@ -4,7 +4,7 @@ title: "Tonttijakosuunnitelma - looginen tietomalli -Laatusäännöt"
 description: ""
 page: "laatusaannot"
 modelversion: "1.0-dev"
-status: "Keskeneräinen"
+status: "Luonnos"
 ---
 # Laatusäännöt
 {:.no_toc}

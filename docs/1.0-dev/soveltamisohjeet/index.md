@@ -4,7 +4,7 @@ title: "Tonttijakosuunnitelma - soveltamisprofiili"
 description: ""
 page: "soveltamisohje-tjs"
 modelversion: "1.0-dev"
-status: "Keskeneräinen"
+status: "Luonnos"
 ---
 # Soveltamisprofiili
 
