@@ -44,10 +44,10 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sa
 ### Tonttijakosuunnitelman kumoamistieto
 {% include defintionref_tjs.html id="concept-5" name="tonttijakosuunnitelman kumoamistieto" def="tieto tonttijakosuunnitelman hyväksymisen johdosta kokonaisuudessaan kumoutuvasta tonttijakosuunnitelmasta tai tonttijakosuunnitelman kumottavasta esitontista." %}
 
-### Esitonttikohteen kaavasuhdetieto
+### Kaavasuhdetieto
 {% include defintionref_tjs.html id="concept-10" name="esitonttikohteen kaavasuhdetieto" def="tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista." %}
 
-### Esitonttikohteen muodostustieto
+### Muodostustieto
 {% include defintionref_tjs.html id="concept-11" name="esitonttikohteen muodostustieto" def="tieto muodostajakiinteistöistä, josta esitontti muodostetaan." %}
 
 ### Esitonttitietovarasto
@@ -56,5 +56,5 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sa
 ### Kaavamääräys
 {% include defintionref.html id="concept-1010" name="kaavamääräys" def="kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
 
-### Ominaisuuden arvo
+### Arvo
 {% include defintionref.html id="concept-1011" name="ominaisuuden arvo" def="kaavamääräystä tarkentava arvo." %}
