@@ -20,7 +20,7 @@ Tämä sivusto jakautuu seuraaviin osa-alueisiin:
 - Soveltamisohjeet
 - Kehitystyö
 
-Tonttijakosuunnitelman tietomallin ensisijainen sovelluskohde on Rakennetun ympäristön tietojärjestelmä, johon tulevaisuudessa kootaan kuntien tonttijakosuunnitelmaprosessissa luotava tietomallimuotoinen tonttijakosuunnitelmatieto. Tonttijakosuunnitelman tietomallin mahdollisina sovelluskohteina ovat kuitenkin lisäksi kaikki tietojärjestelmät, joissa luodaan, käsitellään, analysoidaan ja siirretään tonttijakosuunnitelmatietoa.
+Tonttijakosuunnitelman tietomallin ensisijainen sovelluskohde on [Rakennetun ympäristön tietojärjestelmä](https://ym.fi/fi/ryhti), johon tulevaisuudessa kootaan kuntien tonttijakosuunnitelmaprosessissa luotava tietomallimuotoinen tonttijakosuunnitelmatieto. Tonttijakosuunnitelman tietomallin mahdollisina sovelluskohteina ovat kuitenkin lisäksi kaikki tietojärjestelmät, joissa luodaan, käsitellään, analysoidaan ja siirretään tonttijakosuunnitelmatietoa.
 
 Tietomallista järjestettiin kansallinen kommentointikierros 05-06/2021 otakantaa-palvelussa. Projektin päättymisestä huolimatta tonttijakosuunnitelman tietomallia kehitetään läpi koko Ryhti-hankkeen.
 
