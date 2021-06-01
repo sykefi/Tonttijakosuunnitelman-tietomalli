@@ -20,6 +20,8 @@ Tämä sivusto jakautuu seuraaviin osa-alueisiin:
 - Soveltamisohjeet
 - Kehitystyö
 
+Tonttijakosuunnitelman tietomallin ensisijainen sovelluskohde on Rakennetun ympäristön tietojärjestelmä, johon tulevaisuudessa kootaan kuntien tonttijakosuunnitelmaprosessissa luotava tietomallimuotoinen tonttijakosuunnitelmatieto. Tonttijakosuunnitelman tietomallin mahdollisina sovelluskohteina ovat kuitenkin lisäksi kaikki tietojärjestelmät, joissa luodaan, käsitellään, analysoidaan ja siirretään tonttijakosuunnitelmatietoa.
+
 Tietomallista järjestettiin kansallinen kommentointikierros 05-06/2021 otakantaa-palvelussa. Projektin päättymisestä huolimatta tonttijakosuunnitelman tietomallia kehitetään läpi koko Ryhti-hankkeen.
 
 Toistaiseksi tonttijaosta on säädetty osana lainvoimaista [Maankäyttö- ja rakennuslakia (MRL)](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132). Lisätietoja MRL-muutoksesta ja tontinjakosuunnitelmasta voi lukea [ympäristöministeriön](https://ym.fi/fi/ryhti) sivuilta. Tonttijakosuunnitelman tietomalli perustuu uuteen lakiluonnokseen joka vastaa jokseenkin nykyisen lain sitovaa tonttijakoa. 
