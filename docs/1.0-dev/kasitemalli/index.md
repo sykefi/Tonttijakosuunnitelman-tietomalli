@@ -35,10 +35,10 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sa
 ### Tonttijakosuunnitelman liite
 {% include defintionref_tjs.html id="concept-2" name="tonttijakosuunnitelman liite" def="tonttijakosuunnitelmaan liittyvä asiakirja, joka ei sisällä tonttijakosuunnitelman oikeusvaikutuksellista suunnitelma- tai säännöstietoa." %}
 
-### Tonttijakosuunnitelman käsittelytapahtuma
+### Käsittelytapahtuma
 {% include defintionref_tjs.html id="concept-3" name="tonttijakosuunnitelman käsittelytapahtuma" def="tonttijakosuunnitelman käsittelyprosessiin kuuluva tapahtuma, jonka johdosta elinkaaren tila voi muuttua." %}
 
-### Tonttijakosuunnitelman vuorovaikutustapahtuma
+### Vuorovaikutustapahtuma
 {% include defintionref_tjs.html id="concept-4" name="tonttijakosuunnitelman vuorovaikutustapahtuma" def="tonttijakosuunnitelmaprosessiin kuuluva tapahtuma, jonka tarkoituksena on tarjota tonttijakosuunnitelman asianosaiselle mahdollisuus lausua mielipiteensä ehdotuksesta." %}
 
 ### Tonttijakosuunnitelman kumoamistieto
