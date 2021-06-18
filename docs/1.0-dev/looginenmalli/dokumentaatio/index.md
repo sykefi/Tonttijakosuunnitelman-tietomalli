@@ -298,6 +298,12 @@ geometria | [geometry](#geometry) | 0..1  | esitonttikohteen sijainti
 kohteenPinta-ala | [Number](#Number) | 0..*  | esitontin pinta-ala tai kolmiulotteisen esitontin projisoitu pinta-ala
 pystysuunteinenRajaus | [Korkeusvali](#Korkeusvali) | 0..1  | kolmiulotteisen esitontin ylin ja alin korkeus merenpinnasta
 
+**Assosiaatiot**
+
+Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
+-----------------|--------------------|---------------------|----------
+liittyvaKohde | [Abstraktikaavakohde](#Abstraktikaavakohde) | 0..* | kohde, joka liittyy tähän kohteeseen. Kukin assosiaatio voi sisältää rooli-määreen tyyppiä LanguageString, joka kuvaa miten kohde liittyy tähän kohteeseen.
+
 ### Esitonttikohde
 
 Kuvaa käsitteen Esitonttikohde, erikoistaa luokkaa AbstraktiKaavakohde, stereotyyppi: FeatureType (kohdetyyppi)
