@@ -314,7 +314,7 @@ laji | [EsitonttikohdeLaji](#EsitonttikohdeLaji) | 1  | kuvaa esitonttikohteen t
 suhdePeruskiinteistoon | [suhdePeruskiinteistoon](#suhdePeruskiinteistoon) | 0..1  | luokittelu esitonttikohteen sijoittumisesta suhteessa peruskiinteistöön, joka merkitään vain 3D-esitonttikohteelle
 elinkaarentila | [TonttijakosuunnitelmanElinkaarentila](#TonttijakosuunnitelmanElinkaarentila) | 1  | 
 muodostustieto | [Muodostustieto](#muodostustieto) | 1..* | tieto muodostajakiinteistöistä, josta/joista esitontti muodostetaan
-kaavasuhdetieto | [Kaavasuhdetieto](#kaavasuhdetieto) | 1..* | tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista
+kaavatilannetieto | [Kaavatilannetieto](#kaavasuhdetieto) | 1..* | tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista
 rakennettu | [boolean](#boolean) | 0..1 | tieto muun muassa rakentamattomasta rakennuspaikasta korotettua kiinteistöverotusta varten, onko esitonttikohde rakennettu asemakaavan mukaisesti. Lisäksi tämän tiedon perusteella saadaan tieto kunnan kaavavarannosta.
 rakennuskielto | [boolean](#boolean) | 0..1 | kuvaa, onko esitonttikohteella rakennuskielto
 voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aikaväli, jona asiasta tehty päätös suunnitelmineen ja säännöksineen on lainvoimainen
