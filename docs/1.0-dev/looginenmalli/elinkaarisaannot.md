@@ -327,11 +327,11 @@ Tonttijakosuunnitelman tietomalli ei sisällä omaa tietorakennettaan ajantasais
 Voimassaolevan tonttijakosuunnitelman esitonttikohde voi saada uuden version tai kumoutua kokonaan kaavamuutoksen tai vaiheasemakaavan voimaan tullessa esitonttikohteen alueella.
 
 {% include clause_start.html type="req" id="elinkaari/vaat-kaavatunnus" %}
-Esitonttikohteille tulee yksilöidä tonttijakosuunnitelmassa siihen liittyvät hyväksytyt asemakaavat. Kutakin  esitonttikohdetta kohti tulee antaa yksi [Esitonttikohde-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#esitonttikohde) attribuutin ```kaavasuhdetieto``` arvo tyyppiä Kaavasuhdetieto, jonka ```kaavaTunnus```-attribuutin arvo on [Kaava-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaava) ```viittaustunnus```.
+Esitonttikohteille tulee yksilöidä tonttijakosuunnitelmassa siihen liittyvät hyväksytyt asemakaavat. Kutakin  esitonttikohdetta kohti tulee antaa yksi [Esitonttikohde-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#esitonttikohde) attribuutin ```kaavatilannetieto``` arvo tyyppiä Kaavatilannetieto, jonka ```kaavaTunnus```-attribuutin arvo on [Kaava-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaava) ```viittaustunnus```.
 {% include clause_end.html %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-kaavalaji-vaikutus" %}
-Asemakaavan muutoksen tai vaiheasemakaavan hyväksyminen esitonttikohteen alueella, edellyttää uuden tallennusversion luomista esitonttikohteesta ja [Kaavasuhdetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```kaavalaji```-attribuutin arvoksi tulee asettaa hyväksytyn kaavan kaavalaji-koodi.
+Asemakaavan muutoksen tai vaiheasemakaavan hyväksyminen esitonttikohteen alueella, edellyttää uuden tallennusversion luomista esitonttikohteesta ja [Kaavatilannetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```kaavalaji```-attribuutin arvoksi tulee asettaa hyväksytyn kaavan kaavalaji-koodi.
 
 Asemakaavan määräysten muuttuessa asetetaan kaavatietomallin uuden [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tonttijakosuunnitelman tietomallin [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) ```liittyvanKaavamaarayksenTunnus```-attribuutin arvoksi. Lisäksi [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tallennetaan esitonttikohteen uudelle tallennusversiolle.<!-- Tällöin esitonttikohteen versiolla voi olla voimassa olevan asemakaavan ja luonnosvaiheessa olevan asemakaavan määräyksiä. Kun asemakaava tulee voimaan, tallennetaan esitonttikohteesta uusi tallennusversio, jolla vain uudet asemakaavan määräykset.-->
 
@@ -345,7 +345,7 @@ Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden tonttijakosuunn
 {% include note.html content="Kaavan kaavalaji-koodia ei ole toistaiseksi olemassa. Elinkaarenhallinnan näkökulmasta merkittävimmät kaavalajit voisi olla: ensimmäinen asemakaava, asemakaavan määräysten muutos ja asemakaavan rajojen muutos. " %}
 
 {% include clause_start.html type="req" id="elinkaari/vaat-kumoaa-esitonttikohteen" %}
-Jos asemakaavalla esitontin rajat muuttuvat kokonaan tai osittain yleiseksi alueeksi, kumoaa asemakaava esitonttikohteen. Näin esitonttikohde muuttuu ei-kortteliksi, ja kumoaminen tonttijakosuunnitelmalla ei olisi mahdollista. [Kaavasuhdetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) kumoaa-attribuutin arvoksi asetetaan true. Esitonttikohteesta ei luoda uutta versiota, vaan:
+Jos asemakaavalla esitontin rajat muuttuvat kokonaan tai osittain yleiseksi alueeksi, kumoaa asemakaava esitonttikohteen. Näin esitonttikohde muuttuu ei-kortteliksi, ja kumoaminen tonttijakosuunnitelmalla ei olisi mahdollista. [Kaavatilannetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) kumoaa-attribuutin arvoksi asetetaan true. Esitonttikohteesta ei luoda uutta versiota, vaan:
 
 - ```elinkaarentila```-attribuutin arvoksi asetetaan **kumoutunut**.
 - ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin kaavan ```voimassaoloAika```-attribuutin alkamisaika.

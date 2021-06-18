@@ -298,6 +298,12 @@ geometria | [geometry](#geometry) | 0..1  | esitonttikohteen sijainti
 kohteenPinta-ala | [Number](#Number) | 0..*  | esitontin pinta-ala tai kolmiulotteisen esitontin projisoitu pinta-ala
 pystysuunteinenRajaus | [Korkeusvali](#Korkeusvali) | 0..1  | kolmiulotteisen esitontin ylin ja alin korkeus merenpinnasta
 
+**Assosiaatiot**
+
+Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
+-----------------|--------------------|---------------------|----------
+liittyvaKohde | [Abstraktikaavakohde](#Abstraktikaavakohde) | 0..* | kohde, joka liittyy tähän kohteeseen. Kukin assosiaatio voi sisältää rooli-määreen tyyppiä LanguageString, joka kuvaa miten kohde liittyy tähän kohteeseen.
+
 ### Esitonttikohde
 
 Kuvaa käsitteen Esitonttikohde, erikoistaa luokkaa AbstraktiKaavakohde, stereotyyppi: FeatureType (kohdetyyppi)
@@ -331,11 +337,11 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 kiinteistoTunnus | [Tunnusarvo](#Tunnusarvo) | 1  | kiinteistörekisteriin merkityn rekisteriyksikön yksilöivä tunnus
 muodostusPinta-ala | [Number](#Number) | 1  | muodostavan rekisterikiinteistön pinta-alan määrä neliömetreissä
 
-### Kaavasuhdetieto
+### Kaavatilanne
 
 Stereotyyppi: DataType (tietotyyppi)
 
-Tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista.
+Tieto esitonttiin liittyvistä asemakaavoista ja niiden vaikutuksista.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -361,7 +367,7 @@ laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 arvo | [AbstraktiArvo](#AbstraktiArvo) | 0..*  | kuvaa tonttijakosuunnitelman laatijan tulkitsemaa arvoa esim. rakentamisen määrä
 
-### TonttijakosuunnitelmanKumoamistieto
+### TonttijakosuunnitelmanKumoutumistieto
 
 Stereotyyppi: DataType (tietotyyppi)
 
@@ -369,9 +375,8 @@ Kumoamistieto yksilöi mitä tonttijakosuunnitelmia tai niiden esitonttikohteita
 
 laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-kumottavanTonttijakosuunnitelmanTunnus | [URI](#URI) | 1  | tonttijakosuunnitelma, johon kumoaminen kohdistuu
-kumoaaTonttijakosuunnitelmanKokonaan | [Boolean](#Boolean) | 1  | jos arvo on true, kumoaa tonttijakosuunniteman kokonaisuudessaan, muuten muiden ominaisuuksien yksilöimällä tavalla
-kumottavanEsitonttikohteenTunnus | [URI](#URI) | 0..*  | esitonttikohde, johon kumoaminen kohdistuu
+kumoutuvanTonttijakosuunnitelmanTunnus | [URI](#URI) | 1  | tonttijakosuunnitelma, johon kumoaminen kohdistuu
+kumoutuvanEsitonttikohteenTunnus | [URI](#URI) | 0..*  | esitonttikohde, johon kumoutuminen kohdistuu
 
 ### Koodistot
 
