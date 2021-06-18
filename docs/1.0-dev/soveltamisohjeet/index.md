@@ -58,7 +58,7 @@ Ilmaisee, että esitonttikohde kuvaa esitontin 2-ulotteisena alueena tai 3-ulott
 ```arvo```-attribuutin arvona saa esiintyä nolla tai yksi Tunnusarvo, jotka kuvaavat tulevan tontin tunnusarvoa tietojärjestelmissä tai rekistereissä.
 {% include clause_end.html %}
 
-### Esitonttirajapiste
+### Esitontin rajapiste
 
 **Koodi:** http://uri.suomi.fi/codelist/rytj/RY_EsitonttikohdeLaji/code/02
 
