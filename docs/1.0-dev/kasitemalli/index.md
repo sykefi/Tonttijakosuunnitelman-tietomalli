@@ -45,7 +45,7 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sa
 {% include defintionref_tjs.html id="concept-5" name="tonttijakosuunnitelman kumoutumistieto" def="tieto tonttijakosuunnitelman hyväksymisen johdosta kokonaisuudessaan kumoutuvasta tonttijakosuunnitelmasta tai tonttijakosuunnitelman kumoutuvasta esitontista." %}
 
 ### Kaavatilannetieto
-{% include defintionref_tjs.html id="concept-10" name="esitontin kaavatilanne" def="tieto esitonttiin liittyvistä asemakaavoista ja niiden vaikutuksista." %}
+{% include defintionref_tjs.html id="concept-10" name="esitontin kaavatilannetieto" def="tieto esitonttiin liittyvistä asemakaavoista ja niiden vaikutuksista." %}
 
 ### Muodostustieto
 {% include defintionref_tjs.html id="concept-11" name="esitontin muodostustieto" def="tieto muodostajakiinteistöistä, josta esitontti muodostetaan." %}
