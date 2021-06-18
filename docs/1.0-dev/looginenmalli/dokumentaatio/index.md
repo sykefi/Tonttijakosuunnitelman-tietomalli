@@ -293,7 +293,7 @@ Kaikkien tonttijakosuunnitelmaan liittyvien paikkatietokohteiden yhteinen abstra
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-arvo | [Abstraktiarvo](#Abstraktiarvo) | 0..1  | Esitonttikohteen tunnusarvo tai esitonttirajapisteen numero
+arvo | [Abstraktiarvo](#Abstraktiarvo) | 0..1  | Esitontin tunnusarvo tai esitontin rajapisteen numero
 geometria | [geometry](#geometry) | 0..1  | esitonttikohteen sijainti
 kohteenPinta-ala | [Number](#Number) | 0..*  | esitontin pinta-ala tai kolmiulotteisen esitontin projisoitu pinta-ala
 pystysuunteinenRajaus | [Korkeusvali](#Korkeusvali) | 0..1  | kolmiulotteisen esitontin ylin ja alin korkeus merenpinnasta
