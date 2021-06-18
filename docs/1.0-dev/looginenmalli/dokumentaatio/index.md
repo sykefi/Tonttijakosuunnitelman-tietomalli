@@ -331,11 +331,11 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 kiinteistoTunnus | [Tunnusarvo](#Tunnusarvo) | 1  | kiinteistörekisteriin merkityn rekisteriyksikön yksilöivä tunnus
 muodostusPinta-ala | [Number](#Number) | 1  | muodostavan rekisterikiinteistön pinta-alan määrä neliömetreissä
 
-### Kaavasuhdetieto
+### Kaavatilanne
 
 Stereotyyppi: DataType (tietotyyppi)
 
-Tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista.
+Tieto esitonttiin liittyvistä asemakaavoista ja niiden vaikutuksista.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -361,7 +361,7 @@ laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 arvo | [AbstraktiArvo](#AbstraktiArvo) | 0..*  | kuvaa tonttijakosuunnitelman laatijan tulkitsemaa arvoa esim. rakentamisen määrä
 
-### TonttijakosuunnitelmanKumoamistieto
+### TonttijakosuunnitelmanKumoutumistieto
 
 Stereotyyppi: DataType (tietotyyppi)
 
@@ -369,9 +369,8 @@ Kumoamistieto yksilöi mitä tonttijakosuunnitelmia tai niiden esitonttikohteita
 
 laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-kumottavanTonttijakosuunnitelmanTunnus | [URI](#URI) | 1  | tonttijakosuunnitelma, johon kumoaminen kohdistuu
-kumoaaTonttijakosuunnitelmanKokonaan | [Boolean](#Boolean) | 1  | jos arvo on true, kumoaa tonttijakosuunniteman kokonaisuudessaan, muuten muiden ominaisuuksien yksilöimällä tavalla
-kumottavanEsitonttikohteenTunnus | [URI](#URI) | 0..*  | esitonttikohde, johon kumoaminen kohdistuu
+kumoutuvanTonttijakosuunnitelmanTunnus | [URI](#URI) | 1  | tonttijakosuunnitelma, johon kumoaminen kohdistuu
+kumoutuvanEsitonttikohteenTunnus | [URI](#URI) | 0..*  | esitonttikohde, johon kumoutuminen kohdistuu
 
 ### Koodistot
 
