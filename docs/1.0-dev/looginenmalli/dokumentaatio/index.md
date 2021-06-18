@@ -143,7 +143,7 @@ metatietokuvaus  | [URI](#uri) | 0..1  | viittaus ulkoiseen metatietokuvaukseen
 
 Englanninkielinen nimi: Document
 
-Kuvaa käsitteen [tonttijakosuunnitelman liite](../kasitemalli/#tonttijakosuunnitelman-liite). Erikoistaa luokkaa [AbstraktiVersioituObjekti](#abstraktiversioituobjekti). 
+Kuvaa käsitteen [tonttijakosuunnitelman viiteasiakirjan](../kasitemalli/#tonttijakosuunnitelman-viiteasiakirja). Erikoistaa luokkaa [AbstraktiVersioituObjekti](#abstraktiversioituobjekti). 
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
