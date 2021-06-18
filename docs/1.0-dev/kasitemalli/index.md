@@ -21,7 +21,7 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sa
 ## Käsitteet
 
 ### Tonttijakosuunnitelma
-{% include defintionref_tjs.html id="concept-0" name="tonttijakosuunnitelma" def="maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen uudistamisen yksityiskohtaiseksi ohjaamiseksi." %}
+{% include defintionref_tjs.html id="concept-0" name="tonttijakosuunnitelma" def="maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen yksityiskohtaiseksi ohjaamiseksi." %}
 
 ### Esitonttikohde
 {% include defintionref_tjs.html id="concept-6" name="esitonttikohde" def="tonttijakosuunnitelmaan sisältyvä aluemainen (esitontti) tai pistemäinen kohde (esitontin rajapiste)" %}
