@@ -41,8 +41,8 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sa
 ### Vuorovaikutustapahtuma
 {% include defintionref_tjs.html id="concept-4" name="tonttijakosuunnitelman vuorovaikutustapahtuma" def="tonttijakosuunnitelmaprosessiin kuuluva tapahtuma, jonka tarkoituksena on tarjota tonttijakosuunnitelman asianosaiselle mahdollisuus lausua mielipiteensä ehdotuksesta." %}
 
-### Tonttijakosuunnitelman kumoamistieto
-{% include defintionref_tjs.html id="concept-5" name="tonttijakosuunnitelman kumoamistieto" def="tieto tonttijakosuunnitelman hyväksymisen johdosta kokonaisuudessaan kumoutuvasta tonttijakosuunnitelmasta tai tonttijakosuunnitelman kumottavasta esitontista." %}
+### Tonttijakosuunnitelman kumoutumistieto
+{% include defintionref_tjs.html id="concept-5" name="tonttijakosuunnitelman kumoutumistieto" def="tieto tonttijakosuunnitelman hyväksymisen johdosta kokonaisuudessaan kumoutuvasta tonttijakosuunnitelmasta tai tonttijakosuunnitelman kumoutuvasta esitontista." %}
 
 ### Kaavatilanne
 {% include defintionref_tjs.html id="concept-10" name="esitontin kaavatilanne" def="tieto esitonttiin liittyvistä asemakaavoista ja niiden vaikutuksista." %}
