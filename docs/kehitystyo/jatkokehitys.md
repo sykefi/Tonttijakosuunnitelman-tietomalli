@@ -9,8 +9,8 @@ status: "Luonnos"
 
 Projektissa tunnistettiin seuraavia jatkokehitysehdotuksia:
 
-1. Tunnistettiin tarve kaavatietomallin KaavamääräysLaji_AK -koodiston 1002 - Esitontti-koodin muuttamiseksi esimerkiksi muotoon Kaavan esitontti tai Kaavayksikkö. 
-   (http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1002)
+1. Tunnistettiin tarve kaavatietomallin [KaavamääräysLaji_AK](http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1002) -koodiston 1002 - Esitontti-koodin muuttamiseksi esimerkiksi muotoon Kaavan esitontti tai Kaavayksikkö. 
+   
 
    Tämä erottaisi kaavaprosessin ja tonttijakosuunnitelman prosessin selkeästi omikseen ja käsitteet pysyisivät ymmärrettävinä. Kuten nykyisinkin, tonttijakosuunnitelma ja sen      esitontit voidaan esittää tietomallipohjaisesti yhdessä kaavatietomallin kanssa.
 
