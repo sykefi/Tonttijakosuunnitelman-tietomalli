@@ -18,9 +18,9 @@ status: "Luonnos"
 
    Tietomalli on kuitenkin laadittu laajempana kuin mitä RYTJ edellyttäisi. Koska esimerkiksi elinkaarivaiheet on huomioitu RYTJ:n vaatimuksia laajemmin, voi tietomallia            hyödyntää sellaisenaan myös kuntien järjestelmissä. Tähän liittyen kuntien järjestelmien ja RYTJ:n välinen tiedonvaihto edellyttää jatkossa tietomallin tarkempaa tarkastelua    automaatioiden mahdollistamiseksi muun muassa:
 
-    - kaavatietomallin ja tonttijakosuunnitelman välillä,
-    - tonttijakosuunnitelman ja kiinteistötietojärjestelmän välillä ja
-    - tonttijakosuunnitelman ja rakennuskieltojen välillä.
+      - kaavatietomallin ja tonttijakosuunnitelman välillä,
+      - tonttijakosuunnitelman ja kiinteistötietojärjestelmän välillä ja
+      - tonttijakosuunnitelman ja rakennuskieltojen välillä.
     
     Tiedonvaihdon osalta tulee tarkastella erityisesti kohteiden välisiä vaikutuksia, kuten esimerkiksi elinkaarimuutoksia tietovarastojen välillä. 
     Tällä hetkellä tonttijakosuunnitelman tietomallissa kaavamääräykset, muun muassa käyttötarkoituksen osalta, linkitetään siihen suoraan kaavatietomallista hyödyntäen sen         viittaustunnusta. Kaavatietomallissa tapahtuvilla muutoksilla on vaikutuksia tonttijakosuunnitelman tietomallin esitonttikohteisiin (ks. 4. ehdotus). Käynnissä oleva             Rakennetun ympäristön MVP-määrittely -hanke aiheuttaa mahdollisesti tietomalliin muutoksia edellä mainittujen osalta.
