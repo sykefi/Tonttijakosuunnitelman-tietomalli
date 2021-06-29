@@ -7,6 +7,8 @@ status: "Luonnos"
 ---
 # Jatkokehitys
 
+Projektissa tunnistettiin seuraavia jatkokehitysehdotuksia:
+
 1. Tunnistettiin tarve kaavatietomallin KaavamääräysLaji_AK -koodiston 1002 - Esitontti-koodin muuttamiseksi esimerkiksi muotoon Kaavan esitontti tai Kaavayksikkö. 
    http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1002
 
