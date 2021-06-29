@@ -411,9 +411,11 @@ Tavallisesti tonttijakosuunnitelman sisältämien esitonttikohteiden elinkaariti
 Tonttijakosuunnitelman ```elinkaaritila```-attribuutin arvon seuraaviin muutoksiin tulee aina liittyä **Kasittelytapahtuma**, jonka ```laji```-attribuutin arvo tulee olla elinkaarimuutosta vastaava:
 
 - Muutos tilaan **Vireillä**: Liityttävä käsittelytapahtuman laji Tonttijakosuunnitelman virelletulo.
-- Muutos tilaan **Ehdotus**: Liityttävä käsittelytapahtuman laji Tonttijakosuunnitelman ehdotus.
+- Muutos tilaan **Ehdotus**: Liityttävä käsittelytapahtuman laji Tonttijakosuunnitelman ehdotuksen nähtäville asettaminen.
 - Muutos tilaan **Hyväksytty**: Liityttävä käsittelytapahtuman laji Tonttijakosuunnitelman hyväksyminen.
 - Muutos tilaan **Voimassa**: Liityttävä käsittelytapahtuman laji Tonttijakosuunnitelman voimaantulo.
+- Muutos tilaan **Kumoutunut osittain**: Liityttävä käsittelytapahtuman laji Tonttijakosuunnitelman kumoutuminen.
+- Muutos tilaan **Kumoutunut kokonaan**: Liityttävä käsittelytapahtuman laji Tonttijakosuunnitelman kumoutuminen.
 {% include clause_end.html %}
 
 Yllä luetellut käsittelytapahtumat tulee tallentaa samaan aikaan elinkaaritilaltaan muuttuneen tonttijakosuunnitelman kanssa.
