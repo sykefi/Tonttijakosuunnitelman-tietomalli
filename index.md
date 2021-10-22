@@ -2,7 +2,8 @@
 layout: "default"
 title: "Tonttijakosuunnitelman tietomalli"
 description: "Tonttijakosuunnitelman kansallinen tietomalli täydentää aiempia kaavatietomalleja"
-page: "main"
+id: "tonttijakosuunnitelma"
+model: "tonttijakosuunnitelma"
 ---
 # Tonttijakosuunnitelman tietomalli
 

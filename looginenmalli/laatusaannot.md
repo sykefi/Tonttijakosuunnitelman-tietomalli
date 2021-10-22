@@ -2,8 +2,8 @@
 layout: "default"
 title: "Tonttijakosuunnitelma - looginen tietomalli -Laatusäännöt"
 description: ""
-page: "laatusaannot"
-modelversion: "1.0-dev"
+id: "laatusaannot"
+model: "tonttijakosuunnitelma"
 status: "Luonnos"
 ---
 # Laatusäännöt

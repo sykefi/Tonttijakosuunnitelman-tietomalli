@@ -2,8 +2,8 @@
 layout: "default"
 title: "Tonttijakosuunnitelma - looginen tietomalli - Elinkaarisäännöt"
 description: ""
-page: "elinkaarisaannot"
-modelversion: "1.0-dev"
+id: "elinkaarisaannot"
+model: "tonttijakosuunnitelma"
 status: "Luonnos"
 ---
 

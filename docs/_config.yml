@@ -1,8 +1,0 @@
-theme: jekyll-theme-slate
-url: "https://YM-rakennettu-ymparisto.github.io/Tonttijakosuunnitelman-tietomalli" # the base hostname & protocol for your site
-home: "https://YM-rakennettu-ymparisto.github.io/Tonttijakosuunnitelman-tietomalli"
-repository: YM-rakennettu-ymparisto/Tonttijakosuunnitelman-tietomalli
-plugins:
-- jekyll-sitemap # Tämä helpottaa hakukoneen työtä
-- kramdown # defaul markdown renderer for jekyll
-default_modelversion: '1.0-dev'

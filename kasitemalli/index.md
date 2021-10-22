@@ -2,8 +2,8 @@
 layout: "default"
 title: "Tonttijakosuunnitelma - käsitemalli"
 description: ""
-page: "kasitemalli"
-modelversion: "1.0-dev"
+model: "tonttijakosuunnitelma"
+id: "kasitemalli"
 status: "Luonnos"
 ---
 # Käsitemalli
