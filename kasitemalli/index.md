@@ -21,40 +21,40 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sa
 ## Käsitteet
 
 ### Tonttijakosuunnitelma
-{% include defintionref_tjs.html id="concept-0" name="tonttijakosuunnitelma" def="maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen yksityiskohtaiseksi ohjaamiseksi." %}
+{% include defintionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-0" name="tonttijakosuunnitelma" def="maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen yksityiskohtaiseksi ohjaamiseksi." %}
 
 ### Esitonttikohde
-{% include defintionref_tjs.html id="concept-6" name="esitonttikohde" def="tonttijakosuunnitelmaan sisältyvä aluemainen (esitontti) tai pistemäinen kohde (esitontin rajapiste)" %}
+{% include defintionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-6" name="esitonttikohde" def="tonttijakosuunnitelmaan sisältyvä aluemainen (esitontti) tai pistemäinen kohde (esitontin rajapiste)" %}
 
 ### Esitontti
-{% include defintionref_tjs.html id="concept-1" name="esitontti" def="tonttijakosuunnitelmassa osoitettu aluemainen kohde kiinteistöjaotuksen ohjaamiseksi." %}
+{% include defintionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-1" name="esitontti" def="tonttijakosuunnitelmassa osoitettu aluemainen kohde kiinteistöjaotuksen ohjaamiseksi." %}
 
 ### Esitontin rajapiste
-{% include defintionref_tjs.html id="concept-12" name="esitontin rajapiste" def="tonttijakosuunnitelmassa osoitettu pistemäinen kohde, joka kuvaa kiinteistönmuodostustoimituksessa osoitettavaa rajapistettä tai rajamerkkiä." %}    
+{% include defintionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-12" name="esitontin rajapiste" def="tonttijakosuunnitelmassa osoitettu pistemäinen kohde, joka kuvaa kiinteistönmuodostustoimituksessa osoitettavaa rajapistettä tai rajamerkkiä." %}    
 
 ### Tonttijakosuunnitelman viiteasiakirja
-{% include defintionref_tjs.html id="concept-2" name="tonttijakosuunnitelman viiteasiakirja" def="tonttijakosuunnitelmaan liittyvä asiakirja." %}
+{% include defintionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-2" name="tonttijakosuunnitelman viiteasiakirja" def="tonttijakosuunnitelmaan liittyvä asiakirja." %}
 
 ### Käsittelytapahtuma
-{% include defintionref_tjs.html id="concept-3" name="tonttijakosuunnitelman käsittelytapahtuma" def="tonttijakosuunnitelman käsittelyprosessiin kuuluva tapahtuma, jonka johdosta elinkaaren tila voi muuttua." %}
+{% include defintionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-3" name="tonttijakosuunnitelman käsittelytapahtuma" def="tonttijakosuunnitelman käsittelyprosessiin kuuluva tapahtuma, jonka johdosta elinkaaren tila voi muuttua." %}
 
 ### Vuorovaikutustapahtuma
-{% include defintionref_tjs.html id="concept-4" name="tonttijakosuunnitelman vuorovaikutustapahtuma" def="tonttijakosuunnitelmaprosessiin kuuluva tapahtuma, jonka tarkoituksena on tarjota tonttijakosuunnitelman asianosaiselle mahdollisuus lausua mielipiteensä ehdotuksesta." %}
+{% include defintionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-4" name="tonttijakosuunnitelman vuorovaikutustapahtuma" def="tonttijakosuunnitelmaprosessiin kuuluva tapahtuma, jonka tarkoituksena on tarjota tonttijakosuunnitelman asianosaiselle mahdollisuus lausua mielipiteensä ehdotuksesta." %}
 
 ### Tonttijakosuunnitelman kumoutumistieto
-{% include defintionref_tjs.html id="concept-5" name="tonttijakosuunnitelman kumoutumistieto" def="tieto tonttijakosuunnitelman hyväksymisen johdosta kokonaisuudessaan kumoutuvasta tonttijakosuunnitelmasta tai tonttijakosuunnitelman kumoutuvasta esitontista." %}
+{% include defintionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-5" name="tonttijakosuunnitelman kumoutumistieto" def="tieto tonttijakosuunnitelman hyväksymisen johdosta kokonaisuudessaan kumoutuvasta tonttijakosuunnitelmasta tai tonttijakosuunnitelman kumoutuvasta esitontista." %}
 
 ### Kaavatilannetieto
-{% include defintionref_tjs.html id="concept-10" name="esitontin kaavatilannetieto" def="tieto esitonttiin liittyvistä asemakaavoista ja niiden vaikutuksista." %}
+{% include defintionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-10" name="esitontin kaavatilannetieto" def="tieto esitonttiin liittyvistä asemakaavoista ja niiden vaikutuksista." %}
 
 ### Muodostustieto
-{% include defintionref_tjs.html id="concept-11" name="esitontin muodostustieto" def="tieto muodostajakiinteistöistä, josta esitontti muodostetaan." %}
+{% include defintionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-11" name="esitontin muodostustieto" def="tieto muodostajakiinteistöistä, josta esitontti muodostetaan." %}
 
 ### Esitonttitietovarasto
-{% include defintionref_tjs.html id="concept-7" name="esitonttitietovarasto" def="tietojärjestelmä, jonka tehtävänä on vastaanottaa, säilyttää ja jaella tietomallimuotoista tonttijakosuunnitelmatietoa laatu- ja elinkaarisääntöjen mukaisesti." %}
+{% include defintionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-7" name="esitonttitietovarasto" def="tietojärjestelmä, jonka tehtävänä on vastaanottaa, säilyttää ja jaella tietomallimuotoista tonttijakosuunnitelmatietoa laatu- ja elinkaarisääntöjen mukaisesti." %}
 
 ### Kaavamääräys
-{% include defintionref.html id="concept-1010" name="kaavamääräys" def="kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
+{% include defintionref.html dict="rytj-kaava" dictname="Kaavatietomalli" id="concept-1010" name="kaavamääräys" def="kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
 
 ### Arvo
-{% include defintionref.html id="concept-1011" name="ominaisuuden arvo" def="kaavamääräystä tarkentava arvo." %}
+{% include defintionref.html dict="rytj-kaava" dictname="Kaavatietomalli" id="concept-1011" name="ominaisuuden arvo" def="kaavamääräystä tarkentava arvo." %}
