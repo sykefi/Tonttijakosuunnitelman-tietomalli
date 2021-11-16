@@ -2,7 +2,6 @@
 layout: "default"
 title: "Tonttijakosuunnitelma - käsitemalli"
 description: ""
-model: "tonttijakosuunnitelma"
 id: "kasitemalli"
 status: "Luonnos"
 ---

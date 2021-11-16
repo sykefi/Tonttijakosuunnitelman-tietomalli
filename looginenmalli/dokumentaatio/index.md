@@ -2,7 +2,6 @@
 layout: "default"
 title: "Looginen tietomalli - looginen tietomalli - dokumentaatio"
 description: ""
-model: "tonttijakosuunnitelma"
 id: "dokumentaatio"
 status: "Luonnos"
 ---

@@ -2,7 +2,6 @@
 layout: "ea-frame"
 description: ""
 id: "uml-doc"
-model: "tonttijakosuunnitelma"
 defaultDiagram: "./EARoot/EA2/EA25.html"
 ---
 # Loogisen tason kaavatietomalli - UML-luokkakaaviot

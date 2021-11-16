@@ -3,7 +3,6 @@ layout: "default"
 title: "Tonttijakosuunnitelma - looginen tietomalli - Elinkaarisäännöt"
 description: ""
 id: "elinkaarisaannot"
-model: "tonttijakosuunnitelma"
 status: "Luonnos"
 ---
 
