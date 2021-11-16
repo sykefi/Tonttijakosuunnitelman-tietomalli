@@ -228,7 +228,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include codelistref.html id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Tonttijakosuunnitelman asiakirjan laji" %}
+{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Tonttijakosuunnitelman asiakirjan laji" %}
 
 #### AbstraktiKasittelytapahtumanLaji
 
@@ -387,7 +387,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include codelistref.html id="RY_TonttijakosuunnitelmanLaji" name="Tonttijakosuunnitelman laji" %}
+{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanLaji" name="Tonttijakosuunnitelman laji" %}
 
 #### TonttijakosuunnitelmanElinkaarentila
 
@@ -397,7 +397,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include codelistref.html id="RY_TonttijakosuunnitelmanElinkaarentila" name="Tonttijakosuunnitelman elinkaaren tila" %}
+{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanElinkaarentila" name="Tonttijakosuunnitelman elinkaaren tila" %}
 
 #### TonttijakosuunnitelmanAsiakirjanLaji
 
@@ -407,7 +407,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include codelistref.html id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Tonttijakosuunnitelmaa koskevan asiakirjan laji" %}
+{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Tonttijakosuunnitelmaa koskevan asiakirjan laji" %}
 
 #### SuhdePeruskiinteistoon
 
@@ -417,7 +417,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include codelistref.html id="RY_SuhdePeruskiinteistoon" name="Esitonttikohteen suhde peruskiinteistöön" %}
+{% include common/codelistref.html registry="rytj" id="RY_SuhdePeruskiinteistoon" name="Esitonttikohteen suhde peruskiinteistöön" %}
 
 #### EsitonttikohdeLaji
 
@@ -430,7 +430,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include codelistref.html id="RY_EsitonttikohdeLaji" name="Esitonttikohteen laji" %}
+{% include common/codelistref.html registry="rytj" id="RY_EsitonttikohdeLaji" name="Esitonttikohteen laji" %}
 
 #### TonttijakosuunnitelmanVuorovaikutustapahtumanLaji
 
@@ -443,7 +443,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include codelistref.html id="RY_TonttijakosuunnitelmanVuorovaikutustapahtumanLaji" name="Tonttijakosuunnitelman vuorovaikutustapahtuman laji" %}
+{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanVuorovaikutustapahtumanLaji" name="Tonttijakosuunnitelman vuorovaikutustapahtuman laji" %}
 
 #### TonttijakosuunnitelmanKasittelytapahtumanLaji
 
@@ -456,7 +456,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include codelistref.html id="RY_TonttijakosuunnitelmanKasittelytapahtumanLaji" name="Tonttijakosuunnitelman kasittelytapahtuman laji" %}
+{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanKasittelytapahtumanLaji" name="Tonttijakosuunnitelman kasittelytapahtuman laji" %}
 
 <!-- linkit standardeihin, joihin mainittu sivun alussa -->
 [ISO-8601-1]: https://www.iso.org/standard/70907.html "ISO 8601-1:2019 Date and time — Representations for information interchange — Part 1: Basic rules"
