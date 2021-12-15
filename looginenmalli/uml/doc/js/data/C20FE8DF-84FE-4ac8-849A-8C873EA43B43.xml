@@ -1,2 +1,4 @@
-tocTab[tocTab.length] = new Array("0.1", "1", "MKP-ydin", "EARoot/EA1/EA8.html", "4.png", "", "", "{8C35E32F-0806-4134-A70C-FF48008FD604}", "Package");
-tocTab[tocTab.length] = new Array("0.2", "1", "Tonttijakosuunnitelma", "EARoot/EA2/EA27.html", "4.png", "", "", "{9DA19D7F-313A-483c-B074-8269363DE46C}", "Package");
+tocTab[tocTab.length] = new Array("0.1", "1", "Esimerkkeja", "EARoot/EA1/EA6.html", "4.png", "", "", "{BAA39F65-FA42-430e-9229-BA223F06DC1A}", "Package");
+tocTab[tocTab.length] = new Array("0.2", "1", "Kaavatiedot", "EARoot/EA2/EA41.html", "4.png", "", "", "{FCB0EA38-A78E-42b8-BE04-2E5B89486FF7}", "Package");
+tocTab[tocTab.length] = new Array("0.3", "1", "Tonttijakosuunnitelma", "EARoot/EA3/EA72.html", "4.png", "", "", "{9DA19D7F-313A-483c-B074-8269363DE46C}", "Package");
+tocTab[tocTab.length] = new Array("0.4", "1", "Yhteiset", "EARoot/EA4/EA97.html", "4.png", "", "", "{8C35E32F-0806-4134-A70C-FF48008FD604}", "Package");
