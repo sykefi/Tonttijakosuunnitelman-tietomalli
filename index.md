@@ -12,7 +12,7 @@ Loogisen tason tietomalli määrittelee kaikille tonttijakosuunnitelman kohteill
 
 Ympäristönministeriön rahoittamassa Ryhti-hankkeessa määritellään rakennetun ympäristön tietoja yhteisen, kansallisen tietomallin alle. Tarkoituksena on yhdenmukaistaa rakennetun ympäristön tiedonhallintaa yhteisten, kansallisten standardien alle. Lähtökohtana on uudistuvan maankäyttö- ja rakennuslain pykäläluonnos. Maankäyttö- ja rakennuslaki uudistuu tulevien vuosien aikana. Voit tutustua lain valmistelutyöhön [täällä](https://www.mrluudistus.fi).
 
-Tämä sivusto ja sen kuvaamat tietomallit pohjaavat saman hankkeen yhteydessä jo julkaistuun kaavatietomalliin, johon voi tutustua [täällä](https://kaavatietomalli.fi/). Yhtymäkohdat asema- ja yleiskaavojen tietomalleihin on kuvattu tällä sivustolla. Hankkeen etenemisen myötä on tulee syntymään vielä uusia tietomalleja.
+Tämä osio ja sen kuvaamat tietomallit pohjaavat saman hankkeen yhteydessä jo julkaistuun kaavatietomalliin, johon voi tutustua [täällä](https://tietomallit.ymparisto.fi/kaavatiedot/). Yhtymäkohdat asema- ja yleiskaavojen tietomalleihin on kuvattu tällä sivustolla. Hankkeen etenemisen myötä on tulee syntymään vielä uusia tietomalleja.
 
 Tämä sivusto jakautuu seuraaviin osa-alueisiin:
 - Käsitemalli
@@ -26,4 +26,4 @@ Tietomallista järjestettiin kansallinen kommentointikierros 05-06/2021 otakanta
 
 Toistaiseksi tonttijaosta on säädetty osana lainvoimaista [Maankäyttö- ja rakennuslakia (MRL)](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132). Lisätietoja MRL-muutoksesta ja tontinjakosuunnitelmasta voi lukea [ympäristöministeriön](https://ym.fi/fi/ryhti) sivuilta. Tonttijakosuunnitelman tietomalli perustuu uuteen lakiluonnokseen joka vastaa jokseenkin nykyisen lain sitovaa tonttijakoa. 
 
-{% include common/note.html content="Sivustoa ylläpitää [Ubigu Oy](https://www.ubigu.fi). Yhteyshenkilö projektille on Marko Kauppi." %}
+{% include common/note.html content="Osiota ylläpitää [Ubigu Oy](https://www.ubigu.fi). Yhteyshenkilö projektille on Marko Kauppi." %}
