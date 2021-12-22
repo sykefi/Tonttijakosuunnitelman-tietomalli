@@ -13,7 +13,7 @@ status: "Luonnos"
 
 ## Yleistä
 
-Loogisen tason tietomalli määrittelee kaikille tonttijakosuunnitelman kohteille yhteiset tietorakenteet, joita sovelletaan tonttijaon ilmaisemiseen laadittujen [soveltamisohjeiden](https://www.tonttijakosuunnitelma.fi/1.0-dev/soveltamisohjeet/index.html) ja niihin kiinnittyvien koodistojen sekä [elinkaari-](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/elinkaarisaannot.html) ja [laatusääntöjen](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/laatusaannot.html) mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta.
+Loogisen tason tietomalli määrittelee kaikille tonttijakosuunnitelman kohteille yhteiset tietorakenteet, joita sovelletaan tonttijaon ilmaisemiseen laadittujen [soveltamisohjeiden](../soveltamisohjeet/) ja niihin kiinnittyvien koodistojen sekä [elinkaari-](../elinkaarisaannot.html) ja [laatusääntöjen](../laatusaannot.html) mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta.
 
 <!--**Graafinen mallinnus loogisesta tietomallista**
 
