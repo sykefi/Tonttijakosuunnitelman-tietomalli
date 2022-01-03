@@ -17,7 +17,7 @@ Siirrytty käyttämään {% include common/moduleLink.html moduleId="yhteisetkom
 
 #### MKP-ydin -paketti
 
-Paketin luokat yleistetty ja siirretty {% include common/moduleLink.html moduleId="yhteisetkomponentit" path="looginenmalli/dokumentaatio/" title="Yhteiset komponentit" %}-malliin. Yksityiskohteiset muutokset alla.
+Paketin luokat yleistetty ja siirretty {% include common/moduleLink.html moduleId="yhteisetkomponentit" path="looginenmalli/dokumentaatio/" title="Yhteiset komponentit" %}-malliin. Yksityiskohtaiset muutokset alla.
 
 **AbstraktiVersioituObjekti**
 
