@@ -29,10 +29,6 @@ Paketin luokat yleistetty ja siirretty {% include common/moduleLink.html moduleI
 * Lisätty attribuutti ```rooli: LanguageString[0..*]```.
 * Poistettu assosiaatio ```liittyväAsiakirja:Asiakirja[0..*]```.
 
- **Lahtotietoaineisto**
-
- * Muutettu nimi -> ```Lähtötietoaineisto```.
-
  **AbstraktiMaankayttoasia**
 
  * Muutettu nimi -> ```Alueidenkäyttöasia```.
@@ -55,6 +51,7 @@ Paketin luokat yleistetty ja siirretty {% include common/moduleLink.html moduleI
 * Poistettu assosiaatio ```paatoksentekija:Paatoksentekija[0..1]```. Toteutuu ```TonttijakosuunnitelmanHyväksymispäätös```-luokan ```tekijä:Toimija```-assosiaation kautta.
 
 **Paatoksentekija**
+
 Poistettu luokka, toteutuu luokan ```Yhteiset::Toimija``` kautta.
 
 
@@ -72,7 +69,7 @@ Poistettu luokka, toteutuu luokan ```Yhteiset::Toimija``` kautta.
 
 **AbstraktiKaavakohde**
 
-* Yleistetty ja siirretty Yhteiset komponentit -mallin luokkaksi ```RakennetynYmpäristönKohde```
+* Yleistetty ja siirretty Yhteiset komponentit -mallin luokkaksi ```RakennetunYmpäristönKohde```
 * Lisätty uusi attribuutti ```kuvaus:LanguageString[0..*]```.
 * Poistettu attribuutti ```arvo:AbstraktiArvo[0..*]```. Tätä oli kuvattu käytettävän esitontin tunnusarvon tai esitontin rajapisteen numeron ilmaisemiseen. Esitontin tunnukset ilmaistaan paremmin ```Yhteiset::VersioituObjekti``` -luokan tunnusattribuuteilla ja esitontin rajapisteen numero ```Yhteiset::Rajapiste```-luokan ```rajapyykinTaiPisteenTunnus:URI[0..*]```-attribuutilla.
 * Poistettu attribuutti ```kohteenPinta-ala:NumeerinenArvo[0..1]```. Korvattu ```Esitonttikohde```-luokan johdetulla attribuutilla ```pintaAla:NumeerinenArvo```.
@@ -99,7 +96,7 @@ Poistettu luokka, toteutuu luokan ```Yhteiset::Toimija``` kautta.
 
 **Kaavamaarays**
 
-Poistettu tarpeettomana ja nimeltään hämäävänä. Viittaukset Esitonttikohde-luokasta kaavan kaavamääräyksiin toteutetaan loogisela tasolla assosiaationa, joka voi fyysisen tason tietomallissa olla viittaus tunnuksen perusteella.
+Poistettu tarpeettomana ja nimeltään hämäävänä. Viittaukset Esitonttikohde-luokasta kaavan kaavamääräyksiin toteutetaan loogisella tasolla assosiaationa, joka voi fyysisen tason tietomallissa olla viittaus tunnuksen perusteella.
 
 **Muodostustieto**
 
