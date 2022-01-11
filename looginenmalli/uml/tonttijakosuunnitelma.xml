@@ -212,7 +212,7 @@
 				<extendedProperties tagged="0" package_name="Rakennettu ymparisto"/>
 				<packageproperties version="2.0" owner="ior" xmiver="Enterprise Architect XMI 2.1/UML 2.1" tpos="0"/>
 				<paths xmlpath="Z:\Tonttijakosuunnitelman-tietomalli\looginenmalli\uml\tonttijakosuunnitelma.xml"/>
-				<times created="2021-05-24 17:57:47" modified="2021-12-03 16:32:09" lastloaddate="2021-05-24 17:57:47" lastsavedate="2022-01-10 14:26:50"/>
+				<times created="2021-05-24 17:57:47" modified="2021-12-03 16:32:09" lastloaddate="2021-05-24 17:57:47" lastsavedate="2022-01-11 16:57:16"/>
 				<flags iscontrolled="TRUE" isprotected="FALSE" batchsave="0" batchload="0" usedtd="FALSE" logxml="FALSE" packageFlags="Recurse=1;"/>
 			</element>
 			<element xmi:idref="EAID_8B9E2C57_3517_4fdb_BC62_2B9E55591FBB" xmi:type="uml:Class" name="ArvojenJyvitys" scope="public">
@@ -786,7 +786,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_CCDEA216_16F7_47c8_9BFD_D0AFF7E8788F">
-					<model ea_localid="80352" type="Class" name="RakennetunYmpäristönKohde"/>
+					<model ea_localid="80468" type="Class" name="RakennetunYmpäristönKohde"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -820,7 +820,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_683E863F_67CD_4537_B4D5_14F6FBE3F025">
-					<model ea_localid="80409" type="Class" name="Kaavamääräys"/>
+					<model ea_localid="80494" type="Class" name="Kaavamääräys"/>
 					<role name="toteutettavaKaavamääräys" visibility="Public" targetScope="instance"/>
 					<type multiplicity="0..*" aggregation="none" containment="Reference"/>
 					<constraints/>
@@ -855,7 +855,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_C3131532_00B8_438a_8C9C_4032243FBCA0">
-					<model ea_localid="80427" type="Class" name="Muodostajakiinteistö"/>
+					<model ea_localid="80514" type="Class" name="Muodostajakiinteistö"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -958,7 +958,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_472044FA_342B_4931_A22D_C6182CE73DEF">
-					<model ea_localid="80351" type="Class" name="Rajapiste"/>
+					<model ea_localid="80467" type="Class" name="Rajapiste"/>
 					<role name="esitontinRajapiste" visibility="Public" targetScope="instance"/>
 					<type multiplicity="0..*" aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -993,7 +993,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_16FDCD6D_90B4_471c_9CD2_29335EA59CE4">
-					<model ea_localid="80354" type="Class" name="SuunnitelmanLaatija"/>
+					<model ea_localid="80470" type="Class" name="SuunnitelmanLaatija"/>
 					<role name="laatija" visibility="Public" targetScope="instance"/>
 					<type multiplicity="0..*" aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -1028,7 +1028,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_541DF740_5AE1_4150_9D96_6C55526B3FA0">
-					<model ea_localid="80325" type="Class" name="Alueidenkäyttöasia"/>
+					<model ea_localid="80443" type="Class" name="Alueidenkäyttöasia"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -1062,7 +1062,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_581B4F10_F6C1_4cd1_AA66_0AFDE39CA434">
-					<model ea_localid="80317" type="Class" name="AbstraktiAsianElinkaaritila"/>
+					<model ea_localid="80434" type="Class" name="AbstraktiAsianElinkaaritila"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -1096,7 +1096,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_2E68FFCA_40A3_4484_A05F_0AE51FE89A21">
-					<model ea_localid="80330" type="Class" name="Alueidenkäyttöpäätös"/>
+					<model ea_localid="80448" type="Class" name="Alueidenkäyttöpäätös"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -1130,7 +1130,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_7FE1D815_70B5_467a_8F8E_A7A160F00708">
-					<model ea_localid="80318" type="Class" name="AbstraktiKäsittelytapahtumanLaji"/>
+					<model ea_localid="80435" type="Class" name="AbstraktiKäsittelytapahtumanLaji"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -1164,7 +1164,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_D0E1693F_2554_45d1_9EC3_8B744317F1B8">
-					<model ea_localid="80322" type="Class" name="AbstraktiVuorovaikutustapahtumanLaji"/>
+					<model ea_localid="80440" type="Class" name="AbstraktiVuorovaikutustapahtumanLaji"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -1198,7 +1198,7 @@
 					<tags/>
 				</source>
 				<target xmi:idref="EAID_683E863F_67CD_4537_B4D5_14F6FBE3F025">
-					<model ea_localid="80409" type="Class" name="Kaavamääräys"/>
+					<model ea_localid="80494" type="Class" name="Kaavamääräys"/>
 					<role visibility="Public" targetScope="instance"/>
 					<type aggregation="none" containment="Unspecified"/>
 					<constraints/>
@@ -1639,11 +1639,11 @@
 					<element geometry="SX=-2;SY=-43;EX=-2;EY=37;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=CX=75:CY=13:OX=-3:OY=-3:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=CX=16:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_9793472A_94CF_4c09_B0D1_D5AD15AF70E7" style="Mode=3;EOID=C3734DD8;SOID=184B5424;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
 					<element geometry="EDGE=3;SX=-71;SY=-84;EX=-26;EY=-2;$LLB=;LLT=;LMT=;LMB=;LRT=CX=115:CY=13:OX=134:OY=-2:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=CX=16:CY=13:OX=-32:OY=1:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_3B5CDAFD_D665_4d7a_9373_F88F161A074E" style="Mode=3;EOID=58230EC5;SOID=CE737D36;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
 					<element geometry="SX=0;SY=0;EX=0;EY=0;EDGE=2;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_6E6E67A8_EC9B_47ee_A76B_E976F8E26441" style="Mode=3;EOID=58230EC5;SOID=7C5A1412;Color=-1;LWidth=0;Hidden=0;"/>
-					<element geometry="SX=-50;SY=-2;EX=1;EY=-2;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=CX=29:CY=13:OX=50:OY=1:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=CX=16:CY=13:OX=-33:OY=3:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_D795ECB6_8E25_40fb_A762_32E9D20D6DB8" style="Mode=3;EOID=B301104A;SOID=184B5424;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
 					<element geometry="SCTR=1;SCME=1;SX=0;SY=0;EX=0;EY=0;EDGE=2;SCTR.LEFT=331;SCTR.TOP=-92;SCTR.RIGHT=422;SCTR.BOTTOM=-38;$LLB=;LLT=;LMT=;LMB=;LRT=CX=67:CY=13:OX=-17:OY=-1:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=;IRHS=;ILHS=;Path=384:-92$422:-92$422:-38$331:-38$331:-73$;" subject="EAID_1DED9BFD_9E68_4240_9B4A_72C233B42798" style="Mode=3;EOID=E78508B8;SOID=E78508B8;Color=-1;LWidth=0;Hidden=0;"/>
+					<element geometry="SX=-50;SY=-2;EX=1;EY=-2;EDGE=3;$LLB=;LLT=;LMT=;LMB=;LRT=CX=29:CY=13:OX=50:OY=1:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRB=CX=16:CY=13:OX=-33:OY=3:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_D795ECB6_8E25_40fb_A762_32E9D20D6DB8" style="Mode=3;EOID=B301104A;SOID=184B5424;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
+					<element geometry="SX=5;SY=21;EX=2;EY=2;EDGE=4;$LLB=CX=16:CY=13:OX=-2:OY=-24:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LLT=CX=32:CY=13:OX=-3:OY=32:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LMT=;LMB=;LRT=CX=21:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=CX=16:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_798250B7_78AB_486c_AD91_29D94BE3773A" style="Mode=3;EOID=E78508B8;SOID=34411323;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
 					<element geometry="SX=0;SY=-76;EX=-17;EY=0;EDGE=4;$LLB=;LLT=;LMT=;LMB=CX=24:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=790:-531$790:-646$603:-646$;" subject="EAID_087F060B_0CDE_4ddb_8CED_47FBFA32A3B7" style="Mode=3;EOID=4A2AAEA7;SOID=CE737D36;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
 					<element geometry="SX=124;SY=0;EX=-105;EY=0;EDGE=3;$LLB=;LLT=;LMT=;LMB=CX=24:CY=13:OX=1:OY=-21:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_84BC75D6_197A_48ee_A3FE_5D0D6D54C031" style="Mode=3;EOID=0D66D13F;SOID=184B5424;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
-					<element geometry="SX=5;SY=21;EX=2;EY=2;EDGE=4;$LLB=CX=16:CY=13:OX=-2:OY=-24:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LLT=CX=32:CY=13:OX=-3:OY=32:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LMT=;LMB=;LRT=CX=21:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=CX=16:CY=13:OX=0:OY=0:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_798250B7_78AB_486c_AD91_29D94BE3773A" style="Mode=3;EOID=E78508B8;SOID=34411323;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
 					<element geometry="SX=0;SY=-1;EX=-81;EY=0;EDGE=2;$LLB=;LLT=CX=54:CY=13:OX=0:OY=-3:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=0:DIR=0:ROT=0;LMT=;LMB=;LRT=CX=62:CY=13:OX=0:OY=-2:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;LRB=CX=16:CY=13:OX=0:OY=3:HDN=0:BLD=0:ITA=0:UND=0:CLR=-1:ALN=1:DIR=0:ROT=0;IRHS=;ILHS=;Path=;" subject="EAID_E8930DF4_AE69_434a_81D1_8AD7767CB898" style="Mode=3;EOID=CE737D36;SOID=184B5424;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
 					<element geometry="SX=0;SY=52;EX=0;EY=91;EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_15D16CD2_732E_48d2_837A_E15BDD7D7F3F" style="Mode=3;EOID=CB0A0D2E;SOID=CE737D36;Color=-1;LWidth=0;TREE=OS;Hidden=0;"/>
 					<element geometry="EDGE=1;$LLB=;LLT=;LMT=;LMB=;LRT=;LRB=;IRHS=;ILHS=;Path=;" subject="EAID_D8F100E6_CE84_4ba1_A4C1_6A9A0761465A" style="Mode=3;EOID=E78508B8;SOID=184B5424;Color=-1;LWidth=0;Hidden=0;"/>
