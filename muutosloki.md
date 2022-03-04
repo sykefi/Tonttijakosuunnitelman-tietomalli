@@ -31,12 +31,12 @@ Paketin luokat yleistetty ja siirretty {% include common/moduleLink.html moduleI
 
  **AbstraktiMaankayttoasia**
 
- * Muutettu nimi -> ```Alueidenkäyttöasia```.
+ * Muutettu nimi -> ```AlueidenkäyttöjaRakentamisasia```.
  * Lisätty uusi attribuutti ```asianhallintaTunnus:Tunnusarvo[0..*]```.
  * Muutettu assosiaatio ```asianLiite:Asiakirja[0..*]``` attribuutiksi ```asianLiite:Asiakirja[0..*]``` (```Yhteiset::Asiakirja``` on nyt stereotyypillä DataType, ei enää FeatureType).
  * Poistettu attribuutti ```voimassaoloAika:TM_Period[0..1]```.
  * Uudelleennimetty assosiaatio ```koskeeHallinnollistaAluetta``` -> ```hallinnollinenAlue```.
- * Poistettu assosiaatio ```vastuullinenPaatoksentekija:Paatoksentekija[0..1]```. Toteutuu ```TonttijakosuunnitelmanHyväksymispäätös```-luokan ```tekijä:Toimija```-assosiaation kautta.
+ * Poistettu assosiaatio ```vastuullinenPaatoksentekija:Paatoksentekija[0..1]```. Toteutuu ```AlueidenkäyttösuunnitelmanHyväksymispäätös```-luokan ```tekijä:Toimija```-assosiaation kautta.
  * Muutettu assosiaatio ```vastuullinenOrganisaatio:Organisaatio[0..1]``` -> ```vastuutaho:Toimija[0..1]```.
 
 **AbstraktiTapahtuma**
@@ -59,11 +59,11 @@ Poistettu luokka, toteutuu luokan ```Yhteiset::Toimija``` kautta.
 
 **Tonttijakosuunnitelma**
 
-* Yläluokka on muutettu ```MKP-ydin::AbstraktiMaankayttoasia``` -> ```Yhteiset::AlueidenKäyttöasia```
-* Attribuutti ```virelletuloAika``` on siirretty yläluokkaan ```Yhteiset::AlueidenKäyttöasia```.
-* Attribuutti ```elinkaaritila:TonttijakosuunnitelmanElinkaarenTila``` on siirretty yläluokan ```Yhteiset::AlueidenKäyttöasia``` attribuutiksi ```elinkaaritila:AbstraktiAsianElinkaaritila```.
+* Yläluokka on muutettu ```MKP-ydin::AbstraktiMaankayttoasia``` -> ```Yhteiset::AlueidenKäyttösuunnitelma```
+* Attribuutti ```virelletuloAika``` on siirretty yläluokkaan ```Yhteiset::AlueidenKäyttöjaRakentamisasia```.
+* Attribuutti ```elinkaaritila:TonttijakosuunnitelmanElinkaarenTila``` on siirretty yläluokan ```Yhteiset::AlueidenkäyttöjaRakentamisasia``` attribuutiksi ```elinkaaritila:AbstraktiAsianElinkaaritila```.
 * Lisätty rajoite, joka vaatii ```elinkaaritila``` attribuutin olevan tyyppiä ```TonttijakosuunnitelmanElinkaarenTila```.
-* Attribuutti ```hyväksymisAika``` ilmaistaan nyt ```TonttijakosuunnitelmanHyväksymispäätös```-luokan attribuutilla ```päätöspäivämäärä```, jonka tyyppi on ```Date```. Yhteys ```TonttijakosuunnitelmanHyväksymispäätös```-luokkaan menee yläluokan ```Yhteiset::AlueidenKäyttöasia``` assosiaation ```päätös``` kautta.
+* Attribuutti ```hyväksymisAika``` ilmaistaan nyt ```AlueidenkäyttösuunnitelmanHyväksymispäätös```-luokan attribuutilla ```päätöspäivämäärä```, jonka tyyppi on ```Date```. Yhteys ```AlueidenkäyttösuunnitelmanHyväksymispäätös```-luokkaan menee yläluokan ```Yhteiset::AlueidenKäyttöjaRakentamisasia``` assosiaation ```päätös``` kautta.
 * Lisätty attribuutti ```voimassaoloAika:TM_Period[0..1]```, joka periytyi aiemmin yläluokasta ```AbstraktiMaankayttoasia```.
 * Assosiaatio ```laatija``` viittaa nyt luokkaan ```Yhteiset::SuunnitelmanLaatija``` aiemman ```TonttijakosuunnitelmanLaatija```-luokan sijasta.
 
