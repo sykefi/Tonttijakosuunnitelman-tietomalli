@@ -14,13 +14,13 @@ Ympäristönministeriön rahoittamassa Ryhti-hankkeessa määritellään rakenne
 
 Tämä osio ja sen kuvaamat tietomallit pohjaavat saman hankkeen yhteydessä jo julkaistuun kaavatietomalliin, johon voi tutustua [täällä](https://tietomallit.ymparisto.fi/kaavatiedot/). Yhtymäkohdat asema- ja yleiskaavojen tietomalleihin on kuvattu tällä sivustolla. Hankkeen etenemisen myötä on tulee syntymään vielä uusia tietomalleja.
 
-Tämä sivusto jakautuu seuraaviin osa-alueisiin:
+Tämä alisivusto jakautuu seuraaviin osa-alueisiin:
 - Käsitemalli
 - Looginen tietomalli
 - Soveltamisohjeet
 - Kehitystyö
 
-Tonttijakosuunnitelman tietomallin ensisijainen sovelluskohde on [Rakennetun ympäristön tietojärjestelmä](https://ym.fi/fi/ryhti), johon tulevaisuudessa kootaan kuntien tonttijakosuunnitelmaprosessissa luotava tietomallimuotoinen tonttijakosuunnitelmatieto. Tonttijakosuunnitelman tietomallin mahdollisina sovelluskohteina ovat kuitenkin lisäksi kaikki tietojärjestelmät, joissa luodaan, käsitellään, analysoidaan ja siirretään tonttijakosuunnitelmatietoa.
+Tonttijakosuunnitelman tietomallia sovelletaan ensisijaisesti kuntien alueiden käytön suunnittelun tietojärjestelmissä ja [Rakennetun ympäristön tietojärjestelmässä](https://ym.fi/ryhti/rytj), johon tulevaisuudessa kootaan kuntien tonttijakosuunnitelmaprosessissa luotava tietomallimuotoinen tonttijakosuunnitelmatieto. Tonttijakosuunnitelman tietomallin mahdollisina sovelluskohteina ovat kuitenkin lisäksi kaikki tietojärjestelmät, joissa luodaan, käsitellään, analysoidaan ja siirretään tonttijakosuunnitelmatietoa.
 
 Tietomallista järjestettiin kansallinen kommentointikierros 05-06/2021 otakantaa-palvelussa. Projektin päättymisestä huolimatta tonttijakosuunnitelman tietomallia kehitetään läpi koko Ryhti-hankkeen.
 
