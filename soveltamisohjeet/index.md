@@ -3,8 +3,10 @@ layout: "default"
 title: "Tonttijakosuunnitelma - soveltamisprofiili"
 description: ""
 id: "soveltamisohje-tjs"
-status: "Luonnos"
+status: "Keskeneräinen"
 ---
+{% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %}
+
 # Soveltamisprofiili
 
 {:.no_toc}

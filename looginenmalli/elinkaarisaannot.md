@@ -3,8 +3,9 @@ layout: "default"
 title: "Tonttijakosuunnitelma - looginen tietomalli - Elinkaarisäännöt"
 description: ""
 id: "elinkaarisaannot"
-status: "Luonnos"
+status: "Keskeneräinen"
 ---
+{% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %}
 
 # Elinkaarisäännöt
 {:.no_toc}

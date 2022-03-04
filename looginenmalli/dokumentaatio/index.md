@@ -3,8 +3,10 @@ layout: "default"
 title: "Looginen tietomalli - looginen tietomalli - dokumentaatio"
 description: ""
 id: "dokumentaatio"
-status: "Luonnos"
+status: "Keskeneräinen"
 ---
+{% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %}
+
 # Loogisen tason tonttijakosuunnitelma
 {:.no_toc}
 
