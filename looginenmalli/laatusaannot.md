@@ -19,7 +19,7 @@ status: "Luonnos"
 
 ### UML-mallin mukaisuus
 {% include common/clause_start.html type="req" id="laatu/vaat-uml-mukaisuus" %}
-Tonttijakosuunnitelman loogisen tietomallin toteutusten tulee noudattaa [UML-kielisen luokkakaavion](./uml/) määrityksiä luokkien attribuuttien, assosiaatioiden, kardinaliteetin ja tyypin suhteen.
+Tonttijakosuunnitelman loogisen tietomallin toteutusten tulee noudattaa [UML-kielisen luokkakaavion](./uml/doc/) määrityksiä luokkien attribuuttien, assosiaatioiden, kardinaliteetin ja tyypin suhteen.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="laatu/vaat-uml-toteutus" %}
