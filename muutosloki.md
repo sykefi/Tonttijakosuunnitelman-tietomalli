@@ -9,7 +9,20 @@ id: "muutosloki"
 1. 
 {:toc}
 
-## Muutokset versiosta 1.0 -> 2.0.0
+## Muutokset versiosta 1.0 -> dev (2.0.0?)
+
+### Riippuvuudet
+
+Looginen tietomalli riippuu seuraavista muista UML-tietomalleista ja niiden versioista:
+* Rakennettu ymparisto
+   * Yhteiset versio dev: [dokumentaatio](https://tietomallit.ymparisto.fi/ry-yhteiset/dev/), [XMI](https://github.com/ilkkarinne/ry-yhteiset/blob/develop/looginenmalli/uml/ry-yhteiset.xml)
+   * Kaavatiedot versio dev: [dokumentaatio](https://tietomallit.ymparisto.fi/kaavatiedot/dev/), [XMI](https://github.com/ilkkarinne/kaavatietomalli-1/tree/develop/looginenmalli/uml/kaavatiedot.xml)
+* ISO 19103 Conceptual schema languge, Edition 1: [XMI](https://github.com/ISO-TC211/HMMG/blob/master/XMI/2.1/Conceptual%20Models/ISO%2019103%20Edition%201.xmi)
+* ISO 19107 Spatial schema, Edition 2: [XMI](https://github.com/ISO-TC211/HMMG/blob/master/XMI/2.1/Conceptual%20Models/ISO%2019107%20Edition%202.xmi)
+* ISO 19108 Temporal schema, Edition 1: [XMI](https://github.com/ISO-TC211/HMMG/blob/master/XMI/2.1/Conceptual%20Models/ISO%2019108%20Edition%201.xmi)
+* ISO 19019 Rules for application schema, Edition 2: [XMI](https://github.com/ISO-TC211/HMMG/blob/master/XMI/2.1/Conceptual%20Models/ISO%2019109%20Edition%202.xmi)
+* ISO 639 Language Codes: [XMI](https://github.com/ISO-TC211/HMMG/blob/master/XMI/2.1/Conceptual%20Models/ISO%20639%20Language%20Codes.xmi)
+
 
 ### UML-mallin luokat
 
