@@ -4,9 +4,9 @@ title: "Tonttijakosuunnitelman tietomalli"
 description: "Tonttijakosuunnitelman kansallinen tietomalli täydentää aiempia kaavatietomalleja"
 id: "tonttijakosuunnitelma"
 ---
-# Tonttijakosuunnitelman tietomalli
+# Tonttijaon tietomalli
 
-Tonttijakosuunnitelman tietomallin osana on laadittu tonttijakosuunnitelman käsitteet, looginen tietomalli ja sen soveltamisprofiili, joka kuvaa tonttijakosuunnitelman laatimista joko asemakaavan laatimisen yhteydessä tai erikseen hyväksyttävänä suunnitelmana. Projekti on osa Ryhti-hanketta. 
+Tonttijaon tietomallin osana on laadittu tonttijaon käsitteet, looginen tietomalli ja sen soveltamisprofiili, joka kuvaa tonttijakosuunnitelman laatimista joko asemakaavan laatimisen yhteydessä tai erikseen hyväksyttävänä suunnitelmana. Projekti on osa Ryhti-hanketta. 
 
 Loogisen tason tietomalli määrittelee kaikille tonttijakosuunnitelman kohteille yhteiset tietorakenteet, joita sovelletaan tonttijaon ilmaisemiseen laadittujen soveltamisohjeiden ja niissä kiinnitettyjen koodistojen sekä elinkaari- ja laatusääntöjen mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta.
 
