@@ -1,16 +1,16 @@
 ---
 layout: "default"
-title: "Tonttijaon tietomalli"
+title: "Sitovan tonttijaon tietomalli"
 description: "Tonttijaon kansallinen tietomalli täydentää aiempia kaavatietomalleja"
 id: "tonttijako"
 ---
-# Tonttijaon tietomalli
+# Sitovan tonttijaon tietomalli
 
-Tonttijaon tietomallin osana on laadittu tonttijaon käsitteet, looginen tietomalli ja sen soveltamisprofiili, joka kuvaa tonttijaon laatimista joko asemakaavan laatimisen yhteydessä tai erikseen hyväksyttävänä suunnitelmana. Projekti on osa Ryhti-hanketta. 
+Sitovan tonttijaon tietomallin osana on laadittu sitovan tonttijaon käsitteet, looginen tietomalli ja sen soveltamisprofiili, joka kuvaa sitovan tonttijaon laatimista joko asemakaavan laatimisen yhteydessä tai erikseen hyväksyttävänä suunnitelmana. Projekti on osa Ryhti-hanketta. 
 
-Loogisen tason tietomalli määrittelee kaikille tonttijaon kohteille yhteiset tietorakenteet, joita sovelletaan tonttijaon ilmaisemiseen laadittujen soveltamisohjeiden ja niissä kiinnitettyjen koodistojen sekä elinkaari- ja laatusääntöjen mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta.
+Loogisen tason tietomalli määrittelee kaikille sitovan tonttijaon kohteille yhteiset tietorakenteet, joita sovelletaan sitovan tonttijaon ilmaisemiseen laadittujen soveltamisohjeiden ja niissä kiinnitettyjen koodistojen sekä elinkaari- ja laatusääntöjen mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta.
 
-Ympäristönministeriön rahoittamassa Ryhti-hankkeessa määritellään rakennetun ympäristön tietoja yhteisen, kansallisen tietomallin alle. Tarkoituksena on yhdenmukaistaa rakennetun ympäristön tiedonhallintaa yhteisten, kansallisten standardien alle. Lähtökohtana on uudistuvan maankäyttö- ja rakennuslain pykäläluonnos. Maankäyttö- ja rakennuslaki uudistuu tulevien vuosien aikana. Voit tutustua lain valmistelutyöhön [täällä](https://www.mrluudistus.fi).
+Ympäristönministeriön rahoittamassa Ryhti-hankkeessa määritellään rakennetun ympäristön tietoja yhteisen, kansallisen tietomallin alle. Tarkoituksena on yhdenmukaistaa rakennetun ympäristön tiedonhallintaa yhteisten, kansallisten standardien alle. Lähtökohtana on maankäyttö- ja rakennuslaki. Voit tutustua lain valmistelutyöhön [täällä](https://www.mrluudistus.fi).
 
 Tämä osio ja sen kuvaamat tietomallit pohjaavat saman hankkeen yhteydessä jo julkaistuun kaavatietomalliin, johon voi tutustua [täällä](https://tietomallit.ymparisto.fi/kaavatiedot/). Yhtymäkohdat asema- ja yleiskaavojen tietomalleihin on kuvattu tällä sivustolla. Hankkeen etenemisen myötä on tulee syntymään vielä uusia tietomalleja.
 
@@ -20,10 +20,10 @@ Tämä alisivusto jakautuu seuraaviin osa-alueisiin:
 - Soveltamisohjeet
 - Kehitystyö
 
-Tonttijaon tietomallia sovelletaan ensisijaisesti kuntien alueiden käytön suunnittelun tietojärjestelmissä ja [Rakennetun ympäristön tietojärjestelmässä](https://ym.fi/ryhti/rytj), johon tulevaisuudessa kootaan kuntien tonttijakosuunnitelmaprosessissa luotava tietomallimuotoinen tonttijakotieto. Tonttijaon tietomallin mahdollisina sovelluskohteina ovat kuitenkin lisäksi kaikki tietojärjestelmät, joissa luodaan, käsitellään, analysoidaan ja siirretään tonttijakotietoa.
+Sitovan tonttijaon tietomallia sovelletaan ensisijaisesti kuntien alueiden käytön suunnittelun tietojärjestelmissä ja [Rakennetun ympäristön tietojärjestelmässä](https://ym.fi/ryhti/rytj), johon tulevaisuudessa kootaan kuntien tonttijakoprosessissa luotava tietomallimuotoinen tonttijakotieto. Sitovan tonttijaon tietomallin mahdollisina sovelluskohteina ovat kuitenkin lisäksi kaikki tietojärjestelmät, joissa luodaan, käsitellään, analysoidaan ja siirretään tonttijakotietoa.
 
-Tietomallista järjestettiin kansallinen kommentointikierros 06/2022 otakantaa-palvelussa. Projektin päättymisestä huolimatta tonttijaon tietomallia kehitetään läpi koko Ryhti-hankkeen.
+Tietomallista järjestettiin kansallinen kommentointikierros 06/2022 otakantaa-palvelussa. Projektin päättymisestä huolimatta sitovan tonttijaon tietomallia kehitetään läpi koko Ryhti-hankkeen.
 
-Toistaiseksi tonttijaosta on säädetty osana lainvoimaista [Maankäyttö- ja rakennuslakia (MRL)](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132). Lisätietoja MRL-muutoksesta ja tontinjaosta voi lukea [ympäristöministeriön](https://ym.fi/fi/ryhti) sivuilta.
+Sitovasta tonttijaosta on säädetty osana lainvoimaista [Maankäyttö- ja rakennuslakia (MRL)](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132). Lisätietoja sitovasta tontinjaosta voi lukea [ympäristöministeriön](https://ym.fi/fi/ryhti) sivuilta.
 
 {% include common/note.html content="Osiota ylläpitää [Ubigu Oy](https://www.ubigu.fi). Yhteyshenkilö projektille on Marko Kauppi." %}
