@@ -12,19 +12,19 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sa
 1. 
 {:toc}
 
-## käsitekaavio
+## Käsitekaavio
 ![Sitova tonttijako käsitekaaviona (UML)](kasitemalli.png)
 
 ## Käsitteet
 
 ### Sitova tonttijako
-{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-0" name="tonttijako" def="maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen yksityiskohtaiseksi ohjaamiseksi." %}
+{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-0" name="Sitova tonttijako" def="maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen yksityiskohtaiseksi ohjaamiseksi." %}
 
 ### Tonttijakotontti
-{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-1" name="esitontti" def="sitovassa tonttijaossa osoitettu aluemainen kohde kiinteistöjaotuksen ohjaamiseksi." %}
+{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-1" name="tonttijakotontti" def="sitovassa tonttijaossa osoitettu aluemainen kohde kiinteistöjaotuksen ohjaamiseksi." %}
 
 ### Rajapiste
-{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-12" name="esitontin rajapiste" def="sitovassa tonttijaossa osoitettu pistemäinen kohde, joka kuvaa kiinteistönmuodostustoimituksessa osoitettavaa rajapistettä tai rajamerkkiä." %}    
+{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-12" name="rajapiste" def="sitovassa tonttijaossa osoitettu pistemäinen kohde, joka kuvaa kiinteistönmuodostustoimituksessa osoitettavaa rajapistettä tai rajamerkkiä." %}    
 
 ### Tonttijakosuunnitelman viiteasiakirja
 {% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-2" name="sitovan tonttijaon viiteasiakirja" def="sitovaan tonttijakoon liittyvä asiakirja." %}
