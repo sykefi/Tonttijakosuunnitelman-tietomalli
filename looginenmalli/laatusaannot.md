@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Tonttijakosuunnitelma - looginen tietomalli -Laatusäännöt"
+title: "Sitovan tonttijaon - looginen tietomalli -Laatusäännöt"
 description: ""
 id: "laatusaannot"
 status: "Keskeneräinen"
@@ -21,7 +21,7 @@ status: "Keskeneräinen"
 
 ### UML-mallin mukaisuus
 {% include common/clause_start.html type="req" id="laatu/vaat-uml-mukaisuus" %}
-Tonttijakosuunnitelman loogisen tietomallin toteutusten tulee noudattaa [UML-kielisen luokkakaavion](./uml/) määrityksiä luokkien attribuuttien, assosiaatioiden, kardinaliteetin ja tyypin suhteen.
+Sitovan tonttijaon loogisen tietomallin toteutusten tulee noudattaa [UML-kielisen luokkakaavion](./uml/) määrityksiä luokkien attribuuttien, assosiaatioiden, kardinaliteetin ja tyypin suhteen.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="laatu/vaat-uml-toteutus" %}
@@ -30,17 +30,17 @@ Kunkin fyysisen tietomallin kuvauksessa tulee määritellä minkälaista rakenne
 
 ### Tunnisteet ja sisäisten viittausten eheys
 {% include common/clause_start.html type="req" id="laatu/vaat-tunnukset-viittaukset" %}
-Tonttijakosuunnitelman tietomallin versioitavilla tietokohteilla tulee olla yksilöivät tunnukset, joiden luomisessa ja käytöstä toisiin tietokohteisiin viittaamisessa tulee noudattaa elinkaarisääntöjen luvun [Tunnukset ja niiden hallinta](elinkaarisaannot.html#tunnukset-ja-niiden-hallinta) vaatimuksia.
+Sitovan tonttijaon tietomallin versioitavilla tietokohteilla tulee olla yksilöivät tunnukset, joiden luomisessa ja käytöstä toisiin tietokohteisiin viittaamisessa tulee noudattaa elinkaarisääntöjen luvun [Tunnukset ja niiden hallinta](elinkaarisaannot.html#tunnukset-ja-niiden-hallinta) vaatimuksia.
 {% include common/clause_end.html %}
 
 ### Elinkaarisääntöjen mukaisuus
 {% include common/clause_start.html type="req" id="laatu/vaat-elinkaarisaannot" %}
-Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa tonttijakosuunnitelman tietomallin [elinkaarisääntöjen](elinkaarisaannot.html) vaatimuksia, ja niiden on suositeltavaa noudattaa elinkaarisääntöjen suosituksia. Vaatimukset ja suositukset on erotettu selkeästi elinkaarisääntöjen muusta sisällöstä.
+Sitovan tonttijaon tietomallin mukaisten aineistojen tulee noudattaa sitovan tonttijaon tietomallin [elinkaarisääntöjen](elinkaarisaannot.html) vaatimuksia, ja niiden on suositeltavaa noudattaa elinkaarisääntöjen suosituksia. Vaatimukset ja suositukset on erotettu selkeästi elinkaarisääntöjen muusta sisällöstä.
 {% include common/clause_end.html %}
 
 ### Soveltamisohjeiden mukaisuus
 {% include common/clause_start.html type="req" id="laatu/vaat-soveltamisohjeet" %}
-Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa tonttijakosuunnitelman tietomallin yksilöimää [Tonttijakosuunnitelman](../soveltamisohjeet/) soveltamisprofiilia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
+Sitovan tonttijaon tietomallin mukaisten aineistojen tulee noudattaa sitovan tonttijaon tietomallin yksilöimää [Tonttijakosuunnitelman](../soveltamisohjeet/) soveltamisprofiilia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
 {% include common/clause_end.html %}
 
 {% include common/question.html content="" %}
@@ -48,11 +48,11 @@ Tonttijakosuunnitelman tietomallin mukaisten aineistojen tulee noudattaa tonttij
 ### Merkkijonojen käyttö
 #### Merkistöt
 {% include common/clause_start.html type="req" id="laatu/vaat-merkisto-utf8" %}
-Kaikki Tonttijakosuunnitelman tietomallin tekstimuotoiset sisällöt on tiedonsiirtoa varten koodattava käyttäen UTF-8 -merkistökoodausta.
+Kaikki sitovan tonttijaon tietomallin tekstimuotoiset sisällöt on tiedonsiirtoa varten koodattava käyttäen UTF-8 -merkistökoodausta.
 {% include common/clause_end.html %}
 
 #### Monikielinen sisältö ja kielikoodit
-Kaikki Tonttijakosuunnitelman tietomallin tekstimuotoinen sisältö ilmaistaan ISO 19103 -standardin määrittelemän [LanguageString](dokumentaatio/#languagestring)-luokan avulla.
+Kaikki sitovan tonttijaon tietomallin tekstimuotoinen sisältö ilmaistaan ISO 19103 -standardin määrittelemän [LanguageString](dokumentaatio/#languagestring)-luokan avulla.
 
 {% include common/clause_start.html type="req" id="laatu/vaat-monikielisyys-kielikoodi" %}
 Kunkin LanguageString-luokan objektin tulee toteuttaa ```language```-attribuutti, jonka arvona on ISO 639-2 -standardin mukainen terminologinen, kolmekirjaiminen kielikoodi code (ISO 639-2/T).
@@ -148,7 +148,7 @@ Aluemaisten geometrioiden kiertosuuntien tulee noudattaa ISO 19107 -standardin m
 #### Paikkatietokohteiden geometrioiden sisäkkäisyys ja päällekkäisyys
 
 {% include common/clause_start.html type="req" id="laatu/vaat-kaavakohteet-kaavan-sisalla" %}
-[Tonttijakosuunnitelma](dokumentaatio/#kaava)-luokan objektin ```aluerajaus```-attribuutin ilmaiseman tonttijakosuunnitelma-alueen tulee pitää sisällään kaikki tonttijakosuunnitelmaan sisältyvien [AbstraktiKaavakohde](dokumentaatio/#abstraktikaavakohde)-luokan objektien geometriat, poislukien sellaiset [Esitonttikohde](dokumentaatio/#kaavakohde)-luokan objektit, jotka ovat kumottuja.
+[SitovaTonttijako](dokumentaatio/#sitovatonttijako)-luokan objektin ```aluerajaus```-attribuutin ilmaiseman sitovan tonttijaon alueen tulee pitää sisällään kaikki sitovaan tonttijakoon sisältyvien [Yhteiset::RakennetunYmpäristönKohde](dokumentaatio/#rakennetunymparistonkohde)-luokan objektien geometriat, poislukien sellaiset [Tonttijakotontti](dokumentaatio/#tonttijakotontti)-luokan objektit, jotka ovat kumottuja.
 {% include common/clause_end.html %}
 
 
