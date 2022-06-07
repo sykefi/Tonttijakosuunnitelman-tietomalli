@@ -254,14 +254,14 @@ Vuorovaikutustapahtumien lajit kuvataan MKP-ydin -paketissa abstraktina koodisto
 
 ## Sitovan tonttijaon tiedot
 
-### Sitova tonttijako
+### SitovaTonttijako
 
 Kuvaa käsitteen Sitova tonttijako, erikoistaa luokkaa AbstraktiMaankayttoasia, stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-laji | [Codelist](#sitovantonttijaonLaji) | 1  | kertoo, millainen tonttijakosuunnitelma on laadittu
-tunnus  | [CharacterString](#CharacterString) | 1 | yksilöivä ID
+laji | [Codelist](#sitovantonttijaonlaji) | 1  | kertoo, millainen tonttijakosuunnitelma on laadittu
+sitovanTonttijaonTunnus  | [CharacterString](#CharacterString) | 1 | yksilöivä ID
 elinkaarentila | [Codelist](#sitovantonttijaonElinkaarentila) | 1 | yleisimmät arvot vireillä oleva,  hyväksytty tai voimassa
 kumoutumistieto | [SitovanTonttijaonKumoutumistieto](#SitovanTonttijaonKumoutumistieto) | 0..* | sitovan tonttijaon tai sen osa, jonka tämä tonttijakosuunnitelma kumoaa
 vireilletuloAika | [TM_Instant](#TM_Instant) | 0..1 | aika, jolloin sitova tonttijako on tullut vireille
@@ -311,7 +311,6 @@ Kuvaa käsitteen Tonttijakotontti, erikoistaa luokkaa AbstraktiKaavakohde, stere
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-laji | [EsitonttikohdeLaji](#EsitonttikohdeLaji) | 1  | kuvaa esitonttikohteen tyypin
 suhdePeruskiinteistoon | [suhdePeruskiinteistoon](#suhdePeruskiinteistoon) | 0..1  | luokittelu esitonttikohteen sijoittumisesta suhteessa peruskiinteistöön, joka merkitään vain 3D-esitonttikohteelle
 elinkaarentila | [SitovanTonttijaonElinkaarentila](#SitovanTonttijaonElinkaarentila) | 1  | 
 muodostustieto | [Muodostajakiinteisto](#muodostajakiinteisto) | 1..* | tieto muodostajakiinteistöistä, josta/joista tonttijakotontti muodostetaan
