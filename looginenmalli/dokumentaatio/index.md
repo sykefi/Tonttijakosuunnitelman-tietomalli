@@ -7,7 +7,7 @@ status: "Keskeneräinen"
 ---
 {% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %}
 
-# Loogisen tason tonttijako
+# Loogisen tason sitovan tonttijaon tietomalli
 {:.no_toc}
 
 1. 
@@ -15,16 +15,16 @@ status: "Keskeneräinen"
 
 ## Yleistä
 
-Loogisen tason tietomalli määrittelee kaikille tonttijaon kohteille yhteiset tietorakenteet, joita sovelletaan tonttijaon ilmaisemiseen laadittujen [soveltamisohjeiden](../soveltamisohjeet/) ja niihin kiinnittyvien koodistojen sekä [elinkaari-](../elinkaarisaannot.html) ja [laatusääntöjen](../laatusaannot.html) mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta.
+Loogisen tason tietomalli määrittelee kaikille sitovan tonttijaon kohteille yhteiset tietorakenteet, joita sovelletaan sitovan tonttijaon ilmaisemiseen laadittujen [soveltamisohjeiden](../soveltamisohjeet/) ja niihin kiinnittyvien koodistojen sekä [elinkaari-](../elinkaarisaannot.html) ja [laatusääntöjen](../laatusaannot.html) mukaisesti. Looginen tietomalli pyrkii olemaan mahdollisimman riippumaton tietystä toteutusteknologiasta tai tiedon fyysisestä esitystavasta.
 
 <!--**Graafinen mallinnus loogisesta tietomallista**
 
-![Tonttijakosuunnitelman looginen malli graafisena mallinnuksena](looginenmalli.png "Looginen tietomalli -  graafinen mallinnus (Neo4j)")
+![Sitovan tonttijaon looginen malli graafisena mallinnuksena](looginenmalli.png "Looginen tietomalli -  graafinen mallinnus (Neo4j)")
 
 (Lataa [Kaavio määritelmien kanssa](looginenmalli.png))-->
 
 ### Normatiiviset viittaukset
-Tonttijaon tietomalli hyödyntää samoja normatiivisia viittauksia kuin kaavatietomallikin. Ne käsittävät seuraavat dokumentit:
+Sitovan tonttijaon tietomalli hyödyntää samoja normatiivisia viittauksia kuin kaavatietomallikin. Ne käsittävät seuraavat dokumentit:
 
 * [ISO 639-2:1998 Codes for the representation of names of languages — Part 2: Alpha-3 code][ISO-639-2]
 * [ISO 8601-1:2019 Date and time — Representations for information interchange — Part 1: Basic rules][ISO-8601-1]
@@ -36,11 +36,11 @@ Tonttijaon tietomalli hyödyntää samoja normatiivisia viittauksia kuin kaavati
 
 ### Standardienmukaisuus
 
-Tonttijaon looginen tietomalli perustuu [ISO 19109][ISO-19109]-standardin yleiseen kohdetietomalliin (General Feature Model, GFM), joka määrittelee rakennuspalikat paikkatiedon ISO-standardiperheen mukaisten sovellusskeemojen määrittelyyn. GFM kuvaa muun muassa metaluokat ```FeatureType```, ```AttributeType``` ja ```FeatureAssociationType```. 
+Sitovan tonttijaon looginen tietomalli perustuu [ISO 19109][ISO-19109]-standardin yleiseen kohdetietomalliin (General Feature Model, GFM), joka määrittelee rakennuspalikat paikkatiedon ISO-standardiperheen mukaisten sovellusskeemojen määrittelyyn. GFM kuvaa muun muassa metaluokat ```FeatureType```, ```AttributeType``` ja ```FeatureAssociationType```. 
 
-Tonttijaon tietomallissa kaikki tietokohteet, joilla on tunnus ja jotka voivat esiintyä erillään toisista kohteista on määritelty kohdetyypeinä stereotyypin ```FeatureType``` kautta. Sellaiset tietokohteet, joilla ei ole omaa tunnusta ja jotka voivat esiintyä vain kohdetyyppien attribuuttien arvoina on määritelty [ISO 19103][ISO-19103]-standardin ```DataType```-stereotyypin avulla. Lisäksi [HallinnollinenAlue](#hallinnollinenalue) ja [Organisaatio](#organisaatio) on mallinnettu vain rajapintojen (```Interface```) avulla, koska niitä ei ole tarpeen kuvata tonttijakosuunnitelman tietomallissa yksityiskohtaisesti, ja on todennäköistä, että suunnitelmia ylläpitävät tietojärjestelmät tarjoavat niille konkreettiset toteuttavat luokat.
+Sitovan tonttijaon tietomallissa kaikki tietokohteet, joilla on tunnus ja jotka voivat esiintyä erillään toisista kohteista on määritelty kohdetyypeinä stereotyypin ```FeatureType``` kautta. Sellaiset tietokohteet, joilla ei ole omaa tunnusta ja jotka voivat esiintyä vain kohdetyyppien attribuuttien arvoina on määritelty [ISO 19103][ISO-19103]-standardin ```DataType```-stereotyypin avulla. Lisäksi [HallinnollinenAlue](#hallinnollinenalue) ja [Organisaatio](#organisaatio) on mallinnettu vain rajapintojen (```Interface```) avulla, koska niitä ei ole tarpeen kuvata sitovan tonttijaon tietomallissa yksityiskohtaisesti, ja on todennäköistä, että suunnitelmia ylläpitävät tietojärjestelmät tarjoavat niille konkreettiset toteuttavat luokat.
 
-[ISO 19109][ISO-19109] -standardin lisäksi tonttijakosuunnitelman tietomalli perustuu muihin paikkatiedon ISO-standardeihin, joista keskeisimpiä ovat [ISO 19103][ISO-19103] (UML-kielen käyttö paikkatietojen mallinnuksessa), [ISO 19107][ISO-19107] (sijaintitiedon mallintaminen) ja [ISO 19108][ISO-19108] (aikaan sidotun tiedon mallintaminen).
+[ISO 19109][ISO-19109] -standardin lisäksi sitovan tonttijaon tietomalli perustuu muihin paikkatiedon ISO-standardeihin, joista keskeisimpiä ovat [ISO 19103][ISO-19103] (UML-kielen käyttö paikkatietojen mallinnuksessa), [ISO 19107][ISO-19107] (sijaintitiedon mallintaminen) ja [ISO 19108][ISO-19108] (aikaan sidotun tiedon mallintaminen).
 
 ### Muualla määritellyt luokat ja tietotyypit
 
@@ -93,15 +93,15 @@ Täsmälleen yhdestä pisteestä koostuva geometriatyyppi. Määritelty rajapint
 
 ## Tietomallin yleispiirteet
 
-Tietomalli perustuu kaavatietomallin yhteiskäyttöisiin tietokomponentteihin. Kaavatietomallin MKP-ydin (maankäyttöpäätökset, MKP) kuvaa maankäyttöpäätösten tietomallintamisessa yleiskäyttöisiksi suunnitellut luokat ja niihin liittyvät koodistot, joita hyödynnetään tonttijakosuunnitelman soveltamisprofiilin kautta. MKP-ytimen lisäksi hyödynnetään laajasti Kaavatietomallin abstrakteja ja muita luokkia tonttijakosuunnitelmatietomallin määrittelemien koodistojen ja soveltamisprofiilin avulla. 
+Tietomalli perustuu kaavatietomallin yhteiskäyttöisiin tietokomponentteihin. Kaavatietomallin MKP-ydin (maankäyttöpäätökset, MKP) kuvaa maankäyttöpäätösten tietomallintamisessa yleiskäyttöisiksi suunnitellut luokat ja niihin liittyvät koodistot, joita hyödynnetään sitovan tonttijaon soveltamisprofiilin kautta. MKP-ytimen lisäksi hyödynnetään laajasti Kaavatietomallin abstrakteja ja muita luokkia sitovan tonttijaon tietomallin määrittelemien koodistojen ja soveltamisprofiilin avulla. 
 
-Tonttijakosuunnitelman UML-luokkakaaviot ovat saatavilla erillisellä [UML-kaaviot-sivulla](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/uml/).
+Sitovan tonttijaon UML-luokkakaaviot ovat saatavilla erillisellä [UML-kaaviot-sivulla](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/uml/).
 
-## Kaavatietomallin ja tonttijakosuunnitelman tietomallin suhde ja tietovirrat
+## Kaavatietomallin ja sitovan tonttijaon tietomallin suhde ja tietovirrat
 
-Kaavatietomallin mukaiset kaavamääräykset, joiden ```laji-attribuutin``` arvo on [Tonttijako-koodin](https://koodistot.suomi.fi/code;registryCode=rytj;schemeCode=RY_KaavamaaraysLaji_AK;codeCode=10) *Esitontti* tai *Sitova tonttijako laadittava*, ovat aluemaisia lähtötietoja tonttijakosuunnitelman laatimiselle.
+Kaavatietomallin mukaiset kaavamääräykset, joiden ```laji-attribuutin``` arvo on [Tonttijako-koodin](https://koodistot.suomi.fi/code;registryCode=rytj;schemeCode=RY_KaavamaaraysLaji_AK;codeCode=10) *Esitontti* tai *Sitova tonttijako laadittava*, ovat aluemaisia lähtötietoja sitovan tonttijaon laatimiselle.
 
-Tonttijakosuunnitelman tietomallin esitonteille kaavamääräykset linkitetään suoraan kaavatietomallista. Linkitys tietomallien välillä perustuu viittaustunnukseen, joka muodostetaan tonttijakosuunnitelman tietomallin  [Kaavamaarays-luokan](#kaavamaarays) ```liittyvanKaavamaarayksenTunnus```-attribuutille annettavalla kaavatietomallin [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) ```viittaustunnus``` -attribuutilla. Tällä vältytään toisteellisen kaavamääräystiedon tuottamiselta. Tonttijakosuunnitelman tietomalli mahdollistaa kuitenkin tonttijakosuunnitelman laatijan määrittää kerrosala laskennallisesti esitonttikohteille.
+Sitovan tonttijaon tietomallin esitonteille kaavamääräykset linkitetään suoraan kaavatietomallista. Linkitys tietomallien välillä perustuu viittaustunnukseen, joka muodostetaan sitovan tonttijaon tietomallin  [Kaavamaarays-luokan](#kaavamaarays) ```liittyvanKaavamaarayksenTunnus```-attribuutille annettavalla kaavatietomallin [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) ```viittaustunnus``` -attribuutilla. Tällä vältytään toisteellisen kaavamääräystiedon tuottamiselta. Sitovan tonttijaon tietomalli mahdollistaa kuitenkin sitovan tonttijaon laatijan määrittää kerrosala laskennallisesti esitonttikohteille.
 
 Elinkaarisäännöt-sivulla [Asemakaavan suhde esitonttikohteeseen -luvussa](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/elinkaarisaannot.html#asemakaavan-suhde-esitonttikohteeseen) on kuvattu kaavatiedon elinkaaren vaikutukset esitonttikohteen elinkaareen.
 
@@ -113,7 +113,7 @@ Englanninkielinen nimi: AbstractVersionedObject
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
-Yhteinen yläluokka kaikille tonttijakosuunnitelman versiohallituille luokille. Kuvaa kaikkien kohdetyyppien yhteiset ominaisuudet ja assosiaatiot.
+Yhteinen yläluokka kaikille sitovan tonttijaon versiohallituille luokille. Kuvaa kaikkien kohdetyyppien yhteiset ominaisuudet ja assosiaatiot.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -144,14 +144,14 @@ metatietokuvaus  | [URI](#uri) | 0..1  | viittaus ulkoiseen metatietokuvaukseen
 
 Englanninkielinen nimi: Document
 
-Kuvaa käsitteen [tonttijakosuunnitelman viiteasiakirjan](../kasitemalli/#tonttijakosuunnitelman-viiteasiakirja). Erikoistaa luokkaa [AbstraktiVersioituObjekti](#abstraktiversioituobjekti). 
+Kuvaa käsitteen [sitovan tonttijaon viiteasiakirjan](../kasitemalli/#sitovantonttijaonviiteasiakirja). Erikoistaa luokkaa [AbstraktiVersioituObjekti](#abstraktiversioituobjekti). 
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 asiakirjatunnus | [URI](#uri) | 0..* | asiakirjan pysyvä tunnus, esim. diaarinumero tai muu dokumentinhallinnan tunnus
-laji | [TonttijakosuunnitelmanAsiakirjanLaji](#tonttijakosuunnitelmanasiakirjanlaji) | 1  | asiakirjan tyyppi
+laji | [SitovanTonttijaonAsiakirjanLaji](#sitovantonttijaonasiakirjanlaji) | 1  | asiakirjan tyyppi
 lisatietolinkki  | [URI](#uri) | 0..1 | viittaus ulkoiseen lisätietokuvaukseen asiakirjasta
 metatietolinkki | [URI](#uri) | 0..1 | viittaus ulkoiseen metatietokuvaukseen asiakirjasta
 nimi | [LanguageString](#languagestring) | 0..* | asiakirjan nimi
@@ -200,7 +200,7 @@ Englanninkielinen nimi: AdministrativeArea
 
 Stereotyyppi: Interface (rajapinta)
 
-Hallinnollinen alue on kuvattu tonttijakosuunniteman tietomallissa ainoastaan rajapintana, koska sen mallintaminen on kuulu tonttijakosuunnitelman tietomallin sovellusalaan. Toteuttavien tietojärjestelmien tulee tarjota rajapinnan määrittelemät vähimmäistoiminnallisuudet.
+Hallinnollinen alue on kuvattu sitovan tonttijaon tietomallissa ainoastaan rajapintana, koska sen mallintaminen on kuulu sitovan tonttijaon tietomallin sovellusalaan. Toteuttavien tietojärjestelmien tulee tarjota rajapinnan määrittelemät vähimmäistoiminnallisuudet.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -214,7 +214,7 @@ Englanninkielinen nimi: Organization
 
 Stereotyyppi: Interface (rajapinta)
 
-Organisaatio on kuvattu tonttijakosuunnitelman tietomallissa ainoastaan rajapintana, koska sen mallintaminen on kuulu tonttijakosuunnitelman tietomallin sovellusalaan. Toteuttavien tietojärjestelmien tulee tarjota rajapinnan määrittelemät vähimmäistoiminnallisuudet.
+Organisaatio on kuvattu sitovan tonttijaon tietomallissa ainoastaan rajapintana, koska sen mallintaminen on kuulu sitovan tonttijaon tietomallin sovellusalaan. Toteuttavien tietojärjestelmien tulee tarjota rajapinnan määrittelemät vähimmäistoiminnallisuudet.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -222,7 +222,7 @@ nimi | [CharacterString](#characterstring) | 1  | palauttaa organisaation alueen
 
 ### Koodistot
 
-#### TonttijakosuunnitelmanAsiakirjanLaji
+#### SitovanTonttijaonAsiakirjanLaji
 
 Englanninkielinen nimi: PlotPlanDocumentKind
 
@@ -230,7 +230,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Tonttijakosuunnitelman asiakirjan laji" %}
+{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Sitovan tonttijaon asiakirjan laji" %}
 
 #### AbstraktiKasittelytapahtumanLaji
 
@@ -252,34 +252,34 @@ Laajennettavuus: Ei laajennettavissa
 
 Vuorovaikutustapahtumien lajit kuvataan MKP-ydin -paketissa abstraktina koodistona, jota laajennetaan kunkin maankäyttöpäätöksen prosessin konkreettisten arvojen mukaisesti niiden tietomalleissa.
 
-## Tonttijakosuunnitelman tiedot
+## Sitovan tonttijaon tiedot
 
-### Tonttijakosuunnitelma
+### Sitova tonttijako
 
-Kuvaa käsitteen Tonttijakosuunnitelma, erikoistaa luokkaa AbstraktiMaankayttoasia, stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Sitova tonttijako, erikoistaa luokkaa AbstraktiMaankayttoasia, stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-laji | [Codelist](#tonttijakosuunnitelmanLaji) | 1  | kertoo, millainen tonttijakosuunnitelma on laadittu
+laji | [Codelist](#sitovantonttijaonLaji) | 1  | kertoo, millainen tonttijakosuunnitelma on laadittu
 tunnus  | [CharacterString](#CharacterString) | 1 | yksilöivä ID
-elinkaarentila | [Codelist](#tonttijakosuunnitelmanElinkaarentila) | 1 | yleisimmät arvot vireillä oleva,  hyväksytty tai voimassa
-kumoutumistieto | [TonttijakosuunnitelmanKumoutumistieto](#TonttijakosuunnitelmanKumoutumistieto) | 0..* | tonttijakosuunnitelman tai sen osa, jonka tämä tonttijakosuunnitelma kumoaa
-vireilletuloAika | [TM_Instant](#TM_Instant) | 0..1 | aika, jolloin tonttijakosuunnitema on tullut vireille
-hyvaksymisAika | [TM_Instant](#TM_Instant) | 0..1 | aika, jolloin tonttijakosuunnitelma on tullut virallisesti hyväksyttyä
-digitaalinenAlkupera | [DigitaalinenAlkupera](#DigitaalinenAlkupera) | 0..1 | luokittelu alunperin tietomallin mukaan luotuihin ja jälkeenpäin digitoituihin tonttijakosuunnitelmiin
+elinkaarentila | [Codelist](#sitovantonttijaonElinkaarentila) | 1 | yleisimmät arvot vireillä oleva,  hyväksytty tai voimassa
+kumoutumistieto | [SitovanTonttijaonKumoutumistieto](#SitovanTonttijaonKumoutumistieto) | 0..* | sitovan tonttijaon tai sen osa, jonka tämä tonttijakosuunnitelma kumoaa
+vireilletuloAika | [TM_Instant](#TM_Instant) | 0..1 | aika, jolloin sitova tonttijako on tullut vireille
+hyvaksymisAika | [TM_Instant](#TM_Instant) | 0..1 | aika, jolloin sitova tonttijako on tullut virallisesti hyväksyttyä
+digitaalinenAlkupera | [DigitaalinenAlkupera](#DigitaalinenAlkupera) | 0..1 | luokittelu alunperin tietomallin mukaan luotuihin ja jälkeenpäin digitoituihin sitoviin tonttijakoihin
 
-AbstraktiMaankayttoasia-luokasta peritytyvä attribuutti aluerajauus kuvaa tonttijakosuunnitelman suunnittelualueen.
+AbstraktiMaankayttoasia-luokasta peritytyvä attribuutti aluerajauus kuvaa sitovan tonttijaon suunnittelualueen.
 
 **Assosiaatiot**
 
 Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
 -----------------|--------------------|---------------------|-----------------
-esitonttikohde | [Kaavakohde](#Kaavakohde) | 1 | paikkatietokohde, johon kohdistuu kaavamääräyksiä tai -suosituksia
-laatija | [TonttijakosuunnitelmanLaatija](#TonttijakosuunnitelmanLaatija) | 1 | tonttijakosuunnitelman laatija
+tonttijakotontti | [Kaavakohde](#Kaavakohde) | 1 | paikkatietokohde, johon kohdistuu kaavamääräyksiä tai -suosituksia
+laatija | [SuunnitelmanLaatija](#SuunnitelmanLaatija) | 1 | Sitovan tonttijaon suunnitelman laatija
 
-### TonttijakosuunnitelmanLaatija
+### SuunnitelmanLaatija
 
-Kuvaa käsitteen Tonttijakosuunnitelman laatija, erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Suunnitelman laatija, erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -290,14 +290,14 @@ nimike | [LanguageString](#LanguageString) | 0..*  | ammatti- tai virkanimike
 
 Erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
 
-Kaikkien tonttijakosuunnitelmaan liittyvien paikkatietokohteiden yhteinen abstrakti yläluokka. Kohteen geometria voi olla 2-ulotteinen piste,tai alue, tai 3-ulotteinen kappale. Moniosaiset geometriat (multigeometry) ovat sallittuja.
+Kaikkien sitovaan tonttijakoon liittyvien paikkatietokohteiden yhteinen abstrakti yläluokka. Kohteen geometria voi olla 2-ulotteinen piste,tai alue, tai 3-ulotteinen kappale. Moniosaiset geometriat (multigeometry) ovat sallittuja.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-arvo | [Abstraktiarvo](#Abstraktiarvo) | 0..1  | Esitontin tunnusarvo tai esitontin rajapisteen numero
-geometria | [geometry](#geometry) | 0..1  | esitonttikohteen sijainti
-kohteenPinta-ala | [Number](#Number) | 0..*  | esitontin pinta-ala tai kolmiulotteisen esitontin projisoitu pinta-ala
-pystysuunteinenRajaus | [Korkeusvali](#Korkeusvali) | 0..1  | kolmiulotteisen esitontin ylin ja alin korkeus merenpinnasta
+arvo | [Abstraktiarvo](#Abstraktiarvo) | 0..1  | tonttijakotontin tunnusarvo tai rajapisteen numero
+geometria | [geometry](#geometry) | 0..1  | tonttijakotontin sijainti
+kohteenPinta-ala | [Number](#Number) | 0..*  | esitontin pinta-ala tai kolmiulotteisen tonttijakotontin projisoitu pinta-ala
+pystysuunteinenRajaus | [Korkeusvali](#Korkeusvali) | 0..1  | kolmiulotteisen tonttijakotontin ylin ja alin korkeus merenpinnasta
 
 **Assosiaatiot**
 
@@ -305,19 +305,19 @@ Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
 -----------------|--------------------|---------------------|----------
 liittyvaKohde | [Abstraktikaavakohde](#Abstraktikaavakohde) | 0..* | kohde, joka liittyy tähän kohteeseen. Kukin assosiaatio voi sisältää rooli-määreen tyyppiä LanguageString, joka kuvaa miten kohde liittyy tähän kohteeseen.
 
-### Esitonttikohde
+### Tonttijakotontti
 
-Kuvaa käsitteen Esitonttikohde, erikoistaa luokkaa AbstraktiKaavakohde, stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Tonttijakotontti, erikoistaa luokkaa AbstraktiKaavakohde, stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 laji | [EsitonttikohdeLaji](#EsitonttikohdeLaji) | 1  | kuvaa esitonttikohteen tyypin
 suhdePeruskiinteistoon | [suhdePeruskiinteistoon](#suhdePeruskiinteistoon) | 0..1  | luokittelu esitonttikohteen sijoittumisesta suhteessa peruskiinteistöön, joka merkitään vain 3D-esitonttikohteelle
-elinkaarentila | [TonttijakosuunnitelmanElinkaarentila](#TonttijakosuunnitelmanElinkaarentila) | 1  | 
-muodostustieto | [Muodostustieto](#muodostustieto) | 1..* | tieto muodostajakiinteistöistä, josta/joista esitontti muodostetaan
-kaavatilannetieto | [Kaavatilannetieto](#kaavatilannetieto) | 1..* | tieto esitonttikohteeseen liittyvistä asemakaavoista ja niiden vaikutuksista
-rakennettu | [boolean](#boolean) | 0..1 | tieto muun muassa rakentamattomasta rakennuspaikasta korotettua kiinteistöverotusta varten, onko esitonttikohde rakennettu asemakaavan mukaisesti. Lisäksi tämän tiedon perusteella saadaan tieto kunnan kaavavarannosta.
-rakennuskielto | [boolean](#boolean) | 0..1 | kuvaa, onko esitonttikohteella rakennuskielto
+elinkaarentila | [SitovanTonttijaonElinkaarentila](#SitovanTonttijaonElinkaarentila) | 1  | 
+muodostustieto | [Muodostajakiinteisto](#muodostajakiinteisto) | 1..* | tieto muodostajakiinteistöistä, josta/joista tonttijakotontti muodostetaan
+kaavatilannetieto | [Kaavatilannetieto](#kaavatilannetieto) | 1..* | tieto tonttijakotonttiin liittyvistä asemakaavoista ja niiden vaikutuksista
+rakennettu | [boolean](#boolean) | 0..1 | tieto muun muassa rakentamattomasta rakennuspaikasta korotettua kiinteistöverotusta varten, onko tonttijakotontti rakennettu asemakaavan mukaisesti. Lisäksi tämän tiedon perusteella saadaan tieto kunnan kaavavarannosta.
+rakennuskielto | [boolean](#boolean) | 0..1 | kuvaa, onko tonttijakotontilla rakennuskielto
 voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aikaväli, jona asiasta tehty päätös suunnitelmineen ja säännöksineen on lainvoimainen
 
 
@@ -327,7 +327,7 @@ Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
 -----------------|--------------------|---------------------|----------
 maarays | [Kaavamaarays](#Kaavamaarays) | 0..* | kaavaan sisältyvä sanallinen määräys, jolla ohjataan alueiden suunnittelua ja rakentamista
 
-### Muodostustieto
+### Muodostajakiinteistö
 
 Stereotyyppi: DataType (tietotyyppi)
 
@@ -346,9 +346,9 @@ Tieto esitonttiin liittyvistä asemakaavoista ja niiden vaikutuksista.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-kaavaTunnus | [URI](#URI) | 1  | kaavatunnus, joka muuttaa esitonttikohteen kaavamääräyksiä tai kumoaa esitonttikohteen
-kaavalaji | [Kaavalaji](#Kaavalaji) | 1 | alueiden käytön ohjaustarpeeseen, kaavan sisältövaatimuksiin, prosessiin ja vastuulliseen hallintoviranomaiseen perustuva luokittelu
-kumoaaEsitonttikohteen | [boolean](#boolean) | 1 | jos arvo on true, kaava kumoaa esitonttikohteen kokonaan
+kaavaTunnus | [URI](#URI) | 1  | kaavatunnus, joka muuttaa tonttijakotontin kaavamääräyksiä tai kumoaa tonttijakotontin
+kaavayksikönMuutostieto | [KaavayksikönMuutostieto](#KaavayksikönMuutostieto) | 1 | alueiden käytön ohjaustarpeeseen, kaavan sisältövaatimuksiin, prosessiin ja vastuulliseen hallintoviranomaiseen perustuva luokittelu
+kumoaaTonttijakotontin | [boolean](#boolean) | 1 | jos arvo on true, kaava kumoaa tonttijakotontin kokonaan
 
 ### Kaavamaarays
 
@@ -356,32 +356,32 @@ Kuvaa käsitteen Kaavamääräys, erikoistaa luokkaa AbstraktiTietoyksikko, ster
 
 laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-liittyvanKaavamaarayksenTunnus | [URI](#URI) | 1  | viittaustunnus kaavaan sisältyvän kaavamääräyksen tietokohteeseen, joka liittyy esitonttikohteeseen
+liittyvanKaavamaarayksenTunnus | [URI](#URI) | 1  | viittaustunnus kaavaan sisältyvän kaavamääräyksen tietokohteeseen, joka liittyy tonttijakotonttiin
 
 ### AbstraktiTietoyksikko
 
 Erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
 
-Kaikkien tonttijakosuunnitelmiin liittyvien tietoelementtien yhteinen abstrakti yläluokka.
+Kaikkien sitoviin tonttijakoihin liittyvien tietoelementtien yhteinen abstrakti yläluokka.
 
 laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-arvo | [AbstraktiArvo](#AbstraktiArvo) | 0..*  | kuvaa tonttijakosuunnitelman laatijan tulkitsemaa arvoa esim. rakentamisen määrä
+arvo | [AbstraktiArvo](#AbstraktiArvo) | 0..*  | kuvaa sitovan tonttijaon laatijan tulkitsemaa arvoa esim. rakentamisen määrä
 
-### TonttijakosuunnitelmanKumoutumistieto
+### SitovanTonttijaonKumoutumistieto
 
 Stereotyyppi: DataType (tietotyyppi)
 
-Kumoamistieto yksilöi mitä tonttijakosuunnitelmia tai niiden esitonttikohteita tonttijakosuunnitelma kumoaa lainvoimaiseksi tullessaan.
+Kumoamistieto yksilöi mitä sitovia tonttijakoja tai niiden tonttijakotontteja sitova tonttijako kumoaa lainvoimaiseksi tullessaan.
 
 laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-kumoutuvanTonttijakosuunnitelmanTunnus | [URI](#URI) | 1  | tonttijakosuunnitelma, johon kumoaminen kohdistuu
-kumoutuvanEsitonttikohteenTunnus | [URI](#URI) | 0..*  | esitonttikohde, johon kumoutuminen kohdistuu
+kumoutuvanSitovanTonttijaonTunnus | [URI](#URI) | 1  | sitova tonttijako, johon kumoaminen kohdistuu
+kumoutuvanTonttijakotontinTunnus | [URI](#URI) | 0..*  | tonttijakotontti, johon kumoutuminen kohdistuu
 
 ### Koodistot
 
-#### TonttijakosuunnitelmanLaji
+#### SitovanTonttijaonLaji
 
 Englanninkielinen nimi: PlotPlanKind
 
@@ -389,9 +389,9 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanLaji" name="Tonttijakosuunnitelman laji" %}
+{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanLaji" name="Sitovan tonttijaon laji" %}
 
-#### TonttijakosuunnitelmanElinkaarentila
+#### SitovanTonttijaonElinkaarentila
 
 Englanninkielinen nimi: PlotPlanLifeCycleState
 
@@ -399,9 +399,9 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanElinkaarentila" name="Tonttijakosuunnitelman elinkaaren tila" %}
+{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanElinkaarentila" name="Sitovan tonttijaon elinkaaren tila" %}
 
-#### TonttijakosuunnitelmanAsiakirjanLaji
+#### SitovaonTonttijaonAsiakirjanLaji
 
 Englanninkielinen nimi: PlotPlanDocumentType
 
@@ -409,7 +409,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Tonttijakosuunnitelmaa koskevan asiakirjan laji" %}
+{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanAsiakirjanLaji" name="Sitovaa tonttijakoa koskevan asiakirjan laji" %}
 
 #### SuhdePeruskiinteistoon
 
@@ -419,22 +419,9 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include common/codelistref.html registry="rytj" id="RY_SuhdePeruskiinteistoon" name="Esitonttikohteen suhde peruskiinteistöön" %}
+{% include common/codelistref.html registry="rytj" id="RY_SuhdePeruskiinteistoon" name="Tonttijakotontin suhde peruskiinteistöön" %}
 
-#### EsitonttikohdeLaji
-
-<!--Lisää sisäinen linkki? -->
-Erikoistaa luokkaa AbstraktiKaavamaarayslaji. 
-
-Englanninkielinen nimi: PreplotKind
-
-Stereotyyppi: CodeList (koodisto)
-
-Laajennettavuus: Ei laajennettavissa
-
-{% include common/codelistref.html registry="rytj" id="RY_EsitonttikohdeLaji" name="Esitonttikohteen laji" %}
-
-#### TonttijakosuunnitelmanVuorovaikutustapahtumanLaji
+#### SitovanTonttijaonVuorovaikutustapahtumanLaji
 
 <!--Lisää sisäinen linkki? -->
 Erikoistaa luokkaa AbstraktiVuorovaikutustapahtumanLaji. 
@@ -445,9 +432,9 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanVuorovaikutustapahtumanLaji" name="Tonttijakosuunnitelman vuorovaikutustapahtuman laji" %}
+{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanVuorovaikutustapahtumanLaji" name="Sitovan tonttijaon vuorovaikutustapahtuman laji" %}
 
-#### TonttijakosuunnitelmanKasittelytapahtumanLaji
+#### SitovanTonttijaonKasittelytapahtumanLaji
 
 <!--Lisää sisäinen linkki? -->
 Erikoistaa luokkaa AbstraktiKasittelytapahtumanLaji. 
@@ -458,7 +445,16 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanKasittelytapahtumanLaji" name="Tonttijakosuunnitelman kasittelytapahtuman laji" %}
+#### KaavayksikönMuutostieto
+
+<!--Lisää sisäinen linkki? -->
+Englanninkielinen nimi: PlanUnit
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: Ei laajennettavissa
+
+{% include common/codelistref.html registry="rytj" id="RY_KaavanMuutostieto" name="Kaavayksikön muutostieto (asemakaava)" %}
 
 <!-- linkit standardeihin, joihin mainittu sivun alussa -->
 [ISO-8601-1]: https://www.iso.org/standard/70907.html "ISO 8601-1:2019 Date and time — Representations for information interchange — Part 1: Basic rules"
