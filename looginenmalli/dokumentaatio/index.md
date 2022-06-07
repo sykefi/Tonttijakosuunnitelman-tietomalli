@@ -335,7 +335,7 @@ Tieto muodostajakiinteistöistä, josta esitontti muodostetaan.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-kiinteistoTunnus | [Tunnusarvo](#Tunnusarvo) | 1  | kiinteistörekisteriin merkityn rekisteriyksikön yksilöivä tunnus
+kiinteistöTunnus | [Tunnusarvo](#Tunnusarvo) | 1  | kiinteistörekisteriin merkityn rekisteriyksikön yksilöivä tunnus
 muodostusPinta-ala | [Number](#Number) | 1  | muodostavan rekisterikiinteistön pinta-alan määrä neliömetreissä
 
 ### Kaavatilannetieto
@@ -350,7 +350,7 @@ kaavaTunnus | [URI](#URI) | 1  | kaavatunnus, joka muuttaa tonttijakotontin kaav
 kaavayksikönMuutostieto | [KaavayksikönMuutostieto](#KaavayksikönMuutostieto) | 1 | alueiden käytön ohjaustarpeeseen, kaavan sisältövaatimuksiin, prosessiin ja vastuulliseen hallintoviranomaiseen perustuva luokittelu
 kumoaaTonttijakotontin | [boolean](#boolean) | 1 | jos arvo on true, kaava kumoaa tonttijakotontin kokonaan
 
-### Kaavamaarays
+### Kaavamääräys
 
 Kuvaa käsitteen Kaavamääräys, erikoistaa luokkaa AbstraktiTietoyksikko, stereotyyppi: FeatureType (kohdetyyppi)
 
