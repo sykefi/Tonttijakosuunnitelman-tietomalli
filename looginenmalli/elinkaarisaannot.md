@@ -171,15 +171,15 @@ Tuottajakohtaisen tunnuksen suositeltu muoto on UUID.
 Esimerkki: ```tj-123445```
 
 ### Sitovan tonttijaon tunnus
-{% include common/clause_start.html type="req" id="elinkaari/vaat-tonttijakosuunnitelmatunnus-maar" %}
-Sitovan tonttijaon tunnus on sitovalle tonttijaolle ennakolta haettava, tonttijakosuunnitelman kansallisesti yksilöivä tunnus. Sitovan tonttijaon tietomallissa sitovan tonttijaon tunnus kuvataan [SitovaTonttijako](../../looginenmalli/dokumentaatio/#SitovaTonttijako)-luokan attribuutilla ```sitovanTonttijaonTunnus```.
+{% include common/clause_start.html type="req" id="elinkaari/vaat-sitovan-tonttijaon-tunnus-maar" %}
+Sitovan tonttijaon tunnus on sitovalle tonttijaolle ennakolta haettava, tonttijakosuunnitelman kansallisesti yksilöivä tunnus. Sitovan tonttijaon tietomallissa sitovan tonttijaon tunnus kuvataan [SitovaTonttijako](../../looginenmalli/dokumentaatio/#sitovatonttijako)-luokan attribuutilla ```sitovanTonttijaonTunnus```.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-sitovan-tonttijaontunnus-gen" %}
-Tuottava tietojärjestelmän vastaa tonttijakosuunnitelmatunnuksen asettamisesta [SitovaTonttijako](../../looginenmalli/dokumentaatio/#SitovaTonttijako)-luokan attribuutiksi. Se tulee olla asetettuna myös sitovan tonttijaon ensimmäisen sitovan tonttijaon tietovarastoon tallennuksen yhteydessä.
+Tuottava tietojärjestelmän vastaa tonttijakosuunnitelmatunnuksen asettamisesta [SitovaTonttijako](../../looginenmalli/dokumentaatio/#sitovatonttijako)-luokan attribuutiksi. Se tulee olla asetettuna myös sitovan tonttijaon ensimmäisen sitovan tonttijaon tietovarastoon tallennuksen yhteydessä.
 {% include common/clause_end.html %}
 
-{% include common/clause_start.html type="req" id="elinkaari/vaat-sitovan-tonttijaontunnus-yks" %}
+{% include common/clause_start.html type="req" id="elinkaari/vaat-sitovan-tonttijaon-tunnus-yks" %}
 Sitovan tonttijaon tunnus on [SitovaTonttijako](../../looginenmalli/dokumentaatio/#tonttijakosuunnitelma)-luokan objekteille globaalisti yksilöivä, eikä muutu saman sitovan tonttijaon eri elinkaaren aikaisten versioiden tallennuksen yhteydessä.
 {% include common/clause_end.html %}
 

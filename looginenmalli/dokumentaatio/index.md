@@ -260,13 +260,13 @@ Kuvaa käsitteen Sitova tonttijako, erikoistaa luokkaa AbstraktiMaankayttoasia, 
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-laji | [Codelist](#sitovantonttijaonlaji) | 1  | kertoo, millainen tonttijakosuunnitelma on laadittu
+laji | [Codelist](#sitovantonttijaonlaji) | 1  | kertoo, millainen sitova tonttijako on laadittu
 sitovanTonttijaonTunnus  | [CharacterString](#CharacterString) | 1 | yksilöivä ID
-elinkaarentila | [Codelist](#sitovantonttijaonElinkaarentila) | 1 | yleisimmät arvot vireillä oleva,  hyväksytty tai voimassa
-kumoutumistieto | [SitovanTonttijaonKumoutumistieto](#SitovanTonttijaonKumoutumistieto) | 0..* | sitovan tonttijaon tai sen osa, jonka tämä tonttijakosuunnitelma kumoaa
+elinkaarentila | [Codelist](#sitovantonttijaonelinkaarentila) | 1 | yleisimmät arvot vireillä oleva,  hyväksytty tai voimassa
+kumoutumistieto | [SitovanTonttijaonKumoutumistieto](#sitovantonttijaonkumoutumistieto) | 0..* | sitovan tonttijaon tai sen osa, jonka tämä tonttijakosuunnitelma kumoaa
 vireilletuloAika | [TM_Instant](#TM_Instant) | 0..1 | aika, jolloin sitova tonttijako on tullut vireille
 hyvaksymisAika | [TM_Instant](#TM_Instant) | 0..1 | aika, jolloin sitova tonttijako on tullut virallisesti hyväksyttyä
-digitaalinenAlkupera | [DigitaalinenAlkupera](#DigitaalinenAlkupera) | 0..1 | luokittelu alunperin tietomallin mukaan luotuihin ja jälkeenpäin digitoituihin sitoviin tonttijakoihin
+digitaalinenAlkupera | [DigitaalinenAlkupera](#digitaalinenalkupera) | 0..1 | luokittelu alunperin tietomallin mukaan luotuihin ja jälkeenpäin digitoituihin sitoviin tonttijakoihin
 
 AbstraktiMaankayttoasia-luokasta peritytyvä attribuutti aluerajauus kuvaa sitovan tonttijaon suunnittelualueen.
 
@@ -286,7 +286,7 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 nimi | [CharacterString](#CharacterString) | 1  | laatijan nimi
 nimike | [LanguageString](#LanguageString) | 0..*  | ammatti- tai virkanimike
 
-### Abstraktikaavakohde
+### RakennetunYmpäristönKohde
 
 Erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
 
@@ -294,10 +294,10 @@ Kaikkien sitovaan tonttijakoon liittyvien paikkatietokohteiden yhteinen abstrakt
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-arvo | [Abstraktiarvo](#Abstraktiarvo) | 0..1  | tonttijakotontin tunnusarvo tai rajapisteen numero
 geometria | [geometry](#geometry) | 0..1  | tonttijakotontin sijainti
-kohteenPinta-ala | [Number](#Number) | 0..*  | esitontin pinta-ala tai kolmiulotteisen tonttijakotontin projisoitu pinta-ala
-pystysuunteinenRajaus | [Korkeusvali](#Korkeusvali) | 0..1  | kolmiulotteisen tonttijakotontin ylin ja alin korkeus merenpinnasta
+pystysuunteinenRajaus | [Korkeusvali](#Korkeusvali) | 0..1  | kolmiulotteisen tonttijakotontin ylin ja alin korkeus
+rinnakkainenTunnus | [Tunnusarvo](#Tunnusarvo) | 0..*  | tonttijakotontin tunnusarvo tai rajapisteen numero
+nimi | [LanguageString](#LanguageString) | 0..*  | tonttijakotontin mahdollinen nimi
 
 **Assosiaatiot**
 
@@ -311,9 +311,10 @@ Kuvaa käsitteen Tonttijakotontti, erikoistaa luokkaa AbstraktiKaavakohde, stere
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-suhdePeruskiinteistoon | [suhdePeruskiinteistoon](#suhdePeruskiinteistoon) | 0..1  | luokittelu esitonttikohteen sijoittumisesta suhteessa peruskiinteistöön, joka merkitään vain 3D-esitonttikohteelle
-elinkaarentila | [SitovanTonttijaonElinkaarentila](#SitovanTonttijaonElinkaarentila) | 1  | 
+suhdePeruskiinteistoon | [suhdePeruskiinteistoon](#suhdeperuskiinteistoon) | 0..1  | luokittelu esitonttikohteen sijoittumisesta suhteessa peruskiinteistöön, joka merkitään vain 3D-esitonttikohteelle
+elinkaarentila | [SitovanTonttijaonElinkaarentila](#aitovantonttijaonelinkaarentila) | 1  | 
 muodostustieto | [Muodostajakiinteisto](#muodostajakiinteisto) | 1..* | tieto muodostajakiinteistöistä, josta/joista tonttijakotontti muodostetaan
+pintaAla | [Number](#Number) | 0..*  | tonttijakotontin pinta-ala tai kolmiulotteisen tonttijakotontin projisoitu pinta-ala
 kaavatilannetieto | [Kaavatilannetieto](#kaavatilannetieto) | 1..* | tieto tonttijakotonttiin liittyvistä asemakaavoista ja niiden vaikutuksista
 rakennettu | [boolean](#boolean) | 0..1 | tieto muun muassa rakentamattomasta rakennuspaikasta korotettua kiinteistöverotusta varten, onko tonttijakotontti rakennettu asemakaavan mukaisesti. Lisäksi tämän tiedon perusteella saadaan tieto kunnan kaavavarannosta.
 rakennuskielto | [boolean](#boolean) | 0..1 | kuvaa, onko tonttijakotontilla rakennuskielto
@@ -324,7 +325,7 @@ voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aikaväli, jona asiasta tehty
 
 Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
 -----------------|--------------------|---------------------|----------
-maarays | [Kaavamaarays](#Kaavamaarays) | 0..* | kaavaan sisältyvä sanallinen määräys, jolla ohjataan alueiden suunnittelua ja rakentamista
+maarays | [Kaavamaarays](#kaavamaarays) | 0..* | kaavaan sisältyvä sanallinen määräys, jolla ohjataan alueiden suunnittelua ja rakentamista
 
 ### Muodostajakiinteistö
 
@@ -346,7 +347,7 @@ Tieto esitonttiin liittyvistä asemakaavoista ja niiden vaikutuksista.
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 kaavaTunnus | [URI](#URI) | 1  | kaavatunnus, joka muuttaa tonttijakotontin kaavamääräyksiä tai kumoaa tonttijakotontin
-kaavayksikönMuutostieto | [KaavayksikönMuutostieto](#KaavayksikönMuutostieto) | 1 | alueiden käytön ohjaustarpeeseen, kaavan sisältövaatimuksiin, prosessiin ja vastuulliseen hallintoviranomaiseen perustuva luokittelu
+kaavayksikönMuutostieto | [KaavayksikönMuutostieto](#kaavayksikönmuutostieto) | 1 | alueiden käytön ohjaustarpeeseen, kaavan sisältövaatimuksiin, prosessiin ja vastuulliseen hallintoviranomaiseen perustuva luokittelu
 kumoaaTonttijakotontin | [boolean](#boolean) | 1 | jos arvo on true, kaava kumoaa tonttijakotontin kokonaan
 
 ### Kaavamääräys
@@ -382,7 +383,7 @@ kumoutuvanTonttijakotontinTunnus | [URI](#URI) | 0..*  | tonttijakotontti, johon
 
 #### SitovanTonttijaonLaji
 
-Englanninkielinen nimi: PlotPlanKind
+Englanninkielinen nimi: PlotDivisionKind
 
 Stereotyyppi: CodeList (koodisto)
 
@@ -392,7 +393,7 @@ Laajennettavuus: Ei laajennettavissa
 
 #### SitovanTonttijaonElinkaarentila
 
-Englanninkielinen nimi: PlotPlanLifeCycleState
+Englanninkielinen nimi: PlotDivisionLifeCycleState
 
 Stereotyyppi: CodeList (koodisto)
 
@@ -402,7 +403,7 @@ Laajennettavuus: Ei laajennettavissa
 
 #### SitovaonTonttijaonAsiakirjanLaji
 
-Englanninkielinen nimi: PlotPlanDocumentType
+Englanninkielinen nimi: PlotDivisionDocumentType
 
 Stereotyyppi: CodeList (koodisto)
 
@@ -425,7 +426,7 @@ Laajennettavuus: Ei laajennettavissa
 <!--Lisää sisäinen linkki? -->
 Erikoistaa luokkaa AbstraktiVuorovaikutustapahtumanLaji. 
 
-Englanninkielinen nimi: PlotPlanPublicParticipationEventKind
+Englanninkielinen nimi: PlotDivisionPublicParticipationEventKind
 
 Stereotyyppi: CodeList (koodisto)
 
@@ -438,7 +439,7 @@ Laajennettavuus: Ei laajennettavissa
 <!--Lisää sisäinen linkki? -->
 Erikoistaa luokkaa AbstraktiKasittelytapahtumanLaji. 
 
-Englanninkielinen nimi: PlotPlanHandlingEventKind
+Englanninkielinen nimi: PlotDivisionHandlingEventKind
 
 Stereotyyppi: CodeList (koodisto)
 
@@ -447,7 +448,7 @@ Laajennettavuus: Ei laajennettavissa
 #### KaavayksikönMuutostieto
 
 <!--Lisää sisäinen linkki? -->
-Englanninkielinen nimi: PlanUnit
+Englanninkielinen nimi: PlanUnitChangeInform
 
 Stereotyyppi: CodeList (koodisto)
 
