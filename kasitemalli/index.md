@@ -1,6 +1,6 @@
 ---
 layout: "default"
-title: "Tonttijakosuunnitelma - käsitemalli"
+title: "Sitovan tonttijaon - käsitemalli"
 description: ""
 id: "kasitemalli"
 status: "Luonnos"
@@ -12,48 +12,52 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sa
 1. 
 {:toc}
 
-## Graafinen käsitekaavio
-![Tonttijakosuunnitelma graafisena käsitekaaviona](kasitemalli.png "Graafinen käsitekaavio tonttijakosuunnitelmasta (Neo4j)")
-
-(Lataa [käsitekaavio määritelmien kanssa](kasitekaavio_selitteet.png))
+## käsitekaavio
+![Sitova tonttijako käsitekaaviona (UML)](kasitemalli.png)
 
 ## Käsitteet
 
-### Tonttijakosuunnitelma
-{% include common/definitionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-0" name="tonttijakosuunnitelma" def="maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen yksityiskohtaiseksi ohjaamiseksi." %}
+### Sitova tonttijako
+{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-0" name="tonttijako" def="maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen yksityiskohtaiseksi ohjaamiseksi." %}
 
-### Esitonttikohde
-{% include common/definitionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-6" name="esitonttikohde" def="tonttijakosuunnitelmaan sisältyvä aluemainen (esitontti) tai pistemäinen kohde (esitontin rajapiste)" %}
+### Tonttijakotontti
+{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-1" name="esitontti" def="sitovassa tonttijaossa osoitettu aluemainen kohde kiinteistöjaotuksen ohjaamiseksi." %}
 
-### Esitontti
-{% include common/definitionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-1" name="esitontti" def="tonttijakosuunnitelmassa osoitettu aluemainen kohde kiinteistöjaotuksen ohjaamiseksi." %}
-
-### Esitontin rajapiste
-{% include common/definitionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-12" name="esitontin rajapiste" def="tonttijakosuunnitelmassa osoitettu pistemäinen kohde, joka kuvaa kiinteistönmuodostustoimituksessa osoitettavaa rajapistettä tai rajamerkkiä." %}    
+### Rajapiste
+{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-12" name="esitontin rajapiste" def="sitovassa tonttijaossa osoitettu pistemäinen kohde, joka kuvaa kiinteistönmuodostustoimituksessa osoitettavaa rajapistettä tai rajamerkkiä." %}    
 
 ### Tonttijakosuunnitelman viiteasiakirja
-{% include common/definitionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-2" name="tonttijakosuunnitelman viiteasiakirja" def="tonttijakosuunnitelmaan liittyvä asiakirja." %}
+{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-2" name="sitovan tonttijaon viiteasiakirja" def="sitovaan tonttijakoon liittyvä asiakirja." %}
 
 ### Käsittelytapahtuma
-{% include common/definitionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-3" name="tonttijakosuunnitelman käsittelytapahtuma" def="tonttijakosuunnitelman käsittelyprosessiin kuuluva tapahtuma, jonka johdosta elinkaaren tila voi muuttua." %}
+{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-3" name="sitovan tonttijaon käsittelytapahtuma" def="sitovan tonttijaon käsittelyprosessiin kuuluva tapahtuma, jonka johdosta elinkaaren tila voi muuttua." %}
 
 ### Vuorovaikutustapahtuma
-{% include common/definitionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-4" name="tonttijakosuunnitelman vuorovaikutustapahtuma" def="tonttijakosuunnitelmaprosessiin kuuluva tapahtuma, jonka tarkoituksena on tarjota tonttijakosuunnitelman asianosaiselle mahdollisuus lausua mielipiteensä ehdotuksesta." %}
+{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-4" name="sitovan tonttijaon vuorovaikutustapahtuma" def="sitovaan tonttijakoon kuuluva tapahtuma, jonka tarkoituksena on tarjota sitovan tonttijaon asianosaiselle mahdollisuus lausua mielipiteensä ehdotuksesta." %}
 
-### Tonttijakosuunnitelman kumoutumistieto
-{% include common/definitionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-5" name="tonttijakosuunnitelman kumoutumistieto" def="tieto tonttijakosuunnitelman hyväksymisen johdosta kokonaisuudessaan kumoutuvasta tonttijakosuunnitelmasta tai tonttijakosuunnitelman kumoutuvasta esitontista." %}
+### Sitovan tonttijaon kumoutumistieto
+{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-5" name="sitovan tonttijaon kumoutumistieto" def="tieto sitovan tonttijaon hyväksymisen johdosta kokonaisuudessaan kumoutuvasta sitovasta tonttijaosta tai sitovan tonttijaon kumoutuvasta tonttijakotontista." %}
+
+### Muodostajakiinteistö
+{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-11" name="tonttijakotontin muodostajakiinteistö" def="tieto muodostajakiinteistöistä tai -määräaloista, josta tonttijakotontti muodostetaan." %}
 
 ### Kaavatilannetieto
-{% include common/definitionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-10" name="esitontin kaavatilannetieto" def="tieto esitonttiin liittyvistä asemakaavoista ja niiden vaikutuksista." %}
+{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-10" name="tonttijakotontin kaavatilannetieto" def="tieto tonttijakotonttiin liittyvistä asemakaavoista ja niiden vaikutuksista." %}
 
-### Muodostustieto
-{% include common/definitionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-11" name="esitontin muodostustieto" def="tieto muodostajakiinteistöistä, josta esitontti muodostetaan." %}
+### Sitovan tonttijaon tietovarasto
+{% include common/definitionref.html dict="rytj-tjs" dictname="Sitova tonttijako" id="concept-7" name="sitovan tonttijaon tietovarasto" def="tietojärjestelmä, jonka tehtävänä on vastaanottaa, säilyttää ja jaella tietomallimuotoista sitovan tonttijaon tietoa laatu- ja elinkaarisääntöjen mukaisesti." %}
 
-### Esitonttitietovarasto
-{% include common/definitionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-7" name="esitonttitietovarasto" def="tietojärjestelmä, jonka tehtävänä on vastaanottaa, säilyttää ja jaella tietomallimuotoista tonttijakosuunnitelmatietoa laatu- ja elinkaarisääntöjen mukaisesti." %}
+### Kaavakohde
+{% include common/definitionref.html dict="rytj-kaava" dictname="Kaavatietomalli" id="concept-1010" name="kaavakohde" def="kaavaan sisältyvä aluerajaus tai kohde, jonka alueella maankäyttöä tai rakentamista halutaan ohjata." %}
 
 ### Kaavamääräys
 {% include common/definitionref.html dict="rytj-kaava" dictname="Kaavatietomalli" id="concept-1010" name="kaavamääräys" def="kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
+
+### Kaavayksikkö
+{% include common/definitionref.html dict="rytj-kaava" dictname="Kaavatietomalli" id="concept-1010" name="kaavayksikkö" def="on aluemainen kaavakohde, joiden yhdistelmä peittää asemakaavan alueen kokonaisuudessaan." def="Huomautus: Kaavayksikkö voi olla sitovan tonttijaon mukainen tontti, ohjeellinen kaavan mukainen tontti, yleinen alue tai muu asemakaavassa osoitettu kortteli tai korttelinosa." def="Huomautus: Kaavayksikkö kuvaa mm. tiedon kaavan käyttötarkoituksesta, rakentamisen määrästä sekä muodostajakiinteistöistä."def="Huomautus: Kaavayksikkö on tekninen apuväline asemakaavan ja kiinteistönmuodostuksen välillä." %}
+
+### Kaavayksikön muutostieto
+{% include common/definitionref.html dict="rytj-tjs" dictname="Kaavatietomalli" id="concept-10" name="kaavayksikön muutostieto" def="kuvaa asemakaavan muutoksen mahdolliset lajit." def="Huomautus: def="Lähde: perustuu JHS 135 kaavalaji-luokitteluun." %}
 
 ### Arvo
 {% include common/definitionref.html dict="rytj-kaava" dictname="Kaavatietomalli" id="concept-1011" name="ominaisuuden arvo" def="kaavamääräystä tarkentava arvo." %}
