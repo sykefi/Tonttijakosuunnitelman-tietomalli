@@ -333,31 +333,29 @@ Tonttijakotonteille tulee yksilöidä sitovassa tonttijaossa siihen liittyvät h
 {% include common/clause_start.html type="req" id="elinkaari/vaat-kaavayksikön-muutostieto-vaikutus" %}
 Asemakaavan muutoksen tai vaiheasemakaavan hyväksyminen tonttijakotontin alueella, edellyttää uuden tallennusversion luomista tonttijakotontista ja [KaavayksikönMuutostieto-datatyypin](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```muutoslaji```-attribuutin arvoksi tulee asettaa hyväksytyn kaavan KaavayksikönMuutosLaji-koodi.
 
-Asemakaavan määräysten muuttuessa asetetaan kaavatietomallin uuden [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tonttijakosuunnitelman tietomallin [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) ```liittyvanKaavamaarayksenTunnus```-attribuutin arvoksi. Lisäksi [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tallennetaan esitonttikohteen uudelle tallennusversiolle.<!-- Tällöin esitonttikohteen versiolla voi olla voimassa olevan asemakaavan ja luonnosvaiheessa olevan asemakaavan määräyksiä. Kun asemakaava tulee voimaan, tallennetaan esitonttikohteesta uusi tallennusversio, jolla vain uudet asemakaavan määräykset.-->
+Asemakaavan määräysten muuttuessa asetetaan kaavatietomallin uuden [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus sitovan tonttijaon tietomallin [Tonttijakotontti-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) ```toteuttavaKaavamääräys```-attribuutin arvoksi uudelle tallennusversiolle. <!-- Tällöin esitonttikohteen versiolla voi olla voimassa olevan asemakaavan ja luonnosvaiheessa olevan asemakaavan määräyksiä. Kun asemakaava tulee voimaan, tallennetaan esitonttikohteesta uusi tallennusversio, jolla vain uudet asemakaavan määräykset.-->
 
-Asemakaavan määräysten muuttuessa tulee tulkita tonttijakosuunnitelman kaavan mukaisuus. Jos tonttijakosuunnitelma ei ole asemakaavan mukainen, tulee tonttijakosuunnitelman sisältämät ei kaavan mukaiset esitonttikohteet asettaa rakennuskieltoon, kun asemakaava hyväksytään. Kaavakohteen rajojen muutos  asettaa esitonttikohteen aina rakennuskieltoon:
+Asemakaavan määräysten muuttuessa tulee tulkita sitovan tonttijaon kaavan mukaisuus. Tämä voidaan selvittää kaavatietomallin [Kaavayksikkö]-luokan ```kaavayksikönMuutos```-attribuutilta. Jos sitova tonttijako ei ole asemakaavan mukainen, tulee sitovan tonttijaon sisältämät ei kaavan mukaiset tonttijakotontit asettaa rakennuskieltoon, kun asemakaava hyväksytään. Kaavakohteen rajojen muutos  asettaa tonttijakotontin aina rakennuskieltoon:
 
 - ```rakennuskielto```-attribuutin arvoksi asetetaan true.
 
-Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden tonttijakosuunnitelman laatimista niiltä osin, mitä esitonttikohteita rakennuskielto koskee.
+Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden sitovan tonttijaon laatimista niiltä osin, mitä tonttijakotontteja rakennuskielto koskee.
 {% include common/clause_end.html %}
 
-{% include common/note.html content="Kaavan kaavalaji-koodia ei ole toistaiseksi olemassa. Elinkaarenhallinnan näkökulmasta merkittävimmät kaavalajit voisi olla: ensimmäinen asemakaava, asemakaavan määräysten muutos ja asemakaavan rajojen muutos. " %}
-
-{% include common/clause_start.html type="req" id="elinkaari/vaat-kumoaa-esitonttikohteen" %}
-Jos asemakaavalla esitontin rajat muuttuvat kokonaan tai osittain yleiseksi alueeksi, kumoaa asemakaava esitonttikohteen. Näin esitonttikohde muuttuu ei-kortteliksi, ja kumoaminen tonttijakosuunnitelmalla ei olisi mahdollista. [Kaavatilannetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) kumoaa-attribuutin arvoksi asetetaan true. Esitonttikohteesta ei luoda uutta versiota, vaan:
+{% include common/clause_start.html type="req" id="elinkaari/vaat-kumoaa-tonttijakotontin" %}
+Jos asemakaavalla tonttijakotontin rajat muuttuvat kokonaan tai osittain yleiseksi alueeksi, kumoaa asemakaava tonttijakotontin. Näin tonttijakotontti muuttuu ei-kortteliksi, ja kumoaminen sitovalla tonttijaolla ei olisi mahdollista. [KaavayksikönMuutostieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) kumoaaTonttijakotontin-attribuutin arvoksi asetetaan true. Tonttijakotontista ei luoda uutta versiota, vaan:
 
 - ```elinkaarentila```-attribuutin arvoksi asetetaan **kumoutunut**.
 - ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin kaavan ```voimassaoloAika```-attribuutin alkamisaika.
 
-Tämä edellyttää uuden tonttijakosuunnitelman laatimista kumotun esitonttikohteen alueelle.
+Tämä edellyttää uuden sitovan tonttijaon laatimista kumotun tonttijakotontin alueelle.
 {% include common/clause_end.html %}
 
-## Tonttijakosuunnitelman elinkaaren vaiheet ja elinkaaritila-attribuutin käyttötavat
+## Sitovan tonttijaon elinkaaren vaiheet ja elinkaaritila-attribuutin käyttötavat
 
-Tonttijakosuunnitelman ja sen sisältämien esitonttikohteiden elinkaareen liittyvää tilaa hallitaan ko. tietokohteiden elinkaaritila-attribuutin ja sen mahdolliset arvot kuvaavan Elinkaaren tila-koodiston avulla. Tonttijakosuunnitelma- ja  Esitonttikohde-luokkien elinkaaritila-attribuutit ovat pakollisia.
+Sitovan tonttijaon ja sen sisältämien tonttijakotonttien elinkaareen liittyvää tilaa hallitaan ko. tietokohteiden elinkaaritila-attribuutin ja sen mahdolliset arvot kuvaavan Elinkaaren tila-koodiston avulla. [SitovaTonttijako]- ja [Tonttijakotontti]-luokkien elinkaaritila-attribuutit ovat pakollisia.
 
-**Elinkaaren tila**-koodisto kuvaa 9 mahdollista tilaa, joissa tonttijakosuunnitelma voi olla sen elinkaaren eri vaiheissa:
+**Elinkaaren tila**-koodisto kuvaa 9 mahdollista tilaa, joissa sitova tonttijako voi olla sen elinkaaren eri vaiheissa:
 
 - Vireillä
 - Luonnos
@@ -371,21 +369,21 @@ Tonttijakosuunnitelman ja sen sisältämien esitonttikohteiden elinkaareen liitt
 
 {% include common/question.html content="Mitkä ovat Kumottu- ja Kumoutunut-tilojen tarkat määritelmät ja erot?" %}
 
-Tonttijakosuunnitelmien, joiden elinkaaritila on Vireillä, Luonnos, Ehdotus, Hyväksytty laadinta- ja päätösprosessi on kesken, eli niiden esitonttikohteet eivät (vielä) ole lainvoimaisia. Tonttijakosuunnitelma, jotka ovat elinkaaritilassa Voimassa,  Kumottu osittain tai Kumoutunut osttain, sisältävät nykyajanhetkellä rajaamallaan alueella voimassa olevia esitonttikohteita. Koodit Kumottu kokonaan ja Kumoutunut kokonaan kuvaavat tonttijakosuunnitelman tiloja, joissa olevan tonttijakosuunnitelman elinkaari on päättynyt.
+Sitovien tonttijakojen, joiden elinkaaritila on Vireillä, Luonnos, Ehdotus, Hyväksytty laadinta- ja päätösprosessi on kesken, eli niiden tonttijakotontit eivät (vielä) ole lainvoimaisia. Sitovat tonttijaot, jotka ovat elinkaaritilassa Voimassa,  Kumottu osittain tai Kumoutunut osttain, sisältävät nykyajanhetkellä rajaamallaan alueella voimassa olevia tonttijakotontteja. Koodit Kumottu kokonaan ja Kumoutunut kokonaan kuvaavat sitovan tonttijaon tiloja, joissa olevan sitovan tonttijaon elinkaari on päättynyt.
 
-### Sallitut tonttijakosuunnitelman elinkaaren tilan muutokset
+### Sallitut sitovan tonttijaon elinkaaren tilan muutokset
 
-Tonttijakosuunnitelman elinkaaritila voi sen laadinta-, päätös-, valitus-, voimassaolo- ja kumoutumisvaiheidensa esiintyä ja muuttua vain tässä luvussa kuvatuilla tavoilla.
+Sitovan tonttijaon elinkaaritila voi sen laadinta-, päätös-, valitus-, voimassaolo- ja kumoutumisvaiheidensa esiintyä ja muuttua vain tässä luvussa kuvatuilla tavoilla.
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-ensimmainen-elinkaaritila" %}
-Tonttijakosuunnitelman elinkaaritila tallennettaessa tonttijakosuunnitelmaa ensimmäistä kertaa tonttijakosuunnitelmatietovarastoon voi olla jokin seuraavista riippuen Tonttijakosuunnitelman ```digitaalinenAlkupera```-attribuutin arvosta:
+Sitovan tonttijaon elinkaaritilaa tallennettaessa ensimmäistä kertaa sitovan tonttijaon tietovarastoon, riippuen sitovan tonttijaon ```digitaalinenAlkupera```-attribuutin arvosta:
 
-- **Tietomallin mukaan laadittu**: tilat Vireillä, Luonnos, Ehdotus, Hyväksytty, Voimassa tonttijakosuunnitelma.
-- **Kokonaan digitoitu**, **Osittain digitoitu** tai **Tonttijakosuunnitelman rajaus digitoitu**: tilat Voimassa, Kumottu osittain, Kumottu, Kumoutunut osittain, Kumoutunut
+- **Tietomallin mukaan laadittu**: tilat Vireillä, Luonnos, Ehdotus, Hyväksytty, Voimassa sitova tonttijako.
+- **Kokonaan digitoitu**, **Osittain digitoitu** tai **Sitovan tonttijaon rajaus digitoitu**: tilat Voimassa, Kumottu osittain, Kumottu, Kumoutunut osittain, Kumoutunut
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-elinkaaritila-siirtymat" %}
-Tonttijakosuunnitelman ```elinkaaritila```-attribuutin arvo voi kahden sen peräkkäisen tallennusversion välillä vain seuraavilla tavoilla:
+Sitovan tonttijaon ```elinkaaritila```-attribuutin arvo voi kahden sen peräkkäisen tallennusversion välillä vain seuraavilla tavoilla:
 
 - Tilasta ```Vireillä``` tilaan ```Ehdotus```, ```Hyväksytty```.
 - Tilasta ```Hyväksytty``` tilaan ```Voimassa```, ```Kumottu osittain```, ```Kumottu kokonaan```, ```Kumoutunut osittain``` tai ```Kumoutunut kokonaan```.
@@ -394,38 +392,38 @@ Tonttijakosuunnitelman ```elinkaaritila```-attribuutin arvo voi kahden sen perä
 - Tilasta ```Kumoutunut``` ei ole sallittuja siirtymiä.
 {% include common/clause_end.html %}
 
-### Esitonttikohteen elinkaaren tila
+### Tonttijakotontin elinkaaren tila
 
-Tavallisesti tonttijakosuunnitelman sisältämien esitonttikohteiden elinkaaritilan arvo on sama kuin koko tonttijakosuunnitelmalla, mutta ne voivat erota toisistaan kahdessa tapauksessa:
+Tavallisesti sitovan tonttijaon sisältämien tonttijakotonttien elinkaaritilan arvo on sama kuin kokonaan sitovalla tonttijaolla, mutta ne voivat erota toisistaan kahdessa tapauksessa:
 
-- Tonttijakosuunnitelman Kumottu osittain tai Kumoutunut osittain tapauksessa osa esitonttikohteista voidaan kumota
-- Kaavamuutoksen tai vaihekaavan voimaantulo aiheuttaa siinä kumottaviksi esitonttikohteita
+- Sitovan tonttijaon Kumottu osittain tai Kumoutunut osittain tapauksessa osa tonttijakotonteista voidaan kumota
+- Kaavamuutoksen tai vaihekaavan voimaantulo aiheuttaa siinä kumottaviksi tonttijakotontteja
 
- (ks. Tonttijakosuunnitelman kumoutuminen ja kumoaminen)
+ (ks. Sitovan tonttijaon kumoutuminen ja kumoaminen)
 
-### Tonttijakosuunnitelman elinkaaritilan muutoksiin liittyvät käsittely- ja vuorovaikutustapahtumat
+### Sitovan tonttijaon elinkaaritilan muutoksiin liittyvät käsittely- ja vuorovaikutustapahtumat
 
- Kun tonttijakosuunnitelmasta viedään tonttijakosuunnitelmatietovarastoon uusi versio, jossa sen elinkaaritila on muuttunut, liittyy kyseisen tonttijakosuunniteman version syntymiseen tyypillisesti jokin käsittelytapahtuma.
+ Kun sitovasta tonttijaosta viedään sitovan tonttijaon varastoon uusi versio, jossa sen elinkaaritila on muuttunut, liittyy kyseisen sitovan tonttijaon version syntymiseen tyypillisesti jokin käsittelytapahtuma.
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-elinkaaritilan-muutostapahtumat" %}
-Tonttijakosuunnitelman ```elinkaaritila```-attribuutin arvon seuraaviin muutoksiin tulee aina liittyä **Kasittelytapahtuma**, jonka ```laji```-attribuutin arvo tulee olla elinkaarimuutosta vastaava:
+Sitovan tonttijaon ```elinkaaritila```-attribuutin arvon seuraaviin muutoksiin tulee aina liittyä **Kasittelytapahtuma**, jonka ```laji```-attribuutin arvo tulee olla elinkaarimuutosta vastaava:
 
-- Muutos tilaan **Vireillä**: Liityttävä käsittelytapahtuman laji Tonttijakosuunnitelman virelletulo.
-- Muutos tilaan **Ehdotus**: Liityttävä käsittelytapahtuman laji Tonttijakosuunnitelman ehdotuksen nähtäville asettaminen.
-- Muutos tilaan **Hyväksytty**: Liityttävä käsittelytapahtuman laji Tonttijakosuunnitelman hyväksyminen.
-- Muutos tilaan **Voimassa**: Liityttävä käsittelytapahtuman laji Tonttijakosuunnitelman voimaantulo.
-- Muutos tilaan **Kumoutunut osittain**: Liityttävä käsittelytapahtuman laji Tonttijakosuunnitelman kumoutuminen.
-- Muutos tilaan **Kumoutunut kokonaan**: Liityttävä käsittelytapahtuman laji Tonttijakosuunnitelman kumoutuminen.
+- Muutos tilaan **Vireillä**: Liityttävä käsittelytapahtuman laji sitovan tonttijaon virelletulo.
+- Muutos tilaan **Ehdotus**: Liityttävä käsittelytapahtuman laji sitovan tonttijaon ehdotuksen nähtäville asettaminen.
+- Muutos tilaan **Hyväksytty**: Liityttävä käsittelytapahtuman laji sitovan tonttijaon hyväksyminen.
+- Muutos tilaan **Voimassa**: Liityttävä käsittelytapahtuman laji sitovan tonttijaon voimaantulo.
+- Muutos tilaan **Kumoutunut osittain**: Liityttävä käsittelytapahtuman laji sitovan tonttijaon kumoutuminen.
+- Muutos tilaan **Kumoutunut kokonaan**: Liityttävä käsittelytapahtuman laji sitovan tonttijaon kumoutuminen.
 {% include common/clause_end.html %}
 
-Yllä luetellut käsittelytapahtumat tulee tallentaa samaan aikaan elinkaaritilaltaan muuttuneen tonttijakosuunnitelman kanssa.
+Yllä luetellut käsittelytapahtumat tulee tallentaa samaan aikaan elinkaaritilaltaan muuttuneen sitovan tonttijaon kanssa.
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-ehdotuksen-nahtavilleasettaminen" %}
-Tonttijakosuunnitelman ```elinkaaritila```-attribuutin arvon muuttuminen arvosta Ehdotus arvoon Hyväksytty vaatii, että tonttijakosuunnitelmatietovarastossa on sekä Kasittelytapahtuma lajia Ehdotuksen nähtäville asettaminen että Vuorovaikutustapahtuma lajia Nähtävilläolo, joista molemmat viittaavat johonkin ko. tonttijakosuunnitelman aiemmista Ehdotus-tilassa olevista versioista assosiaatiolla ```liittyvaAsia```. Vuorovaikutustapahtuman attribuutin ```tapahtumaAika``` tulee kuvata aikaväli, jonka aikana tonttijakosuunnitelman ehdotus on ollut nähtävillä.
+Sitovan tonttijaon ```elinkaaritila```-attribuutin arvon muuttuminen arvosta Ehdotus arvoon Hyväksytty vaatii, että sitovan tonttijaon tietovarastossa on sekä Kasittelytapahtuma lajia Ehdotuksen nähtäville asettaminen että Vuorovaikutustapahtuma lajia Nähtävilläolo, joista molemmat viittaavat johonkin ko. sitovan tonttijaon aiemmista Ehdotus-tilassa olevista versioista assosiaatiolla ```liittyvaAsia```. Vuorovaikutustapahtuman attribuutin ```tapahtumaAika``` tulee kuvata aikaväli, jonka aikana sitovan tonttijaon ehdotus on ollut nähtävillä.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="rec" id="elinkaari/suos-nahtavillaolopaikka" %}
-Mikäli tonttijakosuunnitelman ehdotus on nähtävillä tietyssä fyysisessä paikassa, on suositeltavaa ilmaista kyseisen paikan sijainti Vuorovaikutustapahtuma-luokan attribuutin ```sijainti```-attribuutin avulla.
+Mikäli sitovan tonttijaon ehdotus on nähtävillä tietyssä fyysisessä paikassa, on suositeltavaa ilmaista kyseisen paikan sijainti Vuorovaikutustapahtuma-luokan attribuutin ```sijainti```-attribuutin avulla.
 {% include common/clause_end.html %}
 
-Huomaa, että muutos tilaan Kumottu osittain, Kumottu kokonaan, Kumoutunut osittain,  Kumoutunut kokonaan voi liittyvä joko käsittelytapahtuman lajiin Tonttijakosuunnitelman kumoaminen tai kaavan kumoamiseen kaavamuutokseen tai vaihekaavan lainvoimaiseksi tulon yhteydessä.
+Huomaa, että muutos tilaan Kumottu osittain, Kumottu kokonaan, Kumoutunut osittain,  Kumoutunut kokonaan voi liittyvä joko käsittelytapahtuman lajiin sitovan tonttijaon kumoaminen tai kaavan kumoamiseen kaavamuutokseen tai vaihekaavan lainvoimaiseksi tulon yhteydessä.
