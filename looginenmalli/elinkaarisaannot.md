@@ -312,26 +312,26 @@ Kumoutumisessa tonttijakotontit kuvataan ensisijaisesti kumoattavanTonttijakoton
 
 <!-- Lisää tähän vielä sisäiset linkit kuntoon -->
 {% include common/clause_start.html type="req" id="elinkaari/vaat-tonttijakosuunnitelman-voimaantulo" %}
-Kun tonttijakosuunnitelman kumoutumisessa tallennetaan versio, jonka elinkaaritila-attribuutin arvo on Voimassa, tonttijakosuunnitelmatietovarasto päivittää niiden siinä kumoutuviksi asetettuja esitonttikohteita, joiden elinkaaritila-attribuutin arvo on Voimassa, attribuutteja seuraavasti luomatta niistä uusia versioita:
+Kun sitovan tonttijaon kumoutumisessa tallennetaan versio, jonka elinkaaritila-attribuutin arvo on Voimassa, itovan tonttijaon tietovarasto päivittää niiden siinä kumoutuviksi asetettuja tonttijakotontteja, joiden elinkaaritila-attribuutin arvo on Voimassa, attribuutteja seuraavasti luomatta niistä uusia versioita:
 
-- ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin uuden tonttijakosuuunnitelman ```voimassaoloAika```-attribuutin alkamisaika.
+- ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin uuden sitovan tonttijaon ```voimassaoloAika```-attribuutin alkamisaika.
 - ```elinkaaritila```-attribuutin arvoksi asetetaan Kumottu.
-- ```tallennusAika```-attribuutin arvoksi asetetaan ajanhetki, jolloin tonttijakosuunnitelma tallennettiin tonttijakosuunnitelmatietovarastoon elinkaaritilassa Voimassa.
+- ```tallennusAika```-attribuutin arvoksi asetetaan ajanhetki, jolloin sitova tonttijako tallennettiin sitovan tonttijaon tietovarastoon elinkaaritilassa Voimassa.
 {% include common/clause_end.html %}
 
-Tonttijakosuunnitelman tietomalli ei sisällä omaa tietorakennettaan ajantasaiselle tonttijakosuunnitelma-aineistolle, joka sisältää annetun alueella tietyllä ajanhetkellä voimassaolevat esitonttikohteet, huomioiden kaavamuutosten ja vaihekaavojen vaikutukset niiltä osin kun ne ovat ko. ajanhetkellä voimassa. Tällainen toiminnallisuus on kuitenkin aivan ilmeisesti yhteisen tonttijakosuunnitelmatietovaraston palveluna erittäin hyödyllinen. Esitonttikohteiden ```voimassaoloAika```-attribuutin arvojen avulla tällainen ajantasainen “Esitonttimatto” voidaan laskea mille tahansa ajanhetkelle, olettaen, että kaikki kyseisen alueen tonttijakosuunnitelmat on viety tonttijakosuunnitelmatietovarastoon tonttijakosuunnitelman tietomallin mukaisessa muodossa.
+Sitovan tonttijaon tietomalli ei sisällä omaa tietorakennettaan ajantasaiselle sitova tonttijako-aineistolle, joka sisältää annetun alueella tietyllä ajanhetkellä voimassaolevat tonttijakotontit, huomioiden kaavamuutosten ja vaihekaavojen vaikutukset niiltä osin kun ne ovat ko. ajanhetkellä voimassa. Tällainen toiminnallisuus on kuitenkin aivan ilmeisesti yhteisen sitovan tonttijaon tietovaraston palveluna erittäin hyödyllinen. Tonttijakotonttien ```voimassaoloAika```-attribuutin arvojen avulla tällainen ajantasainen “Tonttijakotonttimatto” voidaan laskea mille tahansa ajanhetkelle, olettaen, että kaikki kyseisen alueen sitovat tonttijaot on viety sitovan tonttijaon tietovarastoon sitovan tonttijaon tietomallin mukaisessa muodossa.
 
 ### Asemakaavan suhde tonttijakotonttiin
 
 <!-- Lisää sisäiset linkit-->
-Voimassaolevan tonttijakosuunnitelman esitonttikohde voi saada uuden version tai kumoutua kokonaan kaavamuutoksen tai vaiheasemakaavan voimaan tullessa esitonttikohteen alueella.
+Voimassaolevan sitovan tonttijaon tonttijakotontit voi saada uuden version tai kumoutua kokonaan kaavamuutoksen tai vaiheasemakaavan voimaan tullessa tonttijakotontin alueella.
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-kaavatunnus" %}
-Esitonttikohteille tulee yksilöidä tonttijakosuunnitelmassa siihen liittyvät hyväksytyt asemakaavat. Kutakin  esitonttikohdetta kohti tulee antaa yksi [Esitonttikohde-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#esitonttikohde) attribuutin ```kaavatilannetieto``` arvo tyyppiä Kaavatilannetieto, jonka ```kaavaTunnus```-attribuutin arvo on [Kaava-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaava) ```viittaustunnus```.
+Tonttijakotonteille tulee yksilöidä sitovassa tonttijaossa siihen liittyvät hyväksytyt asemakaavat. Kutakin tonttijakotonttia kohti tulee antaa yksi [Tonttijakotontti-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#tonttijakotontti) attribuutin ```kaavayksikönMuutostieto``` arvo tyyppiä KaavayksikönMuutostieto, jonka ```kaavaTunnus```-attribuutin arvo on [Kaava-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaava) ```viittaustunnus```.
 {% include common/clause_end.html %}
 
-{% include common/clause_start.html type="req" id="elinkaari/vaat-kaavalaji-vaikutus" %}
-Asemakaavan muutoksen tai vaiheasemakaavan hyväksyminen esitonttikohteen alueella, edellyttää uuden tallennusversion luomista esitonttikohteesta ja [Kaavatilannetieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```kaavalaji```-attribuutin arvoksi tulee asettaa hyväksytyn kaavan kaavalaji-koodi.
+{% include common/clause_start.html type="req" id="elinkaari/vaat-kaavayksikön-muutostieto-vaikutus" %}
+Asemakaavan muutoksen tai vaiheasemakaavan hyväksyminen tonttijakotontin alueella, edellyttää uuden tallennusversion luomista tonttijakotontista ja [KaavayksikönMuutostieto-datatyypin](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```muutoslaji```-attribuutin arvoksi tulee asettaa hyväksytyn kaavan KaavayksikönMuutosLaji-koodi.
 
 Asemakaavan määräysten muuttuessa asetetaan kaavatietomallin uuden [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tonttijakosuunnitelman tietomallin [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) ```liittyvanKaavamaarayksenTunnus```-attribuutin arvoksi. Lisäksi [Kaavamaarays-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus tallennetaan esitonttikohteen uudelle tallennusversiolle.<!-- Tällöin esitonttikohteen versiolla voi olla voimassa olevan asemakaavan ja luonnosvaiheessa olevan asemakaavan määräyksiä. Kun asemakaava tulee voimaan, tallennetaan esitonttikohteesta uusi tallennusversio, jolla vain uudet asemakaavan määräykset.-->
 
