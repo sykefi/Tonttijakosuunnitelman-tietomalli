@@ -36,7 +36,7 @@ Luokan AbstraktiKasittelytapahtumanLaji sijaan tulee käyttää tarkentavaa luok
 
 ## Toteuttavan kaavamääräyksen arvot
 
-{% include common/clause_start.html type="req" id="prof-tjs/vaat-liittyva-kaavamaarays-tunnus" %}
+{% include common/clause_start.html type="req" id="prof-tjs/vaat-toteuttava-kaavamaarays-tunnus" %}
 Sitovan tonttijaon tonttijakotonteihin liittyvät toteuttavat Kaavatietomallin kaavamääräykset linkitetään Kaavatietomallin Kaavamääräys-luokan viittaustunnuksella. Viittaustunnuksen URL-arvo annetaan sitovan tonttijako tietomallin Kaavamaarays-luokan ```toteuttavaKaavamääräys```-attribuutille. Sitovan tonttijaon Kaavamaarays-luokan osalta tulee noudattaa seuraavia rajoituksia:
 
 - ```toteuttavaKaavamääräys```-attribuutin arvoina saa esiintyä vain yksi viittaustunnus.

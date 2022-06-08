@@ -108,7 +108,7 @@ Aluemaiset geometriat toteuttavat ISO 19107 -standardin määrittelemän ```Surf
 Geometriakokoelmat toteuttavat ISO 19107 -standardin määrittelemän ```Collection```-rajapinnan. Monipiste (multipoint) -geometriat rakentuvat ```Point```-rajapinnan, moniviiva (multicurve) -geometriat ```Curve```-rajapinnan, monialue (multisurface) -geometriat ```Surface```-rajapinnan ja monikappale (multisolid) -geometriat ```Solid```-rajapinnan toteuttavista osista (```element```-attribuutti).
 {% include common/clause_end.html %}
 
-{% include common/note.html content="Tonttijakosuunnitelman tietomalli ei vaadi kaikkien ISO 19107 -standardin mukaisten geometriatyyppien tukemista. Tonttijakosuunnitelman tietomallin mukaiset fyysiset tietomallit voivat rajoittaa mahdollisia geometriatyyppejä ja niiden ominaisuuksia." %}
+{% include common/note.html content="Sitovan tonttijaon tietomalli ei vaadi kaikkien ISO 19107 -standardin mukaisten geometriatyyppien tukemista. Sitovan tonttijaon tietomallin mukaiset fyysiset tietomallit voivat rajoittaa mahdollisia geometriatyyppejä ja niiden ominaisuuksia." %}
 
 #### Sallitut koordinaatistot ja koordinaattijärjestys
 
@@ -217,18 +217,18 @@ Kaavatietovarastossa ei tule olla kahta [Kaava](dokumentaatio/#kaava)-luokan obj
 [Kaava](dokumentaatio/#kaava)-luokan objektilla, jonka [elinkaatila](http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaaritila) on  kumottu tai kumoutunut (koodi 11 tai 12), tulee olla annettu ei-tyhjä ```voimassaAika```-attribuutin loppuajanhetken arvo.
 {% include common/clause_end.html %}
 -->
-### Esitonttikohde
+### Tonttijakotontti
 
-{% include common/clause_start.html type="req" id="laatu/vaat-esitonttikohde-geometria" %}
-[Esitonttikohde](dokumentaatio/#esitonttikohde)-luokan objektin ```geometria```-attribuutin arvon tulee olla [piste](#laatu-vaat-geom-piste-maar), [alue](#laatu-vaat-geom-2d-alue-maar), [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar), [monialue tai monikappale](#laatu-vaat-geom-kokoelmat-maar).
+{% include common/clause_start.html type="req" id="laatu/vaat-tonttijakotontti-geometria" %}
+[Tonttijakotontti](dokumentaatio/#tonttijakotontti)-luokan objektin ```geometria```-attribuutin arvon tulee olla [piste](#laatu-vaat-geom-piste-maar), [alue](#laatu-vaat-geom-2d-alue-maar), [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar), [monialue tai monikappale](#laatu-vaat-geom-kokoelmat-maar).
 {% include common/clause_end.html %}
 
-{% include common/clause_start.html type="req" id="laatu/vaat-esitonttikohde-3d-konsistenssi" %}
-Mikäli [Esitonttikohde](dokumentaatio/#esitonttikohde)-luokan objektin ```geometria```-attribuutin arvo on [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar) tai [monikappale](#laatu-vaat-geom-kokoelmat-maar), ja sille on annettu ```pystysuuntainenRajaus```-attribuutti, tulee ```geometria```-attribuutin arvon sijaita pystysuuntaisen rajauksen määrittämien korkeuksien ala- ja ylärajojen väleissä. 
+{% include common/clause_start.html type="req" id="laatu/vaat-tonttijakotontti-3d-konsistenssi" %}
+Mikäli [Tonttijakotontti](dokumentaatio/#tonttijakotontti)-luokan objektin ```geometria```-attribuutin arvo on [3-ulotteinen kappale](#laatu-vaat-geom-3d-kappale-maar) tai [monikappale](#laatu-vaat-geom-kokoelmat-maar), ja sille on annettu ```pystysuuntainenRajaus```-attribuutti, tulee ```geometria```-attribuutin arvon sijaita pystysuuntaisen rajauksen määrittämien korkeuksien ala- ja ylärajojen väleissä. 
 {% include common/clause_end.html %}
 
-{% include common/clause_start.html type="req" id="laatu/vaat-paallekkaiset-esitonttikohteet" %}
-Tonttijakosuunnitelmatietovarastossa ei tule olla kahta [Esitonttikohde](dokumentaatio/#esitonttikohde)-luokan objektia, joiden
+{% include common/clause_start.html type="req" id="laatu/vaat-paallekkaiset-tonttijakotontit" %}
+Sitovan tonttijaon tietovarastossa ei tule olla kahta [Tonttijakotontti](dokumentaatio/#tonttijakotontti)-luokan objektia, joiden
 * ```voimassaoloAika```-attribuutin arvojen kuvaamat aikavälit ovat sisäkkäisiä tai lomittain, ja
 * ```geometria```- ja ```pystysuuntainenRajaus```-attribuuttien yhdessä kuvaavat geometriat leikaavat toisiaan tai ovat sisäkkäisiä.
 {% include common/clause_end.html %}

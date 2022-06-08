@@ -260,17 +260,17 @@ Kun sitovan tonttijaon tietokohteesta tallennetaan uusi muuttunut versio, tulee 
 
 Yksittäisen tietokohteen yksityiskohtainen muutoshistoria sitovan tonttijaon tietovarastossa saadaan seuraamalla sen ```korvattuObjektilla```- ja ```korvaaObjektin```-assosiaatioita. Ainoa muutos, joka ei näy tietokohteen omana versionaan, on kohteen kumoaminen, jolloin sen viimeisimmän version tietoja päivitetään sen elinkaaritilan, voimassaolon ja tallennusajan osalta.
 
-{% include common/question.html content="Pitääkö [AbstraktiVersioituObjekti](dokumentaatio/#abstraktiversioituobjekti)-luokalle lisätä attribuutti ```ensimmainenTallennusAika```, joka kertoo ko. version alkuperäisen tallennusajan? Kumoamisen yhteydessä ```tallennusAika```-attribuutin arvoa muutetaan, jolloin hukkuu tieto ko. version alkuperäisestä tallennusajankohdasta." %}
+{% include common/question.html content="Pitääkö [VersioituObjekti](dokumentaatio/#abstraktiversioituobjekti)-luokalle lisätä attribuutti ```ensimmainenTallennusAika```, joka kertoo ko. version alkuperäisen tallennusajan? Kumoamisen yhteydessä ```tallennusAika```-attribuutin arvoa muutetaan, jolloin hukkuu tieto ko. version alkuperäisestä tallennusajankohdasta." %}
 
 Attribuutin ```viimeisinMuutos``` arvo kuvaa ajanhetkeä, jolloin ko. tietokohteeseen on tehty sisällöllinen muutos tiedontuottajan tietojärjestelmässä. Tiedontuottajan järjestelmän osalta ei vaadita tiukkaa versiointipolitiikkaa, eli ```paikallinenTunnus```-attribuutin päivittämistä jokaisen tietokohteen muutoksen johdosta. ```viimeisinMuutos```-attribuutin päivittämien riittää kuvaamaan tiedon todellisen muuttumisajankohdan.
 
 ### Sitovan tonttijaon käsittely- ja vuorovaikutustapahtumien elinkaari
-Sitovan tonttijaon prosessin historian yhdessä kuvaavat AbstraktiTapahtuma-luokasta perityt Kasittelytapahtuma- ja Vuorovaikutustapahtuma-luokan tietokohteet linkitetään yksisuuntaisesti AbstraktiMaankayttoasia-luokkaan (SitovaTonttijako-luokan yläluokka) päin. Tapahtumatietokohteiden uusina versiona tallennettavat muutokset eivät koskaan johda uuden version luomiseen SitovaTonttijako-luokan tietokohteesta tai sen esitonttikohteista. Syy tähän on se, että käsittely- ja vuorovaikutustapahtumien on tärkeää kohdistua nimenomaan tiettyyn, pysyvään versioon sitovasta tonttijaosta.
+Sitovan tonttijaon prosessin historian yhdessä kuvaavat Tapahtuma-luokasta perityt Kasittelytapahtuma- ja Vuorovaikutustapahtuma-luokan tietokohteet linkitetään yksisuuntaisesti AlueidenkäyttöJaRakentamisAsia-luokkaan (SitovaTonttijako-luokan yläluokka) päin. Tapahtumatietokohteiden uusina versiona tallennettavat muutokset eivät koskaan johda uuden version luomiseen SitovaTonttijako-luokan tietokohteesta tai sen esitonttikohteista. Syy tähän on se, että käsittely- ja vuorovaikutustapahtumien on tärkeää kohdistua nimenomaan tiettyyn, pysyvään versioon sitovasta tonttijaosta.
 
-Tietyllä ajanhetkellä nähtävillä olevat tai nähtävillä olleet sitovan tonttijaon versiot voidaan poimia valitsemalla ne sitovat tonttijaot, joihin kohdistuu Vuorovaikutustapahtuma, jonka laji-attribuutin arvo on Nähtävilläolo, tapahtumaAika-attribuuttin aikaväli kattaa halutun ajankohdan ja peruttu-attribuutin arvo on false. Näiden vuorovaikutustapahtumien liittyvaAsia-assosiaatio viittaa siihen AbstraktiMaankayttoasia-luokan instanssiin, joka ko. aikaan on nähtävillä. Katso tonttijakosuunnitelmaehdotuksen nähtävilläolon ilmoittamiseen liittyvät vaatimukset kohdasta Tonttijakosuunniteman elinkaaritilan muutoksiin liittyvät käsittely- ja vuorovaikutustapahtumat.
+Tietyllä ajanhetkellä nähtävillä olevat tai nähtävillä olleet sitovan tonttijaon versiot voidaan poimia valitsemalla ne sitovat tonttijaot, joihin kohdistuu Vuorovaikutustapahtuma, jonka laji-attribuutin arvo on Nähtävilläolo, tapahtumaAika-attribuuttin aikaväli kattaa halutun ajankohdan ja peruttu-attribuutin arvo on false. Näiden vuorovaikutustapahtumien liittyvaAsia-assosiaatio viittaa siihen AlueidenkäyttöJaRakentamisAsia-luokan instanssiin, joka ko. aikaan on nähtävillä. Katso sitovan tonttijaon ehdotuksen nähtävilläolon ilmoittamiseen liittyvät vaatimukset kohdasta sitovan tonttijaon elinkaaritilan muutoksiin liittyvät käsittely- ja vuorovaikutustapahtumat.
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-tapahtumien-poistaminen" %}
-Kerran tallennettuja AbstraktiTapahtuma-luokan tietokohteita ei voi poistaa tonttijakosuunnitelmatietovarastosta. Mikäli suunniteltu vuorovaikutustapahtuma ei syystä tai toisesta toteudu tai käsittelytapahtumaan liittyvä päätös kumotaan, tulee sen attribuutti peruttu asettaa arvoon true.
+Kerran tallennettuja Tapahtuma-luokan tietokohteita ei voi poistaa sitovan tonttijaon tietovarastosta. Mikäli suunniteltu vuorovaikutustapahtuma ei syystä tai toisesta toteudu tai käsittelytapahtumaan liittyvä päätös kumotaan, tulee sen attribuutti peruttu asettaa arvoon true.
 {% include common/clause_end.html %}
 
 {% include common/question.html content="Miten käsittelytapahtumat vaikuttavat versiointiin ja sen muutosketjuun?" %}
@@ -278,36 +278,36 @@ Kerran tallennettuja AbstraktiTapahtuma-luokan tietokohteita ei voi poistaa tont
 {% include common/question.html content="Miten tonttijakosuunnitelman eri elinkaarikoodit vaikuttavat käsittelytapahtumiin?" %}
 
 ### Sitovan tonttijaon ja sen tietokohteiden voimaantulo
-Tonttijakosuunnitelman ```voimassaoloAika``` -attribuutin alkuaika on ajanhetki, jolloin tonttijakosuunnitelma sen nähtävilläoloajan umpeuduttua ja mahdollisten mielipiteiden käsittelyn jälkeen tulee voimaan.
+Sitovan tonttijaon ```voimassaoloAika``` -attribuutin alkuaika on ajanhetki, jolloin sitova tonttijako sen nähtävilläoloajan umpeuduttua ja mahdollisten mielipiteiden käsittelyn jälkeen tulee voimaan.
 
 {% include common/clause_start.html type="req" id="vaat-tonttijakosuunnitelman-voimaantulo" %}
-Voimaantulemisen yhteydessä tonttijakosuunnitelmasta tallennetaan tonttijakosuunnitelmatietovarastoon uusi versio, jossa sen:
-- Tonttijakosuunnitelma-luokan objektin elinkaaritila-attribuutin arvoksi on asetettu Voimassa,
-- Tonttijakosuunnitelma-luokan objektin voimassaoloAika-attribuutin alkuajaksi on asetettu kuulutuksen ajanhetki ja loppuaikaa ei ole annettu.
+Voimaantulemisen yhteydessä sitovasta tonttijaosta tallennetaan sitovan tonttijaon tietovarastoon uusi versio, jossa sen:
+- SitovaTonttijako-luokan objektin elinkaaritila-attribuutin arvoksi on asetettu Voimassa,
+- SitovaTonttijako-luokan objektin voimassaoloAika-attribuutin alkuajaksi on asetettu kuulutuksen ajanhetki ja loppuaikaa ei ole annettu.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-voimassaoloaika" %}
-Tonttijakosuunnitelma ja sen esitonttikohteet ovat voimassa niiden voimassaoloAika-attribuuttien määräämillä aikaväleillä. Mikäli voimassaoloAika-attribuutin loppuaika puuttuu, on tietokohde voimassa toistaiseksi.
+Sitova tonttijako ja sen esitonttikohteet ovat voimassa niiden voimassaoloAika-attribuuttien määräämillä aikaväleillä. Mikäli voimassaoloAika-attribuutin loppuaika puuttuu, on tietokohde voimassa toistaiseksi.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="vaat-elinkaaritila-voimassaoloaika" %}
-Tonttijakosuunnitelma ja sen esitonttikohteet voivat olla elinkaaritilassa Voimassa ainoastaan, mikäli niiden voimassaoloAika on annettu ja sisältää vain alkuajan ilman loppuaikaa. Tonttijakosuunnitelman ja sen esitonttikohteiden voimassaoloAika voi olla annettu vain mikäli ne ovat joko elinkaaritilassa Voimassa tai Kumottu. Tonttijakosuunnitelman ja sen esitonttikohteiden voimassaoloAika sisältää sekä alku- että loppuajan vain, kun ne ovat elinkaaritilassa Kumottu.
+Sitova tonttijako ja sen tonttijakotontit voivat olla elinkaaritilassa Voimassa ainoastaan, mikäli niiden voimassaoloAika on annettu ja sisältää vain alkuajan ilman loppuaikaa. Sitovon tonttijaon ja sen tonttijakotonttien voimassaoloAika voi olla annettu vain mikäli ne ovat joko elinkaaritilassa Voimassa tai Kumottu. Sitovan tonttijaon ja sen tonttijakotonttien voimassaoloAika sisältää sekä alku- että loppuajan vain, kun ne ovat elinkaaritilassa Kumottu.
 {% include common/clause_end.html %}
 
 ### Sitovan tonttijaon kumoutuminen ja kumoaminen 
 
-Maankäyttö- ja rakennuslain pykälässä XX säädetään tonttijakosuunnitelman kumoutumisesta ja kumoamisesta.
+Maankäyttö- ja rakennuslaissa säädetään sitovan tonttijaon kumoutumisesta ja kumoamisesta.
 
-Voimassaoleva tonttijakosuunnitelma voi kumoutua uudella tonttijakosuunnitelmalla osittain tai kokonaan.  Tonttijakosuunnitelma voidaan kumota, jos alueelta kumotaan kokonaan tai osittain se asemakaava, jonka toteuttamiseksi tonttijakosuunnitelma on tehty, kumoutuu myös tonttijakosuunnitelma kyseisen alueen osalta.
+Voimassaoleva sitova tonttijako voi kumoutua uudella sitovalla tonttijaolla osittain tai kokonaan.  Sitova tonttijako voidaan kumota, jos alueelta kumotaan kokonaan tai osittain se asemakaava, jonka toteuttamiseksi sitova tonttijako on tehty, kumoutuu myös sitova tonttijako kyseisen alueen osalta.
 
 <!-- Lisää tähän vielä sisäiset linkit kuntoon -->
-{% include common/clause_start.html type="req" id="elinkaari/vaat-kumoutumistieto-per-tonttijakosuunnitelma" %}
-Tonttijakosuunnitelmilla kumoutuvat, aiemmin hyväksyttyjen tonttijakosuunnitelmien esitonttikohteet tulee yksilöidä kumoutuvassa tonttijakosuunnitelmassa. Kutakin tonttijakosuunnitelmaa kohti tulee antaa yksi Tonttijakosuunnitelma-luokan attribuutin kumoamistieto arvo tyyppiä TonttijakosuunnitelmanKumoamistieto, jonka kumottavanTonttijakosuunnitelmanTunnus-attribuutin arvo on kumottavan tonttijakosuunnitelman ```viittaustunnus```.
+{% include common/clause_start.html type="req" id="elinkaari/vaat-kumoutumistieto-per-sitova-tonttijako" %}
+Sitova tonttijaoilla kumoutuvat, aiemmin hyväksyttyjen sitovien tonttijakojen tonttijakotontit tulee yksilöidä kumoutuvassa sitovassa tonttijaossa. Kutakin sitovaa tonttijakoa kohti tulee antaa yksi SitovaTonttijako-luokan attribuutin kumoamistieto arvo tyyppiä SitovanTonttijaonKumoamistieto, jonka kumottavanSitovanTonttijaonTunnus-attribuutin arvo on kumottavan sitovan tonttijaon ```viittaustunnus```.
 {% include common/clause_end.html %}
 
 <!-- Lisää tähän vielä sisäiset linkit kuntoon -->
 {% include common/clause_start.html type="req" id="elinkaari/vaat-kumoutuva-esitonttikohteen-tunnus" %}
-Kumoutumisessa esitonttikohteet kuvataan ensisijaisesti kumoattavanEsitonttikohteenTunnus-attribuutin arvojen avulla. Attribuutin arvo on kumottavan Esitonttikohde-luokan tietokohteen ```viittaustunnus```.
+Kumoutumisessa tonttijakotontit kuvataan ensisijaisesti kumoattavanTonttijakotontinTunnus-attribuutin arvojen avulla. Attribuutin arvo on kumottavan Tonttijakotontti-luokan tietokohteen ```viittaustunnus```.
 {% include common/clause_end.html %}
 
 <!-- Lisää tähän vielä sisäiset linkit kuntoon -->
