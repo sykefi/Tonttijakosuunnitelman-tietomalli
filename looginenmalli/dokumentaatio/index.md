@@ -105,11 +105,11 @@ Sitovan tonttijaon tietomallin esitonteille kaavamääräykset linkitetään suo
 
 Elinkaarisäännöt-sivulla [Asemakaavan suhde esitonttikohteeseen -luvussa](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/elinkaarisaannot.html#asemakaavan-suhde-esitonttikohteeseen) on kuvattu kaavatiedon elinkaaren vaikutukset esitonttikohteen elinkaareen.
 
-## Maankäyttöpäätöksien ydin (MKP-ydin)
+## Yhteiset (MKP-ydin)
 
-### AbstraktiVersioituObjekti
+### VersioituObjekti
 
-Englanninkielinen nimi: AbstractVersionedObject
+Englanninkielinen nimi: VersionedObject
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
@@ -126,41 +126,106 @@ viimeisinMuutos  | [TM_Instant](#tm_instant) | 0..1 | ajanhetki, jolloin kohteen
 tallennusAika    | [TM_Instant](#tm_instant) | 0..1 | ajanhetki, jolloin kohde on tietojärjestelmään
 
 
-### AbstraktiMaankayttoasia
+### AlueidenkäyttöJaRakentamisasia
 
-Englanninkielinen nimi: AbstractLandUseMatter
+Englanninkielinen nimi: AreaUseAndLandUseMatter
 
-Erikoistaa luokkaa [AbstraktiVersioituObjekti](#abstraktiversioituobjekti).
+Erikoistaa luokkaa [VersioituObjekti](#versioituobjekti).
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-nimi| [LanguageString](#languagestring)     | 0..* | asian nimi
-kuvaus      | [LanguageString](#languagestring) | 0..* | asian kuvausteksti
+nimi             | [LanguageString](#languagestring)     | 0..* | asian nimi
+kuvaus           | [LanguageString](#languagestring) | 0..* | asian kuvausteksti
 metatietokuvaus  | [URI](#uri) | 0..1  | viittaus ulkoiseen metatietokuvaukseen
+elinkaarentila   | [AbstraktiElinkaarentila](#abstraktielinkaarentila) | 1 | yleisimmät arvot vireillä oleva,  hyväksytty tai voimassa
+vireilletuloAika | [TM_Instant](#TM_Instant) | 0..1 | aika, jolloin asia on tullut vireille
+asianLiite       | [Asiakirja](#asiakirja) | 0..* | liittyvän asian liite
+asianhallintaTunnus | [Tunnusarvo](#tunnisarvo) | 0..* | asiaan liittyvä tunnus
+aluerajaus       | [Geometry](#geometry) | 0..1 | asiaan geometrinen rajaus
+
+### AlueidenkäyttöJaRakentamispäätös
+
+Englanninkielinen nimi: AreaUseAndLandUseDecision
+
+Erikoistaa luokkaa [VersioituObjekti](#versioituobjekti).
+
+Stereotyyppi: FeatureType (kohdetyyppi)
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+antopäivämäärä   | [Date](#date)       | 0..1            | päätöksen antopäivämäärä
+julkaisemispäivämäärä   | [Date](#date)       | 0..1            | julkaisemis päivämäärä
+lainvoimaisuuspäivämäärä | [Date](#date)       | 0..1            | lainvoimaisuus päivämäärä
+nimi             | [LanguageString](#languagestring)     | 0..* | asian nimi
+kuvaus           | [LanguageString](#languagestring) | 0..* | asian kuvausteksti
+metatietokuvaus  | [URI](#uri) | 0..1  | viittaus ulkoiseen metatietokuvaukseen
+päätösasiakirja  | [Asiakirja](#asiakirja) | 0..* | päätöksen asiakirja
+päätöspykälä     | [LanguageString](#languagestring) | 0..* | päätöspykälä
+päätöspäivämäärä | [Date](#date)       | 0..1            | päätöspäivämäärä
+päätösteksti     | [LanguageString](#languagestring) | 0..* | päätösteksti
+voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aikaväli, jona asiasta tehty päätös suunnitelmineen ja säännöksineen on lainvoimainen
+
+### RakennetunYmpäristönKohde
+
+Erikoistaa luokkaa VersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
+
+Kaikkien sitovaan tonttijakoon liittyvien paikkatietokohteiden yhteinen abstrakti yläluokka. Kohteen geometria voi olla 2-ulotteinen piste,tai alue, tai 3-ulotteinen kappale. Moniosaiset geometriat (multigeometry) ovat sallittuja.
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+geometria | [geometry](#geometry) | 0..1  | rakennetunympäristön kohteen sijainti
+pystysuunteinenRajaus | [Korkeusvali](#Korkeusvali) | 0..1  | kolmiulotteisen rakennetunympäristön kohteen ja alin korkeus
+rinnakkainenTunnus | [Tunnusarvo](#Tunnusarvo) | 0..*  | rakennetunympäristön kohteen tunnusarvo tai rajapisteen numero
+nimi | [LanguageString](#LanguageString) | 0..*  | rakennetunympäristön kohteen mahdollinen nimi
+
+**Assosiaatiot**
+
+Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
+-----------------|--------------------|---------------------|----------
+liittyvaKohde | [Kaavakohde](#kaavakohde) | 0..* | kohde, joka liittyy tähän kohteeseen. Kukin assosiaatio voi sisältää rooli-määreen tyyppiä LanguageString, joka kuvaa miten kohde liittyy tähän kohteeseen.
 
 ### Asiakirja
 
 Englanninkielinen nimi: Document
 
-Kuvaa käsitteen [sitovan tonttijaon viiteasiakirjan](../kasitemalli/#sitovantonttijaonviiteasiakirja). Erikoistaa luokkaa [AbstraktiVersioituObjekti](#abstraktiversioituobjekti). 
+Kuvaa käsitteen [AbstraktiAsiankirjanLaji](../kasitemalli/#sitovantonttijaonviiteasiakirja). Erikoistaa luokkaa [VersioituObjekti](#versioituobjekti). 
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-asiakirjatunnus | [URI](#uri) | 0..* | asiakirjan pysyvä tunnus, esim. diaarinumero tai muu dokumentinhallinnan tunnus
-laji | [SitovanTonttijaonAsiakirjanLaji](#sitovantonttijaonasiakirjanlaji) | 1  | asiakirjan tyyppi
+asiakirjaTunnus | [URI](#uri) | 0..* | asiakirjan pysyvä tunnus, esim. diaarinumero tai muu dokumentinhallinnan tunnus
+laji | [AbstraktiAsiakirjanLaji](#abstraktiasiakirjanlaji) | 1  | asiakirjan tyyppi
 lisatietolinkki  | [URI](#uri) | 0..1 | viittaus ulkoiseen lisätietokuvaukseen asiakirjasta
 metatietolinkki | [URI](#uri) | 0..1 | viittaus ulkoiseen metatietokuvaukseen asiakirjasta
 nimi | [LanguageString](#languagestring) | 0..* | asiakirjan nimi
+rooli | [LanguageString](#languagestring) | 0..* | asiakirjan rooli
 
-### AbstraktiTapahtuma
+### Lahtotietoaineisto
+Englanninkielinen nimi: **InputDataset**
+
+Kuvaa käsitteen [Lahtotietoaineisto](../../kasitemalli/#lahtotietoaineisto), erikoistaa luokkaa [VersioituObjekti](#versioituobjekti), stereotyyppi: FeatureType (kohdetyyppi)
+
+**Ominaisuudet**
+
+Nimi             | Name               | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|--------------------|---------------------|-----------------|------------------------------------
+aineistoTunnus   | datasetIdentifier  | [URI](#uri)         | 0..*            | lähtötietoaineiston tunnus
+nimi             | name               | [LanguageString](#languagestring) | 0..* | aineiston nimi
+laji             | type               | [LahtotietoaineistonLaji](#lahtotietoaineistonlaji) | 1 | aineiston tyyppi
+aluerajaus       | boundary           | [Geometry](#geometry) | 0..*            | maantieteellinen alue, jota ainesto koskee
+lisatietolinkki  | additionalInformationLink | [URI](#uri)  | 0..1            | viittaus ulkoiseen lisätietokuvaukseen asiakirjasta
+metatietokuvaus  | metadata           | [URI](#uri)         | 0..1            | viittaus ulkoiseen metatietokuvaukseen
+
+{% include common/note.html content="Lahtotietoaineisto-luokka ei kuvaa aineiston sisältöä, eikä ota kantaa tapaan, jolla sisältö noudetaan tietovarastosta tai muusta tietojärjestelmästä. Nämä tiedot voidaan kuvata lähtötietoaineiston metatietokuvauksessa." %}
+
+### Tapahtuma
 
 Englanninkielinen nimi: AbstractEvent
 
-Erikoistaa luokkaa [AbstraktiVersioituObjekti](#abstraktiversioituobjekti).
+Erikoistaa luokkaa [VersioituObjekti](#abstraktiversioituobjekti).
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
@@ -172,9 +237,9 @@ kuvaus  | [LanguageString](#languagestring) | 0..* | tapahtuman tekstimuotoinen 
 
 ### Kasittelytapahtuma
 
-Englanninkielinen nimi: HandlingEvent
+Englanninkielinen nimi: AbstractHandlingEvent
 
-Kuvaa käsitteen käsittelytapahtuma. Erikoistaa luokkaa [AbstraktiTapahtuma](#abstraktitapahtuma).
+Kuvaa käsitteen käsittelytapahtuma. Erikoistaa luokkaa [Tapahtuma](#tapahtuma).
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
@@ -184,9 +249,9 @@ laji | [AbstraktiKasittelytapahtumanLaji](#abstraktikasittelytapahtumanlaji) | 1
 
 ### Vuorovaikutustapahtuma
 
-Englanninkielinen nimi: InteractionEvent
+Englanninkielinen nimi: AbstractInteractionEvent
 
-Kuvaa käsitteen Vuorovaikutustapahtuma. Erikoistaa luokkaa [AbstraktiTapahtuma](#abstraktitapahtuma).
+Kuvaa käsitteen Vuorovaikutustapahtuma. Erikoistaa luokkaa [Tapahtuma](#abstraktitapahtuma).
 
 Stereotyyppi: FeatureType (kohdetyyppi)
 
@@ -208,7 +273,7 @@ hallintoaluetunnus | [CharacterString](#characterstring) | 1  | palauttaa hallin
 alue | [geometry](#geometry) | 1  | palauttaa hallinnollisen alueen aluerajauksen
 nimi | [CharacterString](#characterstring) | 1  | palauttaa hallinnollisen alueen nimen valitulla kielellä
 
-### Organisaatio
+### Rajapiste
 
 Englanninkielinen nimi: Organization
 
@@ -218,7 +283,17 @@ Organisaatio on kuvattu sitovan tonttijaon tietomallissa ainoastaan rajapintana,
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-nimi | [CharacterString](#characterstring) | 1  | palauttaa organisaation alueen nimen valitulla kielellä
+rajapyykinTaiPisteenTunnus | [URI](#uri) | 1..*  | sitovassa tonttijaossa osoitettu pistemäinen kohde, joka kuvaa kiinteistönmuodostustoimituksessa osoitettavaa rajapistettä tai rajamerkkiä
+
+
+### SuunnitelmanLaatija
+
+Kuvaa käsitteen Suunnitelman laatija, erikoistaa luokkaa VersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
+
+Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
+-----------------|---------------------|-----------------|------------------------------------
+nimi | [CharacterString](#CharacterString) | 1  | laatijan nimi
+nimike | [LanguageString](#LanguageString) | 0..*  | ammatti- tai virkanimike
 
 ### Koodistot
 
@@ -262,9 +337,8 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 laji | [Codelist](#sitovantonttijaonlaji) | 1  | kertoo, millainen sitova tonttijako on laadittu
 sitovanTonttijaonTunnus  | [CharacterString](#CharacterString) | 1 | yksilöivä ID
-elinkaarentila | [Codelist](#sitovantonttijaonelinkaarentila) | 1 | yleisimmät arvot vireillä oleva,  hyväksytty tai voimassa
-kumoutumistieto | [SitovanTonttijaonKumoutumistieto](#sitovantonttijaonkumoutumistieto) | 0..* | sitovan tonttijaon tai sen osa, jonka tämä tonttijakosuunnitelma kumoaa
-vireilletuloAika | [TM_Instant](#TM_Instant) | 0..1 | aika, jolloin sitova tonttijako on tullut vireille
+sitovanTonttijaonkumoutumistieto | [SitovanTonttijaonKumoutumistieto](#sitovantonttijaonkumoutumistieto) | 0..* | sitovan tonttijaon tai sen osa, jonka tämä tonttijakosuunnitelma kumoaa
+voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aika, jolloin sitova tonttijako on tullut vireille
 hyvaksymisAika | [TM_Instant](#TM_Instant) | 0..1 | aika, jolloin sitova tonttijako on tullut virallisesti hyväksyttyä
 digitaalinenAlkupera | [DigitaalinenAlkupera](#digitaalinenalkupera) | 0..1 | luokittelu alunperin tietomallin mukaan luotuihin ja jälkeenpäin digitoituihin sitoviin tonttijakoihin
 
@@ -277,33 +351,8 @@ Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
 tonttijakotontti | [Kaavakohde](#Kaavakohde) | 1 | paikkatietokohde, johon kohdistuu kaavamääräyksiä tai -suosituksia
 laatija | [SuunnitelmanLaatija](#SuunnitelmanLaatija) | 1 | Sitovan tonttijaon suunnitelman laatija
 
-### SuunnitelmanLaatija
 
-Kuvaa käsitteen Suunnitelman laatija, erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
 
-Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
------------------|---------------------|-----------------|------------------------------------
-nimi | [CharacterString](#CharacterString) | 1  | laatijan nimi
-nimike | [LanguageString](#LanguageString) | 0..*  | ammatti- tai virkanimike
-
-### RakennetunYmpäristönKohde
-
-Erikoistaa luokkaa AbstraktiVersioituObjekti, stereotyyppi: FeatureType (kohdetyyppi)
-
-Kaikkien sitovaan tonttijakoon liittyvien paikkatietokohteiden yhteinen abstrakti yläluokka. Kohteen geometria voi olla 2-ulotteinen piste,tai alue, tai 3-ulotteinen kappale. Moniosaiset geometriat (multigeometry) ovat sallittuja.
-
-Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
------------------|---------------------|-----------------|------------------------------------
-geometria | [geometry](#geometry) | 0..1  | tonttijakotontin sijainti
-pystysuunteinenRajaus | [Korkeusvali](#Korkeusvali) | 0..1  | kolmiulotteisen tonttijakotontin ylin ja alin korkeus
-rinnakkainenTunnus | [Tunnusarvo](#Tunnusarvo) | 0..*  | tonttijakotontin tunnusarvo tai rajapisteen numero
-nimi | [LanguageString](#LanguageString) | 0..*  | tonttijakotontin mahdollinen nimi
-
-**Assosiaatiot**
-
-Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
------------------|--------------------|---------------------|----------
-liittyvaKohde | [Abstraktikaavakohde](#Abstraktikaavakohde) | 0..* | kohde, joka liittyy tähän kohteeseen. Kukin assosiaatio voi sisältää rooli-määreen tyyppiä LanguageString, joka kuvaa miten kohde liittyy tähän kohteeseen.
 
 ### Tonttijakotontti
 
@@ -366,7 +415,7 @@ Kaikkien sitoviin tonttijakoihin liittyvien tietoelementtien yhteinen abstrakti 
 
 laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-arvo | [AbstraktiArvo](#AbstraktiArvo) | 0..*  | kuvaa sitovan tonttijaon laatijan tulkitsemaa arvoa esim. rakentamisen määrä
+arvo | [Arvo](#arvo) | 0..*  | kuvaa sitovan tonttijaon laatijan tulkitsemaa arvoa esim. rakentamisen määrä
 
 ### SitovanTonttijaonKumoutumistieto
 
@@ -393,6 +442,8 @@ Laajennettavuus: Ei laajennettavissa
 
 #### SitovanTonttijaonElinkaarentila
 
+Erikoistaa luokkaa AbstraktiElinkaarentila. 
+
 Englanninkielinen nimi: PlotDivisionLifeCycleState
 
 Stereotyyppi: CodeList (koodisto)
@@ -402,6 +453,8 @@ Laajennettavuus: Ei laajennettavissa
 {% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanElinkaarentila" name="Sitovan tonttijaon elinkaaren tila" %}
 
 #### SitovaonTonttijaonAsiakirjanLaji
+
+Erikoistaa luokkaa AbstraktiAsiakirjanLaji. 
 
 Englanninkielinen nimi: PlotDivisionDocumentType
 
