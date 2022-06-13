@@ -354,33 +354,39 @@ laatija | [SuunnitelmanLaatija](#SuunnitelmanLaatija) | 1 | Sitovan tonttijaon s
 
 
 
-### Tonttijakotontti
+
+
+
+### Kaavayksikkö
 
 Kuvaa käsitteen Tonttijakotontti, erikoistaa luokkaa AbstraktiKaavakohde, stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-suhdePeruskiinteistoon | [suhdePeruskiinteistoon](#suhdeperuskiinteistoon) | 0..1  | luokittelu esitonttikohteen sijoittumisesta suhteessa peruskiinteistöön, joka merkitään vain 3D-esitonttikohteelle
-elinkaarentila | [SitovanTonttijaonElinkaarentila](#aitovantonttijaonelinkaarentila) | 1  | 
+suhdePeruskiinteistoon | [suhdePeruskiinteistoon](#suhdeperuskiinteistoon) | 0..1  | luokittelu tonttijakotonttiin sijoittumisesta suhteessa peruskiinteistöön, joka merkitään vain 3D-tonttijakotonttikohteelle
+kaavayksikönElinkaarentila | [KaavayksikönElinkaarentila](#kaavayksikönelinkaarentila) | 1  | 
 muodostustieto | [Muodostajakiinteisto](#muodostajakiinteisto) | 1..* | tieto muodostajakiinteistöistä, josta/joista tonttijakotontti muodostetaan
 pintaAla | [Number](#Number) | 0..*  | tonttijakotontin pinta-ala tai kolmiulotteisen tonttijakotontin projisoitu pinta-ala
-kaavatilannetieto | [Kaavatilannetieto](#kaavatilannetieto) | 1..* | tieto tonttijakotonttiin liittyvistä asemakaavoista ja niiden vaikutuksista
+kaavayksikönMuutostieto | [KaavayksikönMuutostieto](#kaavayksikönmuutostieto) | 1..* | tieto tonttijakotonttiin liittyvistä asemakaavan kaavayksiköistä ja niiden vaikutuksista
 rakennettu | [boolean](#boolean) | 0..1 | tieto muun muassa rakentamattomasta rakennuspaikasta korotettua kiinteistöverotusta varten, onko tonttijakotontti rakennettu asemakaavan mukaisesti. Lisäksi tämän tiedon perusteella saadaan tieto kunnan kaavavarannosta.
 rakennuskielto | [boolean](#boolean) | 0..1 | kuvaa, onko tonttijakotontilla rakennuskielto
 voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aikaväli, jona asiasta tehty päätös suunnitelmineen ja säännöksineen on lainvoimainen
 
-
-**Assosiaatiot**
+<!-- **Assosiaatiot**
 
 Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
 -----------------|--------------------|---------------------|----------
-maarays | [Kaavamaarays](#kaavamaarays) | 0..* | kaavaan sisältyvä sanallinen määräys, jolla ohjataan alueiden suunnittelua ja rakentamista
+maarays | [Kaavamaarays](#kaavamaarays) | 0..* | kaavaan sisältyvä sanallinen määräys, jolla ohjataan alueiden suunnittelua ja rakentamista -->
+
+### Tonttijakotontti
+
+Kuvaa käsitteen Tonttijakotontti, erikoistaa luokkaa Kaavayksikkö, stereotyyppi: FeatureType (kohdetyyppi)
 
 ### Muodostajakiinteistö
 
 Stereotyyppi: DataType (tietotyyppi)
 
-Tieto muodostajakiinteistöistä, josta esitontti muodostetaan.
+Tieto muodostajakiinteistöistä, josta tonttijakotontti muodostetaan.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
