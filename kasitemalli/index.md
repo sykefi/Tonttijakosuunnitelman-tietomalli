@@ -59,5 +59,5 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sa
 ### Kaavayksikön muutostieto
 {% include common/definitionref.html dict="rytj-tjs" dictname="Kaavatietomalli" id="concept-10" name="kaavayksikön muutostieto" def="kuvaa asemakaavan muutoksen mahdolliset lajit." note="Lähde: perustuu JHS 135 kaavalaji-luokitteluun." %}
 
-### Arvo
-{% include common/definitionref.html dict="rytj-kaava" dictname="Kaavatietomalli" id="concept-1011" name="ominaisuuden arvo" def="kaavamääräystä tarkentava arvo." %}
+<!-- ### Arvo
+{% include common/definitionref.html dict="rytj-kaava" dictname="Kaavatietomalli" id="concept-1011" name="ominaisuuden arvo" def="kaavamääräystä tarkentava arvo." %} -->
