@@ -426,7 +426,7 @@ Kumoamistieto yksilöi mitä sitovia tonttijakoja tai niiden tonttijakotontteja 
 laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 kumoutuvanSitovanTonttijaonTunnus | [URI](#URI) | 1  | sitova tonttijako, johon kumoaminen kohdistuu
-kumoutuvanKaavayksikönTunnus | [URI](#URI) | 0..*  | tonttijakotontti, johon kumoutuminen kohdistuu
+kumoutuvanTonttijakotontinTunnus | [URI](#URI) | 0..*  | tonttijakotontti, johon kumoutuminen kohdistuu
 
 ### Koodistot
 

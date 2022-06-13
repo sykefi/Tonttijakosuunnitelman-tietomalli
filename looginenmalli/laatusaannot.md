@@ -40,7 +40,7 @@ Sitovan tonttijaon tietomallin mukaisten aineistojen tulee noudattaa sitovan ton
 
 ### Soveltamisohjeiden mukaisuus
 {% include common/clause_start.html type="req" id="laatu/vaat-soveltamisohjeet" %}
-Sitovan tonttijaon tietomallin mukaisten aineistojen tulee noudattaa sitovan tonttijaon tietomallin yksilöimää [Tonttijakosuunnitelman](../soveltamisohjeet/) soveltamisprofiilia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
+Sitovan tonttijaon tietomallin mukaisten aineistojen tulee noudattaa sitovan tonttijaon tietomallin yksilöimää [SitovanTonttijaon](../soveltamisohjeet/) soveltamisprofiilia. Vaatimukset ja suositukset on erotettu selkeästi soveltamisprofiilien muusta sisällöstä.
 {% include common/clause_end.html %}
 
 {% include common/question.html content="" %}
@@ -154,7 +154,7 @@ Aluemaisten geometrioiden kiertosuuntien tulee noudattaa ISO 19107 -standardin m
 
 
 ### Päivämäärät ja kelloanajat
-Tonttijakosuunnitelman tietomallin yksittäisiä ajanhetkiä kuvaavat attribuutit ovat ISO 19108 -standardin määrittämää tyyppiä [TM_Instant](dokumentaatio/#tm_instant) ja aikavälejä kuvaavat attribuutit tyyppiä [TM_Period](dokumentaatio/#tm_period). Päivämäärät annetaan käyttäen Gregoriaanista kalenteria ja kellonajat käyttäen 24 tunnin kelloaikamuotoa alkaen kellonajasta 00:00:00.000  ja päättyen ajanhetkeen 23:59:59.999 (tunti, minuutti, sekunti, millisekunti).
+Sitovan tonttijaon tietomallin yksittäisiä ajanhetkiä kuvaavat attribuutit ovat ISO 19108 -standardin määrittämää tyyppiä [TM_Instant](dokumentaatio/#tm_instant) ja aikavälejä kuvaavat attribuutit tyyppiä [TM_Period](dokumentaatio/#tm_period). Päivämäärät annetaan käyttäen Gregoriaanista kalenteria ja kellonajat käyttäen 24 tunnin kelloaikamuotoa alkaen kellonajasta 00:00:00.000  ja päättyen ajanhetkeen 23:59:59.999 (tunti, minuutti, sekunti, millisekunti).
 
 {% include common/clause_start.html type="req" id="laatu/vaat-ajanhetki-tarkkuus" %}
 Yksittäisiä ajanhetkiä kuvaavat attribuutit ilmaistaan joko pelkän päivämäärän tai päivämäärän ja kelloajan avulla. Päivämäärät ilmaistaan antamalla vuoden, kuukauden ja kuukauden päivän numeeriset arvot. Kellonajat ilmaistaan vähintään yhden minuutin ja enintään yhden millisekunnin tarkkuudella antamalla tunnin, minuutin, sekunnin ja millisekunnin numeeriset arvot.
@@ -176,7 +176,7 @@ Aikavälejä kuvaavat attribuutit voidaan antaa joko sekä alku- että loppuajan
 
 ### AbstraktiMaankayttoasia
 {% include common/clause_start.html type="req" id="laatu/vaat-mkp-aluerajaus-geometria" %}
-[AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokan objektien ```aluerajaus```-attribuutin arvon tulee kuvata tonttijakosuunnitelman suunnittelualue joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
+[AbstraktiMaankayttoasia](dokumentaatio/#abstraktimaankayttoasia)-luokan objektien ```aluerajaus```-attribuutin arvon tulee kuvata sitovan tonttijaon suunnittelualue joko [aluemaisena geometriana](#laatu-vaat-geom-2d-alue-maar) tai [monialueena](#laatu-vaat-geom-kokoelmat-maar).
 {% include common/clause_end.html %}
 <!--
 ### Lahtotietoaineisto

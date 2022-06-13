@@ -45,9 +45,9 @@ Sitovan tonttijaon tietomallissa UUID-muotoisia tunnuksia suositellaan käytett�
 Sitovan tonttijaon tietomallin elinkaarisäännöt mahdollistavat tietomallin tietokohteiden käsittelyn, tallentamisen ja muuttamisen hallitusti sekä niiden laatimis- että voimassaolovaiheissa. Sitovan tonttijaon tietomallin mukaiset tietosisällöt ovat merkittäviä oikeusvaikutuksia aiheuttavia, juridisesti päteviä aineistoja, joita käsitellään hajautetusti eri toimijoiden tietojärjestelmissä. Tämän vuoksi niiden tunnusten, viittausten ja versionnin hallintaan on syytä kiinnittää erityistä huomiota.
 
 Seuraavat keskeiset periaatteet ohjaavat sitovan tonttijaon elinkaaren hallintaa:
-* Kukin sitovan tonttijaon tietovarastoon tallennettu versio sitovasta tonttijaosta ja sen sisältämistä yksittäisistä esitonttikohteista saa pysyvän, versiokohtaisen tunnuksen.
+* Kukin sitovan tonttijaon tietovarastoon tallennettu versio sitovasta tonttijaosta ja sen sisältämistä yksittäisistä tonttijakotonteista saa pysyvän, versiokohtaisen tunnuksen.
 * Kuhunkin sitovan tonttijaon tietovarastoon tallennetun tietokohteen versioon voidaan viitata sen pysyvän tunnuksen avulla.
-* Sitovan tonttijaon tietomallin tietokohteiden väliset viittaukset toteutetaan hallitusti sekä tonttijakosuunnitelmatietoa tuottavissa tietojärjestelmissä että yhteisissä sitovan tonttijaon tietovarannoissa.
+* Sitovan tonttijaon tietomallin tietokohteiden väliset viittaukset toteutetaan hallitusti sekä sitovan tonttijaon tietoa tuottavissa tietojärjestelmissä että yhteisissä sitovan tonttijaon tietovarannoissa.
 * Sitovan tonttijaon tietovarasto vastaa pysyvien tunnusten luomisesta ja antamisesta tallennettaville tietokohteille.
 
 Sitovan tonttijaon tietomallin mukaisten aineistojen tallentamisessa erotetaan toisistaan tietojen tuottaminen ja muokkaus sisäisesti niiden tuottamiseen ja muokkaamiseen käytettävissä tietojärjestelmissä ja niiden hallinta yhteisessä versiohallitussa sitovan tonttijaon tietovarannossa. Sitovan tonttijaon tietomallin ei ole mielekästä asettaa vaatimuksia sitovan tonttijaon tietoa tuottavien tietojärjestelmien tunnusten ja versioiden hallintaan, vaan tietomallissa tulee varautua siihen, että yhteiseen tietovarastoon tallennettavia tietoja on muokattu ja tallennettu sisäisesti tuntematon määrä kertoja ennen ensimmäistä viemistä yhteiseen tietovarastoon, ja samoin tuntematon määrä kertoja kunkin yhteiseen varastoon vietävän version välillä. Näin ollen on mahdollista, että sitovasta tonttijaosta voi olla joissain tietojärjestelmissä tallennettuna paikallisia versiota, joita ei ole koskaan viety yhteiseen sitovan tonttijaon tietovarastoon.
@@ -75,8 +75,8 @@ Yhteinen sitovan tonttijaon tietovarasto on vastuussa uusien identiteettitunnust
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-kaavan-identiteettitunnus" %}
-[SitovaTonttijako](../../looginenmalli/dokumentaatio/#tonttijakosuunnitelma)-luokan tietokohteen tallennuksen yhteydessä sitovan tonttijaon tietovarasto tarkistaa, että sen attribuutti ```sitovanTonttijaonTunnus``` on annettu ja validi.
-* Mikäli kohde katsotaan sen ```identiteettiTunnus```-attribuutin arvon perusteella uudeksi tietokohteeksi, sama ```sitovanTonttijaonTunnus```-attribuutti ei saa olla käytössä muilla [SitovaTonttijako](../../looginenmalli/dokumentaatio/#tonttijakosuunnitelma)-luokan objekteilla.
+[SitovaTonttijako](../../looginenmalli/dokumentaatio/#sitovatonttijako)-luokan tietokohteen tallennuksen yhteydessä sitovan tonttijaon tietovarasto tarkistaa, että sen attribuutti ```sitovanTonttijaonTunnus``` on annettu ja validi.
+* Mikäli kohde katsotaan sen ```identiteettiTunnus```-attribuutin arvon perusteella uudeksi tietokohteeksi, sama ```sitovanTonttijaonTunnus```-attribuutti ei saa olla käytössä muilla [SitovaTonttijako](../../looginenmalli/dokumentaatio/#sitovatonttijako)-luokan objekteilla.
 * Mikäli kohde katsotaan sen ```identiteettiTunnus```-attribuutin arvon perusteella aiemmin tallennetun tietokohteen uudeksi versioksi, aiemmin tallennetun version ```sitovanTonttijaonTunnus```-attribuutin tulee olla sama kuin tallennettavassa objektissa.
 {% include common/clause_end.html %}
 
@@ -123,7 +123,7 @@ Nimiavaruus on HTTP URI -muotoinen.
 Nimiavaruus on syytä valita huolella siten, että se olisi mahdollisimman pysyvä, eikä sitä tarvitsisi tulevaisuudessa muuttaa esimerkiksi valtionhallinnon virastojen tai ministeriröiden mahdollisten uudelleenorganisointien ja -nimeämisten johdosta. Valittu URL-osoite tulee myös voida aina tarvittaessa ohjata kulloinkin käytössä olevaan rajapintapalveluun (HTTP redirect). 
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-nimiavaruus-gen" %}
-Tonttijakosuunnitelmatietovarasto vastaa ```nimiavaruus```-attribuuttien asetamisesta tallennustapahtuman yhteydessä. Tuottavan tietojärjestelmän mahdollisesti antamat arvot korvataan.
+Sitovan tonttijaon tietovarasto vastaa ```nimiavaruus```-attribuuttien asetamisesta tallennustapahtuman yhteydessä. Tuottavan tietojärjestelmän mahdollisesti antamat arvot korvataan.
 {% include common/clause_end.html %}
 
 Esimerkki: ```http://uri.suomi.fi/object/rytj/tjs```
@@ -172,18 +172,18 @@ Esimerkki: ```tj-123445```
 
 ### Sitovan tonttijaon tunnus
 {% include common/clause_start.html type="req" id="elinkaari/vaat-sitovan-tonttijaon-tunnus-maar" %}
-Sitovan tonttijaon tunnus on sitovalle tonttijaolle ennakolta haettava, tonttijakosuunnitelman kansallisesti yksilöivä tunnus. Sitovan tonttijaon tietomallissa sitovan tonttijaon tunnus kuvataan [SitovaTonttijako](../../looginenmalli/dokumentaatio/#sitovatonttijako)-luokan attribuutilla ```sitovanTonttijaonTunnus```.
+Sitovan tonttijaon tunnus on sitovalle tonttijaolle ennakolta haettava, joka on sitovan tonttijaon kansallisesti yksilöivä tunnus. Sitovan tonttijaon tietomallissa sitovan tonttijaon tunnus kuvataan [SitovaTonttijako](../../looginenmalli/dokumentaatio/#sitovatonttijako)-luokan attribuutilla ```sitovanTonttijaonTunnus```.
 {% include common/clause_end.html %}
 
-{% include common/clause_start.html type="req" id="elinkaari/vaat-sitovan-tonttijaontunnus-gen" %}
-Tuottava tietojärjestelmän vastaa tonttijakosuunnitelmatunnuksen asettamisesta [SitovaTonttijako](../../looginenmalli/dokumentaatio/#sitovatonttijako)-luokan attribuutiksi. Se tulee olla asetettuna myös sitovan tonttijaon ensimmäisen sitovan tonttijaon tietovarastoon tallennuksen yhteydessä.
+{% include common/clause_start.html type="req" id="elinkaari/vaat-sitovan-tonttijaon-tunnus-gen" %}
+Tuottava tietojärjestelmän vastaa sitovan tonttijaon tunnuksen asettamisesta [SitovaTonttijako](../../looginenmalli/dokumentaatio/#sitovatonttijako)-luokan attribuutiksi. Se tulee olla asetettuna myös sitovan tonttijaon ensimmäisen sitovan tonttijaon tietovarastoon tallennuksen yhteydessä.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-sitovan-tonttijaon-tunnus-yks" %}
-Sitovan tonttijaon tunnus on [SitovaTonttijako](../../looginenmalli/dokumentaatio/#tonttijakosuunnitelma)-luokan objekteille globaalisti yksilöivä, eikä muutu saman sitovan tonttijaon eri elinkaaren aikaisten versioiden tallennuksen yhteydessä.
+Sitovan tonttijaon tunnus on [SitovaTonttijako](../../looginenmalli/dokumentaatio/#sitovatonttijako)-luokan objekteille globaalisti yksilöivä, eikä muutu saman sitovan tonttijaon eri elinkaaren aikaisten versioiden tallennuksen yhteydessä.
 {% include common/clause_end.html %}
 
-Käytännössä myönnetyt sitovan tonttijaon tunnukset kannattaa tallentaa valmiiksi sitovan tonttijaon tietovarastoon, jotta voidaan tarkistaa, onko tallennettavaksi tarkoitettu sitovan tonttijaon tunnus myönnetty organisaatiolle, jonka sitovaa tonttijakoa ollaan tallentamassa. Kuntakoodin tai muun hallinnollisen alueen tunnuksen käyttö osana sitovan tonttijaon tunnusta ei ole suositeltavaa, sillä hallinnolliset alueet muuttuvat ajan kuluessa. Kun sidos tunnuksen ja hallinnollisen alueen välillä ei näy tunnuksessa, voidaan tonttijakosuunnitelman hallinnollista aluetta muuttaa joustavammin sitovan tonttijaon elinkaaren aikana.
+Käytännössä myönnetyt sitovan tonttijaon tunnukset kannattaa tallentaa valmiiksi sitovan tonttijaon tietovarastoon, jotta voidaan tarkistaa, onko tallennettavaksi tarkoitettu sitovan tonttijaon tunnus myönnetty organisaatiolle, jonka sitovaa tonttijakoa ollaan tallentamassa. Kuntakoodin tai muun hallinnollisen alueen tunnuksen käyttö osana sitovan tonttijaon tunnusta ei ole suositeltavaa, sillä hallinnolliset alueet muuttuvat ajan kuluessa. Kun sidos tunnuksen ja hallinnollisen alueen välillä ei näy tunnuksessa, voidaan sitovan tonttijaon hallinnollista aluetta muuttaa joustavammin sitovan tonttijaon elinkaaren aikana.
 
 {% include common/clause_start.html type="rec" id="elinkaari/suos-sitovan-tonttijaon-tunnus-form" %}
 Sitovan tonttijaon tunnuksen suositeltu muoto on UUID.
@@ -265,7 +265,7 @@ Yksittäisen tietokohteen yksityiskohtainen muutoshistoria sitovan tonttijaon ti
 Attribuutin ```viimeisinMuutos``` arvo kuvaa ajanhetkeä, jolloin ko. tietokohteeseen on tehty sisällöllinen muutos tiedontuottajan tietojärjestelmässä. Tiedontuottajan järjestelmän osalta ei vaadita tiukkaa versiointipolitiikkaa, eli ```paikallinenTunnus```-attribuutin päivittämistä jokaisen tietokohteen muutoksen johdosta. ```viimeisinMuutos```-attribuutin päivittämien riittää kuvaamaan tiedon todellisen muuttumisajankohdan.
 
 ### Sitovan tonttijaon käsittely- ja vuorovaikutustapahtumien elinkaari
-Sitovan tonttijaon prosessin historian yhdessä kuvaavat Tapahtuma-luokasta perityt Kasittelytapahtuma- ja Vuorovaikutustapahtuma-luokan tietokohteet linkitetään yksisuuntaisesti AlueidenkäyttöJaRakentamisAsia-luokkaan (SitovaTonttijako-luokan yläluokka) päin. Tapahtumatietokohteiden uusina versiona tallennettavat muutokset eivät koskaan johda uuden version luomiseen SitovaTonttijako-luokan tietokohteesta tai sen esitonttikohteista. Syy tähän on se, että käsittely- ja vuorovaikutustapahtumien on tärkeää kohdistua nimenomaan tiettyyn, pysyvään versioon sitovasta tonttijaosta.
+Sitovan tonttijaon prosessin historian yhdessä kuvaavat Tapahtuma-luokasta perityt Kasittelytapahtuma- ja Vuorovaikutustapahtuma-luokan tietokohteet linkitetään yksisuuntaisesti AlueidenkäyttöJaRakentamisAsia-luokkaan (SitovaTonttijako-luokan yläluokka) päin. Tapahtumatietokohteiden uusina versiona tallennettavat muutokset eivät koskaan johda uuden version luomiseen SitovaTonttijako-luokan tietokohteesta tai sen tonttijakotonteista. Syy tähän on se, että käsittely- ja vuorovaikutustapahtumien on tärkeää kohdistua nimenomaan tiettyyn, pysyvään versioon sitovasta tonttijaosta.
 
 Tietyllä ajanhetkellä nähtävillä olevat tai nähtävillä olleet sitovan tonttijaon versiot voidaan poimia valitsemalla ne sitovat tonttijaot, joihin kohdistuu Vuorovaikutustapahtuma, jonka laji-attribuutin arvo on Nähtävilläolo, tapahtumaAika-attribuuttin aikaväli kattaa halutun ajankohdan ja peruttu-attribuutin arvo on false. Näiden vuorovaikutustapahtumien liittyvaAsia-assosiaatio viittaa siihen AlueidenkäyttöJaRakentamisAsia-luokan instanssiin, joka ko. aikaan on nähtävillä. Katso sitovan tonttijaon ehdotuksen nähtävilläolon ilmoittamiseen liittyvät vaatimukset kohdasta sitovan tonttijaon elinkaaritilan muutoksiin liittyvät käsittely- ja vuorovaikutustapahtumat.
 
@@ -275,19 +275,19 @@ Kerran tallennettuja Tapahtuma-luokan tietokohteita ei voi poistaa sitovan tontt
 
 {% include common/question.html content="Miten käsittelytapahtumat vaikuttavat versiointiin ja sen muutosketjuun?" %}
 
-{% include common/question.html content="Miten tonttijakosuunnitelman eri elinkaarikoodit vaikuttavat käsittelytapahtumiin?" %}
+{% include common/question.html content="Miten sitovan tonttijaon eri elinkaarikoodit vaikuttavat käsittelytapahtumiin?" %}
 
 ### Sitovan tonttijaon ja sen tietokohteiden voimaantulo
 Sitovan tonttijaon ```voimassaoloAika``` -attribuutin alkuaika on ajanhetki, jolloin sitova tonttijako sen nähtävilläoloajan umpeuduttua ja mahdollisten mielipiteiden käsittelyn jälkeen tulee voimaan.
 
-{% include common/clause_start.html type="req" id="vaat-tonttijakosuunnitelman-voimaantulo" %}
+{% include common/clause_start.html type="req" id="vaat-sitovan-tonttijaon-voimaantulo" %}
 Voimaantulemisen yhteydessä sitovasta tonttijaosta tallennetaan sitovan tonttijaon tietovarastoon uusi versio, jossa sen:
 - SitovaTonttijako-luokan objektin elinkaaritila-attribuutin arvoksi on asetettu Voimassa,
 - SitovaTonttijako-luokan objektin voimassaoloAika-attribuutin alkuajaksi on asetettu kuulutuksen ajanhetki ja loppuaikaa ei ole annettu.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-voimassaoloaika" %}
-Sitova tonttijako ja sen esitonttikohteet ovat voimassa niiden voimassaoloAika-attribuuttien määräämillä aikaväleillä. Mikäli voimassaoloAika-attribuutin loppuaika puuttuu, on tietokohde voimassa toistaiseksi.
+Sitova tonttijako ja sen tonttijakotontit ovat voimassa niiden voimassaoloAika-attribuuttien määräämillä aikaväleillä. Mikäli voimassaoloAika-attribuutin loppuaika puuttuu, on tietokohde voimassa toistaiseksi.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="vaat-elinkaaritila-voimassaoloaika" %}
@@ -311,7 +311,7 @@ Kumoutumisessa tonttijakotontit kuvataan ensisijaisesti kumoattavanTonttijakoton
 {% include common/clause_end.html %}
 
 <!-- Lisää tähän vielä sisäiset linkit kuntoon -->
-{% include common/clause_start.html type="req" id="elinkaari/vaat-tonttijakosuunnitelman-voimaantulo" %}
+{% include common/clause_start.html type="req" id="elinkaari/vaat-sitovan-tonttijaon-voimaantulo" %}
 Kun sitovan tonttijaon kumoutumisessa tallennetaan versio, jonka elinkaaritila-attribuutin arvo on Voimassa, sitovan tonttijaon tietovarasto päivittää niiden siinä kumoutuviksi asetettuja tonttijakotontteja, joiden elinkaaritila-attribuutin arvo on Voimassa, attribuutteja seuraavasti luomatta niistä uusia versioita:
 
 - ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin uuden sitovan tonttijaon ```voimassaoloAika```-attribuutin alkamisaika.
@@ -331,7 +331,7 @@ Tonttijakotonteille tulee yksilöidä sitovassa tonttijaossa siihen liittyvät h
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-kaavayksikön-muutostieto-vaikutus" %}
-Asemakaavan muutoksen tai vaiheasemakaavan hyväksyminen tonttijakotontin alueella, edellyttää uuden tallennusversion luomista kaavayksiköstä ja [KaavayksikönMuutostieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```muutoslaji```-attribuutin arvoksi tulee asettaa hyväksytyn kaavan KaavayksikönMuutosLaji-koodi.
+Asemakaavan muutoksen tai vaiheasemakaavan hyväksyminen tonttijakotontin alueella, edellyttää uuden tallennusversion luomista tonttijakotontista ja [KaavayksikönMuutostieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```muutoslaji```-attribuutin arvoksi tulee asettaa hyväksytyn kaavan KaavayksikönMuutosLaji-koodi.
 
 Asemakaavan määräysten muuttuessa perii [Kaavayksikkö-luokka] [Kaavakohde-luokan] seuraavilla kaavamääräysten **Kaavamääräyslaji (asemakaava)**-koodiston arvoilla
  **Alueen käyttötarkoitus**, **Rakentamisen määrä** ja **Tonttijako** osaksi kaavatietovarastoa. 
@@ -347,7 +347,7 @@ Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden sitovan tonttij
 {% include common/clause_start.html type="req" id="elinkaari/vaat-kumoaa-tonttijakotontin" %}
 Jos asemakaavalla tonttijakotontin rajat muuttuvat kokonaan tai osittain yleiseksi alueeksi, kumoaa asemakaava tonttijakotontin. Näin tonttijakotontti muuttuu ei-kortteliksi, ja kumoaminen sitovalla tonttijaolla ei olisi mahdollista. [KaavayksikönMuutostieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) kumoaaTonttijakotontin-attribuutin arvoksi asetetaan true. Tonttijakotontista ei luoda uutta versiota, vaan:
 
--  [Kaavayksikkö-luokan] ```elinkaarentila```-attribuutin arvoksi asetetaan **Kumoutunut kokonaan**.
+-  [Kaavayksikkö-luokan] ```elinkaarentila```-attribuutin arvoksi asetetaan **Kumoutunut**.
 -  [Kaavayksikkö-luokan] ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin kaavan ```voimassaoloAika```-attribuutin alkamisaika.
 
 Tämä edellyttää uuden sitovan tonttijaon laatimista kumotun tonttijakotontin alueelle.
@@ -355,7 +355,7 @@ Tämä edellyttää uuden sitovan tonttijaon laatimista kumotun tonttijakotontin
 
 ## Sitovan tonttijaon elinkaaren vaiheet ja elinkaaritila-attribuutin käyttötavat
 
-Sitovan tonttijaon ja sen sisältämien tonttijakotonttien elinkaareen liittyvää tilaa hallitaan elinkaaritila-attribuutilla ja sen mahdolliset arvot kuvaavan Sitovan tonttijaon elinkaaren tila-koodiston avulla. [SitovaTonttijako]- ja [Kaavayksikkö]-luokkien elinkaaritila-attribuutit ovat pakollisia.
+Sitovan tonttijaon ja sen sisältämien tonttijakotonttien elinkaareen liittyvää tilaa hallitaan elinkaaritila-attribuutilla ja sen mahdolliset arvot kuvaavan Sitovan tonttijaon elinkaaren tila- ja kaavayksikön elinkaaren tila-koodiston avulla. [SitovaTonttijako]- ja [Kaavayksikkö]-luokkien elinkaaritila-attribuutit ovat pakollisia.
 
 **Sitovan tonttijaon elinkaaren tila**-koodisto kuvaa 9 mahdollista tilaa, joissa sitova tonttijako voi olla sen elinkaaren eri vaiheissa:
 
@@ -368,6 +368,15 @@ Sitovan tonttijaon ja sen sisältämien tonttijakotonttien elinkaareen liittyvä
 - Kumottu kokonaan
 - Kumoutunut osittain
 - Kumoutunut kokonaan
+
+**Kaavayksikön elinkaaren tila**-koodisto kuvaa 6 mahdollista tilaa, joissa sitovan tonttijaon tonttijakotontti voi olla sen elinkaaren eri vaiheissa:
+
+- Vireillä
+- Voimassa
+- Kiinteistö lakannut
+- Kumottu 
+- Kumoutunut 
+- Muu
 
 {% include common/question.html content="Mitkä ovat Kumottu- ja Kumoutunut-tilojen tarkat määritelmät ja erot?" %}
 
@@ -399,7 +408,7 @@ Sitovan tonttijaon ```elinkaaritila```-attribuutin arvo voi kahden sen peräkkä
 Tavallisesti sitovan tonttijaon sisältämien tonttijakotonttien elinkaaritilan arvo on sama kuin kokonaan sitovalla tonttijaolla, mutta ne voivat erota toisistaan kahdessa tapauksessa:
 
 - Sitovan tonttijaon Kumottu osittain tai Kumoutunut osittain tapauksessa osa tonttijakotonteista voidaan kumota
-- Kaavamuutoksen tai vaihekaavan voimaantulo aiheuttaa siinä kumottaviksi tonttijakotontteja
+- Kaavamuutoksen tai vaihekaavan voimaantulo aiheuttaa siinä kumoutuviksi tonttijakotontteja
 
  (ks. Sitovan tonttijaon kumoutuminen ja kumoaminen)
 
