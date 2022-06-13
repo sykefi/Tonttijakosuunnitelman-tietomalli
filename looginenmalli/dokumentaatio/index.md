@@ -351,15 +351,9 @@ Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
 tonttijakotontti | [Kaavakohde](#Kaavakohde) | 1 | paikkatietokohde, johon kohdistuu kaavamääräyksiä tai -suosituksia
 laatija | [SuunnitelmanLaatija](#SuunnitelmanLaatija) | 1 | Sitovan tonttijaon suunnitelman laatija
 
-
-
-
-
-
-
 ### Kaavayksikkö
 
-Kuvaa käsitteen Tonttijakotontti, erikoistaa luokkaa AbstraktiKaavakohde, stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Kaavayksikkö, erikoistaa luokkaa AbstraktiKaavakohde, stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
@@ -393,17 +387,17 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 kiinteistöTunnus | [Tunnusarvo](#Tunnusarvo) | 1  | kiinteistörekisteriin merkityn rekisteriyksikön yksilöivä tunnus
 muodostusPinta-ala | [Number](#Number) | 1  | muodostavan rekisterikiinteistön pinta-alan määrä neliömetreissä
 
-### Kaavatilannetieto
+### KaavaykikönMuutostieto
 
 Stereotyyppi: DataType (tietotyyppi)
 
-Tieto esitonttiin liittyvistä asemakaavoista ja niiden vaikutuksista.
+Tieto tonttijakotonttiin liittyvistä asemakaavoista ja niiden vaikutuksista.
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 kaavaTunnus | [URI](#URI) | 1  | kaavatunnus, joka muuttaa tonttijakotontin kaavamääräyksiä tai kumoaa tonttijakotontin
-kaavayksikönMuutostieto | [KaavayksikönMuutostieto](#kaavayksikönmuutostieto) | 1 | alueiden käytön ohjaustarpeeseen, kaavan sisältövaatimuksiin, prosessiin ja vastuulliseen hallintoviranomaiseen perustuva luokittelu
-kumoaaTonttijakotontin | [boolean](#boolean) | 1 | jos arvo on true, kaava kumoaa tonttijakotontin kokonaan
+kaavayksikönMuutosLaji | [KaavayksikönMuutostieto](#kaavayksikönmuutoslaji) | 1 | alueiden käytön ohjaustarpeeseen, kaavan sisältövaatimuksiin, prosessiin ja vastuulliseen hallintoviranomaiseen perustuva luokittelu
+kaavayksikönTunnus | [URI](#URI) | 0..*  | kaavayksikkö, johon kumoutuminen kohdistuu
 
 ### Kaavamääräys
 
@@ -432,7 +426,7 @@ Kumoamistieto yksilöi mitä sitovia tonttijakoja tai niiden tonttijakotontteja 
 laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 kumoutuvanSitovanTonttijaonTunnus | [URI](#URI) | 1  | sitova tonttijako, johon kumoaminen kohdistuu
-kumoutuvanTonttijakotontinTunnus | [URI](#URI) | 0..*  | tonttijakotontti, johon kumoutuminen kohdistuu
+kumoutuvanKaavayksikönTunnus | [URI](#URI) | 0..*  | tonttijakotontti, johon kumoutuminen kohdistuu
 
 ### Koodistot
 
