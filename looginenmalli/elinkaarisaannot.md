@@ -282,8 +282,8 @@ Sitovan tonttijaon ```voimassaoloAika``` -attribuutin alkuaika on ajanhetki, jol
 
 {% include common/clause_start.html type="req" id="vaat-sitovan-tonttijaon-voimaantulo" %}
 Voimaantulemisen yhteydessä sitovasta tonttijaosta tallennetaan sitovan tonttijaon tietovarastoon uusi versio, jossa sen:
-- SitovaTonttijako-luokan objektin elinkaaritila-attribuutin arvoksi on asetettu Voimassa,
-- SitovaTonttijako-luokan objektin voimassaoloAika-attribuutin alkuajaksi on asetettu kuulutuksen ajanhetki ja loppuaikaa ei ole annettu.
+- [SitovaTonttijako-luokan] objektin elinkaaritila-attribuutin arvoksi on asetettu Voimassa,
+- [SitovaTonttijako-luokan] objektin voimassaoloAika-attribuutin alkuajaksi on asetettu kuulutuksen ajanhetki ja loppuaikaa ei ole annettu.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-voimassaoloaika" %}
@@ -302,12 +302,12 @@ Voimassaoleva sitova tonttijako voi kumoutua uudella sitovalla tonttijaolla osit
 
 <!-- Lisää tähän vielä sisäiset linkit kuntoon -->
 {% include common/clause_start.html type="req" id="elinkaari/vaat-kumoutumistieto-per-sitova-tonttijako" %}
-Sitova tonttijaoilla kumoutuvat, aiemmin hyväksyttyjen sitovien tonttijakojen tonttijakotontit tulee yksilöidä kumoutuvassa sitovassa tonttijaossa. Kutakin sitovaa tonttijakoa kohti tulee antaa yksi SitovaTonttijako-luokan attribuutin kumoamistieto arvo tyyppiä SitovanTonttijaonKumoamistieto, jonka kumottavanSitovanTonttijaonTunnus-attribuutin arvo on kumottavan sitovan tonttijaon ```viittaustunnus```.
+Sitova tonttijaoilla kumoutuvat, aiemmin hyväksyttyjen sitovien tonttijakojen tonttijakotontit tulee yksilöidä kumoutuvassa sitovassa tonttijaossa. Kutakin sitovaa tonttijakoa kohti tulee antaa yksi SitovaTonttijako-luokan attribuutin kumoamistieto arvo tyyppiä SitovanTonttijaonKumoamistieto, jonka ```kumottavanSitovanTonttijaonTunnus```-attribuutin arvo on kumottavan sitovan tonttijaon ```viittaustunnus```.
 {% include common/clause_end.html %}
 
 <!-- Lisää tähän vielä sisäiset linkit kuntoon -->
 {% include common/clause_start.html type="req" id="elinkaari/vaat-kumoutuva-tonttijakotontin-tunnus" %}
-Kumoutumisessa tonttijakotontit kuvataan ensisijaisesti kumoattavanTonttijakotontinTunnus-attribuutin arvojen avulla. Attribuutin arvo on kumottavan Tonttijakotontti-luokan tietokohteen ```viittaustunnus```.
+Kumoutumisessa tonttijakotontit kuvataan ensisijaisesti ```kumoutuvanTonttijakotontinTunnus```-attribuutin arvojen avulla. Attribuutin arvo on kumottavan [Tonttijakotontti-luokan] tietokohteen ```viittaustunnus```.
 {% include common/clause_end.html %}
 
 <!-- Lisää tähän vielä sisäiset linkit kuntoon -->
