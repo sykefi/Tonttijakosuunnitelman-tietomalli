@@ -202,19 +202,19 @@ Tietovaraston tallennusrajapinta palauttaa tallennetun sitovan tonttijaon tiedot
 ### Sitovan tonttijaon tietokohteisiin viittaaminen ja viitteiden ylläpito
 
 {% include common/clause_start.html type="req" id="vaat-sitovan-tonttijaon-sisaiset-viittaukset" %}
-Saman tonttijakosuunnitelman tietokohteiden keskinäiset assosiaatiot toteutetaan viitattavan tietokohteen [paikallinenTunnus](#paikallinen-tunnus)-attribuuttia käyttäen.
+Saman sitovan tonttijaon tietokohteiden keskinäiset assosiaatiot toteutetaan viitattavan tietokohteen [paikallinenTunnus](#paikallinen-tunnus)-attribuuttia käyttäen.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-tietovaraston-sisaiset-viittaukset" %}
-Tonttijakosuunitelmatietokohteen luokkien assosiaatiot eri tonttijakosuunnitelmien välillä tai tonttijakosuunnitelman ja muiden maankäyttöpäätösten tietokohteiden välillä toteutetaan viitattavan tietokohteen [viittaustunnus](#viittaustunnus)-attribuuttia käyttäen.
+Sitovan tonttijaon tietokohteen luokkien assosiaatiot eri sitovien tonttijakojen välillä tai sitovan tonttijaon ja muiden maankäyttöpäätösten tietokohteiden välillä toteutetaan viitattavan tietokohteen [viittaustunnus](#viittaustunnus)-attribuuttia käyttäen.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-viittaukset-ulkoa" %}
-Pysyvät viittaukset Tonttijakosuunnitelman tietomallin ulkopuolelta tietomallin tietokohteisiin toteutetaan viitattavan tietokohteen [viittaustunnus](#viittaustunnus)-attribuuttia käyttäen.
+Pysyvät viittaukset sitovan tonttijaon tietomallin ulkopuolelta tietomallin tietokohteisiin toteutetaan viitattavan tietokohteen [viittaustunnus](#viittaustunnus)-attribuuttia käyttäen.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-viittaukset-tallennettaessa" %}
-Tallennettaessa Tonttijakosuunnitelman tietomallin tietokohteita tonttijakosuunnitelmatietovarastoon tietokohteiden tunnukset muuttuvat niiden pysyvään muotoon, kuten kuvattu luvussa [Tunnukset ja niiden hallinta](#tunnukset-ja-niiden-hallinta). Tonttijakosuunnitelmatietovaraston vastuulla on päivittää kunkin paikallisen tunnuksen muuttamisen yhteydessä myös kaikkien ko. tietokohteen versioon sen paikallisen tunnuksen avulla viittaavien muiden ko. tonttijakosuunnitelman tietokohteiden viittaukset käyttämään tietokohteen muutettua paikallista tunnusta.   
+Tallennettaessa sitovan tonttijaon tietomallin tietokohteita sitovan tonttijaon tietovarastoon tietokohteiden tunnukset muuttuvat niiden pysyvään muotoon, kuten kuvattu luvussa [Tunnukset ja niiden hallinta](#tunnukset-ja-niiden-hallinta). Sitovan tonttijaon tietovaraston vastuulla on päivittää kunkin paikallisen tunnuksen muuttamisen yhteydessä myös kaikkien ko. tietokohteen versioon sen paikallisen tunnuksen avulla viittaavien muiden ko. sitovan tonttijaon tietokohteiden viittaukset käyttämään tietokohteen muutettua paikallista tunnusta.   
 {% include common/clause_end.html %}
 
 ### Koodistojen koodien tunnuksiin liittyvät vaatimukset
@@ -243,13 +243,13 @@ Näin taataan ulkoisten viittausten eheys, sillä sitovan tonttijaon kaikkien ko
 ### Muutosten leviäminen viittausten kautta
 Sitovan tonttijaon tietomallin tietokohteiden keskinäiset viittaukset kohdistuvat aina viitattavien tietokohteiden tiettyyn versioon, ja toisaalta kaikki kohteiden sisällölliset muutokset johtavat uusien versioiden tallentamiseen. Siten kohteiden välisten linkkien kohdetietoa täytyy muuttaa mikäli halutaan viitata jollain tapaa muuttuneeseen kohteeseen. Tämä päivitystarve johtaa edelleen myös viittaavan tietokohteen uuden version luomiseen, vaikka ainoa muuttunut tieto olisi linkki uuteen versioon viitatusta tietokohteesta. Molempiin suuntiin tietokohteiden välillä tehty linkitys saattaa siten johtaa hyvin laajalle leviävään muutosketjuun.
 
-Sitovan tonttijaon tietomallissa kukin Esitonttikohde on linkitetty kahdensuuntaisesti sitovaan tonttijakoon ja kukin Kaavamääräys yhdensuuntaisesti tonttijakotontteihin, joiden alueita ne koskevat. Tällöin uuden kaavamääräyksen luominen johtaa uuden version luomiseen siihen linkitetyistä esitonttikohteista, ja edelleen niihin linkitetystä sitovan tonttijaon-objektista, mikä puolestaan johtaa lopulta uusien versioiden luomiseen kaikista ko. sitovan tonttijaon muistakin tonttijakotonteista, koska sitovan tonttijaon-objektiin päin osoittavat linkit pitää muuttaa osoittamaan sen uuteen versioon. 
+Sitovan tonttijaon tietomallissa kukin Tonttijakotontti on linkitetty kahdensuuntaisesti sitovaan tonttijakoon ja kukin Kaavamääräys yhdensuuntaisesti tonttijakotontteihin, joiden alueita ne koskevat. Tällöin uuden kaavamääräyksen luominen johtaa uuden version luomiseen siihen linkitetyistä tonttijakotontista, ja edelleen niihin linkitetystä sitovan tonttijaon-objektista, mikä puolestaan johtaa lopulta uusien versioiden luomiseen kaikista ko. sitovan tonttijaon muistakin tonttijakotonteista, koska sitovan tonttijaon-objektiin päin osoittavat linkit pitää muuttaa osoittamaan sen uuteen versioon. 
 
 **Esimerkki**:
 
 Tallennuspalveluun viedään sitova tonttijako, jonka yhteen tonttijakotonttiin liittyvää kaavamääräystä **asuinpientaloalue** on muutettu kaavaprosessissa **erillispientaloalueeksi**. Kaikki sitovan tonttijaon muut tietokohteet ovat identtisiä sitovan tonttijaon edellisen tallennusversion kanssa.
 
-- Esitonttikohteesta, johon muuttunut kaavamääräys kohdistuu, luodaan uusi versio, jossa muuttuu vain linkki, viitaten nyt uuteen kaavamääräykseen.
+- Tonttijakotontista, johon muuttunut kaavamääräys kohdistuu, luodaan uusi versio, jossa muuttuu vain linkki, viitaten nyt uuteen kaavamääräykseen.
 
 ### Yksittäisen sitovan tonttijaon elinkaaren vaiheisiin liittyvät muutokset
 Sitovan tonttijaon tietomalli mahdollistaa tunnistettavien sitovan tonttijaon tietokohteiden eri kehitysversioiden erottamisen toisistaan. Kullakin tietomallin kohteella on sekä sen tosimaailman identiteettiin liittyvä ns. identiteettitunnus että yksittäisen tallennusversion tunnus (paikallinen tunnus). Tallennettaessa uutta versiota samasta sitovasta tonttijaosta tai sen sisältämästä tietokohteesta, sen identiteettitunnus pysyy ennallaan, mutta sen paikallinen tunnus muuttuu. Tallennettaessa SitovaTonttijako-luokan objektia se katsotaan saman tietokohteen uudeksi versioksi, mikäli sen sitovan tonttijaon tunnus on sama. Muiden sitovan tonttijaon tietomallin versioitavien objektien suhteen samuuden määritteleminen on tietoja tuottavien järjestelmien vastuulla: mikäli objektilla on tallennettavaksi lähetettäessä saman ```identititeettiTunnus```-attribuutin arvo kuin aiemmin tallennetulla, samantyyppisellä tietokohteella, katsotaan uusi objekti on saman tietokohteen uudeksi versioksi.
@@ -306,13 +306,13 @@ Sitova tonttijaoilla kumoutuvat, aiemmin hyväksyttyjen sitovien tonttijakojen t
 {% include common/clause_end.html %}
 
 <!-- Lisää tähän vielä sisäiset linkit kuntoon -->
-{% include common/clause_start.html type="req" id="elinkaari/vaat-kumoutuva-esitonttikohteen-tunnus" %}
+{% include common/clause_start.html type="req" id="elinkaari/vaat-kumoutuva-tonttijakotontin-tunnus" %}
 Kumoutumisessa tonttijakotontit kuvataan ensisijaisesti kumoattavanTonttijakotontinTunnus-attribuutin arvojen avulla. Attribuutin arvo on kumottavan Tonttijakotontti-luokan tietokohteen ```viittaustunnus```.
 {% include common/clause_end.html %}
 
 <!-- Lisää tähän vielä sisäiset linkit kuntoon -->
 {% include common/clause_start.html type="req" id="elinkaari/vaat-tonttijakosuunnitelman-voimaantulo" %}
-Kun sitovan tonttijaon kumoutumisessa tallennetaan versio, jonka elinkaaritila-attribuutin arvo on Voimassa, itovan tonttijaon tietovarasto päivittää niiden siinä kumoutuviksi asetettuja tonttijakotontteja, joiden elinkaaritila-attribuutin arvo on Voimassa, attribuutteja seuraavasti luomatta niistä uusia versioita:
+Kun sitovan tonttijaon kumoutumisessa tallennetaan versio, jonka elinkaaritila-attribuutin arvo on Voimassa, sitovan tonttijaon tietovarasto päivittää niiden siinä kumoutuviksi asetettuja tonttijakotontteja, joiden elinkaaritila-attribuutin arvo on Voimassa, attribuutteja seuraavasti luomatta niistä uusia versioita:
 
 - ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin uuden sitovan tonttijaon ```voimassaoloAika```-attribuutin alkamisaika.
 - ```elinkaaritila```-attribuutin arvoksi asetetaan Kumottu.
@@ -327,17 +327,19 @@ Sitovan tonttijaon tietomalli ei sisällä omaa tietorakennettaan ajantasaiselle
 Voimassaolevan sitovan tonttijaon tonttijakotontit voi saada uuden version tai kumoutua kokonaan kaavamuutoksen tai vaiheasemakaavan voimaan tullessa tonttijakotontin alueella.
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-kaavatunnus" %}
-Tonttijakotonteille tulee yksilöidä sitovassa tonttijaossa siihen liittyvät hyväksytyt asemakaavat. Kutakin tonttijakotonttia kohti tulee antaa yksi [Tonttijakotontti-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#tonttijakotontti) attribuutin ```kaavayksikönMuutostieto``` arvo tyyppiä KaavayksikönMuutostieto, jonka ```kaavaTunnus```-attribuutin arvo on [Kaava-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaava) ```viittaustunnus```.
+Tonttijakotonteille tulee yksilöidä sitovassa tonttijaossa siihen liittyvät hyväksytyt asemakaavat. Kutakin tonttijakotonttia kohti tulee antaa yksi [Kaavayksikkö-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavayksikkö) attribuutin ```kaavayksikönMuutostieto``` arvo tyyppiä KaavayksikönMuutostieto, jonka ```kaavaTunnus```-attribuutin arvo on [Kaava-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaava) ```viittaustunnus```.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-kaavayksikön-muutostieto-vaikutus" %}
-Asemakaavan muutoksen tai vaiheasemakaavan hyväksyminen tonttijakotontin alueella, edellyttää uuden tallennusversion luomista tonttijakotontista ja [KaavayksikönMuutostieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```muutoslaji```-attribuutin arvoksi tulee asettaa hyväksytyn kaavan KaavayksikönMuutosLaji-koodi.
+Asemakaavan muutoksen tai vaiheasemakaavan hyväksyminen tonttijakotontin alueella, edellyttää uuden tallennusversion luomista kaavayksiköstä ja [KaavayksikönMuutostieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```muutoslaji```-attribuutin arvoksi tulee asettaa hyväksytyn kaavan KaavayksikönMuutosLaji-koodi.
 
-Asemakaavan määräysten muuttuessa asetetaan kaavatietomallin uuden [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus sitovan tonttijaon tietomallin [Tonttijakotontti-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) ```toteuttavaKaavamääräys```-attribuutin arvoksi uudelle tallennusversiolle. <!-- Tällöin esitonttikohteen versiolla voi olla voimassa olevan asemakaavan ja luonnosvaiheessa olevan asemakaavan määräyksiä. Kun asemakaava tulee voimaan, tallennetaan esitonttikohteesta uusi tallennusversio, jolla vain uudet asemakaavan määräykset.-->
+Asemakaavan määräysten muuttuessa perii [Kaavayksikkö-luokka] [Kaavakohde-luokan] seuraavilla kaavamääräysten **Kaavamääräyslaji (asemakaava)**-koodiston arvoilla
+ **Alueen käyttötarkoitus**, **Rakentamisen määrä** ja **Tonttijako** osaksi kaavatietovarastoa. 
+<!-- Asemakaavan määräysten muuttuessa asetetaan kaavatietomallin uuden [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus sitovan tonttijaon tietomallin [Tonttijakotontti-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) ```toteuttavaKaavamääräys```-attribuutin arvoksi uudelle tallennusversiolle. Tästä eteenpäin vanhaa versiota -> Tällöin esitonttikohteen versiolla voi olla voimassa olevan asemakaavan ja luonnosvaiheessa olevan asemakaavan määräyksiä. Kun asemakaava tulee voimaan, tallennetaan esitonttikohteesta uusi tallennusversio, jolla vain uudet asemakaavan määräykset.-->
 
-Asemakaavan määräysten muuttuessa tulee tulkita sitovan tonttijaon kaavan mukaisuus. Tämä voidaan selvittää kaavatietomallin [Kaavayksikkö]-luokan ```kaavayksikönMuutos```-attribuutilta. Jos sitova tonttijako ei ole asemakaavan mukainen, tulee sitovan tonttijaon sisältämät ei kaavan mukaiset tonttijakotontit asettaa rakennuskieltoon, kun asemakaava hyväksytään. Kaavakohteen rajojen muutos  asettaa tonttijakotontin aina rakennuskieltoon:
+Asemakaavan määräysten muuttuessa tulee tulkita sitovan tonttijaon kaavan mukaisuus. Tämä voidaan selvittää kaavatietomallin [Kaavayksikkö]-luokan ```kaavayksikönMuutos```-attribuutilta. Jos sitova tonttijako ei ole asemakaavan mukainen, tulee sitovan tonttijaon sisältämät ei kaavan mukaiset tonttijakotontit asettaa rakennuskieltoon, kun asemakaava hyväksytään. Kaavakohteen rajojen muutos asettaa tonttijakotontin aina rakennuskieltoon:
 
-- ```rakennuskielto```-attribuutin arvoksi asetetaan true.
+-  [Kaavayksikkö-luokan] ```rakennuskielto```-attribuutin arvoksi asetetaan true.
 
 Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden sitovan tonttijaon laatimista niiltä osin, mitä tonttijakotontteja rakennuskielto koskee.
 {% include common/clause_end.html %}
@@ -345,17 +347,17 @@ Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden sitovan tonttij
 {% include common/clause_start.html type="req" id="elinkaari/vaat-kumoaa-tonttijakotontin" %}
 Jos asemakaavalla tonttijakotontin rajat muuttuvat kokonaan tai osittain yleiseksi alueeksi, kumoaa asemakaava tonttijakotontin. Näin tonttijakotontti muuttuu ei-kortteliksi, ja kumoaminen sitovalla tonttijaolla ei olisi mahdollista. [KaavayksikönMuutostieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) kumoaaTonttijakotontin-attribuutin arvoksi asetetaan true. Tonttijakotontista ei luoda uutta versiota, vaan:
 
-- ```elinkaarentila```-attribuutin arvoksi asetetaan **kumoutunut**.
-- ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin kaavan ```voimassaoloAika```-attribuutin alkamisaika.
+-  [Kaavayksikkö-luokan] ```elinkaarentila```-attribuutin arvoksi asetetaan **Kumoutunut kokonaan**.
+-  [Kaavayksikkö-luokan] ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin kaavan ```voimassaoloAika```-attribuutin alkamisaika.
 
 Tämä edellyttää uuden sitovan tonttijaon laatimista kumotun tonttijakotontin alueelle.
 {% include common/clause_end.html %}
 
 ## Sitovan tonttijaon elinkaaren vaiheet ja elinkaaritila-attribuutin käyttötavat
 
-Sitovan tonttijaon ja sen sisältämien tonttijakotonttien elinkaareen liittyvää tilaa hallitaan ko. tietokohteiden elinkaaritila-attribuutin ja sen mahdolliset arvot kuvaavan Elinkaaren tila-koodiston avulla. [SitovaTonttijako]- ja [Tonttijakotontti]-luokkien elinkaaritila-attribuutit ovat pakollisia.
+Sitovan tonttijaon ja sen sisältämien tonttijakotonttien elinkaareen liittyvää tilaa hallitaan elinkaaritila-attribuutilla ja sen mahdolliset arvot kuvaavan Sitovan tonttijaon elinkaaren tila-koodiston avulla. [SitovaTonttijako]- ja [Kaavayksikkö]-luokkien elinkaaritila-attribuutit ovat pakollisia.
 
-**Elinkaaren tila**-koodisto kuvaa 9 mahdollista tilaa, joissa sitova tonttijako voi olla sen elinkaaren eri vaiheissa:
+**Sitovan tonttijaon elinkaaren tila**-koodisto kuvaa 9 mahdollista tilaa, joissa sitova tonttijako voi olla sen elinkaaren eri vaiheissa:
 
 - Vireillä
 - Luonnos
