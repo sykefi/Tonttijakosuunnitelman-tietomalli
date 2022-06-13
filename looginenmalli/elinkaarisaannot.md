@@ -282,8 +282,8 @@ Sitovan tonttijaon ```voimassaoloAika``` -attribuutin alkuaika on ajanhetki, jol
 
 {% include common/clause_start.html type="req" id="vaat-sitovan-tonttijaon-voimaantulo" %}
 Voimaantulemisen yhteydessä sitovasta tonttijaosta tallennetaan sitovan tonttijaon tietovarastoon uusi versio, jossa sen:
-- [SitovaTonttijako-luokan] objektin elinkaaritila-attribuutin arvoksi on asetettu Voimassa,
-- [SitovaTonttijako-luokan] objektin voimassaoloAika-attribuutin alkuajaksi on asetettu kuulutuksen ajanhetki ja loppuaikaa ei ole annettu.
+- SitovaTonttijako-luokan objektin elinkaaritila-attribuutin arvoksi on asetettu Voimassa,
+- SitovaTonttijako-luokan objektin voimassaoloAika-attribuutin alkuajaksi on asetettu kuulutuksen ajanhetki ja loppuaikaa ei ole annettu.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-voimassaoloaika" %}
@@ -333,13 +333,14 @@ Tonttijakotonteille tulee yksilöidä sitovassa tonttijaossa siihen liittyvät h
 {% include common/clause_start.html type="req" id="elinkaari/vaat-kaavayksikön-muutostieto-vaikutus" %}
 Asemakaavan muutoksen tai vaiheasemakaavan hyväksyminen tonttijakotontin alueella, edellyttää uuden tallennusversion luomista tonttijakotontista ja [KaavayksikönMuutostieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) ```muutoslaji```-attribuutin arvoksi tulee asettaa hyväksytyn kaavan KaavayksikönMuutosLaji-koodi.
 
-Asemakaavan määräysten muuttuessa perii [Kaavayksikkö-luokka] [Kaavakohde-luokan] seuraavilla kaavamääräysten **Kaavamääräyslaji (asemakaava)**-koodiston arvoilla
- **Alueen käyttötarkoitus**, **Rakentamisen määrä** ja **Tonttijako** osaksi kaavatietovarastoa. 
+Asemakaavan määräysten muuttuessa, edellytetään uuden tallennusversion luomista [Kaavayksikkö-luokasta](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavayksikkö) seuraavilla Kaavamääräys-luokan **Kaavamääräyslaji (asemakaava)**-koodiston arvoilla osaksi kaavatietovarastoa:
+ - **Alueen käyttötarkoitus** ja mahdollinen **Rakentamisen määrä** 
+ - **Ohjeellinen kaavan mukainen tontti** ja **Rakentamisen määrä**  
 <!-- Asemakaavan määräysten muuttuessa asetetaan kaavatietomallin uuden [Kaavamaarays-luokan](https://kaavatietomalli.fi/1.0/looginenmalli/dokumentaatio/#kaavamaarays) viittaustunnus sitovan tonttijaon tietomallin [Tonttijakotontti-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavamaarays) ```toteuttavaKaavamääräys```-attribuutin arvoksi uudelle tallennusversiolle. Tästä eteenpäin vanhaa versiota -> Tällöin esitonttikohteen versiolla voi olla voimassa olevan asemakaavan ja luonnosvaiheessa olevan asemakaavan määräyksiä. Kun asemakaava tulee voimaan, tallennetaan esitonttikohteesta uusi tallennusversio, jolla vain uudet asemakaavan määräykset.-->
 
-Asemakaavan määräysten muuttuessa tulee tulkita sitovan tonttijaon kaavan mukaisuus. Tämä voidaan selvittää kaavatietomallin [Kaavayksikkö]-luokan ```kaavayksikönMuutos```-attribuutilta. Jos sitova tonttijako ei ole asemakaavan mukainen, tulee sitovan tonttijaon sisältämät ei kaavan mukaiset tonttijakotontit asettaa rakennuskieltoon, kun asemakaava hyväksytään. Kaavakohteen rajojen muutos asettaa tonttijakotontin aina rakennuskieltoon:
+Asemakaavan määräysten muuttuessa tulee tulkita sitovan tonttijaon kaavan mukaisuus. Tämä voidaan selvittää kaavatietomallin [Kaavayksikkö-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavayksikkö) ```kaavayksikönMuutos```-attribuutilta. Jos sitova tonttijako ei ole asemakaavan mukainen, tulee sitovan tonttijaon sisältämät ei kaavan mukaiset tonttijakotontit asettaa rakennuskieltoon, kun asemakaava hyväksytään. Kaavakohteen rajojen muutos asettaa tonttijakotontin aina rakennuskieltoon:
 
--  [Kaavayksikkö-luokan] ```rakennuskielto```-attribuutin arvoksi asetetaan true.
+- ```rakennuskielto```-attribuutin arvoksi asetetaan true.
 
 Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden sitovan tonttijaon laatimista niiltä osin, mitä tonttijakotontteja rakennuskielto koskee.
 {% include common/clause_end.html %}
@@ -347,8 +348,8 @@ Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden sitovan tonttij
 {% include common/clause_start.html type="req" id="elinkaari/vaat-kumoaa-tonttijakotontin" %}
 Jos asemakaavalla tonttijakotontin rajat muuttuvat kokonaan tai osittain yleiseksi alueeksi, kumoaa asemakaava tonttijakotontin. Näin tonttijakotontti muuttuu ei-kortteliksi, ja kumoaminen sitovalla tonttijaolla ei olisi mahdollista. [KaavayksikönMuutostieto-luokan](https://www.tonttijakosuunnitelma.fi/1.0-dev/looginenmalli/dokumentaatio/#kaavansuhdetieto) kumoaaTonttijakotontin-attribuutin arvoksi asetetaan true. Tonttijakotontista ei luoda uutta versiota, vaan:
 
--  [Kaavayksikkö-luokan] ```elinkaarentila```-attribuutin arvoksi asetetaan **Kumoutunut**.
--  [Kaavayksikkö-luokan] ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin kaavan ```voimassaoloAika```-attribuutin alkamisaika.
+-  ```elinkaarentila```-attribuutin arvoksi asetetaan **Kumoutunut**.
+-  ```voimassaoloAika```-attribuutin päättymisaika asetetaan samaksi kuin kaavan ```voimassaoloAika```-attribuutin alkamisaika.
 
 Tämä edellyttää uuden sitovan tonttijaon laatimista kumotun tonttijakotontin alueelle.
 {% include common/clause_end.html %}
