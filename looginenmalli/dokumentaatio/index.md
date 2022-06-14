@@ -139,7 +139,7 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 nimi             | [LanguageString](#languagestring)     | 0..* | asian nimi
 kuvaus           | [LanguageString](#languagestring) | 0..* | asian kuvausteksti
 metatietokuvaus  | [URI](#uri) | 0..1  | viittaus ulkoiseen metatietokuvaukseen
-elinkaarentila   | [AbstraktiElinkaarentila](#abstraktielinkaarentila) | 1 | yleisimmät arvot vireillä oleva,  hyväksytty tai voimassa
+elinkaarentila   | [AbstraktiElinkaarentila](#abstraktielinkaarentila) | 1 | yleisimmät arvot vireillä oleva, hyväksytty tai voimassa
 vireilletuloAika | [TM_Instant](#TM_Instant) | 0..1 | aika, jolloin asia on tullut vireille
 asianLiite       | [Asiakirja](#asiakirja) | 0..* | liittyvän asian liite
 asianhallintaTunnus | [Tunnusarvo](#tunnisarvo) | 0..* | asiaan liittyvä tunnus
@@ -348,19 +348,19 @@ AbstraktiMaankayttoasia-luokasta peritytyvä attribuutti aluerajauus kuvaa sitov
 
 Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
 -----------------|--------------------|---------------------|-----------------
-tonttijakotontti | [Kaavakohde](#Kaavakohde) | 1 | paikkatietokohde, johon kohdistuu kaavamääräyksiä tai -suosituksia
+tonttijakotontti | [Tonttijakotontti](#tonttijakotontti) | 1 | paikkatietokohde, johon kohdistuu kaavamääräyksiä tai -suosituksia
 laatija | [SuunnitelmanLaatija](#SuunnitelmanLaatija) | 1 | Sitovan tonttijaon suunnitelman laatija
 
 ### Kaavayksikkö
 
-Kuvaa käsitteen Kaavayksikkö, erikoistaa luokkaa AbstraktiKaavakohde, stereotyyppi: FeatureType (kohdetyyppi)
+Kuvaa käsitteen Kaavayksikkö, erikoistaa luokkaa RakennetunYmpäristönKohde, stereotyyppi: FeatureType (kohdetyyppi)
 
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 suhdePeruskiinteistoon | [suhdePeruskiinteistoon](#suhdeperuskiinteistoon) | 0..1  | luokittelu tonttijakotonttiin sijoittumisesta suhteessa peruskiinteistöön, joka merkitään vain 3D-tonttijakotonttikohteelle
 kaavayksikönTunnus | [URI](#URI) | 1 | yksilöivä ID
-kaavayksikönElinkaarentila | [KaavayksikönElinkaarentila](#kaavayksikönelinkaarentila) | 1  | 
-muodostustieto | [Muodostajakiinteisto](#muodostajakiinteisto) | 1..* | tieto muodostajakiinteistöistä, josta/joista tonttijakotontti muodostetaan
+kaavayksikönElinkaarentila | [KaavayksikönElinkaarentila](#kaavayksikönelinkaarentila) | 1  | yleisimmät arvot Vireillä, Voimassa, Kiinteistö lakannut, Kumottu, Kumoutunut, Muu
+kiinteistö | [Muodostajakiinteisto](#muodostajakiinteisto) | 1..* | tieto muodostajakiinteistöistä, josta/joista tonttijakotontti muodostetaan
 pintaAla | [Number](#Number) | 0..*  | tonttijakotontin pinta-ala tai kolmiulotteisen tonttijakotontin projisoitu pinta-ala
 kaavayksikönMuutostieto | [KaavayksikönMuutostieto](#kaavayksikönmuutostieto) | 1..* | tieto tonttijakotonttiin liittyvistä asemakaavan kaavayksiköistä ja niiden vaikutuksista
 rakennettu | [boolean](#boolean) | 0..1 | tieto muun muassa rakentamattomasta rakennuspaikasta korotettua kiinteistöverotusta varten, onko tonttijakotontti rakennettu asemakaavan mukaisesti. Lisäksi tämän tiedon perusteella saadaan tieto kunnan kaavavarannosta.
@@ -371,8 +371,9 @@ voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aikaväli, jona asiasta tehty
 
 Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
 -----------------|--------------------|---------------------|----------
-toteuttavaKaavamääräys | [Kaavamaarays](#kaavamaarays) | 1..* | kaavaan sisältyvä sanallinen määräys, jolla ohjataan alueiden suunnittelua ja rakentamista
-jyvitettäväArvo | [OminaisuudenArvo](#ominaisuudenarvo) | 0..* | suunnitelman laatijan jyvittämä tai jakojäännöksen rakentamisen määrän arvo kaavayksikölle kaavassa osoitetusta rakentamisen määrästä
+kaavakohde | [Kaavakohde](#Kaavakohde) | 1 | paikkatietokohde, johon kohdistuu kaavamääräyksiä tai -suosituksia
+rakentamisenmääränLähtötieto | [Kaavamaarays](#kaavamaarays) | 1..* | kaavaan sisältyvä rakentamisen määrä, jolla ohjataan alueiden suunnittelua ja rakentamista
+rakentamisenMäärä | [OminaisuudenArvo](#ominaisuudenarvo) | 0..* | suunnitelman laatijan kohdentama rakentamisen määrän arvo kaavayksikölle kaavassa osoitetusta rakentamisen määrästä
 
 <!-- **Assosiaatiot**
 
@@ -395,7 +396,7 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 kiinteistöTunnus | [Tunnusarvo](#Tunnusarvo) | 1  | kiinteistörekisteriin merkityn rekisteriyksikön yksilöivä tunnus
 muodostusPinta-ala | [Number](#Number) | 1  | muodostavan rekisterikiinteistön pinta-alan määrä neliömetreissä
 
-### KaavaykikönMuutostieto
+### KaavayksikönMuutostieto
 
 Stereotyyppi: DataType (tietotyyppi)
 

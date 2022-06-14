@@ -5,7 +5,7 @@ description: ""
 id: "elinkaarisaannot"
 status: "Keskeneräinen"
 ---
-{% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %}
+<!-- {% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %} -->
 
 # Elinkaarisäännöt
 {:.no_toc}
@@ -340,11 +340,11 @@ Asemakaavan määräysten muuttuessa tulee tulkita sitovan tonttijaon kaavan muk
 
 Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden sitovan tonttijaon laatimista niiltä osin, mitä tonttijakotontteja rakennuskielto koskee.
 
-Ensimmäisen asemakaavan tai asemakaavan määräysten muuttuessa, tämä edellyttää uuden tallennusversion luomista [Kaavayksikkö-luokasta](https://tietomallit.ymparisto.fi/tonttijakosuunnitelma/dev/looginenmalli/dokumentaatio/#kaavayksikkö) seuraavien Kaavamääräys-luokan **Kaavamääräyslaji (asemakaava)**-koodiston arvojen osalta osaksi kaavatietovarastoa:
+Ensimmäisen asemakaavan tai asemakaavan määräysten muutoksen vireille tullessa, edellytetään uuden tallennusversion luomista [Kaavayksikkö-luokasta](https://tietomallit.ymparisto.fi/tonttijakosuunnitelma/dev/looginenmalli/dokumentaatio/#kaavayksikkö) seuraavien Kaavamääräys-luokan **Kaavamääräyslaji (asemakaava)**-koodiston arvojen osalta osaksi kaavatietovarastoa:
  - **Alueen käyttötarkoitus** ja mahdollinen **Rakentamisen määrä** 
  - **Ohjeellinen kaavan mukainen tontti** ja **Rakentamisen määrä** 
 
-{% include common/question.html content="Kaavayksiköt voisivat muodostaa oman tietoaineiston, jota editoidaan sekä asemakaavalla ja sitovalla tonttijaolla? Tämä mahdollistaisi sitovalla tonttijaolla jakojäännöksen tallentamisen jäljelle jäävällä ohjeelliselle kaavan mukaiselle tontille tai niiden kumoamisen, jos tonttijakotontti tai tonttijakotontit muodostuvat kokonaan ohjeellisen kaavan mukaisen tontin pinta-alasta." %}
+{% include common/question.html content="Kaavayksiköt voisivat muodostaa oman tietoaineiston, jota editoidaan sekä asemakaavalla ja sitovalla tonttijaolla? Tämä mahdollistaisi sitovalla tonttijaolla rakentamisen määrän tallentamisen jäljelle jäävällä ohjeelliselle kaavan mukaiselle tontille tai niiden kumoamisen, jos tonttijakotontti tai tonttijakotontit muodostuvat kokonaan ohjeellisen kaavan mukaisen tontin pinta-alasta." %}
 
 {% include common/clause_end.html %}
 
