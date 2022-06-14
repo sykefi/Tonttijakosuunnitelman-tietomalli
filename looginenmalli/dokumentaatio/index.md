@@ -5,7 +5,7 @@ description: ""
 id: "dokumentaatio"
 status: "Keskeneräinen"
 ---
-{% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %}
+<!-- {% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %} -->
 
 # Loogisen tason sitovan tonttijaon tietomalli
 {:.no_toc}
@@ -358,6 +358,7 @@ Kuvaa käsitteen Kaavayksikkö, erikoistaa luokkaa AbstraktiKaavakohde, stereoty
 Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 suhdePeruskiinteistoon | [suhdePeruskiinteistoon](#suhdeperuskiinteistoon) | 0..1  | luokittelu tonttijakotonttiin sijoittumisesta suhteessa peruskiinteistöön, joka merkitään vain 3D-tonttijakotonttikohteelle
+kaavayksikönTunnus | [URI](#URI) | 1 | yksilöivä ID
 kaavayksikönElinkaarentila | [KaavayksikönElinkaarentila](#kaavayksikönelinkaarentila) | 1  | 
 muodostustieto | [Muodostajakiinteisto](#muodostajakiinteisto) | 1..* | tieto muodostajakiinteistöistä, josta/joista tonttijakotontti muodostetaan
 pintaAla | [Number](#Number) | 0..*  | tonttijakotontin pinta-ala tai kolmiulotteisen tonttijakotontin projisoitu pinta-ala
@@ -365,6 +366,13 @@ kaavayksikönMuutostieto | [KaavayksikönMuutostieto](#kaavayksikönmuutostieto)
 rakennettu | [boolean](#boolean) | 0..1 | tieto muun muassa rakentamattomasta rakennuspaikasta korotettua kiinteistöverotusta varten, onko tonttijakotontti rakennettu asemakaavan mukaisesti. Lisäksi tämän tiedon perusteella saadaan tieto kunnan kaavavarannosta.
 rakennuskielto | [boolean](#boolean) | 0..1 | kuvaa, onko tonttijakotontilla rakennuskielto
 voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aikaväli, jona asiasta tehty päätös suunnitelmineen ja säännöksineen on lainvoimainen
+
+**Assosiaatiot**
+
+Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
+-----------------|--------------------|---------------------|----------
+toteuttavaKaavamääräys | [Kaavamaarays](#kaavamaarays) | 1..* | kaavaan sisältyvä sanallinen määräys, jolla ohjataan alueiden suunnittelua ja rakentamista
+jyvitettäväArvo | [OminaisuudenArvo](#ominaisuudenarvo) | 0..* | suunnitelman laatijan jyvittämä tai jakojäännöksen rakentamisen määrän arvo kaavayksikölle kaavassa osoitetusta rakentamisen määrästä
 
 <!-- **Assosiaatiot**
 
@@ -397,7 +405,7 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 kaavaTunnus | [URI](#URI) | 1  | kaavatunnus, joka muuttaa tonttijakotontin kaavamääräyksiä tai kumoaa tonttijakotontin
 kaavayksikönMuutosLaji | [KaavayksikönMuutostieto](#kaavayksikönmuutoslaji) | 1 | alueiden käytön ohjaustarpeeseen, kaavan sisältövaatimuksiin, prosessiin ja vastuulliseen hallintoviranomaiseen perustuva luokittelu
-kaavayksikönTunnus | [URI](#URI) | 0..*  | kaavayksikkö, johon kumoutuminen kohdistuu
+kaavayksikönTunnus | [URI](#URI) | 0..*  | kaavayksikkö, joka muuttaa tonttijakotontin kaavamääräyksiä tai kumoaa tonttijakotontin
 
 ### Kaavamääräys
 

@@ -5,7 +5,7 @@ description: ""
 id: "soveltamisohje-tjs"
 status: "Keskeneräinen"
 ---
-{% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %}
+<!-- {% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %} -->
 
 # Soveltamisprofiili
 
