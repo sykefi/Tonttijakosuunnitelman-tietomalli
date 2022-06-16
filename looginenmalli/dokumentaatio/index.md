@@ -362,7 +362,8 @@ kaavayksikönTunnus | [URI](#URI) | 1 | yksilöivä ID
 kaavayksikönElinkaarentila | [KaavayksikönElinkaarentila](#kaavayksikönelinkaarentila) | 1  | yleisimmät arvot Vireillä, Voimassa, Kiinteistö lakannut, Kumottu, Kumoutunut, Muu
 kiinteistö | [Muodostajakiinteisto](#muodostajakiinteisto) | 1..* | tieto muodostajakiinteistöistä, josta/joista tonttijakotontti muodostetaan
 pintaAla | [Number](#Number) | 0..*  | tonttijakotontin pinta-ala tai kolmiulotteisen tonttijakotontin projisoitu pinta-ala
-kaavayksikönMuutostieto | [KaavayksikönMuutostieto](#kaavayksikönmuutostieto) | 1..* | tieto tonttijakotonttiin liittyvistä asemakaavan kaavayksiköistä ja niiden vaikutuksista
+muutoslaji | [KaavayksikönMuutosLaji](#kaavayksikönmuutoslaji) | 1 | alueiden käytön ohjaustarpeeseen, kaavan sisältövaatimuksiin, prosessiin ja vastuulliseen hallintoviranomaiseen perustuva luokittelu
+rakentamisenMäärä | [OminaisuudenArvo](#ominaisuudenarvo) | 0..* | suunnitelman laatijan tallentama rakentamisen määrä kaavayksikölle
 rakennettu | [boolean](#boolean) | 0..1 | tieto muun muassa rakentamattomasta rakennuspaikasta korotettua kiinteistöverotusta varten, onko tonttijakotontti rakennettu asemakaavan mukaisesti. Lisäksi tämän tiedon perusteella saadaan tieto kunnan kaavavarannosta.
 rakennuskielto | [boolean](#boolean) | 0..1 | kuvaa, onko tonttijakotontilla rakennuskielto
 voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aikaväli, jona asiasta tehty päätös suunnitelmineen ja säännöksineen on lainvoimainen
@@ -372,8 +373,10 @@ voimassaoloAika | [TM_Period](#TM_Period) | 0..1 | aikaväli, jona asiasta tehty
 Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
 -----------------|--------------------|---------------------|----------
 kaavakohde | [Kaavakohde](#Kaavakohde) | 1 | paikkatietokohde, johon kohdistuu kaavamääräyksiä tai -suosituksia
-rakentamisenmääränLähtötieto | [Kaavamaarays](#kaavamaarays) | 1..* | kaavaan sisältyvä rakentamisen määrä, jolla ohjataan alueiden suunnittelua ja rakentamista
-rakentamisenMäärä | [OminaisuudenArvo](#ominaisuudenarvo) | 0..* | suunnitelman laatijan kohdentama rakentamisen määrän arvo kaavayksikölle kaavassa osoitetusta rakentamisen määrästä
+tonttijakotontti | [Tonttijakotontti](#tonttijakotontti) | 1 | paikkatietokohde, johon kohdistuu kaavamääräyksiä tai -suosituksia
+jyvitettyRakentamisenMäärä | [OminaisuudenArvo](#ominaisuudenarvo) | 0..* | suunnitelman laatijan kohdentama rakentamisen määrän arvo kaavayksikölle kaavassa osoitetusta rakentamisen määrästä
+kumoaaTonttijakotontin | [boolean](#boolean) | 1 | paikkatietokohde, johon kohdistuu kaavamääräyksiä tai -suosituksia
+liittyväTonttijakotontti | [URI](#URI) | 0..*  | tonttijakotontti, joka johon kaavayksikkö liittyy
 
 <!-- **Assosiaatiot**
 
@@ -384,6 +387,12 @@ maarays | [Kaavamaarays](#kaavamaarays) | 0..* | kaavaan sisältyvä sanallinen 
 ### Tonttijakotontti
 
 Kuvaa käsitteen Tonttijakotontti, erikoistaa luokkaa Kaavayksikkö, stereotyyppi: FeatureType (kohdetyyppi)
+
+**Assosiaatiot**
+
+Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
+-----------------|--------------------|---------------------|----------
+liittyväKaavayksikkö | [URI](#URI) | 0..*  | kaavayksikkö, joka muuttaa tonttijakotontin kaavamääräyksiä tai kumoaa tonttijakotontin
 
 ### Muodostajakiinteistö
 
@@ -396,7 +405,7 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 kiinteistöTunnus | [Tunnusarvo](#Tunnusarvo) | 1  | kiinteistörekisteriin merkityn rekisteriyksikön yksilöivä tunnus
 muodostusPinta-ala | [Number](#Number) | 1  | muodostavan rekisterikiinteistön pinta-alan määrä neliömetreissä
 
-### KaavayksikönMuutostieto
+<!-- ### KaavayksikönMuutostieto
 
 Stereotyyppi: DataType (tietotyyppi)
 
@@ -406,7 +415,7 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 kaavaTunnus | [URI](#URI) | 1  | kaavatunnus, joka muuttaa tonttijakotontin kaavamääräyksiä tai kumoaa tonttijakotontin
 kaavayksikönMuutosLaji | [KaavayksikönMuutostieto](#kaavayksikönmuutoslaji) | 1 | alueiden käytön ohjaustarpeeseen, kaavan sisältövaatimuksiin, prosessiin ja vastuulliseen hallintoviranomaiseen perustuva luokittelu
-kaavayksikönTunnus | [URI](#URI) | 0..*  | kaavayksikkö, joka muuttaa tonttijakotontin kaavamääräyksiä tai kumoaa tonttijakotontin
+kaavayksikönTunnus | [URI](#URI) | 0..*  | kaavayksikkö, joka muuttaa tonttijakotontin kaavamääräyksiä tai kumoaa tonttijakotontin -->
 
 ### Kaavamääräys
 
@@ -414,7 +423,7 @@ Kuvaa käsitteen Kaavamääräys, erikoistaa luokkaa AbstraktiTietoyksikko, ster
 
 laji             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
-liittyvanKaavamaarayksenTunnus | [URI](#URI) | 1  | viittaustunnus kaavaan sisältyvän kaavamääräyksen tietokohteeseen, joka liittyy tonttijakotonttiin
+määräys | [URI](#URI) | 1  | viittaustunnus kaavaan sisältyvän kaavamääräyksen tietokohteeseen, joka liittyy tonttijakotonttiin
 
 ### AbstraktiTietoyksikko
 
@@ -460,6 +469,18 @@ Stereotyyppi: CodeList (koodisto)
 Laajennettavuus: Ei laajennettavissa
 
 {% include common/codelistref.html registry="rytj" id="RY_TonttijakosuunnitelmanElinkaarentila" name="Sitovan tonttijaon elinkaaren tila" %}
+
+#### KaavayksikonElinkaarentila
+
+Erikoistaa luokkaa AbstraktiElinkaarentila. 
+
+Englanninkielinen nimi: PlotUnitLifeCycleState
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: Ei laajennettavissa
+
+{% include common/codelistref.html registry="rytj" id="RY_KaavayksikonElinkaarentila" name="Kaavayksikön elinkaaren tila" %}
 
 #### SitovaonTonttijaonAsiakirjanLaji
 
@@ -507,7 +528,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-#### KaavayksikönMuutostieto
+#### KaavayksikönMuutosLaji
 
 <!--Lisää sisäinen linkki? -->
 Englanninkielinen nimi: PlanUnitChangeInform
@@ -516,7 +537,7 @@ Stereotyyppi: CodeList (koodisto)
 
 Laajennettavuus: Ei laajennettavissa
 
-{% include common/codelistref.html registry="rytj" id="RY_KaavanMuutostieto" name="Kaavayksikön muutostieto (asemakaava)" %}
+{% include common/codelistref.html registry="rytj" id="RY_KaavanMuutostieto" name="Kaavayksikön muutoslaji (asemakaava)" %}
 
 <!-- linkit standardeihin, joihin mainittu sivun alussa -->
 [ISO-8601-1]: https://www.iso.org/standard/70907.html "ISO 8601-1:2019 Date and time — Representations for information interchange — Part 1: Basic rules"
