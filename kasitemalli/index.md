@@ -56,8 +56,8 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sa
 ### Kaavayksikkö
 {% include common/definitionref.html dict="rytj-kaava" dictname="Kaavatietomalli" id="concept-1010" name="kaavayksikkö" def="on aluemainen kaavakohde, joiden yhdistelmä peittää asemakaavan alueen kokonaisuudessaan." note="Kaavayksikkö voi olla sitovan tonttijaon mukainen tontti, ohjeellinen kaavan mukainen tontti tai muu asemakaavassa osoitettu alueen käyttötarkoitus. Kaavayksikkö kuvaa mm. tiedon kaavan käyttötarkoituksesta, rakentamisen määrästä sekä muodostajakiinteistöistä. Kaavayksikkö on tekninen apuväline asemakaavan ja kiinteistönmuodostuksen välillä." %}
 
-### Kaavayksikön muutostieto
-{% include common/definitionref.html dict="rytj-tjs" dictname="Kaavatietomalli" id="concept-10" name="kaavayksikön muutostieto" def="kuvaa asemakaavan muutoksen mahdolliset lajit." note="Lähde: perustuu JHS 135 kaavalaji-luokitteluun." %}
+<!-- ### Kaavayksikön muutostieto
+{% include common/definitionref.html dict="rytj-tjs" dictname="Kaavatietomalli" id="concept-10" name="kaavayksikön muutostieto" def="kuvaa asemakaavan muutoksen mahdolliset lajit." note="Lähde: perustuu JHS 135 kaavalaji-luokitteluun." %} -->
 
 <!-- ### Arvo
 {% include common/definitionref.html dict="rytj-kaava" dictname="Kaavatietomalli" id="concept-1011" name="ominaisuuden arvo" def="kaavamääräystä tarkentava arvo." %} -->
