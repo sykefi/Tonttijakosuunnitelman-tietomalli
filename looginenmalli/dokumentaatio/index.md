@@ -417,13 +417,19 @@ kaavaTunnus | [URI](#URI) | 1  | kaavatunnus, joka muuttaa tonttijakotontin kaav
 kaavayksikönMuutosLaji | [KaavayksikönMuutostieto](#kaavayksikönmuutoslaji) | 1 | alueiden käytön ohjaustarpeeseen, kaavan sisältövaatimuksiin, prosessiin ja vastuulliseen hallintoviranomaiseen perustuva luokittelu
 kaavayksikönTunnus | [URI](#URI) | 0..*  | kaavayksikkö, joka muuttaa tonttijakotontin kaavamääräyksiä tai kumoaa tonttijakotontin -->
 
+### Kaavakohde
+
+Kuvaa käsitteen Kaavakohde, erikoistaa luokkaa AbstraktiRakennetunYmpäristönKohde, stereotyyppi: FeatureType (kohdetyyppi)
+
+**Assosiaatiot**
+
+Roolin nimi        | Kohde | Kardinaliteetti | Kuvaus
+-----------------|--------------------|---------------------|----------
+määräys | [URI](#URI) | 0..*  | viittaustunnus kaavaan sisältyvän kaavamääräyksen tietokohteeseen, joka liittyy tonttijakotonttiin
+
 ### Kaavamääräys
 
 Kuvaa käsitteen Kaavamääräys, erikoistaa luokkaa AbstraktiTietoyksikko, stereotyyppi: FeatureType (kohdetyyppi)
-
-laji             | Tyyppi              | Kardinaliteetti | Kuvaus
------------------|---------------------|-----------------|------------------------------------
-määräys | [URI](#URI) | 1  | viittaustunnus kaavaan sisältyvän kaavamääräyksen tietokohteeseen, joka liittyy tonttijakotonttiin
 
 ### AbstraktiTietoyksikko
 
