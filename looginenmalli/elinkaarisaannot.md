@@ -343,9 +343,9 @@ Asemakaavan määräysten muuttuessa tulee tulkita sitovan tonttijaon kaavan muk
 
 Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden sitovan tonttijaon laatimista niiltä osin, mitä tonttijakotontteja rakennuskielto koskee.
 
-Ensimmäisen asemakaavan tai asemakaavan määräysten muutoksen vireille tullessa, edellytetään uuden tietokohteen luomista [Kaavayksikkö-luokasta](https://tietomallit.ymparisto.fi/tonttijakosuunnitelma/dev/looginenmalli/dokumentaatio/#kaavayksikkö) seuraavien Kaavamääräys-luokan **Kaavamääräyslaji (asemakaava)**-koodiston arvojen osalta osaksi kaavatietovarastoa:
+{% include common/note.html content="Ensimmäisen asemakaavan tai asemakaavan muutoksen vireille tullessa, edellytetään uuden tietokohteen luomista [Kaavayksikkö-luokasta](https://tietomallit.ymparisto.fi/tonttijakosuunnitelma/dev/looginenmalli/dokumentaatio/#kaavayksikkö) seuraavien Kaavamääräys-luokan **Kaavamääräyslaji (asemakaava)**-koodiston arvojen osalta osaksi kaavatietovarastoa:
  - **Alueen käyttötarkoitus** ja mahdollinen **Rakentamisen määrä** 
- - **Ohjeellinen kaavan mukainen tontti** ja **Rakentamisen määrä** 
+ - **Ohjeellinen kaavan mukainen tontti** ja **Rakentamisen määrä**" %}
 
 {% include common/question.html content="Kaavayksiköt voisivat muodostaa oman tietoaineiston, jota editoidaan sekä asemakaavalla ja sitovalla tonttijaolla?" %}
 
