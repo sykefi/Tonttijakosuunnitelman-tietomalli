@@ -294,6 +294,8 @@ Sitova tonttijako ja sen tonttijakotontit ovat voimassa niiden voimassaoloAika-a
 Sitova tonttijako ja sen tonttijakotontit voivat olla elinkaaritilassa Voimassa ainoastaan, mikäli niiden voimassaoloAika on annettu ja sisältää vain alkuajan ilman loppuaikaa. Sitovon tonttijaon ja sen tonttijakotonttien voimassaoloAika voi olla annettu vain mikäli ne ovat joko elinkaaritilassa Voimassa tai Kumottu. Sitovan tonttijaon ja sen tonttijakotonttien voimassaoloAika sisältää sekä alku- että loppuajan vain, kun ne ovat elinkaaritilassa Kumottu.
 {% include common/clause_end.html %}
 
+{% include common/question.html content="Muodostettaessa erillisellä sitovalla tonttijaolla tonttijakotontti, tulee mahdollisesti jäljelle jäävästä ohjeellisesta kaavan mukaisesta tontista luoda uusi tallennus versio ja tallentaa sille jäljelle jäävä rakentamisen määrä. Jos uusi tonttijakotontti kattaa kokonaan ohjeellisen kaavan mukaisen tontin alan, kumoutuu tämä kaavayksikkö ja sen ```voimassaoloAika``` -attribuutin arvon päättymisajaksi kirjataan sitovan tonttijakotontin alkamisajan." %}
+
 ### Sitovan tonttijaon kumoutuminen ja kumoaminen 
 
 Maankäyttö- ja rakennuslaissa säädetään sitovan tonttijaon kumoutumisesta ja kumoamisesta.
@@ -341,11 +343,11 @@ Asemakaavan määräysten muuttuessa tulee tulkita sitovan tonttijaon kaavan muk
 
 Rakennuskiellon asettaminen true arvoksi edellyttää aina uuden sitovan tonttijaon laatimista niiltä osin, mitä tonttijakotontteja rakennuskielto koskee.
 
-Ensimmäisen asemakaavan tai asemakaavan määräysten muutoksen vireille tullessa, edellytetään uuden tallennusversion luomista [Kaavayksikkö-luokasta](https://tietomallit.ymparisto.fi/tonttijakosuunnitelma/dev/looginenmalli/dokumentaatio/#kaavayksikkö) seuraavien Kaavamääräys-luokan **Kaavamääräyslaji (asemakaava)**-koodiston arvojen osalta osaksi kaavatietovarastoa:
+Ensimmäisen asemakaavan tai asemakaavan määräysten muutoksen vireille tullessa, edellytetään uuden tietokohteen luomista [Kaavayksikkö-luokasta](https://tietomallit.ymparisto.fi/tonttijakosuunnitelma/dev/looginenmalli/dokumentaatio/#kaavayksikkö) seuraavien Kaavamääräys-luokan **Kaavamääräyslaji (asemakaava)**-koodiston arvojen osalta osaksi kaavatietovarastoa:
  - **Alueen käyttötarkoitus** ja mahdollinen **Rakentamisen määrä** 
  - **Ohjeellinen kaavan mukainen tontti** ja **Rakentamisen määrä** 
 
-{% include common/question.html content="Kaavayksiköt voisivat muodostaa oman tietoaineiston, jota editoidaan sekä asemakaavalla ja sitovalla tonttijaolla? Tämä mahdollistaisi sitovalla tonttijaolla rakentamisen määrän tallentamisen jäljelle jäävällä ohjeelliselle kaavan mukaiselle tontille tai niiden kumoamisen, jos tonttijakotontti tai tonttijakotontit muodostuvat kokonaan ohjeellisen kaavan mukaisen tontin pinta-alasta." %}
+{% include common/question.html content="Kaavayksiköt voisivat muodostaa oman tietoaineiston, jota editoidaan sekä asemakaavalla ja sitovalla tonttijaolla?" %}
 
 {% include common/clause_end.html %}
 
