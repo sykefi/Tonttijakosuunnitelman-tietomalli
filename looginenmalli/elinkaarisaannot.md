@@ -294,7 +294,7 @@ Sitova tonttijako ja sen tonttijakotontit ovat voimassa niiden voimassaoloAika-a
 Sitova tonttijako ja sen tonttijakotontit voivat olla elinkaaritilassa Voimassa ainoastaan, mikäli niiden voimassaoloAika on annettu ja sisältää vain alkuajan ilman loppuaikaa. Sitovon tonttijaon ja sen tonttijakotonttien voimassaoloAika voi olla annettu vain mikäli ne ovat joko elinkaaritilassa Voimassa tai Kumottu. Sitovan tonttijaon ja sen tonttijakotonttien voimassaoloAika sisältää sekä alku- että loppuajan vain, kun ne ovat elinkaaritilassa Kumottu.
 {% include common/clause_end.html %}
 
-{% include common/question.html content="Muodostettaessa erillisellä sitovalla tonttijaolla tonttijakotontti, tulee mahdollisesti jäljelle jäävästä ohjeellisesta kaavan mukaisesta tontista luoda uusi tallennus versio ja tallentaa sille jäljelle jäävä rakentamisen määrä. Jos uusi tonttijakotontti kattaa kokonaan ohjeellisen kaavan mukaisen tontin alan, kumoutuu tämä kaavayksikkö ja sen ```voimassaoloAika``` -attribuutin arvon päättymisajaksi kirjataan sitovan tonttijakotontin alkamisajan." %}
+{% include common/note.html content="Muodostettaessa erillisellä sitovalla tonttijaolla tonttijakotontti, tulee mahdollisesti jäljelle jäävästä ohjeellisesta kaavan mukaisesta tontista luoda uusi tallennus versio ja tallentaa sille jäljelle jäävä rakentamisen määrä. Jos uusi tonttijakotontti kattaa kokonaan ohjeellisen kaavan mukaisen tontin alan, kumoutuu tämä kaavayksikkö ja sen ```voimassaoloAika``` -attribuutin arvon päättymisajaksi kirjataan sitovan tonttijakotontin alkamisajan." %}
 
 ### Sitovan tonttijaon kumoutuminen ja kumoaminen 
 
