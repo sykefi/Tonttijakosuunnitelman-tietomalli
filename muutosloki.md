@@ -10,7 +10,7 @@ id: "muutosloki"
 {:toc}
 
 ## Muutokset versiosta 1.0 -> dev (2.0.0?)
-
+<!--
 ### Riippuvuudet
 
 Looginen tietomalli riippuu seuraavista muista UML-tietomalleista ja niiden versioista:
@@ -132,3 +132,4 @@ Kesken
 
 Kesken
 
+-->
