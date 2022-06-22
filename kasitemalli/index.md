@@ -54,7 +54,7 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sa
 {% include common/definitionref.html dict="rytj-kaava" dictname="Kaavatietomalli" id="concept-1010" name="kaavamääräys" def="kaavaan sisältyvä velvoittava määräys, jolla ohjataan alueiden suunnittelua ja rakentamista." %}
 
 ### Kaavayksikkö
-{% include common/definitionref.html dict="rytj-kaava" dictname="Kaavatietomalli" id="concept-1010" name="kaavayksikkö" def="kaavayksiköiden yhdistelmä peittää asemakaavan alueen kokonaisuudessaan." note="Kaavayksikkö voi olla sitovan tonttijaon mukainen tontti, ohjeellinen kaavan mukainen tontti, rekisteritontti, yleinen alue tai muu asemakaavassa osoitettu kortteli tai korttelinosa. Kaavayksikkö kuvaa mm. tiedon kaavan käyttötarkoituksesta, rakentamisen määrästä sekä muodostajakiinteistöistä. Kaavayksikkö on tekninen apuväline asemakaavan ja kiinteistönmuodostuksen välillä." %}
+{% include common/definitionref.html dict="rytj-kaava" dictname="Kaavatietomalli" id="concept-1010" name="kaavayksikkö" def="kaavayksiköiden yhdistelmä peittää asemakaavan alueen kokonaisuudessaan." note="Kaavayksikkö voi olla sitovan tonttijaon mukainen tontti, ohjeellinen kaavan mukainen tontti, yleinen alue tai muu asemakaavassa osoitettu kortteli tai korttelinosa. Kaavayksikkö kuvaa mm. tiedon kaavan käyttötarkoituksesta, rakentamisen määrästä sekä muodostajakiinteistöistä. Kaavayksikkö on tekninen apuväline asemakaavan ja kiinteistönmuodostuksen välillä." %}
 
 <!-- ### Kaavayksikön muutostieto
 {% include common/definitionref.html dict="rytj-tjs" dictname="Kaavatietomalli" id="concept-10" name="kaavayksikön muutostieto" def="kuvaa asemakaavan muutoksen mahdolliset lajit." note="Lähde: perustuu JHS 135 kaavalaji-luokitteluun." %} -->
