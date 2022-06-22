@@ -3,7 +3,7 @@ layout: "default"
 title: "Sitovan tonttijaon - looginen tietomalli - Elinkaarisäännöt"
 description: ""
 id: "elinkaarisaannot"
-status: "Keskeneräinen"
+status: "Luonnos"
 ---
 <!-- {% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %} -->
 

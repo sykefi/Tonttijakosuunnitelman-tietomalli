@@ -3,9 +3,9 @@ layout: "default"
 title: "Sitovan tonttijaon - looginen tietomalli -Laatusäännöt"
 description: ""
 id: "laatusaannot"
-status: "Keskeneräinen"
+status: "Luonnos"
 ---
-{% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %}
+<!-- {% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %} -->
 
 # Laatusäännöt
 {:.no_toc}
