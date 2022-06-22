@@ -3,7 +3,7 @@ layout: "default"
 title: "Looginen tietomalli - looginen tietomalli - dokumentaatio"
 description: ""
 id: "dokumentaatio"
-status: "Keskeneräinen"
+status: "Luonnos"
 ---
 <!-- {% include common/important.html content="Sisältö ei vielä ajantasalla UML-kaavion kanssa" %} -->
 
