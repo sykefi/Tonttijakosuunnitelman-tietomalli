@@ -1,8 +1,8 @@
 tocTab[tocTab.length] = new Array("0.1:1", "", "Kaavatiedot", "EARoot/EA1/EA1.html", "175.png", "1", "0", "", "Logical diagram0","{D7047AC9-5E4D-4c2d-92E7-0CB7D37AE4D4}");
 tocTab[tocTab.length] = new Array("0.1:2", "", "Koodistot", "EARoot/EA1/EA3.html", "175.png", "2", "0", "", "Logical diagram0","{DAB5A462-133F-4a15-902A-0E8ADD9E63C5}");
-tocTab[tocTab.length] = new Array("0.1:3", "", "ArvojenJyvitys", "EARoot/EA1/EA7.html", "5.png", "E148", "0", "", "Class0","{A3A6FAB2-2CD3-4b46-AEF9-FC4A4D846C64}");
-tocTab[tocTab.length] = new Array("0.1:4", "", "Class1", "EARoot/EA1/EA8.html", "5.png", "E145", "0", "", "Class0","{A63DF729-26D9-45c5-B0C3-B33B55332350}");
-tocTab[tocTab.length] = new Array("0.1:5", "", "«DataType» KaavayksikönMuutostieto", "EARoot/EA1/EA9.html", "5.png", "E120", "0", "", "Class0","{0163F3EA-ACDE-48c0-96AA-25D2625F60CC}");
+tocTab[tocTab.length] = new Array("0.1:3", "", "Class1", "EARoot/EA1/EA7.html", "5.png", "E145", "0", "", "Class0","{A63DF729-26D9-45c5-B0C3-B33B55332350}");
+tocTab[tocTab.length] = new Array("0.1:4", "", "«DataType» KaavayksikönMuutostieto", "EARoot/EA1/EA8.html", "5.png", "E120", "0", "", "Class0","{0163F3EA-ACDE-48c0-96AA-25D2625F60CC}");
+tocTab[tocTab.length] = new Array("0.1:5", "", "RakentamisenArvojenJyvitys", "EARoot/EA1/EA9.html", "5.png", "E148", "0", "", "Class0","{A3A6FAB2-2CD3-4b46-AEF9-FC4A4D846C64}");
 tocTab[tocTab.length] = new Array("0.1:6", "", "TM", "EARoot/EA1/EA10.html", "6.png", "E124", "0", "", "Actor0","{18EAB8E1-D078-4307-A03A-BB7DF3F2D12D}");
 tocTab[tocTab.length] = new Array("0.1:7", "", "«CodeList» AbstraktiKaavamääräysLaji", "EARoot/EA1/EA16.html", "5.png", "E8", "0", "", "Class0","{3558FE33-7B40-4b09-8F08-8D6E6475E258}");
 tocTab[tocTab.length] = new Array("0.1:8", "", "«CodeList» AbstraktiKaavoitusteema", "EARoot/EA1/EA17.html", "5.png", "E9", "0", "", "Class0","{E6A003F9-4648-4879-BA58-FCFD63ED9431}");
