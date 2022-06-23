@@ -359,7 +359,8 @@ Nimi             | Tyyppi              | Kardinaliteetti | Kuvaus
 -----------------|---------------------|-----------------|------------------------------------
 suhdePeruskiinteistoon | [suhdePeruskiinteistoon](#suhdeperuskiinteistoon) | 0..1  | luokittelu tonttijakotonttiin sijoittumisesta suhteessa peruskiinteistöön, joka merkitään vain 3D-tonttijakotonttikohteelle
 kaavayksikönTunnus | [URI](#URI) | 1 | yksilöivä ID
-kaavayksikönElinkaarentila | [KaavayksikönElinkaarentila](#kaavayksikönelinkaarentila) | 1  | yleisimmät arvot Vireillä, Voimassa, Kiinteistö lakannut, Kumottu, Kumoutunut, Muu
+kaavayksikönElinkaarentila | [KaavayksikönElinkaarentila](#kaavayksikönelinkaarentila) | 1  | yleisimmät arvot Numeron varaus, Vireillä, Voimassa, Kumottu, Kumoutunut
+kaavayksikönLaji | [KaavayksikönLaji](#kaavayksikönlaji) | 1  | yleisimmät arvot Kortteli, Korttelin osa, Ohjeellinen kaavan mukainen tontti, Sitovan tonttijaon (hyv.) mukainen tontti, Kiinteistörekisteriin merkitty tontti, Kiinteistörekisteriin merkitty yleinen alue
 kiinteistö | [Muodostajakiinteisto](#muodostajakiinteisto) | 1..* | tieto muodostajakiinteistöistä, josta/joista tonttijakotontti muodostetaan
 pintaAla | [Number](#Number) | 0..*  | tonttijakotontin pinta-ala tai kolmiulotteisen tonttijakotontin projisoitu pinta-ala
 muutoslaji | [KaavayksikönMuutosLaji](#kaavayksikönmuutoslaji) | 1 | alueiden käytön ohjaustarpeeseen, kaavan sisältövaatimuksiin, prosessiin ja vastuulliseen hallintoviranomaiseen perustuva luokittelu
@@ -544,6 +545,17 @@ Stereotyyppi: CodeList (koodisto)
 Laajennettavuus: Ei laajennettavissa
 
 {% include common/codelistref.html registry="rytj" id="RY_KaavanMuutostieto" name="Kaavayksikön muutoslaji (asemakaava)" %}
+
+#### KaavayksikönLaji
+
+<!--Lisää sisäinen linkki? -->
+Englanninkielinen nimi: PlanUnitKind
+
+Stereotyyppi: CodeList (koodisto)
+
+Laajennettavuus: Ei laajennettavissa
+
+{% include common/codelistref.html registry="rytj" id="RY_KaavayksikonLaji" name="Kaavayksikön laji (asemakaava)" %}
 
 <!-- linkit standardeihin, joihin mainittu sivun alussa -->
 [ISO-8601-1]: https://www.iso.org/standard/70907.html "ISO 8601-1:2019 Date and time — Representations for information interchange — Part 1: Basic rules"

@@ -35,4 +35,3 @@ tocTab[tocTab.length] = new Array("0.1:34", "", "«DataType» Muodostajakiinteis
 tocTab[tocTab.length] = new Array("0.1:35", "", "«FeatureType» OsallistumisJaArviointisuunnitelma", "EARoot/EA1/EA44.html", "5.png", "E35", "0", "", "Class0","{356D0CD2-41D1-4883-98CD-7C883253C4E7}");
 tocTab[tocTab.length] = new Array("0.1:36", "", "«CodeList» Sitovuuslaji", "EARoot/EA1/EA45.html", "5.png", "E36", "0", "", "Class0","{57C0E71F-53DF-4bed-AC54-4615FB41ED3A}");
 tocTab[tocTab.length] = new Array("0.1:37", "", "«CodeList» YmparistömuutoksenLajiYleiskaava", "EARoot/EA1/EA46.html", "5.png", "E37", "0", "", "Class0","{7F1B470B-9D90-4753-96E8-510C530159DD}");
-tocTab[tocTab.length] = new Array("0.1:38", "", "Class2", "EARoot/EA1/EA47.html", "5.png", "E147", "E27", "", "Class0","{D96DCEDE-AC8C-483c-B01A-9EE6C24A42ED}");

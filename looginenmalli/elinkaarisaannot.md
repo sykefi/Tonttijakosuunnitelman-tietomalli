@@ -280,18 +280,23 @@ Kerran tallennettuja Tapahtuma-luokan tietokohteita ei voi poistaa sitovan tontt
 ### Sitovan tonttijaon ja sen tietokohteiden voimaantulo
 Sitovan tonttijaon ```voimassaoloAika``` -attribuutin alkuaika on ajanhetki, jolloin sitova tonttijako sen nähtävilläoloajan umpeuduttua ja mahdollisten mielipiteiden käsittelyn jälkeen tulee voimaan.
 
-{% include common/clause_start.html type="req" id="vaat-sitovan-tonttijaon-voimaantulo" %}
+{% include common/clause_start.html type="req" id="elinkaari/vaat-sitovan-tonttijaon-voimaantulo" %}
 Voimaantulemisen yhteydessä sitovasta tonttijaosta tallennetaan sitovan tonttijaon tietovarastoon uusi versio, jossa sen:
-- SitovaTonttijako-luokan objektin elinkaaritila-attribuutin arvoksi on asetettu Voimassa,
-- SitovaTonttijako-luokan objektin voimassaoloAika-attribuutin alkuajaksi on asetettu kuulutuksen ajanhetki ja loppuaikaa ei ole annettu.
+- SitovaTonttijako-luokan ja Tonttijakotontti-luokan objektin elinkaaritila-attribuutin arvoksi on asetettu Voimassa,
+- SitovaTonttijako-luokan ja Tonttijakotontti-luokan objektin voimassaoloAika-attribuutin alkuajaksi on asetettu kuulutuksen ajanhetki ja loppuaikaa ei ole annettu.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="elinkaari/vaat-voimassaoloaika" %}
 Sitova tonttijako ja sen tonttijakotontit ovat voimassa niiden voimassaoloAika-attribuuttien määräämillä aikaväleillä. Mikäli voimassaoloAika-attribuutin loppuaika puuttuu, on tietokohde voimassa toistaiseksi.
 {% include common/clause_end.html %}
 
-{% include common/clause_start.html type="req" id="vaat-elinkaaritila-voimassaoloaika" %}
+{% include common/clause_start.html type="req" id="elinkaari/vaat-elinkaaritila-voimassaoloaika" %}
 Sitova tonttijako ja sen tonttijakotontit voivat olla elinkaaritilassa Voimassa ainoastaan, mikäli niiden voimassaoloAika on annettu ja sisältää vain alkuajan ilman loppuaikaa. Sitovon tonttijaon ja sen tonttijakotonttien voimassaoloAika voi olla annettu vain mikäli ne ovat joko elinkaaritilassa Voimassa tai Kumottu. Sitovan tonttijaon ja sen tonttijakotonttien voimassaoloAika sisältää sekä alku- että loppuajan vain, kun ne ovat elinkaaritilassa Kumottu.
+{% include common/clause_end.html %}
+
+{% include common/clause_start.html type="req" id="elinkaari/vaat-kaavayksikönlaji" %}
+Voimaantulemisen yhteydessä sitovasta tonttijaosta tallennetaan sitovan tonttijaon tietovarastoon uusi versio, jossa sen:
+- Tonttijakotontti-luokan objektin kaavayksikönLaji-attribuutin arvoksi on asetettu Sitovan tonttijaon (hyv.) mukainen tontti.
 {% include common/clause_end.html %}
 
 {% include common/note.html content="Muodostettaessa erillisellä sitovalla tonttijaolla tonttijakotontti, tulee mahdollisesti jäljelle jäävästä ohjeellisesta kaavan mukaisesta tontista luoda uusi tallennus versio ja tallentaa sille jäljelle jäävä rakentamisen määrä. Jos uusi tonttijakotontti kattaa kokonaan ohjeellisen kaavan mukaisen tontin alan, kumoutuu tämä kaavayksikkö ja sen ```voimassaoloAika``` -attribuutin arvon päättymisajaksi kirjataan sitovan tonttijakotontin alkamisajan." %}
@@ -376,14 +381,13 @@ Sitovan tonttijaon ja sen sisältämien tonttijakotonttien elinkaareen liittyvä
 - Kumoutunut osittain
 - Kumoutunut kokonaan
 
-**Kaavayksikön elinkaaren tila**-koodisto kuvaa 6 mahdollista tilaa, joissa sitovan tonttijaon tonttijakotontti voi olla sen elinkaaren eri vaiheissa:
+**Kaavayksikön elinkaaren tila**-koodisto kuvaa 4 mahdollista tilaa, joissa sitovan tonttijaon tonttijakotontti voi olla sen elinkaaren eri vaiheissa:
 
+- Numeron varaus
 - Vireillä
 - Voimassa
-- Kiinteistö lakannut
 - Kumottu 
 - Kumoutunut 
-- Muu
 
 {% include common/question.html content="Mitkä ovat Kumottu- ja Kumoutunut-tilojen tarkat määritelmät ja erot?" %}
 
