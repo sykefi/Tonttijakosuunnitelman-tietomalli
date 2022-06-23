@@ -377,7 +377,7 @@ kaavakohde | [Kaavakohde](#Kaavakohde) | 1 | paikkatietokohde, johon kohdistuu k
 tonttijakotontti | [Tonttijakotontti](#tonttijakotontti) | 1 | paikkatietokohde, johon kohdistuu kaavamääräyksiä tai -suosituksia
 jyvitettyRakentamisenMäärä | [OminaisuudenArvo](#ominaisuudenarvo) | 0..* | suunnitelman laatijan kohdentama rakentamisen määrän arvo kaavayksikölle kaavassa osoitetusta rakentamisen määrästä
 kumoaaTonttijakotontin | [boolean](#boolean) | 1 | paikkatietokohde, johon kohdistuu kaavamääräyksiä tai -suosituksia
-liittyväTonttijakotontti | [URI](#URI) | 0..*  | tonttijakotontti, joka johon kaavayksikkö liittyy
+liittyväTonttijakotontti | [URI](#URI) | 0..*  | tonttijakotontti, johon kaavayksikkö liittyy
 
 <!-- **Assosiaatiot**
 
