@@ -86,6 +86,7 @@ Identiteettitunnuksen suositeltu muoto on UUID.
 
 Esimerkki: ```640bff6b-c16a-4947-af8d-d86f89106be1```
 
+
 ### Paikallinen tunnus
 Paikallinen tunnus yksilöi tietokohteen yhden version sitovan tonttijaon tietovaraston sisällä. 
 
