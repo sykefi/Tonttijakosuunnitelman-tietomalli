@@ -169,6 +169,7 @@ Tuottajakohtaisen tunnuksen suositeltu muoto on UUID.
 
 Esimerkki: ```tj-123445```
 
+
 ### Sitovan tonttijaon tunnus
 {% include common/clause_start.html type="req" id="elinkaari/vaat-sitovan-tonttijaon-tunnus-maar" %}
 Sitovan tonttijaon tunnus on sitovalle tonttijaolle ennakolta haettava, joka on sitovan tonttijaon kansallisesti yksilöivä tunnus. Sitovan tonttijaon tietomallissa sitovan tonttijaon tunnus kuvataan [SitovaTonttijako](../../looginenmalli/dokumentaatio/#sitovatonttijako)-luokan attribuutilla ```sitovanTonttijaonTunnus```.
