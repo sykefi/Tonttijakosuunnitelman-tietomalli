@@ -19,7 +19,7 @@ Tällä sivulla esitellyt käsitteet ovat luettavissa yhteentoimivuusalustan [sa
 
 ## Käsitteet
 
-### Tonttijakosuunnitelma
+### Tonttijakosuunnitelma tonttu
 {% include common/definitionref.html dict="rytj-tjs" dictname="Tonttijakosuunnitelma" id="concept-0" name="tonttijakosuunnitelma" def="maankäyttö- ja rakennuslain mukainen kunnan laatima suunnitelma asemakaavassa rakentamiselle varatun yhtenäisen alueen (rakennuskortteli) kiinteistöjaotuksen yksityiskohtaiseksi ohjaamiseksi." %}
 
 ### Esitonttikohde
